@@ -9,7 +9,9 @@ const Container = styled.header`
   display: flex;
 	justify-content:  ${props => props.home ? 'flex-end' : 'space-between'};
 	align-items: center;
-	margin: 3.395625rem 8.75rem 0;
+	width: 75%;
+	margin: auto;
+	/* margin: 3.395625rem 8.75rem 0; */
   height: 5rem;
 `;
 
