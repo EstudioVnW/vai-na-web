@@ -6,6 +6,7 @@ import './index.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
+import Faq from './faq';
 
 // styles
 const Container = styled.div`
@@ -16,7 +17,7 @@ const Layouts = () => {
   return (
     <Container>
       <Header home />
-      <p>Hello world</p>
+      <p>Vai na web</p>
       <Footer />
     </Container>
   )

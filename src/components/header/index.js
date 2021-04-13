@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { Link } from "gatsby";
 
 //Image
 import logo from '../../images/icons/logo-VNW.svg';
@@ -9,7 +10,8 @@ const Container = styled.header`
   display: flex;
 	justify-content:  ${props => props.home ? 'flex-end' : 'space-between'};
 	align-items: center;
-	margin: 3.395625rem 8.75rem 0;
+	width: 75%;
+	margin: auto;
   height: 5rem;
 `;
 
@@ -24,16 +26,17 @@ const Ul = styled.ul`
 
 const Li = styled.li`
 	padding-left: 2.25rem;
+	cursor: pointer;
 `;
 
-const  Header = ({ home }) => {
+const Header = ({ home }) => {
 	return (
 		<Container home={home}>
-			<Image src={logo} home={home} alt={'Logotipo'} />
+			<Image src={logo} home={home} alt='Logotipo' />
 			<nav>
 				<Ul>
 					<Li>Sobre</Li>
-					<Li>Blog</Li>
+					<Li><Link to={'/blog'}>Blog</Link></Li>
 					<Li>Contato</Li>
 				</Ul>
 			</nav>
