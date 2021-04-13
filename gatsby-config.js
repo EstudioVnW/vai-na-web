@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "vai-na-web",
@@ -7,6 +11,13 @@ module.exports = {
     "gatsby-plugin-netlify-cms",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
+    {
+      resolve: "gatsby-source-graphcms",
+      options: {
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        buildMarkdownNodes: true,
+      },
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

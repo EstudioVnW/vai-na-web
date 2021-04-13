@@ -1,0 +1,54 @@
+fragment Author on Author {
+  stage
+  remoteId: id
+  createdAt
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedAt
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedAt
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  name
+  socialNetworkLink
+  photo {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+  }
+  posts {
+    ... on Post {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  jobTitle
+  bio {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
+}
