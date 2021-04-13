@@ -8,8 +8,6 @@ import Footer from '../components/footer';
 
 import Faq from './faq';
 
-
-
 // styles
 const Container = styled.div`
   width: 100%;

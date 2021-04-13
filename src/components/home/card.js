@@ -8,20 +8,23 @@ const Container = styled.section`
 const Content = styled.div`
 `;
 
-const  PostList = () => {
+const Card = () => {
 	return (
 		<Container>
+			<div>
+				<span></span>
+				<span></span>
+				<span></span>
+				<p>status</p>
+			</div>
 			<img src={} alt='' />
 			<Content>
-				<div>
-					<p>data</p>
-					<p>tipo da noticia</p>
-				</div>
-				<h1>Titulo</h1>
+				<p>carreira</p>
+				<h1>titulo</h1>
 				<p>descrição</p>
 			</Content>
 		</Container>
 	)
 }
 
-export default PostList;
+export default Card;
