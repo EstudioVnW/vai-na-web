@@ -11,7 +11,7 @@ const Content = styled.div`
 const  PostList = () => {
 	return (
 		<Container>
-			<img src={} alt='' />
+			{/* <img src={} alt='' /> */}
 			<Content>
 				<div>
 					<p>data</p>
