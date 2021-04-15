@@ -1,12 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import styled  from 'styled-components';
 import './index.css';
 
 //Components
 import Header from '../components/header';
 import Footer from '../components/footer';
-
-import Faq from './faq';
 
 // styles
 const Container = styled.div`
