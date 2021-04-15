@@ -14,8 +14,10 @@ module.exports = {
     {
       resolve: "gatsby-source-graphcms",
       options: {
-        endpoint: process.env.GRAPHCMS_ENDPOINT,
-        buildMarkdownNodes: true,
+        typeName: `GraphCMS`,
+        fieldName: `gcms`,
+        endpoint: process.env.GRAPHCMS_URL,
+        url: process.env.GRAPHCMS_URL,
       },
     },
     {
@@ -52,7 +54,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/icons/logo-VNW.svg",
       },
     },
     "gatsby-transformer-remark",
