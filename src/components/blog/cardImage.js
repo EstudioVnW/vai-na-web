@@ -8,7 +8,7 @@ const Container = styled.section`
 const CardImage = () => {
 	return (
 		<Container>
-			<img src={} alt='' />
+			{/* <img src={} alt='' /> */}
 		</Container>
 	)
 }
