@@ -1,7 +1,22 @@
+@import url('https://use.typekit.net/af/4619ac/00000000000000007735a6ac/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/4619ac/00000000000000007735a6ac/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/4619ac/00000000000000007735a6ac/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3"?family=usual:wght@100;300;400;500;600;700&display=swap');
+ 
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
-  list-style: none;
+  font-family: "usual", sans-serif;
 }
+
+html {
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+li {
+  list-style: none;
+} 
