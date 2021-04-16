@@ -11,13 +11,11 @@ import logoVnW from '../../images/icons/logo-VNW.svg'
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
 	height: 7rem;
-	width: 83rem;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	transform: matrix(1, -0.07, 0.07, 1, 0, 0);
-	margin-bottom: -4rem;
-	margin-left: -1rem;
+	transform: matrix(1, -0.07, 0.07, 1, 0, 62.54);
 `;
 
 const BoxDivision = styled.div `
