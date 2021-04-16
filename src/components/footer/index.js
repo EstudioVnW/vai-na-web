@@ -39,7 +39,7 @@ const TitleSpotlight = styled.p `
 `;
 
 const LogoVnW = styled.img `
-	width: 5rem;
+	width: 4rem;
 `;
 
 const Container = styled.footer`
@@ -110,7 +110,7 @@ const Icon = styled.img `
 `;
 
 const Logo = styled.img `
-	width: 5rem;
+	width: 6rem;
 	margin-bottom: 8rem;
 `;
 
@@ -118,7 +118,7 @@ const LineDivision = styled.div `
 	background-color: #0F2B92;
 	height: 2px;
 	width: 76%;
-	margin-top: -3rem;
+	margin-top: -4rem;
 `;
 
 const Text = styled.p `
