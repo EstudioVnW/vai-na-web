@@ -14,10 +14,8 @@ module.exports = {
     {
       resolve: "gatsby-source-graphcms",
       options: {
-        typeName: `GraphCMS`,
-        fieldName: `gcms`,
-        endpoint: process.env.GRAPHCMS_URL,
-        url: process.env.GRAPHCMS_URL,
+        endpoint: process.env.GRAPHCMS_ENDPOINT,
+        buildMarkdownNodes: true,
       },
     },
     {
