@@ -124,7 +124,7 @@ const LineDivision = styled.div `
 const Text = styled.p `
 	color: #FFAC2D;
 	font-size: 14px;
-	margin-top: 1rem;
+	margin-top: 1.3rem;
 `;
 
 const Footer = () => {
