@@ -11,18 +11,21 @@ import logoVnW from '../../images/icons/logo-VNW.svg'
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
 	height: 7rem;
-	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	transform: matrix(1, -0.07, 0.07, 1, 0, 62.54);
+	transform: matrix(1, -0.07, 0.07, 1, 0, 60.54);
+	margin-left: -0.5rem;
+	@media (max-width: 424px) {
+		width: 49rem;
+	}
 `;
 
 const BoxDivision = styled.div `
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin: 1rem 0;
+	margin: 0.7rem 0;
 `;
 
 const LineOrange = styled.div `
@@ -31,9 +34,12 @@ const LineOrange = styled.div `
 `;
 
 const TitleSpotlight = styled.p `
-	font-size: 54px;
+	font-size: 59px;
 	text-transform: uppercase;
 	color: #0F2B92;
+	@media (max-width: 424px) {
+		font-size: 30px;
+	}
 `;
 
 const LogoVnW = styled.img `
@@ -42,7 +48,10 @@ const LogoVnW = styled.img `
 
 const Container = styled.footer`
 	background-color: #00145D;
-	height: 27rem;
+	height: auto;
+	@media (max-width: 424px) {
+		width: 48rem;
+	}
 `;
 
 const ContainerAll = styled.div `
@@ -57,17 +66,30 @@ const Box = styled.div `
 	justify-content: space-evenly;
 	padding: 5rem;
 	margin-top: 5rem;
+	@media (max-width: 424px) {
+		display: flex;
+		flex-wrap: wrap;
+	}	
 `;
 
 const ContainerTextIcons = styled.div `
 	display: flex;
 	width: 26rem;
+	@media (max-width: 424px) {
+		width: 100%;
+		margin-top: 4rem;
+	}	
 `;
 
 const TextFooter = styled.p`
 	color: #FFFFFF;
 	width: 23%;
 	line-height: 1.5rem;
+	@media (max-width: 424px) {
+		width: 100%;
+		text-align: center;
+		font-size: 20px;
+	}	
 `;
 
 const BoxText = styled.div `
@@ -81,6 +103,9 @@ const TextLink = styled.a `
 	color: #FFFFFF;
 	text-align: justify;
 	margin-top: 8px;
+	@media (max-width: 424px) {
+		font-size: 20px;
+	}
 `;
 
 const BoxContact = styled.div `
@@ -91,8 +116,12 @@ const BoxContact = styled.div `
 
 const TextContact = styled.p `
 	color: #FFFFFF;
-	width: 80%;
-    line-height: 1.5em;
+	width: 100%;
+	line-height: 1.5em;
+	@media (max-width: 424px) {
+		font-size: 20px;
+		width: 80%;
+	}
 `;
 
 const BoxIcons = styled.div `
@@ -100,6 +129,10 @@ const BoxIcons = styled.div `
 	justify-content: space-between;
 	width: 69%;
 	margin-top: 1.8rem;
+	@media (max-width: 424px) {
+		width: 100%;
+    	padding: 4rem;
+	}
 `;
 
 const Icon = styled.img `
@@ -110,6 +143,9 @@ const Icon = styled.img `
 const Logo = styled.img `
 	width: 6rem;
 	margin-bottom: 8rem;
+	@media (max-width: 424px) {
+		display: none;
+	}
 `;
 
 const LineDivision = styled.div `
@@ -122,7 +158,7 @@ const LineDivision = styled.div `
 const Text = styled.p `
 	color: #FFAC2D;
 	font-size: 14px;
-	margin-top: 1.3rem;
+	padding: 1.3rem;
 `;
 
 const Footer = () => {
@@ -170,7 +206,7 @@ const Footer = () => {
 							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
 					</BoxIcons>
 				</div>
-					<Logo src={logoVnW} alt="Logo Vai na Web"/>
+					<a href="/000000000000000000"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
 			</Box> 
 				<LineDivision></LineDivision>
 				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>
