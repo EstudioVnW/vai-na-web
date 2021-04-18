@@ -208,7 +208,7 @@ const Footer = () => {
 							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
 					</BoxIcons>
 				</div>
-					<a href="/000000000000000000"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
+					<a href="/"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
 			</Box> 
 				<LineDivision></LineDivision>
 				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>
