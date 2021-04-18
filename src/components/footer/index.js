@@ -112,6 +112,7 @@ const BoxContact = styled.div `
 	display: flex;
 	flex-direction: column;
 	margin-left: 2.5rem;
+	margin-top: -0.5rem;
 `;
 
 const TextContact = styled.p `
@@ -143,6 +144,7 @@ const Icon = styled.img `
 const Logo = styled.img `
 	width: 6rem;
 	margin-bottom: 8rem;
+	margin-top: -0.5rem;
 	@media (max-width: 424px) {
 		display: none;
 	}
