@@ -5,10 +5,10 @@ import styled from 'styled-components';
 const Container = styled.section`
 `;
 
-const Index = () => {
+const Index = ({ author }) => {
 	return (
 		<Container>
-			<p>Over</p>
+			<p>post blog</p>
 		</Container>
 	)
 }
