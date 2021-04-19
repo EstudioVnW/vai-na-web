@@ -9,41 +9,33 @@ import fundo from '../../images/icons/Mask-Group-15.png';
 // styles
 const Container = styled.header`
   display: flex;
-
 	justify-content:  ${props => props.home ? 'space-between' : 'space-between'};
 	width: 100%;
-  	height: 35rem;
-  	background-image: url(${fundo});
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  nav{
+  height: 35rem;
+	background-image: url(${fundo});
+	background-repeat: no-repeat;
+	background-size: cover;
+	nav{
 		position: fixed;
 		right: 0;
-	  }
-  	
-
+	}  
 `;
 
 const Image = styled.img`
 	display: ${props => props.home};
   width: 6rem;
   margin: 50px;
-  position: fixed;
-  
+  position: fixed; 
 `;
 
 const Ul = styled.ul`
   display: flex;
   margin: 70px;
-  
-  
 `;
 
 const Li = styled.li`
 	padding-left: 2.25rem;
 	cursor: pointer;
-	
-
 	a{
 		text-decoration: none;
 		color: #FFF;
@@ -55,13 +47,9 @@ const Li = styled.li`
 			height: 1px;
 			background: #FFF;
 			top: 20px;
-		}
-		
+		}	
 	}
 `;
-
-
-
 
 const Header = ({ home }) => {
 	return (
