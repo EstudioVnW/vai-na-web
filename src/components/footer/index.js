@@ -16,6 +16,7 @@ const ContainerDivision = styled.div `
 	justify-content: center;
 	transform: matrix(1, -0.07, 0.07, 1, 0, 60.54);
 	margin-left: -0.5rem;
+	box-shadow: 0px 0px 22px #00145D33;
 	@media (max-width: 424px) {
 		width: 49rem;
 	}
