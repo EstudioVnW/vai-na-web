@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 
 //Image
 import logo from '../../images/icons/logo-VNW.svg';
-import fundo from '../../images/icons/Mask-Group-15.png';
 
 // styles
 const Container = styled.header`
@@ -12,9 +11,6 @@ const Container = styled.header`
 	justify-content:  ${props => props.home ? 'space-between' : 'space-between'};
 	width: 100%;
   height: 35rem;
-	background-image: url(${fundo});
-	background-repeat: no-repeat;
-	background-size: cover;
 	nav{
 		position: fixed;
 		right: 0;
