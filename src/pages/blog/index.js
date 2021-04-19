@@ -59,9 +59,7 @@ const Index = ({ data }) => {
         <PostList data={data} />
       </ContainerBlog>
     </Layouts>
-
   )
 }
-
 
 export default Index;
