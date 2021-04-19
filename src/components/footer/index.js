@@ -191,7 +191,7 @@ const Footer = () => {
 						<BoxText>
 							<TextLink href="#">Media Kit</TextLink>
 							<TextLink href="#">Deep Tech Network</TextLink>
-							<TextLink href="#">Perguntas Frequentes</TextLink>
+							<TextLink href="/faq">Perguntas Frequentes</TextLink>
 						</BoxText>
 						<BoxContact>
 							<TextContact>

@@ -80,11 +80,11 @@ const postList = [
 const Index = ({ data }) => {
   return (
     <>
+    <>
       <Header />
       {data.posts.nodes.map(item => <h1> {item.title}</h1>)}
       <CardList />
       <CardAuthor />
-      <Footer />
     </>
     <Layouts>
       {/* {data.posts.nodes.map(item => <h1> {item.title}</h1>)} */}
@@ -95,7 +95,7 @@ const Index = ({ data }) => {
       </ContentSlider>
     </ContainerBlog>
     </Layouts>
-
+    </>
   )
 }
 
