@@ -8,36 +8,54 @@ import logo from '../../images/icons/logo-VNW.svg';
 // styles
 const Container = styled.header`
   display: flex;
-	justify-content:  ${props => props.home ? 'flex-end' : 'space-between'};
-	align-items: center;
-	width: 75%;
-	margin: auto;
-  height: 5rem;
+	justify-content:  ${props => props.home ? 'space-between' : 'space-between'};
+	width: 100%;
+  height: 35rem;
+	nav{
+		position: fixed;
+		right: 0;
+	}  
 `;
 
 const Image = styled.img`
-	display: ${props => props.home && 'none'};
-  width: 5rem;
+	display: ${props => props.home};
+  width: 6rem;
+  margin: 50px;
+  position: fixed; 
 `;
 
 const Ul = styled.ul`
   display: flex;
+  margin: 70px;
 `;
 
 const Li = styled.li`
 	padding-left: 2.25rem;
 	cursor: pointer;
+	a{
+		text-decoration: none;
+		color: #FFF;
+		position: relative;
+		::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background: #FFF;
+			top: 20px;
+		}	
+	}
 `;
 
 const Header = ({ home }) => {
 	return (
 		<Container home={home}>
-			<Image src={logo} home={home} alt='Logotipo' />
+			<Link to={'/home'}><Image src={logo} home={home} alt='Logotipo' /></Link>
 			<nav>
 				<Ul>
-					<Li>Sobre</Li>
+					<Li><Link to={'/sobre'}>Sobre</Link></Li>
 					<Li><Link to={'/blog'}>Blog</Link></Li>
-					<Li>Contato</Li>
+					<Li><Link to={'/contato'}>Contato</Link></Li>
 				</Ul>
 			</nav>
 		</Container>

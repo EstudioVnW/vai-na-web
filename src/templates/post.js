@@ -6,20 +6,21 @@ export default function DocumentationPage({ data }) {
   return (
     <>
       <article>
-        <Helmet>
+        <p>Olá</p>
+        {/* <Helmet>
           <title>{data.item.title} - Docs</title>
         </Helmet>
-        <h1>{data.item.title}</h1>
+        <h1>{data.item.title}</h1> */}
       </article>
     </>
   )
 }
 
-export const query = graphql`
-  query($id: String!) {
-    item: graphCmsPost(id: { eq: $id }) {
-      id
-      title
-    }
-  }
-`
+// export const query = graphql`
+//   query($id: String!) {
+//     item: graphCmsPost(id: { eq: $id }) {
+//       id
+//       title
+//     }
+//   }
+// `
