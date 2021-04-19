@@ -6,6 +6,7 @@ import { graphql } from "gatsby";
 import Header from '../../components/header';
 import CardList from '../../components/blog/cardList';
 import Footer from '../../components/footer';
+import CardAuthor from '../../components/blog/cardAuthor'
 
 export const query = graphql`
   query  {
@@ -24,6 +25,7 @@ export default function Index({ data }) {
       <Header />
       {data.posts.nodes.map(item => <h1> {item.title}</h1>)}
       <CardList />
+      <CardAuthor />
       <Footer />
     </>
   )
