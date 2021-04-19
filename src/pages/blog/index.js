@@ -24,21 +24,11 @@ const ContainerBlog = styled.div`
   flex-direction: column;
   width: 70%;
   margin: auto;
-  /*justify-content: center;
-  align-items: center; */
 `;
 const ContentSlider = styled.section`
-  /* display: flex;
-  justify-content: space-between; */
-  /* width: 80%;
-  margin: auto; */
-  /* display: grid;
-	grid-template-columns: 3, 1fr;  */
   display: grid;
   column-gap: 77px;
-  /* grid-template-columns: repeat(3, 31%); */
   grid-template-columns: repeat(3, 1fr);
-
   padding: 44.2px 0 56.2px 0;
 `;
 
@@ -90,7 +80,6 @@ const Index = ({ data }) => {
   return (
     <Layouts>
       {/* {data.posts.nodes.map(item => <h1> {item.title}</h1>)} */}
-      {/* {postList.map(item => <CardList data={item}/>)} */}
     <ContainerBlog>
       <CardList data={postList[0]}/>
       <ContentSlider>
