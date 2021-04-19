@@ -63,11 +63,11 @@ const PostList = ({ data, slider }) => {
 			<Image src={agenda} alt='Agenda' slider={slider}/>
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
-					<Date>{data.date}</Date>
-					<Status>{data.status}</Status>
+					<Date>{data.date}</Date> 
+					<Status>{data.status}</Status> 
 				</ContentDate>
 				<Title slider={slider}>{data.title}</Title>
-				<Description>{data.description}</Description>
+				<Description>{data.description}</Description> 
 			</Content>
 		</Container>
 	)

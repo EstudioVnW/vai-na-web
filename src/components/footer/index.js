@@ -160,7 +160,7 @@ const LineDivision = styled.div `
 const Text = styled.p `
 	color: #FFAC2D;
 	font-size: 14px;
-	padding: 1.3rem;
+	padding: 1.5rem;
 `;
 
 const Footer = () => {
@@ -191,7 +191,7 @@ const Footer = () => {
 						<BoxText>
 							<TextLink href="#">Media Kit</TextLink>
 							<TextLink href="#">Deep Tech Network</TextLink>
-							<TextLink href="#">Perguntas Frequentes</TextLink>
+							<TextLink href="/faq">Perguntas Frequentes</TextLink>
 						</BoxText>
 						<BoxContact>
 							<TextContact>

@@ -8,6 +8,7 @@ import Layouts from '../../components/Layouts';
 import Header from '../../components/header';
 import CardList from '../../components/blog/cardList';
 import Footer from '../../components/footer';
+import CardAuthor from '../../components/blog/cardAuthor'
 import fundo from '../../images/icons/Mask-Group-15.png';
 
 
@@ -78,6 +79,13 @@ const postList = [
 
 const Index = ({ data }) => {
   return (
+    <>
+    <>
+      <Header />
+      {data.posts.nodes.map(item => <h1> {item.title}</h1>)}
+      <CardList />
+      <CardAuthor />
+    </>
     <Layouts>
       {/* {data.posts.nodes.map(item => <h1> {item.title}</h1>)} */}
     <ContainerBlog>
@@ -87,7 +95,7 @@ const Index = ({ data }) => {
       </ContentSlider>
     </ContainerBlog>
     </Layouts>
-
+    </>
   )
 }
 
