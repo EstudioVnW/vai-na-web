@@ -4,11 +4,21 @@ import { graphql } from "gatsby";
 import styled from 'styled-components';
 
 //Components
+import Layouts from '../../components/Layouts';
 import Header from '../../components/header';
 import CardList from '../../components/blog/cardList';
 import Footer from '../../components/footer';
+import fundo from '../../images/icons/Mask-Group-15.png';
+
 
 // styles
+const Container = styled.div`
+  width: 100%;
+  background-image: url(${fundo});
+	background-repeat: no-repeat;
+  background-size: auto;
+`;
+
 const ContainerBlog = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,8 +88,7 @@ const postList = [
 
 const Index = ({ data }) => {
   return (
-    <>
-      <Header />
+    <Layouts>
       {/* {data.posts.nodes.map(item => <h1> {item.title}</h1>)} */}
       {/* {postList.map(item => <CardList data={item}/>)} */}
     <ContainerBlog>
@@ -88,8 +97,7 @@ const Index = ({ data }) => {
         {postList.map(item => <CardList data={item} slider/>)}
       </ContentSlider>
     </ContainerBlog>
-      <Footer />
-    </>
+    </Layouts>
 
   )
 }
