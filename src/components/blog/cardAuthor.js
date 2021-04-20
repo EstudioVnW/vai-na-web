@@ -81,20 +81,16 @@ const TextLink = styled.a `
 	}
 `;
 
-const CardPersonDesc = () => {
+const CardPersonDesc = ({ author }) => {
 	return (
 		<Container>
-			<Image src={ImageProfile} alt='' />
+			<Image src={author.photo.url} alt='' />
 			<Content>
 				<BoxText>
-					<TextName>Mayhara Nogueira,</TextName>
-					<TextProfession>Deep Tech Writer</TextProfession>
+					<TextName>{author.name},</TextName>
+					<TextProfession>{author.jobTitle}</TextProfession>
 				</BoxText>
-				<TextDescription>
-					Jornalista por formação, curiosa por natureza. Mayhara escreve 
-					histórias que cruzam consciência e 
-					tecnologia para a rede Deep Tech, <TextLink href="#" target="_blank">1STi</TextLink> e <TextLink href="#" target="_blank">Vai na Web</TextLink>.
-				</TextDescription>
+				<TextDescription>{author.bio.html}</TextDescription>
 			</Content>
 		</Container>
 	)
