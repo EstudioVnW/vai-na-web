@@ -20,6 +20,7 @@ const ContainerDivision = styled.div `
 	flex-direction: column;
 	justify-content: center;
 	transform: matrix(1, -0.04, 0.07, 1, -4, 60.54);
+	box-shadow: 0px 0px 22px #00145D33;
 	@media (max-width: 424px) {
 		width: 49rem;
 	}
@@ -41,6 +42,7 @@ const TitleSpotlight = styled.p `
 	font-size: 59px;
 	text-transform: uppercase;
 	color: #0F2B92;
+	font-weight: 100;
 	@media (max-width: 424px) {
 		font-size: 30px;
 	}
