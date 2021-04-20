@@ -8,14 +8,18 @@ import logoYoutube from '../../images/icons/icon-youtube.svg';
 import logoVnW from '../../images/icons/logo-VNW.svg'
 
 // styles
+const ContainerFooter = styled.div `
+	width: 100%;
+	overflow: hidden;
+`;
+
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
 	height: 7rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	transform: matrix(1, -0.07, 0.07, 1, 0, 60.54);
-	margin-left: -0.5rem;
+	transform: matrix(1, -0.04, 0.07, 1, -4, 60.54);
 	@media (max-width: 424px) {
 		width: 49rem;
 	}
@@ -160,12 +164,12 @@ const LineDivision = styled.div `
 const Text = styled.p `
 	color: #FFAC2D;
 	font-size: 14px;
-	padding: 1.3rem;
+	padding: 1.5rem;
 `;
 
 const Footer = () => {
 	return (
-		<>
+		<ContainerFooter>
 		<ContainerDivision>
 				<LineOrange></LineOrange>
 					<BoxDivision>
@@ -191,7 +195,7 @@ const Footer = () => {
 						<BoxText>
 							<TextLink href="#">Media Kit</TextLink>
 							<TextLink href="#">Deep Tech Network</TextLink>
-							<TextLink href="#">Perguntas Frequentes</TextLink>
+							<TextLink href="/faq">Perguntas Frequentes</TextLink>
 						</BoxText>
 						<BoxContact>
 							<TextContact>
@@ -214,7 +218,7 @@ const Footer = () => {
 				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>
 			</ContainerAll>
 		</Container>
-		</>
+		</ContainerFooter>
 	)
 }
 
