@@ -61,7 +61,7 @@ const TextProfession = styled.p `
 	margin-left: 0.3rem;
 `;
 
-const TextDescription = styled.p `
+const TextDescription = styled.article `
 	color: #0F2B92;
 	font-size: 20px;
 	width: 86%;
@@ -84,13 +84,13 @@ const TextLink = styled.a `
 const CardPersonDesc = ({ author }) => {
 	return (
 		<Container>
-			<Image src={author.photo.url} alt='' />
+			<Image src={author?.photo?.url} alt='' />
 			<Content>
 				<BoxText>
-					<TextName>{author.name},</TextName>
-					<TextProfession>{author.jobTitle}</TextProfession>
+					<TextName>{author?.name},</TextName>
+					<TextProfession>{author?.jobTitle}</TextProfession>
 				</BoxText>
-				<TextDescription>{author.bio.html}</TextDescription>
+				<TextDescription class="Test" dangerouslySetInnerHTML={{ __html: author?.bio.html }}></TextDescription>	
 			</Content>
 		</Container>
 	)
