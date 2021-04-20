@@ -48,23 +48,25 @@ const ContainerMain = styled.div `
 `;
 
 const Index = () => {
-	const data = window && window.history;
-	console.log(data)
+	const hasWindow = typeof window !== 'undefined';
+	const data = hasWindow && window.history;
+
+	console.log(data.state)
 	return (
 		<Layout>
 			<Container>
 				<BoxTitle>
-					<Date>{data.state.postBlog.publishedAt}</Date>
+					<Date>{data?.state?.postBlog?.publishedAt}</Date>
 					<Title>
 						<DetailsTitle>//</DetailsTitle> 
-						{data.state.postBlog.title}
+						{data?.state?.postBlog?.title}
 					</Title>
-					<SubTitle>{data.state.postBlog.excerpt}</SubTitle>
+					<SubTitle>{data?.state?.postBlog?.excerpt}</SubTitle>
 				</BoxTitle>
 				<ContainerMain>
-					<article class="Test" dangerouslySetInnerHTML={{ __html: data.state.postBlog.content.html }}></article>		
+					<article class="Test" dangerouslySetInnerHTML={{ __html: data?.state?.postBlog?.content.html }}></article>		
 				</ContainerMain>
-				<CardAuthor author={data.state.postBlog.authors[0]}/> 
+				<CardAuthor author={data?.state?.postBlog?.authors[0]}/> 
 			</Container>
 		</Layout>
 	)
