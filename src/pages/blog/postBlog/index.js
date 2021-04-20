@@ -22,10 +22,9 @@ const Date = styled.p `
 
 const Title = styled.h2 `
 	font-size: 40px;
-	color: #FFF;
+	color: #FDE7A9;
 	display: flex;
 	width: 75%;
-	
 `;
 
 const DetailsTitle = styled.p `
@@ -48,10 +47,6 @@ const ContainerMain = styled.div `
 	margin-top: 3rem;
 `;
 
-const ThirdImage = styled.img `
-	margin-top: 3.5rem;
-`;
-
 const Index = () => {
 	const data = window && window.history;
 	console.log(data)
@@ -67,8 +62,7 @@ const Index = () => {
 					<SubTitle>{data.state.postBlog.excerpt}</SubTitle>
 				</BoxTitle>
 				<ContainerMain>
-					<article class="Test" dangerouslySetInnerHTML={{ __html: data.state.postBlog.content.html }}></article>
-					
+					<article class="Test" dangerouslySetInnerHTML={{ __html: data.state.postBlog.content.html }}></article>		
 				</ContainerMain>
 				<CardAuthor author={data.state.postBlog.authors[0]}/> 
 			</Container>
