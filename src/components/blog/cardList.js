@@ -9,7 +9,7 @@ const Container = styled.div`
 	display: flex;
 	flex-direction:  ${props => props.slider && 'column'};
 	padding-bottom: ${props => props.slider && '56.2px'};
-	/* width: ${props => props.slider && '30%'}; */
+	width: ${props => props.slider && '30%'};
 `;
 
 const Image = styled.img`

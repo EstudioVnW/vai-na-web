@@ -10,9 +10,8 @@ const Container = styled.div`
 	padding-bottom: ${props => props.slider && '3.513rem'};
 	display: flex;
 	flex-direction:  ${props => props.slider && 'column'};
-	align-items: center;
-	width: ${props => props.slider && '22.813rem'};
 	margin-right: 64px;
+	width: ${props => props.slider && '26%'};
 `;
 
 const Image = styled.img`
@@ -72,13 +71,54 @@ const Description = styled.p`
 	line-height: 1.75rem;
 `;
 
+const formatMonth = (month) => {
+	switch (month) {
+		case '01':
+			return 'Janeiro';
+		case '02':
+			return 'Fevereiro';
+		case '03':
+			return 'Março';
+		case '04':
+			return 'Abril';
+		case '05':
+			return 'Maio';
+		case '06':
+			return 'Junho';
+		case '07':
+			return 'Julho'
+		case '08':
+			return 'Agosto';
+		case '09':
+			return 'Setembro';
+		case '10':
+			return 'Outubro';
+		case '11':
+			return 'Novembro';
+		case '12':
+			return 'Dezembro';
+		default:
+			return month;
+			break;
+	}
+}
+
+const formatDate = (date) => {
+	let renderDate = date;
+	let day = renderDate.slice(8, 10);
+	let month = renderDate.slice(5, 7);
+	let year = renderDate.slice(0, 4);
+
+	return <Date>{day} de {formatMonth(month)} · {year}</Date>
+}
+
 const PostList = ({ data, slider }) => {
 	return (
 		<Container slider={slider}>
-		 <Image src={agenda} alt='Agenda' slider={slider}/>
+			<Image src={agenda} alt='Agenda' slider={slider} />
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
-					<Date>{data.publishedAt}</Date>
+					{formatDate(data.publishedAt)}
 					<Status>{data.tags && data?.tags[0].name}</Status>
 				</ContentDate>
 				<Title to={'/blog/postBlog/'} state={{ postBlog: data }} slider={slider}>{data.title}</Title>

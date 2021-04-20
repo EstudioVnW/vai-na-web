@@ -12,10 +12,11 @@ const Container = styled.div`
   width: 100vw;
   background-image: url(${fundo});
 	background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: cover; */
 `;
 
 const Main = styled.main`
+  min-height: 35vh;
 `;
 
 const Layouts = ({ children }) => {

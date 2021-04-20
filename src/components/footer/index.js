@@ -8,14 +8,18 @@ import logoYoutube from '../../images/icons/icon-youtube.svg';
 import logoVnW from '../../images/icons/logo-VNW.svg'
 
 // styles
+const ContainerFooter = styled.div `
+	width: 100%;
+	overflow: hidden;
+`;
+
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
 	height: 7rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	transform: matrix(1, -0.07, 0.07, 1, 0, 60.54);
-	margin-left: -0.5rem;
+	transform: matrix(1, -0.04, 0.07, 1, -4, 60.54);
 	box-shadow: 0px 0px 22px #00145D33;
 	@media (max-width: 424px) {
 		width: 49rem;
@@ -38,6 +42,7 @@ const TitleSpotlight = styled.p `
 	font-size: 59px;
 	text-transform: uppercase;
 	color: #0F2B92;
+	font-weight: 100;
 	@media (max-width: 424px) {
 		font-size: 30px;
 	}
@@ -166,7 +171,7 @@ const Text = styled.p `
 
 const Footer = () => {
 	return (
-		<>
+		<ContainerFooter>
 		<ContainerDivision>
 				<LineOrange></LineOrange>
 					<BoxDivision>
@@ -215,7 +220,7 @@ const Footer = () => {
 				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>
 			</ContainerAll>
 		</Container>
-		</>
+		</ContainerFooter>
 	)
 }
 

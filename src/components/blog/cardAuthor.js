@@ -5,7 +5,7 @@ import ImageProfile from '../../images/images/PerfilMayhara.png';
 // styles
 const Container = styled.section`
 	background-color: #FDE7A9;
-	width: 50rem;
+	width: 41rem;
 	height: 16rem;
 	border-radius: 0px 0px 18px 18px;
 	margin-left: auto;
@@ -13,7 +13,7 @@ const Container = styled.section`
 	border-top: 2px solid #0F2B92;
 	display: flex;
 	align-items: center;
-	margin-top: 3rem;
+	margin-top: 5rem;
 	margin-bottom: 7rem;
 	@media (max-width: 424px) {
 		width: 43rem;
