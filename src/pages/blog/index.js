@@ -12,7 +12,9 @@ import PostSlider from '../../components/postSlider/postSlider';
 // styles
 const ContainerBlog = styled.div`
   margin: auto;
-  width: 70vw;
+  /* width: 70vw; */
+  width: 100%;
+  background-color: pink;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,7 +71,6 @@ const renderBlog = (info) => (
 const Index = ({ data }) => {
   const infoData = data?.posts?.nodes;
   const isData = !infoData.length;
-
   return (
     <Layouts>
       <ContainerBlog>

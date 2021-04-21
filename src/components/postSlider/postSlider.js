@@ -8,10 +8,16 @@ import PostList from '../blog/postList';
 const Container = styled.section`
 `;
 
-const Content = styled.h3`
+const Content = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+`;
+
+const Arrow = styled.p`
+	font-size: 5rem;
+	font-weight: 200;
+	color: #00145D;
 `;
 
 const Slider = ({ data }) => {
@@ -49,9 +55,9 @@ const Slider = ({ data }) => {
 	
 		return (
 			<Content>
-				{current >= 6 && <p onClick={ handlePrevious}>{'<'}</p>}
+				{current >= 7 && <Arrow onClick={ handlePrevious}>{'<'}</Arrow>}
 				<PostList data={renderList} />
-				{current <= item.length && <p onClick={handleNext}>{'>'}</p>}
+				{current <= item.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
 			</Content>
 		)
 	}

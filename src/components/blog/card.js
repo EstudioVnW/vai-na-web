@@ -10,12 +10,27 @@ const Container = styled.div`
 	padding-bottom: ${props => props.slider && '3.513rem'};
 	display: flex;
 	flex-direction:  ${props => props.slider && 'column'};
-	margin-right: 64px;
-	width: ${props => props.slider && '26%'};
+	justify-content: center;
+	/* margin-right: 64px; */
+	/* width: ${props => props.slider && '26%'}; */
+
+	@media (max-width: 768px) {
+    width: 100%;
+    height: 22vh;
+	}
+
+  @media (max-width: 648px) {
+    width: 100%;
+	}
 `;
 
 const Image = styled.img`
-	width: ${props => !props.slider && '50%'};
+	/* width: ${props => !props.slider && '50%'}; */
+	width: ${props => props.slider ? '22.813rem' : '43.313rem'};
+	height: ${props => props.slider ? '13.875rem' : '26.375rem'};
+	object-fit: fill;
+	border: 2px solid #00145D;
+	border-radius: 20px;
 `;
 
 const Content = styled.div`
@@ -33,15 +48,13 @@ const ContentDate = styled.div`
 const Date = styled.p`
 	font-size: 1rem;
 	color: #0F2B92;
-	font-family: "usual";
 `;
 
 const Status = styled.p`
 	padding: 0 1.188rem;
 	height: 2.063rem;
-	font-size: 1rem;
+	font-size: 0.875rem;
 	color: #FF611E;
-	font-family: "usual";
 	text-transform: uppercase;
 	border: 1px solid #FF611E;
 	border-radius: 19px;
@@ -53,7 +66,6 @@ const Title = styled(Link)`
 	font-size:  ${props => props.slider ? '1.875rem' : '2.75rem'};
 	font-weight: 700;
 	color: #272727;
-	font-family: "usual";
 	text-decoration: none;
 	cursor: pointer;
 
@@ -66,9 +78,15 @@ const Title = styled(Link)`
 const Description = styled.p`
 	padding-top: .688rem;
 	font-size: 1.125rem;
+	font-weight: 300;
 	color: #272727;
-	font-family: "usual";
 	line-height: 1.75rem;
+	max-width: 337px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* número de linhas que você quer exibir */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 `;
 
 const formatMonth = (month) => {
@@ -115,11 +133,11 @@ const formatDate = (date) => {
 const PostList = ({ data, slider }) => {
 	return (
 		<Container slider={slider}>
-			<Image src={agenda} alt='Agenda' slider={slider} />
+			<Image src={data.cover.url} alt='Agenda' slider={slider} />
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
 					{formatDate(data.publishedAt)}
-					<Status>{data.tags && data?.tags[0].name}</Status>
+					<Status>Notícia</Status>
 				</ContentDate>
 				<Title to={'/blog/postBlog/'} state={{ postBlog: data }} slider={slider}>{data.title}</Title>
 				<Description>{data.excerpt}</Description>
