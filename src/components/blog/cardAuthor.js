@@ -5,7 +5,7 @@ import ImageProfile from '../../images/images/PerfilMayhara.png';
 // styles
 const Container = styled.section`
 	background-color: #FDE7A9;
-	width: 50rem;
+	width: 41rem;
 	height: 16rem;
 	border-radius: 0px 0px 18px 18px;
 	margin-left: auto;
@@ -13,7 +13,7 @@ const Container = styled.section`
 	border-top: 2px solid #0F2B92;
 	display: flex;
 	align-items: center;
-	margin-top: 3rem;
+	margin-top: 5rem;
 	margin-bottom: 7rem;
 	@media (max-width: 424px) {
 		width: 43rem;
@@ -61,7 +61,7 @@ const TextProfession = styled.p `
 	margin-left: 0.3rem;
 `;
 
-const TextDescription = styled.p `
+const TextDescription = styled.article `
 	color: #0F2B92;
 	font-size: 20px;
 	width: 86%;
@@ -81,20 +81,16 @@ const TextLink = styled.a `
 	}
 `;
 
-const CardPersonDesc = () => {
+const CardPersonDesc = ({ author }) => {
 	return (
 		<Container>
-			<Image src={ImageProfile} alt='' />
+			<Image src={author?.photo?.url} alt='' />
 			<Content>
 				<BoxText>
-					<TextName>Mayhara Nogueira,</TextName>
-					<TextProfession>Deep Tech Writer</TextProfession>
+					<TextName>{author?.name},</TextName>
+					<TextProfession>{author?.jobTitle}</TextProfession>
 				</BoxText>
-				<TextDescription>
-					Jornalista por formação, curiosa por natureza. Mayhara escreve 
-					histórias que cruzam consciência e 
-					tecnologia para a rede Deep Tech, <TextLink href="#" target="_blank">1STi</TextLink> e <TextLink href="#" target="_blank">Vai na Web</TextLink>.
-				</TextDescription>
+				<TextDescription class="Test" dangerouslySetInnerHTML={{ __html: author?.bio.html }}></TextDescription>	
 			</Content>
 		</Container>
 	)
