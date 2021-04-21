@@ -15,6 +15,7 @@ const ContainerFooter = styled.div `
 
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
+	width: 103%;
 	height: 7rem;
 	display: flex;
 	flex-direction: column;

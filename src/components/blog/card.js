@@ -11,24 +11,26 @@ const Container = styled.div`
 	display: flex;
 	flex-direction:  ${props => props.slider && 'column'};
 	justify-content: center;
-	/* margin-right: 64px; */
-	/* width: ${props => props.slider && '26%'}; */
+	width: ${props => props.slider && '30%'};
+	margin-right: ${props => props.slider && '4.6%'};
+	
+	:nth-child(3n + 3) {
+		margin-right: 0;
+	}
 
-	@media (max-width: 768px) {
+	/* @media (max-width: 768px) {
     width: 100%;
     height: 22vh;
 	}
 
   @media (max-width: 648px) {
     width: 100%;
-	}
+	} */
 `;
 
 const Image = styled.img`
-	/* width: ${props => !props.slider && '50%'}; */
-	width: ${props => props.slider ? '22.813rem' : '43.313rem'};
+	width: ${props => props.slider ? '100%' : '40%'};
 	height: ${props => props.slider ? '13.875rem' : '26.375rem'};
-	object-fit: fill;
 	border: 2px solid #00145D;
 	border-radius: 20px;
 `;

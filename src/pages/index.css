@@ -69,6 +69,8 @@
 html {
   font-size: 16px;
   font-family: "usual", sans-serif;
+  overflow-x: hidden;
+
 }
 
 .Test {

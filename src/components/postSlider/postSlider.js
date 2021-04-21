@@ -5,13 +5,20 @@ import styled from 'styled-components';
 import PostList from '../blog/postList';
 
 // styles
-const Container = styled.section`
+const Container = styled.div`
+	display: flex;
+	justify-content: center;
 `;
 
 const Content = styled.div`
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	width: 85%;
+`;
+
+const Figure = styled.figure`
+	width: 2.5rem;
 `;
 
 const Arrow = styled.p`
@@ -55,9 +62,13 @@ const Slider = ({ data }) => {
 	
 		return (
 			<Content>
-				{current >= 7 && <Arrow onClick={ handlePrevious}>{'<'}</Arrow>}
+				<Figure>
+					{current >= 7 && <Arrow onClick={ handlePrevious}>{'<'}</Arrow>}
+				</Figure>
 				<PostList data={renderList} />
-				{current <= item.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+				<Figure>
+					{current <= item.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+				</Figure>
 			</Content>
 		)
 	}

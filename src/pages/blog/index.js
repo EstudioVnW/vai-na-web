@@ -14,7 +14,6 @@ const ContainerBlog = styled.div`
   margin: auto;
   /* width: 70vw; */
   width: 100%;
-  background-color: pink;
   display: flex;
   flex-direction: column;
   justify-content: center;

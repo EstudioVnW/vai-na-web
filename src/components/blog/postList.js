@@ -8,10 +8,12 @@ import Card from '../../components/blog/card';
 
 // styles
 const Container = styled.div`
-/* width: 26%; */
-
-display: flex;
-flex-wrap: wrap;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  /* justify-content: center; */
+  /* align-items: start; */
 
   /* display: grid;
   column-gap: 77px;
