@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import ImageProfile from '../../images/images/PerfilMayhara.png';
 
 // styles
 const Container = styled.section`
@@ -15,6 +14,7 @@ const Container = styled.section`
 	align-items: center;
 	margin-top: 5rem;
 	margin-bottom: 7rem;
+
 	@media (max-width: 424px) {
 		width: 43rem;
 		margin-left: 50px;
@@ -27,6 +27,7 @@ const Container = styled.section`
 const Image = styled.img `
 	margin-left: 3rem;
 	width: 20%;
+
 	@media (max-width: 424px) {
 		width: 23%;
 		margin-left: 0px;
@@ -38,6 +39,7 @@ const Content = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin-left: 2rem;
+
 	@media (max-width: 424px) {
 		align-items: center;
 		margin-left: 0px;
@@ -46,6 +48,7 @@ const Content = styled.div`
 
 const BoxText = styled.div `
 	display: flex;
+
 	@media (max-width: 424px) {
 		margin-top: 2rem;
 	}
@@ -67,10 +70,6 @@ const TextDescription = styled.article `
 	width: 86%;
 	line-height: 2rem;
 	margin-top: 1.3rem;
-	@media (max-width: 424px) {
-		font-size: 24px;
-		text-align: center;
-	}
 `;
 
 const CardPersonDesc = ({ author }) => {

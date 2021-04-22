@@ -76,8 +76,7 @@ const formatMonth = (month) => {
 		case '12':
 			return 'Dezembro';
 		default:
-			return month;
-			break;
+			return '';
 	}
 }
 
@@ -100,8 +99,7 @@ const PageTitle = ({ data }) => {
 					<span>//</span>
 					{data?.title}				
 				</Title>
-				{/* {data?.excerpt && <SubTitle>{data.excerpt}</SubTitle>} */}
-				{data?.excerpt && <SubTitle>Women in Tech, que celebra mulheres e iniciativas notáveis na economia digital, vai acontecer dia 2 de dezembro em Lisboa</SubTitle>}
+				{data?.excerpt && <SubTitle>{data.excerpt}</SubTitle>}
 			</BoxTitle>
 		</Container>
 	)
