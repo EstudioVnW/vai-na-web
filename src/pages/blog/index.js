@@ -3,10 +3,11 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from 'styled-components';
 
+
 //Components
 import Layouts from '../../components/Layouts';
+import PageTitle from '../../components/pageTitle/pageTitle';
 import Card from '../../components/blog/card';
-import PostList from '../../components/blog/postList';
 import PostSlider from '../../components/postSlider/postSlider';
 
 // styles
@@ -79,6 +80,8 @@ const Index = ({ data }) => {
   const isData = !infoData.length;
   return (
     <Layouts>
+      <PageTitle />
+
       <ContainerBlog>
         {isData
           ? <Text>Não há conteúdo no momento</Text>
