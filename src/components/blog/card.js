@@ -114,8 +114,7 @@ const formatMonth = (month) => {
 		case '12':
 			return 'Dezembro';
 		default:
-			return month;
-			break;
+			return '';
 	}
 }
 
@@ -128,20 +127,20 @@ const formatDate = (date) => {
 	return <Date>{day} de {formatMonth(month)} · {year}</Date>
 }
 
-const PostList = ({ data, slider }) => {
+const Card = ({ data, slider }) => {
 	return (
 		<Container slider={slider}>
-			<Image src={data.cover.url} alt='Agenda' slider={slider} />
+			<Image src={data.cover.url} alt={data.title} slider={slider} />
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
 					{formatDate(data.publishedAt)}
-					<Status>Notícia</Status>
+					<Status>{data.tags[0].name}</Status>
 				</ContentDate>
-				<Title to={'/blog/postBlog/'} state={{ postBlog: data }} slider={slider}>{data.title}</Title>
+				<Title to={'/blog/postBlog/'} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title}</Title>
 				<Description>{data.excerpt}</Description>
 			</Content>
 		</Container>
 	)
 }
 
-export default PostList;
+export default Card;

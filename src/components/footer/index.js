@@ -196,8 +196,8 @@ const Footer = () => {
 				<div>
 					<ContainerTextIcons>
 						<BoxText>
-							<TextLink href="#" target="_blank" rel="noreferrer">Media Kit</TextLink>
-							<TextLink href="#" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
+							<TextLink href="/" target="_blank" rel="noreferrer">Media Kit</TextLink>
+							<TextLink href="/" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
 							<TextLink href="/faq" target="_blank" rel="noreferrer">Perguntas Frequentes</TextLink>
 						</BoxText>
 						<BoxContact>
@@ -210,7 +210,7 @@ const Footer = () => {
 					<BoxIcons>
 							<a href="https://www.facebook.com/vainaweb" target="_blank" rel="noreferrer"><Icon src={logoFacebook} alt="Logo Facebook"/></a>
 							<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noreferrer"><Icon src={logoInstagram} alt="Logo Instagram"/></a>
-							<a href="#" target="_blank" rel="noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
+							<a href="/" target="_blank" rel="noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
 							<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank" rel="noreferrer"><Icon src={logoLinkedin} alt="Logo Linkedin"/></a>
 							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noreferrer"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
 					</BoxIcons>

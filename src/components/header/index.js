@@ -10,7 +10,8 @@ const Container = styled.header`
   display: flex;
 	justify-content:  ${props => props.home ? 'space-between' : 'space-between'};
 	width: 100%;
-  	height: 15rem;
+	height: 15rem;
+
 	nav{
 		font-family: "usual", sans-serif;
 		position: fixed;
@@ -52,12 +53,12 @@ const Li = styled.li`
 const Header = ({ home }) => {
 	return (
 		<Container home={home}>
-			<Link to={'/'}><Image src={logo} home={home} alt='Logotipo' /></Link>
+			<Link to={'/'} rel="noreferrer"><Image src={logo} home={home} alt='Logotipo' /></Link>
 			<nav>
 				<Ul>
-					<Li><Link to={'/'}>Sobre</Link></Li>
-					<Li><Link to={'/blog'}>Blog</Link></Li>
-					<Li><Link to={'/contato'}>Contato</Link></Li>
+					<Li><Link to={'/'} rel="noreferrer">Sobre</Link></Li>
+					<Li><Link to={'/blog'} rel="noreferrer">Blog</Link></Li>
+					<Li><Link to={'/contato'} rel="noreferrer">Contato</Link></Li>
 				</Ul>
 			</nav>
 		</Container>
