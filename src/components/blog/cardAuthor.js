@@ -73,14 +73,6 @@ const TextDescription = styled.article `
 	}
 `;
 
-const TextLink = styled.a `
-	color: #0F2B92;
-	font-size: 20px;
-	@media (max-width: 424px) {
-		font-size: 24px;
-	}
-`;
-
 const CardPersonDesc = ({ author }) => {
 	return (
 		<Container>
@@ -90,7 +82,7 @@ const CardPersonDesc = ({ author }) => {
 					<TextName>{author?.name},</TextName>
 					<TextProfession>{author?.jobTitle}</TextProfession>
 				</BoxText>
-				<TextDescription class="Test" dangerouslySetInnerHTML={{ __html: author?.bio.html }}></TextDescription>	
+				<TextDescription dangerouslySetInnerHTML={{ __html: author?.bio.html }}></TextDescription>	
 			</Content>
 		</Container>
 	)
