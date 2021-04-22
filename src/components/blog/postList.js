@@ -8,14 +8,10 @@ import Card from '../../components/blog/card';
 
 // styles
 const Container = styled.div`
-/* width: 26%; */
-
-display: flex;
-flex-wrap: wrap;
-
-  /* display: grid;
-  column-gap: 77px;
-  grid-template-columns: repeat(3, 1fr); */
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
   padding: 44.2px 0 56.2px 0;
 `;
 
