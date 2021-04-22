@@ -6,7 +6,6 @@ import styled from 'styled-components';
 
 //Components
 import Layouts from '../../components/Layouts';
-import PageTitle from '../../components/pageTitle/pageTitle';
 import Card from '../../components/blog/card';
 import PostSlider from '../../components/postSlider/postSlider';
 
@@ -78,10 +77,10 @@ const renderBlog = (info) => (
 const Index = ({ data }) => {
   const infoData = data?.posts?.nodes;
   const isData = !infoData.length;
-  return (
-    <Layouts>
-      <PageTitle />
+  const isTitle = { typePage: 'Blog', title: 'Radar Vai na Web'};
 
+  return (
+    <Layouts pageTitle={isTitle}>
       <ContainerBlog>
         {isData
           ? <Text>Não há conteúdo no momento</Text>

@@ -50,18 +50,24 @@ const ContainerMain = styled.div `
 const Index = () => {
 	const hasWindow = typeof window !== 'undefined';
 	const data = hasWindow && window.history;
+	const isData = data?.state?.postBlog;
+	const isTitle = {
+		date: isData?.publishedAt,
+		title: isData?.title,
+		excerpt: isData?.excerpt,
+	}
 
 	return (
-		<Layout>
+		<Layout pageTitle={isTitle}>
 			<Container>
-				<BoxTitle>
+				{/* <BoxTitle>
 					<Date>{data?.state?.postBlog?.publishedAt}</Date>
 					<Title>
 						<DetailsTitle>//</DetailsTitle> 
 						{data?.state?.postBlog?.title}
 					</Title>
 					<SubTitle>{data?.state?.postBlog?.excerpt}</SubTitle>
-				</BoxTitle>
+				</BoxTitle> */}
 				<ContainerMain>
 					<article class="Test" dangerouslySetInnerHTML={{ __html: data?.state?.postBlog?.content.html }}></article>		
 				</ContainerMain>

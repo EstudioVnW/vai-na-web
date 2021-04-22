@@ -33,16 +33,17 @@ const Ul = styled.ul`
 const Li = styled.li`
 	padding-left: 2.25rem;
 	cursor: pointer;
+	
 	a{
 		text-decoration: none;
-		color: #FFF;
+		color: #FDE7A9;
 		position: relative;
 		::before{
 			content: '';
 			position: absolute;
 			width: 100%;
 			height: 1px;
-			background: #FFF;
+			background: #FDE7A9;
 			top: 20px;
 		}	
 	}
@@ -51,10 +52,10 @@ const Li = styled.li`
 const Header = ({ home }) => {
 	return (
 		<Container home={home}>
-			<Link to={'/home'}><Image src={logo} home={home} alt='Logotipo' /></Link>
+			<Link to={'/'}><Image src={logo} home={home} alt='Logotipo' /></Link>
 			<nav>
 				<Ul>
-					<Li><Link to={'/sobre'}>Sobre</Link></Li>
+					<Li><Link to={'/'}>Sobre</Link></Li>
 					<Li><Link to={'/blog'}>Blog</Link></Li>
 					<Li><Link to={'/contato'}>Contato</Link></Li>
 				</Ul>
