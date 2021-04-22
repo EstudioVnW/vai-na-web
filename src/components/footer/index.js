@@ -57,7 +57,7 @@ const Container = styled.footer`
 	background-color: #00145D;
 	height: auto;
 	@media (max-width: 424px) {
-		width: 48rem;
+		width: 28rem;
 	}
 `;
 
@@ -83,8 +83,8 @@ const ContainerTextIcons = styled.div `
 	display: flex;
 	width: 26rem;
 	@media (max-width: 424px) {
-		width: 100%;
-		margin-top: 4rem;
+		padding: 1rem;
+		margin-top: 2rem;	
 	}	
 `;
 
@@ -93,9 +93,9 @@ const TextFooter = styled.p`
 	width: 23%;
 	line-height: 1.5rem;
 	@media (max-width: 424px) {
-		width: 100%;
+		width: 80%;
 		text-align: center;
-		font-size: 20px;
+		font-size: 14px;
 	}	
 `;
 
@@ -111,7 +111,7 @@ const TextLink = styled.a `
 	text-align: justify;
 	margin-top: 8px;
 	@media (max-width: 424px) {
-		font-size: 20px;
+		font-size: 14px;
 	}
 `;
 
@@ -127,8 +127,9 @@ const TextContact = styled.p `
 	width: 100%;
 	line-height: 1.5em;
 	@media (max-width: 424px) {
-		font-size: 20px;
+		font-size: 14px;
 		width: 80%;
+		margin-right: 1rem;
 	}
 `;
 
@@ -139,7 +140,7 @@ const BoxIcons = styled.div `
 	margin-top: 1.8rem;
 	@media (max-width: 424px) {
 		width: 100%;
-    	padding: 4rem;
+		padding: 4rem;
 	}
 `;
 

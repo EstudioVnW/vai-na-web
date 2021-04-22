@@ -70,11 +70,6 @@ const TextDescription = styled.article `
 	width: 86%;
 	line-height: 2rem;
 	margin-top: 1.3rem;
-
-	@media (max-width: 424px) {
-		font-size: 24px;
-		text-align: center;
-	}
 `;
 
 const CardPersonDesc = ({ author }) => {
@@ -86,7 +81,7 @@ const CardPersonDesc = ({ author }) => {
 					<TextName>{author?.name},</TextName>
 					<TextProfession>{author?.jobTitle}</TextProfession>
 				</BoxText>
-				<TextDescription class="Test" dangerouslySetInnerHTML={{ __html: author?.bio.html }}></TextDescription>	
+				<TextDescription dangerouslySetInnerHTML={{ __html: author?.bio.html }}></TextDescription>	
 			</Content>
 		</Container>
 	)
