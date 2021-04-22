@@ -12,12 +12,6 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  /* justify-content: center; */
-  /* align-items: start; */
-
-  /* display: grid;
-  column-gap: 77px;
-  grid-template-columns: repeat(3, 1fr); */
   padding: 44.2px 0 56.2px 0;
 `;
 

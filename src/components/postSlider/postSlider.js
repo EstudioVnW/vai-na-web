@@ -14,7 +14,7 @@ const Content = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 85%;
+	/* width: 85%; */
 `;
 
 const Figure = styled.figure`

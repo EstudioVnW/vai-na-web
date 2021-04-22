@@ -2,37 +2,33 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
 
-//Images
-import agenda from '../../images/images/agenda.svg';
-
 // styles
 const Container = styled.div`
+	margin-right: ${props => props.slider && '4.6%'};
 	padding-bottom: ${props => props.slider && '3.513rem'};
+	width: ${props => props.slider && '30%'};
 	display: flex;
 	flex-direction:  ${props => props.slider && 'column'};
-	justify-content: center;
-	width: ${props => props.slider && '30%'};
-	margin-right: ${props => props.slider && '4.6%'};
-	
+
 	:nth-child(3n + 3) {
 		margin-right: 0;
 	}
-
-	/* @media (max-width: 768px) {
-    width: 100%;
-    height: 22vh;
-	}
-
-  @media (max-width: 648px) {
-    width: 100%;
-	} */
 `;
 
 const Image = styled.img`
-	width: ${props => props.slider ? '100%' : '40%'};
+	width: ${props => props.slider ? '100%' : '41.313rem'};
 	height: ${props => props.slider ? '13.875rem' : '26.375rem'};
 	border: 2px solid #00145D;
 	border-radius: 20px;
+
+	@media (max-width: 1382px) {
+		width: ${props => props.slider ? '100%' : '37.313rem'};
+	}
+
+	@media (max-width: 1024px) {
+		width: ${props => props.slider ? '100%' : '21.313rem'};
+		height: ${props => props.slider ? '8.875rem' : '19.375rem'};
+	}
 `;
 
 const Content = styled.div`
@@ -41,10 +37,10 @@ const Content = styled.div`
 `;
 
 const ContentDate = styled.div`
+	padding: ${props => props.slider ? '1.54rem 0 0.5rem 0' : '1.25rem 0'};
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: ${props => props.slider ? '1.54rem 0 0.5rem 0' : '1.25rem 0'};
 `;
 
 const Date = styled.p`
@@ -55,13 +51,13 @@ const Date = styled.p`
 const Status = styled.p`
 	padding: 0 1.188rem;
 	height: 2.063rem;
+	display: flex;
+	align-items: center;
 	font-size: 0.875rem;
 	color: #FF611E;
 	text-transform: uppercase;
 	border: 1px solid #FF611E;
 	border-radius: 19px;
-	display: flex;
-	align-items: center;
 `;
 
 const Title = styled(Link)`
