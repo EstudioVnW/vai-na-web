@@ -47,6 +47,33 @@ const ContainerMain = styled.div `
 	margin-top: 3rem;
 `;
 
+const TextDescription = styled.article `
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	p {
+		font-weight: 100;
+		width: 48%;
+		font-size: 20px;
+		line-height: 2rem;
+		margin-top: 1.8rem;
+	  };
+
+	  blockquote {
+		width: 63%;
+		font-size: 24px;
+		line-height: 2.5rem;
+		margin-top: 2rem;
+	  };
+
+	  p strong {
+		width: 63%;
+		font-size: 24px;
+		line-height: 2.5rem;
+	  };
+`;
+
 const Index = () => {
 	const hasWindow = typeof window !== 'undefined';
 	const data = hasWindow && window.history;
@@ -69,7 +96,7 @@ const Index = () => {
 					<SubTitle>{data?.state?.postBlog?.excerpt}</SubTitle>
 				</BoxTitle> */}
 				<ContainerMain>
-					<article class="Test" dangerouslySetInnerHTML={{ __html: data?.state?.postBlog?.content.html }}></article>		
+					<TextDescription dangerouslySetInnerHTML={{ __html: data?.state?.postBlog?.content.html }}></TextDescription>		
 				</ContainerMain>
 				<CardAuthor author={data?.state?.postBlog?.authors[0]}/> 
 			</Container>
@@ -81,6 +108,5 @@ export default Index;
 
 
 // o titulo da header não esta em development
-// alterar a class test para pegar os dados pelo isStyledComponent
 // chamar o component pageTest
 // 
