@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from 'styled-components';
 
 //Components
@@ -6,7 +6,6 @@ import Header from '../../components/header';
 
 //Assets
 import iconOpenModal from '../../images/icons/iconMore.svg';
-import iconCursor from '../../images/icons/cursor.svg';
 
 // styles
 const Container = styled.div`
@@ -46,7 +45,6 @@ const ContentTitle = styled.div`
 	height: 5.5rem;
 	background: #FED5B2;
 	border-radius: 8px;
-	cursor: url(iconCursor), auto;
 
 	:hover {
 		background: #FFAC2D;
