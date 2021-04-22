@@ -2,20 +2,33 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
 
-//Images
-import agenda from '../../images/images/agenda.svg';
-
 // styles
 const Container = styled.div`
+	margin-right: ${props => props.slider && '4.6%'};
 	padding-bottom: ${props => props.slider && '3.513rem'};
+	width: ${props => props.slider && '30%'};
 	display: flex;
 	flex-direction:  ${props => props.slider && 'column'};
-	margin-right: 64px;
-	width: ${props => props.slider && '26%'};
+
+	:nth-child(3n + 3) {
+		margin-right: 0;
+	}
 `;
 
 const Image = styled.img`
-	width: ${props => !props.slider && '50%'};
+	width: ${props => props.slider ? '100%' : '41.313rem'};
+	height: ${props => props.slider ? '13.875rem' : '26.375rem'};
+	border: 2px solid #00145D;
+	border-radius: 20px;
+
+	@media (max-width: 1382px) {
+		width: ${props => props.slider ? '100%' : '37.313rem'};
+	}
+
+	@media (max-width: 1024px) {
+		width: ${props => props.slider ? '100%' : '21.313rem'};
+		height: ${props => props.slider ? '8.875rem' : '19.375rem'};
+	}
 `;
 
 const Content = styled.div`
@@ -24,36 +37,33 @@ const Content = styled.div`
 `;
 
 const ContentDate = styled.div`
+	padding: ${props => props.slider ? '1.54rem 0 0.5rem 0' : '1.25rem 0'};
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: ${props => props.slider ? '1.54rem 0 0.5rem 0' : '1.25rem 0'};
 `;
 
 const Date = styled.p`
 	font-size: 1rem;
 	color: #0F2B92;
-	font-family: "usual";
 `;
 
 const Status = styled.p`
 	padding: 0 1.188rem;
 	height: 2.063rem;
-	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	font-size: 0.875rem;
 	color: #FF611E;
-	font-family: "usual";
 	text-transform: uppercase;
 	border: 1px solid #FF611E;
 	border-radius: 19px;
-	display: flex;
-	align-items: center;
 `;
 
 const Title = styled(Link)`
 	font-size:  ${props => props.slider ? '1.875rem' : '2.75rem'};
 	font-weight: 700;
 	color: #272727;
-	font-family: "usual";
 	text-decoration: none;
 	cursor: pointer;
 
@@ -66,9 +76,15 @@ const Title = styled(Link)`
 const Description = styled.p`
 	padding-top: .688rem;
 	font-size: 1.125rem;
+	font-weight: 300;
 	color: #272727;
-	font-family: "usual";
 	line-height: 1.75rem;
+	max-width: 337px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* número de linhas que você quer exibir */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 `;
 
 const formatMonth = (month) => {
@@ -115,11 +131,11 @@ const formatDate = (date) => {
 const PostList = ({ data, slider }) => {
 	return (
 		<Container slider={slider}>
-			<Image src={agenda} alt='Agenda' slider={slider} />
+			<Image src={data.cover.url} alt='Agenda' slider={slider} />
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
 					{formatDate(data.publishedAt)}
-					<Status>{data.tags && data?.tags[0].name}</Status>
+					<Status>Notícia</Status>
 				</ContentDate>
 				<Title to={'/blog/postBlog/'} state={{ postBlog: data }} slider={slider}>{data.title}</Title>
 				<Description>{data.excerpt}</Description>

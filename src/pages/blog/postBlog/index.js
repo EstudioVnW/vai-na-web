@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from 'styled-components';
+import styled, { isStyledComponent } from 'styled-components';
 
 // Components
 import CardAuthor from '../../../components/blog/cardAuthor';
@@ -51,7 +51,6 @@ const Index = () => {
 	const hasWindow = typeof window !== 'undefined';
 	const data = hasWindow && window.history;
 
-	console.log(data.state)
 	return (
 		<Layout>
 			<Container>
@@ -73,3 +72,9 @@ const Index = () => {
 }
 
 export default Index;
+
+
+// o titulo da header não esta em development
+// alterar a class test para pegar os dados pelo isStyledComponent
+// chamar o component pageTest
+// 

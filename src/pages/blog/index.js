@@ -12,11 +12,17 @@ import PostSlider from '../../components/postSlider/postSlider';
 // styles
 const ContainerBlog = styled.div`
   margin: auto;
-  width: 70vw;
+  width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 `;
+
+const ContantCard = styled.div`
+  width: 80%; /* tamanho do container do post */
+`;
+
 
 const Text = styled.h3`
 	font-size:  ${props => props.slider ? '1.875rem' : '2.75rem'};
@@ -61,7 +67,9 @@ export const query = graphql`
 
 const renderBlog = (info) => (
   <>
-    <Card data={info[0]} />
+    <ContantCard>
+      <Card data={info[0]} />
+    </ContantCard>
     <PostSlider data={info} />
   </>
 )
@@ -69,7 +77,6 @@ const renderBlog = (info) => (
 const Index = ({ data }) => {
   const infoData = data?.posts?.nodes;
   const isData = !infoData.length;
-
   return (
     <Layouts>
       <ContainerBlog>

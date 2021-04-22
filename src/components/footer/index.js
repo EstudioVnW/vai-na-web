@@ -15,6 +15,7 @@ const ContainerFooter = styled.div `
 
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
+	width: 103%;
 	height: 7rem;
 	display: flex;
 	flex-direction: column;
@@ -195,9 +196,9 @@ const Footer = () => {
 				<div>
 					<ContainerTextIcons>
 						<BoxText>
-							<TextLink href="#">Media Kit</TextLink>
-							<TextLink href="#">Deep Tech Network</TextLink>
-							<TextLink href="/faq">Perguntas Frequentes</TextLink>
+							<TextLink href="#" target="_blank" rel="noreferrer">Media Kit</TextLink>
+							<TextLink href="#" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
+							<TextLink href="/faq" target="_blank" rel="noreferrer">Perguntas Frequentes</TextLink>
 						</BoxText>
 						<BoxContact>
 							<TextContact>
@@ -207,14 +208,14 @@ const Footer = () => {
 						</BoxContact>
 					</ContainerTextIcons>
 					<BoxIcons>
-							<a href="https://www.facebook.com/vainaweb" target="_blank"><Icon src={logoFacebook} alt="Logo Facebook"/></a>
-							<a href="https://www.instagram.com/vainaweb/" target="_blank"><Icon src={logoInstagram} alt="Logo Instagram"/></a>
-							<a href="#"><Icon src={logoEmail} alt="Logo Email"/></a>
-							<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank"><Icon src={logoLinkedin} alt="Logo Linkedin"/></a>
-							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
+							<a href="https://www.facebook.com/vainaweb" target="_blank" rel="noreferrer"><Icon src={logoFacebook} alt="Logo Facebook"/></a>
+							<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noreferrer"><Icon src={logoInstagram} alt="Logo Instagram"/></a>
+							<a href="#" target="_blank" rel="noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
+							<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank" rel="noreferrer"><Icon src={logoLinkedin} alt="Logo Linkedin"/></a>
+							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noreferrer"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
 					</BoxIcons>
 				</div>
-					<a href="/"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
+					<a href="/" target="_blank" rel="noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
 			</Box> 
 				<LineDivision></LineDivision>
 				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>

@@ -5,13 +5,26 @@ import styled from 'styled-components';
 import PostList from '../blog/postList';
 
 // styles
-const Container = styled.section`
-`;
-
-const Content = styled.h3`
+const Container = styled.div`
 	display: flex;
 	justify-content: center;
+`;
+
+const Content = styled.div`
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
+	/* width: 85%; */
+`;
+
+const Figure = styled.figure`
+	width: 2.5rem;
+`;
+
+const Arrow = styled.p`
+	font-size: 5rem;
+	font-weight: 200;
+	color: #00145D;
 `;
 
 const Slider = ({ data }) => {
@@ -49,9 +62,13 @@ const Slider = ({ data }) => {
 	
 		return (
 			<Content>
-				{current >= 6 && <p onClick={ handlePrevious}>{'<'}</p>}
+				<Figure>
+					{current >= 7 && <Arrow onClick={ handlePrevious}>{'<'}</Arrow>}
+				</Figure>
 				<PostList data={renderList} />
-				{current <= item.length && <p onClick={handleNext}>{'>'}</p>}
+				<Figure>
+					{current <= item.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+				</Figure>
 			</Content>
 		)
 	}
