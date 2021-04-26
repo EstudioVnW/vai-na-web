@@ -45,7 +45,7 @@ const Title = styled.h2`
 const SubTitle = styled.p `
 	font-size: 36px;
 	font-weight: 100;
-	width: 49%;
+	width: 90%;
 	padding: 0 0 3.148rem 5rem;
 `;
 

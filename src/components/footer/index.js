@@ -31,7 +31,7 @@ const BoxDivision = styled.div `
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin: 0.7rem 0;
+	margin: 0.5rem 0;
 `;
 
 const LineOrange = styled.div `
@@ -90,7 +90,7 @@ const ContainerTextIcons = styled.div `
 
 const TextFooter = styled.p`
 	color: #FFFFFF;
-	width: 23%;
+	width: 25%;
 	line-height: 1.5rem;
 	@media (max-width: 424px) {
 		width: 80%;
@@ -145,8 +145,12 @@ const BoxIcons = styled.div `
 `;
 
 const Icon = styled.img `
-	width: 2.5rem;
+	width: 2.3rem;
 	cursor: pointer;
+	:hover {
+		background: #0F2B92 0% 0% no-repeat padding-box;
+		opacity: 1;
+	}
 `;
 
 const Logo = styled.img `
@@ -168,7 +172,7 @@ const LineDivision = styled.div `
 const Text = styled.p `
 	color: #FFAC2D;
 	font-size: 14px;
-	padding: 1.5rem;
+	padding: 1rem;
 `;
 
 const Footer = () => {

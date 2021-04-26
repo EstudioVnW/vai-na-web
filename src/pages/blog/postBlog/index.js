@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // Components
 import CardAuthor from '../../../components/blog/cardAuthor';
-import Layout from '../../../components/Layouts'
+import Layout from '../../../components/Layouts';
 
 // styles
 const Container = styled.section`	
@@ -47,7 +47,7 @@ const TextDescription = styled.article `
 const Index = () => {
 	const hasWindow = typeof window !== 'undefined';
 	const data = hasWindow && window.history;
-	const isData = data?.state?.postBlog;
+	const isData = data.state?.postBlog;
 	const isTitle = {
 		date: isData?.publishedAt,
 		title: isData?.title,
