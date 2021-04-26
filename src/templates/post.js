@@ -1,6 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+// import { graphql } from "gatsby"
+// import { Helmet } from "react-helmet"
 
 export default function DocumentationPage({ data }) {
   return (
