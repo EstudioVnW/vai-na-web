@@ -90,7 +90,7 @@ const ContainerTextIcons = styled.div `
 
 const TextFooter = styled.p`
 	color: #FFFFFF;
-	width: 23%;
+	width: 25%;
 	line-height: 1.5rem;
 	@media (max-width: 424px) {
 		width: 80%;

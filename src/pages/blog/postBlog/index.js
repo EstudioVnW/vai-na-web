@@ -3,11 +3,18 @@ import styled, { isStyledComponent } from 'styled-components';
 
 // Components
 import CardAuthor from '../../../components/blog/cardAuthor';
-import Layout from '../../../components/Layouts'
+import Layout from '../../../components/Layouts';
 
 // styles
 const Container = styled.section`	
 	margin-top: -6rem;
+`;
+
+const Image = styled.img`
+	width: ${props => props.slider ? '100%' : '41.313rem'};
+	height: ${props => props.slider ? '13.875rem' : '26.375rem'};
+	border: 2px solid #00145D;
+	border-radius: 20px;
 `;
 
 const BoxTitle = styled.div `
@@ -77,7 +84,7 @@ const TextDescription = styled.article `
 const Index = () => {
 	const hasWindow = typeof window !== 'undefined';
 	const data = hasWindow && window.history;
-	const isData = data?.state?.postBlog;
+	const isData = data.state?.postBlog;
 	const isTitle = {
 		date: isData?.publishedAt,
 		title: isData?.title,
@@ -86,6 +93,7 @@ const Index = () => {
 
 	return (
 		<Layout pageTitle={isTitle}>
+		{/* <Image src={isImage} alt='Agenda' />   */}
 			<Container>
 				{/* <BoxTitle>
 					<Date>{data?.state?.postBlog?.publishedAt}</Date>
