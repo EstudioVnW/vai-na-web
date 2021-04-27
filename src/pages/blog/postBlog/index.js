@@ -57,7 +57,7 @@ const Index = () => {
 	}
 
 	return (
-		<Layout pageTitle={isTitle}>
+		<Layout isPage='postBlog' pageTitle={isTitle}>
 			<Container>
 				<ContainerMain>
 					<TextDescription dangerouslySetInnerHTML={{ __html: data?.state?.postBlog?.content.html }}></TextDescription>		
