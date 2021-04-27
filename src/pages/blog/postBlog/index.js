@@ -44,12 +44,14 @@ const TextDescription = styled.article `
 	  };
 `;
 
+
+
 const Index = () => {
 	const hasWindow = typeof window !== 'undefined';
 	const data = hasWindow && window.history;
 	const isData = data.state?.postBlog;
 	const isTitle = {
-		date: isData?.publishedAt,
+		date: isData?.publishedAt, 
 		title: isData?.title,
 		excerpt: isData?.excerpt,
 	}
