@@ -3,7 +3,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from 'styled-components';
 
-
 //Components
 import Layouts from '../../components/Layouts';
 import Card from '../../components/blog/card';
@@ -22,7 +21,6 @@ const ContainerBlog = styled.div`
 const ContantCard = styled.div`
   width: 80%; /* tamanho do container do post */
 `;
-
 
 const Text = styled.h3`
 	font-size:  ${props => props.slider ? '1.875rem' : '2.75rem'};
@@ -91,6 +89,5 @@ const Index = ({ data }) => {
 
   )
 }
-
 
 export default Index;

@@ -203,7 +203,7 @@ const Footer = () => {
 						</BoxText>
 						<BoxContact>
 							<TextContact>
-								contato@emailvnw.com.br 
+								ola@vainaweb.com.br
 								+55 21 93456-7890
 							</TextContact>
 						</BoxContact>

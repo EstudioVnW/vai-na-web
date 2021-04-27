@@ -72,6 +72,7 @@ html {
 }
 
 button {
+  border: none;
   cursor: pointer;
   outline: none;
 }

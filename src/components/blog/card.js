@@ -15,11 +15,13 @@ const Container = styled.div`
 	}
 `;
 
-const Image = styled.img`
+const Figure = styled.figure`
 	width: ${props => props.slider ? '100%' : '41.313rem'};
 	height: ${props => props.slider ? '13.875rem' : '26.375rem'};
 	border: 2px solid #00145D;
 	border-radius: 20px;
+	transition: 0.5s;
+	overflow: hidden;
 
 	@media (max-width: 1382px) {
 		width: ${props => props.slider ? '100%' : '37.313rem'};
@@ -29,6 +31,22 @@ const Image = styled.img`
 		width: ${props => props.slider ? '100%' : '21.313rem'};
 		height: ${props => props.slider ? '8.875rem' : '19.375rem'};
 	}
+`;
+
+const Image = styled.img`
+	width: 100%;
+	height: 100%;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+	:hover {
+		${props => !props.slider &&
+		`
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+    `};
+	}
+
 `;
 
 const Content = styled.div`
@@ -130,7 +148,9 @@ const formatDate = (date) => {
 const Card = ({ data, slider }) => {
 	return (
 		<Container slider={slider}>
-			<Image src={data.cover.url} alt={data.title} slider={slider} />
+			<Figure slider={slider}>
+				<Image src={data.cover.url} alt={data.title} slider={slider} />
+			</Figure>
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
 					{formatDate(data.publishedAt)}
