@@ -81,7 +81,8 @@ const renderBlog = (item) => {
 const Index = ({ data }) => {
   const itemData = data?.posts?.nodes;
   const isData = !itemData.length;
-  const isTitle = { typePage: 'Blog', title: 'Radar Vai na Web' };
+  const title = `Radar <br/> Vai na Web`;
+  const isTitle = { typePage: 'Blog', title: title };
 
   return (
     <Layouts pageTitle={isTitle}>

@@ -11,7 +11,6 @@ import fundo from '../images/icons/Mask-Group-15.png';
 // styles
 const Container = styled.div`
   width: 100%;
-  height: 80vh;
   background-image: url(${fundo});
 	background-repeat: no-repeat;
   background-size: cover;

@@ -8,7 +8,7 @@ const Container = styled.section`
 `;
 
 const BoxTitle = styled.div`
-	margin-left: 6rem;
+	margin-left: 2rem;
 `;
 
 const Date = styled.p`
@@ -18,9 +18,10 @@ const Date = styled.p`
 `;
 
 const TypePage = styled.h1`
-	padding: 0.5rem 1.125rem;
+	padding: 0.25rem 1.125rem;
 	margin-left: 3.5rem;
 	font-size: 1rem;
+	font-weight: 200;
 	color: #FFAC2D;
 	width: fit-content;
 	border: 1px solid #FFAC2D;
@@ -28,18 +29,23 @@ const TypePage = styled.h1`
 	text-transform: uppercase;
 `;
 
+const ContentTitle = styled.div`
+	display: flex;
+	padding-top: 1rem;
+
+	span {
+		padding-right: 0.5rem;
+		font-size: 3.2rem;
+		font-weight: 200;
+		color: #FF611E;
+	}
+`;
+
 const Title = styled.h2`
-	margin-top: 1rem;
 	padding-bottom: ${props => props.padding === 'postBlog' ? '1.125rem' : '3.125rem'};
 	width: ${props => props.width === 'postBlog' ? '90%' : '35%'};
 	font-size: 3.2rem;
 	color: #FDE7A9;
-	display: flex;
-
-	span {
-		padding-right: 0.5rem;
-		color: #FF611E;
-	}
 `;
 
 const SubTitle = styled.p `
@@ -95,10 +101,10 @@ const PageTitle = ({ isPage, data }) => {
 			{data?.typePage && <TypePage>{data.typePage}</TypePage>}
 			<BoxTitle>
 				{data?.date && formatDate(data.date)}
-				<Title width={isPage} padding={isPage}>
+				<ContentTitle>
 					<span>//</span>
-					{data?.title}				
-				</Title>
+					<Title width={isPage} padding={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
+				</ContentTitle>
 				{data?.excerpt && 
 				<SubTitle width={isPage} font={isPage}>
 					{data.excerpt}
