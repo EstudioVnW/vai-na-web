@@ -1,5 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
+import { Link } from "gatsby";
+
+//Images
 import logoFacebook from '../../images/icons/icon-facebook.svg';
 import logoInstagram from '../../images/icons/icon-instagram.svg';
 import logoEmail from '../../images/icons/icon-email.svg';
@@ -16,7 +19,7 @@ const ContainerFooter = styled.div `
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
 	width: 103%;
-	height: 7rem;
+	padding: .8rem 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -35,22 +38,27 @@ const BoxDivision = styled.div `
 `;
 
 const LineOrange = styled.div `
-	height: 1px;
+	height: 2px;
 	background-color: #FF611E;
 `;
 
 const TitleSpotlight = styled.p `
-	font-size: 59px;
+	font-size: 4.375rem;
 	text-transform: uppercase;
 	color: #0F2B92;
 	font-weight: 100;
+
 	@media (max-width: 424px) {
 		font-size: 30px;
 	}
 `;
 
 const LogoVnW = styled.img `
-	width: 4rem;
+	width: 5rem;
+
+	@media (max-width: 1400px) {
+		margin: 0 1rem;
+	}
 `;
 
 const Container = styled.footer`
@@ -81,7 +89,8 @@ const Box = styled.div `
 
 const ContainerTextIcons = styled.div `
 	display: flex;
-	width: 26rem;
+	width: 30rem;
+
 	@media (max-width: 424px) {
 		padding: 1rem;
 		margin-top: 2rem;	
@@ -89,9 +98,12 @@ const ContainerTextIcons = styled.div `
 `;
 
 const TextFooter = styled.p`
-	color: #FFFFFF;
 	width: 25%;
+	color: #FFFFFF;
+	font-size: 1.1rem;
 	line-height: 1.5rem;
+	letter-spacing: 0.025rem;
+
 	@media (max-width: 424px) {
 		width: 80%;
 		text-align: center;
@@ -103,13 +115,17 @@ const BoxText = styled.div `
 	display: flex;
 	flex-direction: column;
 	margin-top: -8px;
-	width: 77%;
+	width: 100%;
 `;
 
 const TextLink = styled.a `
 	color: #FFFFFF;
 	text-align: justify;
 	margin-top: 8px;
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+	letter-spacing: 0.025rem;
+
 	@media (max-width: 424px) {
 		font-size: 14px;
 	}
@@ -125,7 +141,10 @@ const BoxContact = styled.div `
 const TextContact = styled.p `
 	color: #FFFFFF;
 	width: 100%;
+	font-size: 1.1rem;
 	line-height: 1.5em;
+	letter-spacing: 0.025rem;
+
 	@media (max-width: 424px) {
 		font-size: 14px;
 		width: 80%;
@@ -138,6 +157,7 @@ const BoxIcons = styled.div `
 	justify-content: space-between;
 	width: 69%;
 	margin-top: 1.8rem;
+
 	@media (max-width: 424px) {
 		width: 100%;
 		padding: 4rem;
@@ -185,13 +205,13 @@ const LineDivision = styled.div `
 
 const Text = styled.p `
 	color: #FFAC2D;
-	font-size: 14px;
+	font-size: 1.1rem;
 	padding: 1rem;
 `;
 
 const Footer = () => {
 	return (
-		<ContainerFooter>
+		<ContainerFooter  id="footer">
 		<ContainerDivision>
 				<LineOrange></LineOrange>
 					<BoxDivision>
@@ -215,9 +235,9 @@ const Footer = () => {
 				<div>
 					<ContainerTextIcons>
 						<BoxText>
-							<TextLink href="/" target="_blank" rel="noreferrer">Media Kit</TextLink>
-							<TextLink href="/" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
-							<TextLink href="/faq" target="_blank" rel="noreferrer">Perguntas Frequentes</TextLink>
+							<TextLink href="https://medium.com/@olavainaweb" target="_blank" rel="noreferrer">Media Kit</TextLink>
+							<TextLink href="https://www.deeptech.network/" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
+							<TextLink href="/faq" rel="noreferrer">Perguntas Frequentes</TextLink>
 						</BoxText>
 						<BoxContact>
 							<TextContact>
@@ -229,12 +249,12 @@ const Footer = () => {
 					<BoxIcons>
 							<a href="https://www.facebook.com/vainaweb" target="_blank" rel="noreferrer"><Icon src={logoFacebook} alt="Logo Facebook"/></a>
 							<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noreferrer"><IconInstagram src={logoInstagram} alt="Logo Instagram"/></a>
-							<a href="/" target="_blank" rel="noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
+							<a href="https://medium.com/@olavainaweb" target="_blank" rel="noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
 							<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank" rel="noreferrer"><Icon src={logoLinkedin} alt="Logo Linkedin"/></a>
 							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noreferrer"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
 					</BoxIcons>
 				</div>
-					<a href="/" target="_blank" rel="noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
+					<a href="/" rel="noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
 			</Box> 
 				<LineDivision></LineDivision>
 				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>
