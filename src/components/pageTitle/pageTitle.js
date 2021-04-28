@@ -14,7 +14,7 @@ const BoxTitle = styled.div`
 const Date = styled.p`
 	color: #FFAC2D;
 	font-size: 14px;
-	padding-left: 3.35rem;
+	padding-left: 3.8rem;
 `;
 
 const TypePage = styled.h1`
@@ -30,8 +30,8 @@ const TypePage = styled.h1`
 
 const Title = styled.h2`
 	margin-top: 1rem;
-	padding-bottom: 3.125rem;
-	width: 35%;
+	padding-bottom: ${props => props.padding === 'postBlog' ? '1.125rem' : '3.125rem'};
+	width: ${props => props.width === 'postBlog' ? '90%' : '35%'};
 	font-size: 3.2rem;
 	color: #FDE7A9;
 	display: flex;
@@ -43,10 +43,10 @@ const Title = styled.h2`
 `;
 
 const SubTitle = styled.p `
-	font-size: 36px;
+	font-size: ${props => props.font === 'postBlog' ? '30px' : '36px'};;
 	font-weight: 100;
-	width: 49%;
-	padding: 0 0 3.148rem 5rem;
+	width: ${props => props.width === 'postBlog' ? '70%' : '90%'};
+	padding: 0px 0 4.148rem 4.5rem;
 `;
 
 const formatMonth = (month) => {
@@ -89,17 +89,21 @@ const formatDate = (date) => {
 	return <Date>{day} de {formatMonth(month)} · {year}</Date>
 }
 
-const PageTitle = ({ data }) => {
+const PageTitle = ({ isPage, data }) => {
+	console.log('ei', isPage)
 	return (
 		<Container>
 			{data?.typePage && <TypePage>{data.typePage}</TypePage>}
 			<BoxTitle>
 				{data?.date && formatDate(data.date)}
-				<Title>
+				<Title width={isPage} padding={isPage}>
 					<span>//</span>
 					{data?.title}				
 				</Title>
-				{data?.excerpt && <SubTitle>{data.excerpt}</SubTitle>}
+				{data?.excerpt && 
+				<SubTitle width={isPage} font={isPage}>
+					{data.excerpt}
+				</SubTitle>}
 			</BoxTitle>
 		</Container>
 	)

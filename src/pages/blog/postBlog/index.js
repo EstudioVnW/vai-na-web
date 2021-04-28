@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // Components
 import CardAuthor from '../../../components/blog/cardAuthor';
-import Layout from '../../../components/Layouts'
+import Layout from '../../../components/Layouts';
 
 // styles
 const Container = styled.section`	
@@ -44,18 +44,20 @@ const TextDescription = styled.article `
 	  };
 `;
 
+
+
 const Index = () => {
 	const hasWindow = typeof window !== 'undefined';
 	const data = hasWindow && window.history;
-	const isData = data?.state?.postBlog;
+	const isData = data.state?.postBlog;
 	const isTitle = {
-		date: isData?.createdAt,
+		date: isData?.publishedAt, 
 		title: isData?.title,
 		excerpt: isData?.excerpt,
 	}
 
 	return (
-		<Layout pageTitle={isTitle}>
+		<Layout isPage='postBlog' pageTitle={isTitle}>
 			<Container>
 				<ContainerMain>
 					<TextDescription dangerouslySetInnerHTML={{ __html: data?.state?.postBlog?.content.html }}></TextDescription>		
