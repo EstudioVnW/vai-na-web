@@ -4,6 +4,7 @@ import styled from 'styled-components';
 // Components
 import CardAuthor from '../../../components/blog/cardAuthor';
 import Layout from '../../../components/Layouts';
+import PageTitle from '../../../components/pageTitle/pageTitle'
 
 // styles
 const Container = styled.section`	
@@ -61,7 +62,8 @@ const Index = () => {
 	}
 
 	return (
-		<Layout isPage='postBlog' pageTitle={isTitle}>
+		<Layout>
+		<PageTitle data={isTitle} isPage='postBlog'/>
 			<Container>
 				<ContainerMain>
 					<TextDescription dangerouslySetInnerHTML={{ __html: data?.state?.postBlog?.content.html }}></TextDescription>		

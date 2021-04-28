@@ -19,7 +19,7 @@ const Date = styled.p`
 
 const TypePage = styled.h1`
 	padding: 0.25rem 1.125rem;
-	margin-left: 3.5rem;
+	margin-left: ${props => props.pageHome === 'isHome' ? '4.8rem' : '3.5rem'};
 	font-size: 1rem;
 	font-weight: 200;
 	color: #FFAC2D;
@@ -27,6 +27,7 @@ const TypePage = styled.h1`
 	border: 1px solid #FFAC2D;
 	border-radius: 19px;
 	text-transform: uppercase;
+	
 `;
 
 const ContentTitle = styled.div`
@@ -42,17 +43,18 @@ const ContentTitle = styled.div`
 `;
 
 const Title = styled.h2`
-	padding-bottom: ${props => props.padding === 'postBlog' ? '1.125rem' : '3.125rem'};
-	width: ${props => props.width === 'postBlog' ? '90%' : '35%'};
+	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2.125rem'};
+	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '35%'};
 	font-size: 3.2rem;
-	color: #FDE7A9;
+	color: ${props => props.pageHome === 'isHome' ? '#272727' : '#FDE7A9'};
 `;
 
 const SubTitle = styled.p `
-	font-size: ${props => props.font === 'postBlog' ? '30px' : '36px'};;
+	font-size: ${props => props.pageBlog === 'postBlog' ? '30px' : '36px'};
 	font-weight: 100;
-	width: ${props => props.width === 'postBlog' ? '70%' : '90%'};
-	padding: 0px 0 5.148rem 4.5rem;
+	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
+	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 5.148rem 3.5rem' : '0 0 5.148rem 4.5rem'};
+	
 `;
 
 const formatMonth = (month) => {
@@ -98,15 +100,15 @@ const formatDate = (date) => {
 const PageTitle = ({ isPage, data }) => {
 	return (
 		<Container>
-			{data?.typePage && <TypePage>{data.typePage}</TypePage>}
+			{data?.typePage && <TypePage pageHome={isPage}>{data.typePage}</TypePage>}
 			<BoxTitle>
 				{data?.date && formatDate(data.date)}
 				<ContentTitle>
 					<span>//</span>
-					<Title width={isPage} padding={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
+					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
 				{data?.excerpt && 
-				<SubTitle width={isPage} font={isPage}>
+				<SubTitle pageBlog={isPage}>
 					{data.excerpt}
 				</SubTitle>}
 			</BoxTitle>
