@@ -31,12 +31,13 @@ const Text = styled.h3`
 
 export const query = graphql`
   query  {
-    posts: allGraphCmsPost {
+    posts: allGraphCmsPost(sort: { fields: [createdAt], order: DESC }) {
       nodes {
         id
         title
         excerpt 
         publishedAt
+        createdAt
         tags {
           name
         }
@@ -63,30 +64,34 @@ export const query = graphql`
   }
 `
 
-const renderBlog = (info) => (
-  <>
-    <ContantCard>
-      <Card data={info[0]} />
-    </ContantCard>
-    <PostSlider data={info} />
-  </>
-)
+const renderBlog = (item) => {
+  const itemList = item;
+  const firstItem = itemList.shift();
+  
+  return (
+    <>
+      <ContantCard>
+        <Card data={firstItem} />
+      </ContantCard>
+      <PostSlider data={itemList} />
+    </>
+  )
+}
 
 const Index = ({ data }) => {
-  const infoData = data?.posts?.nodes;
-  const isData = !infoData.length;
-  const isTitle = { typePage: 'Blog', title: 'Radar Vai na Web'};
+  const itemData = data?.posts?.nodes;
+  const isData = !itemData.length;
+  const isTitle = { typePage: 'Blog', title: 'Radar Vai na Web' };
 
   return (
     <Layouts pageTitle={isTitle}>
       <ContainerBlog>
         {isData
           ? <Text>Não há conteúdo no momento</Text>
-          : renderBlog(infoData)
+          : renderBlog(itemData)
         }
       </ContainerBlog>
     </Layouts>
-
   )
 }
 

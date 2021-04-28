@@ -153,7 +153,7 @@ const Card = ({ data, slider }) => {
 			</Figure>
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
-					{formatDate(data.publishedAt)}
+					{formatDate(data.createdAt)}
 					<Status>{data.tags[0].name}</Status>
 				</ContentDate>
 				<Title to={'/blog/postBlog/'} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title}</Title>

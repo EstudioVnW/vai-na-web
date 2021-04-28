@@ -49,7 +49,7 @@ const Index = () => {
 	const data = hasWindow && window.history;
 	const isData = data?.state?.postBlog;
 	const isTitle = {
-		date: isData?.publishedAt,
+		date: isData?.createdAt,
 		title: isData?.title,
 		excerpt: isData?.excerpt,
 	}

@@ -8,6 +8,7 @@ import PostList from '../blog/postList';
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	flex-direction: column;
 `;
 
@@ -25,6 +26,7 @@ const Arrow = styled.p`
 	font-size: 5rem;
 	font-weight: 200;
 	color: #00145D;
+	cursor: pointer;
 `;
 
 const ContentPagination = styled.div`
@@ -32,13 +34,13 @@ const ContentPagination = styled.div`
 `;
 
 const PaginationButton = styled.button`
-	padding: 21px;
+	padding: 1.3125rem;
 	width: 3.375rem;
 	height: 3.375rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 20px;
+	font-size: 1.25rem;
 	color: #0F2B92;
 	background: ${props => props.isSelected && '#FDE7A9'};
 	border-radius: 50%;
@@ -62,7 +64,6 @@ const Slider = ({ data }) => {
 		}
 
 		setPage(arrayPages);
-
   }, []);
 
 	const handlePrevious = () => {
