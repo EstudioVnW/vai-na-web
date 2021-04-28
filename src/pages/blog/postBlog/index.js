@@ -25,22 +25,26 @@ const TextDescription = styled.article `
 	p {
 		font-weight: 100;
 		width: 48%;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 2rem;
 		margin-top: 1.8rem;
+		color: #2F2F2F;
 	  };
 
 	  blockquote {
 		width: 63%;
-		font-size: 24px;
+		font-size: 22px;
 		line-height: 2.5rem;
 		margin-top: 2rem;
+		color: #141414;
 	  };
 
-	  p strong {
+	  blockquote strong {
 		width: 63%;
-		font-size: 24px;
+		font-size: 22px;
 		line-height: 2.5rem;
+		font-weight: 400;
+		color: #141414;
 	  };
 `;
 
@@ -56,6 +60,8 @@ const Index = () => {
 		excerpt: isData?.excerpt,
 	}
 
+
+	console.log('oi' , data)
 	return (
 		<Layout isPage='postBlog' pageTitle={isTitle}>
 			<Container>
