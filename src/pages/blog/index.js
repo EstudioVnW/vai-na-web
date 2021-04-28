@@ -3,7 +3,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from 'styled-components';
 
-
 //Components
 import Layouts from '../../components/Layouts';
 import Card from '../../components/blog/card';
@@ -23,7 +22,6 @@ const ContantCard = styled.div`
   width: 80%; /* tamanho do container do post */
 `;
 
-
 const Text = styled.h3`
 	font-size:  ${props => props.slider ? '1.875rem' : '2.75rem'};
 	font-weight: 700;
@@ -33,12 +31,13 @@ const Text = styled.h3`
 
 export const query = graphql`
   query  {
-    posts: allGraphCmsPost {
+    posts: allGraphCmsPost(sort: { fields: [createdAt], order: DESC }) {
       nodes {
         id
         title
         excerpt 
         publishedAt
+        createdAt
         tags {
           name
         }
@@ -65,32 +64,35 @@ export const query = graphql`
   }
 `
 
-const renderBlog = (info) => (
-  <>
-    <ContantCard>
-      <Card data={info[0]} />
-    </ContantCard>
-    <PostSlider data={info} />
-  </>
-)
+const renderBlog = (item) => {
+  const itemList = item;
+  const firstItem = itemList.shift();
+  
+  return (
+    <>
+      <ContantCard>
+        <Card data={firstItem} />
+      </ContantCard>
+      <PostSlider data={itemList} />
+    </>
+  )
+}
 
 const Index = ({ data }) => {
-  const infoData = data?.posts?.nodes;
-  const isData = !infoData.length;
-  const isTitle = { typePage: 'Blog', title: 'Radar Vai na Web'};
+  const itemData = data?.posts?.nodes;
+  const isData = !itemData.length;
+  const isTitle = { typePage: 'Blog', title: 'Radar Vai na Web' };
 
   return (
     <Layouts pageTitle={isTitle}>
       <ContainerBlog>
         {isData
           ? <Text>Não há conteúdo no momento</Text>
-          : renderBlog(infoData)
+          : renderBlog(itemData)
         }
       </ContainerBlog>
     </Layouts>
-
   )
 }
-
 
 export default Index;

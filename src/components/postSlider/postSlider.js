@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
 //Component
@@ -8,6 +8,8 @@ import PostList from '../blog/postList';
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 `;
 
 const Content = styled.div`
@@ -24,45 +26,79 @@ const Arrow = styled.p`
 	font-size: 5rem;
 	font-weight: 200;
 	color: #00145D;
+	cursor: pointer;
+`;
+
+const ContentPagination = styled.div`
+	display: flex;
+`;
+
+const PaginationButton = styled.button`
+	padding: 1.3125rem;
+	width: 3.375rem;
+	height: 3.375rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.25rem;
+	color: #0F2B92;
+	background: ${props => props.isSelected && '#FDE7A9'};
+	border-radius: 50%;
 `;
 
 const Slider = ({ data }) => {
 	const [current, setCurrent] = useState(6);
+	const [dataList, setDataList] = useState([]);
+	const [page, setPage] = useState([]);
+	const [currentPage, setCurrentPage] = useState(1);
+
+	useEffect(() => {
+		let isData = data && data;
+		setDataList(isData);
+
+		let arrayPages = [];
+		let totalPages = Math.ceil(isData.length / 6);
+
+		for(var i = 1; i <= totalPages; ++i) {
+			arrayPages.push(i);
+		}
+
+		setPage(arrayPages);
+  }, []);
 
 	const handlePrevious = () => {
 		let handleSlide = current - 6;
+		let renderPage = currentPage - 1;
 		
+		setCurrentPage(renderPage);
 		setCurrent(handleSlide);
   }
 	
 	const handleNext = () => {
 		let handleSlide = current + 6;
+		let renderPage = currentPage + 1;
 
+		setCurrentPage(renderPage);
 		setCurrent(handleSlide);
   }
 
-// 	const renderNumberSlider = (item) => {
-// 		 let test = [];
-// 		 item.forEach = function(fn, scope) {
-// 			for(var i = 1, len = item.length; i < len; ++i) {
-// 				test.push(i);
-// 				console.log(i)
-// 			}
-// 		};
-// 		return test
-// }
+	const handlePagination = (number) => {
+		let handleSlide =  number * 6;
+
+		setCurrentPage(number);
+		setCurrent(handleSlide);
+  }
 
 	const renderSlider = (item) => {
 		const sliderQuantity = 6;
 		let	startNumber = current - sliderQuantity;
 		let endNumber = current;
-		// let countingSlider = Math.ceil(item.length / sliderQuantity);
 		const renderList = item.slice(startNumber, endNumber);
-	
+
 		return (
 			<Content>
 				<Figure>
-					{current >= 7 && <Arrow onClick={ handlePrevious}>{'<'}</Arrow>}
+					{current >= 7 && <Arrow onClick={handlePrevious}>{'<'}</Arrow>}
 				</Figure>
 				<PostList data={renderList} />
 				<Figure>
@@ -75,6 +111,17 @@ const Slider = ({ data }) => {
 	return (
 		<Container>
 			{renderSlider(data)}
+			<ContentPagination>
+				{page.map(i => (
+					<PaginationButton
+						key={i}
+						isSelected={i === currentPage}
+						onClick={() => handlePagination(i)}
+					>
+						{i}
+					</PaginationButton>
+					))}
+			</ContentPagination>
 		</Container>
 	)
 }
