@@ -25,7 +25,7 @@ const TextDescription = styled.article `
 	p {
 		font-weight: 100;
 		width: 48%;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 2rem;
 		margin-top: 1.8rem;
 		color: #2F2F2F;
@@ -33,15 +33,15 @@ const TextDescription = styled.article `
 
 	  blockquote {
 		width: 63%;
-		font-size: 24px;
+		font-size: 22px;
 		line-height: 2.5rem;
 		margin-top: 2rem;
 		color: #141414;
 	  };
 
 	  blockquote strong {
-		width: 80%;
-		font-size: 24px;
+		width: 63%;
+		font-size: 22px;
 		line-height: 2.5rem;
 		font-weight: 400;
 		color: #141414;
