@@ -46,7 +46,7 @@ const SubTitle = styled.p `
 	font-size: ${props => props.font === 'postBlog' ? '30px' : '36px'};;
 	font-weight: 100;
 	width: ${props => props.width === 'postBlog' ? '70%' : '90%'};
-	padding: 0px 0 4.148rem 4.5rem;
+	padding: 0px 0 5.148rem 4.5rem;
 `;
 
 const formatMonth = (month) => {
@@ -90,7 +90,6 @@ const formatDate = (date) => {
 }
 
 const PageTitle = ({ isPage, data }) => {
-	console.log('ei', isPage)
 	return (
 		<Container>
 			{data?.typePage && <TypePage>{data.typePage}</TypePage>}

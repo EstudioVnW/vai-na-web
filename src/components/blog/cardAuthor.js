@@ -26,7 +26,8 @@ const Container = styled.section`
 
 const Image = styled.img `
 	margin-left: 3rem;
-	width: 20%;
+	width: 21%;
+	border-radius: 50%;
 
 	@media (max-width: 424px) {
 		width: 23%;

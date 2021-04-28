@@ -28,6 +28,7 @@ const TextDescription = styled.article `
 		font-size: 20px;
 		line-height: 2rem;
 		margin-top: 1.8rem;
+		color: #2F2F2F;
 	  };
 
 	  blockquote {
@@ -35,12 +36,15 @@ const TextDescription = styled.article `
 		font-size: 24px;
 		line-height: 2.5rem;
 		margin-top: 2rem;
+		color: #141414;
 	  };
 
-	  p strong {
-		width: 63%;
+	  blockquote strong {
+		width: 80%;
 		font-size: 24px;
 		line-height: 2.5rem;
+		font-weight: 400;
+		color: #141414;
 	  };
 `;
 
@@ -56,6 +60,8 @@ const Index = () => {
 		excerpt: isData?.excerpt,
 	}
 
+
+	console.log('oi' , data)
 	return (
 		<Layout isPage='postBlog' pageTitle={isTitle}>
 			<Container>
