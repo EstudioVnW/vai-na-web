@@ -98,7 +98,7 @@ const ContainerTextIcons = styled.div `
 `;
 
 const TextFooter = styled.p`
-	width: 25%;
+	width: 28%;
 	color: #FFFFFF;
 	font-size: 1.1rem;
 	line-height: 1.5rem;
@@ -114,8 +114,9 @@ const TextFooter = styled.p`
 const BoxText = styled.div `
 	display: flex;
 	flex-direction: column;
-	margin-top: -8px;
+	margin-top: -10px;
 	width: 100%;
+	margin-left: 1rem;
 `;
 
 const TextLink = styled.a `
@@ -134,7 +135,7 @@ const TextLink = styled.a `
 const BoxContact = styled.div `
 	display: flex;
 	flex-direction: column;
-	margin-left: 2.5rem;
+	margin-left: -1.5rem;
 	margin-top: -0.5rem;
 `;
 
@@ -157,6 +158,7 @@ const BoxIcons = styled.div `
 	justify-content: space-between;
 	width: 69%;
 	margin-top: 1.8rem;
+	margin-left: 1rem;
 
 	@media (max-width: 424px) {
 		width: 100%;
@@ -188,7 +190,7 @@ const Logo = styled.img `
 const LineDivision = styled.div `
 	background-color: #0F2B92;
 	height: 2px;
-	width: 76%;
+	width: 79%;
 	margin-top: -4rem;
 `;
 

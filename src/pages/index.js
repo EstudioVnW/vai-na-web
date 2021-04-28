@@ -5,6 +5,7 @@ import './index.css';
 //Components
 import Header from '../components/header';
 import Footer from '../components/footer';
+import PageTitle from '../components/pageTitle/pageTitle';
 
 //Imagens
 import ImageBackground from '../images/images/MaskGroup18@2x.png';
@@ -34,17 +35,25 @@ const ArrowScroll = styled.img `
 const ButtonScroll = styled.button `
   border: none;
   background: transparent;
+  margin-bottom: 23rem;
+`;
+
+const Box = styled.div `
 `;
 
 const Layouts = () => {
+  const title = `Radar <br/> Vai na Web`;
+  const isTitle = { typePage: 'Blog', title: title };
+  
   return (
     <Container>
       <Header home />
-      <TextPresentation>
-        Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as 
-        desigualdades e desenvolvemos a força de trabalho do futuro.
-      </TextPresentation>
-      <ButtonScroll><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem"/></ButtonScroll>
+        <TextPresentation>
+          Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as 
+          desigualdades e desenvolvemos a força de trabalho do futuro.
+        </TextPresentation>
+        <ButtonScroll><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem"/></ButtonScroll>
+        <PageTitle />
       <Footer />
     </Container>
   )

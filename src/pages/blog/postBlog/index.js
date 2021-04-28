@@ -60,8 +60,6 @@ const Index = () => {
 		excerpt: isData?.excerpt,
 	}
 
-
-	console.log('oi' , data)
 	return (
 		<Layout isPage='postBlog' pageTitle={isTitle}>
 			<Container>

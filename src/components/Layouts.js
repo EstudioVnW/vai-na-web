@@ -10,10 +10,9 @@ import fundo from '../images/icons/Mask-Group-15.png';
 
 // styles
 const Container = styled.div`
-  width: 100%;
   background-image: url(${fundo});
-	background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
 `;
 
 const Main = styled.main`
