@@ -27,7 +27,13 @@ const TextPresentation = styled.p `
 `;
 
 const ArrowScroll = styled.img `
+  margin-left: 7rem;
+  margin-top: 4rem;
+`;
 
+const ButtonScroll = styled.button `
+  border: none;
+  background: transparent;
 `;
 
 const Layouts = () => {
@@ -38,7 +44,7 @@ const Layouts = () => {
         Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as 
         desigualdades e desenvolvemos a força de trabalho do futuro.
       </TextPresentation>
-      <ArrowScroll src={ScrollArrow}/>
+      <ButtonScroll><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem"/></ButtonScroll>
       <Footer />
     </Container>
   )

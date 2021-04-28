@@ -21,12 +21,12 @@ const Main = styled.main`
   min-height: 35vh;
 `;
 
-const Layouts = ({ pageTitle, children }) => {
+const Layouts = ({ isPage, pageTitle, children }) => {
   return (
     <Container>
       <Header />
       <Main>
-        <PageTitle data={pageTitle}/>
+        <PageTitle isPage={isPage} data={pageTitle}/>
         {children}
       </Main>
       <Footer />

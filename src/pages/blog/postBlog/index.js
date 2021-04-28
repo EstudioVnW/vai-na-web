@@ -44,18 +44,20 @@ const TextDescription = styled.article `
 	  };
 `;
 
+
+
 const Index = () => {
 	const hasWindow = typeof window !== 'undefined';
 	const data = hasWindow && window.history;
 	const isData = data.state?.postBlog;
 	const isTitle = {
-		date: isData?.publishedAt,
+		date: isData?.publishedAt, 
 		title: isData?.title,
 		excerpt: isData?.excerpt,
 	}
 
 	return (
-		<Layout pageTitle={isTitle}>
+		<Layout isPage='postBlog' pageTitle={isTitle}>
 			<Container>
 				<ContainerMain>
 					<TextDescription dangerouslySetInnerHTML={{ __html: data?.state?.postBlog?.content.html }}></TextDescription>		
