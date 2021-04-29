@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { graphql } from "gatsby";
 import styled from 'styled-components';
 
@@ -23,6 +23,7 @@ const ContantCard = styled.div`
 `;
 
 const Text = styled.h3`
+  padding: 5rem 0;
 	font-size:  ${props => props.slider ? '1.875rem' : '2.75rem'};
 	font-weight: 700;
 	color: #FDE7A9;
@@ -64,32 +65,45 @@ export const query = graphql`
   }
 `
 
-const renderBlog = (item) => {
-  const itemList = item;
-  const firstItem = itemList.shift();
-  
+const renderBlog = (listItem, firstData) => {
   return (
     <>
       <ContantCard>
-        <Card data={firstItem} />
+        <Card data={firstData} />
       </ContantCard>
-      <PostSlider data={itemList} />
+      <PostSlider data={listItem} /> 
     </>
   )
 }
 
 const Index = ({ data }) => {
-  const itemData = data?.posts?.nodes;
-  const isData = !itemData.length;
+	const [listData, setListData] = useState([]);
+	const [firstData, setFirstData] = useState({});
+
+  useEffect(() => {
+    const newListData = [];
+		const isData = data && data.posts.nodes;
+    const firstItem  = isData[0];
+
+    isData.forEach(item => {
+      if(item.id !== firstItem.id) {
+        newListData.push(item);
+      }
+    });
+
+    setListData(newListData);
+    setFirstData(firstItem);
+  }, []);
+
   const title = `Radar <br/> Vai na Web`;
   const isTitle = { typePage: 'Blog', title: title };
 
   return (
     <Layouts pageTitle={isTitle}>
       <ContainerBlog>
-        {isData
+        {!listData.length
           ? <Text>Não há conteúdo no momento</Text>
-          : renderBlog(itemData)
+          : renderBlog(listData, firstData)
         }
       </ContainerBlog>
     </Layouts>
