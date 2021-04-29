@@ -4,9 +4,10 @@ import { graphql } from "gatsby";
 import styled from 'styled-components';
 
 //Components
-import Layouts from '../../components/Layouts';
 import Card from '../../components/blog/card';
 import PostSlider from '../../components/postSlider/postSlider';
+import PageTitle from '../../components/pageTitle/pageTitle';
+import Layouts from '../../components/Layouts'
 
 // styles
 const ContainerBlog = styled.div`
@@ -85,7 +86,8 @@ const Index = ({ data }) => {
   const isTitle = { typePage: 'Blog', title: title };
 
   return (
-    <Layouts pageTitle={isTitle}>
+    <Layouts>
+    <PageTitle data={isTitle}/>
       <ContainerBlog>
         {isData
           ? <Text>Não há conteúdo no momento</Text>
