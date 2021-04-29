@@ -44,6 +44,7 @@ const LineOrange = styled.span `
 const Title = styled.h2`
 	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2.125rem'};
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '35%'};
+	max-width: 1272px;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	color: ${props => props.pageHome === 'isHome' ? '#272727' : '#FDE7A9'};
 `;
@@ -52,8 +53,8 @@ const SubTitle = styled.p `
 	font-size: ${props => props.pageBlog === 'postBlog' ? '30px' : '36px'};
 	font-weight: 100;
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
-	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 5.148rem 3.5rem' : '0 0 5.148rem 4.5rem'};
-	
+	max-width: 970px;
+	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 5.148rem 4.5rem' : '0 0 5.148rem 4.5rem'};
 `;
 
 const formatMonth = (month) => {
