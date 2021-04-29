@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
+import slugify from "slugify";
 
 // styles
 const Container = styled.div`
@@ -42,7 +43,6 @@ const Image = styled.img`
 			transform: scale(1.1);
     `};
 	}
-
 `;
 
 const Content = styled.div`
@@ -60,6 +60,10 @@ const ContentDate = styled.div`
 const Date = styled.p`
 	font-size: 1rem;
 	color: #0F2B92;
+
+	@media (max-width: 1024px) {
+		font-size: 0.75rem;
+	}
 `;
 
 const Status = styled.p`
@@ -75,6 +79,12 @@ const Status = styled.p`
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+
+	@media (max-width: 1024px) {
+		padding: .5rem .5rem;
+		max-width: 90px;
+		font-size: 0.75rem;
+	}
 `;
 
 const Title = styled(Link)`
@@ -83,6 +93,11 @@ const Title = styled(Link)`
 	color: #272727;
 	text-decoration: none;
 	cursor: pointer;
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* número de linhas que você quer exibir */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 
 	:hover {
 		color: #0F2B92;
@@ -145,6 +160,7 @@ const formatDate = (date) => {
 }
 
 const Card = ({ data, slider }) => {
+	const slug = slugify(`${data.title.toLowerCase()}-${data.id.split(":")[1]}`)
 	return (
 		<Container slider={slider}>
 			<Figure slider={slider}>
@@ -155,7 +171,7 @@ const Card = ({ data, slider }) => {
 					{formatDate(data.createdAt)}
 					<Status>{data.tags[0].name  || ''}</Status>
 				</ContentDate>
-				<Title to={'/blog/postBlog/'} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title  || ''}</Title>
+				<Title to={`/blog/${slug}`} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title  || ''}</Title>
 				<Description>{data.excerpt}</Description>
 			</Content>
 		</Container>

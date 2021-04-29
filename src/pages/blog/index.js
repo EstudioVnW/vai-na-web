@@ -78,24 +78,8 @@ const renderBlog = (listItem, firstData) => {
 }
 
 const Index = ({ data }) => {
-	const [listData, setListData] = useState([]);
-	const [firstData, setFirstData] = useState({});
-
-  useEffect(() => {
-    const newListData = [];
-		const isData = data && data.posts.nodes;
-    const firstItem  = isData[0];
-
-    isData.forEach(item => {
-      if(item.id !== firstItem.id) {
-        newListData.push(item);
-      }
-    });
-
-    setListData(newListData);
-    setFirstData(firstItem);
-  }, []);
-
+  const firstItem = data && data.posts.nodes[0];
+  const listSlider = data && data.posts.nodes.filter(item => item.id !== firstItem.id);
   const title = `Radar <br/> Vai na Web`;
   const isTitle = { typePage: 'Blog', title: title };
 
@@ -103,9 +87,9 @@ const Index = ({ data }) => {
     <Layouts>
     <PageTitle data={isTitle}/>
       <ContainerBlog>
-        {!listData.length
+        {!listSlider.length
           ? <Text>Não há conteúdo no momento</Text>
-          : renderBlog(listData, firstData)
+          : renderBlog(listSlider, firstItem)
         }
       </ContainerBlog>
     </Layouts>
