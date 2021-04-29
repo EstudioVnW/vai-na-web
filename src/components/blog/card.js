@@ -23,13 +23,9 @@ const Figure = styled.figure`
 	transition: 0.5s;
 	overflow: hidden;
 
-	@media (max-width: 1382px) {
-		width: ${props => props.slider ? '100%' : '37.313rem'};
-	}
-
 	@media (max-width: 1024px) {
-		width: ${props => props.slider ? '100%' : '21.313rem'};
-		height: ${props => props.slider ? '8.875rem' : '19.375rem'};
+		width: ${props => !props.slider && '30rem'};
+		height: ${props => props.slider ? '8.875rem' : '20rem'};
 	}
 `;
 
@@ -67,8 +63,7 @@ const Date = styled.p`
 `;
 
 const Status = styled.p`
-	padding: 0 1.188rem;
-	height: 2.063rem;
+	padding: .5rem 1.188rem;
 	display: flex;
 	align-items: center;
 	font-size: 0.875rem;
@@ -76,6 +71,10 @@ const Status = styled.p`
 	text-transform: uppercase;
 	border: 1px solid #FF611E;
 	border-radius: 19px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 `;
 
 const Title = styled(Link)`
@@ -149,14 +148,14 @@ const Card = ({ data, slider }) => {
 	return (
 		<Container slider={slider}>
 			<Figure slider={slider}>
-				<Image src={data.cover.url} alt={data.title} slider={slider} />
+				<Image src={data.cover.url || ''} alt={data.title} slider={slider} />
 			</Figure>
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
 					{formatDate(data.createdAt)}
-					<Status>{data.tags[0].name}</Status>
+					<Status>{data.tags[0].name  || ''}</Status>
 				</ContentDate>
-				<Title to={'/blog/postBlog/'} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title}</Title>
+				<Title to={'/blog/postBlog/'} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title  || ''}</Title>
 				<Description>{data.excerpt}</Description>
 			</Content>
 		</Container>

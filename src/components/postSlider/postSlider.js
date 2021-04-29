@@ -90,10 +90,11 @@ const Slider = ({ data }) => {
   }
 
 	const renderSlider = (item) => {
+		const listItem = item ? item : [];
 		const sliderQuantity = 6;
 		let	startNumber = current - sliderQuantity;
 		let endNumber = current;
-		const renderList = item.slice(startNumber, endNumber);
+		const renderList = listItem.slice(startNumber, endNumber);
 
 		return (
 			<Content>
