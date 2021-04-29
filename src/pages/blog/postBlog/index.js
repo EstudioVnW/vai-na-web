@@ -32,6 +32,15 @@ const TextDescription = styled.article `
 		color: #2F2F2F;
 	  };
 
+	  ul {
+		font-weight: 400;
+		width: 48%;
+		font-size: 17px;
+		line-height: 2.2rem;
+		margin-top: 1.8rem;
+		color: #2F2F2F;
+	  };
+
 	  blockquote {
 		width: 63%;
 		font-size: 22px;
