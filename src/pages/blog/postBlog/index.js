@@ -33,10 +33,10 @@ const TextDescription = styled.article `
 	  };
 
 	  ul {
-		font-weight: 400;
+		font-weight: 100;
 		width: 48%;
-		font-size: 17px;
-		line-height: 2.2rem;
+		font-size: 18px;
+		line-height: 2rem;
 		margin-top: 1.8rem;
 		color: #2F2F2F;
 	  };
