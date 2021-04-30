@@ -11,6 +11,8 @@ import PageTitle from '../components/pageTitle/pageTitle'
 // styles
 const Container = styled.section`	
   margin-top: -6rem;
+  width: 80vw;
+  margin: auto;
 `;
 
 const ContainerMain = styled.div `
@@ -26,7 +28,7 @@ const ContainerMain = styled.div `
     line-height: 2rem;
     margin-top: 1.8rem;
     color: #2F2F2F;
-    };
+  };
 `;
 
 const TextDescription = styled.article `
@@ -35,22 +37,33 @@ const TextDescription = styled.article `
   align-items: center;
 
   img {
-    width: 972px;
-    height: 590px;
+    width: 100%;
+    max-width: 60.75rem;
+    height: 36.875rem;
     border: 2px solid #00145D;
     border-radius: 20px;
     object-fit: fill;
 
     :nth-child(2n + 1) {
       border: 2px solid #00145D;
-      width: 576px;
-      height: 283px;
+      width: 100%;
+      max-width: 36rem;
+      height: 17.688rem;
+      object-fit: fill;
+    }
+
+    :nth-child(4n) {
+      border: 2px solid pink;
+      width: 100%;
+      max-width: 36rem;
+      height: 17.688rem;
       object-fit: fill;
     }
 
     :nth-child(3n + 1) {
-      width: 679px;
-      height: 577px;
+      width: 100%;
+      max-width: 42.438rem;
+      height: 36.063rem;
       border: none;
       border-radius: 0;
       object-fit: fill;
@@ -58,27 +71,38 @@ const TextDescription = styled.article `
   }
 
   p {
-    width: 48%;
-    font-size: 1.125rem;
+    width: 39.563rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     line-height: 2rem;
     margin-top: 1.8rem;
     color: #2F2F2F;
-    };
+  };
+
+  ul {
+    font-weight: 400;
+    width: 48%;
+    font-size: 17px;
+    line-height: 2.2rem;
+    margin-top: 1rem;
+    color: #2F2F2F;
+  };
 
     blockquote {
-    width: 63%;
-    font-size: 22px;
-    line-height: 2.5rem;
-    margin-top: 2rem;
-    color: #141414;
+      width: 60%;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 2.3rem;
+      margin-top: 2rem;
+      color: #141414;
     };
 
     blockquote strong {
-    width: 63%;
-    font-size: 22px;
-    line-height: 2.5rem;
-    font-weight: 400;
-    color: #141414;
+      width: 60%;
+      font-size: 22px;
+      line-height: 2.3rem;
+      font-weight: 600;
+      color: #141414;
     };
 `;
 
@@ -90,7 +114,7 @@ export default function PostBlog({ data }) {
   };
 
   return (
-    <Layout>
+    <Layout isPage='postBlog'>
       <PageTitle data={isTitle} isPage='postBlog'/>
       <Container>
         <ContainerMain>
