@@ -6,7 +6,7 @@ const Container = styled.section`
 	background-color: #FED5B2;
 	box-shadow: 0px 0px 30px #0F2B9280;
 	border-radius: 20px;
-	width: 40%;
+	width: 38%;
     height: 13rem;
 	margin-left: 7rem;
 	display: flex;
@@ -20,11 +20,11 @@ const BoxTop = styled.div `
 	width: 70%;
     align-items: center;
 	justify-content: space-between;
-	margin-left: 14px;
+	margin-left: 1.1rem;
 `;
 
 const BoxCircle = styled.div `
-	width: 24%;
+	width: 19%;
 	display: flex;
 	justify-content: space-evenly;
 `;
@@ -51,7 +51,7 @@ const LineOrange = styled.div `
 
 const TextMain = styled.h2 `
 	color: #272727;
-	font-size: 1.9em;
+	font-size: 1.8em;
     font-weight: 800;
 	line-height: 2.5rem;
 	margin-left: 1.5rem;
