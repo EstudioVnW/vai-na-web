@@ -14,7 +14,7 @@ const BoxTitle = styled.div`
 const Date = styled.p`
 	color: #FFAC2D;
 	font-size: 14px;
-	padding-left: 3.8rem;
+	padding-left: 3.3rem;
 `;
 
 const TypePage = styled.h1`

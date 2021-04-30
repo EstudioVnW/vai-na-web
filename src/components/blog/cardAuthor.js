@@ -4,8 +4,8 @@ import styled from 'styled-components';
 // styles
 const Container = styled.section`
 	background-color: #FDE7A9;
-	width: 41rem;
-	height: 16rem;
+	max-width: 40rem;
+	min-height: 11.688rem;
 	border-radius: 0px 0px 18px 18px;
 	margin-left: auto;
 	margin-right: auto;
@@ -14,10 +14,11 @@ const Container = styled.section`
 	align-items: center;
 	margin-top: 5rem;
 	margin-bottom: 7rem;
+	padding: 1.5rem 0;
 
 	@media (max-width: 424px) {
 		width: 43rem;
-		margin-left: 50px;
+		margin-left: 3.125rem;
 		height: 27rem;
 		flex-direction: column;
 		justify-content: center;
@@ -25,25 +26,24 @@ const Container = styled.section`
 `;
 
 const Image = styled.img `
-	margin-left: 3rem;
-	width: 21%;
+	margin: 0 2rem;
+	width: 19%;
 	border-radius: 50%;
 
 	@media (max-width: 424px) {
 		width: 23%;
-		margin-left: 0px;
+		margin: 0px;
 		margin-top: -1rem;
 	}
 `;
 
 const Content = styled.div`
+	width: 70%;
 	display: flex;
 	flex-direction: column;
-	margin-left: 2rem;
 
 	@media (max-width: 424px) {
 		align-items: center;
-		margin-left: 0px;
 	}
 `;
 
@@ -56,20 +56,21 @@ const BoxText = styled.div `
 `;
 
 const TextName = styled.h3 `
-	font-size: 28px;
+	font-size: 1.25rem;
 `;
 
-const TextProfession = styled.p `
-	font-size: 28px;
-	color: #FF611E;
+const TextProfession = styled.span`
 	margin-left: 0.3rem;
+	font-size: 1.25rem;
+	font-weight: 200;
+	color: #FF611E;
 `;
 
 const TextDescription = styled.article `
 	color: #0F2B92;
-	font-size: 20px;
+	font-size: .938rem;
 	width: 86%;
-	line-height: 2rem;
+	line-height: 1.6rem;
 	margin-top: 1.3rem;
 `;
 
@@ -79,8 +80,10 @@ const CardPersonDesc = ({ author }) => {
 			<Image src={author?.photo?.url} alt='' />
 			<Content>
 				<BoxText>
-					<TextName>{author?.name},</TextName>
-					<TextProfession>{author?.jobTitle}</TextProfession>
+					<TextName>
+						{author?.name},
+						<TextProfession> {author?.jobTitle} </TextProfession>
+					</TextName>
 				</BoxText>
 				<TextDescription dangerouslySetInnerHTML={{ __html: author?.bio.html }}></TextDescription>	
 			</Content>
