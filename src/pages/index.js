@@ -5,10 +5,10 @@ import './index.css';
 //Components
 import Layouts from '../components/Layouts';
 import PageTitle from '../components/pageTitle/pageTitle';
+import CardHome from '../components/home/card';
 
 //Imagens
 import ScrollArrow from '../images/icons/Group52.svg';
-
 
 var scrollDow = function() {
   window.scrollTo(0, 750);
@@ -22,7 +22,7 @@ const TextPresentation = styled.p `
   line-height: 1.9rem;
   width: 28%;
   margin-left: 9rem;
-  margin-top: 13rem; 
+  margin-top: 2rem; 
 `;
 
 const ArrowScroll = styled.img `
@@ -61,19 +61,20 @@ const Home = () => {
 
   return (
       <Layouts home>
+        <CardHome />
         <TextPresentation>
           Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as 
           desigualdades e desenvolvemos a força de trabalho do futuro.
         </TextPresentation>
         <ButtonScroll onClick={scrollDow}><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem"/></ButtonScroll>
-        <PageTitle data={isTitle} isPage='isHome'/>
-        <NetworkText>
-          A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas, 
-          parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais  
-          <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold> 
-          Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos 
-          pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
-        </NetworkText>
+              <PageTitle data={isTitle} isPage='isHome'/>
+              <NetworkText>
+                A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas, 
+                parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais  
+                <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold> 
+                Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos 
+                pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
+              </NetworkText>
       </Layouts>
   )
 }
