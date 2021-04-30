@@ -15,20 +15,19 @@ var scrollDow = function() {
 };
 
 // styles
-// remover o margin-top quando colocar o card de apresentação
 const TextPresentation = styled.p `
   color: #FDE7A9;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.9rem;
-  width: 28%;
+  width: 25%;
   margin-left: 9rem;
-  margin-top: 2rem; 
+  margin-top: 1.5rem; 
 `;
 
 const ArrowScroll = styled.img `
   margin-left: 9rem;
-  margin-top: 3rem;
-  width: 14%;
+  margin-top: 4rem;
+  width: 12%;
 `;
 
 const ButtonScroll = styled.button `
