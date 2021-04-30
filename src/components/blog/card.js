@@ -82,7 +82,7 @@ const Status = styled.p`
 
 	@media (max-width: 1024px) {
 		padding: .5rem .5rem;
-		max-width: 90px;
+		max-width: ${props => props.slider && '90px'};
 		font-size: 0.75rem;
 	}
 `;
