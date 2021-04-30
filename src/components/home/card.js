@@ -53,7 +53,7 @@ const TextMain = styled.h2 `
 	color: #272727;
 	font-size: 1.8em;
     font-weight: 800;
-	line-height: 2.3rem;
+	line-height: 2.4rem;
 	margin-left: 1.5rem;
 `;
 
