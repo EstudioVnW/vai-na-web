@@ -24,7 +24,7 @@ const Layouts = ({ isPage, pageTitle, children, home }) => {
     <Container home={home}>
       <Header />
       <Main>
-        {children}
+          {children}
       </Main>
       <Footer />
     </Container>
