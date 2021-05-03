@@ -111,8 +111,8 @@ const Background = styled.img `
 `;
 
 const BoxPartners = styled.div`
-  width: 11rem;
-  height: 4rem;
+  width: 10.5rem;
+  height: 3.8rem;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 30px #0F2B9233;
   border-radius: 12px;
@@ -130,8 +130,8 @@ const ImagePartners = styled.img`
 `;
 
 const CirclePartners = styled.div`
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 6rem;
+  height: 6rem;
   background-color: ${props => props.color};
   box-shadow:  ${props => props.shadow};
   border-radius: 50%;
