@@ -8,6 +8,7 @@ import PageTitle from '../components/pageTitle/pageTitle';
 import CardHome from '../components/home/card';
 
 //Imagens
+import BackgroundImage from '../images/images/Path7680.svg';
 import ScrollArrow from '../images/icons/Group52.svg';
 import Aluna from '../images/images/peopleVNW/Aluna.png';
 import Amanda from '../images/images/peopleVNW/Amanda.png';
@@ -101,9 +102,17 @@ const BoldBackground = styled.b`
   opacity: 1;
 `;
 
+const Background = styled.img `
+  width: 100%;
+  position: absolute;
+  top: 42rem;
+  left: 4rem;
+  opacity: 0.3;
+`;
+
 const BoxPartners = styled.div`
-  width: 9rem;
-  height: 3rem;
+  width: 10.5rem;
+  height: 3.8rem;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 30px #0F2B9233;
   border-radius: 12px;
@@ -117,12 +126,12 @@ const BoxPartners = styled.div`
 `;
 
 const ImagePartners = styled.img`
-  width: 75%;
+  width: 85%;
 `;
 
 const CirclePartners = styled.div`
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 6rem;
+  height: 6rem;
   background-color: ${props => props.color};
   box-shadow:  ${props => props.shadow};
   border-radius: 50%;
@@ -179,11 +188,11 @@ const ImageNetwork = () => {
 const PartnerNetworks = () => {
   return (
     <div>
-      <BoxPartners top='50.6rem' left='39rem'></BoxPartners>
+      <BoxPartners top='49.6rem' left='39rem'></BoxPartners>
       <LinePartners transform='rotate(60deg)' width='7rem' top='56rem' left='42rem' />
-      <BoxPartners top='52rem' left='53rem'></BoxPartners>
-      <LinePartners transform='rotate(145deg)' width='9rem' top='57rem' left='48rem' />
-      <BoxPartners top='60rem' left='56rem'></BoxPartners>
+      <BoxPartners top='52rem' left='54rem'></BoxPartners>
+      <LinePartners transform='rotate(145deg)' width='9rem' top='58rem' left='48rem' />
+      <BoxPartners top='60rem' left='57rem'></BoxPartners>
       <LinePartners transform='rotate(190deg)' width='9rem' top='61rem' left='48rem' />
       <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='57rem' left='45rem'>
         <Logo width='50%' src={ImageLogoVnW} alt='Logo Vai na Web' />
@@ -194,18 +203,18 @@ const PartnerNetworks = () => {
       </CirclePartners>
       <LinePartners transform='rotate(40deg)' width='9rem' top='66rem' left='38rem' />
       <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='67rem' left='45rem'>
-        <Logo width='60%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
+        <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
       </CirclePartners>
       <LinePartners transform='rotate(130deg)' width='9rem' top='73rem' left='41rem' />
-      <BoxPartners top='69rem' left='57rem'>
+      <BoxPartners top='69rem' left='60rem'>
         <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
       </BoxPartners>
       <LinePartners transform='rotate(40deg)' width='11rem' top='74.5rem' left='47rem' />
-      <BoxPartners top='76rem' left='37.5rem'>
+      <BoxPartners top='76rem' left='36.5rem'>
         <ImagePartners src={ImageVotorantim} alt='Instituto Votorantim' />
       </BoxPartners>
-      <LinePartners transform='rotate(186deg)' width='11rem' top='70rem' left='47rem' />
-      <BoxPartners top='77rem' left='51rem'>
+      <LinePartners transform='rotate(186deg)' width='13rem' top='70rem' left='47rem' />
+      <BoxPartners top='77rem' left='52.5rem'>
         <ImagePartners src={ImageProadi} alt='Proadi SUS' />
       </BoxPartners>
     </div>
@@ -224,6 +233,7 @@ const Home = () => {
         desigualdades e desenvolvemos a força de trabalho do futuro.
         </TextPresentation>
       <ButtonScroll onClick={scrollDow}><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
+      <Background src={BackgroundImage} alt='Background Route Rocket' />
       <div>
         <PageTitle data={isTitle} isPage='isHome' />
         <NetworkText>
