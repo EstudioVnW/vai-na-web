@@ -62,6 +62,13 @@ const ButtonScroll = styled.button`
   margin-bottom: 10rem;
 `;
 
+const ContainerNetwork = styled.div`
+  width: 100%;
+  display: flex;
+  background-color: red;
+  height: auto;
+`;
+
 const Image = styled.img`
   width: 180px;
   position: absolute;
@@ -108,6 +115,10 @@ const Background = styled.img `
   top: 42rem;
   left: 4rem;
   opacity: 0.3;
+`;
+
+const ContainerPartners = styled.div`
+  position: relative;
 `;
 
 const BoxPartners = styled.div`
@@ -233,18 +244,22 @@ const Home = () => {
         desigualdades e desenvolvemos a força de trabalho do futuro.
         </TextPresentation>
       <ButtonScroll onClick={scrollDow}><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
-      <Background src={BackgroundImage} alt='Background Route Rocket' />
-      <div>
-        <PageTitle data={isTitle} isPage='isHome' />
-        <NetworkText>
-          A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
-                parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
-                <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
-                Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
-                pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
-              </NetworkText>
-      </div>
-      {PartnerNetworks()}
+      {/* <Background src={BackgroundImage} alt='Background Route Rocket' /> */}
+      <ContainerNetwork>
+        <div>
+          <PageTitle data={isTitle} isPage='isHome' />
+          <NetworkText>
+            A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
+                  parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
+                  <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
+                  Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
+                  pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
+                </NetworkText>
+        </div>
+        <div>
+          {PartnerNetworks()}
+        </div>
+      </ContainerNetwork>
     </Layouts>
   )
 }
