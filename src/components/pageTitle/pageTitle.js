@@ -43,7 +43,7 @@ const LineOrange = styled.span `
 
 const Title = styled.h2`
 	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2.125rem'};
-	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '35%'};
+	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '18rem'};
 	max-width: 1272px;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	color: ${props => props.pageHome === 'isHome' ? '#272727' : '#FDE7A9'};

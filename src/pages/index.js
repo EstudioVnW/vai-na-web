@@ -100,7 +100,7 @@ const NetworkText = styled.p`
   font-size: 14px;
   font-weight: 300;
   line-height: 1.5rem;
-  width: 22%;
+  width: 17.5rem;
   margin-left: 11.4rem;
   margin-top: -1rem;
   margin-bottom: 5rem;
@@ -140,7 +140,7 @@ const BoxPartners = styled.div`
   align-items: center;
   justify-content: center;
   top: ${props => props.top};
-  right: ${props => props.right};
+  left: ${props => props.left};
   z-index: 1;
 `;
 
@@ -159,7 +159,7 @@ const CirclePartners = styled.div`
   align-items: center;
   justify-content: center;
   top: ${props => props.top};
-  right: ${props => props.right};
+  left: ${props => props.left};
   z-index: 1;
 `;
 
@@ -173,13 +173,13 @@ const LinePartners = styled.div`
   background-color: #FF611E;
   height: 1px;
   top: ${props => props.top};
-  right: ${props => props.right};
+  left: ${props => props.left};
   transform: ${props => props.transform};
 `;
 
 
 const Home = () => {
-  const isTitle = { typePage: 'Rede', title: 'A força que <br>nos impulsiona' };
+  const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
 
   const ImageNetwork = () => {
     return (
@@ -230,33 +230,33 @@ const Home = () => {
   const PartnerNetworks = () => {
     return (
       <div>
-        <BoxPartners top='0.6rem' right='33rem'></BoxPartners>
-        <LinePartners transform='rotate(60deg)' width='7rem' top='7rem' right='32.5rem' />
-        <BoxPartners top='2.5rem' right='17rem'></BoxPartners>
-        <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' right='23rem' />
-        <BoxPartners top='10rem' right='15rem'></BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='9rem' top='11.8rem' right='23rem' />
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='8rem' right='32rem'>
+        <BoxPartners top='0.6rem' left='6.5rem'></BoxPartners>
+        <LinePartners transform='rotate(60deg)' width='7rem' top='7rem' left='10rem'/>
+        <BoxPartners top='2.5rem' left='21rem'></BoxPartners>
+        <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' left='16rem'/>
+        <BoxPartners top='10rem' left='25rem'></BoxPartners>
+        <LinePartners transform='rotate(186deg)' width='9rem' top='11.8rem' left='17rem'/>
+        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='8rem' left='13rem'>
           <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(145deg)' width='8rem' top='13rem' right='33rem' />
-        <CirclePartners color='#FFFFFF' shadow='0px 0px 22px #00000029' top='13rem' right='38rem'>
+        <LinePartners transform='rotate(145deg)' width='8rem' top='13rem' left='8.7rem'/>
+        <CirclePartners color='#FFFFFF' shadow='0px 0px 22px #00000029' top='13rem' left='7rem'>
           <Logo width='50%' src={ImageRocket} alt='Foguete' />
         </CirclePartners>
-        <LinePartners transform='rotate(40deg)' width='9rem' top='17.5rem' right='34rem' />
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='18rem' right='32rem'>
+        <LinePartners transform='rotate(40deg)' width='9rem' top='17.5rem' left='7rem'/>
+        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='18rem' left='13rem' >
           <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(130deg)' width='9rem' top='26rem' right='33rem' />
-        <BoxPartners top='19rem' right='13rem'>
+        <LinePartners transform='rotate(130deg)' width='9rem' top='26rem' left='7rem'/>
+        <BoxPartners top='19rem' left='27rem' >
           <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
         </BoxPartners>
-        <LinePartners transform='rotate(40deg)' width='11rem' top='26rem' right='23rem' />
-        <BoxPartners top='28rem' right='20rem'>
+        <LinePartners transform='rotate(40deg)' width='11rem' top='26rem' left='16rem'/>
+        <BoxPartners top='28rem' left='20rem' >
           <ImagePartners src={ImageVotorantim} alt='Instituto Votorantim' />
         </BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' right='20rem' />
-        <BoxPartners top='27rem' right='34rem'>
+        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' left='18rem'/>
+        <BoxPartners top='27rem' left='5rem'>
           <ImagePartners src={ImageProadi} alt='Proadi SUS' />
         </BoxPartners>
       </div>
