@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import styled from 'styled-components';
 import './index.css';
 // import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -10,7 +10,6 @@ import PageTitle from '../components/pageTitle/pageTitle';
 import CardHome from '../components/home/card';
 
 //Imagens
-import logo from '../images/icons/logo-VNW.svg';
 import BackgroundImage from '../images/images/Path7680.svg';
 import ScrollArrow from '../images/icons/Group52.svg';
 import Aluna from '../images/images/peopleVNW/Aluna.png';
@@ -45,10 +44,10 @@ var scrollDow = function () {
 };
 
 // styles
-const ContentHeader = styled.div`
-  padding-left: 10rem;
+const ContentHeader = styled.section`
   height: 100vh;
 `;
+
 
 const ContentCard = styled.div`
   position: relative;
@@ -56,19 +55,21 @@ const ContentCard = styled.div`
 `;
 
 const TextPresentation = styled.p`
-  margin-left: 2rem;
-  margin-top: 1.8rem; 
-  width: 50%;
-  max-width: 330px;
   color: #FDE7A9;
   font-size: 16px;
-  font-weight: 600;
   line-height: 1.9rem;
+  width: 25%;
+  margin-left: 9rem;
+  margin-top: 1.5rem; 
+`;
+
+const ArrowScroll = styled.img`
+  margin-left: 9rem;
+  margin-top: 4rem;
+  width: 12%;
 `;
 
 const ButtonScroll = styled.button`
-  padding-left: 2rem;
-  padding-top: 6rem;
   border: none;
   background: transparent;
   margin-bottom: 10rem;
@@ -88,13 +89,7 @@ const Image = styled.img`
   position: absolute;
   top: ${props => props.top};
   left: ${props => props.left};
-  right: ${props => props.right};
   z-index: 1;
-`;
-
-const ImageLogo = styled.img`
-  width: 9rem;
-  margin: 0 0 2% 4%;
 `;
 
 const Line = styled.span`
@@ -118,7 +113,7 @@ const NetworkText = styled.p`
   font-size: 14px;
   font-weight: 300;
   line-height: 1.5rem;
-  width: 22%;
+  width: 17.5rem;
   margin-left: 11.4rem;
   margin-top: -1rem;
   margin-bottom: 5rem;
@@ -137,10 +132,9 @@ const BoldBackground = styled.b`
 
 const Background = styled.img`
   width: 100%;
-  height: auto;
   position: absolute;
   top: 42rem;
-  /* left: 4rem; */
+  left: 4rem;
   opacity: 0.3;
 `;
 
@@ -159,7 +153,7 @@ const BoxPartners = styled.div`
   align-items: center;
   justify-content: center;
   top: ${props => props.top};
-  right: ${props => props.right};
+  left: ${props => props.left};
   z-index: 1;
 `;
 
@@ -178,7 +172,7 @@ const CirclePartners = styled.div`
   align-items: center;
   justify-content: center;
   top: ${props => props.top};
-  right: ${props => props.right};
+  left: ${props => props.left};
   z-index: 1;
 `;
 
@@ -193,22 +187,14 @@ const LinePartners = styled.div`
   height: 1px;
   top: ${props => props.top};
   left: ${props => props.left};
-  right: ${props => props.right};
   transform: ${props => props.transform};
 `;
 
-const Canvas = styled.canvas`
-  position: absolute;
-  top: 0;
-  /* width:  ${props => props.width}px;
-  height: ${props => props.height}px; */
-  width:  100%;
-  height: 100vh;
-  border:1px solid red;
-  color: pink;
-`;
 
 const Home = () => {
+
+  const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
+
 	// const [scrollTo, setScrollTo] = useState('content-1');
 	// const [lastContainer] = useState('content-3');
 	// const [isClicked, setIsClicked] = useState(undefined);
@@ -286,9 +272,26 @@ const Home = () => {
   //   setIsClicked(true);
   // }
 
+
   const ImageNetwork = () => {
     return (
       <>
+
+        <Image src={Elizete} alt="Elizete" top='1%' />
+        <Line
+          width='8rem'
+          top='8rem'
+          rotate='rotate(-23deg)'
+          left='-3rem'
+        />
+        <Image src={Mari} alt="Mari" top='5%' left='35%' />
+        <Line width='35%' top='10%' rotate='rotate(3deg)' left='5%' />
+        <Image src={Pamela} alt="Pamela" top='10%' left='45%' />
+        <Line width='10%' top='15%' rotate='rotate(18deg)' left='40%' />
+
+        <Image src={Michael} alt="Michael" top='.5%' left='60%' />
+        <Line width='15%' top='10rem' rotate='rotate(-20deg)' left='50%' />
+        <Line width='12%' top='15rem' rotate='rotate(75deg)' left='59%' />
         <Line width='15rem' top='12rem' rotate='rotate(80deg)' left='-1rem' />
         <Line width='8rem' top='8rem' rotate='rotate(-23deg)' left='-3rem' />
 
@@ -308,9 +311,15 @@ const Home = () => {
         <Line width='12%' top='30rem' rotate='rotate(50deg)' left='64%' />
 
         <Image src={Jeziel} alt="Jeziel" top='38%' left='70%' />
-        <Line width='12%' top='21rem' rotate='rotate(-15deg)' left='65%' />
 
         <Image src={Matheus} alt="Matheus" top='15%' left='75%' />
+        <Line width='12%' top='21rem' rotate='rotate(-15deg)' left='65%' />
+        <Line width='15%' top='33rem' rotate='rotate(-20deg)' left='75%' />
+        <Line width='21%' top='35rem' rotate='rotate(77deg)' left='71%' />
+
+        <Image src={Gabriel} alt="Gabriel" top='28%' left='85%' />
+        <Line width='12%' top='22rem' rotate='rotate(40deg)' left='77%' />
+
         <Line width='21%' top='32rem' rotate='rotate(-18deg)' left='74%' />
         <Line width='20%' top='23rem' rotate='rotate(30deg)' left='77%' />
 
@@ -321,12 +330,19 @@ const Home = () => {
         <Line width='25%' top='35rem' rotate='rotate(77deg)' left='71%' />
         <Image src={Kelvin} alt="Kelvin" top='55%' left='80%' />
 
+        <Image src={Aluna} alt="Aluna" top='75%' left='88%' />
+        <Image src={Aluna} alt="Aluna" top='70%' left='70%' />
+
         <Image src={Aluna} alt="Aluna" top='75%' right='0' />
         <Image src={Maicon} alt="Maicon" top='70%' left='70%' />
+
         <Image src={Pedro} alt="Pedro" top='50%' left='60%' />
         <Image src={Rhuan} alt="Rhuan" top='80%' left='55%' />
         <Image src={Pri} alt="Pri" top='65%' left='45%' />
         <Image src={Raissa} alt="Raissa" top='80%' left='30%' />
+
+        <Image src={Luan} alt="Luan" left='5%' />
+        <Image src={Tati} alt="Tati" top='40%' />
       </>
     )
   }
@@ -334,42 +350,45 @@ const Home = () => {
   const PartnerNetworks = () => {
     return (
       <div>
-        <BoxPartners top='0.6rem' right='33rem'></BoxPartners>
-        <LinePartners transform='rotate(60deg)' width='7rem' top='7rem' right='32.5rem' />
-        <BoxPartners top='2.5rem' right='17rem'></BoxPartners>
-        <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' right='23rem' />
-        <BoxPartners top='10rem' right='15rem'></BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='9rem' top='11.8rem' right='23rem' />
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='8rem' right='32rem'>
+        <BoxPartners top='0.6rem' left='6.5rem'></BoxPartners>
+        <LinePartners transform='rotate(60deg)' width='7rem' top='7rem' left='10rem'/>
+        <BoxPartners top='2.5rem' left='21rem'></BoxPartners>
+        <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' left='16rem'/>
+        <BoxPartners top='10rem' left='25rem'></BoxPartners>
+        <LinePartners transform='rotate(186deg)' width='9rem' top='11.8rem' left='17rem'/>
+        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='8rem' left='13rem'>
           <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(145deg)' width='8rem' top='13rem' right='33rem' />
-        <CirclePartners color='#FFFFFF' shadow='0px 0px 22px #00000029' top='13rem' right='38rem'>
+        <LinePartners transform='rotate(145deg)' width='8rem' top='13rem' left='8.7rem'/>
+        <CirclePartners color='#FFFFFF' shadow='0px 0px 22px #00000029' top='13rem' left='7rem'>
           <Logo width='50%' src={ImageRocket} alt='Foguete' />
         </CirclePartners>
-        <LinePartners transform='rotate(40deg)' width='9rem' top='17.5rem' right='34rem' />
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='18rem' right='32rem'>
+        <LinePartners transform='rotate(40deg)' width='9rem' top='17.5rem' left='7rem'/>
+        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='18rem' left='13rem' >
           <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(130deg)' width='9rem' top='26rem' right='33rem' />
-        <BoxPartners top='19rem' right='13rem'>
+        <LinePartners transform='rotate(130deg)' width='9rem' top='26rem' left='7rem'/>
+        <BoxPartners top='19rem' left='27rem' >
           <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
         </BoxPartners>
-        <LinePartners transform='rotate(40deg)' width='11rem' top='26rem' right='23rem' />
-        <BoxPartners top='28rem' right='20rem'>
+        <LinePartners transform='rotate(40deg)' width='11rem' top='26rem' left='16rem'/>
+        <BoxPartners top='28rem' left='20rem' >
           <ImagePartners src={ImageVotorantim} alt='Instituto Votorantim' />
         </BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' right='20rem' />
-        <BoxPartners top='27rem' right='34rem'>
+        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' left='16rem'/>
+        <BoxPartners top='27rem' left='5rem'>
           <ImagePartners src={ImageProadi} alt='Proadi SUS' />
         </BoxPartners>
       </div>
     )
   }
 
-
   return (
     <Layouts home>
+      <ContentHeader>
+        {ImageNetwork()}
+        <CardHome />
+
       {/* {ImageNetwork()} */}
       <ContentHeader>
         <ImageLogo src={logo} alt='Logotipo' />
@@ -380,11 +399,12 @@ const Home = () => {
           <Line width='5rem' top='13rem' rotate='rotate(20deg)' left='-10rem'/>
           <Line width='5rem' top='13rem' rotate='rotate(160deg)' left='-3rem' zIndex/> */}
         </ContentCard>
+
         <TextPresentation>
           Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as
           desigualdades e desenvolvemos a força de trabalho do futuro.
         </TextPresentation>
-        <ButtonScroll onClick={scrollDow}><img src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
+        <ButtonScroll onClick={scrollDow}><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
       </ContentHeader>
       {/* <Background src={BackgroundImage} alt='Background Route Rocket' /> */}
       <ContainerNetwork id='content-1'>
