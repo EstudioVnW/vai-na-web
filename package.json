@@ -29,7 +29,6 @@
     "gatsby-plugin-react-helmet": "^4.2.0",
     "gatsby-plugin-sharp": "^3.2.1",
     "gatsby-plugin-sitemap": "^3.2.0",
-    "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-styled-components": "^4.2.0",
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-source-graphcms": "^2.5.1",

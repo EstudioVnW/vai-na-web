@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import styled from 'styled-components';
 import './index.css';
 // import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -13,26 +13,26 @@ import CardHome from '../components/home/card';
 import logo from '../images/icons/logo-VNW.svg';
 import BackgroundImage from '../images/images/Path7680.svg';
 import ScrollArrow from '../images/icons/Group52.svg';
-import Aluna from '../images/images/peopleVNW/Aluna.png';
-import Amanda from '../images/images/peopleVNW/Amanda.png';
-import Cris from '../images/images/peopleVNW/cris.png';
-import Desiree from '../images/images/peopleVNW/Desiree.png';
-import Elizete from '../images/images/peopleVNW/Elizete.png';
-import Gabriel from '../images/images/peopleVNW/Gabriel.png';
-import Igor from '../images/images/peopleVNW/igor.png';
-import Jeziel from '../images/images/peopleVNW/Jeziel.png';
-import Kelvin from '../images/images/peopleVNW/Kelvin.png';
-import Maicon from '../images/images/peopleVNW/Maicon.png';
-import Luan from '../images/images/peopleVNW/Luan.png';
-import Mari from '../images/images/peopleVNW/Mari.png';
-import Pamela from '../images/images/peopleVNW/Pamela.png';
-import Matheus from '../images/images/peopleVNW/Matheus.png';
-import Michael from '../images/images/peopleVNW/Michael.png';
-import Pedro from '../images/images/peopleVNW/Pedro.png';
-import Pri from '../images/images/peopleVNW/Pri.png';
-import Raissa from '../images/images/peopleVNW/Raissa.png';
-import Rhuan from '../images/images/peopleVNW/Rhuan.png';
-import Tati from '../images/images/peopleVNW/Tati.png';
+// import Aluna from '../images/images/peopleVNW/Aluna.png';
+// import Amanda from '../images/images/peopleVNW/Amanda.png';
+// import Cris from '../images/images/peopleVNW/cris.png';
+// import Desiree from '../images/images/peopleVNW/Desiree.png';
+// import Elizete from '../images/images/peopleVNW/Elizete.png';
+// import Gabriel from '../images/images/peopleVNW/Gabriel.png';
+// import Igor from '../images/images/peopleVNW/igor.png';
+// import Jeziel from '../images/images/peopleVNW/Jeziel.png';
+// import Kelvin from '../images/images/peopleVNW/Kelvin.png';
+// import Maicon from '../images/images/peopleVNW/Maicon.png';
+// import Luan from '../images/images/peopleVNW/Luan.png';
+// import Mari from '../images/images/peopleVNW/Mari.png';
+// import Pamela from '../images/images/peopleVNW/Pamela.png';
+// import Matheus from '../images/images/peopleVNW/Matheus.png';
+// import Michael from '../images/images/peopleVNW/Michael.png';
+// import Pedro from '../images/images/peopleVNW/Pedro.png';
+// import Pri from '../images/images/peopleVNW/Pri.png';
+// import Raissa from '../images/images/peopleVNW/Raissa.png';
+// import Rhuan from '../images/images/peopleVNW/Rhuan.png';
+// import Tati from '../images/images/peopleVNW/Tati.png';
 import ImageRocket from '../images/images/Group7294.svg';
 import ImageLogoVnW from '../images/icons/logo-VNW.svg';
 import ImageEstudioVnW from '../images/images/Group6536.svg';
@@ -49,6 +49,14 @@ const ContentHeader = styled.div`
   padding-left: 10rem;
   height: 100vh;
 `;
+
+const DottedLineBackground = styled.div`
+  background: url(${BackgroundImage}); 
+  background-repeat: no-repeat; 
+  background-size: 100%;
+  /* opacity: 0.3; */
+`;
+
 
 const ContentCard = styled.div`
   position: relative;
@@ -83,36 +91,30 @@ const ContainerNetwork = styled.div`
   display: flex;
 `;
 
-const Image = styled.img`
-  width: 180px;
-  position: absolute;
-  top: ${props => props.top};
-  left: ${props => props.left};
-  right: ${props => props.right};
-  z-index: 1;
-`;
+// const Image = styled.img`
+//   width: 180px;
+//   position: absolute;
+//   top: ${props => props.top};
+//   left: ${props => props.left};
+//   right: ${props => props.right};
+//   z-index: 1;
+// `;
 
 const ImageLogo = styled.img`
   width: 9rem;
   margin: 0 0 2% 4%;
 `;
 
-const Line = styled.span`
-  width: ${props => props.width};
-	background-color: #FF611E;
-	height: 1px;
-  position: absolute;
-  top: ${props => props.top};
-  left: ${props => props.left};
-  transform: ${props => props.rotate};
-  z-index: ${props => props.zIndex && '-1'};
-
-  /* ${({ side, top, bottom, right, left, width, widthOptions }) => side && `
-    top: calc(${top}px - 4.75rem);
-    left: calc(${right}px + .5rem);
-    width: ${widthOptions || '11.6875rem'};
-  `} */
-`;
+// const Line = styled.span`
+//   width: ${props => props.width};
+// 	background-color: #FF611E;
+// 	height: 1px;
+//   position: absolute;
+//   top: ${props => props.top};
+//   left: ${props => props.left};
+//   transform: ${props => props.rotate};
+//   z-index: ${props => props.zIndex && '-1'};
+// `;
 
 const NetworkText = styled.p`
   font-size: 14px;
@@ -135,13 +137,16 @@ const BoldBackground = styled.b`
   opacity: 1;
 `;
 
-const Background = styled.img`
+const Background = styled.div`
   width: 100%;
   height: auto;
   position: absolute;
   top: 42rem;
   /* left: 4rem; */
   opacity: 0.3;
+  background: url(${BackgroundImage}); 
+  background-repeat: no-repeat; 
+  background-size: 100%;
 `;
 
 const ContainerPartners = styled.div`
@@ -195,17 +200,6 @@ const LinePartners = styled.div`
   left: ${props => props.left};
   right: ${props => props.right};
   transform: ${props => props.transform};
-`;
-
-const Canvas = styled.canvas`
-  position: absolute;
-  top: 0;
-  /* width:  ${props => props.width}px;
-  height: ${props => props.height}px; */
-  width:  100%;
-  height: 100vh;
-  border:1px solid red;
-  color: pink;
 `;
 
 const Home = () => {
@@ -286,50 +280,50 @@ const Home = () => {
   //   setIsClicked(true);
   // }
 
-  const ImageNetwork = () => {
-    return (
-      <>
-        <Line width='15rem' top='12rem' rotate='rotate(80deg)' left='-1rem' />
-        <Line width='8rem' top='8rem' rotate='rotate(-23deg)' left='-3rem' />
+  // const ImageNetwork = () => {
+  //   return (
+  //     <>
+  //       <Line width='15rem' top='12rem' rotate='rotate(80deg)' left='-1rem' />
+  //       <Line width='8rem' top='8rem' rotate='rotate(-23deg)' left='-3rem' />
 
-        <Image  src={Elizete} alt="Elizete" top='1%' />
-        <Line width='30%' top='7rem' rotate='rotate(3deg)' left='7rem' />
+  //       <Image  src={Elizete} alt="Elizete" top='1%' />
+  //       <Line width='30%' top='7rem' rotate='rotate(3deg)' left='7rem' />
 
-        <Image src={Mari} alt="Mari" top='5%' left='33%' />
-        <Line width='10%' top='15rem' rotate='rotate(50deg)' left='38%' />
+  //       <Image src={Mari} alt="Mari" top='5%' left='33%' />
+  //       <Line width='10%' top='15rem' rotate='rotate(50deg)' left='38%' />
 
-        <Image src={Pamela} alt="Pamela" top='18%' left='38%' />
-        <Line width='15%' top='13rem' rotate='rotate(-38deg)' left='62rem' />
+  //       <Image src={Pamela} alt="Pamela" top='18%' left='38%' />
+  //       <Line width='15%' top='13rem' rotate='rotate(-38deg)' left='62rem' />
 
-        <Image src={Michael} alt="Michael" top='.5%' left='79rem' />
-        <Line width='13%' top='13rem' rotate='rotate(45deg)' left='54%' />
+  //       <Image src={Michael} alt="Michael" top='.5%' left='79rem' />
+  //       <Line width='13%' top='13rem' rotate='rotate(45deg)' left='54%' />
 
-        <Image src={Amanda} alt="Amanda" top='20%' left='63%' />
-        <Line width='12%' top='30rem' rotate='rotate(50deg)' left='64%' />
+  //       <Image src={Amanda} alt="Amanda" top='20%' left='63%' />
+  //       <Line width='12%' top='30rem' rotate='rotate(50deg)' left='64%' />
 
-        <Image src={Jeziel} alt="Jeziel" top='38%' left='70%' />
-        <Line width='12%' top='21rem' rotate='rotate(-15deg)' left='65%' />
+  //       <Image src={Jeziel} alt="Jeziel" top='38%' left='70%' />
+  //       <Line width='12%' top='21rem' rotate='rotate(-15deg)' left='65%' />
 
-        <Image src={Matheus} alt="Matheus" top='15%' left='75%' />
-        <Line width='21%' top='32rem' rotate='rotate(-18deg)' left='74%' />
-        <Line width='20%' top='23rem' rotate='rotate(30deg)' left='77%' />
+  //       <Image src={Matheus} alt="Matheus" top='15%' left='75%' />
+  //       <Line width='21%' top='32rem' rotate='rotate(-18deg)' left='74%' />
+  //       <Line width='20%' top='23rem' rotate='rotate(30deg)' left='77%' />
 
-        <Image src={Gabriel} alt="Gabriel" top='28%' right='2%' />
+  //       <Image src={Gabriel} alt="Gabriel" top='28%' right='2%' />
 
-        {/* <Line width='12%' top='30rem' rotate='rotate(50deg)' left='60%' /> */}
+  //       {/* <Line width='12%' top='30rem' rotate='rotate(50deg)' left='60%' /> */}
 
-        <Line width='25%' top='35rem' rotate='rotate(77deg)' left='71%' />
-        <Image src={Kelvin} alt="Kelvin" top='55%' left='80%' />
+  //       <Line width='25%' top='35rem' rotate='rotate(77deg)' left='71%' />
+  //       <Image src={Kelvin} alt="Kelvin" top='55%' left='80%' />
 
-        <Image src={Aluna} alt="Aluna" top='75%' right='0' />
-        <Image src={Maicon} alt="Maicon" top='70%' left='70%' />
-        <Image src={Pedro} alt="Pedro" top='50%' left='60%' />
-        <Image src={Rhuan} alt="Rhuan" top='80%' left='55%' />
-        <Image src={Pri} alt="Pri" top='65%' left='45%' />
-        <Image src={Raissa} alt="Raissa" top='80%' left='30%' />
-      </>
-    )
-  }
+  //       <Image src={Aluna} alt="Aluna" top='75%' right='0' />
+  //       <Image src={Maicon} alt="Maicon" top='70%' left='70%' />
+  //       <Image src={Pedro} alt="Pedro" top='50%' left='60%' />
+  //       <Image src={Rhuan} alt="Rhuan" top='80%' left='55%' />
+  //       <Image src={Pri} alt="Pri" top='65%' left='45%' />
+  //       <Image src={Raissa} alt="Raissa" top='80%' left='30%' />
+  //     </>
+  //   )
+  // }
 
   const PartnerNetworks = () => {
     return (
@@ -387,6 +381,8 @@ const Home = () => {
         <ButtonScroll onClick={scrollDow}><img src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
       </ContentHeader>
       {/* <Background src={BackgroundImage} alt='Background Route Rocket' /> */}
+    <DottedLineBackground>
+
       <ContainerNetwork id='content-1'>
         <div>
           <PageTitle data={isTitle} isPage='isHome' />
@@ -402,6 +398,7 @@ const Home = () => {
           {PartnerNetworks()}
         </ContainerPartners>
       </ContainerNetwork>
+    </DottedLineBackground>
     </Layouts>
   )
 }
