@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from 'styled-components';
 import './index.css';
 
@@ -8,6 +8,7 @@ import PageTitle from '../components/pageTitle/pageTitle';
 import CardHome from '../components/home/card';
 
 //Imagens
+import logo from '../images/icons/logo-VNW.svg';
 import BackgroundImage from '../images/images/Path7680.svg';
 import ScrollArrow from '../images/icons/Group52.svg';
 import Aluna from '../images/images/peopleVNW/Aluna.png';
@@ -41,26 +42,29 @@ var scrollDow = function () {
 };
 
 // styles
-const ContentHeader = styled.section`
+const ContentHeader = styled.div`
+  padding-left: 10rem;
   height: 100vh;
 `;
 
-const TextPresentation = styled.p`
-  color: #FDE7A9;
-  font-size: 16px;
-  line-height: 1.9rem;
-  width: 25%;
-  margin-left: 9rem;
-  margin-top: 1.5rem; 
+const ContentCard = styled.div`
+  position: relative;
 `;
 
-const ArrowScroll = styled.img`
-  margin-left: 9rem;
-  margin-top: 4rem;
-  width: 12%;
+const TextPresentation = styled.p`
+  margin-left: 2rem;
+  margin-top: 1.8rem; 
+  width: 50%;
+  max-width: 330px;
+  color: #FDE7A9;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.9rem;
 `;
 
 const ButtonScroll = styled.button`
+  padding-left: 2rem;
+  padding-top: 6rem;
   border: none;
   background: transparent;
   margin-bottom: 10rem;
@@ -73,11 +77,17 @@ const ContainerNetwork = styled.div`
 `;
 
 const Image = styled.img`
-  width: 180px;
+  width: 160px;
   position: absolute;
   top: ${props => props.top};
   left: ${props => props.left};
+  right: ${props => props.right};
   z-index: 1;
+`;
+
+const ImageLogo = styled.img`
+  width: 9rem;
+  margin: 0 0 2% 4%;
 `;
 
 const Line = styled.span`
@@ -119,9 +129,10 @@ const BoldBackground = styled.b`
 
 const Background = styled.img`
   width: 100%;
+  height: auto;
   position: absolute;
   top: 42rem;
-  left: 4rem;
+  /* left: 4rem; */
   opacity: 0.3;
 `;
 
@@ -173,56 +184,217 @@ const LinePartners = styled.div`
   background-color: #FF611E;
   height: 1px;
   top: ${props => props.top};
+  left: ${props => props.left};
   right: ${props => props.right};
   transform: ${props => props.transform};
 `;
 
+const Canvas = styled.canvas`
+  position: absolute;
+  top: 0;
+  /* width:  ${props => props.width}px;
+  height: ${props => props.height}px; */
+  width:  100%;
+  height: 100vh;
+  border:1px solid red;
+  color: pink;
+`;
 
 const Home = () => {
+	// const [width, setWidth] = useState(0);
+	// const [height, setHeight] = useState(0);
+  const selectRef = useRef();
+
+
+  // const getPosition = () => {
+  //   console.log('-----selectRef', selectRef.current.alt === 'Elizete')
+  //   // return selectRef.current && selectRef.current.getBoundingClientRect();
+  // }
+
+  const handleLines = () => {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 30);
+    ctx.stroke();
+  }
+
+
+  // const updateMedia = () => {
+  //   setWidth(window.innerWidth);
+  //   setHeight(window.innerHeight);
+  // }
+  
+
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     updateMedia()
+  //     window.addEventListener('resize', updateMedia);
+  //     return () => window.removeEventListener('resize', updateMedia);
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   handleLines();
+  // }, []);
+
   const isTitle = { typePage: 'Rede', title: 'A força que <br>nos impulsiona' };
+  const imgList = [
+    {
+      img: Tati,
+      alt: 'Tati',
+      top: 40,
+      left: 0,
+    },
+    {
+      img: Luan,
+      alt: 'Luan',
+      top: 23,
+      left: 4,
+    },
+    {
+      img: Elizete,
+      alt: 'Elizete',
+      top: 1,
+      left: 0,
+    },
+    {
+      img: Mari,
+      alt: 'Mari',
+      top: 5,
+      left: 30,
+    },
+    {
+      img: Pamela,
+      ialtg: 'Pamela',
+      top: 18,
+      left: 39,
+    },
+    {
+      img: Michael,
+      alt: 'Michael',
+      top: 5,
+      left: 55,
+    },
+    {
+      img: Amanda,
+      alt: 'Amanda',
+      top: 20,
+      left: 63,
+
+    },
+    {
+      img: Matheus,
+      alt: 'Matheus',
+      top: 15,
+      left: 75,
+
+    },
+    {
+      img: Gabriel,
+      alt: 'Gabriel',
+      top: 28,
+      left: 90,
+    },
+    {
+      img: Jeziel,
+      alt: 'Jeziel',
+      top: 38,
+      left: 70,
+    },
+    {
+      img: Kelvin,
+      alt: 'Kelvin',
+      top: 55,
+      left: 80,
+
+    },
+    {
+      img: Aluna,
+      alt: 'Aluna',
+      top: 75,
+      left: 90,
+    },
+    {
+      img: Aluna,
+      alt: 'Aluna',
+      top: 70,
+      left: 70,
+    },
+    {
+      img: Pedro,
+      alt: 'Pedro',
+      top: 50,
+      left: 60,
+    },
+    {
+      img: Rhuan,
+      alt: 'Rhuan',
+      top: 80,
+      left: 55,
+    },
+    {
+      img: Pri,
+      alt: 'Pri',
+      top: 65,
+      left: 45,
+    },
+    {
+      img: Raissa,
+      alt: 'Raissa',
+      top: 80,
+      left: 30,
+    },
+  ];
+
+  const ImageNetworkTEst = () => {
+    return imgList.map((item, index) => <Image src={item.img} alt={item.alt} top={item.top} left={item.left} right={item.right} id={`imgtest${index}`} />)
+  }
 
   const ImageNetwork = () => {
     return (
       <>
-        <Image src={Elizete} alt="Elizete" top='1%' />
-        <Line
-          width='8rem'
-          top='8rem'
-          rotate='rotate(-23deg)'
-          left='-3rem'
-        />
-        <Image src={Mari} alt="Mari" top='5%' left='35%' />
-        <Line width='35%' top='10%' rotate='rotate(3deg)' left='5%' />
-        <Image src={Pamela} alt="Pamela" top='10%' left='45%' />
-        <Line width='10%' top='15%' rotate='rotate(18deg)' left='40%' />
+        <Line width='15rem' top='12rem' rotate='rotate(80deg)' left='-1rem' />
+        <Line width='5rem' top='33rem' rotate='rotate(20deg)' left='-1rem' />
+        <Line width='8rem' top='8rem' rotate='rotate(-23deg)' left='-3rem' />
+        <Line width='5rem' top='34rem' rotate='rotate(160deg)' left='5rem' />
 
-        <Image src={Michael} alt="Michael" top='.5%' left='60%' />
+        <Image  src={Elizete} alt="Elizete" top='1%' />
+        <Line width='30%' top='7rem' rotate='rotate(3deg)' left='7rem' />
+
+        <Image src={Mari} alt="Mari" top='5%' left='33%' />
+        <Line width='10%' top='15rem' rotate='rotate(20deg)' left='40%' />
+
+        <Image src={Pamela} alt="Pamela" top='18%' left='39%' />
         <Line width='15%' top='10rem' rotate='rotate(-20deg)' left='50%' />
+
+        <Image src={Michael} alt="Michael" top='.5%' left='52%' />
         <Line width='12%' top='15rem' rotate='rotate(75deg)' left='59%' />
 
         <Image src={Amanda} alt="Amanda" top='20%' left='63%' />
         <Line width='12%' top='30rem' rotate='rotate(50deg)' left='64%' />
 
         <Image src={Jeziel} alt="Jeziel" top='38%' left='70%' />
+        <Line width='12%' top='21rem' rotate='rotate(-15deg)' left='65%' />
 
         <Image src={Matheus} alt="Matheus" top='15%' left='75%' />
-        <Line width='12%' top='21rem' rotate='rotate(-15deg)' left='65%' />
         <Line width='15%' top='33rem' rotate='rotate(-20deg)' left='75%' />
         <Line width='21%' top='35rem' rotate='rotate(77deg)' left='71%' />
 
-        <Image src={Gabriel} alt="Gabriel" top='28%' left='85%' />
+        <Image src={Gabriel} alt="Gabriel" top='28%' right='2%' />
+
         <Line width='12%' top='22rem' rotate='rotate(40deg)' left='77%' />
         {/* <Line width='12%' top='30rem' rotate='rotate(50deg)' left='60%' /> */}
 
         <Image src={Kelvin} alt="Kelvin" top='55%' left='80%' />
-        <Image src={Aluna} alt="Aluna" top='75%' left='88%' />
-        <Image src={Aluna} alt="Aluna" top='70%' left='70%' />
+        <Image src={Aluna} alt="Aluna" top='75%' right='0' />
+        <Image src={Cris} alt="Cris" top='70%' left='70%' />
         <Image src={Pedro} alt="Pedro" top='50%' left='60%' />
         <Image src={Rhuan} alt="Rhuan" top='80%' left='55%' />
         <Image src={Pri} alt="Pri" top='65%' left='45%' />
         <Image src={Raissa} alt="Raissa" top='80%' left='30%' />
-        <Image src={Luan} alt="Luan" left='5%' />
-        <Image src={Tati} alt="Tati" top='40%' />
+        
+        {/* <Image src={Tati} alt="Tati" top='40%' /> */}
       </>
     )
   }
@@ -263,16 +435,24 @@ const Home = () => {
     )
   }
 
+
   return (
     <Layouts home>
+      {/* <Canvas id="myCanvas" > */}
+      {/* </Canvas> */}
+      {ImageNetwork()}
       <ContentHeader>
-        {ImageNetwork()}
-        <CardHome />
+        <ImageLogo src={logo} alt='Logotipo' />
+        <ContentCard>
+          <Image src={Luan} alt="Luan" top='-6rem' left='-6rem' />
+          <CardHome />
+          <Image src={Tati} alt="Tati" top='60%' left='-9rem'/>
+        </ContentCard>
         <TextPresentation>
           Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as
           desigualdades e desenvolvemos a força de trabalho do futuro.
         </TextPresentation>
-        <ButtonScroll onClick={scrollDow}><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
+        <ButtonScroll onClick={scrollDow}><img src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
       </ContentHeader>
       {/* <Background src={BackgroundImage} alt='Background Route Rocket' /> */}
       <ContainerNetwork>
