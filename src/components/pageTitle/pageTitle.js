@@ -8,19 +8,20 @@ const Container = styled.section`
 `;
 
 const BoxTitle = styled.div`
-	margin-left: 6rem;
+	margin-left: ${props => props.pageHome === 'isHome' ? '3rem' : '2rem'};
 `;
 
 const Date = styled.p`
 	color: #FFAC2D;
 	font-size: 14px;
-	padding-left: 3.35rem;
+	padding-left: 3.3rem;
 `;
 
 const TypePage = styled.h1`
-	padding: 0.5rem 1.125rem;
-	margin-left: 3.5rem;
+	padding: 0.25rem 1.125rem;
+	margin-left: ${props => props.pageHome === 'isHome' ? '4.5rem' : ' 3.5rem'};
 	font-size: 1rem;
+	font-weight: 200;
 	color: #FFAC2D;
 	width: fit-content;
 	border: 1px solid #FFAC2D;
@@ -28,25 +29,32 @@ const TypePage = styled.h1`
 	text-transform: uppercase;
 `;
 
-const Title = styled.h2`
-	margin-top: 1rem;
-	padding-bottom: 3.125rem;
-	width: 35%;
-	font-size: 3.2rem;
-	color: #FDE7A9;
+const ContentTitle = styled.div`
 	display: flex;
+	padding-top: 1rem;
+`;
 
-	span {
-		padding-right: 0.5rem;
-		color: #FF611E;
-	}
+const LineOrange = styled.span `
+	padding-right: 0.5rem;
+	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
+	font-weight: 200;
+	color: #FF611E;
+`;
+
+const Title = styled.h2`
+	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2.125rem'};
+	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '18rem'};
+	max-width: 1272px;
+	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
+	color: ${props => props.pageHome === 'isHome' ? '#272727' : '#FDE7A9'};
 `;
 
 const SubTitle = styled.p `
-	font-size: 36px;
+	font-size: ${props => props.pageBlog === 'postBlog' ? '30px' : '36px'};
 	font-weight: 100;
-	width: 49%;
-	padding: 0 0 3.148rem 5rem;
+	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
+	max-width: 970px;
+	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 5.148rem 4.5rem' : '0 0 5.148rem 4.5rem'};
 `;
 
 const formatMonth = (month) => {
@@ -76,8 +84,7 @@ const formatMonth = (month) => {
 		case '12':
 			return 'Dezembro';
 		default:
-			return month;
-			break;
+			return '';
 	}
 }
 
@@ -90,18 +97,20 @@ const formatDate = (date) => {
 	return <Date>{day} de {formatMonth(month)} · {year}</Date>
 }
 
-const PageTitle = ({ data }) => {
+const PageTitle = ({ isPage, data }) => {
 	return (
 		<Container>
-			{data?.typePage && <TypePage>{data.typePage}</TypePage>}
-			<BoxTitle>
+			{data?.typePage && <TypePage pageHome={isPage}>{data.typePage}</TypePage>}
+			<BoxTitle pageHome={isPage}>
 				{data?.date && formatDate(data.date)}
-				<Title>
-					<span>//</span>
-					{data?.title}				
-				</Title>
-				{/* {data?.excerpt && <SubTitle>{data.excerpt}</SubTitle>} */}
-				{data?.excerpt && <SubTitle>Women in Tech, que celebra mulheres e iniciativas notáveis na economia digital, vai acontecer dia 2 de dezembro em Lisboa</SubTitle>}
+				<ContentTitle>
+					<LineOrange pageHome={isPage}>//</LineOrange>
+					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
+				</ContentTitle>
+				{data?.excerpt && 
+				<SubTitle pageBlog={isPage}>
+					{data.excerpt}
+				</SubTitle>}
 			</BoxTitle>
 		</Container>
 	)

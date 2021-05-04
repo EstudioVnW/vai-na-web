@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
+import slugify from "slugify";
 
 // styles
 const Container = styled.div`
@@ -15,19 +16,33 @@ const Container = styled.div`
 	}
 `;
 
-const Image = styled.img`
+const Figure = styled.figure`
 	width: ${props => props.slider ? '100%' : '41.313rem'};
 	height: ${props => props.slider ? '13.875rem' : '26.375rem'};
 	border: 2px solid #00145D;
 	border-radius: 20px;
-
-	@media (max-width: 1382px) {
-		width: ${props => props.slider ? '100%' : '37.313rem'};
-	}
+	transition: 0.5s;
+	overflow: hidden;
 
 	@media (max-width: 1024px) {
-		width: ${props => props.slider ? '100%' : '21.313rem'};
-		height: ${props => props.slider ? '8.875rem' : '19.375rem'};
+		width: ${props => !props.slider && '30rem'};
+		height: ${props => props.slider ? '8.875rem' : '20rem'};
+	}
+`;
+
+const Image = styled.img`
+	width: 100%;
+	height: 100%;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	object-fit: cover;
+
+	:hover {
+		${props => !props.slider &&
+		`
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+    `};
 	}
 `;
 
@@ -46,11 +61,14 @@ const ContentDate = styled.div`
 const Date = styled.p`
 	font-size: 1rem;
 	color: #0F2B92;
+
+	@media (max-width: 1024px) {
+		font-size: 0.75rem;
+	}
 `;
 
 const Status = styled.p`
-	padding: 0 1.188rem;
-	height: 2.063rem;
+	padding: .5rem 1.188rem;
 	display: flex;
 	align-items: center;
 	font-size: 0.875rem;
@@ -58,6 +76,16 @@ const Status = styled.p`
 	text-transform: uppercase;
 	border: 1px solid #FF611E;
 	border-radius: 19px;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	@media (max-width: 1024px) {
+		padding: .5rem .5rem;
+		max-width: ${props => props.slider && '90px'};
+		font-size: 0.75rem;
+	}
 `;
 
 const Title = styled(Link)`
@@ -66,6 +94,11 @@ const Title = styled(Link)`
 	color: #272727;
 	text-decoration: none;
 	cursor: pointer;
+	display: -webkit-box;
+	-webkit-line-clamp: 3; /* número de linhas que você quer exibir */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 
 	:hover {
 		color: #0F2B92;
@@ -114,8 +147,7 @@ const formatMonth = (month) => {
 		case '12':
 			return 'Dezembro';
 		default:
-			return month;
-			break;
+			return '';
 	}
 }
 
@@ -128,20 +160,23 @@ const formatDate = (date) => {
 	return <Date>{day} de {formatMonth(month)} · {year}</Date>
 }
 
-const PostList = ({ data, slider }) => {
+const Card = ({ data, slider }) => {
+	const slug = slugify(`${data.title.toLowerCase()}-${data.id.split(":")[1]}`)
 	return (
 		<Container slider={slider}>
-			<Image src={data.cover.url} alt='Agenda' slider={slider} />
+			<Figure slider={slider}>
+				<Image src={data.cover.url || ''} alt={data.title} slider={slider} />
+			</Figure>
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
-					{formatDate(data.publishedAt)}
-					<Status>Notícia</Status>
+					{formatDate(data.createdAt)}
+					<Status>{data.tags[0].name  || ''}</Status>
 				</ContentDate>
-				<Title to={'/blog/postBlog/'} state={{ postBlog: data }} slider={slider}>{data.title}</Title>
+				<Title to={`/blog/${slug}`} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title  || ''}</Title>
 				<Description>{data.excerpt}</Description>
 			</Content>
 		</Container>
 	)
 }
 
-export default PostList;
+export default Card;

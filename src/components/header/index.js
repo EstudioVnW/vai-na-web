@@ -8,9 +8,10 @@ import logo from '../../images/icons/logo-VNW.svg';
 // styles
 const Container = styled.header`
   display: flex;
-	justify-content:  ${props => props.home ? 'space-between' : 'space-between'};
+	justify-content: space-between;
 	width: 100%;
-  	height: 15rem;
+	height: ${props => props.home ? '11rem' : '12rem'};
+
 	nav{
 		font-family: "usual", sans-serif;
 		position: fixed;
@@ -19,10 +20,10 @@ const Container = styled.header`
 `;
 
 const Image = styled.img`
-	display: ${props => props.home};
-  width: 6rem;
-  margin: 50px;
-  position: fixed; 
+	display: ${props => props.home && 'none'};
+  margin: ${props => props.home ? '10rem 0 0 20rem' : '3.125rem 0 0 6.438rem'};
+  width: ${props => props.home ? '10rem' : '6rem'};
+  position: ${props => !props.home && 'fixed'};
 `;
 
 const Ul = styled.ul`
@@ -36,6 +37,7 @@ const Li = styled.li`
 	
 	a{
 		text-decoration: none;
+		font-size: 1.125rem;
 		color: #FDE7A9;
 		position: relative;
 		::before{
@@ -44,7 +46,7 @@ const Li = styled.li`
 			width: 100%;
 			height: 1px;
 			background: #FDE7A9;
-			top: 20px;
+			top: 25px;
 		}	
 	}
 `;
@@ -52,12 +54,12 @@ const Li = styled.li`
 const Header = ({ home }) => {
 	return (
 		<Container home={home}>
-			<Link to={'/'}><Image src={logo} home={home} alt='Logotipo' /></Link>
+			<Link to={'/'} rel="noreferrer"><Image src={logo} home={home} alt='Logotipo' /></Link>
 			<nav>
 				<Ul>
-					<Li><Link to={'/'}>Sobre</Link></Li>
-					<Li><Link to={'/blog'}>Blog</Link></Li>
-					<Li><Link to={'/contato'}>Contato</Link></Li>
+					<Li><Link to={'/'} rel="noreferrer">Sobre</Link></Li>
+					<Li><Link to={'/blog'} rel="noreferrer">Blog</Link></Li>
+					<Li><Link to='#footer' rel="noreferrer">Contato</Link></Li>
 				</Ul>
 			</nav>
 		</Container>

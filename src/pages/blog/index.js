@@ -3,11 +3,11 @@ import React from "react";
 import { graphql } from "gatsby";
 import styled from 'styled-components';
 
-
 //Components
-import Layouts from '../../components/Layouts';
 import Card from '../../components/blog/card';
 import PostSlider from '../../components/postSlider/postSlider';
+import PageTitle from '../../components/pageTitle/pageTitle';
+import Layouts from '../../components/Layouts'
 
 // styles
 const ContainerBlog = styled.div`
@@ -23,8 +23,8 @@ const ContantCard = styled.div`
   width: 80%; /* tamanho do container do post */
 `;
 
-
 const Text = styled.h3`
+  padding: 5rem 0;
 	font-size:  ${props => props.slider ? '1.875rem' : '2.75rem'};
 	font-weight: 700;
 	color: #FDE7A9;
@@ -33,12 +33,13 @@ const Text = styled.h3`
 
 export const query = graphql`
   query  {
-    posts: allGraphCmsPost {
+    posts: allGraphCmsPost(sort: { fields: [createdAt], order: DESC }) {
       nodes {
         id
         title
         excerpt 
         publishedAt
+        createdAt
         tags {
           name
         }
@@ -65,32 +66,34 @@ export const query = graphql`
   }
 `
 
-const renderBlog = (info) => (
-  <>
-    <ContantCard>
-      <Card data={info[0]} />
-    </ContantCard>
-    <PostSlider data={info} />
-  </>
-)
-
-const Index = ({ data }) => {
-  const infoData = data?.posts?.nodes;
-  const isData = !infoData.length;
-  const isTitle = { typePage: 'Blog', title: 'Radar Vai na Web'};
-
+const renderBlog = (listItem, firstData) => {
   return (
-    <Layouts pageTitle={isTitle}>
-      <ContainerBlog>
-        {isData
-          ? <Text>Não há conteúdo no momento</Text>
-          : renderBlog(infoData)
-        }
-      </ContainerBlog>
-    </Layouts>
-
+    <>
+      <ContantCard>
+        <Card data={firstData} />
+      </ContantCard>
+      <PostSlider data={listItem} /> 
+    </>
   )
 }
 
+const Index = ({ data }) => {
+  const firstItem = data && data.posts.nodes[0];
+  const listSlider = data && data.posts.nodes.filter(item => item.id !== firstItem.id);
+  const title = `Radar <br/> Vai na Web`;
+  const isTitle = { typePage: 'Blog', title: title };
+
+  return (
+    <Layouts>
+    <PageTitle data={isTitle}/>
+      <ContainerBlog>
+        {!listSlider.length
+          ? <Text>Não há conteúdo no momento</Text>
+          : renderBlog(listSlider, firstItem)
+        }
+      </ContainerBlog>
+    </Layouts>
+  )
+}
 
 export default Index;

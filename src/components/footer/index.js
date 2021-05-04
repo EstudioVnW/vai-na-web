@@ -1,5 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
+
+//Images
 import logoFacebook from '../../images/icons/icon-facebook.svg';
 import logoInstagram from '../../images/icons/icon-instagram.svg';
 import logoEmail from '../../images/icons/icon-email.svg';
@@ -16,7 +18,7 @@ const ContainerFooter = styled.div `
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
 	width: 103%;
-	height: 7rem;
+	padding: .8rem 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -31,33 +33,38 @@ const BoxDivision = styled.div `
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin: 0.7rem 0;
+	margin: 0.5rem 0;
 `;
 
 const LineOrange = styled.div `
-	height: 1px;
+	height: 2px;
 	background-color: #FF611E;
 `;
 
 const TitleSpotlight = styled.p `
-	font-size: 59px;
+	font-size: 4.375rem;
 	text-transform: uppercase;
 	color: #0F2B92;
 	font-weight: 100;
+
 	@media (max-width: 424px) {
 		font-size: 30px;
 	}
 `;
 
 const LogoVnW = styled.img `
-	width: 4rem;
+	width: 5rem;
+
+	@media (max-width: 1400px) {
+		margin: 0 1rem;
+	}
 `;
 
 const Container = styled.footer`
 	background-color: #00145D;
 	height: auto;
 	@media (max-width: 424px) {
-		width: 48rem;
+		width: 28rem;
 	}
 `;
 
@@ -81,54 +88,67 @@ const Box = styled.div `
 
 const ContainerTextIcons = styled.div `
 	display: flex;
-	width: 26rem;
+	width: 30rem;
+
 	@media (max-width: 424px) {
-		width: 100%;
-		margin-top: 4rem;
+		padding: 1rem;
+		margin-top: 2rem;	
 	}	
 `;
 
 const TextFooter = styled.p`
+	width: 28%;
 	color: #FFFFFF;
-	width: 23%;
+	font-size: 1.1rem;
 	line-height: 1.5rem;
+	letter-spacing: 0.025rem;
+
 	@media (max-width: 424px) {
-		width: 100%;
+		width: 80%;
 		text-align: center;
-		font-size: 20px;
+		font-size: 14px;
 	}	
 `;
 
 const BoxText = styled.div `
 	display: flex;
 	flex-direction: column;
-	margin-top: -8px;
-	width: 77%;
+	margin-top: -10px;
+	width: 100%;
+	margin-left: 1rem;
 `;
 
 const TextLink = styled.a `
 	color: #FFFFFF;
 	text-align: justify;
 	margin-top: 8px;
+	font-size: 1.1rem;
+	line-height: 1.5rem;
+	letter-spacing: 0.025rem;
+
 	@media (max-width: 424px) {
-		font-size: 20px;
+		font-size: 14px;
 	}
 `;
 
 const BoxContact = styled.div `
 	display: flex;
 	flex-direction: column;
-	margin-left: 2.5rem;
+	margin-left: -1.5rem;
 	margin-top: -0.5rem;
 `;
 
 const TextContact = styled.p `
 	color: #FFFFFF;
 	width: 100%;
+	font-size: 1.1rem;
 	line-height: 1.5em;
+	letter-spacing: 0.025rem;
+
 	@media (max-width: 424px) {
-		font-size: 20px;
+		font-size: 14px;
 		width: 80%;
+		margin-right: 1rem;
 	}
 `;
 
@@ -137,15 +157,24 @@ const BoxIcons = styled.div `
 	justify-content: space-between;
 	width: 69%;
 	margin-top: 1.8rem;
+	margin-left: 1rem;
+
 	@media (max-width: 424px) {
 		width: 100%;
-    	padding: 4rem;
+		padding: 4rem;
 	}
 `;
 
 const Icon = styled.img `
-	width: 2.5rem;
+	width: 2.3rem;
 	cursor: pointer;
+	background: transparent 0% 0% no-repeat;
+	
+	:hover {
+		border-radius: ${props => props.iconInst && '25%'};
+		background: #0F2B92 0% 0% no-repeat;
+		opacity: 1;
+	}
 `;
 
 const Logo = styled.img `
@@ -160,19 +189,19 @@ const Logo = styled.img `
 const LineDivision = styled.div `
 	background-color: #0F2B92;
 	height: 2px;
-	width: 76%;
+	width: 79%;
 	margin-top: -4rem;
 `;
 
 const Text = styled.p `
 	color: #FFAC2D;
-	font-size: 14px;
-	padding: 1.5rem;
+	font-size: 1.1rem;
+	padding: 1rem;
 `;
 
 const Footer = () => {
 	return (
-		<ContainerFooter>
+		<ContainerFooter  id="footer">
 		<ContainerDivision>
 				<LineOrange></LineOrange>
 					<BoxDivision>
@@ -196,26 +225,26 @@ const Footer = () => {
 				<div>
 					<ContainerTextIcons>
 						<BoxText>
-							<TextLink href="#" target="_blank" rel="noreferrer">Media Kit</TextLink>
-							<TextLink href="#" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
-							<TextLink href="/faq" target="_blank" rel="noreferrer">Perguntas Frequentes</TextLink>
+							<TextLink href="https://medium.com/@olavainaweb" target="_blank" rel="noreferrer">Media Kit</TextLink>
+							<TextLink href="https://www.deeptech.network/" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
+							<TextLink href="/faq" rel="noreferrer">Perguntas Frequentes</TextLink>
 						</BoxText>
 						<BoxContact>
 							<TextContact>
-								contato@emailvnw.com.br 
+								ola@vainaweb.com.br
 								+55 21 93456-7890
 							</TextContact>
 						</BoxContact>
 					</ContainerTextIcons>
 					<BoxIcons>
 							<a href="https://www.facebook.com/vainaweb" target="_blank" rel="noreferrer"><Icon src={logoFacebook} alt="Logo Facebook"/></a>
-							<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noreferrer"><Icon src={logoInstagram} alt="Logo Instagram"/></a>
-							<a href="#" target="_blank" rel="noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
+							<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noreferrer"><Icon iconInst src={logoInstagram} alt="Logo Instagram"/></a>
+							<a href="https://medium.com/@olavainaweb" target="_blank" rel="noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
 							<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank" rel="noreferrer"><Icon src={logoLinkedin} alt="Logo Linkedin"/></a>
 							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noreferrer"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
 					</BoxIcons>
 				</div>
-					<a href="/" target="_blank" rel="noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
+					<a href="/" rel="noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
 			</Box> 
 				<LineDivision></LineDivision>
 				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>

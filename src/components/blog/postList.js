@@ -1,6 +1,5 @@
 
 import React from "react";
-import { graphql } from "gatsby";
 import styled from 'styled-components';
 
 //Components
@@ -18,7 +17,7 @@ const Container = styled.div`
 const PostList = ({ data }) => {
   return (
     <Container>
-      {data.map(item => <Card data={item} slider />)}
+      {data.map(item => <Card key={item.id} data={item} slider />)}
     </Container>
   )
 }
