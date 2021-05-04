@@ -147,6 +147,7 @@ const Background = styled.div`
   background: url(${BackgroundImage}); 
   background-repeat: no-repeat; 
   background-size: 100%;
+  margin-top: 6rem;
 `;
 
 const ContainerPartners = styled.div`
