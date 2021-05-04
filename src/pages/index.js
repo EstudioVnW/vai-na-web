@@ -53,7 +53,7 @@ const BackgroundHeader  = styled.div`
   height: 100vh;
   background: url(${BackHeader}); 
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 105% 100%;
 `;
 
 const ContentHeader = styled.section`
@@ -257,7 +257,7 @@ const Home = () => {
 
   return (
     <Layouts home>
-    {/* <BackgroundHeader /> */}
+    <BackgroundHeader />
       <ContentHeader>
         <ImageLogo src={ImageLogoVnW} alt='Logotipo' />
         <ContentCard>
