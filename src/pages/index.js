@@ -66,6 +66,12 @@ const ButtonScroll = styled.button`
   margin-bottom: 10rem;
 `;
 
+const ContainerNetwork = styled.div`
+  margin-top: -3rem;
+  width: 100%;
+  display: flex;
+`;
+
 const Image = styled.img`
   width: 180px;
   position: absolute;
@@ -119,6 +125,10 @@ const Background = styled.img`
   opacity: 0.3;
 `;
 
+const ContainerPartners = styled.div`
+  position: relative;
+`;
+
 const BoxPartners = styled.div`
   width: 10.5rem;
   height: 3.8rem;
@@ -130,7 +140,7 @@ const BoxPartners = styled.div`
   align-items: center;
   justify-content: center;
   top: ${props => props.top};
-  left: ${props => props.left};
+  right: ${props => props.right};
   z-index: 1;
 `;
 
@@ -139,8 +149,8 @@ const ImagePartners = styled.img`
 `;
 
 const CirclePartners = styled.div`
-  width: 6rem;
-  height: 6rem;
+  width: 5.5rem;
+  height: 5.5rem;
   background-color: ${props => props.color};
   box-shadow:  ${props => props.shadow};
   border-radius: 50%;
@@ -149,7 +159,7 @@ const CirclePartners = styled.div`
   align-items: center;
   justify-content: center;
   top: ${props => props.top};
-  left: ${props => props.left};
+  right: ${props => props.right};
   z-index: 1;
 `;
 
@@ -163,7 +173,7 @@ const LinePartners = styled.div`
   background-color: #FF611E;
   height: 1px;
   top: ${props => props.top};
-  left: ${props => props.left};
+  right: ${props => props.right};
   transform: ${props => props.transform};
 `;
 
@@ -220,33 +230,33 @@ const Home = () => {
   const PartnerNetworks = () => {
     return (
       <div>
-        <BoxPartners top='49.6rem' left='39rem'></BoxPartners>
-        <LinePartners transform='rotate(60deg)' width='7rem' top='56rem' left='42rem' />
-        <BoxPartners top='52rem' left='54rem'></BoxPartners>
-        <LinePartners transform='rotate(145deg)' width='9rem' top='58rem' left='48rem' />
-        <BoxPartners top='60rem' left='57rem'></BoxPartners>
-        <LinePartners transform='rotate(190deg)' width='9rem' top='61rem' left='48rem' />
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='57rem' left='45rem'>
-          <Logo width='50%' src={ImageLogoVnW} alt='Logo Vai na Web' />
+        <BoxPartners top='0.6rem' right='33rem'></BoxPartners>
+        <LinePartners transform='rotate(60deg)' width='7rem' top='7rem' right='32.5rem' />
+        <BoxPartners top='2.5rem' right='17rem'></BoxPartners>
+        <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' right='23rem' />
+        <BoxPartners top='10rem' right='15rem'></BoxPartners>
+        <LinePartners transform='rotate(186deg)' width='9rem' top='11.8rem' right='23rem' />
+        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='8rem' right='32rem'>
+          <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(145deg)' width='9rem' top='62.4rem' left='40rem' />
-        <CirclePartners color='#FFFFFF' shadow='0px 0px 22px #00000029' top='62rem' left='38rem'>
+        <LinePartners transform='rotate(145deg)' width='8rem' top='13rem' right='33rem' />
+        <CirclePartners color='#FFFFFF' shadow='0px 0px 22px #00000029' top='13rem' right='38rem'>
           <Logo width='50%' src={ImageRocket} alt='Foguete' />
         </CirclePartners>
-        <LinePartners transform='rotate(40deg)' width='9rem' top='66rem' left='38rem' />
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='67rem' left='45rem'>
+        <LinePartners transform='rotate(40deg)' width='9rem' top='17.5rem' right='34rem' />
+        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='18rem' right='32rem'>
           <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(130deg)' width='9rem' top='73rem' left='41rem' />
-        <BoxPartners top='69rem' left='60rem'>
+        <LinePartners transform='rotate(130deg)' width='9rem' top='26rem' right='33rem' />
+        <BoxPartners top='19rem' right='13rem'>
           <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
         </BoxPartners>
-        <LinePartners transform='rotate(40deg)' width='11rem' top='74.5rem' left='47rem' />
-        <BoxPartners top='76rem' left='36.5rem'>
+        <LinePartners transform='rotate(40deg)' width='11rem' top='26rem' right='23rem' />
+        <BoxPartners top='28rem' right='20rem'>
           <ImagePartners src={ImageVotorantim} alt='Instituto Votorantim' />
         </BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='13rem' top='70rem' left='47rem' />
-        <BoxPartners top='77rem' left='52.5rem'>
+        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' right='20rem' />
+        <BoxPartners top='27rem' right='34rem'>
           <ImagePartners src={ImageProadi} alt='Proadi SUS' />
         </BoxPartners>
       </div>
@@ -264,18 +274,22 @@ const Home = () => {
         </TextPresentation>
         <ButtonScroll onClick={scrollDow}><ArrowScroll src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
       </ContentHeader>
-      <Background src={BackgroundImage} alt='Background Route Rocket' />
-      <div>
-        <PageTitle data={isTitle} isPage='isHome' />
-        <NetworkText>
-          A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
-          parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
-          <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
-          Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
-          pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
-        </NetworkText>
-      </div>
-      {PartnerNetworks()}
+      {/* <Background src={BackgroundImage} alt='Background Route Rocket' /> */}
+      <ContainerNetwork>
+        <div>
+          <PageTitle data={isTitle} isPage='isHome' />
+          <NetworkText>
+            A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
+            parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
+            <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
+            Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
+            pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
+          </NetworkText>
+        </div>
+        <ContainerPartners>
+          {PartnerNetworks()}
+        </ContainerPartners>
+      </ContainerNetwork>
     </Layouts>
   )
 }
