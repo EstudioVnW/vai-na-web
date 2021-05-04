@@ -255,7 +255,7 @@ const Home = () => {
         <BoxPartners top='28rem' left='20rem' >
           <ImagePartners src={ImageVotorantim} alt='Instituto Votorantim' />
         </BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' left='18rem'/>
+        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' left='16rem'/>
         <BoxPartners top='27rem' left='5rem'>
           <ImagePartners src={ImageProadi} alt='Proadi SUS' />
         </BoxPartners>

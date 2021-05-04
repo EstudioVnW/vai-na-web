@@ -22,7 +22,7 @@
   const Layouts = ({ isPage, children, home }) => {
     return (
       <Container home={home} backgroundSize={isPage === 'postBlog' ? '100% 30%' : '100% 50%'}>
-        <Header />
+        <Header home={home} />
         <Main>
           {children}
         </Main>
