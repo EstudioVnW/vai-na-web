@@ -6,15 +6,14 @@ const Container = styled.section`
 	background-color: #FED5B2;
 	box-shadow: 0px 0px 30px #0F2B9280;
 	border-radius: 20px;
-	width: 53%;
+	width: 35rem;
 	max-width: 600px;
 	height: 13rem;
-	/* margin-left: 7rem; */
-	/* margin-left: 10%; */
+	margin-left: 6rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-	padding: 4px 0 14px;
+	padding: 4px 0 18px;
 `;
 
 const BoxTop = styled.div `
@@ -53,10 +52,11 @@ const LineOrange = styled.div `
 
 const TextMain = styled.h2 `
 	color: #272727;
-	font-size: 1.8em;
+	font-size: 2em;
 	font-weight: 800;
 	line-height: 2.4rem;
 	margin-left: 1.5rem;
+	width: 90%;
 `;
 
 const Card = () => {
