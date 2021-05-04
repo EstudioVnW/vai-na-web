@@ -8,9 +8,9 @@ import logo from '../../images/icons/logo-VNW.svg';
 // styles
 const Container = styled.header`
   display: flex;
-	justify-content:  ${props => props.home ? 'space-between' : 'space-between'};
+	justify-content: space-between;
 	width: 100%;
-	height: 12rem;
+	height: ${props => props.home ? '11rem' : '12rem'};
 
 	nav{
 		font-family: "usual", sans-serif;
@@ -20,10 +20,10 @@ const Container = styled.header`
 `;
 
 const Image = styled.img`
-	display: ${props => props.home};
-  margin: 3.125rem 0 0 6.438rem;
-  width: 6rem;
-  position: fixed; 
+	display: ${props => props.home && 'none'};
+  margin: ${props => props.home ? '10rem 0 0 20rem' : '3.125rem 0 0 6.438rem'};
+  width: ${props => props.home ? '10rem' : '6rem'};
+  position: ${props => !props.home && 'fixed'};
 `;
 
 const Ul = styled.ul`

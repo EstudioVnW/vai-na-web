@@ -6,9 +6,11 @@ const Container = styled.section`
 	background-color: #FED5B2;
 	box-shadow: 0px 0px 30px #0F2B9280;
 	border-radius: 20px;
-	width: 38%;
-    height: 13rem;
-	margin-left: 7rem;
+	width: 53%;
+	max-width: 600px;
+	height: 13rem;
+	/* margin-left: 7rem; */
+	/* margin-left: 10%; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
@@ -18,7 +20,7 @@ const Container = styled.section`
 const BoxTop = styled.div `
 	display: flex;
 	width: 70%;
-    align-items: center;
+	align-items: center;
 	justify-content: space-between;
 	margin-left: 1.1rem;
 `;
@@ -52,7 +54,7 @@ const LineOrange = styled.div `
 const TextMain = styled.h2 `
 	color: #272727;
 	font-size: 1.8em;
-    font-weight: 800;
+	font-weight: 800;
 	line-height: 2.4rem;
 	margin-left: 1.5rem;
 `;
