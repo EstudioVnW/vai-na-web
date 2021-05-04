@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from 'styled-components';
 import './index.css';
+// import scrollTo from 'gatsby-plugin-smoothscroll';
+
 
 //Components
 import Layouts from '../components/Layouts';
@@ -20,6 +22,7 @@ import Gabriel from '../images/images/peopleVNW/Gabriel.png';
 import Igor from '../images/images/peopleVNW/igor.png';
 import Jeziel from '../images/images/peopleVNW/Jeziel.png';
 import Kelvin from '../images/images/peopleVNW/Kelvin.png';
+import Maicon from '../images/images/peopleVNW/Maicon.png';
 import Luan from '../images/images/peopleVNW/Luan.png';
 import Mari from '../images/images/peopleVNW/Mari.png';
 import Pamela from '../images/images/peopleVNW/Pamela.png';
@@ -49,6 +52,7 @@ const ContentHeader = styled.div`
 
 const ContentCard = styled.div`
   position: relative;
+  z-index: 1;
 `;
 
 const TextPresentation = styled.p`
@@ -68,16 +72,19 @@ const ButtonScroll = styled.button`
   border: none;
   background: transparent;
   margin-bottom: 10rem;
+  /* position: ${props => props.isClicked && 'fixed'};
+  top: 0; */
 `;
 
 const ContainerNetwork = styled.div`
-  margin-top: -3rem;
+  /* padding-top: 13rem; */
+  height: 100vh;
   width: 100%;
   display: flex;
 `;
 
 const Image = styled.img`
-  width: 160px;
+  width: 180px;
   position: absolute;
   top: ${props => props.top};
   left: ${props => props.left};
@@ -98,6 +105,7 @@ const Line = styled.span`
   top: ${props => props.top};
   left: ${props => props.left};
   transform: ${props => props.rotate};
+  z-index: ${props => props.zIndex && '-1'};
 
   /* ${({ side, top, bottom, right, left, width, widthOptions }) => side && `
     top: calc(${top}px - 4.75rem);
@@ -201,175 +209,100 @@ const Canvas = styled.canvas`
 `;
 
 const Home = () => {
-	// const [width, setWidth] = useState(0);
-	// const [height, setHeight] = useState(0);
-  const selectRef = useRef();
+	// const [scrollTo, setScrollTo] = useState('content-1');
+	// const [lastContainer] = useState('content-3');
+	// const [isClicked, setIsClicked] = useState(undefined);
+  // let methodId = null;
 
+  // const handleScroll = (ev) => {
+  //   if(ev.path[1].scrollY || ev.path[1].scrollY === 0){
+  //     console.log('------', ev.path[1].scrollY)
+  //     if(ev.path[1].scrollY <= 673){
+  //       setIsClicked(false);
+  //       // if(isScrollHeaderRef.current){
+  //       //   setIsScrollHeader(false);
+  //       //   isScrollHeaderRef.current = false;
+  //       // }
+  //     }
 
-  // const getPosition = () => {
-  //   console.log('-----selectRef', selectRef.current.alt === 'Elizete')
-  //   // return selectRef.current && selectRef.current.getBoundingClientRect();
-  // }
+  //     // if(ev.path[1].scrollY > 100){
+  //     //   if(!isScrollHeaderRef.current){
+  //     //     setIsScrollHeader(true);
+  //     //     isScrollHeaderRef.current = true;
+  //     //   }
+  //     // }
 
-  const handleLines = () => {
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
-    ctx.moveTo(0, 0);
-    ctx.lineTo(200, 30);
-    ctx.stroke();
-  }
-
-
-  // const updateMedia = () => {
-  //   setWidth(window.innerWidth);
-  //   setHeight(window.innerHeight);
-  // }
-  
-
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     updateMedia()
-  //     window.addEventListener('resize', updateMedia);
-  //     return () => window.removeEventListener('resize', updateMedia);
+  //     // if (ev.path[1].scrollY <= 350) {
+  //     //   if(!isScrollTopFooter.current){
+  //     //     setIsScrollTopFooter(true);
+  //     //     isScrollTopFooterRef.current = true;
+  //     //   }
+  //     // } else {
+  //     //   if(isScrollTopFooterRef.current){
+  //     //     setIsScrollTopFooter(false);
+  //     //     isScrollTopFooterRef.current = false;
+  //     //   }
+  //     // }
+    
   //   }
-  // }, []);
+  // }
 
-  // useEffect(() => {
-  //   handleLines();
-  // }, []);
+//   const debounce = (method, delay) => {
+//     clearTimeout(methodId);
+//     methodId = setTimeout(function(){
+//         method();
+//     }, delay);
+// }
+
+//   useEffect(() => {
+//     window.addEventListener('scroll', ev => debounce(() => handleScroll(ev), 100));
+
+//     return () => {
+//       window.addEventListener('scroll');
+//     }
+//   // eslint-disable-next-line react-hooks/exhaustive-deps
+//   }, [])
+
 
   const isTitle = { typePage: 'Rede', title: 'A força que <br>nos impulsiona' };
-  const imgList = [
-    {
-      img: Tati,
-      alt: 'Tati',
-      top: 40,
-      left: 0,
-    },
-    {
-      img: Luan,
-      alt: 'Luan',
-      top: 23,
-      left: 4,
-    },
-    {
-      img: Elizete,
-      alt: 'Elizete',
-      top: 1,
-      left: 0,
-    },
-    {
-      img: Mari,
-      alt: 'Mari',
-      top: 5,
-      left: 30,
-    },
-    {
-      img: Pamela,
-      ialtg: 'Pamela',
-      top: 18,
-      left: 39,
-    },
-    {
-      img: Michael,
-      alt: 'Michael',
-      top: 5,
-      left: 55,
-    },
-    {
-      img: Amanda,
-      alt: 'Amanda',
-      top: 20,
-      left: 63,
+  // const handleScrollDow = () => {
+  //   const currentContent = scrollTo.split('-')[1];
+  //   const convertNumber = parseInt(currentContent);
+  //   const nextContent = `content-${convertNumber+1}`;
+  //   // .substr(0, 10)
+  //   //   .split('-')
+  //   //   .reverse()
+  //   //   .join('/');
+  //   // const next = document.getElementById(`imgtest${i + 1}`);
+  //   //  scrollTo('content-03')
+  //   console.log('oiiiii', currentContent);
+  //   console.log('nextContent', nextContent);
+    
+  //   if(lastContainer !== scrollTo) {
+  //     document.getElementById(scrollTo).scrollIntoView();
+  //     setScrollTo(nextContent);
+  //   }
 
-    },
-    {
-      img: Matheus,
-      alt: 'Matheus',
-      top: 15,
-      left: 75,
-
-    },
-    {
-      img: Gabriel,
-      alt: 'Gabriel',
-      top: 28,
-      left: 90,
-    },
-    {
-      img: Jeziel,
-      alt: 'Jeziel',
-      top: 38,
-      left: 70,
-    },
-    {
-      img: Kelvin,
-      alt: 'Kelvin',
-      top: 55,
-      left: 80,
-
-    },
-    {
-      img: Aluna,
-      alt: 'Aluna',
-      top: 75,
-      left: 90,
-    },
-    {
-      img: Aluna,
-      alt: 'Aluna',
-      top: 70,
-      left: 70,
-    },
-    {
-      img: Pedro,
-      alt: 'Pedro',
-      top: 50,
-      left: 60,
-    },
-    {
-      img: Rhuan,
-      alt: 'Rhuan',
-      top: 80,
-      left: 55,
-    },
-    {
-      img: Pri,
-      alt: 'Pri',
-      top: 65,
-      left: 45,
-    },
-    {
-      img: Raissa,
-      alt: 'Raissa',
-      top: 80,
-      left: 30,
-    },
-  ];
-
-  const ImageNetworkTEst = () => {
-    return imgList.map((item, index) => <Image src={item.img} alt={item.alt} top={item.top} left={item.left} right={item.right} id={`imgtest${index}`} />)
-  }
+  //   setIsClicked(true);
+  // }
 
   const ImageNetwork = () => {
     return (
       <>
         <Line width='15rem' top='12rem' rotate='rotate(80deg)' left='-1rem' />
-        <Line width='5rem' top='33rem' rotate='rotate(20deg)' left='-1rem' />
         <Line width='8rem' top='8rem' rotate='rotate(-23deg)' left='-3rem' />
-        <Line width='5rem' top='34rem' rotate='rotate(160deg)' left='5rem' />
 
         <Image  src={Elizete} alt="Elizete" top='1%' />
         <Line width='30%' top='7rem' rotate='rotate(3deg)' left='7rem' />
 
         <Image src={Mari} alt="Mari" top='5%' left='33%' />
-        <Line width='10%' top='15rem' rotate='rotate(20deg)' left='40%' />
+        <Line width='10%' top='15rem' rotate='rotate(50deg)' left='38%' />
 
-        <Image src={Pamela} alt="Pamela" top='18%' left='39%' />
-        <Line width='15%' top='10rem' rotate='rotate(-20deg)' left='50%' />
+        <Image src={Pamela} alt="Pamela" top='18%' left='38%' />
+        <Line width='15%' top='13rem' rotate='rotate(-38deg)' left='62rem' />
 
-        <Image src={Michael} alt="Michael" top='.5%' left='52%' />
-        <Line width='12%' top='15rem' rotate='rotate(75deg)' left='59%' />
+        <Image src={Michael} alt="Michael" top='.5%' left='79rem' />
+        <Line width='13%' top='13rem' rotate='rotate(45deg)' left='54%' />
 
         <Image src={Amanda} alt="Amanda" top='20%' left='63%' />
         <Line width='12%' top='30rem' rotate='rotate(50deg)' left='64%' />
@@ -378,23 +311,22 @@ const Home = () => {
         <Line width='12%' top='21rem' rotate='rotate(-15deg)' left='65%' />
 
         <Image src={Matheus} alt="Matheus" top='15%' left='75%' />
-        <Line width='15%' top='33rem' rotate='rotate(-20deg)' left='75%' />
-        <Line width='21%' top='35rem' rotate='rotate(77deg)' left='71%' />
+        <Line width='21%' top='32rem' rotate='rotate(-18deg)' left='74%' />
+        <Line width='20%' top='23rem' rotate='rotate(30deg)' left='77%' />
 
         <Image src={Gabriel} alt="Gabriel" top='28%' right='2%' />
 
-        <Line width='12%' top='22rem' rotate='rotate(40deg)' left='77%' />
         {/* <Line width='12%' top='30rem' rotate='rotate(50deg)' left='60%' /> */}
 
+        <Line width='25%' top='35rem' rotate='rotate(77deg)' left='71%' />
         <Image src={Kelvin} alt="Kelvin" top='55%' left='80%' />
+
         <Image src={Aluna} alt="Aluna" top='75%' right='0' />
-        <Image src={Cris} alt="Cris" top='70%' left='70%' />
+        <Image src={Maicon} alt="Maicon" top='70%' left='70%' />
         <Image src={Pedro} alt="Pedro" top='50%' left='60%' />
         <Image src={Rhuan} alt="Rhuan" top='80%' left='55%' />
         <Image src={Pri} alt="Pri" top='65%' left='45%' />
         <Image src={Raissa} alt="Raissa" top='80%' left='30%' />
-        
-        {/* <Image src={Tati} alt="Tati" top='40%' /> */}
       </>
     )
   }
@@ -438,15 +370,15 @@ const Home = () => {
 
   return (
     <Layouts home>
-      {/* <Canvas id="myCanvas" > */}
-      {/* </Canvas> */}
-      {ImageNetwork()}
+      {/* {ImageNetwork()} */}
       <ContentHeader>
         <ImageLogo src={logo} alt='Logotipo' />
         <ContentCard>
-          <Image src={Luan} alt="Luan" top='-6rem' left='-6rem' />
+          {/* <Image src={Luan} alt="Luan" top='-6rem' left='-6rem' /> */}
           <CardHome />
-          <Image src={Tati} alt="Tati" top='60%' left='-9rem'/>
+          {/* <Image src={Tati} alt="Tati" top='60%' left='-9rem'/>
+          <Line width='5rem' top='13rem' rotate='rotate(20deg)' left='-10rem'/>
+          <Line width='5rem' top='13rem' rotate='rotate(160deg)' left='-3rem' zIndex/> */}
         </ContentCard>
         <TextPresentation>
           Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as
@@ -455,7 +387,7 @@ const Home = () => {
         <ButtonScroll onClick={scrollDow}><img src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
       </ContentHeader>
       {/* <Background src={BackgroundImage} alt='Background Route Rocket' /> */}
-      <ContainerNetwork>
+      <ContainerNetwork id='content-1'>
         <div>
           <PageTitle data={isTitle} isPage='isHome' />
           <NetworkText>
