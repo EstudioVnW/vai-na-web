@@ -9,7 +9,6 @@ const Container = styled.section`
 	width: 35rem;
 	max-width: 600px;
 	height: 13rem;
-	margin-left: 6rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
