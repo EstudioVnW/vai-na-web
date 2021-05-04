@@ -59,9 +59,7 @@ const BackgroundHeader  = styled.div`
 const ContentHeader = styled.section`
   padding-left: 13%;
   height: 100vh;
-  /* background: url(${BackgroundHeader}); 
-  background-repeat: no-repeat; 
-  background-size: 100%; */
+  margin-top: -5rem;
 `;
 
 const DottedLineBackground = styled.div`
@@ -77,7 +75,7 @@ const ContentCard = styled.div`
 `;
 
 const TextPresentation = styled.p`
-  padding: 1.8rem 0 5rem 2rem;
+  padding: 1.8rem 0 2.4rem 2rem;
   width: 50%;
   max-width: 360px;
   color: #FDE7A9;
@@ -88,7 +86,6 @@ const TextPresentation = styled.p`
 
 const ArrowScroll = styled.img`
   margin-left: 9rem;
-  margin-top: 4rem;
   width: 12%;
 `;
 
@@ -162,6 +159,7 @@ const Background = styled.div`
   background: url(${BackgroundImage}); 
   background-repeat: no-repeat; 
   background-size: 100%;
+  margin-top: 6rem;
 `;
 
 const ContainerPartners = styled.div`
