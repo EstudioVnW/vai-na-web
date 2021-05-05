@@ -1,26 +1,29 @@
 import React from "react";
 import styled from 'styled-components';
 
-//Images
-import agenda from '../../images/images/agenda.svg';
-
 // styles
 const Container = styled.div`
 	display: flex;
+	flex-direction:  ${props => props.slider && 'column'};
+	padding-bottom: ${props => props.slider && '56.2px'};
+	width: ${props => props.slider && '30%'};
 `;
 
 const Image = styled.img`
+	width: ${props => props.slider ? '100%' : '693px'};
+
 `;
 
 const Content = styled.div`
-	padding-left: 2.813rem;
-	width: 30%;
+	padding-left: ${props => !props.slider && '2.813rem'};
+	width: ${props => !props.slider && '473px'};
 `;
 
 const ContentDate = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding-top: ${props => props.slider && '24.64px'};
 `;
 
 const Date = styled.p`
@@ -38,12 +41,11 @@ const Status = styled.p`
 `;
 
 const Title = styled.h1`
-	padding: 1.25rem 0;
-	font-size: 2.75rem;
+	padding: ${props => props.slider ? '8px 0 11px 0' : '1.25rem 0'};
+	font-size:  ${props => props.slider ? '30px' : '2.75rem'};
 	font-weight: 700;
 	color: #272727;
 	font-family:"usual";
-
 `;
 
 const Description = styled.p`
@@ -52,20 +54,19 @@ const Description = styled.p`
 	line-height: 1.75rem;
 `;
 
-const PostList = () => {
+const CardList = ({ data, slider }) => {
 	return (
-		<Container>
-			<Image src={agenda} alt='Agenda' />
-			<Content>
-				<ContentDate>
-					<Date>23 de novembro - 2020</Date>
-					<Status>prêmio</Status>
+		<Container slider={slider}>
+			<Content slider={slider}>
+				<ContentDate slider={slider}>
+					<Date>{data.date}</Date> 
+					<Status>{data.status}</Status>
 				</ContentDate>
-				<Title>Vai na Web é finalista em prêmio dedicado às mulheres da tecnologia global</Title>
-				<Description>Women in Tech, que celebra mulheres e iniciativas notáveis na economia digital, vai acontecer dia 2 de Dezembro em Lisboa</Description>
+				<Title slider={slider}>{data.title}</Title>
+				<Description>{data.description}</Description>
 			</Content>
 		</Container>
 	)
 }
 
-export default PostList;
+export default CardList;
