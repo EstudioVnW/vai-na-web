@@ -39,7 +39,7 @@ import ImageProadi from '../images/images/Group10470.png';
 import ImageVotorantim from '../images/images/Instituto-Votorantim-2.png';
 
 var scrollDow = function () {
-  window.scrollTo(0, 750);
+  window.scrollTo(0, 740);
 };
 
 // styles
