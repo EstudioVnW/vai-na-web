@@ -16,6 +16,7 @@ const Container = styled.header`
 		font-family: "usual", sans-serif;
 		position: fixed;
 		right: 0;
+		z-index: 1;
 	}  
 `;
 
