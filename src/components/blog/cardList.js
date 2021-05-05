@@ -1,9 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 
-//Images
-import agenda from '../../images/images/agenda.svg';
-
 // styles
 const Container = styled.div`
 	display: flex;
@@ -57,10 +54,9 @@ const Description = styled.p`
 	line-height: 1.75rem;
 `;
 
-const PostList = ({ data, slider }) => {
+const CardList = ({ data, slider }) => {
 	return (
 		<Container slider={slider}>
-			<Image src={agenda} alt='Agenda' slider={slider}/>
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
 					<Date>{data.date}</Date> 
@@ -73,4 +69,4 @@ const PostList = ({ data, slider }) => {
 	)
 }
 
-export default PostList;
+export default CardList;

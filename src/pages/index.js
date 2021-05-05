@@ -11,6 +11,7 @@ import CardHome from '../components/home/card';
 //Imagens
 import BackgroundImage from '../images/images/Path7680.svg';
 import ScrollArrow from '../images/icons/Group52.svg';
+import BackHeader from '../images/images/peopleNetwork.png';
 // import Aluna from '../images/images/peopleVNW/Aluna.png';
 // import Amanda from '../images/images/peopleVNW/Amanda.png';
 // import Cris from '../images/images/peopleVNW/cris.png';
@@ -33,18 +34,30 @@ import ScrollArrow from '../images/icons/Group52.svg';
 // import Tati from '../images/images/peopleVNW/Tati.png';
 import ImageRocket from '../images/images/Group7294.svg';
 import ImageLogoVnW from '../images/icons/logo-VNW.svg';
-import ImageEstudioVnW from '../images/images/Group6536.svg';
-import ImageSirio from '../images/images/Group10469.png';
-import ImageProadi from '../images/images/Group10470.png';
-import ImageVotorantim from '../images/images/Instituto-Votorantim-2.png';
+import ImageEstudioVnW from '../images/images/logoEstudio.svg';
+import ImageSirio from '../images/images/hospitalSirio.png';
+import ImageProadi from '../images/images/proadiSus.png';
+import ImageVotorantim from '../images/images/Instituto-Votorantim.png';
+import ImagePetronect from '../images/images/Petronect.png';
 
 var scrollDow = function () {
   window.scrollTo(0, 740);
 };
 
 // styles
+const BackgroundHeader  = styled.div`
+  position: absolute;
+  top: 0;
+  left: -2rem;
+  width: 100vw;
+  height: 100vh;
+  background: url(${BackHeader}); 
+  background-repeat: no-repeat;
+  background-size: 105% 100%;
+`;
+
 const ContentHeader = styled.section`
-  margin-left: 9rem;
+  padding-left: 13%;
   height: 100vh;
   margin-top: -5rem;
 `;
@@ -86,7 +99,6 @@ const ButtonScroll = styled.button`
 `;
 
 const ContainerNetwork = styled.div`
-  /* padding-top: 13rem; */
   height: 100vh;
   width: 100%;
   display: flex;
@@ -170,7 +182,7 @@ const BoxPartners = styled.div`
 `;
 
 const ImagePartners = styled.img`
-  width: 85%;
+  width: ${props => props.width ? '60%' : '85%'};
 `;
 
 const CirclePartners = styled.div`
@@ -208,12 +220,14 @@ const Home = () => {
   const PartnerNetworks = () => {
     return (
       <div>
-        <BoxPartners top='0.6rem' left='6.5rem'></BoxPartners>
+        {/* <BoxPartners top='0.6rem' left='6.5rem'></BoxPartners>
         <LinePartners transform='rotate(60deg)' width='7rem' top='7rem' left='10rem'/>
         <BoxPartners top='2.5rem' left='21rem'></BoxPartners>
-        <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' left='16rem'/>
-        <BoxPartners top='10rem' left='25rem'></BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='9rem' top='11.8rem' left='17rem'/>
+        <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' left='16rem'/> */}
+        <BoxPartners top='3rem' left='25rem'>
+          <ImagePartners width src={ImagePetronect} alt='Petronect' />
+        </BoxPartners>
+        <LinePartners transform='rotate(150deg)' width='9rem' top='8rem' left='17rem'/>
         <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='8rem' left='13rem'>
           <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
         </CirclePartners>
@@ -243,6 +257,7 @@ const Home = () => {
 
   return (
     <Layouts home>
+    <BackgroundHeader />
       <ContentHeader>
         <ImageLogo src={ImageLogoVnW} alt='Logotipo' />
         <ContentCard>
