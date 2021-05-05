@@ -19,7 +19,6 @@ const ContainerMain = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
 
   p {
     font-weight: 400;
@@ -29,6 +28,19 @@ const ContainerMain = styled.div `
     margin-top: 1.8rem;
     color: #2F2F2F;
   };
+`;
+
+const Image = styled.img`
+margin-bottom: 1rem;
+  width: 60%;
+  height: 30rem;
+  border-radius: 20px;
+  border: 2px solid #00145D;
+  object-fit: fill;
+
+  @media (max-width: 1024px) {
+		width: 100%;
+	}
 `;
 
 const TextDescription = styled.article `
@@ -77,6 +89,10 @@ const TextDescription = styled.article `
     line-height: 2rem;
     margin-top: 1.8rem;
     color: #2F2F2F;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   };
 
   ul {
@@ -118,6 +134,7 @@ export default function PostBlog({ data }) {
       <PageTitle data={isTitle} isPage='postBlog'/>
       <Container>
         <ContainerMain>
+          <Image src={data.item.cover.url || ''} alt='Foto principal' />
           <TextDescription dangerouslySetInnerHTML={{ __html: data.item.content.html }}></TextDescription>		
         </ContainerMain>
         <CardAuthor author={data.item.authors[0]}/> 
