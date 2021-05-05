@@ -54,7 +54,7 @@ const SubTitle = styled.p `
 	font-weight: 100;
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
 	max-width: 970px;
-	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 5.148rem 4.5rem' : '0 0 5.148rem 4.5rem'};
+	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 3.148rem 4.5rem' : '0 0 5.148rem 4.5rem'};
 `;
 
 const formatMonth = (month) => {
