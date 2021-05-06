@@ -162,15 +162,16 @@ const formatDate = (date) => {
 
 const Card = ({ data, slider }) => {
 	const slug = slugify(`${data.title.toLowerCase()}-${data.id.split(":")[1]}`)
+	console.log('oi', data)
 	return (
 		<Container slider={slider}>
 			<Figure slider={slider}>
-				<Image src={data.cover.url || ''} alt={data.title} slider={slider} />
+				{/* <Image src={data.cover.url || ''} alt={data.title} slider={slider} /> */}
 			</Figure>
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
 					{formatDate(data.createdAt)}
-					<Status>{data.tags[0].name  || ''}</Status>
+					{/* <Status>{data.tags[0].name  || ''}</Status> */}
 				</ContentDate>
 				<Title to={`/blog/${slug}`} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title  || ''}</Title>
 				<Description>{data.excerpt}</Description>
