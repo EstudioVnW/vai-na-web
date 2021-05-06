@@ -41,7 +41,7 @@ import ImageVotorantim from '../images/images/Instituto-Votorantim.png';
 import ImagePetronect from '../images/images/Petronect.png';
 
 var scrollDow = function () {
-  window.scrollTo(0, 750);
+  window.scrollTo(0, 740);
 };
 
 // styles
@@ -102,6 +102,10 @@ const ContainerNetwork = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
+  margin-top: 2rem;
+  @media (min-width: 1920px) {
+    margin-top: 15rem;
+	}
 `;
 
 // const Image = styled.img`
@@ -137,6 +141,12 @@ const NetworkText = styled.p`
   margin-left: 11.4rem;
   margin-top: -1rem;
   margin-bottom: 5rem;
+  @media (min-width: 1920px) {
+    margin-left: 16.4rem;
+    line-height: 2.5rem;
+    font-size: 22px;
+    width: 27.5rem;
+	}
 `;
 
 const Bold = styled.b`
@@ -150,7 +160,7 @@ const BoldBackground = styled.b`
   opacity: 1;
 `;
 
-const Background = styled.div`
+/* const Background = styled.div`
   width: 100%;
   position: absolute;
   top: 42rem;
@@ -160,10 +170,13 @@ const Background = styled.div`
   background-repeat: no-repeat; 
   background-size: 100%;
   margin-top: 6rem;
-`;
+`; */
 
 const ContainerPartners = styled.div`
   position: relative;
+  @media (min-width: 1920px) {
+		margin-left: 15rem;
+	}
 `;
 
 const BoxPartners = styled.div`
@@ -179,6 +192,12 @@ const BoxPartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   z-index: 1;
+  @media (min-width: 1920px) {
+    width: 13.5rem;
+    height: 5.5rem;
+    top: ${props => props.Mtop};
+    left: ${props => props.Mleft};
+	}
 `;
 
 const ImagePartners = styled.img`
@@ -198,6 +217,12 @@ const CirclePartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   z-index: 1;
+  @media (min-width: 1920px) {
+    width: 8.5rem;
+    height: 8.5rem;
+    top: ${props => props.Mtop};
+    left: ${props => props.Mleft};
+	}
 `;
 
 const Logo = styled.img`
@@ -212,6 +237,10 @@ const LinePartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   transform: ${props => props.transform};
+  @media (min-width: 1920px) {
+    top: ${props => props.Mtop};
+    left: ${props => props.Mleft};
+	}
 `;
 
 const ContainerSchool = styled.div`
@@ -245,32 +274,111 @@ const Home = () => {
         <LinePartners transform='rotate(60deg)' width='7rem' top='7rem' left='10rem'/>
         <BoxPartners top='2.5rem' left='21rem'></BoxPartners>
         <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' left='16rem'/> */}
-        <BoxPartners top='3rem' left='25rem'>
+        <BoxPartners
+          top='3rem' 
+          left='25rem'
+          Mtop='4rem'
+          Mleft='22rem'
+         >
           <ImagePartners width src={ImagePetronect} alt='Petronect' />
         </BoxPartners>
-        <LinePartners transform='rotate(150deg)' width='9rem' top='8rem' left='17rem'/>
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='8rem' left='13rem'>
+        <LinePartners 
+          transform='rotate(150deg)' 
+          width='11rem' 
+          top='8rem' 
+          left='17rem'
+          Mtop='10rem'
+          Mleft='14rem'
+        />
+        <CirclePartners
+          color='#FDE7A9' 
+          shadow='0px 0px 33px #FF611E66' 
+          top='8rem' 
+          left='13rem'
+          Mtop='9rem' 
+          Mleft='10rem'
+        >
           <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(145deg)' width='8rem' top='13rem' left='8.7rem'/>
-        <CirclePartners color='#FFFFFF' shadow='0px 0px 22px #00000029' top='13rem' left='7rem'>
+        <LinePartners 
+          transform='rotate(145deg)' 
+          width='8rem' 
+          top='13rem' 
+          left='8.7rem'
+          Mtop='18rem' 
+          Mleft='4rem'
+        />
+        <CirclePartners
+          color='#FFFFFF' 
+          shadow='0px 0px 22px #00000029' 
+          top='13rem' 
+          left='7rem'
+          Mtop='17rem' 
+          Mleft='0rem'
+         >
           <Logo width='50%' src={ImageRocket} alt='Foguete' />
         </CirclePartners>
-        <LinePartners transform='rotate(40deg)' width='9rem' top='17.5rem' left='7rem'/>
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='18rem' left='13rem' >
+        <LinePartners 
+          transform='rotate(40deg)' 
+          width='9rem' 
+          top='17.5rem' 
+          left='7rem'
+          Mtop='26.5rem' 
+          Mleft='5rem'
+        />
+        <CirclePartners 
+          color='#FDE7A9' 
+          shadow='0px 0px 33px #FF611E66' 
+          top='18rem' 
+          left='13rem' 
+          Mtop='26rem' 
+          Mleft='10rem'
+        >
           <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(130deg)' width='9rem' top='26rem' left='7rem'/>
-        <BoxPartners top='19rem' left='27rem' >
+        <LinePartners 
+          transform='rotate(130deg)' 
+          width='9rem' 
+          top='26rem' 
+          left='7rem'
+          Mtop='36rem' 
+          Mleft='5rem'
+          />
+        <BoxPartners
+         top='19rem' 
+         left='27rem' 
+         Mtop='27rem' 
+        >
           <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
         </BoxPartners>
-        <LinePartners transform='rotate(40deg)' width='11rem' top='26rem' left='16rem'/>
-        <BoxPartners top='28rem' left='20rem' >
-          <ImagePartners src={ImageVotorantim} alt='Instituto Votorantim' />
+        <LinePartners
+          transform='rotate(40deg)' 
+          width='11rem' 
+          top='26rem' 
+          left='16rem'
+          Mtop='37rem' 
+        />
+        <BoxPartners
+         top='28rem' 
+         left='20rem' 
+         Mtop='40rem' 
+        >
+          <ImagePartners src={ImageProadi} alt='Instituto Votorantim' />
         </BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' left='16rem'/>
-        <BoxPartners top='27rem' left='5rem'>
-          <ImagePartners src={ImageProadi} alt='Proadi SUS' />
+        <LinePartners 
+          transform='rotate(186deg)' 
+          width='13rem' 
+          top='21rem' 
+          left='16rem'
+          Mtop='30rem' 
+        />
+        <BoxPartners
+          top='27rem' 
+          left='5rem'
+          Mtop='39rem' 
+          Mleft='-3rem'
+         >
+          <ImagePartners src={ImageVotorantim} alt='Proadi SUS' />
         </BoxPartners>
       </div>
     )
