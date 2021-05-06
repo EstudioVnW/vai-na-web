@@ -134,7 +134,7 @@ export default function PostBlog({ data }) {
       <PageTitle data={isTitle} isPage='postBlog'/>
       <Container>
         <ContainerMain>
-          <Image src={data.item.cover.url || ''} alt='Foto principal' />
+          {/* <Image src={data.item.cover.url || ''} alt='Foto principal' /> */}
           <TextDescription dangerouslySetInnerHTML={{ __html: data.item.content.html }}></TextDescription>		
         </ContainerMain>
         <CardAuthor author={data.item.authors[0]}/> 
