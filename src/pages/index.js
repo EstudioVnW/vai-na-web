@@ -214,7 +214,7 @@ const LinePartners = styled.div`
   transform: ${props => props.transform};
 `;
 
-const Home = () => {
+const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
 
   const PartnerNetworks = () => {
