@@ -102,7 +102,10 @@ const ContainerNetwork = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
-  margin-top: 15rem;
+  margin-top: 2rem;
+  @media (min-width: 1920px) {
+    margin-top: 15rem;
+	}
 `;
 
 // const Image = styled.img`

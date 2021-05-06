@@ -162,6 +162,7 @@ const formatDate = (date) => {
 
 const Card = ({ data, slider }) => {
 	const slug = slugify(`${data.title.toLowerCase()}-${data.id.split(":")[1]}`)
+	console.log('oi', data)
 	return (
 		<Container slider={slider}>
 			<Figure slider={slider}>
