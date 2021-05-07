@@ -39,6 +39,7 @@ import ImageSirio from '../images/images/hospitalSirio.png';
 import ImageProadi from '../images/images/proadiSus.png';
 import ImageVotorantim from '../images/images/Instituto-Votorantim.png';
 import ImagePetronect from '../images/images/Petronect.png';
+import ImageBrasil from '../images/images/Group7507.png'
 
 var scrollDow = function () {
   window.scrollTo(0, 740);
@@ -103,6 +104,7 @@ const ContainerNetwork = styled.div`
   width: 100%;
   display: flex;
   margin-top: 2rem;
+
   @media (min-width: 1920px) {
     margin-top: 15rem;
 	}
@@ -141,6 +143,7 @@ const NetworkText = styled.p`
   margin-left: 11.4rem;
   margin-top: -1rem;
   margin-bottom: 5rem;
+
   @media (min-width: 1920px) {
     margin-left: 16.4rem;
     line-height: 2.5rem;
@@ -174,6 +177,7 @@ const BoldBackground = styled.b`
 
 const ContainerPartners = styled.div`
   position: relative;
+
   @media (min-width: 1920px) {
 		margin-left: 15rem;
 	}
@@ -192,6 +196,7 @@ const BoxPartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   z-index: 1;
+
   @media (min-width: 1920px) {
     width: 13.5rem;
     height: 5.5rem;
@@ -217,6 +222,7 @@ const CirclePartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   z-index: 1;
+
   @media (min-width: 1920px) {
     width: 8.5rem;
     height: 8.5rem;
@@ -237,12 +243,96 @@ const LinePartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   transform: ${props => props.transform};
+
   @media (min-width: 1920px) {
     top: ${props => props.Mtop};
     left: ${props => props.Mleft};
 	}
 `;
 
+const SubTitleCases = styled.p `
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  width: 17.5rem;
+  margin-left: 11.6rem;
+  margin-top: -1rem;
+
+  @media (min-width: 1920px) {
+    margin-left: 16.6rem;
+    line-height: 2.5rem;
+    font-size: 22px;
+    width: 27.5rem;
+	}
+`;
+
+const ContainerCases = styled.div `
+  margin-top: 2.5rem;
+  margin-left: 11.6rem;
+  display: flex;
+
+  @media (min-width: 1920px) {
+    margin-left: 15.6rem;
+	}
+`;
+
+const ImageSideCases = styled.img `
+  margin-right: 1rem;
+  height: 20rem;
+  background-color: #FFFFFF;
+  margin-top: 15rem;
+
+  @media (min-width: 1920px) {
+    width: 8rem;
+    margin-top: 23.7rem;
+	}
+`;
+
+const BoxCases = styled.div `
+width: 840px;
+height: 561px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 22px #00000029;
+  border: 2px solid #00145D;
+  border-radius: 20px;
+  display: flex;
+
+  @media (min-width: 1920px) {
+    width: 1251px;
+    height: 698px;
+	}
+`;
+
+const BoxTextCases = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
+const TitleBoxCases = styled.h3 `
+  color: #0F2B92;
+  font-size: 30px;
+  width: 26%;
+  font-weight: 700;
+  line-height: 2.6rem;
+
+  @media (min-width: 1920px) {
+    font-size: 44px;
+    line-height: 3.6rem;
+	}
+`;
+
+const TextBoxCases = styled.p `
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 1.5rem;
+  width: 27%;
+
+  @media (min-width: 1920px) {
+    font-size: 18px;
+    line-height: 2rem;
+	}
+`;
 const ContainerSchool = styled.div`
   height: 100vh;
   width: 100%;
@@ -266,6 +356,8 @@ const BoldSchool = styled.b`
 
 const Home = () => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
+  const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
+  const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
 
   const PartnerNetworks = () => {
     return (
@@ -384,7 +476,31 @@ const Home = () => {
     )
   }
 
-  const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
+  const Cases = () => {
+    return (
+      <div>
+        <PageTitle data={isTitleCases} isPage='isHome' />
+        <SubTitleCases>Saiba como ajudamos os nossos clientes a realizar suas missões:</SubTitleCases>
+        <ContainerCases>
+          <ImageSideCases src={ImageBrasil} alt='Conjunto de Imagens'/>
+          <BoxCases>
+            <BoxTextCases>
+              <TitleBoxCases>
+                Inovando o sistema de atendimento do SUS
+              </TitleBoxCases>
+              <TextBoxCases>
+                Em parceria com o Hospital Sírio-Libanês e o PROADI-SUS desenvolvemos o Reg+.
+                Um sistema de telemedicina para regular as filas do SUS em todo o Brasil, otimizando o 
+                tempo de atendimento e diagnóstico dos pacientes através da integração das jornadas de médicos,
+                enfermeiros, atendentes e consultores de saúde.
+              </TextBoxCases>
+            </BoxTextCases>
+          </BoxCases>
+        </ContainerCases>
+      </div>
+    )
+  }
+
 
 
   return (
@@ -417,7 +533,6 @@ const Home = () => {
             {PartnerNetworks()}
           </ContainerPartners>
         </ContainerNetwork>
-
         <ContainerSchool>
           <div>
             <PageTitle data={isTitleSchool} isPage='isHome' />
@@ -432,6 +547,7 @@ const Home = () => {
         </ContainerSchool>
 
       </DottedLineBackground>
+      {Cases()}
     </Layouts>
   )
 }
