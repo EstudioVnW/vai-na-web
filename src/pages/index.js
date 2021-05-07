@@ -243,6 +243,27 @@ const LinePartners = styled.div`
 	}
 `;
 
+const ContainerSchool = styled.div`
+  height: 100vh;
+  width: 100%;
+  display: flex;
+`;
+
+const SchoolText = styled.p`
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5rem;
+  width: 17.5rem;
+  margin-left: 11.4rem;
+  margin-top: -1rem;
+  margin-bottom: 5rem;
+`;
+
+const BoldSchool = styled.b`
+  font-weight: 500;
+`;
+
+
 const Home = () => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
 
@@ -363,6 +384,9 @@ const Home = () => {
     )
   }
 
+  const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
+
+
   return (
     <Layouts home>
     <BackgroundHeader />
@@ -393,6 +417,20 @@ const Home = () => {
             {PartnerNetworks()}
           </ContainerPartners>
         </ContainerNetwork>
+
+        <ContainerSchool>
+          <div>
+            <PageTitle data={isTitleSchool} isPage='isHome' />
+            <SchoolText>
+            Preparamos <BoldSchool>talentos diversos de todo o Brasil</BoldSchool>, das <BoldSchool>classes C, D e E</BoldSchool>, através do 
+            <BoldSchool>ensino de programação digital avançada</BoldSchool> e habilidades socioemocionais. 
+            Desejamos ajudar pessoas a construir <BoldSchool>carreiras relevantes</BoldSchool> dentro do espaço profundo 
+            da <BoldSchool>economia digital</BoldSchool>, injetando <BoldSchool>diversidade</BoldSchool>, promovendo <BoldSchool>inclusão</BoldSchool> e fortalecendo os 
+            <BoldSchool>direitos humanos</BoldSchool> no <BoldSchool>mercado de tecnologia</BoldSchool>.
+            </SchoolText>
+          </div>
+        </ContainerSchool>
+
       </DottedLineBackground>
     </Layouts>
   )
