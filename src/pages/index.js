@@ -250,6 +250,26 @@ const LinePartners = styled.div`
 	}
 `;
 
+const ContainerSchool = styled.div`
+  height: 100vh;
+  width: 100%;
+  display: flex;
+`;
+
+const SchoolText = styled.p`
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5rem;
+  width: 17.5rem;
+  margin-left: 11.4rem;
+  margin-top: -1rem;
+  margin-bottom: 5rem;
+`;
+
+const BoldSchool = styled.b`
+  font-weight: 500;
+`;
+
 const SubTitleCases = styled.p `
   font-size: 14px;
   font-weight: 400;
@@ -333,25 +353,12 @@ const TextBoxCases = styled.p `
     line-height: 2rem;
 	}
 `;
-const ContainerSchool = styled.div`
-  height: 100vh;
-  width: 100%;
+
+const BoxTextInsideCases = styled.div `
   display: flex;
+  flex-direction: column;
 `;
 
-const SchoolText = styled.p`
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.5rem;
-  width: 17.5rem;
-  margin-left: 11.4rem;
-  margin-top: -1rem;
-  margin-bottom: 5rem;
-`;
-
-const BoldSchool = styled.b`
-  font-weight: 500;
-`;
 
 
 const Home = () => {
@@ -495,6 +502,19 @@ const Home = () => {
                 enfermeiros, atendentes e consultores de saúde.
               </TextBoxCases>
             </BoxTextCases>
+            <div>
+              <BoxTextInsideCases>
+                <div>
+                  
+                </div>
+                <div>
+                  
+                </div>
+              </BoxTextInsideCases>
+              <div>
+
+              </div>
+            </div>
           </BoxCases>
         </ContainerCases>
       </div>
@@ -546,8 +566,8 @@ const Home = () => {
           </div>
         </ContainerSchool>
 
-      </DottedLineBackground>
       {Cases()}
+      </DottedLineBackground>
     </Layouts>
   )
 }
