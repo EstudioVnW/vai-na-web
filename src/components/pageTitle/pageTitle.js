@@ -26,6 +26,7 @@ const TypePage = styled.h1`
 	font-size: 1rem;
 	font-weight: 200;
 	color: #FFAC2D;
+	
 	width: fit-content;
 	border: 1px solid #FFAC2D;
 	border-radius: 19px;
@@ -34,6 +35,7 @@ const TypePage = styled.h1`
 		margin-left: 9rem;
 	}
 `;
+
 
 const ContentTitle = styled.div`
 	display: flex;
@@ -121,7 +123,7 @@ const PageTitle = ({ isPage, data }) => {
 					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
 				{data?.excerpt && 
-				<SubTitle pageBlog={isPage}>
+				<SubTitle pageBlog={isPage} >
 					{data.excerpt}
 				</SubTitle>}
 			</BoxTitle>
