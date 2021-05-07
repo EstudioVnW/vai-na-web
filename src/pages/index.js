@@ -354,7 +354,7 @@ const BoldSchool = styled.b`
 `;
 
 
-const Home = () => {
+const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
   const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
@@ -500,8 +500,6 @@ const Home = () => {
       </div>
     )
   }
-
-
 
   return (
     <Layouts home>

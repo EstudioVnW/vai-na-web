@@ -227,10 +227,7 @@ const Footer = () => {
 						<BoxText>
 							<TextLink href="https://medium.com/@olavainaweb" target="_blank" rel="noreferrer">Media Kit</TextLink>
 							<TextLink href="https://www.deeptech.network/" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
-							<TextLink
-								href="/faq"
-								rel="noreferrer"
-							>
+							<TextLink href="/faq" rel="noreferrer">
 								Perguntas Frequentes
 							</TextLink>
 						</BoxText>
