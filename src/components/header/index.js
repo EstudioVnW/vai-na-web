@@ -16,7 +16,7 @@ const Container = styled.header`
 		font-family: "usual", sans-serif;
 		position: fixed;
 		right: 0;
-		z-index: 1;
+		z-index: 2;
 	}  
 `;
 
@@ -29,7 +29,7 @@ const Image = styled.img`
 
 const Ul = styled.ul`
   display: flex;
-  margin: 70px;
+  margin: 4.375rem 7.75rem 0 0;
 `;
 
 const Li = styled.li`
@@ -38,7 +38,7 @@ const Li = styled.li`
 	
 	a{
 		text-decoration: none;
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 		color: #FDE7A9;
 		position: relative;
 		::before{

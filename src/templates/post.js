@@ -1,12 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
-// import { Helmet } from "react-helmet"
+import React from "react";
+import { graphql } from "gatsby";
+// import { Helmet } from "react-helmet";
 import styled from 'styled-components';
 
 // Components
 import CardAuthor from '../components/blog/cardAuthor';
 import Layout from '../components/Layouts';
-import PageTitle from '../components/pageTitle/pageTitle'
+import PageTitle from '../components/pageTitle/pageTitle';
 
 // styles
 const Container = styled.section`	
