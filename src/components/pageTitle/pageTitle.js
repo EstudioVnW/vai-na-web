@@ -64,6 +64,11 @@ const Title = styled.h2`
 	}
 `;
 
+const ContentSubTitle = styled.div`
+	display: flex;
+
+`;
+
 const SubTitle = styled.p `
 	font-size: ${props => props.pageBlog === 'postBlog' ? '30px' : '36px'};
 	font-weight: 100;
@@ -123,9 +128,12 @@ const PageTitle = ({ isPage, data }) => {
 					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
 				{data?.excerpt && 
-				<SubTitle pageBlog={isPage} >
-					{data.excerpt}
-				</SubTitle>}
+					<ContentSubTitle>
+						<SubTitle pageBlog={isPage} >
+							{data.excerpt}
+						</SubTitle>
+					</ContentSubTitle>
+				}
 			</BoxTitle>
 		</Container>
 	)
