@@ -44,7 +44,8 @@ import ImageSirio from '../images/images/hospitalSirio.png';
 import ImageProadi from '../images/images/proadiSus.png';
 import ImageVotorantim from '../images/images/Instituto-Votorantim.png';
 import ImagePetronect from '../images/images/Petronect.png';
-import ImageBrasil from '../images/images/Group7507.png'
+import ImageBrasil from '../images/images/Group7507.png';
+
 
 var scrollDow = function () {
   window.scrollTo(0, 740);
@@ -140,14 +141,14 @@ const ImageLogo = styled.img`
 //   z-index: ${props => props.zIndex && '-1'};
 // `;
 
-const NetworkText = styled.p`
+const TextDescriptionAll = styled.p`
   font-size: 14px;
   font-weight: 300;
   line-height: 1.5rem;
   width: 17.5rem;
   margin-left: 11.4rem;
   margin-top: -1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 
   @media (min-width: 1920px) {
     margin-left: 16.4rem;
@@ -157,7 +158,7 @@ const NetworkText = styled.p`
 	}
 `;
 
-const Bold = styled.b`
+const BoldTextAll = styled.b`
   font-weight: 500;
 `;
 
@@ -167,18 +168,6 @@ const BoldBackground = styled.b`
   mix-blend-mode: multiply;
   opacity: 1;
 `;
-
-/* const Background = styled.div`
-  width: 100%;
-  position: absolute;
-  top: 42rem;
-  left: 4rem;
-  opacity: 0.3;
-  background: url(${BackgroundImage}); 
-  background-repeat: no-repeat; 
-  background-size: 100%;
-  margin-top: 6rem;
-`; */
 
 const ContainerPartners = styled.div`
   position: relative;
@@ -261,20 +250,6 @@ const Content = styled.div`
   display: flex;
 `;
 
-const SchoolText = styled.p`
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.5rem;
-  width: 17.5rem;
-  margin-left: 11.4rem;
-  margin-top: -1rem;
-  margin-bottom: 5rem;
-`;
-
-const BoldSchool = styled.b`
-  font-weight: 500;
-`;
-
 const SubTitleCases = styled.p `
   font-size: 14px;
   font-weight: 400;
@@ -322,6 +297,7 @@ const BoxCases = styled.div `
   border-radius: 20px;
   display: flex;
   padding: 1.5rem;
+  margin-bottom: 5rem;
 
   @media (min-width: 1920px) {
     width: 1251px;
@@ -443,30 +419,12 @@ const ImagePersonCases = styled.div `
 	}
 `;
 
-const BoxImageScreenCases = styled.div `
-
-`;
-
-const BoxButtons = styled.div `
-  display: flex;
-  flex-direction: column;
-`;
-
-const ButtonsItem = styled.span `
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-`;
 
 const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
-  const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
+ 
+  
 
   const RenderHeader = () => (
     <ContentHeader>
@@ -603,13 +561,13 @@ const Home = (props) => {
     <ContainerNetwork id='content-1'>
       <div>
         <PageTitle data={isTitle} isPage='isHome' />
-        <NetworkText>
-          A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
+        <TextDescriptionAll>
+          A partir de uma <BoldTextAll>rede colaborativa e sustentável</BoldTextAll>, composta de grandes empresas,
           parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
-          <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
+          <BoldTextAll> para entregar soluções com inovação, maturidade digital e transformação humana. </BoldTextAll>
           Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
           pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
-        </NetworkText>
+        </TextDescriptionAll>
       </div>
       <ContainerPartners>
         {PartnerNetworks()}
