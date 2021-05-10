@@ -10,6 +10,10 @@ import Layouts from '../../components/Layouts';
 import iconOpenModal from '../../images/icons/iconMore.svg';
 
 // styles
+const Container = styled.div`
+  width: 100%;
+`;
+
 const Content = styled.section`
 	padding: 6.706rem 0 12.375rem 0;
 	width: 65%;
@@ -18,12 +22,12 @@ const Content = styled.section`
 
 const ContentBox = styled.div`
 	padding-bottom: 1.188rem;
-	min-height: 4.5rem;
+	/* min-height: 4.5rem; */
 `;
 
 const ContentQuestion = styled.div`
-	position: relative;
-	top: 1rem;
+	/* position: relative;
+	top: 	1rem; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -31,7 +35,6 @@ const ContentQuestion = styled.div`
 	height: 4.5rem;
 	background: #FED5B2;
 	border-radius: 8px;
-	z-index: 1;
 
 	:hover {
 		background: #FFAC2D;
@@ -56,11 +59,13 @@ const Img = styled.img`
 const ContentAnswer = styled.div`
 	display: ${props => props.display ? 'flex' : 'none'};
 	padding: 2.5rem 2.875rem;
-	background: #fef9e9;
+	/* margin-bottom: 1.188rem; */
+	background: red;
 `;
 
 const Answer = styled.p`
-	font-size: 1.825rem;
+/* background: #fef9e9; */
+	font-size: 1.625rem;
 	color: #272727;
 	line-height: 2.75rem;
 `;
@@ -153,24 +158,26 @@ const Index = ({ data }) => {
 		} else {
 			setSelected(item);
 		}
-	};
+	}
 
 	return (
     <Layouts>
-			<PageTitle data={isTitle}/>
-			<Content>
-				{listFaq?.map((item, index) => (
-					<ContentBox key={index}>
-						<ContentQuestion>
-							<Question>{item.question}</Question>
-							<Img src={iconOpenModal} alt='Abrir detalhe' onClick={() => handleClicked(index)}/>
-						</ContentQuestion>
-						<ContentAnswer display={index === isSelected}>
-							<Answer>{item.answer}</Answer>
-						</ContentAnswer>
-					</ContentBox>
-				))}
-			</Content>
+			<Container>
+				<PageTitle data={isTitle}/>
+				<Content>
+					{listFaq.map((item, index) => (
+						<ContentBox key={index}>
+							<ContentQuestion>
+								<Question>{item.question}</Question>
+								<Img src={iconOpenModal} alt='Abrir detalhe' onClick={() => handleClicked(index)}/>
+							</ContentQuestion>
+							<ContentAnswer display={index === isSelected}>
+								<Answer>{item.answer}</Answer>
+							</ContentAnswer>
+						</ContentBox>
+					))}
+				</Content>
+			</Container>
 		</Layouts>
 	)
 }
