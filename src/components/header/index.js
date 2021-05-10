@@ -55,12 +55,13 @@ const Li = styled.li`
 const Header = ({ home }) => {
 	return (
 		<Container home={home}>
-			<Link to={'/'} rel="noreferrer"><Image src={logo} home={home} alt='Logotipo' /></Link>
+			<Link to={'/'} rel="noopener noreferrer"><Image src={logo} home={home} alt='Logotipo' /></Link>
 			<nav>
 				<Ul>
-					<Li><Link to={'/'} rel="noreferrer">Sobre</Link></Li>
-					<Li><Link to={'/blog'} rel="noreferrer">Blog</Link></Li>
-					<Li><Link to='#footer' rel="noreferrer">Contato</Link></Li>
+					<Li><Link to={'/'} rel="noopener noreferrer">Home</Link></Li>
+					<Li><Link to={'/over'} rel="noopener noreferrer">Sobre</Link></Li>
+					<Li><Link to={'/blog'} rel="noopener noreferrer">Blog</Link></Li>
+					<Li><Link to='#footer' rel="noopener noreferrer">Contato</Link></Li>
 				</Ul>
 			</nav>
 		</Container>
