@@ -39,9 +39,10 @@ import ImageSirio from '../images/images/hospitalSirio.png';
 import ImageProadi from '../images/images/proadiSus.png';
 import ImageVotorantim from '../images/images/Instituto-Votorantim.png';
 import ImagePetronect from '../images/images/Petronect.png';
+import ImageBrasil from '../images/images/Group7507.png'
 
 var scrollDow = function () {
-  window.scrollTo(0, 750);
+  window.scrollTo(0, 740);
 };
 
 // styles
@@ -102,6 +103,11 @@ const ContainerNetwork = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
+  margin-top: 2rem;
+
+  @media (min-width: 1920px) {
+    margin-top: 15rem;
+	}
 `;
 
 // const Image = styled.img`
@@ -137,6 +143,13 @@ const NetworkText = styled.p`
   margin-left: 11.4rem;
   margin-top: -1rem;
   margin-bottom: 5rem;
+
+  @media (min-width: 1920px) {
+    margin-left: 16.4rem;
+    line-height: 2.5rem;
+    font-size: 22px;
+    width: 27.5rem;
+	}
 `;
 
 const Bold = styled.b`
@@ -150,7 +163,7 @@ const BoldBackground = styled.b`
   opacity: 1;
 `;
 
-const Background = styled.div`
+/* const Background = styled.div`
   width: 100%;
   position: absolute;
   top: 42rem;
@@ -160,10 +173,14 @@ const Background = styled.div`
   background-repeat: no-repeat; 
   background-size: 100%;
   margin-top: 6rem;
-`;
+`; */
 
 const ContainerPartners = styled.div`
   position: relative;
+
+  @media (min-width: 1920px) {
+		margin-left: 15rem;
+	}
 `;
 
 const BoxPartners = styled.div`
@@ -179,6 +196,13 @@ const BoxPartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   z-index: 1;
+
+  @media (min-width: 1920px) {
+    width: 13.5rem;
+    height: 5.5rem;
+    top: ${props => props.Mtop};
+    left: ${props => props.Mleft};
+	}
 `;
 
 const ImagePartners = styled.img`
@@ -198,6 +222,13 @@ const CirclePartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   z-index: 1;
+
+  @media (min-width: 1920px) {
+    width: 8.5rem;
+    height: 8.5rem;
+    top: ${props => props.Mtop};
+    left: ${props => props.Mleft};
+	}
 `;
 
 const Logo = styled.img`
@@ -212,10 +243,225 @@ const LinePartners = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   transform: ${props => props.transform};
+
+  @media (min-width: 1920px) {
+    top: ${props => props.Mtop};
+    left: ${props => props.Mleft};
+	}
 `;
 
-const Home = () => {
+const ContainerSchool = styled.div`
+  height: 100vh;
+  width: 100%;
+  display: flex;
+`;
+
+const SchoolText = styled.p`
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5rem;
+  width: 17.5rem;
+  margin-left: 11.4rem;
+  margin-top: -1rem;
+  margin-bottom: 5rem;
+`;
+
+const BoldSchool = styled.b`
+  font-weight: 500;
+`;
+
+const SubTitleCases = styled.p `
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  width: 17.5rem;
+  margin-left: 11.6rem;
+  margin-top: -1rem;
+
+  @media (min-width: 1920px) {
+    margin-left: 16.6rem;
+    line-height: 2.5rem;
+    font-size: 22px;
+    width: 27.5rem;
+	}
+`;
+
+const ContainerCases = styled.div `
+  margin-top: 2.5rem;
+  margin-left: 11.6rem;
+  display: flex;
+
+  @media (min-width: 1920px) {
+    margin-left: 15.6rem;
+	}
+`;
+
+const ImageSideCases = styled.img `
+  margin-right: 1rem;
+  height: 20rem;
+  background-color: #FFFFFF;
+  margin-top: 15rem;
+
+  @media (min-width: 1920px) {
+    width: 8rem;
+    margin-top: 23.7rem;
+	}
+`;
+
+const BoxCases = styled.div `
+  width: 840px;
+  height: 561px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 22px #00000029;
+  border: 2px solid #00145D;
+  border-radius: 20px;
+  display: flex;
+  padding: 1.5rem;
+
+  @media (min-width: 1920px) {
+    width: 1251px;
+    height: 698px;
+	}
+`;
+
+const BoxTextCases = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+`;
+
+const TitleBoxCases = styled.h3 `
+  color: #0F2B92;
+  font-size: 30px;
+  width: 90%;
+  font-weight: 700;
+  line-height: 2.6rem;
+
+  @media (min-width: 1920px) {
+    font-size: 44px;
+    line-height: 3.6rem;
+	}
+`;
+
+const TextBoxCases = styled.p `
+  font-size: 11px;
+  font-weight: 100;
+  line-height: 1.5rem;
+  width: 87%;
+
+  @media (min-width: 1920px) {
+    font-size: 18px;
+    line-height: 2rem;
+    width: 91%;
+	}
+`;
+
+const BoxAllInsideCases = styled.div `
+  width: 70%;
+`;
+
+const ContainerAllTextInsideCases = styled.div `
+  display: flex;
+  flex-direction: column;
+  height: 7rem;
+  justify-content: space-between;
+
+  @media (min-width: 1920px) {
+    height: 10rem;
+	}
+`;
+
+const BoxTextInsideCases = styled.div `
+  display: flex;
+  justify-content: space-between;
+`;
+
+const BoxItemText = styled.div `
+  display: flex;
+  
+`;
+
+const TextOrangeCases = styled.p `
+  color: #FF611E;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 11px;
+  margin-left: ${props => props.left};
+  margin-right: ${props => props.right};
+
+  @media (min-width: 1920px) {
+    font-size: 20px;
+    margin-right: ${props => props.Mright};
+	}
+`;
+
+const TextComplementOrange = styled.p `
+  color: #272727;
+  text-align: left;
+  font-size: 11px;
+  margin-left: ${props => props.left};
+  margin-right: ${props => props.right};
+
+  @media (min-width: 1920px) {
+    font-size: 20px;
+    margin-right: ${props => props.Mright};
+    margin-left: ${props => props.Mleft};
+	}
+`;
+
+const BoxImageCases = styled.div `
+  display: flex;
+  margin-right: 3rem;
+
+  @media (min-width: 1920px) {
+    margin-right: 6rem;
+	}
+`;
+
+const ImagePersonCases = styled.div `
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: red;
+  border: 1px solid #0F2B92;
+  box-shadow: 0px 0px 33px #FF611E40;
+  position: relative;
+  z-index: ${props => props.index};
+  left: ${props => props.left};
+
+
+  @media (min-width: 1920px) {
+    width: 5rem;
+    height: 5rem;
+    left: ${props => props.Mleft};
+	}
+`;
+
+const BoxImageScreenCases = styled.div `
+
+`;
+
+const BoxButtons = styled.div `
+  display: flex;
+  flex-direction: column;
+`;
+
+const ButtonsItem = styled.span `
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+`;
+
+const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
+  const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
+  const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
 
   const PartnerNetworks = () => {
     return (
@@ -224,33 +470,168 @@ const Home = () => {
         <LinePartners transform='rotate(60deg)' width='7rem' top='7rem' left='10rem'/>
         <BoxPartners top='2.5rem' left='21rem'></BoxPartners>
         <LinePartners transform='rotate(152deg)' width='10rem' top='7.6rem' left='16rem'/> */}
-        <BoxPartners top='3rem' left='25rem'>
+        <BoxPartners
+          top='3rem' 
+          left='25rem'
+          Mtop='4rem'
+          Mleft='22rem'
+         >
           <ImagePartners width src={ImagePetronect} alt='Petronect' />
         </BoxPartners>
-        <LinePartners transform='rotate(150deg)' width='9rem' top='8rem' left='17rem'/>
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='8rem' left='13rem'>
+        <LinePartners 
+          transform='rotate(150deg)' 
+          width='11rem' 
+          top='8rem' 
+          left='17rem'
+          Mtop='10rem'
+          Mleft='14rem'
+        />
+        <CirclePartners
+          color='#FDE7A9' 
+          shadow='0px 0px 33px #FF611E66' 
+          top='8rem' 
+          left='13rem'
+          Mtop='9rem' 
+          Mleft='10rem'
+        >
           <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(145deg)' width='8rem' top='13rem' left='8.7rem'/>
-        <CirclePartners color='#FFFFFF' shadow='0px 0px 22px #00000029' top='13rem' left='7rem'>
+        <LinePartners 
+          transform='rotate(145deg)' 
+          width='8rem' 
+          top='13rem' 
+          left='8.7rem'
+          Mtop='18rem' 
+          Mleft='4rem'
+        />
+        <CirclePartners
+          color='#FFFFFF' 
+          shadow='0px 0px 22px #00000029' 
+          top='13rem' 
+          left='7rem'
+          Mtop='17rem' 
+          Mleft='0rem'
+         >
           <Logo width='50%' src={ImageRocket} alt='Foguete' />
         </CirclePartners>
-        <LinePartners transform='rotate(40deg)' width='9rem' top='17.5rem' left='7rem'/>
-        <CirclePartners color='#FDE7A9' shadow='0px 0px 33px #FF611E66' top='18rem' left='13rem' >
+        <LinePartners 
+          transform='rotate(40deg)' 
+          width='9rem' 
+          top='17.5rem' 
+          left='7rem'
+          Mtop='26.5rem' 
+          Mleft='5rem'
+        />
+        <CirclePartners 
+          color='#FDE7A9' 
+          shadow='0px 0px 33px #FF611E66' 
+          top='18rem' 
+          left='13rem' 
+          Mtop='26rem' 
+          Mleft='10rem'
+        >
           <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
         </CirclePartners>
-        <LinePartners transform='rotate(130deg)' width='9rem' top='26rem' left='7rem'/>
-        <BoxPartners top='19rem' left='27rem' >
+        <LinePartners 
+          transform='rotate(130deg)' 
+          width='9rem' 
+          top='26rem' 
+          left='7rem'
+          Mtop='36rem' 
+          Mleft='5rem'
+          />
+        <BoxPartners
+         top='19rem' 
+         left='27rem' 
+         Mtop='27rem' 
+        >
           <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
         </BoxPartners>
-        <LinePartners transform='rotate(40deg)' width='11rem' top='26rem' left='16rem'/>
-        <BoxPartners top='28rem' left='20rem' >
-          <ImagePartners src={ImageVotorantim} alt='Instituto Votorantim' />
+        <LinePartners
+          transform='rotate(40deg)' 
+          width='11rem' 
+          top='26rem' 
+          left='16rem'
+          Mtop='37rem' 
+        />
+        <BoxPartners
+         top='28rem' 
+         left='20rem' 
+         Mtop='40rem' 
+        >
+          <ImagePartners src={ImageProadi} alt='Instituto Votorantim' />
         </BoxPartners>
-        <LinePartners transform='rotate(186deg)' width='13rem' top='21rem' left='16rem'/>
-        <BoxPartners top='27rem' left='5rem'>
-          <ImagePartners src={ImageProadi} alt='Proadi SUS' />
+        <LinePartners 
+          transform='rotate(186deg)' 
+          width='13rem' 
+          top='21rem' 
+          left='16rem'
+          Mtop='30rem' 
+        />
+        <BoxPartners
+          top='27rem' 
+          left='5rem'
+          Mtop='39rem' 
+          Mleft='-3rem'
+         >
+          <ImagePartners src={ImageVotorantim} alt='Proadi SUS' />
         </BoxPartners>
+      </div>
+    )
+  }
+
+  const Cases = () => {
+    return (
+      <div>
+        <PageTitle data={isTitleCases} isPage='isHome' />
+        <SubTitleCases>Saiba como ajudamos os nossos clientes a realizar suas missões:</SubTitleCases>
+        <ContainerCases>
+          <ImageSideCases src={ImageBrasil} alt='Conjunto de Imagens'/>
+          <BoxCases id="Slide">
+            <BoxTextCases>
+              <TitleBoxCases>
+                Inovando o sistema de atendimento do SUS
+              </TitleBoxCases>
+              <TextBoxCases>
+                Em parceria com o Hospital Sírio-Libanês e o PROADI-SUS desenvolvemos o Reg+.
+                Um sistema de telemedicina para regular as filas do SUS em todo o Brasil, otimizando o 
+                tempo de atendimento e diagnóstico dos pacientes através da integração das jornadas de médicos,
+                enfermeiros, atendentes e consultores de saúde.
+              </TextBoxCases>
+            </BoxTextCases>
+            <BoxAllInsideCases>
+              <ContainerAllTextInsideCases>
+                <BoxTextInsideCases>
+                  <BoxItemText>
+                    <TextOrangeCases>Cliente</TextOrangeCases>
+                    <TextComplementOrange left='1rem'>Hospital Sírio-Libanês e o PROADI-SUS</TextComplementOrange>
+                  </BoxItemText>
+                  <BoxItemText>
+                    <TextOrangeCases left='2rem'>tecnologias</TextOrangeCases>
+                    <TextComplementOrange left='1rem'>#Design #React #Redux #Dynamo #StyleComponents</TextComplementOrange>
+                  </BoxItemText>
+                </BoxTextInsideCases>
+                <BoxTextInsideCases>
+                  <BoxItemText>
+                    <TextOrangeCases left='-14px'>Ano</TextOrangeCases>
+                    <TextComplementOrange Mleft='4.4rem' left='3.3rem'>2020</TextComplementOrange>
+                  </BoxItemText>
+                  <BoxItemText>
+                    <TextOrangeCases Mright='5rem' right='3rem'>equipe</TextOrangeCases>
+                    <BoxImageCases left='1rem'>
+                      <ImagePersonCases  />
+                      <ImagePersonCases left='-10px' Mleft='-20px' index='1'/>
+                      <ImagePersonCases left='-22px' Mleft='-38px' index='1'/>
+                    </BoxImageCases>
+                  </BoxItemText>
+                </BoxTextInsideCases>
+              </ContainerAllTextInsideCases>
+              <div>
+
+              </div>
+            </BoxAllInsideCases>
+          </BoxCases>
+        </ContainerCases>
       </div>
     )
   }
@@ -285,6 +666,20 @@ const Home = () => {
             {PartnerNetworks()}
           </ContainerPartners>
         </ContainerNetwork>
+        <ContainerSchool>
+          <div>
+            <PageTitle data={isTitleSchool} isPage='isHome' />
+            <SchoolText>
+            Preparamos <BoldSchool>talentos diversos de todo o Brasil</BoldSchool>, das <BoldSchool>classes C, D e E</BoldSchool>, através do 
+            <BoldSchool>ensino de programação digital avançada</BoldSchool> e habilidades socioemocionais. 
+            Desejamos ajudar pessoas a construir <BoldSchool>carreiras relevantes</BoldSchool> dentro do espaço profundo 
+            da <BoldSchool>economia digital</BoldSchool>, injetando <BoldSchool>diversidade</BoldSchool>, promovendo <BoldSchool>inclusão</BoldSchool> e fortalecendo os 
+            <BoldSchool>direitos humanos</BoldSchool> no <BoldSchool>mercado de tecnologia</BoldSchool>.
+            </SchoolText>
+          </div>
+        </ContainerSchool>
+
+      {Cases()}
       </DottedLineBackground>
     </Layouts>
   )

@@ -9,6 +9,9 @@ const Container = styled.section`
 
 const BoxTitle = styled.div`
 	margin-left: ${props => props.pageHome === 'isHome' ? '3rem' : '2rem'};
+	@media (min-width: 1920px) {
+		margin-left: 7rem;
+	}
 `;
 
 const Date = styled.p`
@@ -23,11 +26,16 @@ const TypePage = styled.h1`
 	font-size: 1rem;
 	font-weight: 200;
 	color: #FFAC2D;
+	
 	width: fit-content;
 	border: 1px solid #FFAC2D;
 	border-radius: 19px;
 	text-transform: uppercase;
+	@media (min-width: 1920px) {
+		margin-left: 9rem;
+	}
 `;
+
 
 const ContentTitle = styled.div`
 	display: flex;
@@ -39,6 +47,9 @@ const LineOrange = styled.span `
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	font-weight: 200;
 	color: #FF611E;
+	@media (min-width: 1920px) {
+		font-size: 3.2rem;
+	}
 `;
 
 const Title = styled.h2`
@@ -47,6 +58,15 @@ const Title = styled.h2`
 	max-width: 1272px;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	color: ${props => props.pageHome === 'isHome' ? '#272727' : '#FDE7A9'};
+	@media (min-width: 1920px) {
+		font-size: 3.2rem;
+		width: 93%;
+	}
+`;
+
+const ContentSubTitle = styled.div`
+	display: flex;
+
 `;
 
 const SubTitle = styled.p `
@@ -108,9 +128,12 @@ const PageTitle = ({ isPage, data }) => {
 					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
 				{data?.excerpt && 
-				<SubTitle pageBlog={isPage}>
-					{data.excerpt}
-				</SubTitle>}
+					<ContentSubTitle>
+						<SubTitle pageBlog={isPage} >
+							{data.excerpt}
+						</SubTitle>
+					</ContentSubTitle>
+				}
 			</BoxTitle>
 		</Container>
 	)

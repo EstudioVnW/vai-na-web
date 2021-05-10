@@ -16,7 +16,7 @@ const Container = styled.header`
 		font-family: "usual", sans-serif;
 		position: fixed;
 		right: 0;
-		z-index: 1;
+		z-index: 2;
 	}  
 `;
 
@@ -29,7 +29,7 @@ const Image = styled.img`
 
 const Ul = styled.ul`
   display: flex;
-  margin: 70px;
+  margin: 4.375rem 7.75rem 0 0;
 `;
 
 const Li = styled.li`
@@ -38,7 +38,7 @@ const Li = styled.li`
 	
 	a{
 		text-decoration: none;
-		font-size: 1.125rem;
+		font-size: 1.25rem;
 		color: #FDE7A9;
 		position: relative;
 		::before{
@@ -55,12 +55,13 @@ const Li = styled.li`
 const Header = ({ home }) => {
 	return (
 		<Container home={home}>
-			<Link to={'/'} rel="noreferrer"><Image src={logo} home={home} alt='Logotipo' /></Link>
+			<Link to={'/'} rel="noopener noreferrer"><Image src={logo} home={home} alt='Logotipo' /></Link>
 			<nav>
 				<Ul>
-					<Li><Link to={'/'} rel="noreferrer">Sobre</Link></Li>
-					<Li><Link to={'/blog'} rel="noreferrer">Blog</Link></Li>
-					<Li><Link to='#footer' rel="noreferrer">Contato</Link></Li>
+					<Li><Link to={'/'} rel="noopener noreferrer">Home</Link></Li>
+					<Li><Link to={'/over'} rel="noopener noreferrer">Sobre</Link></Li>
+					<Li><Link to={'/blog'} rel="noopener noreferrer">Blog</Link></Li>
+					<Li><Link to='#footer' rel="noopener noreferrer">Contato</Link></Li>
 				</Ul>
 			</nav>
 		</Container>
