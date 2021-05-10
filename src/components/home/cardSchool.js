@@ -66,7 +66,8 @@ const Description = styled.p `
 	width: 90%;
 `;
 
-const CardSchool = ({background, title, description}) => {
+const CardSchool = ({background, 
+    title, description}) => {
 	return (
 		<Container background={background}>
 			<BoxTop>
@@ -80,9 +81,7 @@ const CardSchool = ({background, title, description}) => {
             <img />
             <SubTitle>carreira</SubTitle>
             {title && <Title>{title}</Title>}
-			<Description>
-				{description}
-			</Description>
+			<Description>{description}</Description>
 		</Container>
 	)
 }
