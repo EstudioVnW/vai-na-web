@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import Card from '../../components/blog/card';
 import PostSlider from '../../components/postSlider/postSlider';
 import PageTitle from '../../components/pageTitle/pageTitle';
-import Layouts from '../../components/Layouts'
+import Layouts from '../../components/Layouts';
 
 // styles
 const ContainerBlog = styled.div`

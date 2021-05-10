@@ -1,150 +1,178 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from 'styled-components';
+import { graphql } from "gatsby";
 
 //Components
-import Header from '../../components/header';
+import PageTitle from '../../components/pageTitle/pageTitle';
+import Layouts from '../../components/Layouts';
 
 //Assets
 import iconOpenModal from '../../images/icons/iconMore.svg';
 
 // styles
-const Container = styled.div`
-  width: 100%;
-`;
-
 const Content = styled.section`
-	width: 75%;
+	padding: 6.706rem 0 12.375rem 0;
+	width: 65%;
 	margin: auto;
 `;
 
-const Title = styled.h1`
-	padding: 0.5rem 1.125rem;
-  font-size: 1.125rem;
-	color: #FFAC2D;
-	width: fit-content;
-	border: 1px solid #FFAC2D;
-	border-radius: 19px;
-	text-transform: uppercase;
+const ContentBox = styled.div`
+	padding-bottom: 1.188rem;
+	min-height: 4.5rem;
 `;
 
-const Subtitle = styled.h2`
-  width: 100%;
-	font-size: 3.75rem;
-	color: #FDE7A9;
-
-	span {
-		color: #FF611E;
-	}
-`;
-
-const ContentTitle = styled.div`
+const ContentQuestion = styled.div`
+	position: relative;
+	top: 1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 2.875rem 0 3.168rem;
-	height: 5.5rem;
+	padding: 0 2.875rem;
+	height: 4.5rem;
 	background: #FED5B2;
 	border-radius: 8px;
+	z-index: 1;
 
 	:hover {
 		background: #FFAC2D;
+
+		h1 {
+			font-size: 1.3rem;
+			font-weight: 600;	
+		}
 	}
 `;
 
-const TitleFaq = styled.h1`
-  font-size: 1.125rem;
+const Question = styled.h1`
+  font-size: 1.25rem;
+	font-weight: 400;
 	color: #272727;
 `;
 
-const Description  = styled.p`
+const Img = styled.img`
+	cursor: pointer;
+`;
+
+const ContentAnswer = styled.div`
+	display: ${props => props.display ? 'flex' : 'none'};
 	padding: 2.5rem 2.875rem;
-	margin-bottom: 1.188rem;
-	font-size: 1.625rem;
-	color: #272727;
-	line-height: 2.75rem;
 	background: #fef9e9;
 `;
 
+const Answer = styled.p`
+	font-size: 1.825rem;
+	color: #272727;
+	line-height: 2.75rem;
+`;
+
+export const query = graphql`
+  query  {
+    posts: allGraphCmsFaq {
+      nodes {
+				id
+				answer {
+					html
+				}
+				question
+			}
+    }
+  }
+`
+
 const listFaq = [
 	{
-		title: 'O que é?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'O que é?',
+		answer: '1 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'Pra quem é?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'Pra quem é?',
+		answer: '2 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'Onde é?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'Onde é?',
+		answer: '3 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'São só para pessoas negras?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'São só para pessoas negras?',
+		answer: '4 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'É só pra quem é da favela?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'É só pra quem é da favela?',
+		answer: '5 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'Qual é o valor do investimento?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'Qual é o valor do investimento?',
+		answer: '6 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'O que são linguagens de programação?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'O que são linguagens de programação?',
+		answer: '7 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'O que é programação?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'O que é programação?',
+		answer: '8 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'O que é e o que faz um desenvolvedor front-end?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'O que é e o que faz um desenvolvedor front-end?',
+		answer: '9 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'O que são aulas de habilidades socioemocionais?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'O que são aulas de habilidades socioemocionais?',
+		answer: ' Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr', 
 	},
 	{
-		title: 'O que são aulas de habilidades socioemocionais?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'O que são aulas de habilidades socioemocionais?',
+		answer: 'Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'O Vai na Web encaminha para o mercado de trabalho?',
-		description: 'Sim, o nosso programa é focado no desenvolvimento das principais demandas do mercado e está em contato permanente com empresas parceiras, do setor, o que oferece aos estudantes formados oportunidades reais de uma carreira.',
+		question: 'O Vai na Web encaminha para o mercado de trabalho?',
+		answer: 'Sim, o nosso programa é focado no desenvolvimento das principais demandas do mercado e está em contato permanente com empresas parceiras, do setor, o que oferece aos estudantes formados oportunidades reais de uma carreira.',
 	},
 	{
-		title: 'O Vai na Web encaminha para o mercado de trabalho?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'O Vai na Web encaminha para o mercado de trabalho?',
+		answer: 'Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'Quanto tempo dura o programa?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'Quanto tempo dura o programa?',
+		answer: 'Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 	{
-		title: 'Como faço para fazer parte?',
-		description: 'Lorem Ipsum is simply dummy description of the printing and typesetting industry. Lorem Ipsum has been the industr',
+		question: 'Como faço para fazer parte?',
+		answer: 'Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
 	},
 ]
 
-const Layouts = () => (
-	<Container>
-		<Header />
-		<Title>Faq</Title>
-		<Subtitle><span>//</span> Perguntas frequentes</Subtitle>
-		<Content>
-			{listFaq.map(item => (
-				<>
-					<ContentTitle>
-						<TitleFaq>{item.title}</TitleFaq>
-						<img src={iconOpenModal} alt='Abrir detalhe' />
-					</ContentTitle>
-					<Description>{item.description}</Description>
-				</>
-			))}
-		</Content>
-	</Container>
-)
+const Index = ({ data }) => {
+	const [isSelected, setSelected] = useState(undefined);
 
-export default Layouts;
+  const isTitle = { typePage: 'Faq', title: 'Perguntas frequentes' };
+
+	const handleClicked = (item) => {
+		if(item === isSelected) {
+			setSelected(false);
+		} else {
+			setSelected(item);
+		}
+	};
+
+	return (
+    <Layouts>
+			<PageTitle data={isTitle}/>
+			<Content>
+				{listFaq?.map((item, index) => (
+					<ContentBox key={index}>
+						<ContentQuestion>
+							<Question>{item.question}</Question>
+							<Img src={iconOpenModal} alt='Abrir detalhe' onClick={() => handleClicked(index)}/>
+						</ContentQuestion>
+						<ContentAnswer display={index === isSelected}>
+							<Answer>{item.answer}</Answer>
+						</ContentAnswer>
+					</ContentBox>
+				))}
+			</Content>
+		</Layouts>
+	)
+}
+
+export default Index;
