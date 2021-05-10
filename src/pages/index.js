@@ -309,13 +309,14 @@ const ImageSideCases = styled.img `
 `;
 
 const BoxCases = styled.div `
-width: 840px;
-height: 561px;
+  width: 840px;
+  height: 561px;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 22px #00000029;
   border: 2px solid #00145D;
   border-radius: 20px;
   display: flex;
+  padding: 1.5rem;
 
   @media (min-width: 1920px) {
     width: 1251px;
@@ -326,13 +327,14 @@ height: 561px;
 const BoxTextCases = styled.div `
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 30%;
 `;
 
 const TitleBoxCases = styled.h3 `
   color: #0F2B92;
   font-size: 30px;
-  width: 26%;
+  width: 90%;
   font-weight: 700;
   line-height: 2.6rem;
 
@@ -343,23 +345,118 @@ const TitleBoxCases = styled.h3 `
 `;
 
 const TextBoxCases = styled.p `
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 100;
   line-height: 1.5rem;
-  width: 27%;
+  width: 87%;
 
   @media (min-width: 1920px) {
     font-size: 18px;
     line-height: 2rem;
+    width: 91%;
+	}
+`;
+
+const BoxAllInsideCases = styled.div `
+  width: 70%;
+`;
+
+const ContainerAllTextInsideCases = styled.div `
+  display: flex;
+  flex-direction: column;
+  height: 7rem;
+  justify-content: space-between;
+
+  @media (min-width: 1920px) {
+    height: 10rem;
 	}
 `;
 
 const BoxTextInsideCases = styled.div `
   display: flex;
+  justify-content: space-between;
+`;
+
+const BoxItemText = styled.div `
+  display: flex;
+  
+`;
+
+const TextOrangeCases = styled.p `
+  color: #FF611E;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 11px;
+  margin-left: ${props => props.left};
+  margin-right: ${props => props.right};
+
+  @media (min-width: 1920px) {
+    font-size: 20px;
+    margin-right: ${props => props.Mright};
+	}
+`;
+
+const TextComplementOrange = styled.p `
+  color: #272727;
+  text-align: left;
+  font-size: 11px;
+  margin-left: ${props => props.left};
+  margin-right: ${props => props.right};
+
+  @media (min-width: 1920px) {
+    font-size: 20px;
+    margin-right: ${props => props.Mright};
+    margin-left: ${props => props.Mleft};
+	}
+`;
+
+const BoxImageCases = styled.div `
+  display: flex;
+  margin-right: 3rem;
+
+  @media (min-width: 1920px) {
+    margin-right: 6rem;
+	}
+`;
+
+const ImagePersonCases = styled.div `
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: red;
+  border: 1px solid #0F2B92;
+  box-shadow: 0px 0px 33px #FF611E40;
+  position: relative;
+  z-index: ${props => props.index};
+  left: ${props => props.left};
+
+
+  @media (min-width: 1920px) {
+    width: 5rem;
+    height: 5rem;
+    left: ${props => props.Mleft};
+	}
+`;
+
+const BoxImageScreenCases = styled.div `
+
+`;
+
+const BoxButtons = styled.div `
+  display: flex;
   flex-direction: column;
 `;
 
-
+const ButtonsItem = styled.span `
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+`;
 
 const Home = () => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
@@ -490,7 +587,7 @@ const Home = () => {
         <SubTitleCases>Saiba como ajudamos os nossos clientes a realizar suas missões:</SubTitleCases>
         <ContainerCases>
           <ImageSideCases src={ImageBrasil} alt='Conjunto de Imagens'/>
-          <BoxCases>
+          <BoxCases id="Slide">
             <BoxTextCases>
               <TitleBoxCases>
                 Inovando o sistema de atendimento do SUS
@@ -502,19 +599,37 @@ const Home = () => {
                 enfermeiros, atendentes e consultores de saúde.
               </TextBoxCases>
             </BoxTextCases>
-            <div>
-              <BoxTextInsideCases>
-                <div>
-                  
-                </div>
-                <div>
-                  
-                </div>
-              </BoxTextInsideCases>
+            <BoxAllInsideCases>
+              <ContainerAllTextInsideCases>
+                <BoxTextInsideCases>
+                  <BoxItemText>
+                    <TextOrangeCases>Cliente</TextOrangeCases>
+                    <TextComplementOrange left='1rem'>Hospital Sírio-Libanês e o PROADI-SUS</TextComplementOrange>
+                  </BoxItemText>
+                  <BoxItemText>
+                    <TextOrangeCases left='2rem'>tecnologias</TextOrangeCases>
+                    <TextComplementOrange left='1rem'>#Design #React #Redux #Dynamo #StyleComponents</TextComplementOrange>
+                  </BoxItemText>
+                </BoxTextInsideCases>
+                <BoxTextInsideCases>
+                  <BoxItemText>
+                    <TextOrangeCases left='-14px'>Ano</TextOrangeCases>
+                    <TextComplementOrange Mleft='4.4rem' left='3.3rem'>2020</TextComplementOrange>
+                  </BoxItemText>
+                  <BoxItemText>
+                    <TextOrangeCases Mright='5rem' right='3rem'>equipe</TextOrangeCases>
+                    <BoxImageCases left='1rem'>
+                      <ImagePersonCases  />
+                      <ImagePersonCases left='-10px' Mleft='-20px' index='1'/>
+                      <ImagePersonCases left='-22px' Mleft='-38px' index='1'/>
+                    </BoxImageCases>
+                  </BoxItemText>
+                </BoxTextInsideCases>
+              </ContainerAllTextInsideCases>
               <div>
 
               </div>
-            </div>
+            </BoxAllInsideCases>
           </BoxCases>
         </ContainerCases>
       </div>
