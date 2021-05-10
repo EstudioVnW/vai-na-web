@@ -7,6 +7,11 @@ import './index.css';
 import Layouts from '../components/Layouts';
 import PageTitle from '../components/pageTitle/pageTitle';
 import CardHome from '../components/home/card';
+import PartnerSchols from '../components/home/PartnerSchool';
+import OverEstudio from '../components/home/OverEstudio';
+import ReinvestedMoney from '../components/home/ReinvestedMoney';
+import Depositions from '../components/home/Depositions';
+import History from '../components/home/History';
 
 //Imagens
 import BackgroundImage from '../images/images/Path7680.svg';
@@ -250,8 +255,8 @@ const LinePartners = styled.div`
 	}
 `;
 
-const ContainerSchool = styled.div`
-  height: 100vh;
+const Content = styled.div`
+  height: 50vh;
   width: 100%;
   display: flex;
 `;
@@ -463,6 +468,20 @@ const Home = (props) => {
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
   const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
 
+  const RenderHeader = () => (
+    <ContentHeader>
+      <ImageLogo src={ImageLogoVnW} alt='Logotipo' />
+      <ContentCard>
+        <CardHome />
+      </ContentCard>
+      <TextPresentation>
+        Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as
+        desigualdades e desenvolvemos a força de trabalho do futuro.
+      </TextPresentation>
+      <ButtonScroll onClick={scrollDow}><img src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
+    </ContentHeader>
+  );
+
   const PartnerNetworks = () => {
     return (
       <div>
@@ -580,6 +599,24 @@ const Home = (props) => {
     )
   }
 
+  const RenderNetwork = () => (
+    <ContainerNetwork id='content-1'>
+      <div>
+        <PageTitle data={isTitle} isPage='isHome' />
+        <NetworkText>
+          A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
+          parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
+          <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
+          Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
+          pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
+        </NetworkText>
+      </div>
+      <ContainerPartners>
+        {PartnerNetworks()}
+      </ContainerPartners>
+    </ContainerNetwork>
+  )
+
   const Cases = () => {
     return (
       <div>
@@ -638,48 +675,21 @@ const Home = (props) => {
 
   return (
     <Layouts home>
-    <BackgroundHeader />
-      <ContentHeader>
-        <ImageLogo src={ImageLogoVnW} alt='Logotipo' />
-        <ContentCard>
-          <CardHome />
-        </ContentCard>
-        <TextPresentation>
-          Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as
-          desigualdades e desenvolvemos a força de trabalho do futuro.
-        </TextPresentation>
-        <ButtonScroll onClick={scrollDow}><img src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
-      </ContentHeader>
-      <DottedLineBackground>
-        <ContainerNetwork id='content-1'>
-          <div>
-            <PageTitle data={isTitle} isPage='isHome' />
-            <NetworkText>
-              A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
-              parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
-              <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
-              Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
-              pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
-            </NetworkText>
-          </div>
-          <ContainerPartners>
-            {PartnerNetworks()}
-          </ContainerPartners>
-        </ContainerNetwork>
-        <ContainerSchool>
-          <div>
-            <PageTitle data={isTitleSchool} isPage='isHome' />
-            <SchoolText>
-            Preparamos <BoldSchool>talentos diversos de todo o Brasil</BoldSchool>, das <BoldSchool>classes C, D e E</BoldSchool>, através do 
-            <BoldSchool>ensino de programação digital avançada</BoldSchool> e habilidades socioemocionais. 
-            Desejamos ajudar pessoas a construir <BoldSchool>carreiras relevantes</BoldSchool> dentro do espaço profundo 
-            da <BoldSchool>economia digital</BoldSchool>, injetando <BoldSchool>diversidade</BoldSchool>, promovendo <BoldSchool>inclusão</BoldSchool> e fortalecendo os 
-            <BoldSchool>direitos humanos</BoldSchool> no <BoldSchool>mercado de tecnologia</BoldSchool>.
-            </SchoolText>
-          </div>
-        </ContainerSchool>
-
-      {Cases()}
+      <BackgroundHeader />
+        {RenderHeader()}
+        <DottedLineBackground>
+        {RenderNetwork()}
+        <Content>
+          <PartnerSchols />
+        </Content>
+        <Content>
+          <OverEstudio />
+        </Content>
+        <ReinvestedMoney />
+        {Cases()}
+        <Depositions />
+        <p>Blog</p>
+        <History />
       </DottedLineBackground>
     </Layouts>
   )

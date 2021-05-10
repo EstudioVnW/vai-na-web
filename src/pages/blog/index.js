@@ -66,20 +66,22 @@ export const query = graphql`
   }
 `
 
-const renderBlog = (listItem, firstData) => {
+const renderBlog = (data) => {
+  const firstItem = data && data[0];
+  const listSlider = data && data.filter(item => item.id !== firstItem.id);
+console.log({firstItem})
   return (
     <>
       <ContantCard>
-        <Card data={firstData} />
+        <Card data={firstItem} />
       </ContantCard>
-      <PostSlider data={listItem} /> 
+      <PostSlider data={listSlider} /> 
     </>
   )
 }
 
 const Index = ({ data }) => {
-  const firstItem = data && data.posts.nodes[0];
-  const listSlider = data && data.posts.nodes.filter(item => item.id !== firstItem.id);
+  const item = data && data.posts.nodes;
   const title = `Radar <br/> Vai na Web`;
   const isTitle = { typePage: 'Blog', title: title };
 
@@ -87,9 +89,9 @@ const Index = ({ data }) => {
     <Layouts>
     <PageTitle data={isTitle}/>
       <ContainerBlog>
-        {!listSlider.length
+        {!item.length
           ? <Text>Não há conteúdo no momento</Text>
-          : renderBlog(listSlider, firstItem)
+          : renderBlog(item)
         }
       </ContainerBlog>
     </Layouts>
