@@ -308,6 +308,10 @@ const ImageSideCases = styled.img `
 	}
 `;
 
+const WrapperCases = styled.div`
+
+`;
+
 const BoxCases = styled.div `
   width: 840px;
   height: 561px;
@@ -458,9 +462,60 @@ const ButtonsItem = styled.span `
   transition: background-color 0.6s ease;
 `;
 
+// CASE SELECTOR
+const WrapperSelector = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const InputSelector = styled.input`
+
+  ::[type="radio"] {
+    display: none;
+  }
+
+  ::[type="radio"]+label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 27px;
+    height: 27x;
+    padding: 7px;
+    margin-right: 3px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    border-radius: 50%;
+  }
+
+  /* appearance for checked radiobutton */
+  ::[type="radio"]:checked + label:before {
+    background-color: blue;
+  }
+`;
+
+const handleOptionSelect = (option) => {
+  switch (option) {
+  case 'p':
+    console.log('eu sou o primeiro')
+    break;
+  case 's':
+    console.log('eu sou o segundo')
+    break;
+  case 't':
+    console.log('eu sou o terceiro')
+    break;
+  default:
+    break;
+  }
+}
+
+
 const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
+  const isTitleDepositions =  { typePage: 'Depoimentos', title: 'Mensagens <br/> de impacto'}
   const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
 
   const PartnerNetworks = () => {
@@ -583,10 +638,6 @@ const Home = (props) => {
   const Cases = () => {
     return (
       <div>
-        <PageTitle data={isTitleCases} isPage='isHome' />
-        <SubTitleCases>Saiba como ajudamos os nossos clientes a realizar suas missões:</SubTitleCases>
-        <ContainerCases>
-          <ImageSideCases src={ImageBrasil} alt='Conjunto de Imagens'/>
           <BoxCases id="Slide">
             <BoxTextCases>
               <TitleBoxCases>
@@ -627,11 +678,9 @@ const Home = (props) => {
                 </BoxTextInsideCases>
               </ContainerAllTextInsideCases>
               <div>
-
               </div>
             </BoxAllInsideCases>
           </BoxCases>
-        </ContainerCases>
       </div>
     )
   }
@@ -679,7 +728,37 @@ const Home = (props) => {
           </div>
         </ContainerSchool>
 
-      {Cases()}
+      {/* {Cases()} */}
+      {/* Inicio Cases*/}
+      <div>
+        <PageTitle data={isTitleCases} isPage='isHome' />
+        <SubTitleCases>Saiba como ajudamos os nossos clientes a realizar suas missões:</SubTitleCases>
+        <ContainerCases>
+          <ImageSideCases src={ImageBrasil} alt='Conjunto de Imagens'/>
+          <WrapperCases>
+           {Cases()}
+          </WrapperCases>
+          <WrapperSelector>
+            <input type="radio" name="radio" id="radio1" onClick={() => handleOptionSelect('p')} />
+            <input type="radio" name="radio" id="radio2" onClick={() => handleOptionSelect('s')} />
+            <input type="radio" name="radio" id="radio3" onClick={() => handleOptionSelect('t')} />
+          </WrapperSelector>
+        </ContainerCases>
+      </div>
+
+      {/* Fim Cases*/}
+
+      {/* Inicio Depoimentos */}
+      <div>
+        <PageTitle data={isTitleDepositions} isPage='isHome' />
+        <ContainerCases>
+         <WrapperCases>
+           {Cases()}
+          </WrapperCases>
+        </ContainerCases>
+      </div>
+      {/* Fim Depoimentos */}
+
       </DottedLineBackground>
     </Layouts>
   )
