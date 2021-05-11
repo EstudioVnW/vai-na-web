@@ -14,7 +14,7 @@ const Container = styled.section`
 	align-items: center;
 	margin-top: 5rem;
 	margin-bottom: 7rem;
-	padding: 1.5rem 0;
+	padding: 1.5rem 0 1.5rem 2rem;
 
 	@media (max-width: 424px) {
 		width: 43rem;
@@ -26,8 +26,8 @@ const Container = styled.section`
 `;
 
 const Image = styled.img `
-	margin: 0 2rem;
-	width: 19%;
+	width: 8.313rem;
+	height: 8.313rem;
 	border-radius: 50%;
 
 	@media (max-width: 424px) {
@@ -38,6 +38,7 @@ const Image = styled.img `
 `;
 
 const Content = styled.div`
+	padding-left: 2rem;
 	width: 70%;
 	display: flex;
 	flex-direction: column;
