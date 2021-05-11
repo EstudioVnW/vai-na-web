@@ -20,7 +20,7 @@ const Container = styled.div`
 		margin: 0;
     width: 100%;
 		flex-direction: column;
-		border-bottom: 5px solid #0F2B92;
+		border-bottom: 1px solid #0F2B92;
 	}
 `;
 
@@ -39,6 +39,10 @@ const Figure = styled.figure`
 
 	@media (max-width: 768px) {
 		width: 100%;
+		height: 35vh;
+	}
+
+	@media (max-width: 425px) {
 		height: 25vh;
 	}
 `;
@@ -85,7 +89,7 @@ const Date = styled.p`
 	}
 
 	@media (max-width: 768px) {
-		font-size: 0.938rem;
+		font-size: 1.125rem;
 	}
 `;
 
@@ -106,7 +110,7 @@ const Status = styled.p`
 	@media (max-width: 1024px) {
 		padding: .5rem .5rem;
 		max-width: ${props => props.slider && '90px'};
-		font-size: 0.75rem;
+		font-size: .875rem;
 	}
 `;
 
@@ -146,9 +150,15 @@ const Description = styled.p`
 	text-overflow: ellipsis;
 
 	@media (max-width: 768px) {
-		font-size: 1.063rem;
 		width: 100%;
 		max-width: 100%;
+		font-size: 1.063rem;
+		font-weight: 400;
+		line-height: 1.5rem;
+	}
+
+	@media (max-width: 375px) {
+		padding-top: 1rem;
 	}
 `;
 

@@ -27,9 +27,8 @@ const Figure = styled.figure`
 	width: 2.5rem;
 
 	@media (max-width: 768px) {
-	display: ${props => props.mob ? 'flex' : 'none'};
-	width: .792rem;
-		/* flex-direction: column; */
+		display: ${props => props.mob ? 'flex' : 'none'};
+		/* width: .792rem; */
 	}
 `;
 
@@ -38,14 +37,25 @@ const Arrow = styled.p`
 	font-weight: 200;
 	color: #00145D;
 	cursor: pointer;
+
+	@media (max-width: 768px) {
+		font-size: 2.3rem;
+	}
 `;
 
-// const ContainerPagination = styled.div`
-// display: flex;
-// `;
+const ContainerPagination = styled.div`
+	display: flex;
+	align-items: center;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		justify-content: space-between;
+	}
+`;
 
 const ContentPagination = styled.div`
 	display: flex;
+	align-items: center;
 `;
 
 const PaginationButton = styled.button`
@@ -60,11 +70,11 @@ const PaginationButton = styled.button`
 	background: ${props => props.isSelected && '#FDE7A9'};
 	border-radius: 50%;
 
-	@media (max-width: 768px) {
-    padding: 0;
-    width: 1.875rem;
-    height: 1.875rem;
-		font-size: .688rem;
+	@media (max-width: 425px) {
+		padding: 0;
+    width: 2.375rem;
+    height: 2.375rem;
+    font-size: .938rem;
 	}
 `;
 
@@ -143,7 +153,7 @@ const Slider = ({ data }) => {
 	}
 
 	const renderPagination = () => (
-		<ContentPagination>
+		<ContainerPagination>
 			<Figure mob>
 				{current >= 7 && <Arrow onClick={handlePrevious}>{'<'}</Arrow>}
 			</Figure>
@@ -159,9 +169,10 @@ const Slider = ({ data }) => {
 				))}
 			</ContentPagination>
 			<Figure mob>
-				{current <= data.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+				{/* {current <= data.length && <Arrow onClick={handleNext}>{'>'}</Arrow>} */}
+				<Arrow onClick={handleNext}>{'>'}</Arrow>
 			</Figure>
-		</ContentPagination>
+		</ContainerPagination>
 	)
 
 	return (

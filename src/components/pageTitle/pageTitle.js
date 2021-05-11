@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 // styles
 const Container = styled.section`
-  padding-left: 5.125rem;
-  margin-left: 1rem;
+  padding-left: 6.125rem;
 `;
 
 const BoxTitle = styled.div`
