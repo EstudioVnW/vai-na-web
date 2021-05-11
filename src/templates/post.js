@@ -15,7 +15,7 @@ const Container = styled.section`
   margin: auto;
 `;
 
-const ContainerMain = styled.div `
+const ContainerMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +43,7 @@ margin-bottom: 1rem;
 	}
 `;
 
-const TextDescription = styled.article `
+const TextDescription = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,20 +124,22 @@ const TextDescription = styled.article `
 
 export default function PostBlog({ data }) {
   const isTitle = {
-    date: data.item.publishedAt, 
+    date: data.item.publishedAt,
     title: data.item.title,
     excerpt: data.item.excerpt,
   };
 
+  console.log({data})
+
   return (
     <Layout isPage='postBlog'>
-      <PageTitle data={isTitle} isPage='postBlog'/>
+      <PageTitle data={isTitle} isPage='postBlog' />
       <Container>
         <ContainerMain>
           {/* <Image src={data.item.cover.url || ''} alt='Foto principal' /> */}
-          <TextDescription dangerouslySetInnerHTML={{ __html: data.item.content.html }}></TextDescription>		
+          <TextDescription dangerouslySetInnerHTML={{ __html: data.item.content.html }}></TextDescription>
         </ContainerMain>
-        <CardAuthor author={data.item.authors[0]}/> 
+        <CardAuthor author={data.item.authors[0]} />
       </Container>
     </Layout>
   )
@@ -148,30 +150,31 @@ export const query = graphql`
     item: graphCmsPost(id: { eq: $id }) {
       id
       title
-      excerpt 
-        publishedAt
-        createdAt
-        tags {
-          name
-        }
-        content {
+      excerpt
+      isHighlighted
+      publishedAt
+      createdAt
+      tags {
+        name
+      }
+      content {
+        html
+      }
+      cover {
+        url
+      }
+      authors {
+        id
+        name
+        jobTitle
+        socialNetworkLink
+        bio {
           html
         }
-        cover {
+        photo {
           url
         }
-        authors {
-          id
-          name
-          jobTitle
-          socialNetworkLink
-          bio {
-            html
-          }
-          photo {
-            url
-          }
-        }
+      }
     }
   }
 `

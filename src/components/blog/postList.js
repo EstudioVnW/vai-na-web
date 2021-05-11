@@ -12,6 +12,12 @@ const Container = styled.div`
   flex-wrap: wrap;
   align-items: start;
   padding: 44.2px 0 56.2px 0;
+
+
+  @media (max-width: 768px) {
+    width: 100%;
+		flex-direction: column;
+	}
 `;
 
 const PostList = ({ data }) => {

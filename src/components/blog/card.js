@@ -14,6 +14,14 @@ const Container = styled.div`
 	:nth-child(3n + 3) {
 		margin-right: 0;
 	}
+
+	@media (max-width: 768px) {
+		padding: 2.306rem 0;
+		margin: 0;
+    width: 100%;
+		flex-direction: column;
+		border-bottom: 5px solid #0F2B92;
+	}
 `;
 
 const Figure = styled.figure`
@@ -27,6 +35,11 @@ const Figure = styled.figure`
 	@media (max-width: 1024px) {
 		width: ${props => !props.slider && '30rem'};
 		height: ${props => props.slider ? '8.875rem' : '20rem'};
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 25vh;
 	}
 `;
 
@@ -49,6 +62,11 @@ const Image = styled.img`
 const Content = styled.div`
 	padding-left: ${props => !props.slider && '2.813rem'};
 	width: ${props => !props.slider && '29.563rem'};
+
+	@media (max-width: 768px) {
+		padding: 0;
+		width: 100%;
+	}
 `;
 
 const ContentDate = styled.div`
@@ -64,6 +82,10 @@ const Date = styled.p`
 
 	@media (max-width: 1024px) {
 		font-size: 0.75rem;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 0.938rem;
 	}
 `;
 
@@ -104,6 +126,10 @@ const Title = styled(Link)`
 		color: #0F2B92;
 		text-decoration: underline;
 	}
+
+	@media (max-width: 768px) {
+		font-size: 1.313rem;
+	}
 `;
 
 const Description = styled.p`
@@ -118,6 +144,12 @@ const Description = styled.p`
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
+
+	@media (max-width: 768px) {
+		font-size: 1.063rem;
+		width: 100%;
+		max-width: 100%;
+	}
 `;
 
 const formatMonth = (month) => {

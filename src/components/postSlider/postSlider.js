@@ -16,10 +16,21 @@ const Content = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const Figure = styled.figure`
+	display: ${props => props.mob ? 'none' : 'flex'};
 	width: 2.5rem;
+
+	@media (max-width: 768px) {
+	display: ${props => props.mob ? 'flex' : 'none'};
+	width: .792rem;
+		/* flex-direction: column; */
+	}
 `;
 
 const Arrow = styled.p`
@@ -28,6 +39,10 @@ const Arrow = styled.p`
 	color: #00145D;
 	cursor: pointer;
 `;
+
+// const ContainerPagination = styled.div`
+// display: flex;
+// `;
 
 const ContentPagination = styled.div`
 	display: flex;
@@ -44,6 +59,24 @@ const PaginationButton = styled.button`
 	color: #0F2B92;
 	background: ${props => props.isSelected && '#FDE7A9'};
 	border-radius: 50%;
+
+	@media (max-width: 768px) {
+    padding: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+		font-size: .688rem;
+	}
+`;
+
+const Text = styled.p`
+	display: none;
+
+	@media (max-width: 768px) {
+		display: flex;
+		font-size: .688rem;
+		color: #0F2B92;
+		font-weight: 600;
+	}
 `;
 
 const Slider = ({ data }) => {
@@ -59,40 +92,40 @@ const Slider = ({ data }) => {
 		let arrayPages = [];
 		let totalPages = Math.ceil(isData.length / 6);
 
-		for(var i = 1; i <= totalPages; ++i) {
+		for (var i = 1; i <= totalPages; ++i) {
 			arrayPages.push(i);
 		}
 
 		setPage(arrayPages);
-  }, []);
+	}, []);
 
 	const handlePrevious = () => {
 		let handleSlide = current - 6;
 		let renderPage = currentPage - 1;
-		
+
 		setCurrentPage(renderPage);
 		setCurrent(handleSlide);
-  }
-	
+	}
+
 	const handleNext = () => {
 		let handleSlide = current + 6;
 		let renderPage = currentPage + 1;
 
 		setCurrentPage(renderPage);
 		setCurrent(handleSlide);
-  }
+	}
 
 	const handlePagination = (number) => {
-		let handleSlide =  number * 6;
+		let handleSlide = number * 6;
 
 		setCurrentPage(number);
 		setCurrent(handleSlide);
-  }
+	}
 
 	const renderSlider = (item) => {
 		const listItem = item ? item : [];
 		const sliderQuantity = 6;
-		let	startNumber = current - sliderQuantity;
+		let startNumber = current - sliderQuantity;
 		let endNumber = current;
 		const renderList = listItem.slice(startNumber, endNumber);
 
@@ -108,10 +141,12 @@ const Slider = ({ data }) => {
 			</Content>
 		)
 	}
-	
-	return (
-		<Container>
-			{renderSlider(data)}
+
+	const renderPagination = () => (
+		<ContentPagination>
+			<Figure mob>
+				{current >= 7 && <Arrow onClick={handlePrevious}>{'<'}</Arrow>}
+			</Figure>
 			<ContentPagination>
 				{page.map(i => (
 					<PaginationButton
@@ -121,8 +156,19 @@ const Slider = ({ data }) => {
 					>
 						{i}
 					</PaginationButton>
-					))}
+				))}
 			</ContentPagination>
+			<Figure mob>
+				{current <= data.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+			</Figure>
+		</ContentPagination>
+	)
+
+	return (
+		<Container>
+			{renderSlider(data)}
+			{renderPagination()}
+			<Text>Voltar para o Topo</Text>
 		</Container>
 	)
 }
