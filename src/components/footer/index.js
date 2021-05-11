@@ -84,10 +84,6 @@ const LogoVnW = styled.img `
 	width: 3rem;
 	margin-left: 1rem;
 
-	/* @media (max-width: 1400px) {
-		margin: 0 1rem;
-	} */
-
 	@media (max-width: 768px) {
 		width: 25px;
 		margin: 0 0 0 1rem;
@@ -102,30 +98,14 @@ const LogoVnW = styled.img `
 const Container = styled.footer`
 	display: flex;
 	flex-direction: column;
-	min-height: 300px;
 	background-color: #00145D;
 	height: auto;
-	@media (max-width: 424px) {
-		width: 28rem;
-	}
+
 `;
 
 const ContainerAll = styled.div `
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-`;
-
-
-const ContainerTextIcons = styled.div `
-	display: flex;
-	width: 30rem;
-
-	@media (max-width: 424px) {
-		padding: 1rem;
-		margin-top: 2rem;	
-	}	
 `;
 
 const TextFooter = styled.p`
@@ -138,19 +118,17 @@ const TextFooter = styled.p`
 
 	@media (max-width: 970px) {
 		width: 100%;
-		padding: 0 10% 0 10%;
+		padding: 0 10% 0 0;
 		text-align: left;
 		font-size: 14px;
-	}	
+	}
+	@media (max-width: 768px) {
+		padding: 0 10% 0 10%;
+	}
+	@media (max-width: 425px) {
+		padding: 0;
+	}
 
-`;
-
-const BoxText = styled.div `
-	display: flex;
-	flex-direction: column;
-	/* margin-top: -10px; */
-	width: 100%;
-	margin-left: 1rem;
 `;
 
 const TextLink = styled.a `
@@ -164,13 +142,6 @@ const TextLink = styled.a `
 	@media (max-width: 970px) {
 		font-size: 14px;
 	}
-`;
-
-const BoxContact = styled.div `
-	display: flex;
-	flex-direction: column;
-	margin-left: -1.5rem;
-	margin-top: -0.5rem;
 `;
 
 const TextContact = styled.p `
@@ -190,6 +161,9 @@ const TextContact = styled.p `
 		padding: 0 10% 0 10%;
 		margin: 24px 0 0 0;
 	}
+	@media (max-width: 425px) {
+		padding: 0;
+	}
 `;
 
 const BoxIcons = styled.div `
@@ -197,15 +171,16 @@ const BoxIcons = styled.div `
 	justify-content: space-between;
 	width: 69%;
 	margin-top: 1.8rem;
-	margin-left: 1rem;
 
 	@media (max-width: 424px) {
 		width: 100%;
-		/* padding: 4rem; */
 	}
 
 	@media (max-width: 768px) {
 		margin-left: 10%;
+	}
+	@media (max-width: 425px) {
+		margin-left: 0;
 	}
 `;
 
@@ -225,20 +200,35 @@ const Logo = styled.img `
 	width: 6rem;
 	margin-bottom: 8rem;
 	margin-top: -0.5rem;
-	/* @media (max-width: 424px) {
-	} */
 `;
-
-const LineDivision = styled.div `
+const LineDivision = styled.div`
+	width: 100%;
 	background-color: #0F2B92;
 	height: 2px;
-	width: 79%;
-	margin-top: -4rem;
+	
+`;
+const Baseboard = styled.div `
+	width: 100%;
+	text-align: center;
+	margin: 1rem 0 0 0;
+	padding: 0 15% 0 15%;
+	@media(max-width: 1254px) {
+		padding: 0 5% 0 5%;
+	}
+	@media(max-width: 968px) {
+		padding: 0 5% 0 5%;
+	}
+	@media(max-width: 768px) {
+		padding: 0 15% 0 15%;
+	}
+	@media(max-width: 425px) {
+		padding: 0 5% 0 5%;
+	}
 `;
 
 const Text = styled.p `
 	color: #FFAC2D;
-	font-size: 1.1rem;
+	font-size: 1rem;
 	padding: 1rem;
 `;
 
@@ -264,6 +254,9 @@ const TextLinks = styled.div`
 		display: flex; flex-direction: column;
 		padding: 0 10% 0 10%;
 		margin: 24px 0 0 0;
+	}
+	@media (max-width: 425px) {
+		padding: 0;
 	}
 `;
 
@@ -311,37 +304,6 @@ const Footer = () => {
 		</ContainerDivision>
 		<Container>
 			<ContainerAll>
-
-				{/* <TextFooter>
-					A missão do Vai na Web é colaborar com a democratização do acesso às 
-					tecnologias digitais avançadas e reduzir as desigualdades, 
-					promovendo um futuro inclusivo, próspero e sustentável.
-				</TextFooter>
-				<div>
-					<ContainerTextIcons>
-						<BoxText>
-							<TextLink href="https://medium.com/@olavainaweb" target="_blank" rel="noopener noreferrer">Media Kit</TextLink>
-							<TextLink href="https://www.deeptech.network/" target="_blank" rel="noopener noreferrer">Deep Tech Network</TextLink>
-							<TextLink href="/faq" rel="noopener noreferrer">
-								Perguntas Frequentes
-							</TextLink>
-						</BoxText>
-						<BoxContact>
-							<TextContact>
-								ola@vainaweb.com.br
-								+55 21 93456-7890
-							</TextContact>
-						</BoxContact>
-					</ContainerTextIcons>
-					<BoxIcons>
-							<a href="https://www.facebook.com/vainaweb" target="_blank" rel="noopener noreferrer"><Icon src={logoFacebook} alt="Logo Facebook"/></a>
-							<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noopener noreferrer"><Icon iconInst src={logoInstagram} alt="Logo Instagram"/></a>
-							<a href="https://medium.com/@olavainaweb" target="_blank" rel="noopener noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
-							<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank" rel="noopener noreferrer"><Icon src={logoLinkedin} alt="Logo Linkedin"/></a>
-							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noopener noreferrer"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
-					</BoxIcons>
-				</div>
-					<a href="/" rel="noopener noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a> */}
 			<Row marginTop={"7rem"} padding>
 				<div>
 					<TextFooter>
@@ -377,8 +339,10 @@ const Footer = () => {
 				</LogoBox>
 			</Row>
 
-				{/* <LineDivision></LineDivision>
-				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text> */}
+			<Baseboard>
+				<LineDivision></LineDivision>
+				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>
+			</Baseboard>
 			</ContainerAll>
 		</Container>
 		</ContainerFooter>
