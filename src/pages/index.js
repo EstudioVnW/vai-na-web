@@ -10,7 +10,6 @@ import CardHome from '../components/home/card';
 import CardSchool from '../components/home/cardSchool';
 import PartnerSchols from '../components/home/PartnerSchool';
 import OverEstudio from '../components/home/OverEstudio';
-import ReinvestedMoney from '../components/home/ReinvestedMoney';
 import Depositions from '../components/home/Depositions';
 import History from '../components/home/History';
 
@@ -673,13 +672,8 @@ const Home = (props) => {
         {RenderHeader()}
         <DottedLineBackground>
         {RenderNetwork()}
-        <Content>
-          <PartnerSchols />
-        </Content>
-        <Content>
-          <OverEstudio />
-        </Content>
-        <ReinvestedMoney />
+        <PartnerSchols />
+        <OverEstudio />
         {Cases()}
         <Depositions />
         <p>Blog</p>
