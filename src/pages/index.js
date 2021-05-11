@@ -605,7 +605,7 @@ const Home = (props) => {
         </TextDescriptionAll>
       </div>
       <ContainerPartners>
-        {PartnerNetworks()}
+      {PartnerNetworks()} 
       </ContainerPartners>
     </ContainerNetwork>
   )
@@ -629,7 +629,7 @@ const Home = (props) => {
                 enfermeiros, atendentes e consultores de saúde.
               </TextBoxCases>
             </BoxTextCases>
-            <BoxAllInsideCases>
+           <BoxAllInsideCases>
               <ContainerAllTextInsideCases>
                 <BoxTextInsideCases>
                   <BoxItemText>
@@ -659,7 +659,7 @@ const Home = (props) => {
               <div>
 
               </div>
-            </BoxAllInsideCases>
+            </BoxAllInsideCases> 
           </BoxCases>
         </ContainerCases>
       </div>
