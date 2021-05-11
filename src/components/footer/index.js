@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 //Images
 import logoFacebook from '../../images/icons/icon-facebook.svg';
@@ -15,6 +15,19 @@ const ContainerFooter = styled.div `
 	overflow: hidden;
 `;
 
+const tickerAnimation = keyframes`
+	0% {
+			transform: translate3d(0, 0, 0);
+			-webkit-transform: translate3d(0, 0, 0);
+			visibility: visible;
+	}
+
+	100% {
+			transform: translate3d(-100%, 0, 0);
+			-webkit-transform: translate3d(-100%, 0, 0);
+	}
+`;
+
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
 	position: relative;
@@ -26,12 +39,20 @@ const ContainerDivision = styled.div `
 	justify-content: center;
 	transform: matrix(1, -0.04, 0.07, 1, -4, 60.54);
 	box-shadow: 0px 0px 22px #00145D33;
+	overflow: hidden;
+
+	span {
+		animation: ${tickerAnimation} 50s linear infinite;
+	}
+
+
+
 	@media (max-width: 424px) {
 		/* width: 49rem; */
 	}
 `;
 
-const BoxDivision = styled.div `
+const BoxDivision = styled.span `
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -48,6 +69,7 @@ const TitleSpotlight = styled.p `
 	text-transform: uppercase;
 	color: #0F2B92;
 	font-weight: 100;
+	margin-left: 1rem;
 
 	@media (max-width: 768px) {
 		font-size: .9rem;
@@ -60,14 +82,15 @@ const TitleSpotlight = styled.p `
 
 const LogoVnW = styled.img `
 	width: 3rem;
+	margin-left: 1rem;
 
-	@media (max-width: 1400px) {
+	/* @media (max-width: 1400px) {
 		margin: 0 1rem;
-	}
+	} */
 
 	@media (max-width: 768px) {
 		width: 25px;
-		margin: 0;
+		margin: 0 0 0 1rem;
 	}
 
 	@media (max-width: 425px) {
@@ -231,7 +254,27 @@ const Footer = () => {
 						<TitleSpotlight>Carreira</TitleSpotlight>
 						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
 						<TitleSpotlight>tecnologia</TitleSpotlight>
-						{/* <LogoVnW src={logoVnW} alt="Logo Vai na Web"/> */}
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>Mercado</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>Carreira</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>tecnologia</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>Mercado</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>Carreira</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>tecnologia</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>Mercado</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>Carreira</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						<TitleSpotlight>tecnologia</TitleSpotlight>
+						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						
+						
 					</BoxDivision>
 				<LineOrange></LineOrange>
 		</ContainerDivision>
