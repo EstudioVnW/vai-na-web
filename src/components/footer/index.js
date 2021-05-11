@@ -17,6 +17,8 @@ const ContainerFooter = styled.div `
 
 const ContainerDivision = styled.div `
 	background-color: #FED5B2;
+	position: relative;
+	bottom: 1rem;
 	width: 103%;
 	padding: .8rem 0;
 	display: flex;
@@ -25,7 +27,7 @@ const ContainerDivision = styled.div `
 	transform: matrix(1, -0.04, 0.07, 1, -4, 60.54);
 	box-shadow: 0px 0px 22px #00145D33;
 	@media (max-width: 424px) {
-		width: 49rem;
+		/* width: 49rem; */
 	}
 `;
 
@@ -42,25 +44,42 @@ const LineOrange = styled.div `
 `;
 
 const TitleSpotlight = styled.p `
-	font-size: 4.375rem;
+	font-size: 2rem;
 	text-transform: uppercase;
 	color: #0F2B92;
 	font-weight: 100;
 
-	@media (max-width: 424px) {
-		font-size: 30px;
+	@media (max-width: 768px) {
+		font-size: .9rem;
+	}
+
+	@media (max-width: 425px) {
+		font-size: .9rem;
 	}
 `;
 
 const LogoVnW = styled.img `
-	width: 5rem;
+	width: 3rem;
 
 	@media (max-width: 1400px) {
 		margin: 0 1rem;
 	}
+
+	@media (max-width: 768px) {
+		width: 25px;
+		margin: 0;
+	}
+
+	@media (max-width: 425px) {
+		width: 20px;
+		margin: 0;
+	}
 `;
 
 const Container = styled.footer`
+	display: flex;
+	flex-direction: column;
+	min-height: 300px;
 	background-color: #00145D;
 	height: auto;
 	@media (max-width: 424px) {
@@ -77,12 +96,13 @@ const ContainerAll = styled.div `
 
 const Box = styled.div `
 	display: flex;
-	justify-content: space-evenly;
-	padding: 5rem;
+	flex-direction: column;
+	width: 100%;
+	background: silver; 
 	margin-top: 5rem;
 	@media (max-width: 424px) {
 		display: flex;
-		flex-wrap: wrap;
+
 	}	
 `;
 
@@ -104,8 +124,9 @@ const TextFooter = styled.p`
 	letter-spacing: 0.025rem;
 
 	@media (max-width: 424px) {
-		width: 80%;
-		text-align: center;
+		width: 100%;
+		padding: 0 10% 0 10%;
+		text-align: left;
 		font-size: 14px;
 	}	
 `;
@@ -113,7 +134,7 @@ const TextFooter = styled.p`
 const BoxText = styled.div `
 	display: flex;
 	flex-direction: column;
-	margin-top: -10px;
+	/* margin-top: -10px; */
 	width: 100%;
 	margin-left: 1rem;
 `;
@@ -210,14 +231,14 @@ const Footer = () => {
 						<TitleSpotlight>Carreira</TitleSpotlight>
 						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
 						<TitleSpotlight>tecnologia</TitleSpotlight>
-						<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						{/* <LogoVnW src={logoVnW} alt="Logo Vai na Web"/> */}
 					</BoxDivision>
 				<LineOrange></LineOrange>
 		</ContainerDivision>
 		<Container>
 			<ContainerAll>
 			<Box> 
-				<TextFooter>
+				{/* <TextFooter>
 					A missão do Vai na Web é colaborar com a democratização do acesso às 
 					tecnologias digitais avançadas e reduzir as desigualdades, 
 					promovendo um futuro inclusivo, próspero e sustentável.
@@ -246,10 +267,10 @@ const Footer = () => {
 							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noopener noreferrer"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
 					</BoxIcons>
 				</div>
-					<a href="/" rel="noopener noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
+					<a href="/" rel="noopener noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a> */}
 			</Box> 
-				<LineDivision></LineDivision>
-				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>
+				{/* <LineDivision></LineDivision>
+				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text> */}
 			</ContainerAll>
 		</Container>
 		</ContainerFooter>
