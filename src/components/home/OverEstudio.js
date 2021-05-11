@@ -19,6 +19,7 @@ import SecondPhotoEstudio from '../../images/images/VNW2-63.png';
 
 const ContainerEstudio = styled.div `
   display: flex;
+  margin-top: 8rem;
 `;
 
 const TextDescriptionAll = styled.p`
@@ -429,7 +430,7 @@ const PartnerOverEstudio = () => {
 	const isTitleEstudio = { typePage: 'Estúdio', title: 'Avançando o <br/> espaço inexplorado'};
 	
 	return (
-		<>
+	<div>
         <ContainerEstudio>
           <div>
             <PageTitle data={isTitleEstudio} isPage='isHome' />
@@ -503,7 +504,7 @@ const PartnerOverEstudio = () => {
           </CircleOrange>
           <SecondImagePhotoEstudio src={SecondPhotoEstudio} alt="Foto"/>
         </ContainerProfit>
-      </>
+      </div>
 	)
 }
 
