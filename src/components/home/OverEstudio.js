@@ -52,7 +52,7 @@ const TextDescriptionAll = styled.p`
   }
   
   @media (max-width: 768px) {
-    width: 43%;
+    width: 78%;
     margin-left: 0px;
   }
 `;
@@ -631,7 +631,7 @@ const PartnerOverEstudio = () => {
           </BoxPresentationItemServicesFourth>
         </ContainerServicesTextEstudio> 
         <BoxButton>
-          <Button colorHover='#272727'>Desejo Contratar!</Button>
+          <a href="https://forms.gle/bVRiWcWoHnL9D5tU8" target="_blank"><Button colorHover='#272727'>Desejo Contratar!</Button></a>
         </BoxButton>
         <ContainerProfit>
           <TextProfit>

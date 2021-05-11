@@ -605,7 +605,7 @@ const Home = (props) => {
         </TextDescriptionAll>
       </div>
       <ContainerPartners>
-      {PartnerNetworks()} 
+       {PartnerNetworks()} 
       </ContainerPartners>
     </ContainerNetwork>
   )
@@ -674,7 +674,7 @@ const Home = (props) => {
         {RenderNetwork()}
         <PartnerSchols />
         <OverEstudio />
-        {Cases()}
+         {Cases()} 
         <Depositions />
         <p>Blog</p>
         <History />
