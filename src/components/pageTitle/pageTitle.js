@@ -26,6 +26,7 @@ const TypePage = styled.h1`
 	font-size: 1rem;
 	font-weight: 200;
 	color: #FFAC2D;
+	
 	width: fit-content;
 	border: 1px solid #FFAC2D;
 	border-radius: 19px;
@@ -34,6 +35,7 @@ const TypePage = styled.h1`
 		margin-left: 9rem;
 	}
 `;
+
 
 const ContentTitle = styled.div`
 	display: flex;
@@ -52,7 +54,7 @@ const LineOrange = styled.span `
 
 const Title = styled.h2`
 	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2.125rem'};
-	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '18rem'};
+	width: ${props => props.pageBlog === 'postBlog' ? '90%' : ''};
 	max-width: 1272px;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	color: ${props => props.pageHome === 'isHome' ? '#272727' : '#FDE7A9'};
@@ -60,6 +62,11 @@ const Title = styled.h2`
 		font-size: 3.2rem;
 		width: 93%;
 	}
+`;
+
+const ContentSubTitle = styled.div`
+	display: flex;
+
 `;
 
 const SubTitle = styled.p `
@@ -121,9 +128,12 @@ const PageTitle = ({ isPage, data }) => {
 					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
 				{data?.excerpt && 
-				<SubTitle pageBlog={isPage}>
-					{data.excerpt}
-				</SubTitle>}
+					<ContentSubTitle>
+						<SubTitle pageBlog={isPage} >
+							{data.excerpt}
+						</SubTitle>
+					</ContentSubTitle>
+				}
 			</BoxTitle>
 		</Container>
 	)

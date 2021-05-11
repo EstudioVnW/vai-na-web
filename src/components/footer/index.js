@@ -225,12 +225,9 @@ const Footer = () => {
 				<div>
 					<ContainerTextIcons>
 						<BoxText>
-							<TextLink href="https://medium.com/@olavainaweb" target="_blank" rel="noreferrer">Media Kit</TextLink>
-							<TextLink href="https://www.deeptech.network/" target="_blank" rel="noreferrer">Deep Tech Network</TextLink>
-							<TextLink
-								href="/faq"
-								rel="noreferrer"
-							>
+							<TextLink href="https://medium.com/@olavainaweb" target="_blank" rel="noopener noreferrer">Media Kit</TextLink>
+							<TextLink href="https://www.deeptech.network/" target="_blank" rel="noopener noreferrer">Deep Tech Network</TextLink>
+							<TextLink href="/faq" rel="noopener noreferrer">
 								Perguntas Frequentes
 							</TextLink>
 						</BoxText>
@@ -242,14 +239,14 @@ const Footer = () => {
 						</BoxContact>
 					</ContainerTextIcons>
 					<BoxIcons>
-							<a href="https://www.facebook.com/vainaweb" target="_blank" rel="noreferrer"><Icon src={logoFacebook} alt="Logo Facebook"/></a>
-							<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noreferrer"><Icon iconInst src={logoInstagram} alt="Logo Instagram"/></a>
-							<a href="https://medium.com/@olavainaweb" target="_blank" rel="noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
-							<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank" rel="noreferrer"><Icon src={logoLinkedin} alt="Logo Linkedin"/></a>
-							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noreferrer"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
+							<a href="https://www.facebook.com/vainaweb" target="_blank" rel="noopener noreferrer"><Icon src={logoFacebook} alt="Logo Facebook"/></a>
+							<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noopener noreferrer"><Icon iconInst src={logoInstagram} alt="Logo Instagram"/></a>
+							<a href="https://medium.com/@olavainaweb" target="_blank" rel="noopener noreferrer"><Icon src={logoEmail} alt="Logo Email"/></a>
+							<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank" rel="noopener noreferrer"><Icon src={logoLinkedin} alt="Logo Linkedin"/></a>
+							<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noopener noreferrer"><Icon src={logoYoutube} alt="Logo Youtube"/></a>
 					</BoxIcons>
 				</div>
-					<a href="/" rel="noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
+					<a href="/" rel="noopener noreferrer"><Logo src={logoVnW} alt="Logo Vai na Web"/></a>
 			</Box> 
 				<LineDivision></LineDivision>
 				<Text>Site desenvolvido por estudantes do Vai na Web · 2021</Text>
