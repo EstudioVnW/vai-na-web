@@ -7,6 +7,7 @@ import './index.css';
 import Layouts from '../components/Layouts';
 import PageTitle from '../components/pageTitle/pageTitle';
 import CardHome from '../components/home/card';
+
 import PartnerSchols from '../components/home/PartnerSchool';
 import OverEstudio from '../components/home/OverEstudio';
 import Depositions from '../components/home/Depositions';
@@ -417,6 +418,41 @@ const ImagePersonCases = styled.div `
     left: ${props => props.Mleft};
 	}
 `;
+
+const ContentCardSchool = styled.section`
+  display: flex;
+  width: 50%;
+  margin-top: 6rem;
+  margin-left: 2rem;
+`;
+
+const DivCards = styled.div`
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
+
+const ContentCardDf = styled.div`
+  position: relative;
+  z-index: 1;
+`;
+
+const ContentCardDm = styled.div`
+  position: relative;
+  z-index: 1;
+`;
+
+const ContentCardDb = styled.div`
+  position: relative;
+  z-index: 1;
+`;
+const ContentCardCd = styled.div`
+  position: relative;
+  z-index: 1;
+`;
+
+
 
 
 const Home = (props) => {
