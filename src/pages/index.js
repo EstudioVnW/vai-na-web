@@ -7,7 +7,7 @@ import './index.css';
 import Layouts from '../components/Layouts';
 import PageTitle from '../components/pageTitle/pageTitle';
 import CardHome from '../components/home/card';
-import CardSchool from '../components/home/cardSchool';
+
 import PartnerSchols from '../components/home/PartnerSchool';
 import OverEstudio from '../components/home/OverEstudio';
 import Depositions from '../components/home/Depositions';
