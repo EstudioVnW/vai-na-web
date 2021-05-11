@@ -153,9 +153,10 @@ const LineOrange = styled.div `
 	top: ${props => props.top};
 
 	@media (min-width: 1920px) {
-		right: ${props => props.right};
-		top: ${props => props.top};
-		width: ${props => props.width};
+		right: ${props => props.Mright};
+		top: ${props => props.Mtop};
+		width: ${props => props.Mwidth};
+		transform: ${props => props.Mtransform};
 	}
 
 	@media (max-width: 768px) {
@@ -197,6 +198,11 @@ const History = () => {
 				width='14rem' 
 				top='13rem' 
 				right='-1.5rem'
+				
+				Mright='17.5rem'
+				Mtop='19rem'
+				Mwidth='16rem'
+				Mtransform='rotate(54deg)'
 
 				MobileLeft='15rem'
 				MobileTop='8rem'
@@ -222,6 +228,8 @@ const History = () => {
 				top='4rem' 
 				right='7rem'
 
+				Mright='30rem'
+
 				MobileLeft='6.5rem'
 				MobileTop='-1rem'
 				MobileWidth='10rem'
@@ -244,6 +252,9 @@ const History = () => {
 				width='14rem' 
 				top='7rem' 
 				right='7rem'
+
+				Mright='31rem'
+				Mwidth='16rem'
 
 				MobileLeft='6rem'
 				MobileTop='-1rem'
@@ -270,6 +281,10 @@ const History = () => {
 				width='13rem' 
 				top='-2rem' 
 				right='-2rem'
+
+				Mright='18rem'
+				Mwidth='17rem'
+				Mtop='-5rem'
 
 				MobileLeft='15rem'
 				MobileTop='-11rem'
