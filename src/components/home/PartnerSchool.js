@@ -9,13 +9,20 @@ const Container = styled.div`
 `;
 
 const SchoolText = styled.p`
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.5rem;
-  width: 17.5rem;
-  margin-left: 11.4rem;
-  margin-top: -1rem;
-  margin-bottom: 5rem;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.5rem;
+	width: 17.5rem;
+	margin-left: 11.4rem;
+	margin-top: -1rem;
+	margin-bottom: 2rem;
+
+	@media (min-width: 1920px) {
+	margin-left: 16.4rem;
+	line-height: 2.5rem;
+	font-size: 22px;
+	width: 27.5rem;
+  }
 `;
 
 const BoldSchool = styled.b`
@@ -23,7 +30,7 @@ const BoldSchool = styled.b`
 `;
 
 const PartnerSchols = () => {
-  const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
+	const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de <br/> lançamento de estrelas' };
 
 	return (
 		<div>
