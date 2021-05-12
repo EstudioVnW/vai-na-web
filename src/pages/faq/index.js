@@ -18,16 +18,20 @@ const Content = styled.section`
 	padding: 6.706rem 0 12.375rem 0;
 	width: 65%;
 	margin: auto;
+
+	@media (max-width: 768px) {
+		padding-top: 7.688rem;
+		width: 90%;
+	}
 `;
 
 const ContentBox = styled.div`
 	padding-bottom: 1.188rem;
-	/* min-height: 4.5rem; */
 `;
 
 const ContentQuestion = styled.div`
-	/* position: relative;
-	top: 	1rem; */
+	position: relative;
+	top: 	1rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -59,12 +63,10 @@ const Img = styled.img`
 const ContentAnswer = styled.div`
 	display: ${props => props.display ? 'flex' : 'none'};
 	padding: 2.5rem 2.875rem;
-	/* margin-bottom: 1.188rem; */
-	background: red;
+	background: rgb(253 231 169 / 25%);
 `;
 
 const Answer = styled.p`
-/* background: #fef9e9; */
 	font-size: 1.625rem;
 	color: #272727;
 	line-height: 2.75rem;
@@ -84,73 +86,10 @@ export const query = graphql`
   }
 `
 
-const listFaq = [
-	{
-		question: 'O que é?',
-		answer: '1 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'Pra quem é?',
-		answer: '2 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'Onde é?',
-		answer: '3 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'São só para pessoas negras?',
-		answer: '4 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'É só pra quem é da favela?',
-		answer: '5 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'Qual é o valor do investimento?',
-		answer: '6 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'O que são linguagens de programação?',
-		answer: '7 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'O que é programação?',
-		answer: '8 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'O que é e o que faz um desenvolvedor front-end?',
-		answer: '9 Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'O que são aulas de habilidades socioemocionais?',
-		answer: ' Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr', 
-	},
-	{
-		question: 'O que são aulas de habilidades socioemocionais?',
-		answer: 'Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'O Vai na Web encaminha para o mercado de trabalho?',
-		answer: 'Sim, o nosso programa é focado no desenvolvimento das principais demandas do mercado e está em contato permanente com empresas parceiras, do setor, o que oferece aos estudantes formados oportunidades reais de uma carreira.',
-	},
-	{
-		question: 'O Vai na Web encaminha para o mercado de trabalho?',
-		answer: 'Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'Quanto tempo dura o programa?',
-		answer: 'Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-	{
-		question: 'Como faço para fazer parte?',
-		answer: 'Lorem Ipsum is simply dummy answer of the printing and typesetting industry. Lorem Ipsum has been the industr',
-	},
-]
-
 const Index = ({ data }) => {
 	const [isSelected, setSelected] = useState(undefined);
 
-  const isTitle = { typePage: 'Faq', title: 'Perguntas frequentes' };
+  const isTitle = { typePage: 'Faq', title: 'Perguntas <br/> frequentes' };
 
 	const handleClicked = (item) => {
 		if(item === isSelected) {
@@ -165,14 +104,14 @@ const Index = ({ data }) => {
 			<Container>
 				<PageTitle data={isTitle}/>
 				<Content>
-					{listFaq.map((item, index) => (
+					{data?.posts?.nodes.map((item, index) => (
 						<ContentBox key={index}>
 							<ContentQuestion>
 								<Question>{item.question}</Question>
 								<Img src={iconOpenModal} alt='Abrir detalhe' onClick={() => handleClicked(index)}/>
 							</ContentQuestion>
 							<ContentAnswer display={index === isSelected}>
-								<Answer>{item.answer}</Answer>
+								<Answer dangerouslySetInnerHTML={{ __html: item.answer.html}}></Answer>
 							</ContentAnswer>
 						</ContentBox>
 					))}

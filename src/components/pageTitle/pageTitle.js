@@ -6,10 +6,10 @@ const Container = styled.section`
   padding-left: 5.125rem;
   margin-left: 1rem;
 
-  @media (max-width: 768px) {
-    padding-left: 0px;
-  	margin-left: 0px;
-  }
+	@media (max-width: 768px) {
+		padding: 0;
+		margin: 0;
+	}
 `;
 
 const BoxTitle = styled.div`
@@ -59,13 +59,12 @@ const TypePage = styled.h1`
 	}
 `;
 
-
 const ContentTitle = styled.div`
 	display: flex;
 	padding-top: 1rem;
 `;
 
-const LineOrange = styled.span `
+const LineOrange = styled.span`
 	padding-right: 0.5rem;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	font-weight: 200;
@@ -76,7 +75,7 @@ const LineOrange = styled.span `
 	}
 
 	@media (max-width: 768px) {
-		margin-left: 10rem;
+		padding-left: 3.3rem;
 	}
 
 	@media (max-width: 425px) {
@@ -103,19 +102,35 @@ const Title = styled.h2`
 	@media (max-width: 425px) {
 		font-size: 2rem;
 	}
+
+	@media (max-width: 375px) {
+		font-size: 1.938rem;
+	}
 `;
 
 const ContentSubTitle = styled.div`
+	width: 90%;
 	display: flex;
-
+	text-align: left;
+	justify-content: ${props => props.pageBlog === 'postBlog' ? '' : 'flex-end'};
+	margin-top: 4rem;
 `;
 
-const SubTitle = styled.p `
-	font-size: ${props => props.pageBlog === 'postBlog' ? '30px' : '36px'};
+const SubTitle = styled.p`
+	color: ${props => props.pageBlog === 'postBlog' ? '' : '#00145D'};
+	font-size: ${props => props.fontSize ? props.fontSize : '36px'};
 	font-weight: 100;
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
 	max-width: 970px;
 	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 3.148rem 4.5rem' : '0 0 5.148rem 4.5rem'};
+`;
+
+const SubParagraph = styled.span`
+	color: ${props => props.pageBlog === 'postBlog' ? '' : '#272727'};
+	font-size: ${props => props.pageBlog === 'postBlog' ? '' : '24px'};
+	font-weight: 300;
+	display: flex;
+	justify-content: flex-end;
 `;
 
 const formatMonth = (month) => {
@@ -158,7 +173,7 @@ const formatDate = (date) => {
 	return <Date>{day} de {formatMonth(month)} · {year}</Date>
 }
 
-const PageTitle = ({ isPage, data }) => {
+const PageTitle = ({ isPage, data, fontSize }) => {
 	return (
 		<Container>
 			{data?.typePage && <TypePage pageHome={isPage}>{data.typePage}</TypePage>}
@@ -168,10 +183,13 @@ const PageTitle = ({ isPage, data }) => {
 					<LineOrange pageHome={isPage}>//</LineOrange>
 					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
-				{data?.excerpt && 
+				{data?.excerpt &&
 					<ContentSubTitle>
-						<SubTitle pageBlog={isPage} >
-							{data.excerpt}
+						<SubTitle pageBlog={isPage} fontSize={fontSize}>
+							{data.excerpt} 
+							<SubParagraph>
+							<b>{data.author} </b> {data.office}
+							</SubParagraph>
 						</SubTitle>
 					</ContentSubTitle>
 				}
