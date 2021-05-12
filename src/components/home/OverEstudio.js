@@ -19,7 +19,6 @@ import SecondPhotoEstudio from '../../images/images/VNW2-63.png';
 
 const ContainerEstudio = styled.div `
   display: flex;
-  margin-top: 8rem;
 
   @media (max-width: 768px) {
     flex-wrap: wrap;
@@ -52,8 +51,15 @@ const TextDescriptionAll = styled.p`
   }
   
   @media (max-width: 768px) {
-    width: 43%;
+    width: 50%;
     margin-left: 0px;
+  }
+
+  @media (max-width: 425px) {
+    width: 75%;
+    margin-left: 0px;
+    line-height: 1.8rem;
+    font-size: 16px;
   }
 `;
 
@@ -81,7 +87,11 @@ const ImageLogoEstudio = styled.img `
 
   @media (max-width: 768px) {
     width: 40%;
-	}
+  }
+  
+  @media (max-width: 425px) {
+    width: 60%;
+  }
 `;
 
 const LineBlue = styled.div `
@@ -108,7 +118,12 @@ const FirstImagePhotoEstudio = styled.img `
   @media (max-width: 768px) {
     width: 100%;
     margin-top: -1px;
-	}
+  }
+  
+  @media (max-width: 425px) {
+    width: 24rem;
+    margin-top: 1px;
+  }
 `;
 
 const DetailsTitleService = styled.p `
@@ -143,6 +158,12 @@ const TitleServices = styled.p `
     font-size: 26px;
     width: 28%;
   }
+
+  @media (max-width: 425px) {
+    margin-left: 4rem;
+    width: 42%;
+    font-size: 20px;
+  }
 `;
 
 const SubTitleServices = styled.p `
@@ -175,6 +196,12 @@ const SubTitleServices = styled.p `
     line-height: 1.7rem;
     margin-bottom: 8rem;
   }
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+    margin-left: 4rem;
+    width: 67%;
+  }
 `;
 
 const ContainerServicesTextEstudio = styled.div `
@@ -184,6 +211,10 @@ const ContainerServicesTextEstudio = styled.div `
 
   @media (min-width: 1920px) {
     margin-top: 9rem;
+  }
+
+  @media (max-width: 425px) {
+    margin-bottom: 6rem;
   }
 `;
 
@@ -355,6 +386,10 @@ const DescriptionServices = styled.p `
     line-height: 1.6rem;
     margin-top: -1rem;
   }
+
+  @media (max-width: 425px) {
+    width: 69%;
+  }
 `;
 
 const DescriptionServicesIntefaces = styled.p `
@@ -382,6 +417,10 @@ const DescriptionServicesIntefaces = styled.p `
     width: 40%;
     line-height: 1.6rem;
     margin-top: -1rem;
+  }
+
+  @media (max-width: 425px) {
+    width: 63%;
   }
 `;
 
@@ -411,6 +450,10 @@ const DescriptionServicesSecond = styled.p `
     line-height: 1.6rem;
     margin-top: -1rem;
   }
+
+  @media (max-width: 425px) {
+    width: 54%;
+  }
 `;
 
 const BoxButton = styled.div `
@@ -438,6 +481,10 @@ const ContainerProfit = styled.div `
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+  }
+
+  @media (max-width: 425px) {
+    margin-top: 4rem;
   }
 `;
 
@@ -467,6 +514,10 @@ const TextProfit = styled.p `
     margin-top: 3rem;
     margin-left: 0px;
     width: 42%;
+  }
+
+  @media (max-width: 425px) {
+    width: 76%;
   }
 `;
 
@@ -512,6 +563,12 @@ const CircleOrange = styled.div `
     height: 18rem;
     margin-top: -7rem;
   }
+
+  @media (max-width: 425px) {
+    :hover {
+      background-size: 46%;
+    }
+  }
 `;
 
 const TextNumberCircle = styled.h2 `
@@ -544,6 +601,10 @@ const TextCircle = styled.p `
   @media (max-width: 768px) {
     width: 32%;
   }
+
+  @media (max-width: 425px) {
+    font-size: 9px;
+  }
 `;
 
 const SecondImagePhotoEstudio = styled.img `
@@ -563,6 +624,10 @@ const SecondImagePhotoEstudio = styled.img `
     margin-right: 0px;
     width: 70%;
   }
+
+  @media (max-width: 425px) {
+    width: 88%;
+  }
 `;
 
 
@@ -570,10 +635,10 @@ const PartnerOverEstudio = () => {
 	const isTitleEstudio = { typePage: 'Estúdio', title: 'Avançando o <br/> espaço inexplorado'};
 	
 	return (
-	<div>
+    <div>
+        <PageTitle data={isTitleEstudio} isPage='isHome' />
         <ContainerEstudio>
           <ContainerTextMain>
-            <PageTitle data={isTitleEstudio} isPage='isHome' />
             <TextDescriptionAll>
               Desenvolvemos o SIaaS: Social Impact as a Service, um modelo de ciclo 
               fechado que <BoldTextAll>entrega serviços digitais</BoldTextAll>, de alto nível de agilidade e inovação digital, 
@@ -631,7 +696,7 @@ const PartnerOverEstudio = () => {
           </BoxPresentationItemServicesFourth>
         </ContainerServicesTextEstudio> 
         <BoxButton>
-          <Button colorHover='#272727'>Desejo Contratar!</Button>
+          <a href="https://forms.gle/bVRiWcWoHnL9D5tU8" target="_blank"><Button colorHover='#272727'>Desejo Contratar!</Button></a>
         </BoxButton>
         <ContainerProfit>
           <TextProfit>
