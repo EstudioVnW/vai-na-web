@@ -131,7 +131,7 @@ export default function PostBlog({ data }) {
 
   return (
     <Layout isPage='postBlog'>
-      <PageTitle data={isTitle} isPage='postBlog'/>
+      <PageTitle fontSize='30px' data={isTitle} isPage='postBlog' />
       <Container>
         <ContainerMain>
           {/* <Image src={data.item.cover.url || ''} alt='Foto principal' /> */}
