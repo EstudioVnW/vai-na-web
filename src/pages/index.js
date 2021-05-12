@@ -9,8 +9,11 @@ import CardHome from '../components/home/card';
 
 import PartnerSchols from '../components/home/PartnerSchool';
 import OverEstudio from '../components/home/OverEstudio';
+// import ReinvestedMoney from '../components/home/ReinvestedMoney';
+import Cases from '../components/home/Cases';
 import Depositions from '../components/home/Depositions';
 import History from '../components/home/History';
+import RocketFooter from '../components/home/rocketFooter';
 
 //Imagens
 import BackgroundImage from '../images/images/Path7680.svg';
@@ -49,6 +52,8 @@ import ImageBrasil from '../images/images/Group7507.png';
 var scrollDow = function () {
   window.scrollTo(0, 740);
 };
+
+
 
 // styles
 const BackgroundHeader  = styled.div`
@@ -104,15 +109,31 @@ const ButtonScroll = styled.button`
   top: 0; */
 `;
 
+const Container = styled.div `
+  margin-top: 18rem;
+`;
+
 const ContainerNetwork = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
   margin-top: 2rem;
 
-  @media (min-width: 1920px) {
-    margin-top: 15rem;
-	}
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20rem;
+  }
+
+`;
+
+const ContainerTextNetwork = styled.div `
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 // const Image = styled.img`
@@ -146,7 +167,7 @@ const TextDescriptionAll = styled.p`
   line-height: 1.5rem;
   width: 17.5rem;
   margin-left: 11.4rem;
-  margin-top: -1rem;
+  margin-top: -3rem;
   margin-bottom: 2rem;
 
   @media (min-width: 1920px) {
@@ -154,7 +175,19 @@ const TextDescriptionAll = styled.p`
     line-height: 2.5rem;
     font-size: 22px;
     width: 27.5rem;
-	}
+  }
+
+  @media (max-width: 768px) {
+    width: 50%;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 425px) {
+    width: 75%;
+    margin-left: 0px;
+    line-height: 1.8rem;
+    font-size: 16px;
+  }
 `;
 
 const BoldTextAll = styled.b`
@@ -170,10 +203,18 @@ const BoldBackground = styled.b`
 
 const ContainerPartners = styled.div`
   position: relative;
+  margin-top: -11rem;
 
   @media (min-width: 1920px) {
-		margin-left: 15rem;
-	}
+    margin-left: 10rem;
+  }
+  
+  @media (max-width: 768px) {
+    margin-left: -39rem;
+    margin-bottom: 5rem;
+    margin-top: 0px;
+  }
+
 `;
 
 const BoxPartners = styled.div`
@@ -195,7 +236,21 @@ const BoxPartners = styled.div`
     height: 5.5rem;
     top: ${props => props.Mtop};
     left: ${props => props.Mleft};
-	}
+  }
+  
+  @media (max-width: 768px) {
+    border-radius: 42px;
+    width: 8.5rem;
+    height: 3.5rem;
+    top: ${props => props.MobileTop};
+  }
+
+  @media (max-width: 425px) {
+    top: ${props => props.MobileeTop};
+    left: ${props => props.MobileeLeft};
+    width: 7.4rem;
+    height: 2.9rem;
+  }
 `;
 
 const ImagePartners = styled.img`
@@ -221,7 +276,14 @@ const CirclePartners = styled.div`
     height: 8.5rem;
     top: ${props => props.Mtop};
     left: ${props => props.Mleft};
-	}
+  }
+  
+  @media (max-width: 425px) {
+    top: ${props => props.MobileeTop};
+    left: ${props => props.MobileeLeft};
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 `;
 
 const Logo = styled.img`
@@ -240,7 +302,13 @@ const LinePartners = styled.div`
   @media (min-width: 1920px) {
     top: ${props => props.Mtop};
     left: ${props => props.Mleft};
-	}
+  }
+  
+  @media (max-width: 425px) {
+    top: ${props => props.MobileeTop};
+    left: ${props => props.MobileeLeft};
+    width: ${props => props.MobileeWidth};
+  }
 `;
 
 const Content = styled.div`
@@ -269,192 +337,238 @@ const ContainerCases = styled.div `
   margin-top: 2.5rem;
   margin-left: 11.6rem;
   display: flex;
-
-  @media (min-width: 1920px) {
-    margin-left: 15.6rem;
-	}
 `;
+// const ContainerCases = styled.div `
+//   margin-top: 2.5rem;
+//   margin-left: 11.6rem;
+//   display: flex;
 
-const ImageSideCases = styled.img `
-  margin-right: 1rem;
-  height: 20rem;
-  background-color: #FFFFFF;
-  margin-top: 15rem;
+//   @media (min-width: 1920px) {
+//     margin-left: 15.6rem;
+// 	}
+// `;
 
-  @media (min-width: 1920px) {
-    width: 8rem;
-    margin-top: 23.7rem;
-	}
-`;
+// const ImageSideCases = styled.img `
+//   margin-right: 1rem;
+//   height: 20rem;
+//   background-color: #FFFFFF;
+//   margin-top: 15rem;
 
-const BoxCases = styled.div `
-  width: 840px;
-  height: 561px;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 22px #00000029;
-  border: 2px solid #00145D;
-  border-radius: 20px;
-  display: flex;
-  padding: 1.5rem;
-  margin-bottom: 5rem;
+//   @media (min-width: 1920px) {
+//     width: 8rem;
+//     margin-top: 23.7rem;
+// 	}
+// `;
 
-  @media (min-width: 1920px) {
-    width: 1251px;
-    height: 698px;
-	}
-`;
+// const WrapperCases = styled.div`
 
-const BoxTextCases = styled.div `
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
-`;
+// `;
 
-const TitleBoxCases = styled.h3 `
-  color: #0F2B92;
-  font-size: 30px;
-  width: 90%;
-  font-weight: 700;
-  line-height: 2.6rem;
+// const BoxCases = styled.div `
+//   width: 840px;
+//   height: 561px;
+//   background-color: #FFFFFF;
+//   box-shadow: 0px 0px 22px #00000029;
+//   border: 2px solid #00145D;
+//   border-radius: 20px;
+//   display: flex;
+//   padding: 1.5rem;
 
-  @media (min-width: 1920px) {
-    font-size: 44px;
-    line-height: 3.6rem;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     width: 1251px;
+//     height: 698px;
+// 	}
+// `;
 
-const TextBoxCases = styled.p `
-  font-size: 11px;
-  font-weight: 100;
-  line-height: 1.5rem;
-  width: 87%;
+// const BoxTextCases = styled.div `
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   width: 30%;
+// `;
 
-  @media (min-width: 1920px) {
-    font-size: 18px;
-    line-height: 2rem;
-    width: 91%;
-	}
-`;
+// const TitleBoxCases = styled.h3 `
+//   color: #0F2B92;
+//   font-size: 30px;
+//   width: 90%;
+//   font-weight: 700;
+//   line-height: 2.6rem;
 
-const BoxAllInsideCases = styled.div `
-  width: 70%;
-`;
+//   @media (min-width: 1920px) {
+//     font-size: 44px;
+//     line-height: 3.6rem;
+// 	}
+// `;
 
-const ContainerAllTextInsideCases = styled.div `
-  display: flex;
-  flex-direction: column;
-  height: 7rem;
-  justify-content: space-between;
+// const TextBoxCases = styled.p `
+//   font-size: 11px;
+//   font-weight: 100;
+//   line-height: 1.5rem;
+//   width: 87%;
 
-  @media (min-width: 1920px) {
-    height: 10rem;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     font-size: 18px;
+//     line-height: 2rem;
+//     width: 91%;
+// 	}
+// `;
 
-const BoxTextInsideCases = styled.div `
-  display: flex;
-  justify-content: space-between;
-`;
+// const BoxAllInsideCases = styled.div `
+//   width: 70%;
+// `;
 
-const BoxItemText = styled.div `
-  display: flex;
+// const ContainerAllTextInsideCases = styled.div `
+//   display: flex;
+//   flex-direction: column;
+//   height: 7rem;
+//   justify-content: space-between;
+
+//   @media (min-width: 1920px) {
+//     height: 10rem;
+// 	}
+// `;
+
+// const BoxTextInsideCases = styled.div `
+//   display: flex;
+//   justify-content: space-between;
+// `;
+
+// const BoxItemText = styled.div `
+//   display: flex;
   
-`;
+// `;
 
-const TextOrangeCases = styled.p `
-  color: #FF611E;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 11px;
-  margin-left: ${props => props.left};
-  margin-right: ${props => props.right};
+// const TextOrangeCases = styled.p `
+//   color: #FF611E;
+//   text-transform: uppercase;
+//   font-weight: 400;
+//   font-size: 11px;
+//   margin-left: ${props => props.left};
+//   margin-right: ${props => props.right};
 
-  @media (min-width: 1920px) {
-    font-size: 20px;
-    margin-right: ${props => props.Mright};
-	}
-`;
+//   @media (min-width: 1920px) {
+//     font-size: 20px;
+//     margin-right: ${props => props.Mright};
+// 	}
+// `;
 
-const TextComplementOrange = styled.p `
-  color: #272727;
-  text-align: left;
-  font-size: 11px;
-  margin-left: ${props => props.left};
-  margin-right: ${props => props.right};
+// const TextComplementOrange = styled.p `
+//   color: #272727;
+//   text-align: left;
+//   font-size: 11px;
+//   margin-left: ${props => props.left};
+//   margin-right: ${props => props.right};
 
-  @media (min-width: 1920px) {
-    font-size: 20px;
-    margin-right: ${props => props.Mright};
-    margin-left: ${props => props.Mleft};
-	}
-`;
+//   @media (min-width: 1920px) {
+//     font-size: 20px;
+//     margin-right: ${props => props.Mright};
+//     margin-left: ${props => props.Mleft};
+// 	}
+// `;
 
-const BoxImageCases = styled.div `
+// const BoxImageCases = styled.div `
+//   display: flex;
+//   margin-right: 3rem;
+
+//   @media (min-width: 1920px) {
+//     margin-right: 6rem;
+// 	}
+// `;
+
+// const ImagePersonCases = styled.div `
+//   width: 3.5rem;
+//   height: 3.5rem;
+//   border-radius: 50%;
+//   background-color: red;
+//   border: 1px solid #0F2B92;
+//   box-shadow: 0px 0px 33px #FF611E40;
+//   position: relative;
+//   z-index: ${props => props.index};
+//   left: ${props => props.left};
+
+
+//   @media (min-width: 1920px) {
+//     width: 5rem;
+//     height: 5rem;
+//     left: ${props => props.Mleft};
+// 	}
+// `;
+
+// const BoxImageScreenCases = styled.div `
+
+// `;
+
+const BoxButtons = styled.div `
   display: flex;
-  margin-right: 3rem;
-
-  @media (min-width: 1920px) {
-    margin-right: 6rem;
-	}
-`;
-
-const ImagePersonCases = styled.div `
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  background-color: red;
-  border: 1px solid #0F2B92;
-  box-shadow: 0px 0px 33px #FF611E40;
-  position: relative;
-  z-index: ${props => props.index};
-  left: ${props => props.left};
-
-
-  @media (min-width: 1920px) {
-    width: 5rem;
-    height: 5rem;
-    left: ${props => props.Mleft};
-	}
-`;
-
-const ContentCardSchool = styled.section`
-  display: flex;
-  width: 50%;
-  margin-top: 6rem;
-  margin-left: 2rem;
-`;
-
-const DivCards = styled.div`
-  display: flex;
-  width: 60%;
   flex-direction: column;
-  justify-content: space-evenly;
 `;
 
-const ContentCardDf = styled.div`
-  position: relative;
-  z-index: 1;
+const ButtonsItem = styled.span `
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 `;
 
-const ContentCardDm = styled.div`
-  position: relative;
-  z-index: 1;
-`;
+// CASE SELECTOR
+// const WrapperSelector = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+// `;
 
-const ContentCardDb = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-const ContentCardCd = styled.div`
-  position: relative;
-  z-index: 1;
-`;
+// const InputSelector = styled.input`
+
+//   ::[type="radio"] {
+//     display: none;
+//   }
+
+//   ::[type="radio"]+label:before {
+//     content: "";
+//     /* create custom radiobutton appearance */
+//     display: inline-block;
+//     width: 27px;
+//     height: 27x;
+//     padding: 7px;
+//     margin-right: 3px;
+//     /* background-color only for content */
+//     background-clip: content-box;
+//     border: 2px solid #bbbbbb;
+//     border-radius: 50%;
+//   }
+
+//   /* appearance for checked radiobutton */
+//   ::[type="radio"]:checked + label:before {
+//     background-color: blue;
+//   }
+// `;
+
+// const handleOptionSelect = (option) => {
+//   switch (option) {
+//   case 'p':
+//     console.log('eu sou o primeiro')
+//     break;
+//   case 's':
+//     console.log('eu sou o segundo')
+//     break;
+//   case 't':
+//     console.log('eu sou o terceiro')
+//     break;
+//   default:
+//     break;
+//   }
+// }
 
 
 const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
+  const isTitleDepositions =  { typePage: 'Depoimentos', title: 'Mensagens <br/> de impacto'}
+  const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
 
   const RenderHeader = () => (
     <ContentHeader>
@@ -482,6 +596,9 @@ const Home = (props) => {
           left='25rem'
           Mtop='4rem'
           Mleft='22rem'
+
+          MobileeTop='6.5rem'
+          MobileeLeft='22rem'
          >
           <ImagePartners width src={ImagePetronect} alt='Petronect' />
         </BoxPartners>
@@ -492,6 +609,9 @@ const Home = (props) => {
           left='17rem'
           Mtop='10rem'
           Mleft='14rem'
+
+          MobileeTop='9.5rem'
+          MobileeWidth='7rem'
         />
         <CirclePartners
           color='#FDE7A9' 
@@ -500,6 +620,9 @@ const Home = (props) => {
           left='13rem'
           Mtop='9rem' 
           Mleft='10rem'
+
+          MobileeTop='9.5rem'
+          MobileeLeft='14rem'
         >
           <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
         </CirclePartners>
@@ -510,6 +633,10 @@ const Home = (props) => {
           left='8.7rem'
           Mtop='18rem' 
           Mleft='4rem'
+
+          MobileeTop=''
+          MobileeLeft='10.7rem'
+          MobileeWidth=''
         />
         <CirclePartners
           color='#FFFFFF' 
@@ -518,6 +645,9 @@ const Home = (props) => {
           left='7rem'
           Mtop='17rem' 
           Mleft='0rem'
+
+          MobileeTop=''
+          MobileeLeft='9rem'
          >
           <Logo width='50%' src={ImageRocket} alt='Foguete' />
         </CirclePartners>
@@ -528,6 +658,10 @@ const Home = (props) => {
           left='7rem'
           Mtop='26.5rem' 
           Mleft='5rem'
+
+          MobileeTop=''
+          MobileeLeft='9rem'
+          MobileeWidth=''
         />
         <CirclePartners 
           color='#FDE7A9' 
@@ -536,6 +670,9 @@ const Home = (props) => {
           left='13rem' 
           Mtop='26rem' 
           Mleft='10rem'
+
+          MobileeTop='17rem'
+          MobileeLeft='14rem'
         >
           <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
         </CirclePartners>
@@ -546,11 +683,20 @@ const Home = (props) => {
           left='7rem'
           Mtop='36rem' 
           Mleft='5rem'
+
+          MobileeTop='22rem'
+          MobileeLeft='10rem'
+          MobileeWidth='7rem'
           />
         <BoxPartners
          top='19rem' 
          left='27rem' 
          Mtop='27rem' 
+
+         MobileTop='20rem'
+
+         MobileeTop='19rem'
+         MobileeLeft='23rem'
         >
           <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
         </BoxPartners>
@@ -560,11 +706,18 @@ const Home = (props) => {
           top='26rem' 
           left='16rem'
           Mtop='37rem' 
+
+          MobileeTop='23rem'
+          MobileeLeft='15.5rem'
+          MobileeWidth='9rem'
         />
         <BoxPartners
          top='28rem' 
          left='20rem' 
          Mtop='40rem' 
+         
+         MobileeTop='25rem'
+         MobileeLeft='20rem'
         >
           <ImagePartners src={ImageProadi} alt='Instituto Votorantim' />
         </BoxPartners>
@@ -574,12 +727,19 @@ const Home = (props) => {
           top='21rem' 
           left='16rem'
           Mtop='30rem' 
+
+          MobileeTop='20.1rem'
+          MobileeWidth='7rem'
+          MobileeLeft='18rem'
         />
         <BoxPartners
           top='27rem' 
           left='5rem'
           Mtop='39rem' 
           Mleft='-3rem'
+
+          MobileeTop='24rem'
+          MobileeLeft='9rem'
          >
           <ImagePartners src={ImageVotorantim} alt='Proadi SUS' />
         </BoxPartners>
@@ -588,91 +748,88 @@ const Home = (props) => {
   }
 
   const RenderNetwork = () => (
-    <ContainerNetwork id='content-1'>
-      <div>
+    <Container>
         <PageTitle data={isTitle} isPage='isHome' />
-        <TextDescriptionAll>
-          A partir de uma <BoldTextAll>rede colaborativa e sustentável</BoldTextAll>, composta de grandes empresas,
-          parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
-          <BoldTextAll> para entregar soluções com inovação, maturidade digital e transformação humana. </BoldTextAll>
-          Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
-          pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
-        </TextDescriptionAll>
-      </div>
-      <ContainerPartners>
-       {/* {PartnerNetworks()}  */}
-      </ContainerPartners>
-    </ContainerNetwork>
+      <ContainerNetwork id='content-1'>
+        <ContainerTextNetwork>
+          <TextDescriptionAll>
+            A partir de uma <BoldTextAll>rede colaborativa e sustentável</BoldTextAll>, composta de grandes empresas,
+            parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
+            <BoldTextAll> para entregar soluções com inovação, maturidade digital e transformação humana. </BoldTextAll>
+            Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
+            pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
+          </TextDescriptionAll>
+        </ContainerTextNetwork>
+        <ContainerPartners>
+          {PartnerNetworks()} 
+        </ContainerPartners>
+      </ContainerNetwork>
+    </Container>
   )
 
-  const Cases = () => {
-    return (
-      <div>
-        <PageTitle data={isTitleCases} isPage='isHome' />
-        <SubTitleCases>Saiba como ajudamos os nossos clientes a realizar suas missões:</SubTitleCases>
-        <ContainerCases>
-          <ImageSideCases src={ImageBrasil} alt='Conjunto de Imagens'/>
-          <BoxCases id="Slide">
-            <BoxTextCases>
-              <TitleBoxCases>
-                Inovando o sistema de atendimento do SUS
-              </TitleBoxCases>
-              <TextBoxCases>
-                Em parceria com o Hospital Sírio-Libanês e o PROADI-SUS desenvolvemos o Reg+.
-                Um sistema de telemedicina para regular as filas do SUS em todo o Brasil, otimizando o 
-                tempo de atendimento e diagnóstico dos pacientes através da integração das jornadas de médicos,
-                enfermeiros, atendentes e consultores de saúde.
-              </TextBoxCases>
-            </BoxTextCases>
-           <BoxAllInsideCases>
-              <ContainerAllTextInsideCases>
-                <BoxTextInsideCases>
-                  <BoxItemText>
-                    <TextOrangeCases>Cliente</TextOrangeCases>
-                    <TextComplementOrange left='1rem'>Hospital Sírio-Libanês e o PROADI-SUS</TextComplementOrange>
-                  </BoxItemText>
-                  <BoxItemText>
-                    <TextOrangeCases left='2rem'>tecnologias</TextOrangeCases>
-                    <TextComplementOrange left='1rem'>#Design #React #Redux #Dynamo #StyleComponents</TextComplementOrange>
-                  </BoxItemText>
-                </BoxTextInsideCases>
-                <BoxTextInsideCases>
-                  <BoxItemText>
-                    <TextOrangeCases left='-14px'>Ano</TextOrangeCases>
-                    <TextComplementOrange Mleft='4.4rem' left='3.3rem'>2020</TextComplementOrange>
-                  </BoxItemText>
-                  <BoxItemText>
-                    <TextOrangeCases Mright='5rem' right='3rem'>equipe</TextOrangeCases>
-                    <BoxImageCases left='1rem'>
-                      <ImagePersonCases  />
-                      <ImagePersonCases left='-10px' Mleft='-20px' index='1'/>
-                      <ImagePersonCases left='-22px' Mleft='-38px' index='1'/>
-                    </BoxImageCases>
-                  </BoxItemText>
-                </BoxTextInsideCases>
-              </ContainerAllTextInsideCases>
-              <div>
-
-              </div>
-            </BoxAllInsideCases> 
-          </BoxCases>
-        </ContainerCases>
-      </div>
-    )
-  }
+  // const Cases = () => {
+  //   return (
+  //     <div>
+  //         <BoxCases id="Slide">
+  //           <BoxTextCases>
+  //             <TitleBoxCases>
+  //               Inovando o sistema de atendimento do SUS
+  //             </TitleBoxCases>
+  //             <TextBoxCases>
+  //               Em parceria com o Hospital Sírio-Libanês e o PROADI-SUS desenvolvemos o Reg+.
+  //               Um sistema de telemedicina para regular as filas do SUS em todo o Brasil, otimizando o 
+  //               tempo de atendimento e diagnóstico dos pacientes através da integração das jornadas de médicos,
+  //               enfermeiros, atendentes e consultores de saúde.
+  //             </TextBoxCases>
+  //           </BoxTextCases>
+  //           <BoxAllInsideCases>
+  //             <ContainerAllTextInsideCases>
+  //               <BoxTextInsideCases>
+  //                 <BoxItemText>
+  //                   <TextOrangeCases>Cliente</TextOrangeCases>
+  //                   <TextComplementOrange left='1rem'>Hospital Sírio-Libanês e o PROADI-SUS</TextComplementOrange>
+  //                 </BoxItemText>
+  //                 <BoxItemText>
+  //                   <TextOrangeCases left='2rem'>tecnologias</TextOrangeCases>
+  //                   <TextComplementOrange left='1rem'>#Design #React #Redux #Dynamo #StyleComponents</TextComplementOrange>
+  //                 </BoxItemText>
+  //               </BoxTextInsideCases>
+  //               <BoxTextInsideCases>
+  //                 <BoxItemText>
+  //                   <TextOrangeCases left='-14px'>Ano</TextOrangeCases>
+  //                   <TextComplementOrange Mleft='4.4rem' left='3.3rem'>2020</TextComplementOrange>
+  //                 </BoxItemText>
+  //                 <BoxItemText>
+  //                   <TextOrangeCases Mright='5rem' right='3rem'>equipe</TextOrangeCases>
+  //                   <BoxImageCases left='1rem'>
+  //                     <ImagePersonCases  />
+  //                     <ImagePersonCases left='-10px' Mleft='-20px' index='1'/>
+  //                     <ImagePersonCases left='-22px' Mleft='-38px' index='1'/>
+  //                   </BoxImageCases>
+  //                 </BoxItemText>
+  //               </BoxTextInsideCases>
+  //             </ContainerAllTextInsideCases>
+  //             <div>
+  //             </div>
+  //           </BoxAllInsideCases>
+  //         </BoxCases>
+  //     </div>
+  //   )
+  // }
 
   return (
     <Layouts home>
-       <BackgroundHeader />
-        {RenderHeader()}  
-        <DottedLineBackground>
-          {RenderNetwork()}  
-        <PartnerSchols />  
+      <BackgroundHeader />
+      {RenderHeader()} 
+      <DottedLineBackground>
+        {RenderNetwork()}  
+        <PartnerSchols /> 
         <OverEstudio />
-         {Cases()}  
-        <Depositions /> 
+        {/* {Cases()} */}
+        <Depositions />  
         <p>Blog</p>
         <History />
+        <RocketFooter />
       </DottedLineBackground>
     </Layouts>
   )
