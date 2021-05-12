@@ -9,7 +9,7 @@ import CardHome from '../components/home/card';
 
 import PartnerSchols from '../components/home/PartnerSchool';
 import OverEstudio from '../components/home/OverEstudio';
-import ReinvestedMoney from '../components/home/ReinvestedMoney';
+// import ReinvestedMoney from '../components/home/ReinvestedMoney';
 import Cases from '../components/home/Cases';
 import Depositions from '../components/home/Depositions';
 import History from '../components/home/History';
@@ -814,19 +814,14 @@ const Home = (props) => {
 
   return (
     <Layouts home>
-       <BackgroundHeader />
-       {RenderHeader()} 
-        <DottedLineBackground>
-        {RenderNetwork()}
-        <Content>
-          <PartnerSchols />
-        </Content>
-        <Content>
-          <OverEstudio />
-        </Content>
-        <ReinvestedMoney />
-        {/* <Cases /> */}
-        <Depositions /> 
+      <BackgroundHeader />
+      {RenderHeader()} 
+      <DottedLineBackground>
+        {RenderNetwork()}  
+        <PartnerSchols /> 
+        <OverEstudio />
+        {/* {Cases()} */}
+        <Depositions />  
         <p>Blog</p>
         <History />
         <RocketFooter />

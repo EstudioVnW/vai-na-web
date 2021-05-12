@@ -328,7 +328,7 @@ const handleOptionSelect = (option) => {
     break;
   }
 }
-const ReinvestedMoney = () => {
+const Depositions = () => {
 	
   const isTitleCase = { typePage: 'Depoimentos', title: 'Mensagens <br/> de impacto'};
 
@@ -377,5 +377,5 @@ const ReinvestedMoney = () => {
 	)
 }
 
-export default ReinvestedMoney;
+export default Depositions;
 

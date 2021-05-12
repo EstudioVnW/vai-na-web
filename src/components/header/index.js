@@ -17,8 +17,9 @@ const Container = styled.header`
 	height: ${props => props.home ? '11rem' : '12rem'};
 
 	@media (max-width: 768px) {
-		/* height: 100vh; */
+		height: 6rem;
 		position: fixed;
+		top: 0;
 		z-index: 2;
 	}
 `;
@@ -99,6 +100,7 @@ const OverMenu = styled.div`
 		align-items: center;
 		padding: 2rem 2rem 0 0;
 		z-index: 3;
+		height: 100%;
 	}
 `;
 
