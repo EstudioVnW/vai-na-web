@@ -21,6 +21,10 @@ const Container = styled.div`
     width: 100%;
 		flex-direction: column;
 		border-bottom: 1px solid #0F2B92;
+
+		:last-child {
+			border-bottom: none;
+		}
 	}
 `;
 

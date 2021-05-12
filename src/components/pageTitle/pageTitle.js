@@ -4,6 +4,10 @@ import styled from 'styled-components';
 // styles
 const Container = styled.section`
   padding-left: 6.125rem;
+
+	@media (max-width: 768px) {
+		padding-left: 0;
+	}
 `;
 
 const BoxTitle = styled.div`
@@ -60,6 +64,10 @@ const Title = styled.h2`
 	@media (min-width: 1920px) {
 		font-size: 3.2rem;
 		width: 93%;
+	}
+
+	@media (max-width: 375px) {
+		font-size: 1.938rem;
 	}
 `;
 

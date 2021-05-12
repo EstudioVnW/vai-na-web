@@ -78,14 +78,19 @@ const PaginationButton = styled.button`
 	}
 `;
 
-const Text = styled.p`
+const Text = styled.button`
 	display: none;
 
 	@media (max-width: 768px) {
+		padding-top: 4.737rem;
 		display: flex;
-		font-size: .688rem;
+		font-size: 1rem;
 		color: #0F2B92;
-		font-weight: 600;
+		text-decoration: underline;
+	}
+
+	@media (max-width: 425px) {
+		font-size: .688rem;
 	}
 `;
 
@@ -108,6 +113,10 @@ const Slider = ({ data }) => {
 
 		setPage(arrayPages);
 	}, []);
+
+	const handleScrollTo =  () => {
+		window.scrollTo(0, 0);
+	};
 
 	const handlePrevious = () => {
 		let handleSlide = current - 6;
@@ -169,8 +178,7 @@ const Slider = ({ data }) => {
 				))}
 			</ContentPagination>
 			<Figure mob>
-				{/* {current <= data.length && <Arrow onClick={handleNext}>{'>'}</Arrow>} */}
-				<Arrow onClick={handleNext}>{'>'}</Arrow>
+				{current <= data.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
 			</Figure>
 		</ContainerPagination>
 	)
@@ -179,9 +187,10 @@ const Slider = ({ data }) => {
 		<Container>
 			{renderSlider(data)}
 			{renderPagination()}
-			<Text>Voltar para o Topo</Text>
+			<Text onClick={handleScrollTo}>Voltar para o Topo</Text>
 		</Container>
 	)
 }
 
 export default Slider;
+
