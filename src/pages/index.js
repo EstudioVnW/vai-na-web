@@ -433,27 +433,6 @@ const DivCards = styled.div`
   justify-content: space-evenly;
 `;
 
-const ContentCardDf = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-
-const ContentCardDm = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-
-const ContentCardDb = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-const ContentCardCd = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-
-
-
 
 const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
