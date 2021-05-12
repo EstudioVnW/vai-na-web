@@ -5,6 +5,11 @@ import styled from 'styled-components';
 const Container = styled.section`
   padding-left: 5.125rem;
   margin-left: 1rem;
+
+	@media (max-width: 768px) {
+		padding: 0;
+		margin: 0;
+	}
 `;
 
 const BoxTitle = styled.div`

@@ -7,6 +7,12 @@ import './index.css';
 import Layouts from '../components/Layouts';
 import PageTitle from '../components/pageTitle/pageTitle';
 import CardHome from '../components/home/card';
+import PartnerSchols from '../components/home/PartnerSchool';
+import OverEstudio from '../components/home/OverEstudio';
+import ReinvestedMoney from '../components/home/ReinvestedMoney';
+import Cases from '../components/home/Cases';
+import Depositions from '../components/home/Depositions';
+import History from '../components/home/History';
 
 //Imagens
 import BackgroundImage from '../images/images/Path7680.svg';
@@ -250,8 +256,8 @@ const LinePartners = styled.div`
 	}
 `;
 
-const ContainerSchool = styled.div`
-  height: 100vh;
+const Content = styled.div`
+  height: 50vh;
   width: 100%;
   display: flex;
 `;
@@ -270,181 +276,181 @@ const BoldSchool = styled.b`
   font-weight: 500;
 `;
 
-const SubTitleCases = styled.p `
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.5rem;
-  width: 17.5rem;
-  margin-left: 11.6rem;
-  margin-top: -1rem;
+// const SubTitleCases = styled.p `
+//   font-size: 14px;
+//   font-weight: 400;
+//   line-height: 1.5rem;
+//   width: 17.5rem;
+//   margin-left: 11.6rem;
+//   margin-top: -1rem;
 
-  @media (min-width: 1920px) {
-    margin-left: 16.6rem;
-    line-height: 2.5rem;
-    font-size: 22px;
-    width: 27.5rem;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     margin-left: 16.6rem;
+//     line-height: 2.5rem;
+//     font-size: 22px;
+//     width: 27.5rem;
+// 	}
+// `;
 
-const ContainerCases = styled.div `
-  margin-top: 2.5rem;
-  margin-left: 11.6rem;
-  display: flex;
+// const ContainerCases = styled.div `
+//   margin-top: 2.5rem;
+//   margin-left: 11.6rem;
+//   display: flex;
 
-  @media (min-width: 1920px) {
-    margin-left: 15.6rem;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     margin-left: 15.6rem;
+// 	}
+// `;
 
-const ImageSideCases = styled.img `
-  margin-right: 1rem;
-  height: 20rem;
-  background-color: #FFFFFF;
-  margin-top: 15rem;
+// const ImageSideCases = styled.img `
+//   margin-right: 1rem;
+//   height: 20rem;
+//   background-color: #FFFFFF;
+//   margin-top: 15rem;
 
-  @media (min-width: 1920px) {
-    width: 8rem;
-    margin-top: 23.7rem;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     width: 8rem;
+//     margin-top: 23.7rem;
+// 	}
+// `;
 
-const WrapperCases = styled.div`
+// const WrapperCases = styled.div`
 
-`;
+// `;
 
-const BoxCases = styled.div `
-  width: 840px;
-  height: 561px;
-  background-color: #FFFFFF;
-  box-shadow: 0px 0px 22px #00000029;
-  border: 2px solid #00145D;
-  border-radius: 20px;
-  display: flex;
-  padding: 1.5rem;
+// const BoxCases = styled.div `
+//   width: 840px;
+//   height: 561px;
+//   background-color: #FFFFFF;
+//   box-shadow: 0px 0px 22px #00000029;
+//   border: 2px solid #00145D;
+//   border-radius: 20px;
+//   display: flex;
+//   padding: 1.5rem;
 
-  @media (min-width: 1920px) {
-    width: 1251px;
-    height: 698px;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     width: 1251px;
+//     height: 698px;
+// 	}
+// `;
 
-const BoxTextCases = styled.div `
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
-`;
+// const BoxTextCases = styled.div `
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   width: 30%;
+// `;
 
-const TitleBoxCases = styled.h3 `
-  color: #0F2B92;
-  font-size: 30px;
-  width: 90%;
-  font-weight: 700;
-  line-height: 2.6rem;
+// const TitleBoxCases = styled.h3 `
+//   color: #0F2B92;
+//   font-size: 30px;
+//   width: 90%;
+//   font-weight: 700;
+//   line-height: 2.6rem;
 
-  @media (min-width: 1920px) {
-    font-size: 44px;
-    line-height: 3.6rem;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     font-size: 44px;
+//     line-height: 3.6rem;
+// 	}
+// `;
 
-const TextBoxCases = styled.p `
-  font-size: 11px;
-  font-weight: 100;
-  line-height: 1.5rem;
-  width: 87%;
+// const TextBoxCases = styled.p `
+//   font-size: 11px;
+//   font-weight: 100;
+//   line-height: 1.5rem;
+//   width: 87%;
 
-  @media (min-width: 1920px) {
-    font-size: 18px;
-    line-height: 2rem;
-    width: 91%;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     font-size: 18px;
+//     line-height: 2rem;
+//     width: 91%;
+// 	}
+// `;
 
-const BoxAllInsideCases = styled.div `
-  width: 70%;
-`;
+// const BoxAllInsideCases = styled.div `
+//   width: 70%;
+// `;
 
-const ContainerAllTextInsideCases = styled.div `
-  display: flex;
-  flex-direction: column;
-  height: 7rem;
-  justify-content: space-between;
+// const ContainerAllTextInsideCases = styled.div `
+//   display: flex;
+//   flex-direction: column;
+//   height: 7rem;
+//   justify-content: space-between;
 
-  @media (min-width: 1920px) {
-    height: 10rem;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     height: 10rem;
+// 	}
+// `;
 
-const BoxTextInsideCases = styled.div `
-  display: flex;
-  justify-content: space-between;
-`;
+// const BoxTextInsideCases = styled.div `
+//   display: flex;
+//   justify-content: space-between;
+// `;
 
-const BoxItemText = styled.div `
-  display: flex;
+// const BoxItemText = styled.div `
+//   display: flex;
   
-`;
+// `;
 
-const TextOrangeCases = styled.p `
-  color: #FF611E;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 11px;
-  margin-left: ${props => props.left};
-  margin-right: ${props => props.right};
+// const TextOrangeCases = styled.p `
+//   color: #FF611E;
+//   text-transform: uppercase;
+//   font-weight: 400;
+//   font-size: 11px;
+//   margin-left: ${props => props.left};
+//   margin-right: ${props => props.right};
 
-  @media (min-width: 1920px) {
-    font-size: 20px;
-    margin-right: ${props => props.Mright};
-	}
-`;
+//   @media (min-width: 1920px) {
+//     font-size: 20px;
+//     margin-right: ${props => props.Mright};
+// 	}
+// `;
 
-const TextComplementOrange = styled.p `
-  color: #272727;
-  text-align: left;
-  font-size: 11px;
-  margin-left: ${props => props.left};
-  margin-right: ${props => props.right};
+// const TextComplementOrange = styled.p `
+//   color: #272727;
+//   text-align: left;
+//   font-size: 11px;
+//   margin-left: ${props => props.left};
+//   margin-right: ${props => props.right};
 
-  @media (min-width: 1920px) {
-    font-size: 20px;
-    margin-right: ${props => props.Mright};
-    margin-left: ${props => props.Mleft};
-	}
-`;
+//   @media (min-width: 1920px) {
+//     font-size: 20px;
+//     margin-right: ${props => props.Mright};
+//     margin-left: ${props => props.Mleft};
+// 	}
+// `;
 
-const BoxImageCases = styled.div `
-  display: flex;
-  margin-right: 3rem;
+// const BoxImageCases = styled.div `
+//   display: flex;
+//   margin-right: 3rem;
 
-  @media (min-width: 1920px) {
-    margin-right: 6rem;
-	}
-`;
+//   @media (min-width: 1920px) {
+//     margin-right: 6rem;
+// 	}
+// `;
 
-const ImagePersonCases = styled.div `
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  background-color: red;
-  border: 1px solid #0F2B92;
-  box-shadow: 0px 0px 33px #FF611E40;
-  position: relative;
-  z-index: ${props => props.index};
-  left: ${props => props.left};
+// const ImagePersonCases = styled.div `
+//   width: 3.5rem;
+//   height: 3.5rem;
+//   border-radius: 50%;
+//   background-color: red;
+//   border: 1px solid #0F2B92;
+//   box-shadow: 0px 0px 33px #FF611E40;
+//   position: relative;
+//   z-index: ${props => props.index};
+//   left: ${props => props.left};
 
 
-  @media (min-width: 1920px) {
-    width: 5rem;
-    height: 5rem;
-    left: ${props => props.Mleft};
-	}
-`;
+//   @media (min-width: 1920px) {
+//     width: 5rem;
+//     height: 5rem;
+//     left: ${props => props.Mleft};
+// 	}
+// `;
 
-const BoxImageScreenCases = styled.div `
+// const BoxImageScreenCases = styled.div `
 
-`;
+// `;
 
 const BoxButtons = styled.div `
   display: flex;
@@ -463,53 +469,53 @@ const ButtonsItem = styled.span `
 `;
 
 // CASE SELECTOR
-const WrapperSelector = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-`;
+// const WrapperSelector = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+// `;
 
-const InputSelector = styled.input`
+// const InputSelector = styled.input`
 
-  ::[type="radio"] {
-    display: none;
-  }
+//   ::[type="radio"] {
+//     display: none;
+//   }
 
-  ::[type="radio"]+label:before {
-    content: "";
-    /* create custom radiobutton appearance */
-    display: inline-block;
-    width: 27px;
-    height: 27x;
-    padding: 7px;
-    margin-right: 3px;
-    /* background-color only for content */
-    background-clip: content-box;
-    border: 2px solid #bbbbbb;
-    border-radius: 50%;
-  }
+//   ::[type="radio"]+label:before {
+//     content: "";
+//     /* create custom radiobutton appearance */
+//     display: inline-block;
+//     width: 27px;
+//     height: 27x;
+//     padding: 7px;
+//     margin-right: 3px;
+//     /* background-color only for content */
+//     background-clip: content-box;
+//     border: 2px solid #bbbbbb;
+//     border-radius: 50%;
+//   }
 
-  /* appearance for checked radiobutton */
-  ::[type="radio"]:checked + label:before {
-    background-color: blue;
-  }
-`;
+//   /* appearance for checked radiobutton */
+//   ::[type="radio"]:checked + label:before {
+//     background-color: blue;
+//   }
+// `;
 
-const handleOptionSelect = (option) => {
-  switch (option) {
-  case 'p':
-    console.log('eu sou o primeiro')
-    break;
-  case 's':
-    console.log('eu sou o segundo')
-    break;
-  case 't':
-    console.log('eu sou o terceiro')
-    break;
-  default:
-    break;
-  }
-}
+// const handleOptionSelect = (option) => {
+//   switch (option) {
+//   case 'p':
+//     console.log('eu sou o primeiro')
+//     break;
+//   case 's':
+//     console.log('eu sou o segundo')
+//     break;
+//   case 't':
+//     console.log('eu sou o terceiro')
+//     break;
+//   default:
+//     break;
+//   }
+// }
 
 
 const Home = (props) => {
@@ -517,6 +523,20 @@ const Home = (props) => {
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
   const isTitleDepositions =  { typePage: 'Depoimentos', title: 'Mensagens <br/> de impacto'}
   const isTitleSchool = { typePage: 'Escola', title: 'Uma plataforma de lançamento de estrelas' };
+
+  const RenderHeader = () => (
+    <ContentHeader>
+      <ImageLogo src={ImageLogoVnW} alt='Logotipo' />
+      <ContentCard>
+        <CardHome />
+      </ContentCard>
+      <TextPresentation>
+        Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as
+        desigualdades e desenvolvemos a força de trabalho do futuro.
+      </TextPresentation>
+      <ButtonScroll onClick={scrollDow}><img src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
+    </ContentHeader>
+  );
 
   const PartnerNetworks = () => {
     return (
@@ -635,130 +655,92 @@ const Home = (props) => {
     )
   }
 
-  const Cases = () => {
-    return (
+  const RenderNetwork = () => (
+    <ContainerNetwork id='content-1'>
       <div>
-          <BoxCases id="Slide">
-            <BoxTextCases>
-              <TitleBoxCases>
-                Inovando o sistema de atendimento do SUS
-              </TitleBoxCases>
-              <TextBoxCases>
-                Em parceria com o Hospital Sírio-Libanês e o PROADI-SUS desenvolvemos o Reg+.
-                Um sistema de telemedicina para regular as filas do SUS em todo o Brasil, otimizando o 
-                tempo de atendimento e diagnóstico dos pacientes através da integração das jornadas de médicos,
-                enfermeiros, atendentes e consultores de saúde.
-              </TextBoxCases>
-            </BoxTextCases>
-            <BoxAllInsideCases>
-              <ContainerAllTextInsideCases>
-                <BoxTextInsideCases>
-                  <BoxItemText>
-                    <TextOrangeCases>Cliente</TextOrangeCases>
-                    <TextComplementOrange left='1rem'>Hospital Sírio-Libanês e o PROADI-SUS</TextComplementOrange>
-                  </BoxItemText>
-                  <BoxItemText>
-                    <TextOrangeCases left='2rem'>tecnologias</TextOrangeCases>
-                    <TextComplementOrange left='1rem'>#Design #React #Redux #Dynamo #StyleComponents</TextComplementOrange>
-                  </BoxItemText>
-                </BoxTextInsideCases>
-                <BoxTextInsideCases>
-                  <BoxItemText>
-                    <TextOrangeCases left='-14px'>Ano</TextOrangeCases>
-                    <TextComplementOrange Mleft='4.4rem' left='3.3rem'>2020</TextComplementOrange>
-                  </BoxItemText>
-                  <BoxItemText>
-                    <TextOrangeCases Mright='5rem' right='3rem'>equipe</TextOrangeCases>
-                    <BoxImageCases left='1rem'>
-                      <ImagePersonCases  />
-                      <ImagePersonCases left='-10px' Mleft='-20px' index='1'/>
-                      <ImagePersonCases left='-22px' Mleft='-38px' index='1'/>
-                    </BoxImageCases>
-                  </BoxItemText>
-                </BoxTextInsideCases>
-              </ContainerAllTextInsideCases>
-              <div>
-              </div>
-            </BoxAllInsideCases>
-          </BoxCases>
+        <PageTitle data={isTitle} isPage='isHome' />
+        <NetworkText>
+          A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
+          parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
+          <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
+          Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
+          pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
+        </NetworkText>
       </div>
-    )
-  }
+      <ContainerPartners>
+        {PartnerNetworks()}
+      </ContainerPartners>
+    </ContainerNetwork>
+  )
+
+  // const Cases = () => {
+  //   return (
+  //     <div>
+  //         <BoxCases id="Slide">
+  //           <BoxTextCases>
+  //             <TitleBoxCases>
+  //               Inovando o sistema de atendimento do SUS
+  //             </TitleBoxCases>
+  //             <TextBoxCases>
+  //               Em parceria com o Hospital Sírio-Libanês e o PROADI-SUS desenvolvemos o Reg+.
+  //               Um sistema de telemedicina para regular as filas do SUS em todo o Brasil, otimizando o 
+  //               tempo de atendimento e diagnóstico dos pacientes através da integração das jornadas de médicos,
+  //               enfermeiros, atendentes e consultores de saúde.
+  //             </TextBoxCases>
+  //           </BoxTextCases>
+  //           <BoxAllInsideCases>
+  //             <ContainerAllTextInsideCases>
+  //               <BoxTextInsideCases>
+  //                 <BoxItemText>
+  //                   <TextOrangeCases>Cliente</TextOrangeCases>
+  //                   <TextComplementOrange left='1rem'>Hospital Sírio-Libanês e o PROADI-SUS</TextComplementOrange>
+  //                 </BoxItemText>
+  //                 <BoxItemText>
+  //                   <TextOrangeCases left='2rem'>tecnologias</TextOrangeCases>
+  //                   <TextComplementOrange left='1rem'>#Design #React #Redux #Dynamo #StyleComponents</TextComplementOrange>
+  //                 </BoxItemText>
+  //               </BoxTextInsideCases>
+  //               <BoxTextInsideCases>
+  //                 <BoxItemText>
+  //                   <TextOrangeCases left='-14px'>Ano</TextOrangeCases>
+  //                   <TextComplementOrange Mleft='4.4rem' left='3.3rem'>2020</TextComplementOrange>
+  //                 </BoxItemText>
+  //                 <BoxItemText>
+  //                   <TextOrangeCases Mright='5rem' right='3rem'>equipe</TextOrangeCases>
+  //                   <BoxImageCases left='1rem'>
+  //                     <ImagePersonCases  />
+  //                     <ImagePersonCases left='-10px' Mleft='-20px' index='1'/>
+  //                     <ImagePersonCases left='-22px' Mleft='-38px' index='1'/>
+  //                   </BoxImageCases>
+  //                 </BoxItemText>
+  //               </BoxTextInsideCases>
+  //             </ContainerAllTextInsideCases>
+  //             <div>
+  //             </div>
+  //           </BoxAllInsideCases>
+  //         </BoxCases>
+  //     </div>
+  //   )
+  // }
 
   return (
     <Layouts home>
-    <BackgroundHeader />
-      <ContentHeader>
-        <ImageLogo src={ImageLogoVnW} alt='Logotipo' />
-        <ContentCard>
-          <CardHome />
-        </ContentCard>
-        <TextPresentation>
-          Vai na Web é uma rede de alta tecnologia e impacto social. Juntos, reduzimos as
-          desigualdades e desenvolvemos a força de trabalho do futuro.
-        </TextPresentation>
-        <ButtonScroll onClick={scrollDow}><img src={ScrollArrow} alt="Seta de Rolagem" /></ButtonScroll>
-      </ContentHeader>
-      <DottedLineBackground>
-        <ContainerNetwork id='content-1'>
-          <div>
-            <PageTitle data={isTitle} isPage='isHome' />
-            <NetworkText>
-              A partir de uma <Bold>rede colaborativa e sustentável</Bold>, composta de grandes empresas,
-              parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
-              <Bold> para entregar soluções com inovação, maturidade digital e transformação humana. </Bold>
-              Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
-              pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
-            </NetworkText>
-          </div>
-          <ContainerPartners>
-            {PartnerNetworks()}
-          </ContainerPartners>
-        </ContainerNetwork>
-        <ContainerSchool>
-          <div>
-            <PageTitle data={isTitleSchool} isPage='isHome' />
-            <SchoolText>
-            Preparamos <BoldSchool>talentos diversos de todo o Brasil</BoldSchool>, das <BoldSchool>classes C, D e E</BoldSchool>, através do 
-            <BoldSchool>ensino de programação digital avançada</BoldSchool> e habilidades socioemocionais. 
-            Desejamos ajudar pessoas a construir <BoldSchool>carreiras relevantes</BoldSchool> dentro do espaço profundo 
-            da <BoldSchool>economia digital</BoldSchool>, injetando <BoldSchool>diversidade</BoldSchool>, promovendo <BoldSchool>inclusão</BoldSchool> e fortalecendo os 
-            <BoldSchool>direitos humanos</BoldSchool> no <BoldSchool>mercado de tecnologia</BoldSchool>.
-            </SchoolText>
-          </div>
-        </ContainerSchool>
-
-      {/* {Cases()} */}
-      {/* Inicio Cases*/}
-      <div>
-        <PageTitle data={isTitleCases} isPage='isHome' />
-        <SubTitleCases>Saiba como ajudamos os nossos clientes a realizar suas missões:</SubTitleCases>
-        <ContainerCases>
-          <ImageSideCases src={ImageBrasil} alt='Conjunto de Imagens'/>
-          <WrapperCases>
-           {Cases()}
-          </WrapperCases>
-          <WrapperSelector>
-            <input type="radio" name="radio" id="radio1" onClick={() => handleOptionSelect('p')} />
-            <input type="radio" name="radio" id="radio2" onClick={() => handleOptionSelect('s')} />
-            <input type="radio" name="radio" id="radio3" onClick={() => handleOptionSelect('t')} />
-          </WrapperSelector>
-        </ContainerCases>
-      </div>
-
-      {/* Fim Cases*/}
-
-      {/* Inicio Depoimentos */}
-      <div>
-        <PageTitle data={isTitleDepositions} isPage='isHome' />
-        <ContainerCases>
-         <WrapperCases>
-           {Cases()}
-          </WrapperCases>
-        </ContainerCases>
-      </div>
-      {/* Fim Depoimentos */}
-
+      <BackgroundHeader />
+        {RenderHeader()}
+        <DottedLineBackground>
+        {RenderNetwork()}
+        <Content>
+          <PartnerSchols />
+        </Content>
+        <Content>
+          <OverEstudio />
+        </Content>
+        <ReinvestedMoney />
+        {/* {Cases()} */}
+        {/* <Cases /> */}
+        <Depositions /> 
+        <p>Blog</p>
+        <History />
       </DottedLineBackground>
     </Layouts>
   )
