@@ -19,7 +19,19 @@ import SecondPhotoEstudio from '../../images/images/VNW2-63.png';
 
 const ContainerEstudio = styled.div `
   display: flex;
-  margin-top: 8rem;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+	}
+`;
+
+const ContainerTextMain = styled.div `
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const TextDescriptionAll = styled.p`
@@ -35,8 +47,20 @@ const TextDescriptionAll = styled.p`
     margin-left: 16.4rem;
     line-height: 2.5rem;
     font-size: 22px;
-    width: 27.5rem;
-	}
+    width: 26.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    width: 50%;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 425px) {
+    width: 75%;
+    margin-left: 0px;
+    line-height: 1.8rem;
+    font-size: 16px;
+  }
 `;
 
 const BoldTextAll = styled.b`
@@ -51,10 +75,23 @@ const ContainerImagesEstudio = styled.div `
   margin-top: 5rem;
   position: relative;
   right: 4rem;
+
+  @media (max-width: 768px) {
+    position: none;
+    right: 0px;
+  }
 `;
 
 const ImageLogoEstudio = styled.img `
   width: 20%;
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
+  
+  @media (max-width: 425px) {
+    width: 60%;
+  }
 `;
 
 const LineBlue = styled.div `
@@ -71,12 +108,22 @@ const LineBlue = styled.div `
   
   @media (min-width: 2560px) {
     width: 4.6rem;
-	}
+  }
 `;
 
 const FirstImagePhotoEstudio = styled.img `
   width: 80%;
   margin-top: -5px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: -1px;
+  }
+  
+  @media (max-width: 425px) {
+    width: 24rem;
+    margin-top: 1px;
+  }
 `;
 
 const DetailsTitleService = styled.p `
@@ -94,6 +141,10 @@ const TitleServices = styled.p `
   margin-left: 11.4rem;
   margin-top: 2rem;
 
+  @media (min-width: 2560px) {
+    width: 11%;
+    font-size: 34px;
+  }
 
   @media (min-width: 1920px) {
     margin-left: 16.4rem;
@@ -102,10 +153,17 @@ const TitleServices = styled.p `
     margin-top: 5rem;
   }
   
-  @media (min-width: 2560px) {
-    width: 11%;
-    font-size: 34px;
-	}
+  
+  @media (max-width: 768px) {
+    font-size: 26px;
+    width: 28%;
+  }
+
+  @media (max-width: 425px) {
+    margin-left: 4rem;
+    width: 42%;
+    font-size: 20px;
+  }
 `;
 
 const SubTitleServices = styled.p `
@@ -115,6 +173,13 @@ const SubTitleServices = styled.p `
   width: 18%;
   line-height: 1.4rem;
   margin-top: 1rem;
+  
+  @media (min-width: 2560px) {
+    margin-left: 16.4rem;
+    font-size: 24px;
+    width: 17%;
+    line-height: 2.4rem;
+  }
 
   @media (min-width: 1920px) {
     margin-left: 16.4rem;
@@ -123,12 +188,20 @@ const SubTitleServices = styled.p `
     line-height: 2.4rem;
   }
   
-  @media (min-width: 2560px) {
-    margin-left: 16.4rem;
-    font-size: 24px;
-    width: 17%;
-    line-height: 2.4rem;
-	}
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+    width: 42%;
+    font-weight: 300;
+    line-height: 1.7rem;
+    margin-bottom: 8rem;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+    margin-left: 4rem;
+    width: 67%;
+  }
 `;
 
 const ContainerServicesTextEstudio = styled.div `
@@ -139,6 +212,10 @@ const ContainerServicesTextEstudio = styled.div `
   @media (min-width: 1920px) {
     margin-top: 9rem;
   }
+
+  @media (max-width: 425px) {
+    margin-bottom: 6rem;
+  }
 `;
 
 const BoxPresentationItemServicesFirst = styled.div `
@@ -148,16 +225,22 @@ const BoxPresentationItemServicesFirst = styled.div `
   position: relative;
   top: 8rem;
   left: 7rem;
+  
+  @media (min-width: 2560px) {
+    top: 11rem;
+    left: 8rem;
+  }
 
   @media (min-width: 1920px) {
     top: 6rem;
     left: 13rem;
   }
 
-  @media (min-width: 2560px) {
-    top: 11rem;
-    left: 8rem;
-	}
+  @media (max-width: 768px) {
+    top: 0px;
+    left: 0px;
+    display: none;
+  }
 `;
 
 const BoxPresentationItemServicesSecond = styled.div `
@@ -167,15 +250,21 @@ const BoxPresentationItemServicesSecond = styled.div `
   position: relative;
   top: -2rem;
   left: -1rem;
+  
+  @media (min-width: 2560px) {
+    top: -7rem;
+    left: -9rem;
+  }
 
   @media (min-width: 1920px) {
     top: -13rem;
     left: 1rem;
   }
 
-  @media (min-width: 2560px) {
-    top: -7rem;
-    left: -9rem;
+  @media (max-width: 768px) {
+    top: 0px;
+    left: 0px;
+    display: none;
   }
 `;
 
@@ -187,14 +276,20 @@ const BoxPresentationItemServicesThird = styled.div `
   top: 2rem;
   left: -4rem;
 
+  @media (min-width: 2560px) {
+    top: -4rem;
+    left: -17rem;
+  }
+
   @media (min-width: 1920px) {
     top: -6rem;
     left: -5rem;
   }
 
-  @media (min-width: 2560px) {
-    top: -4rem;
-    left: -17rem;
+  @media (max-width: 768px) {
+    top: 0px;
+    left: 0px;
+    display: none;
   }
 `;
 
@@ -206,14 +301,19 @@ const BoxPresentationItemServicesFourth = styled.div `
   top: -10rem;
   left: -7rem;
 
+  @media (min-width: 2560px) {
+    top: -19rem;
+    left: -27rem;
+  }
+
   @media (min-width: 1920px) {
     top: -21rem;
     left: -11rem;
   }
 
-  @media (min-width: 2560px) {
-    top: -19rem;
-    left: -27rem;
+  @media (max-width: 768px) {
+    top: 0px;
+    left: 0px;
   }
 `;
 
@@ -232,7 +332,8 @@ const TitlePresentationServices = styled.p `
     font-size: 38px;
     width: 48%;
     line-height: 2.8rem;
-	}
+  }
+
 `;
 
 const ImageService = styled.img `
@@ -241,6 +342,10 @@ const ImageService = styled.img `
   @media (min-width: 1920px) {
     width: 50%;
   }  
+
+  @media (max-width: 768px) {
+    width: 40%;
+  }
 `;
 
 const ImageServiceSmaller = styled.img `
@@ -249,6 +354,10 @@ const ImageServiceSmaller = styled.img `
   @media (min-width: 1920px) {
     width: 40%;
   }  
+
+  @media (max-width: 768px) {
+    margin-top: -1rem;
+  }
 `;
 
 const DescriptionServices = styled.p `
@@ -264,12 +373,23 @@ const DescriptionServices = styled.p `
     width: 53%;
     line-height: 2rem;
   }  
-
+  
   @media (min-width: 2560px) {
     font-size: 22px;
     width: 53%;
     line-height: 2rem;
-	}
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    width: 40%;
+    line-height: 1.6rem;
+    margin-top: -1rem;
+  }
+
+  @media (max-width: 425px) {
+    width: 69%;
+  }
 `;
 
 const DescriptionServicesIntefaces = styled.p `
@@ -290,7 +410,18 @@ const DescriptionServicesIntefaces = styled.p `
     font-size: 22px;
     width: 52%;
     line-height: 2rem;
-	}
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    width: 40%;
+    line-height: 1.6rem;
+    margin-top: -1rem;
+  }
+
+  @media (max-width: 425px) {
+    width: 63%;
+  }
 `;
 
 const DescriptionServicesSecond = styled.p `
@@ -300,7 +431,7 @@ const DescriptionServicesSecond = styled.p `
   line-height: 1.4rem;
   margin-top: 1rem;
   text-align: center;
-
+  
   @media (min-width: 1920px) {
     font-size: 16px;
     width: 62%;
@@ -311,7 +442,18 @@ const DescriptionServicesSecond = styled.p `
     font-size: 22px;
     width: 62%;
     line-height: 2rem;
-	}
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    width: 40%;
+    line-height: 1.6rem;
+    margin-top: -1rem;
+  }
+
+  @media (max-width: 425px) {
+    width: 54%;
+  }
 `;
 
 const BoxButton = styled.div `
@@ -323,11 +465,27 @@ const BoxButton = styled.div `
   @media (min-width: 2560px) {
     margin-right: 40rem;
   }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
 `;
 
 const ContainerProfit = styled.div `
   margin-top: 6rem;
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 425px) {
+    margin-top: 4rem;
+  }
 `;
 
 const TextProfit = styled.p `
@@ -339,16 +497,27 @@ const TextProfit = styled.p `
   margin-top: 16.5rem;
 
   @media (min-width: 1920px) {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 2.5rem;
-    width: 42%;
+    width: 38%;
     margin-top: 22rem;
     margin-left: 16.4rem;
   }
 
   @media (min-width: 2560px) {
     width: 37%;
-    margin-top: 36.7rem;
+    margin-top: 37rem;
+  }
+
+
+  @media (max-width: 768px) {
+    margin-top: 3rem;
+    margin-left: 0px;
+    width: 42%;
+  }
+
+  @media (max-width: 425px) {
+    width: 76%;
   }
 `;
 
@@ -359,14 +528,19 @@ const TextProfitBold = styled.b `
 const CircleOrange = styled.div `
   background: url(${CircleOrangeEstudio}); 
   background-repeat: no-repeat; 
-  background-size: 105%;
+  background-size: 107%;
   position: relative;
-  top: 2rem;
+  background-position: center;
+  top: -5rem;
   left: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  :hover {
+    background-size: 112%;
+  }
 
   @media (min-width: 1920px) {
     left: 5rem;
@@ -374,40 +548,62 @@ const CircleOrange = styled.div `
   }
 
   @media (min-width: 2560px) {
-    left: 7rem; 
+    left: 6rem;
+    top: -8rem; 
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: center;
+    top: 8rem;
+    left: 0px;
+    background-size: 45%;
+    height: 18rem;
+    margin-top: -7rem;
+  }
+
+  @media (max-width: 425px) {
+    :hover {
+      background-size: 46%;
+    }
   }
 `;
 
 const TextNumberCircle = styled.h2 `
   color: #0F2B92;
   font-size: 30px;
-  margin-top: -14.5rem;
-  margin-left: 10px;
   font-weight: 600;
 
   @media (min-width: 1920px) {
     font-size: 60px;
-    margin-top: -20.5rem;
   }
 
-  @media (min-width: 2560px) {
-    margin-top: -33.5rem;
+  @media (max-width: 768px) {
+    margin-top: 0px;
   }
 `;
 
 const TextCircle = styled.p `
-  margin-top: 5px;
   text-align: center;
   font-size: 11px;
   width: 78%;
   font-weight: 400;
-  margin-left: 10px;
-  line-height: 1rem;
+  line-height: 14px;
 
   @media (min-width: 1920px) {
-    font-size: 19px;
+    font-size: 17px;
     width: 65%;
-    line-height: 2rem;
+    line-height: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 32%;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 9px;
   }
 `;
 
@@ -422,7 +618,16 @@ const SecondImagePhotoEstudio = styled.img `
 
   @media (min-width: 2560px) {
     margin-right: 22rem;
-	}
+  }
+  
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    width: 70%;
+  }
+
+  @media (max-width: 425px) {
+    width: 88%;
+  }
 `;
 
 
@@ -430,10 +635,10 @@ const PartnerOverEstudio = () => {
 	const isTitleEstudio = { typePage: 'Estúdio', title: 'Avançando o <br/> espaço inexplorado'};
 	
 	return (
-	<div>
+    <div>
+        <PageTitle data={isTitleEstudio} isPage='isHome' />
         <ContainerEstudio>
-          <div>
-            <PageTitle data={isTitleEstudio} isPage='isHome' />
+          <ContainerTextMain>
             <TextDescriptionAll>
               Desenvolvemos o SIaaS: Social Impact as a Service, um modelo de ciclo 
               fechado que <BoldTextAll>entrega serviços digitais</BoldTextAll>, de alto nível de agilidade e inovação digital, 
@@ -445,7 +650,7 @@ const PartnerOverEstudio = () => {
               em projetos reais</BoldTextAll>, desenvolver <BoldTextAll>experiência técnica, soft skills e habilidades 
               empreendedoras</BoldTextAll> – capacidades imprescindíveis para um talento digital de sucesso.
             </TextDescriptionAll>
-          </div>
+          </ContainerTextMain>
           <ContainerImagesEstudio>
             <ImageLogoEstudio src={ImageEstudioVnW} alt="Logo Vai na Web"/>
             <LineBlue></LineBlue>
@@ -491,7 +696,7 @@ const PartnerOverEstudio = () => {
           </BoxPresentationItemServicesFourth>
         </ContainerServicesTextEstudio> 
         <BoxButton>
-          <Button colorHover='#272727'>Desejo Contratar!</Button>
+          <a href="https://forms.gle/bVRiWcWoHnL9D5tU8" target="_blank"><Button colorHover='#272727'>Desejo Contratar!</Button></a>
         </BoxButton>
         <ContainerProfit>
           <TextProfit>

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 import './index.css';
-// import scrollTo from 'gatsby-plugin-smoothscroll';
 
 //Components
 import Layouts from '../components/Layouts';
@@ -453,13 +452,9 @@ const ContentCardCd = styled.div`
 `;
 
 
-
-
 const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
- 
-  
 
   const RenderHeader = () => (
     <ContentHeader>
@@ -605,7 +600,7 @@ const Home = (props) => {
         </TextDescriptionAll>
       </div>
       <ContainerPartners>
-        {PartnerNetworks()}
+       {/* {PartnerNetworks()}  */}
       </ContainerPartners>
     </ContainerNetwork>
   )
@@ -629,7 +624,7 @@ const Home = (props) => {
                 enfermeiros, atendentes e consultores de saúde.
               </TextBoxCases>
             </BoxTextCases>
-            <BoxAllInsideCases>
+           <BoxAllInsideCases>
               <ContainerAllTextInsideCases>
                 <BoxTextInsideCases>
                   <BoxItemText>
@@ -659,7 +654,7 @@ const Home = (props) => {
               <div>
 
               </div>
-            </BoxAllInsideCases>
+            </BoxAllInsideCases> 
           </BoxCases>
         </ContainerCases>
       </div>
@@ -668,14 +663,14 @@ const Home = (props) => {
 
   return (
     <Layouts home>
-      <BackgroundHeader />
-        {RenderHeader()}
+       <BackgroundHeader />
+        {RenderHeader()}  
         <DottedLineBackground>
-        {RenderNetwork()}
-        <PartnerSchols />
+          {RenderNetwork()}  
+        <PartnerSchols />  
         <OverEstudio />
-        {Cases()}
-        <Depositions />
+         {Cases()}  
+        <Depositions /> 
         <p>Blog</p>
         <History />
       </DottedLineBackground>
