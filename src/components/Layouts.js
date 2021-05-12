@@ -10,7 +10,7 @@
 
   // styles
   const Container = styled.div`
-    background-image: ${props => props.home ? `url(${ImageBackground})` : `url(${fundo})`};
+    /* background-image: ${props => props.home ? `url(${ImageBackground})` : `url(${fundo})`}; */
     background-repeat: no-repeat;
     background-size:  ${props => props.home ? '100%' : props.backgroundSize};
   `;
