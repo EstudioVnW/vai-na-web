@@ -33,6 +33,8 @@ function Button (props) {
         width={props.width}
         colorHover={props.colorHover}
 				onClick={props.funcAction}
+        background={props.background}
+        border={props.border}
 			> 
       {props.children}
     </ContentButton>
