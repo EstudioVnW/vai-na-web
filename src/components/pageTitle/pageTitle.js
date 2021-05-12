@@ -14,8 +14,17 @@ const Container = styled.section`
 
 const BoxTitle = styled.div`
 	margin-left: ${props => props.pageHome === 'isHome' ? '3rem' : '2rem'};
+
 	@media (min-width: 1920px) {
 		margin-left: 7rem;
+	}
+
+	@media (max-width: 768px) {
+		margin-left: 0px;
+	}
+
+	@media (max-width: 768px) {
+		margin-left: 0px;
 	}
 `;
 
@@ -36,50 +45,92 @@ const TypePage = styled.h1`
 	border: 1px solid #FFAC2D;
 	border-radius: 19px;
 	text-transform: uppercase;
+
 	@media (min-width: 1920px) {
 		margin-left: 9rem;
 	}
-`;
 
+	@media (max-width: 768px) {
+		margin-left: 11rem;
+	}
+
+	@media (max-width: 425px) {
+		margin-left: 0rem;
+	}
+`;
 
 const ContentTitle = styled.div`
 	display: flex;
 	padding-top: 1rem;
 `;
 
-const LineOrange = styled.span `
+const LineOrange = styled.span`
 	padding-right: 0.5rem;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	font-weight: 200;
 	color: #FF611E;
+
 	@media (min-width: 1920px) {
 		font-size: 3.2rem;
 	}
+
+	@media (max-width: 768px) {
+		padding-left: 3.3rem;
+	}
+
+	@media (max-width: 425px) {
+		margin-left: 0rem;
+	  }
 `;
 
 const Title = styled.h2`
 	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2.125rem'};
-	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '18rem'};
+	width: ${props => props.pageBlog === 'postBlog' ? '90%' : ''};
 	max-width: 1272px;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	color: ${props => props.pageHome === 'isHome' ? '#272727' : '#FDE7A9'};
+
 	@media (min-width: 1920px) {
 		font-size: 3.2rem;
 		width: 93%;
 	}
+
+	@media (min-width: 768px) {
+		font-size: 2.4rem;
+	}
+
+	@media (max-width: 425px) {
+		font-size: 2rem;
+	}
+
+	@media (max-width: 375px) {
+		font-size: 1.938rem;
+	}
 `;
 
 const ContentSubTitle = styled.div`
+	width: 90%;
 	display: flex;
-
+	text-align: left;
+	justify-content: ${props => props.pageBlog === 'postBlog' ? '' : 'flex-end'};
+	margin-top: 4rem;
 `;
 
-const SubTitle = styled.p `
-	font-size: ${props => props.pageBlog === 'postBlog' ? '30px' : '36px'};
+const SubTitle = styled.p`
+	color: ${props => props.pageBlog === 'postBlog' ? '' : '#00145D'};
+	font-size: ${props => props.fontSize ? props.fontSize : '36px'};
 	font-weight: 100;
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
 	max-width: 970px;
 	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 3.148rem 4.5rem' : '0 0 5.148rem 4.5rem'};
+`;
+
+const SubParagraph = styled.span`
+	color: ${props => props.pageBlog === 'postBlog' ? '' : '#272727'};
+	font-size: ${props => props.pageBlog === 'postBlog' ? '' : '24px'};
+	font-weight: 300;
+	display: flex;
+	justify-content: flex-end;
 `;
 
 const formatMonth = (month) => {
@@ -122,7 +173,7 @@ const formatDate = (date) => {
 	return <Date>{day} de {formatMonth(month)} · {year}</Date>
 }
 
-const PageTitle = ({ isPage, data }) => {
+const PageTitle = ({ isPage, data, fontSize }) => {
 	return (
 		<Container>
 			{data?.typePage && <TypePage pageHome={isPage}>{data.typePage}</TypePage>}
@@ -132,10 +183,13 @@ const PageTitle = ({ isPage, data }) => {
 					<LineOrange pageHome={isPage}>//</LineOrange>
 					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
-				{data?.excerpt && 
+				{data?.excerpt &&
 					<ContentSubTitle>
-						<SubTitle pageBlog={isPage} >
-							{data.excerpt}
+						<SubTitle pageBlog={isPage} fontSize={fontSize}>
+							{data.excerpt} 
+							<SubParagraph>
+							<b>{data.author} </b> {data.office}
+							</SubParagraph>
 						</SubTitle>
 					</ContentSubTitle>
 				}
