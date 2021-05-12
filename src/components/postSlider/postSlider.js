@@ -4,22 +4,24 @@ import styled from 'styled-components';
 //Component
 import PostList from '../blog/postList';
 
+//Image
+import iconArrow from '../../images/icons/arrow.svg';
+
 // styles
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	width: 100%;
+
 `;
 
 const Content = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	@media (max-width: 768px) {
-		width: 100%;
-	}
+	width: 100%;
 `;
 
 const Figure = styled.figure`
@@ -28,18 +30,16 @@ const Figure = styled.figure`
 
 	@media (max-width: 768px) {
 		display: ${props => props.mob ? 'flex' : 'none'};
-		/* width: .792rem; */
+		width: 1rem;
 	}
 `;
 
-const Arrow = styled.p`
-	font-size: 5rem;
-	font-weight: 200;
-	color: #00145D;
+const Arrow = styled.img`
 	cursor: pointer;
+	transform: ${props => props.rotate && 'rotate(180deg)'};
 
 	@media (max-width: 768px) {
-		font-size: 2.3rem;
+		width: 100%;
 	}
 `;
 
@@ -94,32 +94,43 @@ const Text = styled.button`
 	}
 `;
 
-const Slider = ({ data }) => {
+const Slider = ({ data, home }) => {
+	const [amountOfSlider, setAmountOfSlider] = useState(6);
 	const [current, setCurrent] = useState(6);
 	const [dataList, setDataList] = useState([]);
 	const [page, setPage] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 
+	console.log('ppp 123', home)
+	console.log('ppp-----')
+
 	useEffect(() => {
+		const isHome = home ? 3 : 6
 		let isData = data && data;
 		setDataList(isData);
+		console.log('caiiiiii', home)
 
 		let arrayPages = [];
-		let totalPages = Math.ceil(isData.length / 6);
+		let totalPages = Math.ceil(isData.length / isHome);
 
 		for (var i = 1; i <= totalPages; ++i) {
 			arrayPages.push(i);
 		}
 
+		if(home) {
+			setAmountOfSlider(3);
+			setCurrent(3);
+		}
+
 		setPage(arrayPages);
 	}, []);
 
-	const handleScrollTo =  () => {
+	const handleScrollTo = () => {
 		window.scrollTo(0, 0);
 	};
 
 	const handlePrevious = () => {
-		let handleSlide = current - 6;
+		let handleSlide = current - amountOfSlider;
 		let renderPage = currentPage - 1;
 
 		setCurrentPage(renderPage);
@@ -127,7 +138,7 @@ const Slider = ({ data }) => {
 	}
 
 	const handleNext = () => {
-		let handleSlide = current + 6;
+		let handleSlide = current + amountOfSlider;
 		let renderPage = currentPage + 1;
 
 		setCurrentPage(renderPage);
@@ -135,15 +146,23 @@ const Slider = ({ data }) => {
 	}
 
 	const handlePagination = (number) => {
-		let handleSlide = number * 6;
+		let handleSlide = number * amountOfSlider;
 
 		setCurrentPage(number);
 		setCurrent(handleSlide);
 	}
 
+	const renderButtonPrevious = () => (
+		current >= amountOfSlider + 1 && <Arrow rotate src={iconArrow} onClick={handlePrevious} />
+	)
+
+	const renderButtonNext = (item) => (
+		current <= item.length && <Arrow src={iconArrow} onClick={handleNext} />
+	)
+
 	const renderSlider = (item) => {
 		const listItem = item ? item : [];
-		const sliderQuantity = 6;
+		const sliderQuantity = amountOfSlider;
 		let startNumber = current - sliderQuantity;
 		let endNumber = current;
 		const renderList = listItem.slice(startNumber, endNumber);
@@ -151,20 +170,20 @@ const Slider = ({ data }) => {
 		return (
 			<Content>
 				<Figure>
-					{current >= 7 && <Arrow onClick={handlePrevious}>{'<'}</Arrow>}
+					{renderButtonPrevious()}
 				</Figure>
 				<PostList data={renderList} />
 				<Figure>
-					{current <= item.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+					{renderButtonNext(item)}
 				</Figure>
 			</Content>
 		)
 	}
 
-	const renderPagination = () => (
+	const renderPagination = (item) => (
 		<ContainerPagination>
 			<Figure mob>
-				{current >= 7 && <Arrow onClick={handlePrevious}>{'<'}</Arrow>}
+				{renderButtonPrevious()}
 			</Figure>
 			<ContentPagination>
 				{page.map(i => (
@@ -178,15 +197,16 @@ const Slider = ({ data }) => {
 				))}
 			</ContentPagination>
 			<Figure mob>
-				{current <= data.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+				{renderButtonNext(item)}
 			</Figure>
 		</ContainerPagination>
 	)
 
 	return (
 		<Container>
+		{console.log(home, '------=')}
 			{renderSlider(data)}
-			{renderPagination()}
+			{renderPagination(data)}
 			<Text onClick={handleScrollTo}>Voltar para o Topo</Text>
 		</Container>
 	)

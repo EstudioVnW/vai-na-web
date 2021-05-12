@@ -6,8 +6,8 @@ import styled from 'styled-components';
 //Components
 import Card from '../../components/blog/card';
 import PostSlider from '../../components/postSlider/postSlider';
-import PageTitle from '../../components/pageTitle/pageTitle';
 import Layouts from '../../components/Layouts';
+import ArticleBlog from '../../components/blog/articleBlog';
 
 // styles
 const ContainerBlog = styled.div`
@@ -85,20 +85,21 @@ const renderBlog = (data) => {
   )
 }
 
-const Index = ({ data }) => {
+const Index = ({ data, home }) => {
   const item = data && data.posts.nodes;
   const title = `Radar <br/> Vai na Web`;
   const isTitle = { typePage: 'Blog', title: title };
 
   return (
     <Layouts>
-      <PageTitle data={isTitle} />
-      <ContainerBlog>
+      {/* <PageTitle data={isTitle} /> */}
+      {/* <ContainerBlog>
         {!item.length
           ? <Text>Não há conteúdo no momento</Text>
           : renderBlog(item)
         }
-      </ContainerBlog>
+      </ContainerBlog> */}
+      <ArticleBlog data={data}/>
     </Layouts>
   )
 }

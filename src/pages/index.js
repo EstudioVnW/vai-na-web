@@ -1,12 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
+import { graphql } from "gatsby"; 
 import './index.css';
 
 //Components
 import Layouts from '../components/Layouts';
 import PageTitle from '../components/pageTitle/pageTitle';
 import CardHome from '../components/home/card';
-
 import PartnerSchols from '../components/home/PartnerSchool';
 import OverEstudio from '../components/home/OverEstudio';
 // import ReinvestedMoney from '../components/home/ReinvestedMoney';
@@ -14,6 +14,7 @@ import Cases from '../components/home/Cases';
 import Depositions from '../components/home/Depositions';
 import History from '../components/home/History';
 import RocketFooter from '../components/home/rocketFooter';
+import ArticleBlog from '../components/blog/articleBlog'
 
 //Imagens
 import BackgroundImage from '../images/images/Path7680.svg';
@@ -564,6 +565,42 @@ const ButtonsItem = styled.span `
 // }
 
 
+export const query = graphql`
+  query  {
+    posts: allGraphCmsPost(sort: { fields: [createdAt], order: DESC }) {
+      nodes {
+        id
+        title
+        excerpt 
+        publishedAt
+        publishDate
+        createdAt
+        tags {
+          name
+        }
+        content {
+          html
+        }
+        cover {
+          url
+        }
+        authors {
+          id
+          name
+          jobTitle
+          socialNetworkLink
+          bio {
+            html
+          }
+          photo {
+            url
+          }
+        }
+      }
+    }
+  }
+`
+
 const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
@@ -827,7 +864,7 @@ const Home = (props) => {
         <OverEstudio />
         {/* {Cases()} */}
         <Depositions />  
-        <p>Blog</p>
+        <ArticleBlog home data={props.data} />
         <History />
         <RocketFooter />
       </DottedLineBackground>
