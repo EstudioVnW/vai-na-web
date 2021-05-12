@@ -26,6 +26,10 @@ const ContainerEstudio = styled.div `
 	}
 `;
 
+const ContainerText = styled.div `
+  margin-top: 2rem;
+`;
+
 const ContainerTextMain = styled.div `
   @media (max-width: 768px) {
     display: flex;
@@ -72,13 +76,14 @@ const ContainerImagesEstudio = styled.div `
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: -3rem;
   position: relative;
-  right: 4rem;
+  right: 1rem;
 
   @media (max-width: 768px) {
     position: none;
     right: 0px;
+    margin-top: 2rem;
   }
 `;
 
@@ -223,7 +228,7 @@ const BoxPresentationItemServicesFirst = styled.div `
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 8rem;
+  top: 6rem;
   left: 7rem;
   
   @media (min-width: 2560px) {
@@ -248,7 +253,7 @@ const BoxPresentationItemServicesSecond = styled.div `
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: -2rem;
+  top: -4rem;
   left: -1rem;
   
   @media (min-width: 2560px) {
@@ -273,7 +278,7 @@ const BoxPresentationItemServicesThird = styled.div `
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 2rem;
+  top: 0rem;
   left: -4rem;
 
   @media (min-width: 2560px) {
@@ -298,7 +303,7 @@ const BoxPresentationItemServicesFourth = styled.div `
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: -10rem;
+  top: -12rem;
   left: -7rem;
 
   @media (min-width: 2560px) {
@@ -460,7 +465,7 @@ const BoxButton = styled.div `
   display: flex;
   justify-content: flex-end;
   margin-right: 18rem;
-  margin-top: -5.5rem;
+  margin-top: -7rem;
 
   @media (min-width: 2560px) {
     margin-right: 40rem;
@@ -472,6 +477,18 @@ const BoxButton = styled.div `
     margin-right: 0px;
     margin-top: 0px;
   }
+`;
+
+const ContainerProfiteCircle = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
 `;
 
 const ContainerProfit = styled.div `
@@ -489,29 +506,27 @@ const ContainerProfit = styled.div `
 `;
 
 const TextProfit = styled.p `
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.5rem;
-  width: 45%;
+  width: 48%;
   margin-left: 11.4rem;
-  margin-top: 16.5rem;
+  margin-bottom: 1rem;
 
   @media (min-width: 1920px) {
     font-size: 22px;
     line-height: 2.5rem;
     width: 38%;
-    margin-top: 22rem;
     margin-left: 16.4rem;
   }
 
   @media (min-width: 2560px) {
-    width: 37%;
-    margin-top: 37rem;
+    width: 41%;
+    font-size: 28px;
+    margin-bottom: 2rem;
   }
 
-
   @media (max-width: 768px) {
-    margin-top: 3rem;
     margin-left: 0px;
     width: 42%;
   }
@@ -528,28 +543,31 @@ const TextProfitBold = styled.b `
 const CircleOrange = styled.div `
   background: url(${CircleOrangeEstudio}); 
   background-repeat: no-repeat; 
-  background-size: 107%;
-  position: relative;
+  background-size: 31%;
+  height: 11rem;
+  position: relative; 
   background-position: center;
-  top: -5rem;
-  left: 3rem;
+  top: 2rem;
+  left: 16rem; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   :hover {
-    background-size: 112%;
+    background-size: 33%;
   }
 
   @media (min-width: 1920px) {
-    left: 5rem;
-    background-size: 100%;
+    left: 24rem;
+    background-size: 31%;
+    height: 16rem;
   }
 
   @media (min-width: 2560px) {
-    left: 6rem;
-    top: -8rem; 
+    height: 19.5rem;
+    left: 29rem;
+    top: 5rem;
   }
 
   @media (max-width: 768px) {
@@ -592,14 +610,18 @@ const TextNumberCircle = styled.h2 `
 const TextCircle = styled.p `
   text-align: center;
   font-size: 11px;
-  width: 78%;
+  width: 20%;
   font-weight: 400;
   line-height: 14px;
 
   @media (min-width: 1920px) {
     font-size: 17px;
-    width: 65%;
+    width: 23%;
     line-height: 1.5rem;
+  }
+
+  @media (min-width: 2560px) {
+    width: 18%;
   }
 
   @media (max-width: 768px) {
@@ -640,21 +662,23 @@ const PartnerOverEstudio = () => {
 	
 	return (
     <div>
-        <PageTitle data={isTitleEstudio} isPage='isHome' />
+        <ContainerText>
+          <PageTitle data={isTitleEstudio} isPage='isHome' />
+        </ContainerText>
         <ContainerEstudio>
-          <ContainerTextMain>
-            <TextDescriptionAll>
-              Desenvolvemos o SIaaS: Social Impact as a Service, um modelo de ciclo 
-              fechado que <BoldTextAll>entrega serviços digitais</BoldTextAll>, de alto nível de agilidade e inovação digital, 
-              ao mesmo tempo que <BoldTextAll>garante experiência para estudantes recém-formados na Escola.</BoldTextAll>
-            </TextDescriptionAll>
-            <TextDescriptionAll>
-              A cada missão, nossos parceiros e clientes recebem uma injeção de criatividade e 
-              diversidade em seus projetos, compartilhando a chance de nossos jovens <BoldTextAll>trabalharem 
-              em projetos reais</BoldTextAll>, desenvolver <BoldTextAll>experiência técnica, soft skills e habilidades 
-              empreendedoras</BoldTextAll> – capacidades imprescindíveis para um talento digital de sucesso.
-            </TextDescriptionAll>
-          </ContainerTextMain>
+            <ContainerTextMain>
+              <TextDescriptionAll>
+                Desenvolvemos o SIaaS: Social Impact as a Service, um modelo de ciclo 
+                fechado que <BoldTextAll>entrega serviços digitais</BoldTextAll>, de alto nível de agilidade e inovação digital, 
+                ao mesmo tempo que <BoldTextAll>garante experiência para estudantes recém-formados na Escola.</BoldTextAll>
+              </TextDescriptionAll>
+              <TextDescriptionAll>
+                A cada missão, nossos parceiros e clientes recebem uma injeção de criatividade e 
+                diversidade em seus projetos, compartilhando a chance de nossos jovens <BoldTextAll>trabalharem 
+                em projetos reais</BoldTextAll>, desenvolver <BoldTextAll>experiência técnica, soft skills e habilidades 
+                empreendedoras</BoldTextAll> – capacidades imprescindíveis para um talento digital de sucesso.
+              </TextDescriptionAll>
+            </ContainerTextMain>
           <ContainerImagesEstudio>
             <ImageLogoEstudio src={ImageEstudioVnW} alt="Logo Vai na Web"/>
             <LineBlue></LineBlue>
@@ -703,14 +727,16 @@ const PartnerOverEstudio = () => {
           <a href="https://forms.gle/bVRiWcWoHnL9D5tU8" target="_blank"><Button colorHover='#272727'>Desejo Contratar!</Button></a>
         </BoxButton>
         <ContainerProfit>
-          <TextProfit>
-            Toda vez que sua empresa contrata serviços do Estúdio Vai na Web, ela contribui diretamente 
-            para <TextProfitBold> inspirar, equipar e educar mais pessoas </TextProfitBold> para a economia digital. 
-          </TextProfit>
+          <ContainerProfiteCircle>
           <CircleOrange>
-            <TextNumberCircle>100%</TextNumberCircle>
-            <TextCircle>do lucro gerado pelo Estúdio VnW é reinvestido para formar mais pessoas.</TextCircle>
-          </CircleOrange>
+              <TextNumberCircle>100%</TextNumberCircle>
+              <TextCircle>do lucro gerado pelo Estúdio VnW é reinvestido para formar mais pessoas.</TextCircle>
+            </CircleOrange>
+            <TextProfit>
+              Toda vez que sua empresa contrata serviços do Estúdio Vai na Web, ela contribui diretamente 
+              para <TextProfitBold> inspirar, equipar e educar mais pessoas </TextProfitBold> para a economia digital. 
+            </TextProfit>
+          </ContainerProfiteCircle>
           <SecondImagePhotoEstudio src={SecondPhotoEstudio} alt="Foto"/>
         </ContainerProfit>
       </div>
