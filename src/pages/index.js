@@ -605,7 +605,7 @@ const Home = (props) => {
         </TextDescriptionAll>
       </div>
       <ContainerPartners>
-       {PartnerNetworks()} 
+       {/* {PartnerNetworks()}  */}
       </ContainerPartners>
     </ContainerNetwork>
   )
@@ -668,14 +668,14 @@ const Home = (props) => {
 
   return (
     <Layouts home>
-      <BackgroundHeader />
-        {RenderHeader()}
+       <BackgroundHeader />
+        {RenderHeader()}  
         <DottedLineBackground>
-        {RenderNetwork()}
-        <PartnerSchols />
+          {RenderNetwork()}  
+        <PartnerSchols />  
         <OverEstudio />
-         {Cases()} 
-        <Depositions />
+         {Cases()}  
+        <Depositions /> 
         <p>Blog</p>
         <History />
       </DottedLineBackground>

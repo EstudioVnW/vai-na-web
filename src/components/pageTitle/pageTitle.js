@@ -22,6 +22,10 @@ const BoxTitle = styled.div`
 	@media (max-width: 768px) {
 		margin-left: 0px;
 	}
+
+	@media (max-width: 768px) {
+		margin-left: 0px;
+	}
 `;
 
 const Date = styled.p`
@@ -47,7 +51,11 @@ const TypePage = styled.h1`
 	}
 
 	@media (max-width: 768px) {
-		margin-left: 0px;
+		margin-left: 11rem;
+	}
+
+	@media (max-width: 425px) {
+		margin-left: 0rem;
 	}
 `;
 
@@ -66,6 +74,14 @@ const LineOrange = styled.span `
 	@media (min-width: 1920px) {
 		font-size: 3.2rem;
 	}
+
+	@media (max-width: 768px) {
+		margin-left: 10rem;
+	}
+
+	@media (max-width: 425px) {
+		margin-left: 0rem;
+	  }
 `;
 
 const Title = styled.h2`
@@ -80,8 +96,12 @@ const Title = styled.h2`
 		width: 93%;
 	}
 
-	@media (max-width: 768px) {
+	@media (min-width: 768px) {
 		font-size: 2.4rem;
+	}
+
+	@media (max-width: 425px) {
+		font-size: 2rem;
 	}
 `;
 
