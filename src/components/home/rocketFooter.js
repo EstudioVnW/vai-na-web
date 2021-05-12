@@ -137,7 +137,8 @@ const ImageRocket = styled.img `
 
 
     @media (max-width: 425px) {
-        bottom: -20.5rem;
+        width: 57%;
+        bottom: -21.5rem;
       }
 `;
 
@@ -171,13 +172,14 @@ const Button = styled.button `
 
     @media (max-width: 768px) {
         background-color: #FFFDF8;
-        left: 0px;
+        left: -11px;
         width: 14.5rem;
         height: 3rem;
 
         :hover {
             background-color: #FFFDF8;
             color: #0F2B92;
+            border: 1px solid  #FFAC2D; 
         }
     }
 `;
