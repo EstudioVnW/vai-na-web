@@ -13,16 +13,15 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	width: 100%;
+
 `;
 
 const Content = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
-	@media (max-width: 768px) {
-		width: 100%;
-	}
+	width: 100%;
 `;
 
 const Figure = styled.figure`
@@ -95,21 +94,32 @@ const Text = styled.button`
 	}
 `;
 
-const Slider = ({ data }) => {
+const Slider = ({ data, home }) => {
+	const [amountOfSlider, setAmountOfSlider] = useState(6);
 	const [current, setCurrent] = useState(6);
 	const [dataList, setDataList] = useState([]);
 	const [page, setPage] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 
+	console.log('ppp 123', home)
+	console.log('ppp-----')
+
 	useEffect(() => {
+		const isHome = home ? 3 : 6
 		let isData = data && data;
 		setDataList(isData);
+		console.log('caiiiiii', home)
 
 		let arrayPages = [];
-		let totalPages = Math.ceil(isData.length / 6);
+		let totalPages = Math.ceil(isData.length / isHome);
 
 		for (var i = 1; i <= totalPages; ++i) {
 			arrayPages.push(i);
+		}
+
+		if(home) {
+			setAmountOfSlider(3);
+			setCurrent(3);
 		}
 
 		setPage(arrayPages);
@@ -120,7 +130,7 @@ const Slider = ({ data }) => {
 	};
 
 	const handlePrevious = () => {
-		let handleSlide = current - 6;
+		let handleSlide = current - amountOfSlider;
 		let renderPage = currentPage - 1;
 
 		setCurrentPage(renderPage);
@@ -128,7 +138,7 @@ const Slider = ({ data }) => {
 	}
 
 	const handleNext = () => {
-		let handleSlide = current + 6;
+		let handleSlide = current + amountOfSlider;
 		let renderPage = currentPage + 1;
 
 		setCurrentPage(renderPage);
@@ -136,14 +146,14 @@ const Slider = ({ data }) => {
 	}
 
 	const handlePagination = (number) => {
-		let handleSlide = number * 6;
+		let handleSlide = number * amountOfSlider;
 
 		setCurrentPage(number);
 		setCurrent(handleSlide);
 	}
 
 	const renderButtonPrevious = () => (
-		current >= 7 && <Arrow rotate src={iconArrow} onClick={handlePrevious} />
+		current >= amountOfSlider + 1 && <Arrow rotate src={iconArrow} onClick={handlePrevious} />
 	)
 
 	const renderButtonNext = (item) => (
@@ -152,7 +162,7 @@ const Slider = ({ data }) => {
 
 	const renderSlider = (item) => {
 		const listItem = item ? item : [];
-		const sliderQuantity = 6;
+		const sliderQuantity = amountOfSlider;
 		let startNumber = current - sliderQuantity;
 		let endNumber = current;
 		const renderList = listItem.slice(startNumber, endNumber);
@@ -194,6 +204,7 @@ const Slider = ({ data }) => {
 
 	return (
 		<Container>
+		{console.log(home, '------=')}
 			{renderSlider(data)}
 			{renderPagination(data)}
 			<Text onClick={handleScrollTo}>Voltar para o Topo</Text>
