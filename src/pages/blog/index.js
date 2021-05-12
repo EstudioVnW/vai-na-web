@@ -21,6 +21,10 @@ const ContainerBlog = styled.div`
 
 const ContantCard = styled.div`
   width: 80%; /* tamanho do container do post */
+
+  @media (max-width: 768px) {
+		width: 100%; 
+	}
 `;
 
 const Text = styled.h3`
@@ -39,6 +43,7 @@ export const query = graphql`
         title
         excerpt 
         publishedAt
+        publicationDate
         createdAt
         tags {
           name
@@ -69,13 +74,13 @@ export const query = graphql`
 const renderBlog = (data) => {
   const firstItem = data && data[0];
   const listSlider = data && data.filter(item => item.id !== firstItem.id);
-console.log({firstItem})
+
   return (
     <>
       <ContantCard>
         <Card data={firstItem} />
       </ContantCard>
-      <PostSlider data={listSlider} /> 
+      <PostSlider data={listSlider} />
     </>
   )
 }
@@ -87,7 +92,7 @@ const Index = ({ data }) => {
 
   return (
     <Layouts>
-    <PageTitle data={isTitle}/>
+      <PageTitle data={isTitle} />
       <ContainerBlog>
         {!item.length
           ? <Text>Não há conteúdo no momento</Text>

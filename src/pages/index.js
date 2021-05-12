@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 import './index.css';
-// import scrollTo from 'gatsby-plugin-smoothscroll';
 
 //Components
 import Layouts from '../components/Layouts';
@@ -453,13 +452,9 @@ const ContentCardCd = styled.div`
 `;
 
 
-
-
 const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
- 
-  
 
   const RenderHeader = () => (
     <ContentHeader>

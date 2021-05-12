@@ -65,7 +65,7 @@ const ContentTitle = styled.div`
 	padding-top: 1rem;
 `;
 
-const LineOrange = styled.span `
+const LineOrange = styled.span`
 	padding-right: 0.5rem;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
 	font-weight: 200;
@@ -76,7 +76,7 @@ const LineOrange = styled.span `
 	}
 
 	@media (max-width: 768px) {
-		margin-left: 10rem;
+		padding-left: 3.3rem;
 	}
 
 	@media (max-width: 425px) {
@@ -103,6 +103,10 @@ const Title = styled.h2`
 	@media (max-width: 425px) {
 		font-size: 2rem;
 	}
+
+	@media (max-width: 375px) {
+		font-size: 1.938rem;
+	}
 `;
 
 const ContentSubTitle = styled.div`
@@ -110,7 +114,7 @@ const ContentSubTitle = styled.div`
 
 `;
 
-const SubTitle = styled.p `
+const SubTitle = styled.p`
 	font-size: ${props => props.pageBlog === 'postBlog' ? '30px' : '36px'};
 	font-weight: 100;
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
@@ -168,7 +172,7 @@ const PageTitle = ({ isPage, data }) => {
 					<LineOrange pageHome={isPage}>//</LineOrange>
 					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
-				{data?.excerpt && 
+				{data?.excerpt &&
 					<ContentSubTitle>
 						<SubTitle pageBlog={isPage} >
 							{data.excerpt}

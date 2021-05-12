@@ -13,9 +13,13 @@ const Container = styled.section`
   margin-top: -6rem;
   width: 80vw;
   margin: auto;
+
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 `;
 
-const ContainerMain = styled.div `
+const ContainerMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +35,7 @@ const ContainerMain = styled.div `
 `;
 
 const Image = styled.img`
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
   width: 60%;
   height: 30rem;
   border-radius: 20px;
@@ -43,7 +47,7 @@ margin-bottom: 1rem;
 	}
 `;
 
-const TextDescription = styled.article `
+const TextDescription = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,11 +101,15 @@ const TextDescription = styled.article `
 
   ul {
     font-weight: 400;
-    width: 48%;
+    width: 39.563rem;
     font-size: 17px;
     line-height: 2.2rem;
     margin-top: 1rem;
     color: #2F2F2F;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   };
 
     blockquote {
@@ -111,6 +119,10 @@ const TextDescription = styled.article `
       line-height: 2.3rem;
       margin-top: 2rem;
       color: #141414;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     };
 
     blockquote strong {
@@ -119,59 +131,64 @@ const TextDescription = styled.article `
       line-height: 2.3rem;
       font-weight: 600;
       color: #141414;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     };
 `;
-
-export default function PostBlog({ data }) {
-  const isTitle = {
-    date: data.item.publishedAt, 
-    title: data.item.title,
-    excerpt: data.item.excerpt,
-  };
-
-  return (
-    <Layout isPage='postBlog'>
-      <PageTitle data={isTitle} isPage='postBlog'/>
-      <Container>
-        <ContainerMain>
-          {/* <Image src={data.item.cover.url || ''} alt='Foto principal' /> */}
-          <TextDescription dangerouslySetInnerHTML={{ __html: data.item.content.html }}></TextDescription>		
-        </ContainerMain>
-        <CardAuthor author={data.item.authors[0]}/> 
-      </Container>
-    </Layout>
-  )
-}
 
 export const query = graphql`
   query($id: String!) {
     item: graphCmsPost(id: { eq: $id }) {
       id
       title
-      excerpt 
-        publishedAt
-        createdAt
-        tags {
-          name
-        }
-        content {
+      excerpt
+      isHighlighted
+      publishedAt
+      createdAt
+      tags {
+        name
+      }
+      content {
+        html
+      }
+      cover {
+        url
+      }
+      authors {
+        id
+        name
+        jobTitle
+        socialNetworkLink
+        bio {
           html
         }
-        cover {
+        photo {
           url
         }
-        authors {
-          id
-          name
-          jobTitle
-          socialNetworkLink
-          bio {
-            html
-          }
-          photo {
-            url
-          }
-        }
+      }
     }
   }
 `
+
+export default function PostBlog({ data }) {
+  const isTitle = {
+    date: data.item.publishedAt,
+    title: data.item.title,
+    excerpt: data.item.excerpt,
+  };
+
+  return (
+    <Layout isPage='postBlog'>
+      <PageTitle data={isTitle} isPage='postBlog' />
+      <Container>
+        <ContainerMain>
+          {data?.item?.cover && <Image src={data.item.cover.url || ''} alt='Foto principal' />}
+          <TextDescription dangerouslySetInnerHTML={{ __html: data.item.content.html }}></TextDescription>
+        </ContainerMain>
+      </Container>
+        <CardAuthor author={data.item.authors[0]} />
+    </Layout>
+  )
+}
