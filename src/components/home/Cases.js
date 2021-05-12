@@ -9,9 +9,9 @@ import CaseImg from '../../images/images/Reg@2x.png'
 
 // styles
 const Container = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 100%;
   padding: 4rem 0;
 `;
