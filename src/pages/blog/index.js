@@ -43,7 +43,7 @@ export const query = graphql`
         title
         excerpt 
         publishedAt
-        publicationDate
+        publishDate
         createdAt
         tags {
           name
