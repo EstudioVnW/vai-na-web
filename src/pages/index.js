@@ -198,14 +198,17 @@ const BoldBackground = styled.b`
 
 const ContainerPartners = styled.div`
   position: relative;
+  margin-top: -9rem;
 
   @media (min-width: 1920px) {
-		margin-left: 15rem;
+    margin-left: 15rem;
+    margin-top: 0px;
   }
   
   @media (max-width: 768px) {
     margin-left: -39rem;
     margin-bottom: 5rem;
+    margin-top: 0px;
   }
 
 `;
