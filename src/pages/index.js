@@ -53,6 +53,8 @@ var scrollDow = function () {
   window.scrollTo(0, 740);
 };
 
+
+
 // styles
 const BackgroundHeader  = styled.div`
   position: absolute;
@@ -105,6 +107,10 @@ const ButtonScroll = styled.button`
   margin-bottom: 10rem;
   /* position: ${props => props.isClicked && 'fixed'};
   top: 0; */
+`;
+
+const Container = styled.div `
+  margin-top: 18rem;
 `;
 
 const ContainerNetwork = styled.div`
@@ -161,7 +167,7 @@ const TextDescriptionAll = styled.p`
   line-height: 1.5rem;
   width: 17.5rem;
   margin-left: 11.4rem;
-  margin-top: -1rem;
+  margin-top: -3rem;
   margin-bottom: 2rem;
 
   @media (min-width: 1920px) {
@@ -197,11 +203,10 @@ const BoldBackground = styled.b`
 
 const ContainerPartners = styled.div`
   position: relative;
-  margin-top: -9rem;
+  margin-top: -11rem;
 
   @media (min-width: 1920px) {
-    margin-left: 15rem;
-    margin-top: 0px;
+    margin-left: 10rem;
   }
   
   @media (max-width: 768px) {
@@ -743,7 +748,7 @@ const Home = (props) => {
   }
 
   const RenderNetwork = () => (
-    <div>
+    <Container>
         <PageTitle data={isTitle} isPage='isHome' />
       <ContainerNetwork id='content-1'>
         <ContainerTextNetwork>
@@ -759,7 +764,7 @@ const Home = (props) => {
           {PartnerNetworks()} 
         </ContainerPartners>
       </ContainerNetwork>
-    </div>
+    </Container>
   )
 
   // const Cases = () => {

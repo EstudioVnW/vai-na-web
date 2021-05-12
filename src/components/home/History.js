@@ -217,7 +217,7 @@ const History = () => {
 						O meu pai que economizava para comprar um carro novo, comprou o computador. E eu comecei a minha história. 
 						Fui desenhando um amanhã após o outro,
 					</TextHistory>
-					<TextHistory width='31.8rem'>
+					<TextHistory width='31rem'>
 						abrindo estradas, conectando e reconectando o brilho de cada novo código. 
 						Estradas que viraram pontes, que viraram aerovias, que viraram multiversos. Que não conectavam apenas códigos,
 						mas também mentes e corações. Uma nova dimensão para a tecnologia foi criada e ganhou alma. Agora, 
@@ -229,7 +229,7 @@ const History = () => {
 					transform='rotate(59deg)' 
 					width='16rem' 
 					top='14rem' 
-					right='-2.5rem'
+					right='-1.5rem'
 					
 					Mright='17.5rem'
 					Mtop='19rem'
@@ -324,7 +324,7 @@ const History = () => {
 					Mobiletransform='rotate(127deg)'
 				/>
 				<BoxPerson
-					top=''
+					top='-1rem'
 					right='8rem'
 					Mright='25rem'
 					Mtop='-4rem'
