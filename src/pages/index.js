@@ -110,10 +110,6 @@ const ContainerNetwork = styled.div`
   display: flex;
   margin-top: 2rem;
 
-  @media (min-width: 1920px) {
-    margin-top: 15rem;
-  }
-
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
