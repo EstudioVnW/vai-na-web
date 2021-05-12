@@ -4,6 +4,9 @@ import styled from 'styled-components';
 //Component
 import PostList from '../blog/postList';
 
+//Image
+import iconArrow from '../../images/icons/arrow.svg';
+
 // styles
 const Container = styled.div`
 	display: flex;
@@ -28,18 +31,16 @@ const Figure = styled.figure`
 
 	@media (max-width: 768px) {
 		display: ${props => props.mob ? 'flex' : 'none'};
-		/* width: .792rem; */
+		width: 1rem;
 	}
 `;
 
-const Arrow = styled.p`
-	font-size: 5rem;
-	font-weight: 200;
-	color: #00145D;
+const Arrow = styled.img`
 	cursor: pointer;
+	transform: ${props => props.rotate && 'rotate(180deg)'};
 
 	@media (max-width: 768px) {
-		font-size: 2.3rem;
+		width: 100%;
 	}
 `;
 
@@ -114,7 +115,7 @@ const Slider = ({ data }) => {
 		setPage(arrayPages);
 	}, []);
 
-	const handleScrollTo =  () => {
+	const handleScrollTo = () => {
 		window.scrollTo(0, 0);
 	};
 
@@ -141,6 +142,14 @@ const Slider = ({ data }) => {
 		setCurrent(handleSlide);
 	}
 
+	const renderButtonPrevious = () => (
+		current >= 7 && <Arrow rotate src={iconArrow} onClick={handlePrevious} />
+	)
+
+	const renderButtonNext = (item) => (
+		current <= item.length && <Arrow src={iconArrow} onClick={handleNext} />
+	)
+
 	const renderSlider = (item) => {
 		const listItem = item ? item : [];
 		const sliderQuantity = 6;
@@ -151,20 +160,20 @@ const Slider = ({ data }) => {
 		return (
 			<Content>
 				<Figure>
-					{current >= 7 && <Arrow onClick={handlePrevious}>{'<'}</Arrow>}
+					{renderButtonPrevious()}
 				</Figure>
 				<PostList data={renderList} />
 				<Figure>
-					{current <= item.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+					{renderButtonNext(item)}
 				</Figure>
 			</Content>
 		)
 	}
 
-	const renderPagination = () => (
+	const renderPagination = (item) => (
 		<ContainerPagination>
 			<Figure mob>
-				{current >= 7 && <Arrow onClick={handlePrevious}>{'<'}</Arrow>}
+				{renderButtonPrevious()}
 			</Figure>
 			<ContentPagination>
 				{page.map(i => (
@@ -178,7 +187,7 @@ const Slider = ({ data }) => {
 				))}
 			</ContentPagination>
 			<Figure mob>
-				{current <= data.length && <Arrow onClick={handleNext}>{'>'}</Arrow>}
+				{renderButtonNext(item)}
 			</Figure>
 		</ContainerPagination>
 	)
@@ -186,7 +195,7 @@ const Slider = ({ data }) => {
 	return (
 		<Container>
 			{renderSlider(data)}
-			{renderPagination()}
+			{renderPagination(data)}
 			<Text onClick={handleScrollTo}>Voltar para o Topo</Text>
 		</Container>
 	)
