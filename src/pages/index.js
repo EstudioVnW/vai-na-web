@@ -110,9 +110,21 @@ const ContainerNetwork = styled.div`
   display: flex;
   margin-top: 2rem;
 
-  @media (min-width: 1920px) {
-    margin-top: 15rem;
-	}
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20rem;
+  }
+
+`;
+
+const ContainerTextNetwork = styled.div `
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 // const Image = styled.img`
@@ -154,7 +166,19 @@ const TextDescriptionAll = styled.p`
     line-height: 2.5rem;
     font-size: 22px;
     width: 27.5rem;
-	}
+  }
+
+  @media (max-width: 768px) {
+    width: 50%;
+    margin-left: 0px;
+  }
+
+  @media (max-width: 425px) {
+    width: 75%;
+    margin-left: 0px;
+    line-height: 1.8rem;
+    font-size: 16px;
+  }
 `;
 
 const BoldTextAll = styled.b`
@@ -170,10 +194,19 @@ const BoldBackground = styled.b`
 
 const ContainerPartners = styled.div`
   position: relative;
+  margin-top: -9rem;
 
   @media (min-width: 1920px) {
-		margin-left: 15rem;
-	}
+    margin-left: 15rem;
+    margin-top: 0px;
+  }
+  
+  @media (max-width: 768px) {
+    margin-left: -39rem;
+    margin-bottom: 5rem;
+    margin-top: 0px;
+  }
+
 `;
 
 const BoxPartners = styled.div`
@@ -195,7 +228,21 @@ const BoxPartners = styled.div`
     height: 5.5rem;
     top: ${props => props.Mtop};
     left: ${props => props.Mleft};
-	}
+  }
+  
+  @media (max-width: 768px) {
+    border-radius: 42px;
+    width: 8.5rem;
+    height: 3.5rem;
+    top: ${props => props.MobileTop};
+  }
+
+  @media (max-width: 425px) {
+    top: ${props => props.MobileeTop};
+    left: ${props => props.MobileeLeft};
+    width: 7.4rem;
+    height: 2.9rem;
+  }
 `;
 
 const ImagePartners = styled.img`
@@ -221,7 +268,14 @@ const CirclePartners = styled.div`
     height: 8.5rem;
     top: ${props => props.Mtop};
     left: ${props => props.Mleft};
-	}
+  }
+  
+  @media (max-width: 425px) {
+    top: ${props => props.MobileeTop};
+    left: ${props => props.MobileeLeft};
+    width: 4.5rem;
+    height: 4.5rem;
+  }
 `;
 
 const Logo = styled.img`
@@ -240,7 +294,13 @@ const LinePartners = styled.div`
   @media (min-width: 1920px) {
     top: ${props => props.Mtop};
     left: ${props => props.Mleft};
-	}
+  }
+  
+  @media (max-width: 425px) {
+    top: ${props => props.MobileeTop};
+    left: ${props => props.MobileeLeft};
+    width: ${props => props.MobileeWidth};
+  }
 `;
 
 const Content = styled.div`
@@ -482,6 +542,9 @@ const Home = (props) => {
           left='25rem'
           Mtop='4rem'
           Mleft='22rem'
+
+          MobileeTop='6.5rem'
+          MobileeLeft='22rem'
          >
           <ImagePartners width src={ImagePetronect} alt='Petronect' />
         </BoxPartners>
@@ -492,6 +555,9 @@ const Home = (props) => {
           left='17rem'
           Mtop='10rem'
           Mleft='14rem'
+
+          MobileeTop='9.5rem'
+          MobileeWidth='7rem'
         />
         <CirclePartners
           color='#FDE7A9' 
@@ -500,6 +566,9 @@ const Home = (props) => {
           left='13rem'
           Mtop='9rem' 
           Mleft='10rem'
+
+          MobileeTop='9.5rem'
+          MobileeLeft='14rem'
         >
           <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
         </CirclePartners>
@@ -510,6 +579,10 @@ const Home = (props) => {
           left='8.7rem'
           Mtop='18rem' 
           Mleft='4rem'
+
+          MobileeTop=''
+          MobileeLeft='10.7rem'
+          MobileeWidth=''
         />
         <CirclePartners
           color='#FFFFFF' 
@@ -518,6 +591,9 @@ const Home = (props) => {
           left='7rem'
           Mtop='17rem' 
           Mleft='0rem'
+
+          MobileeTop=''
+          MobileeLeft='9rem'
          >
           <Logo width='50%' src={ImageRocket} alt='Foguete' />
         </CirclePartners>
@@ -528,6 +604,10 @@ const Home = (props) => {
           left='7rem'
           Mtop='26.5rem' 
           Mleft='5rem'
+
+          MobileeTop=''
+          MobileeLeft='9rem'
+          MobileeWidth=''
         />
         <CirclePartners 
           color='#FDE7A9' 
@@ -536,6 +616,9 @@ const Home = (props) => {
           left='13rem' 
           Mtop='26rem' 
           Mleft='10rem'
+
+          MobileeTop='17rem'
+          MobileeLeft='14rem'
         >
           <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
         </CirclePartners>
@@ -546,11 +629,20 @@ const Home = (props) => {
           left='7rem'
           Mtop='36rem' 
           Mleft='5rem'
+
+          MobileeTop='22rem'
+          MobileeLeft='10rem'
+          MobileeWidth='7rem'
           />
         <BoxPartners
          top='19rem' 
          left='27rem' 
          Mtop='27rem' 
+
+         MobileTop='20rem'
+
+         MobileeTop='19rem'
+         MobileeLeft='23rem'
         >
           <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
         </BoxPartners>
@@ -560,11 +652,18 @@ const Home = (props) => {
           top='26rem' 
           left='16rem'
           Mtop='37rem' 
+
+          MobileeTop='23rem'
+          MobileeLeft='15.5rem'
+          MobileeWidth='9rem'
         />
         <BoxPartners
          top='28rem' 
          left='20rem' 
          Mtop='40rem' 
+         
+         MobileeTop='25rem'
+         MobileeLeft='20rem'
         >
           <ImagePartners src={ImageProadi} alt='Instituto Votorantim' />
         </BoxPartners>
@@ -574,12 +673,19 @@ const Home = (props) => {
           top='21rem' 
           left='16rem'
           Mtop='30rem' 
+
+          MobileeTop='20.1rem'
+          MobileeWidth='7rem'
+          MobileeLeft='18rem'
         />
         <BoxPartners
           top='27rem' 
           left='5rem'
           Mtop='39rem' 
           Mleft='-3rem'
+
+          MobileeTop='24rem'
+          MobileeLeft='9rem'
          >
           <ImagePartners src={ImageVotorantim} alt='Proadi SUS' />
         </BoxPartners>
@@ -588,21 +694,23 @@ const Home = (props) => {
   }
 
   const RenderNetwork = () => (
-    <ContainerNetwork id='content-1'>
-      <div>
+    <div>
         <PageTitle data={isTitle} isPage='isHome' />
-        <TextDescriptionAll>
-          A partir de uma <BoldTextAll>rede colaborativa e sustentável</BoldTextAll>, composta de grandes empresas,
-          parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
-          <BoldTextAll> para entregar soluções com inovação, maturidade digital e transformação humana. </BoldTextAll>
-          Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
-          pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
-        </TextDescriptionAll>
-      </div>
-      <ContainerPartners>
-       {/* {PartnerNetworks()}  */}
-      </ContainerPartners>
-    </ContainerNetwork>
+      <ContainerNetwork id='content-1'>
+        <ContainerTextNetwork>
+          <TextDescriptionAll>
+            A partir de uma <BoldTextAll>rede colaborativa e sustentável</BoldTextAll>, composta de grandes empresas,
+            parceiros e amigos, trabalhamos na vanguarda das tecnologias digitais e sociais
+            <BoldTextAll> para entregar soluções com inovação, maturidade digital e transformação humana. </BoldTextAll>
+            Com o objetivo <BoldBackground>de diminuir de forma inteligente a desigualdade social,</BoldBackground> qualificamos
+            pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
+          </TextDescriptionAll>
+        </ContainerTextNetwork>
+        <ContainerPartners>
+          {PartnerNetworks()} 
+        </ContainerPartners>
+      </ContainerNetwork>
+    </div>
   )
 
   const Cases = () => {
@@ -664,13 +772,13 @@ const Home = (props) => {
   return (
     <Layouts home>
        <BackgroundHeader />
-        {RenderHeader()}  
+        {RenderHeader()}
         <DottedLineBackground>
-          {RenderNetwork()}  
+        {RenderNetwork()}  
         <PartnerSchols />  
         <OverEstudio />
-         {Cases()}  
-        <Depositions /> 
+        {Cases()}   
+        <Depositions />  
         <p>Blog</p>
         <History />
       </DottedLineBackground>
