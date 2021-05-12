@@ -10,7 +10,7 @@ const Container = styled.header`
   display: flex;
 	justify-content: space-between;
 	width: 100%;
-	height: ${props => props.home ? '11rem' : '12rem'};
+	height: ${props => props.home ? '11rem' : '19rem'};
 
 	nav{
 		font-family: "usual", sans-serif;

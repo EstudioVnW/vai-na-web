@@ -25,28 +25,42 @@ const Container = styled.div`
   margin: auto;
 `;
 
-const ContainerImage = styled.div`
+const ContainerStudent = styled.div`
   max-width: 1440px;
   width: 85%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+  position: relative;
 `;
 
-const Image = styled.img`
-  width: 100%100vh;
+const ImageStudent = styled.img`
+  width: 100%;
   margin-top: 2rem;
 `;
 
+const StudentParagraph = styled.p`
+  color: #0F2B92;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 110px;
+  left: 95px;
+
+  @media (max-width: 768px) {
+    position: initial;
+    margin-left: 1rem;
+	}
+`;
+
 const ContainerBox = styled.div`
-  max-width: 1440px;
-  width: 85%;
+  /* max-width: 1440px; */
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  margin-top: 7rem;
+  margin: 7rem auto 0;
+  /* margin-top: 7rem; */
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
@@ -62,11 +76,20 @@ const ContainerBox = styled.div`
 `;
 
 const ContainerSubBox = styled.div`
-  width: 45%;
+  width: 31.5%;
   margin-left: 2rem;
+
+  @media (max-width: 1026px) {
+    width: 55.5%;
+	}
 
   @media (max-width: 768px) {
     width: 90%;
+	}
+
+  @media (max-width: 648px) {
+    margin-left: 0;
+    margin-bottom: 2rem;
 	}
 `;
 
@@ -77,41 +100,68 @@ const ContainerTitle = styled.h2`
   margin-bottom: 1.5rem;
 
   @media (max-width: 768px) {
+    margin: 0 0 2rem 10rem;
+	}
+
+  @media (max-width: 648px) {
     margin: 0 0 2rem 3rem;
+    font-size: 2.8rem;
+	}
+
+  @media (max-width: 450px) {
+    margin: 0 0 2rem 1rem;
+    font-size: 2.3rem;
 	}
 `;
 
 const ContainerParagraph = styled.p`
+  /* width: 55%; */
   color: #272727;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+
+  @media (max-width: 648px) {
+    font-size: 1.2rem;
+	}
 `;
 
 const ContainerSubBoxOds = styled.div`
   max-width: 1440px;
-  width: 85%;
+  width: 65%;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 9rem auto;
+
+  @media (max-width: 1026px) {
+    width: 75%;
+	}
 
   @media (max-width: 768px) {
     flex-direction: column;
 	}
 
   p {
-    width: 33%;
+    width: 40%;
     color: #272727;
-    font-size: 1.5rem;
-    margin-right: 5rem;
+    font-size: 1.4rem;
+    margin-right: 4rem;
+    line-height: 2rem;
 
     @media (max-width: 768px) {
       width: 90%;
       margin-right: 0;
 	  }
+
+    @media (max-width: 648px) {
+      font-size: 1.2rem;
+	  }
   }
 `;
 
 const ImageDesk = styled.img`
+  width: 48%;
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -122,18 +172,24 @@ const ImageMob = styled.img`
 
   @media (max-width: 768px) {
     display: flex;
+    margin-top: 2rem;
   }
 `;
 
 const ContainerSubValores = styled.div`
   max-width: 1440px;
-  width: 85%;
+  width: 65%;
   /* height: 100vh; */
   display: flex;
   justify-content: center;
   flex-direction: column;
   margin-top: 5rem;
   margin: 0 auto;
+  padding-bottom: 10rem;
+
+  @media (max-width: 1026px) {
+    width: 80%;
+	}
 
   h2 {
     color: #0F2B92;
@@ -143,60 +199,118 @@ const ContainerSubValores = styled.div`
     @media (max-width: 768px) {
       align-self: baseline;
 	  }
+
+    @media (max-width: 648px) {
+      font-size: 2.8rem;
+	  }
+
+    @media (max-width: 450px) {
+      font-size: 2.3rem;
+	  }
   }
 `;
 
 const ContainerImages = styled.div`
+  /* width: 65%; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  /* justify-content: space-around; */
   margin-top: 5rem;
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     align-items: center;
     flex-direction: column;
-	}
+	} */
 
   p {
+    width: 45%;
     color: #00145D;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: center;
     margin: 2rem 0;
+
+    @media (max-width: 768px) {
+      width: 25%;
+      background-color: #FFFFFF;
+	  }
+
+    @media (max-width: 648px) {
+      width: 50%;
+	  }
+  }
+
+  div {
+    width: 70%;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+
+    @media (max-width: 1440px) {
+      width: 85%;
+    }
+
+    @media (max-width: 768px) {
+      /* align-items: center; */
+      width: 100%;
+      flex-direction: column;
+	  }
   }
 `;
 
+const ContainerImageBox = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 const Line = styled.span`
-  width: 2px;
+  /* width: 2px; */
   border-left: 2px solid #FED5B2;
   transform: rotate(90deg);
+  position: relative;
+  bottom: 3rem;
   z-index: -1;
+
+  @media (max-width: 768px) {
+    border: 2px solid #FED5B2;
+    bottom: 0;
+  }
 `;
 
 const Box = styled.span`
-  width: 337px;
-  height: 338px;
+  /* width: 337px;
+  height: 338px; */
+  width: 13rem;
+  height: 13rem;
   background-color: #FDE7A9;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+ 
+  img {
+    width: 50%;
+  }
 `;
 
 const Index = () => {
   const isTitle = {
     title: 'Sobre nós',
     excerpt: '“Quando educamos um indivíduo, ajudamos a transformar famílias, territórios e toda uma geração, construindo valor social e econômico para o país.”',
-    author: 'Aline Fróes, ',
+    author: 'Aline Fróes,',
     office: 'cofundadora do Vai na Web',
   };
 
   return (
     // <Container>
     <Layouts>
-      <PageTitle data={isTitle} isPage='over' fontSize='3.53rem' />
-      <ContainerImage>
-        <Image src={PhotoEstudio} alt='image' />
-      </ContainerImage>
+      <PageTitle data={isTitle} isPage='over' fontSize='3rem' />
+      <ContainerStudent>
+        <ImageStudent src={PhotoEstudio} alt='image' />
+        <StudentParagraph><b>Renan Carvalho,</b> texto legenda da foto.</StudentParagraph>
+      </ContainerStudent>
       <ContainerBox>
         <img src={SecondPhotoEstudio} alt='image' />
         <ContainerSubBox>
@@ -212,34 +326,38 @@ const Index = () => {
         </ContainerSubBox>
       </ContainerBox>
       <ContainerSubBoxOds>
+        {/* <div> */}
         <p><b>Contribuindo diretamente com 7 dos 17 ODS,</b> o Vai na Web é uma grande força em prol
            da qualificação de pessoas, equidade de gênero, geração de empregos e redução da
            desigualdade social no país.</p>
         <ImageDesk src={Sustentabilidade} alt='sustentabilidade' />
         <ImageMob src={SustentabilidadeMobile} alt='sustentabilidadeMob' />
+        {/* </div> */}
       </ContainerSubBoxOds>
       <ContainerSubValores>
         <h2>Valores</h2>
         <ContainerImages>
           <div>
-            <Box>
-              <img src={MãosDadas} alt='valores' />
-            </Box>
-            <p>Colaboração em Rede</p>
-          </div>
-          <Line></Line>
-          <div>
-            <Box>
-              <img src={Galery} alt='valores' />
-            </Box>
-            <p>Diversidade</p>
-          </div>
-          <Line></Line>
-          <div>
-            <Box>
-              <img src={Globo} alt='valores' />
-            </Box>
-            <p>Impacto Social</p>
+            <ContainerImageBox>
+              <Box>
+                <img src={MãosDadas} alt='valores' />
+              </Box>
+              <p>Colaboração em Rede</p>
+            </ContainerImageBox>
+            <Line></Line>
+            <ContainerImageBox>
+              <Box>
+                <img src={Galery} alt='valores' />
+              </Box>
+              <p>Diversidade</p>
+            </ContainerImageBox>
+            <Line></Line>
+            <ContainerImageBox>
+              <Box>
+                <img src={Globo} alt='valores' />
+              </Box>
+              <p>Impacto Social</p>
+            </ContainerImageBox>
           </div>
         </ContainerImages>
       </ContainerSubValores>

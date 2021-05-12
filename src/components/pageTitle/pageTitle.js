@@ -112,8 +112,8 @@ const ContentSubTitle = styled.div`
 	width: 90%;
 	display: flex;
 	text-align: left;
-	justify-content: ${props => props.pageBlog === 'postBlog' ? '' : 'flex-end'};
-	margin-top: 4rem;
+	justify-content: ${props => props.pageBlog === 'over' && 'flex-end'};
+	margin-top: ${props => props.pageBlog === 'over' && '4rem'};
 `;
 
 const SubTitle = styled.p`
@@ -123,14 +123,32 @@ const SubTitle = styled.p`
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
 	max-width: 970px;
 	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 3.148rem 4.5rem' : '0 0 5.148rem 4.5rem'};
+
+	@media (max-width: 1026px) {
+    width: 100%;
+	}
+
+	@media (max-width: 648px) {
+    font-size: 2.5rem;
+		padding: 0 0 4rem 3rem;
+	}
+
+	@media (max-width: 450px) {
+    font-size: 1.8rem;
+	}
 `;
 
 const SubParagraph = styled.span`
-	color: ${props => props.pageBlog === 'postBlog' ? '' : '#272727'};
-	font-size: ${props => props.pageBlog === 'postBlog' ? '' : '24px'};
+	color: #272727;
+	font-size: 1.25rem;
 	font-weight: 300;
-	display: flex;
-	justify-content: flex-end;
+	padding-left: 11rem;
+
+	@media (max-width: 768px) {
+		display: flex;
+		padding-left: 0;
+		margin-top: 1em;
+	}
 `;
 
 const formatMonth = (month) => {
@@ -184,12 +202,16 @@ const PageTitle = ({ isPage, data, fontSize }) => {
 					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
 				{data?.excerpt &&
-					<ContentSubTitle>
+					<ContentSubTitle pageBlog={isPage}>
 						<SubTitle pageBlog={isPage} fontSize={fontSize}>
-							{data.excerpt} 
-							<SubParagraph>
-							<b>{data.author} </b> {data.office}
-							</SubParagraph>
+							{data.excerpt}
+							{
+								isPage === 'over' && (
+									<SubParagraph>
+										<b>{data.author}</b> {data.office}
+									</SubParagraph>
+								)
+							}
 						</SubTitle>
 					</ContentSubTitle>
 				}
