@@ -35,6 +35,7 @@ function Button (props) {
 				onClick={props.funcAction}
         background={props.background}
         border={props.border}
+        color={props.color}
 			> 
       {props.children}
     </ContentButton>
