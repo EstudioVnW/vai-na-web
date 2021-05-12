@@ -562,6 +562,10 @@ const CircleOrange = styled.div `
     background-size: 45%;
     height: 18rem;
     margin-top: -7rem;
+
+    :hover {
+      background-size: 45%;
+    }
   }
 
   @media (max-width: 425px) {
@@ -658,7 +662,7 @@ const PartnerOverEstudio = () => {
           </ContainerImagesEstudio>
         </ContainerEstudio>
           <div> 
-            <TitleServices>Conheça os nossos serviços</TitleServices>
+           <TitleServices>Conheça os nossos serviços</TitleServices>
             <SubTitleServices>O seu projeto estratégico com a nossa visão de inovação sustentável.<br/> Veja como podemos ajudar:</SubTitleServices> 
           </div>
         <ContainerServicesTextEstudio>

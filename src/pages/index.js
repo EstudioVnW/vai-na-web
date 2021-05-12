@@ -11,6 +11,7 @@ import PartnerSchols from '../components/home/PartnerSchool';
 import OverEstudio from '../components/home/OverEstudio';
 import Depositions from '../components/home/Depositions';
 import History from '../components/home/History';
+import RocketFooter from '../components/home/rocketFooter';
 
 //Imagens
 import BackgroundImage from '../images/images/Path7680.svg';
@@ -478,40 +479,6 @@ const ImagePersonCases = styled.div `
 	}
 `;
 
-const ContentCardSchool = styled.section`
-  display: flex;
-  width: 50%;
-  margin-top: 6rem;
-  margin-left: 2rem;
-`;
-
-const DivCards = styled.div`
-  display: flex;
-  width: 60%;
-  flex-direction: column;
-  justify-content: space-evenly;
-`;
-
-const ContentCardDf = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-
-const ContentCardDm = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-
-const ContentCardDb = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-const ContentCardCd = styled.div`
-  position: relative;
-  z-index: 1;
-`;
-
-
 const Home = (props) => {
   const isTitle = { typePage: 'Rede', title: 'A força que <br/> nos impulsiona' };
   const isTitleCases = { typePage: 'Cases', title: 'Missões <br/> de sucesso'};
@@ -772,15 +739,16 @@ const Home = (props) => {
   return (
     <Layouts home>
        <BackgroundHeader />
-        {RenderHeader()}
+       {RenderHeader()} 
         <DottedLineBackground>
         {RenderNetwork()}  
-        <PartnerSchols />  
+        <PartnerSchols /> 
         <OverEstudio />
-        {Cases()}   
+        {Cases()}  
         <Depositions />  
         <p>Blog</p>
         <History />
+        <RocketFooter />
       </DottedLineBackground>
     </Layouts>
   )

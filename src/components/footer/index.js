@@ -40,6 +40,7 @@ const ContainerDivision = styled.div `
 	transform: matrix(1, -0.04, 0.07, 1, -4, 60.54);
 	box-shadow: 0px 0px 22px #00145D33;
 	overflow: hidden;
+	z-index: 1;
 
 	span {
 		animation: ${tickerAnimation} 50s linear infinite;
@@ -100,7 +101,8 @@ const Container = styled.footer`
 	flex-direction: column;
 	background-color: #00145D;
 	height: auto;
-
+	position: relative;
+    z-index: 0;
 `;
 
 const ContainerAll = styled.div `
