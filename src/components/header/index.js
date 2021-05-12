@@ -14,7 +14,7 @@ const Container = styled.header`
 	flex-direction: column;
 	justify-content: space-between;
 	width: 100%;
-	height: ${props => props.home ? '11rem' : '12rem'};
+	height: ${props => props.home ? '11rem' : '19rem'};
 
 	@media (max-width: 768px) {
 		height: 6rem;
