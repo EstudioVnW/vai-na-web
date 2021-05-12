@@ -26,6 +26,8 @@ fragment Post on Post {
     }
   }
   title
+  isHighlighted
+  publishDate
   excerpt
   authors {
     ... on Author {
