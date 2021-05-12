@@ -4,6 +4,9 @@ import styled from 'styled-components';
 //Component
 import PageTitle from '../pageTitle/pageTitle';
 import CardSchool from './cardSchool';
+import Button from '../button/Button';
+
+//Images
 import ImageDevFront from '../../images/images/iconFront.svg';
 import ImageDevMob from '../../images/images/iconMobile.svg';
 import ImageDevBack from '../../images/images/iconBack.svg';
@@ -41,6 +44,26 @@ const ContentCardSchool = styled.section`
   margin-left: 2rem;
   flex-direction: column;
   
+`;
+
+const BoxButton = styled.div `
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 8rem;
+  margin-left: 11rem;
+  margin-top: 1rem;
+
+  @media (min-width: 2560px) {
+    margin-right: 40rem;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
 `;
 
 const DivCardsTop = styled.div`
@@ -103,6 +126,10 @@ const PartnerSchols = () => {
 				e fortalecendo os <BoldSchool>direitos humanos</BoldSchool> no <BoldSchool>mercado
 				de tecnologia</BoldSchool>.
 				</SchoolText>
+				<BoxButton>
+          			<Button colorHover='#272727'>Quero ser estudante!</Button>
+					<Button background='#FFF' border='2px solid #00145D'> Quero ser vontuntário!</Button>
+        		</BoxButton>
 			</div>
 			<ContentCardSchool>
 				<DivCardsTop>
