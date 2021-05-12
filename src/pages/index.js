@@ -862,7 +862,7 @@ const Home = (props) => {
         {RenderNetwork()}  
         <PartnerSchols /> 
         <OverEstudio />
-        {/* {Cases()} */}
+        {Cases()}
         <Depositions />  
         <ArticleBlog home data={props.data} />
         <History />

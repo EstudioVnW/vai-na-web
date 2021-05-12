@@ -3,9 +3,15 @@ import styled from 'styled-components';
 
 import PageTitle from '../pageTitle/pageTitle';
 import ImageBrasil from '../../images/images/Group7507.png'
+import PersonaIcon from '../../images/images/peopleVNW/Luan.png'
+import CaseImg from '../../images/images/Reg@2x.png'
+
 
 // styles
 const Container = styled.div`
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   width: 100%;
   padding: 4rem 0;
 `;
@@ -17,10 +23,13 @@ const Content = styled.div`
 
 
 const SubTitleCases = styled.p `
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 21px;
+  font-weight: 300;
   line-height: 1.5rem;
-  width: 17.5rem;
+  width: 21.5rem;
+  margin-left: 11.4rem;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
 
   /* @media (min-width: 1920px) {
     line-height: 2.5rem;
@@ -33,14 +42,14 @@ const ContainerCases = styled.div `
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding: 0 2rem;
 
   /* @media (min-width: 1920px) {
 	} */
 `;
 
 const ImageSideCases = styled.img `
-  height: 20rem;
-  background-color: #FFFFFF;
+  padding-right: 1rem;
 
   /* @media (min-width: 1920px) {
     width: 8rem;
@@ -52,7 +61,8 @@ const WrapperCases = styled.div`
 `;
 
 const BoxCases = styled.div `
-  width: 840px;
+  max-width:950px;
+  width: 100%;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 22px #00000029;
   border: 2px solid #00145D;
@@ -60,10 +70,16 @@ const BoxCases = styled.div `
   display: flex;
   padding: 1.5rem;
 
-  /* @media (min-width: 1920px) {
-    width: 1251px;
-    height: 698px;
-	} */
+  @media (max-width: 1024px) {
+    /* width: 100%; */
+	}
+
+  @media (max-width: 768px) {
+    /* width: 760px; */
+	}
+  @media (max-width: 620px) {
+    padding: 1rem;
+	}
 `;
 
 const BoxTextCases = styled.div `
@@ -125,7 +141,6 @@ const BoxItemText = styled.div `
   width: ${props => props.width};
   display: flex;
   padding-bottom: 2rem;
-  background: blue;
 `;
 
 const TextOrangeCases = styled.p `
@@ -164,11 +179,10 @@ const BoxImageCases = styled.div `
 	} */
 `;
 
-const ImagePersonCases = styled.div `
+const ImagePersonCases = styled.img `
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: red;
   border: 1px solid #0F2B92;
   box-shadow: 0px 0px 33px #FF611E40;
   position: relative;
@@ -181,6 +195,13 @@ const ImagePersonCases = styled.div `
     height: 5rem;
     left: ${props => props.Mleft};
 	} */
+`;
+
+const BoxFigure = styled.figure`
+`;
+
+const ImgCases = styled.img`
+  width: 100%;
 `;
 
 const BoxImageScreenCases = styled.div `
@@ -202,19 +223,16 @@ const InputSelector = styled.input`
 
   ::[type="radio"]+label:before {
     content: "";
-    /* create custom radiobutton appearance */
     display: inline-block;
     width: 27px;
     height: 27x;
     padding: 7px;
     margin-right: 3px;
-    /* background-color only for content */
     background-clip: content-box;
     border: 2px solid #bbbbbb;
     border-radius: 50%;
   }
 
-  /* appearance for checked radiobutton */
   ::[type="radio"]:checked + label:before {
     background-color: blue;
   }
@@ -273,12 +291,15 @@ const Cases = (props) => {
               <BoxItemText width= "55%">
                 <TextOrangeCases  paddingRight= "3.5rem">equipe</TextOrangeCases>
                 <BoxImageCases >
-                  <ImagePersonCases  />
-                  <ImagePersonCases />
-                  <ImagePersonCases />
+                  <ImagePersonCases src={PersonaIcon} alt="" />
+                  <ImagePersonCases src={PersonaIcon} alt="" />
+                  <ImagePersonCases src={PersonaIcon} alt="" />
                 </BoxImageCases>
               </BoxItemText>
             </BoxTextInsideCases>
+            <BoxFigure>
+              <ImgCases src= {CaseImg} alt=""/>
+            </BoxFigure>
           </ContainerAllTextInsideCases>
         {/* </BoxAllInsideCases> */}
       </BoxCases>

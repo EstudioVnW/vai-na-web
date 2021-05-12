@@ -9,9 +9,9 @@ import HSlLogo from '../../images/images/hospitalSirio.png'
 
 // styles
 const Container = styled.div`
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   width: 100%;
   padding: 4rem 0;
 `;
@@ -295,19 +295,16 @@ const InputSelector = styled.input`
 
   ::[type="radio"]+label:before {
     content: "";
-    /* create custom radiobutton appearance */
     display: inline-block;
     width: 27px;
     height: 27x;
     padding: 7px;
     margin-right: 3px;
-    /* background-color only for content */
     background-clip: content-box;
     border: 2px solid #bbbbbb;
     border-radius: 50%;
   }
 
-  /* appearance for checked radiobutton */
   ::[type="radio"]:checked + label:before {
     background-color: blue;
   }
