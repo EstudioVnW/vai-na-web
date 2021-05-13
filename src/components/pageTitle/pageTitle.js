@@ -8,6 +8,7 @@ const Container = styled.section`
 
 	@media (max-width: 768px) {
 		padding: 0;
+		padding-top: 6rem;
 		margin: 0;
 	}
 `;
@@ -67,7 +68,7 @@ const ContentTitle = styled.div`
 
 const LineOrange = styled.span`
 	padding-right: 0.5rem;
-	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
+	font-size: ${props => props.pageHome === 'isHome' ? '3rem' : ' 3.2rem'};
 	font-weight: 200;
 	color: #FF611E;
 

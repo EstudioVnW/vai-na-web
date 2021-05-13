@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import PageTitle from '../pageTitle/pageTitle';
 import ImageBrasil from '../../images/images/Group7507.png'
-import PersonaIcon from '../../images/images/peopleVNW/Luan.png'
+import PersonaIcon from '../../images/images/peopleVNW/profile.jpg'
 import CaseImg from '../../images/images/Reg@2x.png'
 
 

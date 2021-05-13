@@ -57,6 +57,7 @@ const Image = styled.img`
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
 	object-fit: cover;
+	object-position: left;
 
 	:hover {
 		${props => !props.slider &&
