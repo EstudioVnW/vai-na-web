@@ -48,12 +48,21 @@ const ContainerCases = styled.div `
 	} */
 `;
 
-const ImageSideCases = styled.img `
+const ImageSideCasesDesktop = styled.img `
   padding-right: 1rem;
+  display: flex;
 
-  /* @media (min-width: 1920px) {
-    width: 8rem;
-	} */
+  @media (max-width: 1024px) {
+    display: none;
+	} 
+`;
+
+const ImageSideCasesMobile= styled.img `
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: flex;
+	} 
 `;
 
 const WrapperCases = styled.div`
@@ -71,7 +80,7 @@ const BoxCases = styled.div `
   padding: 1.5rem;
 
   @media (max-width: 1024px) {
-    /* width: 100%; */
+    flex-direction: column;
 	}
 
   @media (max-width: 768px) {
@@ -87,6 +96,10 @@ const BoxTextCases = styled.div `
   flex-direction: column;
   justify-content: space-between;
   width: 35%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const TitleBoxCases = styled.h3 `
@@ -97,10 +110,9 @@ const TitleBoxCases = styled.h3 `
   font-weight: 700;
   line-height: 3.125rem;
 
-  /* @media (min-width: 1920px) {
-    font-size: 44px;
-    line-height: 3.6rem;
-	} */
+  @media (max-width: 1024px) {
+    padding: 2rem 0;
+	}
 `;
 
 const TextBoxCases = styled.p `
@@ -116,31 +128,43 @@ const TextBoxCases = styled.p `
 	} */
 `;
 
-// const BoxAllInsideCases = styled.div `
-//   width: 70%;
-// `;
+const BoxAllInsideCases = styled.div `
+@media (max-width: 1024px) {
+  display: flex;
+  width: 100%;
+}
+`;
 
 const ContainerAllTextInsideCases = styled.div `
-  width: 75%;
   padding-left: 1rem;
   /* display: flex;
   flex-direction: column;
   justify-content: space-between; */
 
-  /* @media (min-width: 1920px) {
-    height: 10rem; */
+ @media (max-width: 1024px) {
+    width: 100%;
+    padding: 1.75rem 0;
 	}
 `;
 
 const BoxTextInsideCases = styled.div `
   display: flex;
   justify-content: space-between;
+  
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const BoxItemText = styled.div `
   width: ${props => props.width};
   display: flex;
   padding-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const TextOrangeCases = styled.p `
@@ -200,8 +224,22 @@ const ImagePersonCases = styled.img `
 const BoxFigure = styled.figure`
 `;
 
-const ImgCases = styled.img`
+const ImgCasesDesktop = styled.img`
+  display: initial;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+`;
+
+const ImgCasesMobile = styled.img`
+  display: none;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: flex;
+  }
 `;
 
 const BoxImageScreenCases = styled.div `
@@ -260,6 +298,9 @@ const Cases = (props) => {
   const Case = () => {
     return(
       <BoxCases id="Slide">
+        <BoxFigure>
+          <ImgCasesMobile src= {CaseImg} alt=""/>
+        </BoxFigure>
         <BoxTextCases>
           <TitleBoxCases>
             Inovando o sistema de atendimento do SUS
@@ -271,7 +312,7 @@ const Cases = (props) => {
             enfermeiros, atendentes e consultores de saúde.
           </TextBoxCases>
         </BoxTextCases>
-        {/* <BoxAllInsideCases> */}
+        <BoxAllInsideCases>
           <ContainerAllTextInsideCases>
             <BoxTextInsideCases>
               <BoxItemText width= "45%">
@@ -298,10 +339,65 @@ const Cases = (props) => {
               </BoxItemText>
             </BoxTextInsideCases>
             <BoxFigure>
-              <ImgCases src= {CaseImg} alt=""/>
+              <ImgCasesDesktop src= {CaseImg} alt=""/>
             </BoxFigure>
           </ContainerAllTextInsideCases>
-        {/* </BoxAllInsideCases> */}
+            <figure>
+              <ImageSideCasesMobile src={ImageBrasil} alt='Conjunto de Imagens'/>
+            </figure>
+        </BoxAllInsideCases>
+      </BoxCases>
+    )
+  }
+
+  const CaseMobile = () => {
+    return(
+      <BoxCases id="Slide">
+        <BoxFigure>
+          <ImgCasesMobile src= {CaseImg} alt=""/>
+        </BoxFigure>
+        <BoxTextCases>
+          <TitleBoxCases>
+            Inovando o sistema de atendimento do SUS
+          </TitleBoxCases>
+          <TextBoxCases>
+            Em parceria com o Hospital Sírio-Libanês e o PROADI-SUS desenvolvemos o Reg+.
+            Um sistema de telemedicina para regular as filas do SUS em todo o Brasil, otimizando o 
+            tempo de atendimento e diagnóstico dos pacientes através da integração das jornadas de médicos,
+            enfermeiros, atendentes e consultores de saúde.
+          </TextBoxCases>
+        </BoxTextCases>
+        <BoxAllInsideCases>
+          <ContainerAllTextInsideCases>
+            <BoxTextInsideCases>
+              <BoxItemText width= "45%">
+                <TextOrangeCases paddingRight= "1.5rem">Cliente</TextOrangeCases>
+                <TextComplementOrange >Hospital Sírio-Libanês</TextComplementOrange>
+              </BoxItemText>
+              <BoxItemText width= "55%">
+                <TextOrangeCases  paddingRight= "1rem">tecnologias</TextOrangeCases>
+                <TextComplementOrange width= "62%">#Design #React #Redux #Dynamo #StyleComponents</TextComplementOrange>
+              </BoxItemText>
+            </BoxTextInsideCases>
+            <BoxTextInsideCases>
+              <BoxItemText width= "45%">
+                <TextOrangeCases paddingRight= "2.85rem">Ano</TextOrangeCases>
+                <TextComplementOrange >2020</TextComplementOrange>
+              </BoxItemText>
+              <BoxItemText width= "55%">
+                <TextOrangeCases  paddingRight= "3.5rem">equipe</TextOrangeCases>
+                <BoxImageCases >
+                  <ImagePersonCases src={PersonaIcon} alt="" />
+                  <ImagePersonCases src={PersonaIcon} alt="" />
+                  <ImagePersonCases src={PersonaIcon} alt="" />
+                </BoxImageCases>
+              </BoxItemText>
+            </BoxTextInsideCases>
+          </ContainerAllTextInsideCases>
+            <figure>
+              <ImageSideCasesMobile src={ImageBrasil} alt='Conjunto de Imagens'/>
+            </figure>
+        </BoxAllInsideCases>
       </BoxCases>
     )
   }
@@ -312,7 +408,7 @@ const Cases = (props) => {
         <PageTitle data={isTitleCases} isPage='isHome' />
         <SubTitleCases>Saiba como ajudamos os nossos clientes a realizar suas missões:</SubTitleCases>
         <ContainerCases>
-          <ImageSideCases src={ImageBrasil} alt='Conjunto de Imagens'/>
+          <ImageSideCasesDesktop src={ImageBrasil} alt='Conjunto de Imagens'/>
           {Case()}
           {/* <WrapperSelector>
             <input type="radio" name="radio" id="radio1" onClick={() => handleOptionSelect('p')} />
