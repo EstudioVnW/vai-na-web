@@ -588,7 +588,8 @@ const CircleOrange = styled.div `
   justify-content: center; */
 
   :hover {
-    background-size: 33%;
+    width: 226px;
+    height: 226px;
   }
 
   /* @media (min-width: 1920px) {
