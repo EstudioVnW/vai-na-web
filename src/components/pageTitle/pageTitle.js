@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // styles
 const Container = styled.section`
-  /* padding-left: 5.125rem; */
+  padding-left: ${props => props.isPage !== 'isHome' && '7.5rem'};
   /* margin-left: 1rem; */
 
 	@media (max-width: 768px) {
@@ -195,7 +195,7 @@ const formatDate = (date) => {
 
 const PageTitle = ({ isPage, data, fontSize, padBott }) => {
 	return (
-		<Container>
+		<Container isPage={isPage}>
 			{data?.typePage && <TypePage pageHome={isPage}>{data.typePage}</TypePage>}
 			<BoxTitle pageHome={isPage}>
 				{data?.date && formatDate(data.date)}
