@@ -226,14 +226,14 @@ const History = () => {
 			</ContainerTextMain>
 			<BoxPersonAll>
 				<LineOrange 
-					transform='rotate(59deg)' 
-					width='16rem' 
-					top='14rem' 
-					right='-1.5rem'
+					transform='rotate(65deg)' 
+					width='18rem' 
+					top='16rem' 
+					right='-2rem'
 					
 					Mright='17.5rem'
-					Mtop='19rem'
-					Mwidth='16rem'
+					Mtop='20rem'
+					Mwidth='17rem'
 					Mtransform='rotate(54deg)'
 
 					MobileLeft='15rem'
@@ -281,12 +281,13 @@ const History = () => {
 				</BoxPerson>
 				<LineOrange 
 					transform='rotate(57deg)' 
-					width='14rem' 
+					width='16rem' 
 					top='7rem' 
 					right='7rem'
 
 					Mright='31rem'
-					Mwidth='16rem'
+					Mwidth='17rem'
+					Mtop='6rem'
 
 					MobileLeft='6rem'
 					MobileTop='0rem'
@@ -311,8 +312,8 @@ const History = () => {
 				<LineOrange 
 					transform='rotate(130deg)' 
 					width='13rem' 
-					top='-2rem' 
-					right='-2rem'
+					top='-3rem' 
+					right='-3rem'
 
 					Mright='18rem'
 					Mwidth='17rem'
@@ -324,10 +325,10 @@ const History = () => {
 					Mobiletransform='rotate(127deg)'
 				/>
 				<BoxPerson
-					top='-1rem'
+					top='-3rem'
 					right='8rem'
 					Mright='25rem'
-					Mtop='-4rem'
+					Mtop='-6rem'
 
 					MobileLeft='10rem'
 					MobileTop='-10rem'

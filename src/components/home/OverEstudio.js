@@ -79,6 +79,10 @@ const ContainerImagesEstudio = styled.div `
   position: relative;
   right: 1rem;
 
+  @media (min-width: 1920px) {
+    margin-top: 4rem;
+  }
+
   @media (max-width: 768px) {
     position: none;
     right: 0px;
@@ -88,6 +92,10 @@ const ContainerImagesEstudio = styled.div `
 
 const ImageLogoEstudio = styled.img `
   width: 20%;
+
+  @media (max-width: 1920px) {
+    width: 30%;
+  }
 
   @media (max-width: 768px) {
     width: 40%;
@@ -118,6 +126,11 @@ const LineBlue = styled.div `
 const FirstImagePhotoEstudio = styled.img `
   width: 80%;
   margin-top: -5px;
+
+  @media (max-width: 1920px) {
+    width: 95%;
+    margin-top: -4px;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -516,8 +529,7 @@ const TextProfit = styled.p `
   @media (min-width: 1920px) {
     font-size: 22px;
     line-height: 2.5rem;
-    width: 38%;
-    margin-left: 16.4rem;
+    width: 92%;
   }
 
   @media (min-width: 2560px) {
@@ -559,9 +571,13 @@ const CircleOrange = styled.div `
   }
 
   @media (min-width: 1920px) {
-    left: 24rem;
-    background-size: 31%;
+    left: 10rem;
+    background-size: 59%;
     height: 16rem;
+
+    :hover {
+      background-size: 60%;
+    }
   }
 
   @media (min-width: 2560px) {
@@ -599,7 +615,7 @@ const TextNumberCircle = styled.h2 `
   font-weight: 600;
 
   @media (min-width: 1920px) {
-    font-size: 60px;
+    font-size: 42px;
   }
 
   @media (max-width: 768px) {
@@ -615,8 +631,8 @@ const TextCircle = styled.p `
   line-height: 14px;
 
   @media (min-width: 1920px) {
-    font-size: 17px;
-    width: 23%;
+    font-size: 14px;
+    width: 44%;
     line-height: 1.5rem;
   }
 
