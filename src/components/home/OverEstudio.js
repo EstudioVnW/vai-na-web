@@ -502,7 +502,6 @@ const ContainerProfiteCircle = styled.div `
     flex-direction: column-reverse;
     align-items: center;
   }
-
 `;
 
 const WarpperImg = styled.div`

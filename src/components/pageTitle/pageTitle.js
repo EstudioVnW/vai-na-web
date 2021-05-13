@@ -97,10 +97,6 @@ const Title = styled.h2`
 		width: 93%;
 	}
 
-	@media (min-width: 768px) {
-		/* font-size: 2.4rem; */
-	}
-
 	@media (max-width: 425px) {
 		font-size: 2rem;
 	}
@@ -116,6 +112,10 @@ const ContentSubTitle = styled.div`
 	text-align: left;
 	justify-content: ${props => props.pageBlog === 'over' && 'flex-end'};
 	margin-top: ${props => props.pageBlog === 'over' && '4rem'};
+
+	@media (min-width: 768px) {
+		margin-top: 40%;
+	}
 `;
 
 const SubTitle = styled.p`
@@ -144,7 +144,7 @@ const SubParagraph = styled.span`
 	color: #272727;
 	font-size: 1.25rem;
 	font-weight: 300;
-	padding-left: 11rem;
+	padding-left: 20%;
 
 	@media (max-width: 768px) {
 		display: flex;
