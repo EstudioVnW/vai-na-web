@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 // styles
 const Container = styled.section`
-  padding-left: 5.125rem;
-  margin-left: 1rem;
+  padding-left: ${props => props.isPage !== 'isHome' && '7.5rem'};
+  /* margin-left: 1rem; */
 
 	@media (max-width: 768px) {
 		padding: 0;
@@ -13,9 +13,9 @@ const Container = styled.section`
 `;
 
 const BoxTitle = styled.div`
-	margin-left: ${props => props.pageHome === 'isHome' ? '3rem' : '2rem'};
+	/* margin-left: ${props => props.pageHome === 'isHome' ? '3rem' : '2rem'}; */
 
-	@media (min-width: 1920px) {
+	/* @media (min-width: 1920px) {
 		margin-left: 7rem;
 	}
 
@@ -25,7 +25,7 @@ const BoxTitle = styled.div`
 
 	@media (max-width: 768px) {
 		margin-left: 0px;
-	}
+	} */
 `;
 
 const Date = styled.p`
@@ -36,7 +36,7 @@ const Date = styled.p`
 
 const TypePage = styled.h1`
 	padding: 0.25rem 1.125rem;
-	margin-left: ${props => props.pageHome === 'isHome' ? '4.5rem' : ' 3.5rem'};
+	/* margin-left: ${props => props.pageHome === 'isHome' ? '4.5rem' : ' 3.5rem'}; */
 	font-size: 1rem;
 	font-weight: 200;
 	color: #FFAC2D;
@@ -47,21 +47,22 @@ const TypePage = styled.h1`
 	text-transform: uppercase;
 
 	@media (min-width: 1920px) {
-		margin-left: 9rem;
+		/* margin-left: 9rem; */
 	}
 
 	@media (max-width: 768px) {
-		margin-left: 11rem;
+		/* margin-left: 11rem; */
 	}
 
 	@media (max-width: 425px) {
-		margin-left: 0rem;
+		/* margin-left: 0rem; */
 	}
 `;
 
 const ContentTitle = styled.div`
 	display: flex;
 	padding-top: 1rem;
+	margin-left: -2.3rem;
 `;
 
 const LineOrange = styled.span`
@@ -84,19 +85,20 @@ const LineOrange = styled.span`
 `;
 
 const Title = styled.h2`
-	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2.125rem'};
+	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2rem'};
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : ''};
 	max-width: 1272px;
-	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
-	color: ${props => props.pageHome === 'isHome' ? '#272727' : '#FDE7A9'};
+	font-size: ${props => props.pageBlog === 'isHome' ? '2.8rem' : ' 3.2rem'};
+	color: ${props => props.pageBlog === 'isHome' ? '#272727' : '#FDE7A9'};
+	padding-bottom: ${props => props.pageBlog === 'padBott' && '5rem'};
 
 	@media (min-width: 1920px) {
-		font-size: 3.2rem;
+		/* font-size: 3.2rem; */
 		width: 93%;
 	}
 
 	@media (min-width: 768px) {
-		font-size: 2.4rem;
+		/* font-size: 2.4rem; */
 	}
 
 	@media (max-width: 425px) {
@@ -195,15 +197,15 @@ const formatDate = (date) => {
 	return <Date>{day} de {formatMonth(month)} · {year}</Date>
 }
 
-const PageTitle = ({ isPage, data, fontSize }) => {
+const PageTitle = ({ isPage, data, fontSize, padBott }) => {
 	return (
-		<Container>
+		<Container isPage={isPage}>
 			{data?.typePage && <TypePage pageHome={isPage}>{data.typePage}</TypePage>}
 			<BoxTitle pageHome={isPage}>
 				{data?.date && formatDate(data.date)}
 				<ContentTitle>
 					<LineOrange pageHome={isPage}>//</LineOrange>
-					<Title pageBlog={isPage} pageHome={isPage} dangerouslySetInnerHTML={{ __html: data?.title }} />
+					<Title pageBlog={isPage} pageHome={isPage} padBott={padBott} dangerouslySetInnerHTML={{ __html: data?.title }} />
 				</ContentTitle>
 				{data?.excerpt &&
 					<ContentSubTitle pageBlog={isPage}>
