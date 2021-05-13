@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
+//Components
+import Button from '../button/Button';
+
 //Images
 import FirstImageServiceEstudio from '../../images/images/Grupo10441.png';
 import SecondImageServiceEstudio from '../../images/images/Grupo10445.png';
@@ -11,9 +14,8 @@ import FourthImageServiceEstudio from '../../images/images/Grupo10444.png';
 // Styles
 const Container = styled.div`
 	display: flex;
-	justify-content: space-evenly;
 	align-items: center;
-	flex-direction: row;
+	flex-direction: column;
 	width: 100%;
 
 `;
@@ -82,7 +84,6 @@ const DescriptionServicesSecond = styled.p `
   @media (max-width: 768px) {
     font-size: 16px;
     line-height: 1.6rem;
-    margin-top: -1rem;
   }
 
   @media (max-width: 425px) {
@@ -188,6 +189,28 @@ const Screen = styled.div`
 
 `;
 
+const SliderBox = styled.div`
+	display: flex;
+	justify-content: space-evenly;
+	min-height: 400px;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+`;
+
+const BoxButton = styled.div `
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 18rem;
+  margin-top: 50px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+  }
+`;
+
 const Slider = () => {
 	const contents = [
 		<BoxPresentationItemServicesFirst>
@@ -246,19 +269,23 @@ const Slider = () => {
 
 	return (
 		<Container>
-
-			<HandleButton
-				onClick={handlerPrevious}
-			>Previous</HandleButton>
-			<Screen>
-				{
-					console.log(contents[currentContent]),
-					contents[currentContent]
-				}
-			</Screen>
-			<HandleButton
-				onClick={handlerNext}
-			>Next</HandleButton>
+			<SliderBox>
+				<HandleButton
+					onClick={handlerPrevious}
+				>Previous</HandleButton>
+				<Screen>
+					{
+						console.log(contents[currentContent]),
+						contents[currentContent]
+					}
+				</Screen>
+				<HandleButton
+					onClick={handlerNext}
+				>Next</HandleButton>
+			</SliderBox>
+			<BoxButton>
+          <a href="https://forms.gle/bVRiWcWoHnL9D5tU8" target="_blank" rel="noopener noreferrer"><Button colorHover='#272727'>Desejo Contratar!</Button></a>
+			</BoxButton>
 		</Container>
 	)
 }
