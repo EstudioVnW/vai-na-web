@@ -44,7 +44,6 @@ const TextHistory = styled.p `
 	}
 	  
 	  @media (max-width: 768px) {
-		/* margin-left: 0px; */
 		width: 50%;
 	}
 
