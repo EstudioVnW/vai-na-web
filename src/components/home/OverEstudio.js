@@ -488,7 +488,6 @@ const ContainerProfiteCircle = styled.div `
     flex-direction: column-reverse;
     align-items: center;
   }
-
 `;
 
 const ContainerProfit = styled.div `
