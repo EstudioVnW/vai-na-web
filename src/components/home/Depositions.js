@@ -164,7 +164,7 @@ const BoxAllInside = styled.div `
   align-items: center;
   width: 100%;
   padding: 1rem;
-	border-top: 1px solid #FED5B2;
+	/* border-top: 1px solid #FED5B2; */
 
   @media(max-width: 768px) {
     align-items: center;
@@ -203,6 +203,7 @@ const BoxTextInside = styled.div `
 `;
 
 const BoxItemText = styled.div `
+  width: ${props => props.width};;
   display: flex;
 	flex-direction: column;
   
@@ -310,6 +311,14 @@ const InputSelector = styled.input`
   }
 `;
 
+const Line = styled.div`
+  width: 75%;
+  height: 2px;
+  display: flex;
+  align-self: center;
+  background: #FED5B2;
+`;
+
 const handleOptionSelect = (option) => {
   switch (option) {
   case 'p':
@@ -339,16 +348,17 @@ const Depositions = () => {
         <TextBox>O Sírio-Libanês tem muito orgulho dessa parceria que mostrou como é possível investir em inovação e formação com parceiros preocupados com o desenvolvimento sustentável e assim diminuir a desigualdade social.”
         </TextBox>
       </BoxText>
+      <Line></Line>
       <BoxAllInside>
             <BoxImg>
               <ImageSide src={Persona} alt='Conjunto de Imagens'/>
             </BoxImg>
           <BoxTextInside>
-            <BoxItemText>
+            <BoxItemText width= "60%">
               <TextOrange>Vânia Bezerra</TextOrange>
               <TextComplementOrange left='1rem'>Superintendente de Responsabilidade Social</TextComplementOrange>
             </BoxItemText>
-            <BoxItemText>
+            <BoxItemText width= "40%">
               <ImageLogo src={HSlLogo} alt='Logo Hospital Sirio Libanes'/>
             </BoxItemText>
         </BoxTextInside>

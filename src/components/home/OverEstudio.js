@@ -526,7 +526,7 @@ const ContainerProfit = styled.div `
 const TextProfit = styled.p `
   width: 100%;
   max-width: 27.375rem;
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: 300;
   line-height: 2.75rem;
   color: #272727;
@@ -560,10 +560,10 @@ const TextProfitBold = styled.b `
 const CircleOrange = styled.div `
 /* NEW */
   position: absolute;
-  top: 4rem;
-  left: -9rem;
-  width: 223px;
-  height: 223px;
+  top: 2.75rem;
+  left: -8rem;
+  width: 200px;
+  height: 200px;
   background: linear-gradient(15deg, #f6611f, #fdb13c, #fff);
   border-radius: 50%;
   text-align: center;
@@ -628,7 +628,7 @@ const CircleOrange = styled.div `
 `;
 
 const TextNumberCircle = styled.h2 `
-  font-size: 2.9375rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #0F2B92;
 
@@ -647,7 +647,7 @@ const TextCircle = styled.p `
   text-align: center;
   font-size: .9375rem;
   font-weight: 400;
-  line-height: 1.4375rem;
+  line-height: 1.25rem;
   color: #272727;
 
   /* @media (min-width: 1920px) {
