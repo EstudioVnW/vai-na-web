@@ -8,7 +8,7 @@ const Container = styled.div`
 	border-radius: 20px;
 	width: 22.188rem;
 	max-width: 600px;
-	min-height: 254px;
+	min-height: 234px;
 	/* height: 15.5rem; */
 	display: flex;
 	flex-direction: column;
