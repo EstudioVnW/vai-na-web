@@ -269,7 +269,7 @@ const Line = styled.span`
 
   @media (max-width: 768px) {
     border: 2px solid #FED5B2;
-    bottom: 0;
+    bottom: -72px;
   }
 `;
 

@@ -97,10 +97,6 @@ const Title = styled.h2`
 		width: 93%;
 	}
 
-	@media (min-width: 768px) {
-		/* font-size: 2.4rem; */
-	}
-
 	@media (max-width: 425px) {
 		font-size: 2rem;
 	}
