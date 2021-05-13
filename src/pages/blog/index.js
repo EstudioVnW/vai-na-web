@@ -6,8 +6,8 @@ import styled from 'styled-components';
 //Components
 import Card from '../../components/blog/card';
 import PostSlider from '../../components/postSlider/postSlider';
-import PageTitle from '../../components/pageTitle/pageTitle';
-import Layouts from '../../components/Layouts'
+import Layouts from '../../components/Layouts';
+import ArticleBlog from '../../components/blog/articleBlog';
 
 // styles
 const ContainerBlog = styled.div`
@@ -21,6 +21,10 @@ const ContainerBlog = styled.div`
 
 const ContantCard = styled.div`
   width: 80%; /* tamanho do container do post */
+
+  @media (max-width: 768px) {
+		width: 100%; 
+	}
 `;
 
 const Text = styled.h3`
@@ -39,6 +43,7 @@ export const query = graphql`
         title
         excerpt 
         publishedAt
+        publishDate
         createdAt
         tags {
           name
@@ -66,32 +71,35 @@ export const query = graphql`
   }
 `
 
-const renderBlog = (listItem, firstData) => {
+const renderBlog = (data) => {
+  const firstItem = data && data[0];
+  const listSlider = data && data.filter(item => item.id !== firstItem.id);
+
   return (
     <>
       <ContantCard>
-        <Card data={firstData} />
+        <Card data={firstItem} />
       </ContantCard>
-      <PostSlider data={listItem} /> 
+      <PostSlider data={listSlider} />
     </>
   )
 }
 
-const Index = ({ data }) => {
-  const firstItem = data && data.posts.nodes[0];
-  const listSlider = data && data.posts.nodes.filter(item => item.id !== firstItem.id);
+const Index = ({ data, home }) => {
+  const item = data && data.posts.nodes;
   const title = `Radar <br/> Vai na Web`;
   const isTitle = { typePage: 'Blog', title: title };
 
   return (
     <Layouts>
-    <PageTitle data={isTitle}/>
-      <ContainerBlog>
-        {!listSlider.length
+      {/* <PageTitle data={isTitle} /> */}
+      {/* <ContainerBlog>
+        {!item.length
           ? <Text>Não há conteúdo no momento</Text>
-          : renderBlog(listSlider, firstItem)
+          : renderBlog(item)
         }
-      </ContainerBlog>
+      </ContainerBlog> */}
+      <ArticleBlog data={data}/>
     </Layouts>
   )
 }

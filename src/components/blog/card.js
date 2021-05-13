@@ -14,6 +14,18 @@ const Container = styled.div`
 	:nth-child(3n + 3) {
 		margin-right: 0;
 	}
+
+	@media (max-width: 768px) {
+		padding: 2.306rem 0;
+		margin: 0;
+    width: 100%;
+		flex-direction: column;
+		border-bottom: 1px solid #0F2B92;
+
+		:last-child {
+			border-bottom: none;
+		}
+	}
 `;
 
 const Figure = styled.figure`
@@ -27,6 +39,15 @@ const Figure = styled.figure`
 	@media (max-width: 1024px) {
 		width: ${props => !props.slider && '30rem'};
 		height: ${props => props.slider ? '8.875rem' : '20rem'};
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 35vh;
+	}
+
+	@media (max-width: 425px) {
+		height: 25vh;
 	}
 `;
 
@@ -49,6 +70,11 @@ const Image = styled.img`
 const Content = styled.div`
 	padding-left: ${props => !props.slider && '2.813rem'};
 	width: ${props => !props.slider && '29.563rem'};
+
+	@media (max-width: 768px) {
+		padding: 0;
+		width: 100%;
+	}
 `;
 
 const ContentDate = styled.div`
@@ -64,6 +90,10 @@ const Date = styled.p`
 
 	@media (max-width: 1024px) {
 		font-size: 0.75rem;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 1.125rem;
 	}
 `;
 
@@ -84,7 +114,7 @@ const Status = styled.p`
 	@media (max-width: 1024px) {
 		padding: .5rem .5rem;
 		max-width: ${props => props.slider && '90px'};
-		font-size: 0.75rem;
+		font-size: .875rem;
 	}
 `;
 
@@ -104,6 +134,10 @@ const Title = styled(Link)`
 		color: #0F2B92;
 		text-decoration: underline;
 	}
+
+	@media (max-width: 768px) {
+		font-size: 1.313rem;
+	}
 `;
 
 const Description = styled.p`
@@ -118,6 +152,18 @@ const Description = styled.p`
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
+
+	@media (max-width: 768px) {
+		width: 100%;
+		max-width: 100%;
+		font-size: 1.063rem;
+		font-weight: 400;
+		line-height: 1.5rem;
+	}
+
+	@media (max-width: 375px) {
+		padding-top: 1rem;
+	}
 `;
 
 const formatMonth = (month) => {
@@ -162,18 +208,19 @@ const formatDate = (date) => {
 
 const Card = ({ data, slider }) => {
 	const slug = slugify(`${data.title.toLowerCase()}-${data.id.split(":")[1]}`)
+
 	return (
 		<Container slider={slider}>
 			<Figure slider={slider}>
-				<Image src={data.cover.url || ''} alt={data.title} slider={slider} />
+				{data?.cover && <Image src={data.cover.url} alt={data.title} slider={slider} />}
 			</Figure>
 			<Content slider={slider}>
 				<ContentDate slider={slider}>
-					{formatDate(data.createdAt)}
-					<Status>{data.tags[0].name  || ''}</Status>
+					{data?.createdAt && formatDate(data.createdAt) }
+					{data?.tags[0]?.name && <Status>{data.tags[0].name  || ''}</Status>}
 				</ContentDate>
-				<Title to={`/blog/${slug}`} rel="noreferrer" state={{ postBlog: data }} slider={slider}>{data.title  || ''}</Title>
-				<Description>{data.excerpt}</Description>
+				{data?.title && <Title to={`/blog/${slug}`} rel="noopener noreferrer" state={{ postBlog: data }} slider={slider}>{data.title}</Title>}
+				{data?.excerpt && <Description>{data.excerpt}</Description>}
 			</Content>
 		</Container>
 	)

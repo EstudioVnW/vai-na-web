@@ -6,10 +6,11 @@
   import Header from './header';
   import Footer from './footer';
   import fundo from '../images/icons/Mask-Group-15.png';
-  import ImageBackground from '../images/images/MaskGroup18@2x.png';
+  import ImageBackground from '../images/images/backgroundHome.png';
 
   // styles
   const Container = styled.div`
+    width: 100%;
     background-image: ${props => props.home ? `url(${ImageBackground})` : `url(${fundo})`};
     background-repeat: no-repeat;
     background-size:  ${props => props.home ? '100%' : props.backgroundSize};
@@ -21,7 +22,7 @@
 
   const Layouts = ({ isPage, children, home }) => {
     return (
-      <Container home={home} backgroundSize={isPage === 'postBlog' ? '100% 30%' : '100% 50%'}>
+      <Container home={home} backgroundSize={isPage === 'postBlog' ? '100% 30%' : '100% 90rem'}>
         <Header home={home} />
         <Main>
           {children}
