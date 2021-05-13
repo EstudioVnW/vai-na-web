@@ -4,13 +4,13 @@ import styled from 'styled-components';
 // styles
 const Container = styled.div`
 	position: relative;
-	padding: 1.563rem;
+	padding: 1.7rem;
 	background-color: ${props => props.background ? props.background : 'rgba(15,43,146, 0.15)'};
 	border-radius: 20px;
 	width: 100%;
 	max-width: 22.188rem;
 	height: 100%;
-	min-height: 254px;
+	max-height: 280px;
 	/* height: 15.5rem; */
 	display: flex;
 	flex-direction: column;

@@ -135,7 +135,8 @@ const ContentCardSchool = styled.div`
   width: 70%;
   padding-top: 6rem;
 	justify-content: flex-end;
-  flex-direction: column;	
+	flex-wrap: wrap;
+  margin-left: -9rem;
 
   @media (Max-width: 1920px) {
 	
@@ -148,28 +149,34 @@ const ContentCardSchool = styled.div`
   } */
 `;
 
-const DivCardsTop = styled.div`
-  display: flex;
-  /* width: 70%; */
-  /* height: 45vh; */
-	padding-bottom: 2.688rem;
+const ContentCardTopOne = styled.div `
+	position: relative;
+	margin-bottom: 3.688rem;
+	margin-right: 2rem;
+	/* padding: 2.563rem; */
 
   /* @media (min-width: 1920px) {
 	/* height: 35vh; */
   } */
 `;
 
-const DivCardsBottom = styled.div`
-  display: flex;
-	margin-left: -5rem;
-  /* height: 45vh; */
+const ContentCardTop = styled.div `
+	position: relative;
+	/* padding: 2.563rem; */
 
-  /* @media (min-width: 1440px) {
-	/* margin-bottom: 4rem; */
-  } */
+	/* margin-left: -7rem; */
+	z-index: 1;
+
+	/* @media (min-width: 1440px) {
+	/* margin-top: 4rem; */
+	}
+	/* @media (min-width: 1024px) { */
+	/* margin-top: 2rem; */
+	/* margin-left: -5rem; */
+	} */
 `;
 
-const ContentCard = styled.div`
+const ContentCardBottom = styled.div`
   position: relative;
 	padding-right: 2.625rem;
 	/* padding: 2.563rem; */
@@ -224,45 +231,39 @@ const PartnerSchols = () => {
 						</BoxButton>
 					</WrapperContent>
 					<ContentCardSchool>
-						<DivCardsTop>
-
-							<ContentCard>
+							<ContentCardTopOne >
 								<CardSchool title='Desenvolvedor Front-End' description='Desenvolve 
 										websites e aplicações responsivas. É o profissional responsável por dar 
 										vida e movimento às interfaces digitais. Ou seja, atua desenvolvendo 
 										os componentes de um site ou aplicativo que vão interagir diretamente 
 										com os usuários.' image={ImageDevFront} />
 								{/* <ImageCard src={ImageDevFront} /> */}
-							</ContentCard>
+							</ContentCardTopOne>
 
-							<ContentCard>
+							<ContentCardTop>
 								<CardSchool title='Desenvolvedor Mobile' description='Desenvolve aplicativos 
 										nativos para Android e iOS. É o profissional responsável pelo planejamento, 
 										elaboração, testes e implementação de softwares para dispositivos móveis 
 										(Smartphones, smartwatches, tablets, câmeras…).' image={ImageDevMob} />
 								{/* <ImageCard src={ImageDevMob} /> */}
-							</ContentCard>
+							</ContentCardTop>
 
-						</DivCardsTop>
-						<DivCardsBottom>
-
-							<ContentCard>
+							<ContentCardBottom>
 
 								<CardSchool background='rgba(253,231,169,0.4)' title='Desenvolvedor Back-end' description='É o profissional 
 										responsável por construir e organizar as engrenagens, banco de dados e 
 										servidores que possibilitam os sites e sistemas funcionarem.' image={ImageDevBack} soon />
 								{/* <ImageCard src={ImageDevBack} /> */}
-							</ContentCard>
+							</ContentCardBottom>
 
 
-							<ContentCard>
+							<ContentCardBottom>
 								<CardSchool background='rgba(254,213,178,0.5)' title='Cientista de Dados' description='Uma nova geração de 
 										especialistas analíticos, aptos a resolverem problemas complexos de negócios 
 										a partir da coleta, estruturação e gerenciamento de uma quantidade massiva de 
 										dados.' image={ImageCient} soon />
 								{/* <ImageCard src={ImageCient} /> */}
-							</ContentCard>
-						</DivCardsBottom>
+							</ContentCardBottom>
 					</ContentCardSchool>
 				</Content>
 		</ContainerSchool>
