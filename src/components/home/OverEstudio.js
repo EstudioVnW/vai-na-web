@@ -16,7 +16,6 @@ import CircleOrangeEstudio from '../../images/images/VnW-Background-2_borda.png'
 import SecondPhotoEstudio from '../../images/images/VNW2-63.png';
 
 // styles
-
 const ContainerEstudio = styled.div `
   display: flex;
 
@@ -79,6 +78,10 @@ const ContainerImagesEstudio = styled.div `
   position: relative;
   right: 1rem;
 
+  @media (min-width: 1920px) {
+    margin-top: 4rem;
+  }
+
   @media (max-width: 768px) {
     position: none;
     right: 0px;
@@ -88,6 +91,10 @@ const ContainerImagesEstudio = styled.div `
 
 const ImageLogoEstudio = styled.img `
   width: 20%;
+
+  @media (max-width: 1920px) {
+    width: 30%;
+  }
 
   @media (max-width: 768px) {
     width: 40%;
@@ -118,6 +125,11 @@ const LineBlue = styled.div `
 const FirstImagePhotoEstudio = styled.img `
   width: 80%;
   margin-top: -5px;
+
+  @media (max-width: 1920px) {
+    width: 95%;
+    margin-top: -4px;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -523,8 +535,7 @@ const TextProfit = styled.p `
   /* @media (min-width: 1920px) {
     font-size: 22px;
     line-height: 2.5rem;
-    width: 38%;
-    margin-left: 16.4rem;
+    width: 92%;
   }
 
   @media (min-width: 2560px) {
