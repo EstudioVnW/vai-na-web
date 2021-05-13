@@ -112,10 +112,6 @@ const ContentSubTitle = styled.div`
 	text-align: left;
 	justify-content: ${props => props.pageBlog === 'over' && 'flex-end'};
 	margin-top: ${props => props.pageBlog === 'over' && '4rem'};
-
-	@media (min-width: 768px) {
-		margin-top: 40%;
-	}
 `;
 
 const SubTitle = styled.p`
