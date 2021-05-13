@@ -38,10 +38,10 @@ const ContainerTextMain = styled.div `
 `;
 
 const TextDescriptionAll = styled.p`
-  font-size: 14px;
-  font-weight: 300;
+  font-size: .938rem;
+  font-weight: 400;
   line-height: 1.5rem;
-  width: 17.5rem;
+  width: 21rem;
   /* margin-left: 11.4rem; */
   /* margin-top: -1rem; */
   margin-bottom: 2rem;
@@ -66,7 +66,7 @@ const TextDescriptionAll = styled.p`
 `;
 
 const BoldTextAll = styled.b`
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const ContainerImagesEstudio = styled.div `
@@ -124,21 +124,21 @@ const LineBlue = styled.div `
 
 const FirstImagePhotoEstudio = styled.img `
   width: 80%;
-  margin-top: -5px;
-
+  z-index: 0;
+  
   @media (max-width: 1920px) {
+    margin-top: -14px;
     width: 95%;
-    margin-top: -4px;
   }
 
   @media (max-width: 768px) {
-    width: 100%;
     margin-top: -1px;
+    width: 100%;
   }
   
   @media (max-width: 425px) {
-    width: 24rem;
     margin-top: 1px;
+    width: 24rem;
   }
 `;
 

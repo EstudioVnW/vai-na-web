@@ -275,7 +275,6 @@ const Slider = () => {
 				>Previous</HandleButton>
 				<Screen>
 					{
-						console.log(contents[currentContent]),
 						contents[currentContent]
 					}
 				</Screen>
