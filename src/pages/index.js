@@ -166,7 +166,6 @@ const TextDescriptionAll = styled.p`
   }
 
   @media (max-width: 768px) {
-    width: 50%;
     margin-left: 0px;
   }
 
@@ -335,6 +334,8 @@ const ButtonsItem = styled.span`
   display: inline-block;
   transition: background-color 0.6s ease;
 `;
+
+
 
 export const query = graphql`
   query  {
