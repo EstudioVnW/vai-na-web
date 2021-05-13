@@ -153,7 +153,7 @@ const Slider = ({ data, home }) => {
 	)
 
 	const renderButtonNext = (item) => (
-		current <= item.length && <Arrow src={iconArrow} onClick={handleNext} />
+		current < item.length && <Arrow src={iconArrow} onClick={handleNext} />
 	)
 
 	const renderSlider = (item) => {

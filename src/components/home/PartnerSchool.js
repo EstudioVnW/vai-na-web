@@ -48,8 +48,8 @@ const WrapperContent = styled.div`
 const SchoolText = styled.p`
 	width: 100%;
 	max-width: 17.3125rem;	
-	font-size: 14px;
-	font-weight: 300;
+	font-size: .938rem;
+	font-weight: 400;
 	line-height: 1.5rem;
 	/* margin-left: 11.4rem;
 	margin-top: -1rem; */
@@ -66,7 +66,7 @@ const SchoolText = styled.p`
 `;
 
 const BoldSchool = styled.b`
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const BoxButton = styled.div`
