@@ -16,7 +16,6 @@ import CircleOrangeEstudio from '../../images/images/VnW-Background-2_borda.png'
 import SecondPhotoEstudio from '../../images/images/VNW2-63.png';
 
 // styles
-
 const ContainerEstudio = styled.div `
   display: flex;
 
