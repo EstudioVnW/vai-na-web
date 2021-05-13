@@ -153,7 +153,7 @@ const Button = styled.button `
     text-align: center;
     position: relative;
     top: 5rem;
-    left: 18rem;
+    left: 19rem;
     border: 1px solid  #FFAC2D; 
 
     :hover {
