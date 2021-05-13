@@ -208,10 +208,18 @@ const PartnerSchols = () => {
 
 						<BoxButton>
 							<BoxButtonTop>
-								<Button colorHover='#272727' >Quero ser estudante!</Button>
+								<a href="https://forms.gle/Zr9nQcKFYaqTB4Wz9" target="_blank" rel="noopener noreferrer">
+									<Button colorHover='#272727' >
+										Quero ser estudante!
+									</Button>
+								</a>
 							</BoxButtonTop>
 							<BoxButtonBottom>
-								<Button background='none' border='2px solid #00145D' color='#00145D'> Quero ser vontuntário!</Button>
+								<a href="https://forms.gle/U7687NQWXPp9z99o7" target="_blank" rel="noopener noreferrer">
+									<Button background='none' border='2px solid #00145D' color='#00145D'>
+										Quero ser vontuntário!
+									</Button>
+								</a>
 							</BoxButtonBottom>
 						</BoxButton>
 					</WrapperContent>

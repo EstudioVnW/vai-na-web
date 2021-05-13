@@ -760,7 +760,7 @@ const PartnerOverEstudio = () => {
           </BoxPresentationItemServicesFourth>
         </ContainerServicesTextEstudio> 
         <BoxButton>
-          <a href="https://forms.gle/bVRiWcWoHnL9D5tU8" target="_blank"><Button colorHover='#272727'>Desejo Contratar!</Button></a>
+          <a href="https://forms.gle/bVRiWcWoHnL9D5tU8" target="_blank" rel="noopener noreferrer"><Button colorHover='#272727'>Desejo Contratar!</Button></a>
         </BoxButton>
         <ContainerProfit>
           <ContainerProfiteCircle>
