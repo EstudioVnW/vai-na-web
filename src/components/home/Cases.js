@@ -27,8 +27,8 @@ const SubTitleCases = styled.p `
   font-weight: 300;
   line-height: 1.5rem;
   width: 21.5rem;
-  margin-left: 11.4rem;
-  margin-top: -1rem;
+  /* margin-left: 11.4rem; */
+  /* margin-top: -1rem; */
   margin-bottom: 2rem;
 
   /* @media (min-width: 1920px) {
@@ -185,7 +185,7 @@ const TextComplementOrange = styled.p `
   color: #272727;
   text-align: left;
   font-size: 11px;
-  margin-left: ${props => props.left};
+  /* margin-left: ${props => props.left}; */
   margin-right: ${props => props.right};
 /* 
   @media (min-width: 1920px) {
