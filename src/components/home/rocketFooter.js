@@ -199,7 +199,7 @@ const RocketFooter = () => (
             <LineStraight />
         </BoxLine>
         <div>
-          <a href="https://forms.gle/vZCme7DnSTrBKoMB6" target="_blank"><Button>Quero fazer parte!</Button></a>
+          <a href="https://forms.gle/vZCme7DnSTrBKoMB6" target="_blank" rel="noopener noreferrer"><Button>Quero fazer parte!</Button></a>
         </div>
         <BoxRocket>
             <ImageRocket src={Rocket} alt="Imagem do Foguete dando partida" />
