@@ -101,14 +101,10 @@ const Slider = ({ data, home }) => {
 	const [page, setPage] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
 
-	console.log('ppp 123', home)
-	console.log('ppp-----')
-
 	useEffect(() => {
 		const isHome = home ? 3 : 6
 		let isData = data && data;
 		setDataList(isData);
-		console.log('caiiiiii', home)
 
 		let arrayPages = [];
 		let totalPages = Math.ceil(isData.length / isHome);
@@ -204,7 +200,6 @@ const Slider = ({ data, home }) => {
 
 	return (
 		<Container>
-		{console.log(home, '------=')}
 			{renderSlider(data)}
 			{renderPagination(data)}
 			<Text onClick={handleScrollTo}>Voltar para o Topo</Text>

@@ -34,17 +34,17 @@ const TextHistory = styled.p `
 	font-weight: 400;
 	line-height: 1.7rem;
 	width: ${props => props.width};
-	margin-left: 11.4rem;
+	/* margin-left: 11.4rem; */
 
 	@media (min-width: 1920px) {
-		margin-left: 16.4rem;
+		/* margin-left: 16.4rem; */
 		line-height: 2.5rem;
 		font-size: 22px;
 		width: 39%;
 	}
 	  
 	  @media (max-width: 768px) {
-		margin-left: 0px;
+		/* margin-left: 0px; */
 		width: 50%;
 	}
 
@@ -60,38 +60,38 @@ const TextBlueHistory = styled.p `
 	width: 54%;
 	font-weight: 700;
 	line-height: 1.5;
-	margin-left: 11.4rem;
+	/* margin-left: 11.4rem; */
 	padding: 1.5rem 0px;
 
 	@media (min-width: 1920px) {
-		margin-left: 16.4rem;
+		/* margin-left: 16.4rem; */
 		font-size: 28px;
 		width: 38%;
 	}
 
 	@media (max-width: 768px) {
-		margin-left: 0px;
+		/* margin-left: 0px; */
 		width: 50%;
 	}
 
 	@media (max-width: 425px) {
-		margin-left: -3rem;
+		/* margin-left: -3rem; */
 	}
 `;
 
 const BoxPersonAll = styled.div `
-	margin-top: -9rem;
+	/* margin-top: -9rem; */
 
 	@media (max-width: 768px) {
-		margin-top: 0px;
+		/* margin-top: 0px; */
 		display: flex;
     	flex-direction: column;
 		align-items: center;
 	}
 	
 	@media (max-width: 425px) {
-		margin-top: 0rem;
-		margin-left: -8rem;
+		/* margin-top: 0rem; */
+		/* margin-left: -8rem; */
     	width: 75%;
 	}
 `;
@@ -143,7 +143,7 @@ const TextName = styled.p `
 	font-size: 12px;
 	font-weight: 700;
 	line-height: 1.5rem;
-	margin-top: -1rem;
+	/* margin-top: -1rem; */
 	z-index: 1;
 
 	@media (min-width: 1920px) {
