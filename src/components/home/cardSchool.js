@@ -3,11 +3,13 @@ import styled from 'styled-components';
 
 // styles
 const Container = styled.div`
+	position: relative;
 	padding: 1.563rem;
 	background-color: ${props => props.background ? props.background : 'rgba(15,43,146, 0.15)'};
 	border-radius: 20px;
-	width: 22.188rem;
-	max-width: 600px;
+	width: 100%;
+	max-width: 22.188rem;
+	height: 100%;
 	min-height: 254px;
 	/* height: 15.5rem; */
 	display: flex;
@@ -21,10 +23,10 @@ const Container = styled.div`
 `;
 
 const BoxTop = styled.div`
+	position: relative;
 	display: flex;
-	width: 70%;
+	width: 100%;
 	align-items: center;
-	justify-content: space-between;
 	/* margin-top: 1.2rem; */
 	/* margin-right: 3rem; */
 `;
@@ -67,6 +69,7 @@ const InformationText = styled.p`
 
 const BoxCircle = styled.div`
 	width: 30%;
+	margin-right: 1rem;
 	display: flex;
 	justify-content: space-evenly;
 `;
@@ -80,12 +83,11 @@ const Circle = styled.div`
 
 const FundoImage = styled.div`
 	position: absolute;
+	top: .5rem;
+	right: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	right: 5rem;
-	/* margin-left: 10.63rem; */
-	margin-top: 1.8rem;
 	width: 90px;
 	height: 90px;
 	background-color: #FDE7A9;
@@ -93,33 +95,33 @@ const FundoImage = styled.div`
 	border: 1.5px dashed var(---ffac2d);
 	border: 1.5px dashed #FFAC2D;
 
-	@media (min-width: 2560px) {
+	/* @media (min-width: 2560px) {
 		width: 100px;
-		height: 100px;
+		height: 100px; */
 		/* margin-left: 16.63rem; */
 	}
 
-	@media (min-width: 1920px) {
+	/* @media (min-width: 1920px) {
 		width: 100px;
 		height: 100px;
 		/* margin-left: 16.63rem; */
 	}
-	@media (min-width: 1024px) {
+	/* @media (min-width: 1024px) {
 		width: 4.375rem;
-		height: 4.375rem;
+		height: 4.375rem; */
 		/* margin-left: 8.72rem; */
-	}
+	} */
 	
 `;
 
 const ImageCard = styled.img`
 	width: 3rem; 
 
-	@media (min-width: 2560px) {
+	/* @media (min-width: 2560px) {
 		width: 3.5rem;
 	}
 	@media (min-width: 1024px) {
-		width: 2.5rem;
+		width: 2.5rem; */
 	}
 `;
 
@@ -140,7 +142,7 @@ const SubTitle = styled.p`
 	font-weight: 600;
 	font-size: 0.7em;
 	margin-top: 0.7rem;
-
+/* 
 	@media (min-width: 2560px) {
 		font-size: 1rem;
 	}
@@ -150,7 +152,7 @@ const SubTitle = styled.p`
 	}
 	@media (min-width: 1024px) {
 		font-size: 0.6rem;
-	}
+	} */
 `;
 
 const Title = styled.h2`
@@ -161,7 +163,7 @@ const Title = styled.h2`
 	margin-top: 0.5rem;
 	margin-right: 7.8rem;
 
-	@media (min-width: 2560px) {
+	/* @media (min-width: 2560px) {
 		width: 30%;
 		font-size: 1.5rem;
 		margin-right: 12.8rem;
@@ -176,7 +178,7 @@ const Title = styled.h2`
 	@media (min-width: 1024px) {
 		font-size: 0.9rem;
 		margin-right: 6.5rem;
-	}
+	} */
 `;
 
 const Description = styled.p`
@@ -187,7 +189,7 @@ const Description = styled.p`
 	margin-top: 1rem;
 	width: 85%;
 
-	@media (min-width: 2560px) {
+	/* @media (min-width: 2560px) {
 		width: 80%;
 		font-size: 1.2rem;
 		line-height: 1.2rem;
@@ -204,7 +206,7 @@ const Description = styled.p`
 		margin-top: 0.4rem;
 		font-size: 0.6rem;
 		line-height: .9rem;
-	}
+	} */
 `;
 
 const CardSchool = ({ background,
@@ -222,10 +224,10 @@ const CardSchool = ({ background,
 						<InformationText>em breve</InformationText>
 					</Information>
 				)}
+				<FundoImage>
+					<ImageCard src={image} />
+				</FundoImage>
 			</BoxTop>
-			<FundoImage>
-				<ImageCard src={image} />
-			</FundoImage>
 			<Line soon={soon} />
 			<SubTitle>carreira</SubTitle>
 			{title && <Title>{title}</Title>}

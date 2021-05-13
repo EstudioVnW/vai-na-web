@@ -46,12 +46,12 @@ const TextDescriptionAll = styled.p`
   /* margin-top: -1rem; */
   margin-bottom: 2rem;
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) { */
     /* margin-left: 16.4rem; */
-    line-height: 2.5rem;
+    /* line-height: 2.5rem;
     font-size: 22px;
     width: 26.5rem;
-  }
+  } */
   
   @media (max-width: 768px) {
     width: 50%;
@@ -112,14 +112,14 @@ const LineBlue = styled.div `
   background-color: #00145D;
   margin-top: 3rem;
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) {
     width: 3.3rem;
     margin-top: 5rem;
   }
   
   @media (min-width: 2560px) {
     width: 4.6rem;
-  }
+  } */
 `;
 
 const FirstImagePhotoEstudio = styled.img `
@@ -157,17 +157,17 @@ const TitleServices = styled.p `
   /* margin-left: 11.4rem; */
   margin-top: 2rem;
 
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     width: 11%;
     font-size: 34px;
-  }
+  } */
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) { */
     /* margin-left: 16.4rem; */
-    font-size: 32px;
+    /* font-size: 32px;
     width: 13%;
     margin-top: 5rem;
-  }
+  } */
   
   
   @media (max-width: 768px) {
@@ -190,19 +190,19 @@ const SubTitleServices = styled.p `
   line-height: 1.4rem;
   margin-top: 1rem;
   
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) { */
     /* margin-left: 16.4rem; */
-    font-size: 24px;
+    /* font-size: 24px;
     width: 17%;
     line-height: 2.4rem;
-  }
+  } */
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) { */
     /* margin-left: 16.4rem; */
-    font-size: 23px;
+    /* font-size: 23px;
     width: 21%;
     line-height: 2.4rem;
-  }
+  } */
   
   
   @media (max-width: 768px) {
@@ -224,10 +224,10 @@ const ContainerServicesTextEstudio = styled.div `
   display: flex;
   margin-bottom: 10rem;
   margin-top: 5rem;
-
+/* 
   @media (min-width: 1920px) {
     margin-top: 9rem;
-  }
+  } */
 
   @media (max-width: 425px) {
     margin-bottom: 6rem;
@@ -243,7 +243,7 @@ const BoxPresentationItemServicesFirst = styled.div `
   top: 6rem;
   left: 7rem;
   
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     top: 11rem;
     left: 8rem;
   }
@@ -251,7 +251,7 @@ const BoxPresentationItemServicesFirst = styled.div `
   @media (min-width: 1920px) {
     top: 6rem;
     left: 13rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     top: 0px;
@@ -268,7 +268,7 @@ const BoxPresentationItemServicesSecond = styled.div `
   top: -4rem;
   left: -1rem;
   
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     top: -7rem;
     left: -9rem;
   }
@@ -276,7 +276,7 @@ const BoxPresentationItemServicesSecond = styled.div `
   @media (min-width: 1920px) {
     top: -13rem;
     left: 1rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     top: 0px;
@@ -293,7 +293,7 @@ const BoxPresentationItemServicesThird = styled.div `
   top: 0rem;
   left: -4rem;
 
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     top: -4rem;
     left: -17rem;
   }
@@ -301,7 +301,7 @@ const BoxPresentationItemServicesThird = styled.div `
   @media (min-width: 1920px) {
     top: -6rem;
     left: -5rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     top: 0px;
@@ -318,7 +318,7 @@ const BoxPresentationItemServicesFourth = styled.div `
   top: -12rem;
   left: -7rem;
 
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     top: -19rem;
     left: -27rem;
   }
@@ -326,7 +326,7 @@ const BoxPresentationItemServicesFourth = styled.div `
   @media (min-width: 1920px) {
     top: -21rem;
     left: -11rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     top: 0px;
@@ -340,7 +340,7 @@ const TitlePresentationServices = styled.p `
   font-size: 24px;
   width: 10rem;
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) {
     font-size: 24px;
     width: 48%;
   }
@@ -349,16 +349,16 @@ const TitlePresentationServices = styled.p `
     font-size: 38px;
     width: 48%;
     line-height: 2.8rem;
-  }
+  } */
 
 `;
 
 const ImageService = styled.img `
   width: 60%;
-
+/* 
   @media (min-width: 1920px) {
     width: 50%;
-  }  
+  }   */
 
   @media (max-width: 768px) {
     width: 40%;
@@ -368,9 +368,9 @@ const ImageService = styled.img `
 const ImageServiceSmaller = styled.img `
   width: 50%;
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) {
     width: 40%;
-  }  
+  }   */
 
   @media (max-width: 768px) {
     margin-top: -1rem;
@@ -385,7 +385,7 @@ const DescriptionServices = styled.p `
   margin-top: 1rem;
   text-align: center;
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) {
     font-size: 16px;
     width: 53%;
     line-height: 2rem;
@@ -395,7 +395,7 @@ const DescriptionServices = styled.p `
     font-size: 22px;
     width: 53%;
     line-height: 2rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -417,7 +417,7 @@ const DescriptionServicesIntefaces = styled.p `
   margin-top: 1rem;
   text-align: center;
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) {
     font-size: 16px;
     width: 52%;
     line-height: 2rem;
@@ -427,7 +427,7 @@ const DescriptionServicesIntefaces = styled.p `
     font-size: 22px;
     width: 52%;
     line-height: 2rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -449,17 +449,17 @@ const DescriptionServicesSecond = styled.p `
   margin-top: 1rem;
   text-align: center;
   
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) {
     font-size: 16px;
     width: 62%;
     line-height: 2rem;
-  }  
+  }   */
 
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     font-size: 22px;
     width: 62%;
     line-height: 2rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     font-size: 16px;
@@ -479,9 +479,9 @@ const BoxButton = styled.div `
   margin-right: 18rem;
   margin-top: -7rem;
 
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     margin-right: 40rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     display: flex;
@@ -492,15 +492,22 @@ const BoxButton = styled.div `
 `;
 
 const ContainerProfiteCircle = styled.div `
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem;
+  /* justify-content: space-between; */
 
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     align-items: center;
   }
 
+`;
+
+const WarpperImg = styled.div`
+  position: relative;
+  display: flex;
 `;
 
 const ContainerProfit = styled.div `
@@ -518,14 +525,14 @@ const ContainerProfit = styled.div `
 `;
 
 const TextProfit = styled.p `
-  font-size: 18px;
+  width: 100%;
+  max-width: 27.375rem;
+  font-size: 1.75rem;
   font-weight: 300;
-  line-height: 1.5rem;
-  width: 48%;
-  /* margin-left: 11.4rem; */
-  margin-bottom: 1rem;
+  line-height: 2.75rem;
+  color: #272727;
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) {
     font-size: 22px;
     line-height: 2.5rem;
     width: 92%;
@@ -535,7 +542,7 @@ const TextProfit = styled.p `
     width: 41%;
     font-size: 28px;
     margin-bottom: 2rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     margin-left: 0px;
@@ -552,38 +559,50 @@ const TextProfitBold = styled.b `
 `;
 
 const CircleOrange = styled.div `
-  background: url(${CircleOrangeEstudio}); 
-  background-repeat: no-repeat; 
-  background-size: 31%;
-  height: 11rem;
-  position: relative; 
-  background-position: center;
-  top: 2rem;
-  left: 16rem; 
+/* NEW */
+  position: absolute;
+  top: 4rem;
+  left: -9rem;
+  width: 223px;
+  height: 223px;
+  background: linear-gradient(15deg, #f6611f, #fdb13c, #fff);
+  border-radius: 50%;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+
+/* Old */
+  /* background: url(${CircleOrangeEstudio}); 
+  background-repeat: no-repeat; 
+  background-size: 31%;
+  height: 11rem;
+  background-position: center; */
+  /* position: relative;  */
+  /* top: 2rem;
+  left: 16rem;  */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+
   :hover {
     background-size: 33%;
   }
 
-  @media (min-width: 1920px) {
-    left: 10rem;
-    background-size: 59%;
+  /* @media (min-width: 1920px) {
+    left: 24rem;
+    background-size: 31%;
     height: 16rem;
+  } */
 
-    :hover {
-      background-size: 60%;
-    }
-  }
-
-  @media (min-width: 2560px) {
+  /* @media (min-width: 2560px) {
     height: 19.5rem;
     left: 29rem;
     top: 5rem;
-  }
+  } */
 
   @media (max-width: 768px) {
     display: flex;
@@ -609,13 +628,13 @@ const CircleOrange = styled.div `
 `;
 
 const TextNumberCircle = styled.h2 `
-  color: #0F2B92;
-  font-size: 30px;
+  font-size: 2.9375rem;
   font-weight: 600;
+  color: #0F2B92;
 
-  @media (min-width: 1920px) {
-    font-size: 42px;
-  }
+  /* @media (min-width: 1920px) {
+    font-size: 60px;
+  } */
 
   @media (max-width: 768px) {
     margin-top: 0px;
@@ -623,21 +642,23 @@ const TextNumberCircle = styled.h2 `
 `;
 
 const TextCircle = styled.p `
+  width: 100%;
+  max-width: 8.3125rem;
   text-align: center;
-  font-size: 11px;
-  width: 20%;
+  font-size: .9375rem;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 1.4375rem;
+  color: #272727;
 
-  @media (min-width: 1920px) {
-    font-size: 14px;
-    width: 44%;
+  /* @media (min-width: 1920px) {
+    font-size: 17px;
+    width: 23%;
     line-height: 1.5rem;
   }
 
   @media (min-width: 2560px) {
     width: 18%;
-  }
+  } */
 
   @media (max-width: 768px) {
     width: 32%;
@@ -649,17 +670,17 @@ const TextCircle = styled.p `
 `;
 
 const SecondImagePhotoEstudio = styled.img `
-  width: 45%;
-  margin-right: 8rem;
+  width: 100%;
+  /* margin-right: 8rem; */
 
-  @media (min-width: 1920px) {
+  /* @media (min-width: 1920px) {
     width: 100%;
     margin-right: 10rem;
   }
 
   @media (min-width: 2560px) {
     margin-right: 22rem;
-  }
+  } */
   
   @media (max-width: 768px) {
     margin-right: 0px;
@@ -743,16 +764,18 @@ const PartnerOverEstudio = () => {
         </BoxButton>
         <ContainerProfit>
           <ContainerProfiteCircle>
-          <CircleOrange>
-              <TextNumberCircle>100%</TextNumberCircle>
-              <TextCircle>do lucro gerado pelo Estúdio VnW é reinvestido para formar mais pessoas.</TextCircle>
-            </CircleOrange>
             <TextProfit>
               Toda vez que sua empresa contrata serviços do Estúdio Vai na Web, ela contribui diretamente 
               para <TextProfitBold> inspirar, equipar e educar mais pessoas </TextProfitBold> para a economia digital. 
             </TextProfit>
           </ContainerProfiteCircle>
-          <SecondImagePhotoEstudio src={SecondPhotoEstudio} alt="Foto"/>
+          <WarpperImg>
+            <CircleOrange>
+              <TextNumberCircle>100%</TextNumberCircle>
+              <TextCircle>do lucro gerado pelo Estúdio VnW é reinvestido para formar mais pessoas.</TextCircle>
+            </CircleOrange>
+            <SecondImagePhotoEstudio src={SecondPhotoEstudio} alt="Foto"/>
+          </WarpperImg>
         </ContainerProfit>
       </div>
 	)
