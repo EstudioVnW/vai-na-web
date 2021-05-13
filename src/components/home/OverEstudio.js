@@ -43,12 +43,12 @@ const TextDescriptionAll = styled.p`
   font-weight: 300;
   line-height: 1.5rem;
   width: 17.5rem;
-  margin-left: 11.4rem;
-  margin-top: -1rem;
+  /* margin-left: 11.4rem; */
+  /* margin-top: -1rem; */
   margin-bottom: 2rem;
 
   @media (min-width: 1920px) {
-    margin-left: 16.4rem;
+    /* margin-left: 16.4rem; */
     line-height: 2.5rem;
     font-size: 22px;
     width: 26.5rem;
@@ -56,12 +56,11 @@ const TextDescriptionAll = styled.p`
   
   @media (max-width: 768px) {
     width: 50%;
-    margin-left: 0px;
+    /* margin-left: 0px; */
   }
 
   @media (max-width: 425px) {
     width: 75%;
-    margin-left: 0px;
     line-height: 1.8rem;
     font-size: 16px;
   }
@@ -143,7 +142,7 @@ const TitleServices = styled.p `
   display: flex;
   font-weight: 600;
   width: 14%;
-  margin-left: 11.4rem;
+  /* margin-left: 11.4rem; */
   margin-top: 2rem;
 
   @media (min-width: 2560px) {
@@ -152,7 +151,7 @@ const TitleServices = styled.p `
   }
 
   @media (min-width: 1920px) {
-    margin-left: 16.4rem;
+    /* margin-left: 16.4rem; */
     font-size: 32px;
     width: 13%;
     margin-top: 5rem;
@@ -172,7 +171,7 @@ const TitleServices = styled.p `
 `;
 
 const SubTitleServices = styled.p `
-  margin-left: 11.4rem;
+  /* margin-left: 11.4rem; */
   color: #272727;
   font-size: 13px;
   width: 18%;
@@ -180,14 +179,14 @@ const SubTitleServices = styled.p `
   margin-top: 1rem;
   
   @media (min-width: 2560px) {
-    margin-left: 16.4rem;
+    /* margin-left: 16.4rem; */
     font-size: 24px;
     width: 17%;
     line-height: 2.4rem;
   }
 
   @media (min-width: 1920px) {
-    margin-left: 16.4rem;
+    /* margin-left: 16.4rem; */
     font-size: 23px;
     width: 21%;
     line-height: 2.4rem;
@@ -204,7 +203,7 @@ const SubTitleServices = styled.p `
 
   @media (max-width: 425px) {
     font-size: 16px;
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
     width: 67%;
   }
 `;
@@ -511,7 +510,7 @@ const TextProfit = styled.p `
   font-weight: 300;
   line-height: 1.5rem;
   width: 48%;
-  margin-left: 11.4rem;
+  /* margin-left: 11.4rem; */
   margin-bottom: 1rem;
 
   @media (min-width: 1920px) {
