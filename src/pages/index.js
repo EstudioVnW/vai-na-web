@@ -69,8 +69,10 @@ const BackgroundHeader = styled.div`
 `;
 
 const Content = styled.div`
-  margin: auto;
+  width: 100%;
   max-width: 1440px;
+  margin: auto;
+  padding: 0 4rem;
 `;
 
 // const ContentHeader = styled.section`
@@ -155,7 +157,6 @@ const TextDescriptionAll = styled.p`
   font-weight: 300;
   line-height: 1.5rem;
   width: 17.5rem;
-  margin-top: -3rem;
   margin-bottom: 2rem;
 
   @media (min-width: 1920px) {
