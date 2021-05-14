@@ -47,9 +47,14 @@ const StudentParagraph = styled.p`
   top: 110px;
   left: 95px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 850px) {
     position: initial;
     margin-left: 1rem;
+	}
+
+  @media (max-width: 580px) {
+    font-size: 0.85rem;
+    margin-left: 0.3rem;
 	}
 `;
 
@@ -78,6 +83,10 @@ const ContainerBox = styled.div`
 const ContainerSubBox = styled.div`
   width: 31.5%;
   margin-left: 2rem;
+
+  @media (max-width: 1368px) {
+    width: 45%;
+	}
 
   @media (max-width: 1026px) {
     width: 55.5%;
@@ -108,9 +117,9 @@ const ContainerTitle = styled.h2`
     font-size: 2.8rem;
 	}
 
-  @media (max-width: 450px) {
+  @media (max-width: 580px) {
     margin: 0 0 2rem 1rem;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
 	}
 `;
 
@@ -120,8 +129,13 @@ const ContainerParagraph = styled.p`
   font-size: 1.4rem;
   line-height: 2rem;
 
+  @media (max-width: 768px) {
+    padding-bottom: 2rem;
+	}
+
   @media (max-width: 648px) {
     font-size: 1.2rem;
+    padding-bottom: 0;
 	}
 `;
 
@@ -141,12 +155,21 @@ const ContainerSubBoxOds = styled.div`
     flex-direction: column;
 	}
 
+  @media (max-width: 450px) {
+    width: 90%;
+    margin: 9rem 1rem;
+  }
+
   p {
     width: 40%;
     color: #272727;
     font-size: 1.4rem;
     margin-right: 4rem;
     line-height: 2rem;
+
+    @media (max-width: 1368px) {
+      width: 50%;
+	  }
 
     @media (max-width: 768px) {
       width: 90%;
@@ -173,6 +196,10 @@ const ImageMob = styled.img`
   @media (max-width: 768px) {
     display: flex;
     margin-top: 2rem;
+  }
+
+  @media (max-width: 450px) {
+    width: 90%;
   }
 `;
 
@@ -204,8 +231,8 @@ const ContainerSubValores = styled.div`
       font-size: 2.8rem;
 	  }
 
-    @media (max-width: 450px) {
-      font-size: 2.3rem;
+    @media (max-width: 580px) {
+      font-size: 2.2rem;
 	  }
   }
 `;
@@ -269,7 +296,7 @@ const Line = styled.span`
 
   @media (max-width: 768px) {
     border: 2px solid #FED5B2;
-    bottom: -72px;
+    bottom: 0;
   }
 `;
 
