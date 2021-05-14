@@ -218,11 +218,6 @@ const ContainerImages = styled.div`
   /* justify-content: space-around; */
   margin-top: 5rem;
 
-  /* @media (max-width: 768px) {
-    align-items: center;
-    flex-direction: column;
-	} */
-
   p {
     width: 45%;
     color: #00145D;
@@ -251,7 +246,6 @@ const ContainerImages = styled.div`
     }
 
     @media (max-width: 768px) {
-      /* align-items: center; */
       width: 100%;
       flex-direction: column;
 	  }
@@ -275,7 +269,7 @@ const Line = styled.span`
 
   @media (max-width: 768px) {
     border: 2px solid #FED5B2;
-    bottom: 0;
+    bottom: -72px;
   }
 `;
 
