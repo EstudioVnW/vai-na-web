@@ -20,6 +20,13 @@ const Container = styled.div`
 	@media (max-width: 1024px) {
 		width: 22.188rem;
 	}
+
+	@media (max-width: 768px) {
+		scroll-snap-align: start;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	  }
 `;
 
 const BoxTop = styled.div`
@@ -207,6 +214,10 @@ const Description = styled.p`
 		font-size: 0.6rem;
 		line-height: .9rem;
 	} */
+
+	@media (max-width: 768px) {
+		width: 100%;
+  	}
 `;
 
 const CardSchool = ({ background,

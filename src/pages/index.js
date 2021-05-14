@@ -335,34 +335,6 @@ const ButtonsItem = styled.span`
   transition: background-color 0.6s ease;
 `;
 
-const TestBox = styled.div `
-  display: none;
-
-
-  @media (max-width: 768px) {
-    display: flex;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    background-color: red;
-  }
-  
-`;
-
-const TextItem = styled.div `
-  width: 100vw;
-  height: 100vh;
-  background-color: blue;
-
-  @media (max-width: 768px) {
-    scroll-snap-align: start;
-    min-width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-
 export const query = graphql`
   query  {
     posts: allGraphCmsPost(sort: { fields: [createdAt], order: DESC }) {
@@ -614,20 +586,6 @@ const Home = (props) => {
           <RocketFooter />
         </DottedLineBackground>
       </Content>
-      <TestBox>
-        <TextItem>
-          <h2>Oi</h2>
-        </TextItem>
-        <TextItem>
-          <h2>Oii</h2>
-        </TextItem>
-        <TextItem>
-          <h2>Oiii</h2>
-        </TextItem>
-        <TextItem>
-          <h2>Oiiii</h2>
-        </TextItem>
-      </TestBox>
     </Layouts>
   )
 }

@@ -154,10 +154,11 @@ const ContentCardTopOne = styled.div `
 	margin-bottom: 3.688rem;
 	margin-right: 2rem;
 	/* padding: 2.563rem; */
-
-  /* @media (min-width: 1920px) {
-	/* height: 35vh; */
-  } */
+	
+	@media (max-width: 768px) {
+		margin-bottom: 0px;
+		margin-right: 0px;
+  }
 `;
 
 const ContentCardTop = styled.div `
@@ -239,7 +240,6 @@ const PartnerSchols = () => {
 										com os usuários.' image={ImageDevFront} />
 								{/* <ImageCard src={ImageDevFront} /> */}
 							</ContentCardTopOne>
-
 							<ContentCardTop>
 								<CardSchool title='Desenvolvedor Mobile' description='Desenvolve aplicativos 
 										nativos para Android e iOS. É o profissional responsável pelo planejamento, 
@@ -247,16 +247,12 @@ const PartnerSchols = () => {
 										(Smartphones, smartwatches, tablets, câmeras…).' image={ImageDevMob} />
 								{/* <ImageCard src={ImageDevMob} /> */}
 							</ContentCardTop>
-
 							<ContentCardBottom>
-
 								<CardSchool background='rgba(253,231,169,0.4)' title='Desenvolvedor Back-end' description='É o profissional 
 										responsável por construir e organizar as engrenagens, banco de dados e 
 										servidores que possibilitam os sites e sistemas funcionarem.' image={ImageDevBack} soon />
 								{/* <ImageCard src={ImageDevBack} /> */}
 							</ContentCardBottom>
-
-
 							<ContentCardBottom>
 								<CardSchool background='rgba(254,213,178,0.5)' title='Cientista de Dados' description='Uma nova geração de 
 										especialistas analíticos, aptos a resolverem problemas complexos de negócios 
