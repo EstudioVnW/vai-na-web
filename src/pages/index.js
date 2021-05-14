@@ -177,7 +177,6 @@ const TextDescriptionAll = styled.p`
   }
 
   @media (max-width: 425px) {
-    width: 75%;
     margin-left: 0px;
     line-height: 1.8rem;
     font-size: 16px;
@@ -233,15 +232,16 @@ const BoxPartners = styled.div`
   
   @media (max-width: 768px) {
     border-radius: 42px;
-    width: 8.5rem;
+    width: 7.5rem;
     height: 3.5rem;
     top: ${props => props.MobileTop};
+    left: ${props => props.Mobileleft};
   }
 
   @media (max-width: 425px) {
     top: ${props => props.MobileeTop};
     left: ${props => props.MobileeLeft};
-    width: 7.4rem;
+    width: 7rem;
     height: 2.9rem;
   }
 `;
@@ -251,8 +251,8 @@ const ImagePartners = styled.img`
 `;
 
 const CirclePartners = styled.div`
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   background-color: ${props => props.color};
   box-shadow:  ${props => props.shadow};
   border-radius: 50%;
@@ -271,6 +271,12 @@ const CirclePartners = styled.div`
     left: ${props => props.Mleft};
   }
   
+  @media (max-width: 768px) {
+    width: 5.5rem;
+    height: 5.5rem;
+    top: ${props => props.MobileTop};
+  }
+
   @media (max-width: 425px) {
     top: ${props => props.MobileeTop};
     left: ${props => props.MobileeLeft};
@@ -400,26 +406,30 @@ const Home = (props) => {
 
   const PartnerNetworks = () => {
     return (
-      <div>
+      <ContainerPartners>
         <BoxPartners
-          top='3rem'
-          left='25rem'
-          Mtop='4rem'
-          Mleft='22rem'
-          MobileeTop='6.5rem'
-          MobileeLeft='22rem'
+          top='4rem'
+          left='22rem'
+          Mtop='2.5rem'
+          Mleft='23rem'
+
+          Mobiletop='5rem'
+          Mobileleft='21rem'
+
+          MobileeTop='4.5rem'
+          MobileeLeft='21rem'
         >
           <ImagePartners width src={ImagePetronect} alt='Petronect' />
         </BoxPartners>
         <LinePartners
-          transform='rotate(150deg)'
+          transform='rotate(155deg)'
           width='11rem'
           top='8rem'
           left='17rem'
           Mtop='10rem'
           Mleft='14rem'
-          MobileeTop='9.5rem'
-          MobileeWidth='7rem'
+          MobileeTop='8rem'
+          MobileeWidth='6rem'
         />
         <CirclePartners
           color='#FDE7A9'
@@ -429,7 +439,7 @@ const Home = (props) => {
           Mtop='9rem'
           Mleft='10rem'
 
-          MobileeTop='9.5rem'
+          MobileeTop='7.5rem'
           MobileeLeft='14rem'
         >
           <Logo width='60%' src={ImageLogoVnW} alt='Logo Vai na Web' />
@@ -442,7 +452,7 @@ const Home = (props) => {
           Mtop='18rem'
           Mleft='4rem'
 
-          MobileeTop=''
+          MobileeTop='10.5rem'
           MobileeLeft='10.7rem'
           MobileeWidth=''
         />
@@ -454,7 +464,7 @@ const Home = (props) => {
           Mtop='17rem'
           Mleft='0rem'
 
-          MobileeTop=''
+          MobileeTop='11rem'
           MobileeLeft='9rem'
         >
           <Logo width='50%' src={ImageRocket} alt='Foguete' />
@@ -467,7 +477,7 @@ const Home = (props) => {
           Mtop='26.5rem'
           Mleft='5rem'
 
-          MobileeTop=''
+          MobileeTop='15rem'
           MobileeLeft='9rem'
           MobileeWidth=''
         />
@@ -479,7 +489,7 @@ const Home = (props) => {
           Mtop='26rem'
           Mleft='10rem'
 
-          MobileeTop='17rem'
+          MobileeTop='15rem'
           MobileeLeft='14rem'
         >
           <Logo width='70%' src={ImageEstudioVnW} alt='Logo Estudio Vai na Web' />
@@ -492,18 +502,19 @@ const Home = (props) => {
           Mtop='36rem'
           Mleft='5rem'
 
-          MobileeTop='22rem'
+          MobileeTop='20rem'
           MobileeLeft='10rem'
           MobileeWidth='7rem'
         />
         <BoxPartners
-          top='19rem'
-          left='27rem'
-          Mtop='27rem'
+          top='19.7rem'
+          left='26.5rem'
+          Mtop='28.2rem'
 
-          MobileTop='20rem'
+          MobileTop='19.7rem'
+          Mobileleft='24.5rem'
 
-          MobileeTop='19rem'
+          MobileeTop='17rem'
           MobileeLeft='23rem'
         >
           <ImagePartners src={ImageSirio} alt='Hospital Sírio Libanês' />
@@ -515,7 +526,7 @@ const Home = (props) => {
           left='16rem'
           Mtop='37rem'
 
-          MobileeTop='23rem'
+          MobileeTop='21rem'
           MobileeLeft='15.5rem'
           MobileeWidth='9rem'
         />
@@ -524,8 +535,11 @@ const Home = (props) => {
           left='20rem'
           Mtop='40rem'
 
-          MobileeTop='25rem'
-          MobileeLeft='20rem'
+          MobileTop='28.5rem'
+          Mobileleft='21rem'
+
+          MobileeTop='22.5rem'
+          MobileeLeft='19rem'
         >
           <ImagePartners src={ImageProadi} alt='Instituto Votorantim' />
         </BoxPartners>
@@ -536,7 +550,7 @@ const Home = (props) => {
           left='16rem'
           Mtop='30rem'
 
-          MobileeTop='20.1rem'
+          MobileeTop='18.1rem'
           MobileeWidth='7rem'
           MobileeLeft='18rem'
         />
@@ -546,12 +560,15 @@ const Home = (props) => {
           Mtop='39rem'
           Mleft='-3rem'
 
-          MobileeTop='24rem'
+          MobileTop='26rem'
+          Mobileleft='8rem'
+
+          MobileeTop='21.5rem'
           MobileeLeft='9rem'
         >
           <ImagePartners src={ImageVotorantim} alt='Proadi SUS' />
         </BoxPartners>
-      </div>
+      </ContainerPartners>
     )
   }
 
@@ -568,9 +585,9 @@ const Home = (props) => {
             pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
           </TextDescriptionAll>
         </ContainerTextNetwork>
-        <ContainerPartners>
+       {/*  <ContainerPartners> */}
           {PartnerNetworks()}
-        </ContainerPartners>
+       {/*  </ContainerPartners> */}
       </ContentNetwork>
     </ContainerNetwork>
   )
@@ -579,7 +596,7 @@ const Home = (props) => {
     <Layouts home>
       <BackgroundHeader />
       <Content>
-        {RenderHeader()}
+        {RenderHeader()} 
         <DottedLineBackground>
           {RenderNetwork()}
           <PartnerSchols />
