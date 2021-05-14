@@ -16,14 +16,14 @@ import Globo from '../../images/images/globo.svg';
 
 
 // styles
-const Container = styled.div`
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-`;
+// const Container = styled.div`
+//   width: 85%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   margin: auto;
+// `;
 
 const ContainerStudent = styled.div`
   max-width: 1440px;
@@ -206,7 +206,6 @@ const ImageMob = styled.img`
 const ContainerSubValores = styled.div`
   max-width: 1440px;
   width: 65%;
-  /* height: 100vh; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -242,7 +241,6 @@ const ContainerImages = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* justify-content: space-around; */
   margin-top: 5rem;
 
   p {
@@ -287,7 +285,6 @@ const ContainerImageBox = styled.div`
 `;
 
 const Line = styled.span`
-  /* width: 2px; */
   border-left: 2px solid #FED5B2;
   transform: rotate(90deg);
   position: relative;
@@ -301,8 +298,6 @@ const Line = styled.span`
 `;
 
 const Box = styled.span`
-  /* width: 337px;
-  height: 338px; */
   width: 13rem;
   height: 13rem;
   background-color: #FDE7A9;
@@ -325,7 +320,6 @@ const Index = () => {
   };
 
   return (
-    // <Container>
     <Layouts>
       <PageTitle data={isTitle} isPage='over' fontSize='3rem' />
       <ContainerStudent>
@@ -383,7 +377,6 @@ const Index = () => {
         </ContainerImages>
       </ContainerSubValores>
     </Layouts>
-    // </Container>
   );
 }
 
