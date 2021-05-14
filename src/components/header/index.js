@@ -10,11 +10,11 @@ import IconClosed from '../../images/images/close.svg';
 
 // styles
 const Container = styled.header`
+	width: 100%;
+	height: ${props => props.home ? '11rem' : '19rem'};
   display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 100%;
-	height: ${props => props.home ? '11rem' : '19rem'};
 
 	@media (max-width: 768px) {
 		height: 6rem;
@@ -40,16 +40,18 @@ const NavMenu = styled.nav`
 			height: 100%;
 			background: rgba(254,254, 2540, 1);
 			background: linear-gradient(0deg, rgba(254,254, 2540, 1), rgba(244,213,191,1), rgba(4,23,105,1) 100%);
-			
 		} 
 	`;
-
 
 const Image = styled.img`
 	display: ${props => props.home && 'none'};
   margin: ${props => props.home ? '10rem 0 0 20rem' : '3.125rem 0 0 6.438rem'};
   width: ${props => props.home ? '10rem' : '6rem'};
   position: ${props => !props.home && 'fixed'};
+
+	@media (max-width: 768px) {
+		margin: ${props => props.home ? '10rem 0 0 20rem' : '-1.125rem 0 0 3.438rem'};
+	}
 `;
 
 const Ul = styled.ul`
@@ -75,11 +77,12 @@ const Li = styled.li`
 		padding: 0;
 	}
 	
-	a{
+	a {
 		text-decoration: none;
 		font-size: 1.125rem;
 		color: #FDE7A9;
 		position: relative;
+
 		::before{
 			content: '';
 			position: absolute;
@@ -95,12 +98,12 @@ const OverMenu = styled.div`
 	display: initial;
 
 	@media (max-width: 768px) {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 2rem 2rem 0 0;
-		z-index: 3;
 		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 2rem 0 0;
+		z-index: 3;
 	}
 `;
 
