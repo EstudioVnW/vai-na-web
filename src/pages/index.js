@@ -69,8 +69,10 @@ const BackgroundHeader = styled.div`
 `;
 
 const Content = styled.div`
-  margin: auto;
+  width: 100%;
   max-width: 1440px;
+  margin: auto;
+  padding: 0 4rem;
 `;
 
 // const ContentHeader = styled.section`
@@ -108,15 +110,16 @@ const ArrowScroll = styled.img`
 `;
 
 const ButtonScroll = styled.button`
+  padding-top: 5rem;
   padding-left: 2rem;
   border: none;
   background: transparent;
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
 `;
 
 const ContainerNetwork = styled.div`
   /* margin-bottom: 8.777rem; */
-  margin-top: 17rem;
+  margin-top: 60vh;
   padding-bottom: 10rem;
 `;
 
@@ -146,17 +149,21 @@ const ContainerTextNetwork = styled.div`
 `;
 
 const ImageLogo = styled.img`
+  position: relative;
   width: 9rem;
   margin: 0 0 2% 4%;
+
+  @media (max-width: 768px) {
+   margin: 0 0 2% 8%;
+  }
 `;
 
 const TextDescriptionAll = styled.p`
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.5rem;
-  width: 17.5rem;
-  margin-top: -3rem;
   margin-bottom: 2rem;
+  width: 19rem;
+  font-size: .938rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 
   @media (min-width: 1920px) {
     /* margin-left: 16.4rem; */
@@ -178,7 +185,7 @@ const TextDescriptionAll = styled.p`
 `;
 
 const BoldTextAll = styled.b`
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const BoldBackground = styled.b`
@@ -244,8 +251,8 @@ const ImagePartners = styled.img`
 `;
 
 const CirclePartners = styled.div`
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 7rem;
+  height: 7rem;
   background-color: ${props => props.color};
   box-shadow:  ${props => props.shadow};
   border-radius: 50%;
@@ -335,34 +342,6 @@ const ButtonsItem = styled.span`
   transition: background-color 0.6s ease;
 `;
 
-const TestBox = styled.div `
-  display: none;
-
-
-  @media (max-width: 768px) {
-    display: flex;
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    background-color: red;
-  }
-  
-`;
-
-const TextItem = styled.div `
-  width: 100vw;
-  height: 100vh;
-  background-color: blue;
-
-  @media (max-width: 768px) {
-    scroll-snap-align: start;
-    min-width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-`;
-
 export const query = graphql`
   query  {
     posts: allGraphCmsPost(sort: { fields: [createdAt], order: DESC }) {
@@ -427,7 +406,6 @@ const Home = (props) => {
           left='25rem'
           Mtop='4rem'
           Mleft='22rem'
-
           MobileeTop='6.5rem'
           MobileeLeft='22rem'
         >
@@ -440,7 +418,6 @@ const Home = (props) => {
           left='17rem'
           Mtop='10rem'
           Mleft='14rem'
-
           MobileeTop='9.5rem'
           MobileeWidth='7rem'
         />
@@ -473,7 +450,7 @@ const Home = (props) => {
           color='#FFFFFF'
           shadow='0px 0px 22px #00000029'
           top='13rem'
-          left='7rem'
+          left='6rem'
           Mtop='17rem'
           Mleft='0rem'
 
@@ -614,20 +591,6 @@ const Home = (props) => {
           <RocketFooter />
         </DottedLineBackground>
       </Content>
-      <TestBox>
-        <TextItem>
-          <h2>Oi</h2>
-        </TextItem>
-        <TextItem>
-          <h2>Oii</h2>
-        </TextItem>
-        <TextItem>
-          <h2>Oiii</h2>
-        </TextItem>
-        <TextItem>
-          <h2>Oiiii</h2>
-        </TextItem>
-      </TestBox>
     </Layouts>
   )
 }

@@ -24,7 +24,7 @@ const Container = styled.header`
 	}
 `;
 
-	const NavMenu = styled.nav`
+const NavMenu = styled.nav`
 		display: initial;
 		font-family: "usual", sans-serif;
 		position: fixed;
@@ -79,7 +79,7 @@ const Li = styled.li`
 	
 	a {
 		text-decoration: none;
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 		color: #FDE7A9;
 		position: relative;
 
@@ -164,7 +164,7 @@ const BelowList = styled.ul`
 	}
 `;
 
-const StyledLink  = styled(Link)`
+const StyledLink = styled(Link)`
 	color: #0F2B92;
 	font-size: 1.125rem;
 	text-decoration: none;
@@ -181,11 +181,11 @@ const Header = ({ home }) => {
 		<Container home={home}>
 			<OverMenu>
 				<Figure>
-				<Link to={'/'} rel="noopener noreferrer"><Image src={logo} home={home} alt='Logotipo' /></Link>
+					<Link to={'/'} rel="noopener noreferrer"><Image src={logo} home={home} alt='Logotipo' /></Link>
 				</Figure>
 				<BoxImg>
-					<ImgMenuOpen isShow={isShow} src={IconMenu} alt="Icon menu hamburguer" onClick={handleMenu}/>
-					<ImgMenuClosed isShow={isShow} src={IconClosed} alt="Icon closed menu" onClick={handleMenu}/>
+					<ImgMenuOpen isShow={isShow} src={IconMenu} alt="Icon menu hamburguer" onClick={handleMenu} />
+					<ImgMenuClosed isShow={isShow} src={IconClosed} alt="Icon closed menu" onClick={handleMenu} />
 				</BoxImg>
 			</OverMenu>
 			<NavMenu isShow={isShow}>

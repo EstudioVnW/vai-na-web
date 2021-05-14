@@ -38,10 +38,10 @@ const ContainerTextMain = styled.div `
 `;
 
 const TextDescriptionAll = styled.p`
-  font-size: 14px;
-  font-weight: 300;
+  font-size: .938rem;
+  font-weight: 400;
   line-height: 1.5rem;
-  width: 17.5rem;
+  width: 21rem;
   /* margin-left: 11.4rem; */
   /* margin-top: -1rem; */
   margin-bottom: 2rem;
@@ -66,7 +66,7 @@ const TextDescriptionAll = styled.p`
 `;
 
 const BoldTextAll = styled.b`
-  font-weight: 500;
+  font-weight: 600;
 `;
 
 const ContainerImagesEstudio = styled.div `
@@ -124,21 +124,21 @@ const LineBlue = styled.div `
 
 const FirstImagePhotoEstudio = styled.img `
   width: 80%;
-  margin-top: -5px;
-
+  z-index: 0;
+  
   @media (max-width: 1920px) {
+    margin-top: -14px;
     width: 95%;
-    margin-top: -4px;
   }
 
   @media (max-width: 768px) {
-    width: 100%;
     margin-top: -1px;
+    width: 100%;
   }
   
   @media (max-width: 425px) {
-    width: 24rem;
     margin-top: 1px;
+    width: 24rem;
   }
 `;
 
@@ -526,7 +526,7 @@ const ContainerProfit = styled.div `
 const TextProfit = styled.p `
   width: 100%;
   max-width: 27.375rem;
-  font-size: 1.75rem;
+  font-size: 1.65rem;
   font-weight: 300;
   line-height: 2.75rem;
   color: #272727;
@@ -560,10 +560,10 @@ const TextProfitBold = styled.b `
 const CircleOrange = styled.div `
 /* NEW */
   position: absolute;
-  top: 4rem;
-  left: -9rem;
-  width: 223px;
-  height: 223px;
+  top: 2.75rem;
+  left: -8rem;
+  width: 200px;
+  height: 200px;
   background: linear-gradient(15deg, #f6611f, #fdb13c, #fff);
   border-radius: 50%;
   text-align: center;
@@ -588,7 +588,8 @@ const CircleOrange = styled.div `
   justify-content: center; */
 
   :hover {
-    background-size: 33%;
+    width: 226px;
+    height: 226px;
   }
 
   /* @media (min-width: 1920px) {
@@ -627,7 +628,7 @@ const CircleOrange = styled.div `
 `;
 
 const TextNumberCircle = styled.h2 `
-  font-size: 2.9375rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #0F2B92;
 
@@ -646,7 +647,7 @@ const TextCircle = styled.p `
   text-align: center;
   font-size: .9375rem;
   font-weight: 400;
-  line-height: 1.4375rem;
+  line-height: 1.25rem;
   color: #272727;
 
   /* @media (min-width: 1920px) {

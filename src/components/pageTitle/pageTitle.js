@@ -8,6 +8,7 @@ const Container = styled.section`
 
 	@media (max-width: 768px) {
 		padding: 0;
+		padding-top: 6rem;
 		margin: 0;
 	}
 `;
@@ -72,6 +73,8 @@ const ContentTitle = styled.div`
 const LineOrange = styled.span`
 	color: #FF611E;
 	font-size: ${props => props.pageHome === 'isHome' ? '2.2rem' : ' 3.2rem'};
+	/* padding-right: 0.5rem;
+	font-size: ${props => props.pageHome === 'isHome' ? '3rem' : ' 3.2rem'}; */
 	font-weight: 200;
 	padding-right: 0.5rem;
 
@@ -124,10 +127,13 @@ const ContentSubTitle = styled.div`
 	text-align: left;
 	justify-content: ${props => props.pageBlog === 'over' && 'flex-end'};
 	margin-top: ${props => props.pageBlog === 'over' && '4rem'};
+<<<<<<< HEAD
 
 	@media (max-width: 768px) {
 		margin-top: 40%;
 	}
+=======
+>>>>>>> 1e1486769db054e3326f4304eafd2e9a16ba767e
 `;
 
 const SubTitle = styled.p`
