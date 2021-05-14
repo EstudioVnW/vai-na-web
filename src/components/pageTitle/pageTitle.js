@@ -57,7 +57,7 @@ const TypePage = styled.h1`
 	}
 
 	@media (max-width: 425px) {
-		/* margin-left: 0rem; */
+		 margin-left: -10px; 
 	}
 `;
 
@@ -68,6 +68,10 @@ const ContentTitle = styled.div`
 
 	@media (max-width: 768px) {
 		padding-top: 35%;
+	}
+
+	@media (max-width: 425px) {
+		padding-top: 8%;
 	}
 
 `;
@@ -111,7 +115,7 @@ const Title = styled.h2`
 	}
 
 	@media (max-width: 425px) {
-		/* font-size: 2rem; */
+		font-size: 2rem;
 	}
 
 	@media (max-width: 375px) {
