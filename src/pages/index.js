@@ -160,16 +160,16 @@ const ImageLogo = styled.img`
 
 const TextDescriptionAll = styled.p`
   margin-bottom: 2rem;
-  width: 19rem;
-  font-size: .938rem;
+  width: 21rem;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 
   @media (min-width: 1920px) {
     /* margin-left: 16.4rem; */
     line-height: 2.5rem;
     font-size: 22px;
-    width: 27.5rem;
+    width: 25.5rem;
   }
 
   @media (max-width: 768px) {
@@ -196,10 +196,10 @@ const BoldBackground = styled.b`
 
 const ContainerPartners = styled.div`
   position: relative;
-  margin-top: -11rem;
+  margin-top: -9rem;
 
   @media (min-width: 1920px) {
-    margin-left: 10rem;
+    margin-left: 16rem;
   }
   
   @media (max-width: 768px) {
@@ -210,8 +210,8 @@ const ContainerPartners = styled.div`
 `;
 
 const BoxPartners = styled.div`
-  width: 10.5rem;
-  height: 3.8rem;
+  width: 9.5rem;
+  height: 3.7rem;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 30px #0F2B9233;
   border-radius: 12px;
@@ -251,8 +251,8 @@ const ImagePartners = styled.img`
 `;
 
 const CirclePartners = styled.div`
-  width: 6rem;
-  height: 6rem;
+  width: 5.5rem;
+  height: 5.5rem;
   background-color: ${props => props.color};
   box-shadow:  ${props => props.shadow};
   border-radius: 50%;
@@ -585,9 +585,7 @@ const Home = (props) => {
             pessoas, geramos empregos dignos no mercado de tecnologia e reduzimos o gap de gênero no país.
           </TextDescriptionAll>
         </ContainerTextNetwork>
-       {/*  <ContainerPartners> */}
           {PartnerNetworks()}
-       {/*  </ContainerPartners> */}
       </ContentNetwork>
     </ContainerNetwork>
   )

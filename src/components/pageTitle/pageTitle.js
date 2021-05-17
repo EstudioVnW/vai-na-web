@@ -18,15 +18,17 @@ const BoxTitle = styled.div`
 
 	/* @media (min-width: 1920px) {
 		margin-left: 7rem;
-	}
-
-	@media (max-width: 768px) {
-		margin-left: 0px;
-	}
-
-	@media (max-width: 768px) {
-		margin-left: 0px;
 	} */
+
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	@media (max-width: 425px) {
+		display: flex;
+		flex-direction: column;
+	}
 `;
 
 const Date = styled.p`
@@ -55,7 +57,7 @@ const TypePage = styled.h1`
 	}
 
 	@media (max-width: 425px) {
-		/* margin-left: 0rem; */
+		 margin-left: -10px; 
 	}
 `;
 
@@ -66,8 +68,12 @@ const ContentTitle = styled.div`
 
 	@media (max-width: 768px) {
 		padding-top: 35%;
-		margin-left: 0.7rem;
 	}
+
+	@media (max-width: 425px) {
+		padding-top: 8%;
+	}
+
 `;
 
 const LineOrange = styled.span`
@@ -82,16 +88,12 @@ const LineOrange = styled.span`
 		font-size: 3.2rem;
 	}
 
-	@media (max-width: 768px) {
-		padding-left: 3.3rem;
-	}
-
 	@media (max-width: 580px) {
 		font-size: 1.9375rem;
 	}
 
 	@media (max-width: 425px) {
-		margin-left: 0rem;
+		padding-left: 0rem;
 	}
 `;
 
@@ -113,7 +115,7 @@ const Title = styled.h2`
 	}
 
 	@media (max-width: 425px) {
-		/* font-size: 2rem; */
+		font-size: 2rem;
 	}
 
 	@media (max-width: 375px) {
@@ -127,13 +129,6 @@ const ContentSubTitle = styled.div`
 	text-align: left;
 	justify-content: ${props => props.pageBlog === 'over' && 'flex-end'};
 	margin-top: ${props => props.pageBlog === 'over' && '4rem'};
-<<<<<<< HEAD
-
-	@media (max-width: 768px) {
-		margin-top: 40%;
-	}
-=======
->>>>>>> 1e1486769db054e3326f4304eafd2e9a16ba767e
 `;
 
 const SubTitle = styled.p`
