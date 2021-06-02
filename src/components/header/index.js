@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
+import ButtonMenu from '../button/Button';
 
 //Image
 import logo from '../../images/icons/logo-VNW.svg';
@@ -55,6 +56,7 @@ const Image = styled.img`
 const Ul = styled.ul`
   display: flex;
   margin: 4.375rem 7.75rem 0 0;
+  align-items: center;
 
 	@media (max-width: 768px) {
 		display: flex;
@@ -167,6 +169,7 @@ const StyledLink = styled(Link)`
 	text-decoration: none;
 `;
 
+
 const Header = ({ home }) => {
 	const [isShow, setIsShow] = useState(false);
 
@@ -187,17 +190,20 @@ const Header = ({ home }) => {
 			</OverMenu>
 			<NavMenu isShow={isShow}>
 				<Ul>
-					<Li><Link to={'/'} rel="noopener noreferrer">Home</Link></Li>
-					<Li><Link to={'/over'} rel="noopener noreferrer">Sobre</Link></Li>
-					<Li><Link to={'/blog'} rel="noopener noreferrer">Blog</Link></Li>
-					<Li><Link to='#footer' rel="noopener noreferrer">Contato</Link></Li>
+					<Li><Link to={'/'} rel="noopener noreferrer">Sobre</Link></Li>
+					<Li><Link to={'/over'} rel="noopener noreferrer">Serviços</Link></Li>
+					<Li><Link to={'/blog'} rel="noopener noreferrer">Cases</Link></Li>
+					<Li><Link to='#footer' rel="noopener noreferrer">Escola</Link></Li>
+					<Li><ButtonMenu>Reserve seu Squad</ButtonMenu></Li>
 				</Ul>
-				<BelowList>
+				
+				{/* <BelowList>
 					<li><StyledLink to={'/'} rel="noopener noreferrer">Media Kit</StyledLink></li>
 					<li><StyledLink to={'/'} rel="noopener noreferrer">Deep Tech Network</StyledLink></li>
 					<li><StyledLink to={'/'} rel="noopener noreferrer">Perguntas Frequentes</StyledLink></li>
-				</BelowList>
+				</BelowList> */}
 			</NavMenu>
+			
 		</Container>
 	)
 }
