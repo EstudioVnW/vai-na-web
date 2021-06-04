@@ -7,21 +7,9 @@ import './index.css';
 import Layouts from '../components/Layouts';
 
 //Imagens
-import BackHeader from '../images/images/peopleNetwork.png';
+
 
 // styles
-const BackgroundHeader = styled.div`
-  position: absolute;
-  top: -2rem;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url(${BackHeader}); 
-  background-repeat: no-repeat;
-  /* background-size: 105% 100%; */
-  background-size: cover;
-  background-position: right;
-`;
 
 const Content = styled.div`
   width: 100%;

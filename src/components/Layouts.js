@@ -23,7 +23,7 @@ const Main = styled.main`
 const Layouts = ({ isPage, children, home }) => {
   return (
     <Container>
-      <Menu/>
+      <Menu />
       <Main>
         {children}
       </Main>
