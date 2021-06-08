@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
 import { Link } from "gatsby";
-import ButtonMenu from '../button/Button';
+import ButtonHome from '../button/Button';
 
 //Image
 import logo from '../../images/icons/logo-VNW.svg';
@@ -9,18 +9,30 @@ import LogoVnW from '../../images/images/Logo_VnW.svg';
 import IconMenu from '../../images/images/menu_hamburger.svg';
 import IconClosed from '../../images/images/close.svg';
 import ImageHome from '../../images/images/VNW-66.png';
+import ImageSirio from '../../images/images/hospitalSirio.png';
+import ImageVotorantim from '../../images/images/Instituto-Votorantim.png';
+import ImagePetronect from '../../images/images/Petronect.png';
+import ImageProadiSus from '../../images/images/proadiSus.png';
+
+import ImageQuickCash from '../../images/images/QuickCash.png';
+import ImageIts from '../../images/images/192205155_822241138394982_1188246794454052303_n.png';
+import ImageSedimenta from '../../images/images/SedimentaJPM.svg';
+import ImageM4A from '../../images/images/m4a.png';
+import Infografico from '../../images/images/Group11288.png';
 
 // styles
 const Container = styled.header`
   	display: flex;
-	justify-content: flex-end;
+	justify-content: end;
+	align-items: flex-end; 
+	flex-direction: column;
 	width: 100%;
 	background: white;
-	height: ${props => props.home ? '11rem' : '36rem'};
+	height: ${props => props.home ? '11rem' : '32rem'};
 `;
 
 const FundoAzul = styled.div`
-	width: 95%;
+	width: 97%;
 	background: #00145D;
 	border-bottom-left-radius: 15px;
 `;
@@ -38,7 +50,6 @@ const NavMenu = styled.nav`
 		align-items: center;
 		justify-content: center;
 		font-family: "usual", sans-serif;
-		
 		margin-right: 50px;
 
 		@media (max-width: 768px) {
@@ -175,7 +186,7 @@ const BelowList = styled.ul`
 const HeaderHome = styled.div`
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-end;
 `;
 
 const CardHome = styled.div`
@@ -186,8 +197,8 @@ const CardHome = styled.div`
 	background: #FED5B2;
 	width: 42rem;
 	height: 12rem;
-	margin-left: 72px; 
-	margin-bottom: 42px;
+	left:100px;
+	top: 200px;
 	border-radius: 15px;
 `;
 const BoxCircle = styled.div`
@@ -240,7 +251,9 @@ const SubTitle = styled.p`
 
 
 const ImageEstudio = styled.img`
-	width: 42rem;
+	margin-top: 35px;
+	margin-right: -19px;
+	width: 40rem;
 	border: 15px;
   
 `;
@@ -253,6 +266,92 @@ const StyledLink = styled(Link)`
 	
 `;
 
+const Cases = styled.div`
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+`;
+
+const CasesImages = styled.div`
+	width: 90%;
+	margin-top: 2rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+`;
+
+const BoxImage = styled.figure`
+	width: 20%;
+	height: 8rem;
+	margin: 0.2rem;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+
+const ImageCases = styled.img`
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+
+`;
+
+
+
+
+const SocialImpact = styled.div`
+	width: 100%;
+	background: rgb(15,43,146,0.07);
+	margin-top: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+`;
+const SocialImpactText = styled.div`
+	width: 30%;
+	height: 27rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+`;
+const SocialImpactTextTitle = styled.h1`
+	width: 50%;
+	margin-left: 20%;
+	color: #00145D;
+`;
+const SocialImpactTextSubTitle = styled.h2`
+	width: 50%;
+	margin-left: 20%;
+	margin-top: 15px;
+	color: #00145D;
+`;
+const SocialImpactTextDescription = styled.p`
+	width: 50%;
+	margin-left: 20%;
+	margin-top: 15px;
+	color: #272727;
+`;
+
+const SocialImpactImage = styled.div`
+	width: 70%;
+	height: 27rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+`;
+const SocialImpactImageInfo = styled.img`
+	width: 90%;
+`;
+
+const Bold = styled.p`
+	font-weight: 600;
+	
+`;
 
 const Header = ({ home }) => {
 	const [isShow, setIsShow] = useState(false);
@@ -281,16 +380,15 @@ const Header = ({ home }) => {
 							<Li><Link to={'/blog'} rel="noopener noreferrer">Cases</Link></Li>
 							<Li><Link to='#footer' rel="noopener noreferrer">Escola</Link></Li>
 						</Ul>
-						<ButtonMenu 
+						<ButtonHome 
 							border='#FFAC2D' 
 							color='#FFAC2D'
 							background='#0F2B92'
 						>
 							Reserve seu Squad
-						</ButtonMenu>				
+						</ButtonHome>				
 					</NavMenu>
-				</Menu>
-				
+				</Menu>	
 				<HeaderHome>
 					<CardHome>
 						<BoxCircle>
@@ -308,6 +406,59 @@ const Header = ({ home }) => {
 					<ImageEstudio src={ImageHome} alt='FotoEStudio' />
 				</HeaderHome>
 			</FundoAzul>
+
+			<Cases>
+				<CasesImages>
+					<BoxImage>
+						<ImageCases src={ImageSirio} alt='Hospital Sírio Libanês'  />
+					</BoxImage>
+					<BoxImage>
+						<ImageCases src={ImageVotorantim} alt='Instituto Votorantim' />
+					</BoxImage>
+					<BoxImage>
+						<ImageCases src={ImagePetronect} alt='Petronect' />
+					</BoxImage>
+					<BoxImage>
+						<ImageCases src={ImageProadiSus} alt='ProadiSUS' />
+					</BoxImage>
+					<BoxImage>
+						<ImageCases src={ImageQuickCash} alt='QuickCash' />
+					</BoxImage>
+					<BoxImage>
+						<ImageCases src={ImageIts} alt='Instituto de Tecnologia E Sociedade do Rio' />
+					</BoxImage>
+					<BoxImage>
+						<ImageCases src={ImageSedimenta} alt='Sedimenta JPM' />
+					</BoxImage>
+					<BoxImage>
+						<ImageCases src={ImageM4A} alt='Match 4 Action' />
+					</BoxImage>
+				{/* </ImagesCasesSecond> */}
+				</CasesImages>	
+				<ButtonHome 
+					
+					colorHover='#272727'
+					border='#FFAC2D' 
+					color='#FFFFFF'
+					background='#FF611E'	
+				>
+							Veja nossos Cases de Sucesso!
+				</ButtonHome>
+			</Cases>
+
+			<SocialImpact>
+				<SocialImpactText>
+					<SocialImpactTextTitle>SIaaS</SocialImpactTextTitle>
+					<SocialImpactTextSubTitle>Social Impact as a Service</SocialImpactTextSubTitle>
+					<SocialImpactTextDescription>Um modelo de ciclo fechado 
+						que entrega soluções web e mobile para as empresas ao mesmo 
+						tempo <Bold>capacita e requalifica profissionais para atender aos 
+						desafios da economia digital.</Bold></SocialImpactTextDescription>
+				</SocialImpactText>
+				<SocialImpactImage>
+					<SocialImpactImageInfo src={Infografico}/>
+				</SocialImpactImage>
+			</SocialImpact>
 			
 		</Container>
 	)
