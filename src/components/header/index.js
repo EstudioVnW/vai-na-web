@@ -19,7 +19,11 @@ import ImageIts from '../../images/images/192205155_822241138394982_118824679445
 import ImageSedimenta from '../../images/images/SedimentaJPM.svg';
 import ImageM4A from '../../images/images/m4a.png';
 import Infografico from '../../images/images/Group11288.png';
+import PeoplesSquad from '../../images/images/VaiNaWeb-196.png';
 
+import Back from '../../images/images/Group11078.svg';
+import Canais from '../../images/images/Group10972.svg';
+import MVPs from '../../images/images/Group10972.svg';
 // styles
 const Container = styled.header`
   	display: flex;
@@ -266,6 +270,8 @@ const StyledLink = styled(Link)`
 	
 `;
 
+// CASES
+
 const Cases = styled.div`
 	width: 100%;
 	display: flex;
@@ -299,8 +305,7 @@ const ImageCases = styled.img`
 
 `;
 
-
-
+//SOCIAL IMPACT
 
 const SocialImpact = styled.div`
 	width: 100%;
@@ -348,10 +353,148 @@ const SocialImpactImageInfo = styled.img`
 	width: 90%;
 `;
 
-const Bold = styled.p`
+const Bold = styled.span`
 	font-weight: 600;
+`;
+
+//SQUADS
+
+const Squads = styled.div`
+	width: 100%;
+	margin-top: 5rem;
+	display: flex;
+	justify-content: space-evenly;
+`;
+const SquadsImageButton = styled.div`
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+
+const SquadsImage = styled.div`
+	border-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+const ButtonSquads = styled.div`
+	z-index: 2;
+	margin-top: -50px;
+`;
+
+
+
+const ImageSquad = styled.img`
+	width: 100%;
+	-webkit-transition: -webkit-transform .5s ease;
+   	transition: transform .5s ease;
+
+	:hover{
+		-webkit-transform: scale(1.1);
+   		transform: scale(1.1);
+		
+	}
+`;
+
+const SquadsText = styled.div`
+	width: 45%;
+`;
+const SquadsTextTitle = styled.h1`
+	color: #00145D;
+`;
+const SquadsTextSubTitle = styled.p`
+	width: 65%;
+	margin-top: 10px;
+`;
+const SquadsTextDescription = styled.p`
+	width: 95%;
+	margin-top: 25px;
+`;
+
+
+
+
+const SquadsTextBack = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 25px;
+`;
+const ImageSquadBack = styled.div`
 	
 `;
+const ImageBack = styled.img`
+	width: 7rem;
+`;
+const BoxTextBack = styled.div`
+	width: 70%;
+`;
+const BoxTextBackTitle = styled.h1`
+	font-size: 1.2rem;
+`;
+const BoxTextBackDescription = styled.p`
+	
+`;	
+					
+					
+					
+
+
+const SquadsTextCanais = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 25px;
+`;
+const ImageSquadCanais = styled.div`
+	
+`;
+const ImageCanais = styled.img`
+	width: 7rem;
+`;
+const BoxTextCanais = styled.div`
+	width: 70%;
+`;
+const BoxTextCanaisTitle = styled.h1`
+	font-size: 1.2rem;
+`;
+const BoxTextCanaisDescription = styled.p`
+	
+`;	
+					
+					
+					
+
+
+const SquadsTextMVPs = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	margin-top: 25px;
+`;
+const ImageSquadMVPs = styled.div`
+	
+`;
+const ImageMVPs = styled.img`
+	width: 7rem;
+`;
+const BoxTextMVPs = styled.div`
+	width: 70%;
+`;
+const BoxTextMVPsTitle = styled.h1`
+	font-size: 1.2rem;
+`;
+const BoxTextMVPsDescription = styled.p`
+	
+`;			
+
+					
+					
+					
+
+
 
 const Header = ({ home }) => {
 	const [isShow, setIsShow] = useState(false);
@@ -460,6 +603,79 @@ const Header = ({ home }) => {
 				</SocialImpactImage>
 			</SocialImpact>
 			
+
+
+			<Squads>
+				<SquadsImageButton>
+					<SquadsImage>
+						<ImageSquad src={PeoplesSquad} />
+					</SquadsImage>
+					<ButtonSquads>
+						<ButtonHome
+							backgroundHover='#FF611E'
+						>
+							Reserve seu Squad!
+						</ButtonHome>
+					</ButtonSquads>
+				</SquadsImageButton>
+				
+				
+				
+				<SquadsText>
+					<SquadsTextTitle>Squads estendidos e configuráveis</SquadsTextTitle>
+					<SquadsTextSubTitle>
+						A escolha ideal para destravar seu backlog de baixa 
+						e média complexidade.
+					</SquadsTextSubTitle>
+					<SquadsTextDescription>
+						Nosso modelo <Bold>Social Impact as a Service</Bold> (SIaaS) 
+						possibilita a entrega de Squads estendidos com custo até 40% mais 
+						eficientes comparado aos integradores de tecnologia do mercado.
+					</SquadsTextDescription>
+
+					<SquadsTextBack>
+						<ImageSquadBack>
+							<ImageBack src={Back} />
+						</ImageSquadBack>
+
+						<BoxTextBack>
+							<BoxTextBackTitle>Backlog de produtos digitais</BoxTextBackTitle>
+							<BoxTextBackDescription>Entregas contínuas de design e desenvolvimento web e mobile.
+							</BoxTextBackDescription>
+						</BoxTextBack>
+					</SquadsTextBack>
+					
+
+					<SquadsTextCanais>
+						<ImageSquadCanais>
+							<ImageCanais src={Canais} />
+						</ImageSquadCanais>
+
+						<BoxTextCanais>
+							<BoxTextCanaisTitle>Canais digitais, responsivos e acessíveis</BoxTextCanaisTitle>
+							<BoxTextCanaisDescription>Sites, portais, e-commerces dinâmicos com foco nos princípios 
+								da acessibilidade, inclusão e adaptabilidade multitelas.
+							</BoxTextCanaisDescription>
+						</BoxTextCanais>
+					</SquadsTextCanais>
+
+					<SquadsTextMVPs>
+						<ImageSquadMVPs>
+							<ImageMVPs src={MVPs} />
+						</ImageSquadMVPs>
+						
+						<BoxTextMVPs>
+							<BoxTextMVPsTitle>MVPs ágeis e em escala</BoxTextMVPsTitle>
+							<BoxTextMVPsDescription>Descoberta, ideação e implementação de MVPs. Valide rapidamente
+								 a viabilidade e melhorias do seu projeto.
+							</BoxTextMVPsDescription>
+						</BoxTextMVPs>
+					</SquadsTextMVPs>
+
+				</SquadsText>
+			</Squads>
+			
+
 		</Container>
 	)
 }

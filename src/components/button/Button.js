@@ -36,6 +36,7 @@ function Button (props) {
         background={props.background}
         border={props.border}
         color={props.color}
+        backgroundHover={props.backgroundHover}
 			> 
       {props.children}
     </ContentButton>

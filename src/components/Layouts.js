@@ -17,7 +17,7 @@ const ContainerHeader = styled.div`
 
 `;
 const Main = styled.main`
-  min-height: 200vh;
+  min-height: 250vh;
 `;
 
 const Layouts = ({ isPage, children, home }) => {
