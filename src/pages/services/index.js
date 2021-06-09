@@ -1,22 +1,15 @@
 import React from "react";
 import styled from 'styled-components';
 import { graphql } from "gatsby";
-import './index.css';
+// import './index.css';
 
 //Components
-import Layouts from '../components/layout';
-import Cases from '../components/cases';
-import SocialImpact from '../components/socialImpact';
-import Squads from '../components/squads';
-import Header from '../components/header';
-
-//Imagens
-
+import Layouts from '../../components/layout';
+import Header from '../../components/services/header';
 
 // styles
 const Content = styled.div`
   width: 100%;
-
 `;
 
 export const query = graphql`
@@ -55,17 +48,14 @@ export const query = graphql`
   }
 `
 
-const Home = (props) => {
+const Services = (props) => {
   return (
-    <Layouts home>
+    <Layouts>
       <Content>
-        <Header/>
-        <Cases />
-        <SocialImpact />
-        <Squads />
+        <Header />
       </Content>
     </Layouts>
   )
 }
 
-export default Home;
+export default Services;

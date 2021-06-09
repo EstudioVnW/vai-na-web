@@ -8,16 +8,17 @@ const ContentButton = styled.button`
   font-weight: 600;
 	color: ${props => props.color || '#FED5B2'};
   background:  ${props => props.background || '#0F2B92'};
-  border: 1.75px solid ${props => props.border || '#00145D'};
+  border: 0.15rem solid ${props => props.border || '#00145D'};
   border-radius: 35px;
   text-align: center;
-
+  transition: all 0.25s ease-in-out;
 
 	:hover {
 		color: ${props => props.colorHover || '#00145D'};
 		background-color: ${props => props.backgroundHover || '#FED5B2'};
     border: none;
     box-shadow: 0px 0px 20px #0F2B9240;
+    height: 3.675rem;
   }
 
   @media (min-width: 2560px) {
@@ -28,7 +29,6 @@ const ContentButton = styled.button`
 `;
 
 function Button (props) {
-  console.log(props)
   return (
 			<ContentButton
         width={props.width}

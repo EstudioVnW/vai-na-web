@@ -13,9 +13,6 @@ import ImageIts from '../../images/images/192205155_822241138394982_118824679445
 import ImageSedimenta from '../../images/images/SedimentaJPM.svg';
 import ImageM4A from '../../images/images/m4a.png';
 
-
-
-
 const Cases = ({ home }) => {
 
 	return (
