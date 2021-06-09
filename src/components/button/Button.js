@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContentButton = styled.button`
-  width: 13.5rem;
+  width: ${props => props.width || '13.5rem'};
   height: 3.375rem;
   font-size: 1rem;
   font-weight: 600;
@@ -28,6 +28,7 @@ const ContentButton = styled.button`
 `;
 
 function Button (props) {
+  console.log(props)
   return (
 			<ContentButton
         width={props.width}

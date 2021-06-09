@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import styled from 'styled-components';
 
 //Components
-import Layouts from '../../components/Layouts';
+import Layouts from '../../components/layout';
 import ArticleBlog from '../../components/blog/articleBlog';
 
 // styles

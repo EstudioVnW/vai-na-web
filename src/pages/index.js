@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import { graphql } from "gatsby";
 import './index.css';
 
+
 //Components
-import Layouts from '../components/Layouts';
+import Layouts from '../components/layout';
+import Cases from '../components/cases';
+import SocialImpact from '../components/socialImpact';
+import Squads from '../components/squads';
 
 //Imagens
 
@@ -13,10 +17,12 @@ import Layouts from '../components/Layouts';
 
 const Content = styled.div`
   width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  padding: 0 4rem;
+
 `;
+
+// max-width: 1440px;
+// margin: auto;
+// padding: 0 4rem;
 
 export const query = graphql`
   query  {
@@ -58,7 +64,9 @@ const Home = (props) => {
   return (
     <Layouts home>
       <Content>
-        Olá eu sou a tela principal
+        <Cases />
+        <SocialImpact />
+        <Squads />
       </Content>
     </Layouts>
   )
