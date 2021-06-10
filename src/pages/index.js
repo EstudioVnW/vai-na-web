@@ -9,6 +9,7 @@ import Cases from '../components/cases';
 import SocialImpact from '../components/socialImpact';
 import Squads from '../components/squads';
 import Header from '../components/header';
+import Talents from '../components/talents';
 
 //Imagens
 
@@ -63,6 +64,7 @@ const Home = (props) => {
         <Cases />
         <SocialImpact />
         <Squads />
+        <Talents />
       </Content>
     </Layouts>
   )
