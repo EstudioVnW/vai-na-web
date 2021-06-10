@@ -6,7 +6,7 @@ export const Cases = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 4rem;
+	margin-top: 3rem;
 `;
 
 export const CasesImages = styled.div`

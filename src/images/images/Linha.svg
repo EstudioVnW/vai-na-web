@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="944" height="180" viewBox="0 0 944 180">
+  <defs>
+    <clipPath id="clip-Linha">
+      <rect width="944" height="180"/>
+    </clipPath>
+  </defs>
+  <g id="Linha" clip-path="url(#clip-Linha)">
+    <path id="Path_8430" data-name="Path 8430" d="M-1959.949,8608.462h396.928l24.592,67.689,18.563-67.689h403.916" transform="translate(2009.449 -8551.161)" fill="none" stroke="#ffac2d" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

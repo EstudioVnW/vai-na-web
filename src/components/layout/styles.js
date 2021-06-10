@@ -11,5 +11,5 @@ background: #00145D;
 
 `;
 export const Main = styled.main`
-  min-height: 50vh;
+  min-height: 400vh;
 `;

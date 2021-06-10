@@ -31,11 +31,7 @@ const Squads = ({ home }) => {
 						A escolha ideal para destravar seu backlog de baixa 
 						e média complexidade.
 					</S.SquadsTextSubTitle>
-					<S.SquadsTextDescription>
-						Nosso modelo <S.Bold>Social Impact as a Service</S.Bold> (SIaaS) 
-						possibilita a entrega de Squads estendidos com custo até 40% mais 
-						eficientes comparado aos integradores de tecnologia do mercado.
-					</S.SquadsTextDescription>
+					
 
 					<S.SquadsTextBack>
 						<S.ImageSquadBack>
@@ -77,6 +73,12 @@ const Squads = ({ home }) => {
 							</S.BoxTextMVPsDescription>
 						</S.BoxTextMVPs>
 					</S.SquadsTextMVPs>
+
+					<S.SquadsTextDescription>
+						Nosso modelo <S.Bold>Social Impact as a Service</S.Bold> (SIaaS) 
+						possibilita a entrega de Squads estendidos com custo até 40% mais 
+						eficientes comparado aos integradores de tecnologia do mercado.
+					</S.SquadsTextDescription>
 
 				</S.SquadsText>
 			</S.Squads>

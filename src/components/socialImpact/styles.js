@@ -4,49 +4,40 @@ import { Link } from "gatsby";
 
 
 export const SocialImpact = styled.div`
-
 background: rgb(15,43,146,0.07);
 margin-top: 5rem;
 display: flex;
-align-items: center;
-justify-content: center;
+flex-direction: column;
+
 `;
 export const SocialImpactText = styled.div`
-width: 30%;
-height: 27rem;
+width: 100%;
+margin-top: 4rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
 
 `;
 export const SocialImpactTextTitle = styled.h1`
-width: 50%;
-margin-left: 20%;
+margin-left: 5%;
 color: #00145D;
 `;
-export const SocialImpactTextSubTitle = styled.h2`
-width: 50%;
-margin-left: 20%;
-margin-top: 15px;
-color: #00145D;
-`;
+
 export const SocialImpactTextDescription = styled.p`
-width: 50%;
-margin-left: 20%;
+width: 57%;
+margin-left: 5%;
 margin-top: 15px;
 color: #272727;
 `;
 
 export const SocialImpactImage = styled.div`
-width: 70%;
-height: 27rem;
+width: 100%;
 display: flex;
-flex-direction: column;
 justify-content: center;
 
 `;
 export const SocialImpactImageInfo = styled.img`
-width: 90%;
+width: 70%;
 `;
 
 export const Bold = styled.span`

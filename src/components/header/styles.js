@@ -12,22 +12,22 @@ export const Header = styled.header`
 
  export const CardHome = styled.div`
  	position: absolute;
-	left: 5%; 
-	bottom: 30%;
+	left: 8%; 
+	bottom: 22%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background: #FED5B2;
-	width: 50rem;
-	height: 15rem;
+	width: 40rem;
+	height: 12rem;
 	border-radius: 15px;
 	z-index: 1;
  `;
 export const ImageEstudio = styled.img`
 	position: absolute;
-	right: 0;
-	bottom: -14%;
-	width: 55vw;
+	right: -1.2rem;
+	bottom: -12%;
+	width: 40rem;
 `;
 
 export const BoxCircle = styled.div`
