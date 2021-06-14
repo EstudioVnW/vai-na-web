@@ -21,10 +21,11 @@ const Conection = ({ home }) => {
                 <S.ConectionLineImage src={Line} />
                 <S.ConectionButton>
                     <ButtonHome
+                    width='15rem'
                     background='#0F2B92'
                     border='#0F2B92'
                     >
-                        Reserve seu Squad!
+                        Faça Parte do Movimento!
                     </ButtonHome>
                 </S.ConectionButton>
             </S.ConectionCenter>

@@ -14,7 +14,7 @@ const SocialImpact = ({ home }) => {
             <S.SocialImpactText>
                 <S.SocialImpactTextTitle>Impacto Social como Serviço</S.SocialImpactTextTitle>      
                 <S.SocialImpactTextDescription>Um modelo de ciclo fechado que entrega soluções
-                     web e mobile para as empresas ao mesmo tempo capacita e requalifica 
+                     web e mobile para as empresas ao mesmo tempo que capacita e requalifica 
                      profissionais para atender aos desafios da economia digital.
                 </S.SocialImpactTextDescription>
             </S.SocialImpactText>
