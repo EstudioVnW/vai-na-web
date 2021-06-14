@@ -14,12 +14,12 @@ const Talents = ({ home }) => {
             <S.TalentsText>
                 <S.TalentsTextTitle>Uma plataforma de formação de talentos digitais</S.TalentsTextTitle>
                 <S.TalentsTextDescription>Desde 2017, nossa Escola de Tecnologia forma 
-                    talentos de todo Brasil, oriundos das classes C, D e E em programação 
+                    talentos de todo Brasil, oriundos das classes C, D e E, em programação 
                     digital avançada e habilidades socioemocionais.
                 </S.TalentsTextDescription>
-                <S.TalentsTextDescription>Com o objetivo de 
-                    diminuir de forma inteligente a desigualdade social, qualificamos pessoas,
-                     geramos empregos dignos e reduzimos a lacuna de gênero no país.
+                <S.TalentsTextDescription>Com o objetivo de diminuir de 
+                    forma inteligente a desigualdade social, qualificamos pessoas, 
+                    geramos empregos dignos e reduzimos a lacuna de gênero no país.
                 </S.TalentsTextDescription>
                 <S.ButtonTalents>
 						<ButtonHome
