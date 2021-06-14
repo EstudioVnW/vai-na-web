@@ -5,16 +5,23 @@ export const Menu = styled.nav`
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
-	height: 7.25rem;
+	height: 7rem;
 	margin: 0 auto;
 	position: fixed;
 	top: 0;
 	z-index: 10;
+	background: #fff;
+	box-shadow: 0px 8px 40px #00000019;
+	padding: 0 7.25rem;
+
+	@media (max-width: 768px) {
+		height: 4.75rem;
+		padding: 1.25rem;
+	}
 `;
 
 export const Ul = styled.ul`
   display: flex;
-  padding-right: 7.45rem;
   align-items: center;
 
 	@media (max-width: 768px) {
@@ -22,9 +29,13 @@ export const Ul = styled.ul`
     flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
-		width: 100%;
-		height: 30%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
 		padding: 0;
+		background: #fff;
 	}
 `;
 
@@ -37,23 +48,29 @@ export const Li = styled.li`
 
 	@media (max-width: 768px) {
 		padding: 0;
+		margin: 0;
 	}
 	
 	a{
 		text-decoration: none;
 		font-size: 1.125rem;
 		color: #FDE7A9;
+		color: #0F2B92;
 		width: 1rem;
 		transition: all 0.15s ease-in;
 		padding: 0.25rem 0;
 	}
 	a:hover{
 		border-bottom: 0.15rem solid #FDE7A9;
+		border-bottom: 0.15rem solid #0F2B92;
 		font-weight: bold;
 	}
 `;
 
 export const Figure = styled.figure`
+	@media (max-width: 768px) {
+		z-index: 1;
+	}
 `;
 
 export const BoxImg = styled.span`
@@ -61,13 +78,17 @@ export const BoxImg = styled.span`
 
 	@media (max-width: 768px) {
 		display: initial;
+		z-index: 1;
 	}
 `;
 
 export const Image = styled.img`
 	display: flex; 
 	width: 7rem;
-	margin-left: 50px;
+
+	@media (max-width: 768px) {
+		width: 4rem;
+	}
 `;
 
 export const ImgMenuOpen = styled.img`

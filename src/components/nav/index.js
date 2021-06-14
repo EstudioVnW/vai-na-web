@@ -15,6 +15,14 @@ const Nav = (props) => {
 		setIsShow(!isShow)
 	}
 
+  let widthViewPort;
+
+  if (typeof document !== `undefined`) {
+    widthViewPort = document.documentElement.clientWidth
+  }
+
+	const isDesktop = widthViewPort > 769
+
 	return (
 		<S.Menu>
 			<S.Figure>
@@ -26,29 +34,31 @@ const Nav = (props) => {
 				<S.ImgMenuOpen isShow={isShow} src={IconMenu} alt="Icon menu hamburguer" onClick={handleMenu} />
 				<S.ImgMenuClosed isShow={isShow} src={IconClosed} alt="Icon closed menu" onClick={handleMenu} />
 			</S.BoxImg>
-			<S.Ul>
-				<S.Li>
-					<Link to={'/'} rel="noopener noreferrer">Sobre</Link>
-				</S.Li>
-				<S.Li>
-					<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
-				</S.Li>
-				<S.Li>
-					<Link rel="noopener noreferrer">Cases</Link>
-				</S.Li>
-				<S.Li>
-					<Link rel="noopener noreferrer">Escola</Link>
-				</S.Li>
-				<S.Li>
-					<Button 
-						border='#FFAC2D' 
-						color='#FFAC2D'
-						background='#0F2B92'
-					>
-						Reserve seu Squad
-					</Button>
-				</S.Li>
-			</S.Ul>
+			{(isDesktop || isShow) && (
+				<S.Ul>
+					<S.Li>
+						<Link to={'/'} rel="noopener noreferrer">Sobre</Link>
+					</S.Li>
+					<S.Li>
+						<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
+					</S.Li>
+					<S.Li>
+						<Link rel="noopener noreferrer">Cases</Link>
+					</S.Li>
+					<S.Li>
+						<Link rel="noopener noreferrer">Escola</Link>
+					</S.Li>
+					<S.Li>
+						<Button 
+							border='transparent' 
+							color='#FFAC2D'
+							background='#0F2B92'
+						>
+							Reserve seu Squad
+						</Button>
+					</S.Li>
+				</S.Ul>
+			)}
 		</S.Menu>
 	)
 }

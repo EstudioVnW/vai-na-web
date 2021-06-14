@@ -51,9 +51,9 @@ export const query = graphql`
 const Services = (props) => {
   return (
     <Layouts>
-      <Content>
+      {/* <Content> */}
         <Header />
-      </Content>
+      {/* </Content> */}
     </Layouts>
   )
 }
