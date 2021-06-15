@@ -1,15 +1,16 @@
 import React from "react";
-import styled from 'styled-components';
 import { graphql } from "gatsby";
-// import './index.css';
+import styled from 'styled-components';
 
 //Components
 import Layouts from '../../components/layout';
 import Header from '../../components/services/header';
+import Cards from '../../components/services/cards';
+import HowWeWork from '../../components/services/how-we-work';
 
-// styles
-const Content = styled.div`
-  width: 100%;
+const Container = styled.div`
+  overflow: hidden;
+  overflow-x: scroll;
 `;
 
 export const query = graphql`
@@ -51,9 +52,11 @@ export const query = graphql`
 const Services = (props) => {
   return (
     <Layouts>
-      {/* <Content> */}
-        <Header />
-      {/* </Content> */}
+      <Header />
+      <Container>
+        <Cards />
+      </Container>
+      <HowWeWork />
     </Layouts>
   )
 }

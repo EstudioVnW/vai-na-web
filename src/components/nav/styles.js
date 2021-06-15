@@ -40,10 +40,11 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
-	min-width: 5rem;
+	min-width: 7rem;
+	// background: green;
 	text-align: center;
 
-	margin-left: 1rem;
+	margin-left: 0.75rem;
 	cursor: pointer;
 
 	@media (max-width: 768px) {
@@ -53,7 +54,7 @@ export const Li = styled.li`
 	
 	a{
 		text-decoration: none;
-		font-size: 1.125rem;
+		font-size: 1.5rem;
 		color: #FDE7A9;
 		color: #0F2B92;
 		width: 1rem;
