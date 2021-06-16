@@ -10,6 +10,26 @@ export const Menu = styled.nav`
 	position: fixed;
 	top: 0;
 	z-index: 10;
+	
+	@media (min-width: 2560px) {
+		width: 95%;
+		margin-left: 5rem;
+		margin-top: 5rem;
+	}
+	@media (max-width: 1440px) {
+		width: 95%;
+		margin-top: 2rem;
+	}
+	@media (max-width: 1024px) {
+		width: 95%;
+		margin-top: 2rem;
+		justify-content: space-around;
+		
+	}
+	@media (max-width: 768px) {
+		margin-top: 0;		
+	}
+
 `;
 
 export const Ul = styled.ul`
@@ -17,9 +37,14 @@ export const Ul = styled.ul`
   padding-right: 7.45rem;
   align-items: center;
 
+  @media (min-width: 2560px) {
+	
+	}
+  
+
 	@media (max-width: 768px) {
 		display: flex;
-    flex-direction: column;
+    	flex-direction: column;
 		justify-content: space-evenly;
 		align-items: center;
 		width: 100%;
@@ -31,9 +56,14 @@ export const Ul = styled.ul`
 export const Li = styled.li`
 	min-width: 5rem;
 	text-align: center;
-
 	margin-left: 1rem;
 	cursor: pointer;
+
+	@media (min-width: 2560px) {
+		
+		
+	}
+	
 
 	@media (max-width: 768px) {
 		padding: 0;
@@ -68,6 +98,29 @@ export const Image = styled.img`
 	display: flex; 
 	width: 7rem;
 	margin-left: 50px;
+
+	@media (min-width: 2560px){
+		margin-left: 6rem;
+		width: 14rem;
+	}
+	@media (max-width: 1440px){
+		margin-left: 5rem;
+		width: 9rem;
+	}
+	@media (max-width: 1024px) {
+		margin-left: 3rem;
+		width: 7rem;
+		
+	}
+	@media (max-width: 768px) {
+		margin-left: 3rem;
+		width: 5rem;
+	
+		
+	}
+
+
+
 `;
 
 export const ImgMenuOpen = styled.img`
