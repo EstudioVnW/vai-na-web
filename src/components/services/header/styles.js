@@ -1,149 +1,153 @@
 import styled from 'styled-components';
 
-export const Header = styled.header`
-	margin-top: 7.25rem;
-	min-height: 100vh;
+export const HeaderContainer = styled.section`
+	// background: gray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 7rem);
 `;
 
-export const HeaderContainer = styled.section`
+export const HeaderWrap = styled.div`
+	// background: green;
 	position: relative;
+	width: 90%;
+	height: 100%;
 	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	padding: 2rem 6rem;
-	background: #f1f3f4;
+	justify-content: flex-end;
+	align-items: center;
 
-	@media (max-width: 430px) {
-		.HeaderContainer {
-			padding: 5rem 0rem;
-		}
+	@media (max-width: 790px) {
+		width: 95%;
 	}
 `;
 
 export const HImgBox = styled.figure`
+	// background: pink;
+	width: 65%;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	width: 70%;
 
-	@media (max-width: 430px) {
-		padding-top: 12rem;
-		align-items: center;
-		width: 100%;
+	@media (max-width: 790px) {
+		align-items: flex-start;
+		width: 95%;
 	}
 `;
 
 export const HImg = styled.img`
-	width: 100%;
+	// width: 100%;
 
-	@media (max-width: 430px) {
-		display: none;
-	}
+	// @media (max-width: 790px) {
+	// 	display: none;
+	// }
 `;
 
 export const HImgMobile = styled.img`
-	display: none;
-	padding-left: 6rem;
-	width: 106%;
+	// display: none;
+	// padding-left: 6rem;
+	// width: 106%;
 
-	@media (max-width: 430px) {
-		display: block;
-	}
+	// @media (max-width: 790px) {
+	// 	display: block;
+	// }
 `;
 
 export const HTextBox = styled.div`
-	padding: 3rem 1rem;
 	width: 65%;
-	font: 300 1.3em sans-serif;
+	font: 300 1.5rem sans-serif;
+	line-height: 2.063rem;
 
-	@media (max-width: 430px) {
-		margin-top: -4rem;
-		padding: 0 3rem 4rem 0;
-		width: 70%;
-		font-size: 2.2em;
-		line-height: 1.5;
+	@media (max-width: 790px) {
+		width: 85%;
+		font-size: 0.95rem;
+		line-height: 1.125rem;
+		margin-top: 2rem;
 	}
 `;
 
 export const HText = styled.p`
+
 `;
 
 export const HImgLogo = styled.img`
 	position: absolute;
+	top: -5%;
 	right: 0;
-	width: 16%;
 
-	@media (max-width: 430px) {
+	@media (max-width: 790px) {
 		position: static;
 		width: 22%;
+		margin: 0 auto;
 	}
 `;
 
-export const HDownArrow = styled.div`
-	width: 100%;
+export const HDownArrow = styled.figure`
+	position: absolute;
+	padding: 1rem 0;
+	bottom: 0;
+	left: 0;
 
-	@media (max-width: 430px) {
+	@media (max-width: 790px) {
 		display: none;
 	}
 `;
 
 export const HCard = styled.div`
-	position: absolute;
-	left: 6%;
-	bottom: 21%;
-	padding: 2rem 3rem 2rem 2rem;
-	width: 44%;
-	border-radius: 1vw;
 	background: #fed5b2;
+	width: 75%;
+	padding: 2.25rem;
+	position: absolute;
+	left: -54%;
+	bottom: 0;
+	border-radius: 10px;
 
-	@media (max-width: 438px) {
-		padding-right: 2em;
-	}
-
-	@media (max-width: 430px) {
-		top: 2%;
-		bottom: auto;
-		padding: 2.5rem 2rem 2rem 2.8rem;
-		width: 64%;
-		border-radius: 2.6vw;
+	@media (max-width: 790px) {
+		// 1.313
+		padding: 0.85rem 1rem;
+		width: 60%;
+		left: -5%;
+		bottom: 90%;
 	}
 `;
 
 export const HCardDetail = styled.div`
+	width: 100%;
 	display: flex;
-	padding-bottom: 1.6rem;
-	border-bottom: 0.3vw solid #ffac2d;
+	padding-bottom: 1rem;
+	border-bottom: 2px solid #ffac2d;
 
-	@media (max-width: 430px) {    
-		padding-bottom: 2rem;
-		border-bottom: 0.6vw solid #ffac2d;
+	@media (max-width: 790px) {
+		padding: 0;
+		padding-bottom: 0.55rem;
 	}
 `;
 
 export const HCardCircle = styled.div`
 	margin-right: 0.5rem;
-	width: 1.1em;
-	height: 1.1em;
+	margin-bottom: 0.75rem;
+	width: 1.25rem;
+	height: 1.25rem;
 	border-radius: 50%;
 	background: #ffac2d;
 
-	@media (max-width: 430px) {    
-		margin-right: 0.6rem;
-		width: 1.3em;
-		height: 1.3em;
+	@media (max-width: 790px) {
+		margin-bottom: 0;
+		width: 0.55rem;
+		height: 0.55rem;
 	}
 `;
 
 export const HCardText = styled.h1`
 	padding: 1.4rem 0.5rem 0.5rem;
-	font: 800 2.9em 'Usual', sans-serif;
+	font: 800 3.75rem 'Usual', sans-serif;
 	color: #00145d;
 	line-height: 1.2;
 
-	@media (max-width: 430px) {
-		padding: 1.4rem 0 0;
-		font-size: 3.5em;
+	@media (max-width: 790px) {
+		padding: 1rem 0 0;
+		font-size: 1rem;
 		line-height: 1.2;
 	}
 `;

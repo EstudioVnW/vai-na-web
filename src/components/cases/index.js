@@ -45,7 +45,7 @@ const Cases = ({ home }) => {
             </S.CasesImages>	
                 <S.ButtonCases>
                     <ButtonHome 
-                        width='20rem'
+                        width='28rem'
                         colorHover='#272727'
                         border='#FFAC2D' 
                         color='#FFFFFF'

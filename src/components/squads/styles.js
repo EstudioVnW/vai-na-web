@@ -7,12 +7,23 @@ width: 100%;
 margin-top: 7rem;
 display: flex;
 justify-content: space-evenly;
+
+@media (max-width: 768px) {
+   width: 100%;
+   flex-direction: column-reverse;
+   align-items: center;
+}
+
 `;
 export const SquadsImageButton = styled.div`
-width: 40%;
+width: 35%;
 display: flex;
 flex-direction: column;
 align-items: center;
+
+@media (max-width: 768px) {
+      width: 80%;
+   }
 `;
 
 export const SquadsImage = styled.div`
@@ -21,27 +32,28 @@ overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
+
+@media (max-width: 768px) {
+   width: 80%;
+}
 `;
 export const ButtonSquads = styled.div`
 z-index: 2;
-margin-top: -50px;
+
 `;
 
 export const ImageSquad = styled.img`
-width: 95%;
--webkit-transition: -webkit-transform .5s ease;
-   transition: transform .5s ease;
+width: 80%;
 
-:hover{
-    -webkit-transform: scale(1.1);
-       transform: scale(1.1);
-    
-}
 `;
 
 export const SquadsText = styled.div`
 margin-top: 1rem;
 width: 45%;
+@media (max-width: 768px) {
+   width: 80%;
+}
+
 `;
 export const SquadsTextTitle = styled.h1`
 color: #00145D;

@@ -29,7 +29,7 @@ color: #FF611E;
 `;
 
 export const TalentsTextDescription = styled.p`
-width: 75%;
+width: 65%;
 margin-left: 10%;
 margin-top: 20px;
 color: #272727;
@@ -44,14 +44,15 @@ justify-content: center;
 
 export const TalentsImage = styled.div`
 width: 30%;
-height: 27rem;
 display: flex;
 flex-direction: column;
 justify-content: center;
 
 `;
 export const TalentsImageInfo = styled.img`
-    width: 32rem;
+    width: 40rem;
+	position: relative;
+	left: 5rem;
 `;
 
 export const Bold = styled.span`

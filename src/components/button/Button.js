@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContentButton = styled.button`
-  width: ${props => props.width || '13.5rem'};
+  width: ${props => props.width || '18rem'};
   height: 3.375rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
 	color: ${props => props.color || '#FED5B2'};
   background:  ${props => props.background || '#0F2B92'};

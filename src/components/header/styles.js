@@ -15,14 +15,15 @@ export const Header = styled.header`
 		margin-left: 6rem;
 	}
 	@media (max-width: 768px) {
-		height: 85vh;		
+		height: 60vh;	
+		width: 100%;
+		margin-left: 0;	
+		border-radius: 0;
 	}
 
 `;
 
- export const CardHome = styled.div`
- 	
- 
+ export const CardHome = styled.div` 
  	position: absolute;
 	left: 7%; 
 	bottom: 22%;
@@ -50,13 +51,11 @@ export const Header = styled.header`
 		left: 3%;
 	}
 	@media (max-width: 768px) {
-		width: 18rem;
-		height: 12rem;
+		width: 28rem;
+		height: 15rem;
 		left: 13%;
-		bottom: 5%;
+		bottom: 10%;
 	}
-
-
  `;
 export const ImageEstudio = styled.img`
 	position: absolute;
@@ -85,9 +84,9 @@ export const ImageEstudio = styled.img`
 		bottom: -8%;
 	}
 	@media (max-width: 768px){
-		width: 25rem;
-		right: -0.75rem;
-		bottom: 22%;
+		width: 35rem;
+		right: -1.05rem;
+		bottom: 40%;
 	}
 `;
 
@@ -141,8 +140,6 @@ export const TextCircle = styled.p`
 	@media (max-width: 768px) {
 		margin-top: 10px;
 	}
-
-
 `;
 
 export const Line = styled.div`
@@ -161,7 +158,7 @@ export const Line = styled.div`
 		height: 2px;
 	}
 	@media (max-width: 768px) {
-		margin-top: 8px;
+		margin-top: 10px;
 	}
 
 `;
@@ -180,7 +177,7 @@ export const Title = styled.h1`
 	}
 	@media (max-width: 768px) {
 		margin-top: 10px;
-		font-size: 1.9rem;
+		font-size: 2.3rem;
 	}
 
 	
@@ -199,8 +196,9 @@ export const SubTitle = styled.p`
 		font-size: 1.2rem;
 	}
 	@media (max-width: 768px) {
-		font-size: 1.4rem;
+		font-size: 1.9rem;
 		margin-top: 5px;
+		font-weight: 500;
 	}
 `;
 
