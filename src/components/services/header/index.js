@@ -5,7 +5,7 @@ import downArrow from '../../../images/images/downArrow.svg';
 import estudioLogo from '../../../images/images/estudioLogo.svg';
 import headerImg from '../../../images/images/headerImg.png';
 
-const ServiceHeader = () =>(
+const ServiceHeader = () => (
     <S.HeaderContainer>
         <S.HeaderWrap>
             <S.HImgBox>
@@ -15,17 +15,17 @@ const ServiceHeader = () =>(
                     <S.HText><strong>Julia Gillard</strong></S.HText>
                 </S.HTextBox>
                 <S.HImgLogo src={estudioLogo} alt="Logo Estúdio Vai na Web"/>
-                <S.HCard>
-                    <S.HCardDetail>
-                        <S.HCardCircle></S.HCardCircle>
-                        <S.HCardCircle></S.HCardCircle>
-                        <S.HCardCircle></S.HCardCircle>
-                    </S.HCardDetail>
-                    <S.HCardText>Acelere suas entregas digitais com os squads do Vai na Web</S.HCardText>
-                </S.HCard>
             </S.HImgBox>
+            <S.HCard>
+                <S.HCardDetail>
+                    <S.HCardCircle></S.HCardCircle>
+                    <S.HCardCircle></S.HCardCircle>
+                    <S.HCardCircle></S.HCardCircle>
+                </S.HCardDetail>
+                <S.HCardText>Acelere suas entregas digitais com os squads do Vai na Web</S.HCardText>
+            </S.HCard>
             <S.HDownArrow>
-                <img src={downArrow} alt="Seta apontando para baixo"/>
+                <img src={downArrow} alt="Seta apontando para baixo" />
             </S.HDownArrow>
         </S.HeaderWrap>
     </S.HeaderContainer>
