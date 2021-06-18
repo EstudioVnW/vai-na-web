@@ -1,7 +1,14 @@
 import styled from 'styled-components';
 import cardsCircle from '../../../images/images/cardsCircle.svg';
 
-export const CardsContainer = styled.section`
+export const Container = styled.section`
+  @media (max-width: 790px) {
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+`;
+
+export const Cards = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 4rem 7.5rem;
@@ -9,10 +16,13 @@ export const CardsContainer = styled.section`
   background: #eff1f8;
   cursor: pointer;
 
+  @media (max-width: 1440px) {
+    padding: 2rem 2rem;
+  }
+
   @media (max-width: 790px) {
     padding: 2rem 1.45rem;
     width: 282vw;
-    height: auto;
   }
 `;
 
@@ -26,6 +36,10 @@ export const Card = styled.div`
   box-shadow: 0 4px 5px #d2d6e6;
   transition: 0.2s ease-in-out;
   will-transform: scale;
+
+  @media (max-width: 1440px) {
+    height: auto;
+  }
 
   @media (max-width: 790px) {
     height: auto;
@@ -103,8 +117,13 @@ export const IconBg = styled.figure`
   transition: 0.5s ease;
 
   @media (max-width: 790px) {
-    top: 9%;
+    width: 20%;
+    top: 5%;
     right: 6.5%;
+  }
+
+  @media (max-width: 460px) {
+    top: 9%;
   }
 `;
 

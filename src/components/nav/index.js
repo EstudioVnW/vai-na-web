@@ -31,36 +31,44 @@ const Nav = (props) => {
 				</Link>
 			</S.Figure>
 			<S.BoxImg>
-				<S.ImgMenuOpen isShow={isShow} src={IconMenu} alt="Icon menu hamburguer" onClick={handleMenu} />
-				<S.ImgMenuClosed isShow={isShow} src={IconClosed} alt="Icon closed menu" onClick={handleMenu} />
+				<S.ImgMenuOpen	
+					isShow={isShow}
+					src={IconMenu}
+					alt="Icon menu hamburguer"
+					onClick={handleMenu}
+				/>
+				<S.ImgMenuClosed
+					isShow={isShow}
+					src={IconClosed}
+					alt="Icon closed menu"
+					onClick={handleMenu}
+				/>
 			</S.BoxImg>
-			{(isDesktop || isShow) && (
-				<S.Wrap>
-					<S.Ul>
-						<S.Li>
-							<Link to={'/'} rel="noopener noreferrer">Sobre</Link>
-						</S.Li>
-						<S.Li>
-							<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
-						</S.Li>
-						<S.Li>
-							<Link rel="noopener noreferrer">Cases</Link>
-						</S.Li>
-						<S.Li>
-							<Link rel="noopener noreferrer">Escola</Link>
-						</S.Li>
-					</S.Ul>
-					{isDesktop && (
-						<Button
-							border='transparent'
-							color='#FFAC2D'
-							background='#0F2B92'
-						>
-							Reserve seu Squad
-						</Button>
-					)}
-				</S.Wrap>
-			)}
+			<S.Wrap isShow={isShow}>
+				<S.Ul>
+					<S.Li>
+						<Link to={'/'} rel="noopener noreferrer">Sobre</Link>
+					</S.Li>
+					<S.Li>
+						<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
+					</S.Li>
+					<S.Li>
+						<Link rel="noopener noreferrer">Cases</Link>
+					</S.Li>
+					<S.Li>
+						<Link rel="noopener noreferrer">Escola</Link>
+					</S.Li>
+				</S.Ul>
+				{isDesktop && (
+					<Button
+						border='transparent'
+						color='#FFAC2D'
+						background='#0F2B92'
+					>
+						Reserve seu Squad
+					</Button>
+				)}
+			</S.Wrap>
 		</S.Menu>
 	)
 }
