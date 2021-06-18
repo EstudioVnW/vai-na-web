@@ -14,17 +14,33 @@ export const DepositionsText = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 5rem;
+
+    @media (max-width: 768px) {
+		
+	}
 `;
 
 export const DepositionsTitle = styled.h1`
     color: #0F2B92;
 
+    @media (max-width: 768px) {
+		font-size: 3.5rem;
+        width: 80%;
+        text-align: center;
+	}
 `;
 
 export const DepositionsSubTitle = styled.h2`
     color: #272727;
     font-weight: 500;
     font-size: 1.2rem;
+    @media (max-width: 768px) {
+		font-size: 2rem;
+        width: 75%;
+        text-align: center;
+        margin-top: 25px;
+        font-weight: 600;
+	}
 `;
 
 

@@ -34,7 +34,8 @@ justify-content: center;
 align-items: center;
 
 @media (max-width: 768px) {
-   width: 80%;
+   width: 100%;
+   margin-top: 50px;
 }
 `;
 export const ButtonSquads = styled.div`
@@ -45,19 +46,26 @@ export const ButtonSquads = styled.div`
 export const ImageSquad = styled.img`
 width: 80%;
 
+@media (max-width: 768px) {
+   width: 100%;
+}
 `;
 
 export const SquadsText = styled.div`
 margin-top: 1rem;
 width: 45%;
 @media (max-width: 768px) {
-   width: 80%;
+   width: 85%;
 }
 
 `;
 export const SquadsTextTitle = styled.h1`
 color: #00145D;
 font-size: 1.8rem;
+
+@media (max-width: 768px) {
+   font-size: 3.5rem;
+}
 `;
 export const SquadsTextSubTitle = styled.h2`
 width: 70%;
@@ -65,12 +73,23 @@ margin-top: 5px;
 color: #272727;
 font-size: 1.2rem;
 font-weight: 500;
+
+@media (max-width: 768px) {
+   width: 100%;
+   font-size: 2rem;
+   font-weight: 600;
+}
 `;
 export const SquadsTextDescription = styled.p`
 width: 95%;
 margin-top: 25px;
 color: #272727;
 font-size: 1rem;
+
+@media (max-width: 768px) {
+   font-size: 2rem;
+   margin-top: 50px;
+}
 `;
 
 export const SquadsTextBack = styled.div`
@@ -78,12 +97,20 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 margin-top: 20px;
+
+@media (max-width: 768px) {
+   margin-top: 50px;
+}
 `;
 export const ImageSquadBack = styled.div`
 
 `;
 export const ImageBack = styled.img`
 width: 6rem;
+
+@media (max-width: 768px) {
+   width: 8rem;
+}
 `;
 export const BoxTextBack = styled.div`
 width: 70%;
@@ -92,11 +119,21 @@ margin-right: 2.5rem;
 export const BoxTextBackTitle = styled.h1`
 font-size: 1.2rem;
 color: #272727;
+
+@media (max-width: 768px) {
+   font-size: 2.5rem;
+}
 `;
 export const BoxTextBackDescription = styled.p`
 color: #272727;
 margin-top: 5px;
 font-size: 0.9rem;
+
+
+@media (max-width: 768px) {
+   font-size: 2rem;
+   
+}
 `;	
                 
                 
@@ -108,12 +145,20 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 margin-top: 20px;
+
+@media (max-width: 768px) {
+   margin-top: 50px;
+}
 `;
 export const ImageSquadCanais = styled.div`
 
 `;
 export const ImageCanais = styled.img`
 width: 6rem;
+
+@media (max-width: 768px) {
+   width: 8rem;
+}
 `;
 export const BoxTextCanais = styled.div`
 width: 70%;
@@ -122,11 +167,21 @@ margin-right: 2.5rem;
 export const BoxTextCanaisTitle = styled.h1`
 font-size: 1.2rem;
 color: #272727;
+
+
+@media (max-width: 768px) {
+   font-size: 2.5rem;
+}
 `;
 export const BoxTextCanaisDescription = styled.p`
 color: #272727;
 margin-top: 5px;
 font-size: 0.9rem;
+
+
+@media (max-width: 768px) {
+   font-size: 2rem;
+}
 `;	
                 
                 
@@ -138,12 +193,20 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 margin-top: 20px;
+
+@media (max-width: 768px) {
+   margin-top: 50px;
+}
 `;
 export const ImageSquadMVPs = styled.div`
 
 `;
 export const ImageMVPs = styled.img`
 width: 6rem;
+
+@media (max-width: 768px) {
+   width: 8rem;
+}
 `;
 export const BoxTextMVPs = styled.div`
 width: 70%;
@@ -152,11 +215,21 @@ margin-right: 2.5rem;
 export const BoxTextMVPsTitle = styled.h1`
 font-size: 1.2rem;
 color: #272727;
+
+
+@media (max-width: 768px) {
+   font-size: 2.5rem;
+}
 `;
 export const BoxTextMVPsDescription = styled.p`
 color: #272727;
 margin-top: 5px;
 font-size: 0.9rem;
+
+
+@media (max-width: 768px) {
+   font-size: 2rem;
+}
 `;			
 
 export const Bold = styled.span`
