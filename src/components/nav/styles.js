@@ -36,6 +36,7 @@ export const Wrap = styled.div`
 		justify-content: space-evenly;
 		align-items: center;
 		padding: 0;
+		display: ${props => props.isShow ? 'flex' : 'none'};
 	}
 `;
 
