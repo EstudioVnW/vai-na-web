@@ -33,7 +33,7 @@ justify-content: center;
 align-items: center;
 `;
 export const ConectionTitle = styled.h1`
-    width: 30%;
+    width: 100%;
     color: #00145D;
     text-align: center;
     font-weight: 500;
@@ -43,7 +43,7 @@ export const ConectionTitle = styled.h1`
 
 `;
 export const ConectionLineImage = styled.img`
-    width: 30%;
+    width: 100%;
     @media (max-width: 768px) {
         width: 90%;
     }

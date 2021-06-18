@@ -14,6 +14,14 @@ export const Cases = styled.div`
 
 `;
 
+export const BoxCasesImages = styled.div`
+	@media (max-width: 768px) {
+		overflow: hidden;
+		overflow-x: scroll;	
+	}
+`;
+
+
 export const CasesImages = styled.div`
 	width: 100%;
 	margin-top: 2rem;
@@ -22,10 +30,7 @@ export const CasesImages = styled.div`
 	flex-wrap: wrap;
 
 	@media (max-width: 768px) {
-		overflow-x: scroll;
-		overflow-y: hidden;
-		white-space: nowrap;
-		flex-wrap: nowrap;	
+		flex-wrap: nowrap;
 	}
 `;
 
@@ -46,17 +51,14 @@ export const BoxImage = styled.figure`
 		box-shadow: 0 0 30px #0F2B9233;
 	}
 	@media (max-width: 768px) {
-		box-shadow: 0 4px 5px #d2d6e6;
-		transition: 0.2s ease-in-out;
-		will-transform: scale;
-		height: auto;
-		border-radius: 5vw;
-		padding: 1.25rem 1.45rem;
 		filter: none;
-		box-shadow: 0;
+		width: 50rem;
+		height: auto;
+
 		&:hover{
-			transform: scale(1.025);
-		  }
+			box-shadow: none;
+		}
+
 	}
 `;
 export const ImageCases = styled.img`
@@ -64,7 +66,7 @@ export const ImageCases = styled.img`
 	max-height: 5rem;
 
 	@media (max-width: 768px) {
-
+		width: 100%;
 	}
 
 `;

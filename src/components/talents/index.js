@@ -5,6 +5,7 @@ import ButtonHome from '../button/Button';
 
 
 import AlunosTalents from '../../images/images/VNW2-15.png';
+import AlunosTalentsResponsive from '../../images/images/VNW2-15-Responsive.png';
 
 
 const Talents = ({ home }) => {
@@ -23,7 +24,7 @@ const Talents = ({ home }) => {
                 </S.TalentsTextDescription>
                 <S.ButtonTalents>
 						<ButtonHome
-                            width='10rem'
+                            width='15rem'
 							background='#FF611E'
                             border='#FFAC2D'
 						>
@@ -32,8 +33,12 @@ const Talents = ({ home }) => {
 				</S.ButtonTalents>
             </S.TalentsText>
             <S.TalentsImage>
-                <S.TalentsImageInfo src={AlunosTalents}/>
+                <S.TalentsImageInfo src={AlunosTalents} />
             </S.TalentsImage>
+
+            <S.TalentsImageInfoResponsive src={AlunosTalentsResponsive} />
+
+
         </S.Talents> 
     )
 }

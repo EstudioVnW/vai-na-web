@@ -19,6 +19,8 @@ const Squads = ({ home }) => {
 					<S.ButtonSquads>
 						<ButtonHome
 							backgroundHover='#FF611E'
+							color='#FED5B2'
+							
 						>
 							Reserve seu Squad!
 						</ButtonHome>

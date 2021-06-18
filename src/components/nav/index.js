@@ -9,17 +9,17 @@ import IconMenu from '../../images/images/menu_hamburger.svg';
 import IconClosed from '../../images/images/close.svg';
 
 const Nav = (props) => {
-  const [isShow, setIsShow] = useState(false);
+	const [isShow, setIsShow] = useState(false);
 
 	const handleMenu = () => {
 		setIsShow(!isShow)
 	}
 
-  let widthViewPort;
+	let widthViewPort;
 
-  if (typeof document !== `undefined`) {
-    widthViewPort = document.documentElement.clientWidth
-  }
+	if (typeof document !== `undefined`) {
+		widthViewPort = document.documentElement.clientWidth
+	}
 
 	const isDesktop = widthViewPort > 769
 
@@ -35,29 +35,31 @@ const Nav = (props) => {
 				<S.ImgMenuClosed isShow={isShow} src={IconClosed} alt="Icon closed menu" onClick={handleMenu} />
 			</S.BoxImg>
 			{(isDesktop || isShow) && (
-				<S.Ul>
-					<S.Li>
-						<Link to={'/'} rel="noopener noreferrer">Sobre</Link>
-					</S.Li>
-					<S.Li>
-						<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
-					</S.Li>
-					<S.Li>
-						<Link rel="noopener noreferrer">Cases</Link>
-					</S.Li>
-					<S.Li>
-						<Link rel="noopener noreferrer">Escola</Link>
-					</S.Li>
-					<S.Li>
-						<Button 
-							border='transparent' 
+				<S.Wrap>
+					<S.Ul>
+						<S.Li>
+							<Link to={'/'} rel="noopener noreferrer">Sobre</Link>
+						</S.Li>
+						<S.Li>
+							<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
+						</S.Li>
+						<S.Li>
+							<Link rel="noopener noreferrer">Cases</Link>
+						</S.Li>
+						<S.Li>
+							<Link rel="noopener noreferrer">Escola</Link>
+						</S.Li>
+					</S.Ul>
+					{isDesktop && (
+						<Button
+							border='transparent'
 							color='#FFAC2D'
 							background='#0F2B92'
 						>
 							Reserve seu Squad
 						</Button>
-					</S.Li>
-				</S.Ul>
+					)}
+				</S.Wrap>
 			)}
 		</S.Menu>
 	)

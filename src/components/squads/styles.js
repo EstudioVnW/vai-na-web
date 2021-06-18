@@ -38,7 +38,7 @@ align-items: center;
 }
 `;
 export const ButtonSquads = styled.div`
-z-index: 2;
+
 
 `;
 

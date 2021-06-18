@@ -11,7 +11,7 @@ const ContentButton = styled.button`
   border: 0.15rem solid ${props => props.border || '#00145D'};
   border-radius: 35px;
   text-align: center;
-  transition: all 0.25s ease-in-out;
+  transition: height 0.25s ease-in-out;
 
 	:hover {
 		color: ${props => props.colorHover || '#00145D'};
@@ -19,6 +19,7 @@ const ContentButton = styled.button`
     border: none;
     box-shadow: 0px 0px 20px #0F2B9240;
     height: 3.675rem;
+    // height: 4rem;
   }
 
   @media (min-width: 2560px) {
