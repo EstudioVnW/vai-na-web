@@ -50,6 +50,14 @@ export const BoxImage = styled.figure`
 		filter: none;
 		box-shadow: 0 0 30px #0F2B9233;
 	}
+
+	@media (min-width: 2560px) {
+		width: 25%;
+		height: 10rem;
+		margin: 0;
+		padding: 0.5rem;
+	}
+
 	@media (max-width: 768px) {
 		filter: none;
 		width: 50rem;
@@ -60,13 +68,19 @@ export const BoxImage = styled.figure`
 		}
 
 	}
+
 `;
 export const ImageCases = styled.img`
 	max-width: 100%;
 	max-height: 5rem;
 
+	@media (min-width: 2560px) {
+		max-height: 20rem;
+	}
+
 	@media (max-width: 768px) {
 		width: 100%;
+		
 	}
 
 `;

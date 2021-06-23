@@ -23,17 +23,56 @@ export const DepositionsText = styled.div`
 export const DepositionsTitle = styled.h1`
     color: #0F2B92;
 
+    @media (min-width: 2560px) {
+		font-size: 5rem;
+	}
+
+    @media (max-width: 1920px){
+        font-size: 3.5rem;
+    }
+
+    @media (max-width: 1440px) {
+		font-size: 2.8rem;
+	}
+
+    @media (max-width: 1360px){
+        font-size: 2.5rem;
+    }
+
     @media (max-width: 768px) {
 		font-size: 3.5rem;
         width: 80%;
         text-align: center;
 	}
+
+    @media (max-width: 360px) {
+        font-size: 2rem;
+    }
 `;
 
 export const DepositionsSubTitle = styled.h2`
     color: #272727;
     font-weight: 500;
     font-size: 1.2rem;
+
+    @media (min-width: 2560px) {
+		font-size: 3rem;
+	}
+
+    @media (max-width: 1920px){
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+    @media (max-width: 1440px) {
+		font-size: 1.5rem;
+	}
+
+    @media (max-width: 1360px){
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
     @media (max-width: 768px) {
 		font-size: 2rem;
         width: 75%;
@@ -41,6 +80,10 @@ export const DepositionsSubTitle = styled.h2`
         margin-top: 25px;
         font-weight: 600;
 	}
+
+    @media (max-width: 360px) {
+        font-size: 1rem;
+    }
 `;
 
 
@@ -65,10 +108,20 @@ export const DepositionsSlideVania = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 6rem;
+
+    @media (min-width: 2560px) {
+        width: 80rem;
+        height: 40rem;
+    }
 `;
 export const ImageVania = styled.img`
 width: 15.375rem;
 margin-top: -9rem;
+
+@media (min-width: 2560px) {
+    width: 20.375rem;
+    margin-top: -15rem;
+}
 
 `;
 export const DescriptionVania = styled.p`
@@ -77,6 +130,11 @@ export const DescriptionVania = styled.p`
     text-align: left;
     font-size: 1rem;
     line-height: 1.5rem;
+
+    @media (min-width: 2560px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 `;
 export const IdentificationVania = styled.div`
 width: 90%;
@@ -97,7 +155,9 @@ export const IdentificationVaniaCompany = styled.div`
 
 `;
 export const ImageVaniaCompany = styled.img`
-
+@media (min-width: 2560px) {
+    width: 20rem;
+}
 
 `;
 
@@ -116,10 +176,20 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 margin-top: 10rem;
+
+@media (min-width: 2560px) {
+    width: 80rem;
+    height: 40rem;
+}
 `;
 export const ImagePatricia = styled.img`
     width: 14rem;
     margin-top: -8rem;
+
+    @media (min-width: 2560px) {
+        width: 19rem;
+        margin-top: -10rem;
+    }
 
 `;
 export const DescriptionPatricia = styled.p`
@@ -128,6 +198,11 @@ export const DescriptionPatricia = styled.p`
     text-align: left;
     font-size: 1rem;
     line-height: 1.5rem;
+
+    @media (min-width: 2560px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 
 `;
 export const IdentificationPatricia = styled.div`
@@ -148,7 +223,10 @@ export const IdentificationPatriciaCompany = styled.div`
 
 `;
 export const ImagePatriciaCompany = styled.img`
-
+   
+@media (min-width: 2560px) {
+        width: 20rem;
+    }
 
 `;
 
@@ -166,11 +244,20 @@ flex-direction: column;
 align-items: center; 
 justify-content: center;
 margin-top: 10rem;
+
+@media (min-width: 2560px) {
+    width: 80rem;
+    height: 40rem;
+}
 `;
 export const ImageElson = styled.img`
     width: 15.375rem;
     margin-top: -8rem;
 
+    @media (min-width: 2560px) {
+        width: 20.375rem;
+        margin-top: -13rem;
+    }
 `;
 export const DescriptionElson = styled.p`
     color: #272727;
@@ -178,6 +265,11 @@ export const DescriptionElson = styled.p`
     text-align: left;
     font-size: 1rem;
     line-height: 1.5rem;
+
+    @media (min-width: 2560px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
 
 `;
 export const IdentificationElson = styled.div`
@@ -198,7 +290,9 @@ export const IdentificationElsonCompany = styled.div`
 
 `;
 export const ImageElsonCompany = styled.img`
-
+@media (min-width: 2560px) {
+    width: 20rem;
+}
 
 `;
 
@@ -208,9 +302,28 @@ export const ImageElsonCompany = styled.img`
 export const Name = styled.h1`
 color: #FF611E;
 
+
+@media (min-width: 2560px) {
+    font-size: 4rem;
+    
+}
+
+@media (max-width: 768px) {
+    font-size: 2rem;
+}
+
 `;
 export const Office = styled.p`
 color: #00145D;
+
+@media (min-width: 2560px) {
+    font-size: 2rem;
+}
+
+
+@media (max-width: 768px) {
+    font-size: 1rem;
+}
 
 `;
 

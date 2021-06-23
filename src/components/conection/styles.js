@@ -37,9 +37,26 @@ export const ConectionTitle = styled.h1`
     color: #00145D;
     text-align: center;
     font-weight: 500;
+
+    @media (min-width: 2560px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 1920px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 1360px){
+      font-size: 2rem;
+    }
+
     @media (max-width: 768px) {
 		width: 90%;
 	}
+
+  @media (max-width: 360px) {
+    font-size: 1.2rem;
+  }
 
 `;
 export const ConectionLineImage = styled.img`
