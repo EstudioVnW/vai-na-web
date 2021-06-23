@@ -8,6 +8,8 @@ import logo from '../../images/icons/logo-VNW.svg';
 import IconMenu from '../../images/images/menu_hamburger.svg';
 import IconClosed from '../../images/images/close.svg';
 
+import { navigate } from 'gatsby';
+
 const Nav = (props) => {
 	const [isShow, setIsShow] = useState(false);
 
@@ -22,6 +24,10 @@ const Nav = (props) => {
 	}
 
 	const isDesktop = widthViewPort > 769
+
+	const redirectToConcact = () => {
+		navigate('/contact/');
+	}
 
 	return (
 		<S.Menu>
@@ -64,6 +70,7 @@ const Nav = (props) => {
 						border='transparent'
 						color='#FFAC2D'
 						background='#0F2B92'
+						funcAction={redirectToConcact}
 					>
 						Reserve seu Squad
 					</Button>
