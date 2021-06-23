@@ -4,18 +4,22 @@ import { graphql } from "gatsby";
 import './index.css';
 
 //Components
-import Layouts from '../components/Layouts';
+import Layouts from '../components/layout';
+import Cases from '../components/cases';
+import SocialImpact from '../components/socialImpact';
+import Squads from '../components/squads';
+import Header from '../components/header';
+import Talents from '../components/talents';
+import Depositions from '../components/ depositions';
+import Conection from '../components/conection';
 
 //Imagens
 
 
 // styles
-
 const Content = styled.div`
   width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  padding: 0 4rem;
+
 `;
 
 export const query = graphql`
@@ -58,7 +62,13 @@ const Home = (props) => {
   return (
     <Layouts home>
       <Content>
-        Olá eu sou a tela principal
+        <Header/>
+        <Cases />
+        <SocialImpact />
+        <Squads />
+        <Talents />
+        <Depositions />
+        <Conection />
       </Content>
     </Layouts>
   )

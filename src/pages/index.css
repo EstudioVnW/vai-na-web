@@ -66,11 +66,27 @@
   box-sizing: border-box;
 }
 
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
 html {
   font-size: 16px;
   font-family: "usual", sans-serif;
   overflow-x: hidden;
 }
+
+/* html {
+    font-size: 16px;
+} */
+
+/* @media (min-width: 200px) {
+  html {
+    font-size: clamp(6px, 1vw, 24px);
+  }
+} */
 
 button {
   background: none;
@@ -81,4 +97,8 @@ button {
 
 li {
   list-style: none;
-} 
+}
+
+img {
+  max-width: 100%;
+}
