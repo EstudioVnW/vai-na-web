@@ -23,10 +23,16 @@ const ContentButton = styled.button`
   }
 
   @media (min-width: 2560px) {
-    width: 320px;
-    height: 4.375rem;
-    font-size: 1.5rem;
+    width: 35rem;
+    height: 4.5rem;
+    font-size: 2rem;
   }  
+
+  @media (max-width: 360px) {
+    font-size: 1rem;
+		width: 17rem;
+		height: 4rem;
+	}
 `;
 
 function Button (props) {

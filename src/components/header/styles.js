@@ -12,13 +12,30 @@ export const Header = styled.header`
 	border-radius: 0 0 0 20px;
 	
 	@media (min-width: 2560px){
+		height: 55vh;
 		margin-left: 6rem;
 	}
+	@media (max-width: 1920px){
+		height: 50vh;
+	}
+	@media (max-width: 1440px){
+		height: 60vh;
+	}
+
+	@media (max-width: 1360px){
+		height: 68vh;
+	}
+
 	@media (max-width: 768px) {
 		height: 60vh;	
 		width: 100%;
 		margin-left: 0;	
 		border-radius: 0;
+	}
+
+	@media (max-width: 360px) {
+		width: 100%;
+		height: 65vh;
 	}
 
 `;
@@ -40,11 +57,20 @@ export const Header = styled.header`
 		width: 62rem;
 		height: 18rem;
 		left: 13%;
+		bottom: 27%;
+	}
+	@media (max-width: 1920px){
+		left: 28%;
 	}
 	@media (max-width: 1440px){
 		left: 7%;
-		bottom: 20%;
+		bottom: 33%;
 	}
+
+	@media (max-width: 1360px){
+		left: 2%;
+	}
+
 	@media (max-width: 1024px){
 		width: 28rem;
 		height: 10rem;
@@ -56,6 +82,13 @@ export const Header = styled.header`
 		left: 13%;
 		bottom: 10%;
 	}
+	@media (max-width: 360px) {
+		width: 17rem;
+		height: 12rem;
+		left: 5%;
+		bottom: 8%;
+	}
+	
  `;
 export const ImageEstudio = styled.img`
 	position: absolute;
@@ -69,15 +102,19 @@ export const ImageEstudio = styled.img`
 		bottom: -12%;
 		width: 90rem;
 	}
+	@media (max-width: 1920px){
+		right: -1.54rem;
+	}
+	@media (max-width: 1440px){
+		right: -1.5rem;
+		bottom: -10%;
+	}
 
-	@media (max-width: 1440px){
+	@media (max-width: 1360px){
 		right: -1.5rem;
 		bottom: -10%;
 	}
-	@media (max-width: 1440px){
-		right: -1.5rem;
-		bottom: -10%;
-	}
+
 	@media (max-width: 1024px){
 		width: 40rem;
 		right: -1.2rem;
@@ -87,6 +124,11 @@ export const ImageEstudio = styled.img`
 		width: 35rem;
 		right: -1.05rem;
 		bottom: 40%;
+	}
+	@media (max-width: 360px) {
+		width: 18rem;
+		bottom: 45%;
+		right: -0.55rem;
 	}
 `;
 
@@ -179,6 +221,9 @@ export const Title = styled.h1`
 		margin-top: 10px;
 		font-size: 2.3rem;
 	}
+	@media (max-width: 360px) {
+		font-size: 1.7rem;
+	}
 
 	
 `;
@@ -199,6 +244,9 @@ export const SubTitle = styled.p`
 		font-size: 1.9rem;
 		margin-top: 5px;
 		font-weight: 500;
+	}
+	@media (max-width: 360px) {
+		font-size: 1.2rem;
 	}
 `;
 

@@ -4,6 +4,7 @@ import * as S from './styles';
 
 
 import Infografico from '../../images/images/SIaaSDesktop.png';
+import InfograficoResponsive from '../../images/images/Group11422.png';
 
 
 
@@ -21,6 +22,11 @@ const SocialImpact = ({ home }) => {
             <S.SocialImpactImage>
                 <S.SocialImpactImageInfo src={Infografico}/>
             </S.SocialImpactImage>
+            <S.SocialImpactImageResponsive>
+                <S.SocialImpactImageInfoResponsive src={InfograficoResponsive} />
+            </S.SocialImpactImageResponsive>
+
+            
         </S.SocialImpact> 
     )
 }
