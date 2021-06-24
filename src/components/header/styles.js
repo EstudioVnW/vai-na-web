@@ -27,7 +27,7 @@ export const Header = styled.header`
 	}
 
 	@media (max-width: 768px) {
-		height: 60vh;	
+		height: 40rem;	
 		width: 100%;
 		margin-left: 0;	
 		border-radius: 0;

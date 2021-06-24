@@ -10,7 +10,7 @@ display: flex;
 flex-direction: column;
 
 @media (max-width: 768px) {
-	height: 80rem;
+	height: 85rem;
 
 }
 
