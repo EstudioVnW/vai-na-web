@@ -11,6 +11,7 @@ const Squads = () => (
         <strong> inspirar, equipar e educar mais pessoas </strong>
         para atender aos desafios da economia digital.
       </S.SquadsText>
+      
       <S.SquadsBox>
         <S.SquadsImg src={squadsImg} alt='Alunos do Vai na Web' />
         <S.SquadsIcon>
