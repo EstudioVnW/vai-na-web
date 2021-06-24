@@ -383,6 +383,11 @@ export const DescriptionResponsive = styled.p`
     line-height: 1.8rem;    
     width: 80%;    
 }
+
+@media (max-width: 360px) {
+    font-size: 0.8rem;
+
+}
 `;
 export const IdentificationResponsive = styled.div`
     @media (max-width: 768px) {
@@ -398,10 +403,18 @@ export const ImagePeopleResponsive = styled.img`
 @media (max-width: 768px) {
     width: 9rem;  
 }
+@media (max-width: 360px) {
+    width: 8rem;
+
+}
 `;
 export const ImagePeopleResponsivePatricia = styled.img`
 @media (max-width: 768px) {
     width: 8rem;  
+}
+@media (max-width: 360px) {
+    width: 7rem;
+
 }
 `;
 
@@ -420,6 +433,10 @@ export const NameResponsive = styled.h1`
     text-align: left;
     font-size: 1.5rem;
 }
+@media (max-width: 360px) {
+    font-size: 1.2rem;
+
+}
 
 `;
 export const OfficeResponsive = styled.p`
@@ -428,11 +445,19 @@ export const OfficeResponsive = styled.p`
     text-align: left;
     font-size: 0.8rem;
 }
+@media (max-width: 360px) {
+    font-size: 0.6rem;
+
+}
 `;
 export const ImageCompanyResponsive = styled.img`
 @media (max-width: 768px) {
     width: 12rem; 
     margin-top: 1rem; 
+}
+@media (max-width: 360px) {
+    margin-top: 0.5rem;
+
 }
 `;
 
