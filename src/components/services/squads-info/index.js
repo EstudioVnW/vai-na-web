@@ -42,11 +42,11 @@ const SquadsInfo = () => (
           <S.SquadsBox>
             <S.SquadsPerson>
               <S.Line src={line} alt=""/>
-                Desenvolvedor Back-End
+                 Product Owner
               </S.SquadsPerson>
             <S.SquadsPerson>
               <S.Line src={line} alt=""/>
-              Product Owner
+              Desenvolvedor Back-End
             </S.SquadsPerson>
           </S.SquadsBox>
           <S.SquadsBox>

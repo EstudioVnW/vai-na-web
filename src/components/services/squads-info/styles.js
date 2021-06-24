@@ -6,8 +6,19 @@ export const SquadsContainer = styled.section`
   margin: 0 auto;
   padding: 6rem 2rem;
 
-  display: flex;
-  flex-direction: column;
+  @media (max-width: 1366px) {
+    max-width: 85vw;
+    padding: 0.5rem 3rem;
+
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 100vw;
+    display-flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 10rem;
+  }
 
   @media (max-width: 790px) {
     padding: 4rem 0;
@@ -18,6 +29,14 @@ export const SquadsContainer = styled.section`
 export const SquadsContent = styled.figure`
   margin-top: 1rem;
   position: relative;
+
+  @media (max-width: 1024px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
 `;
 
 export const SquadsTitle = styled.h2`
@@ -27,10 +46,16 @@ export const SquadsTitle = styled.h2`
   padding: 0 1.55rem;
   margin-bottom: 1rem;
 
+  @media (max-width: 1366px) {
+    font-size: 2rem;
+    padding: 0 1rem;
+    line-height: 2.625rem;
+  }
+
   @media(max-width: 1024px) {
     width: 87.3vw;
-    font-size: 1.688rem;
-    line-height: 2.125rem;
+    font-size: 1.980rem;
+    line-height: 2.5rem;
   }
 `;
 
@@ -40,14 +65,24 @@ export const SquadsText = styled.p`
   line-height: 2.438rem;
   margin: 0;
 
+  @media(max-width: 1366px) {
+    font-size: 1.150rem;
+    line-height: 2rem;
+    padding: 0 1rem;
+  }
+
   @media(max-width: 1024px) {
-    font-size: 1rem;
-    line-height: 1.563rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
   }
 `;
 
 export const SquadsImg = styled.img`
   width: 100%;
+  
+  @media(max-width: 1366px) {
+    width: 100%;
+  }
 
   @media(max-width: 1024px) {
     display: none;
@@ -60,6 +95,8 @@ export const SquadsImgMobile = styled.img`
 
   @media(max-width: 1024px) {
     display: flex;
+    width: 75%;
+    padding-top: 2rem;
   }
 `;
 
@@ -69,11 +106,12 @@ export const Squads = styled.div`
   padding: 2rem 3rem;
   text-align: center;
 
-  @media(max-width: 768px) {
-    padding: 2rem 0;
-  }
   @media(max-width: 1024px) {
     flex-wrap: wrap;
+  }
+
+  @media(max-width: 768px) {
+    padding: 2rem 0;
   }
 `;
 
@@ -82,6 +120,15 @@ export const SquadsBox = styled.div`
   margin: 0.25rem;
   display: flex;
   justify-content: center;
+  
+  @media(max-width: 1366px) {
+    margin: 0;
+  }
+
+  @media(max-width: 1024px) {
+    margin: 0;
+ 
+  }
 `
 
 export const SquadsPerson = styled.p`
@@ -95,8 +142,33 @@ export const SquadsPerson = styled.p`
     bottom: 0%;
   }
 
+  @media(max-width: 1366px) {
+    font-size: 1.2rem;
+    top: -30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 2%;
+
+    &:nth-child(2) {
+      height: 8rem;
+      top: 0;
+    }
+  }
+
+  @media(max-width: 1120px) {
+    font-size: 1rem;
+    top: -30%;
+    width: 45%;
+
+    &:nth-child(2) {
+      height: 5rem;
+      top: 0;
+    }
+  }
+
   @media(max-width: 1024px) {
-    font-size: 1.063rem;
+    font-size: 1.1rem;
     line-height: 1.375rem;
     margin: 0.45rem;
     width: 40%;
@@ -114,6 +186,18 @@ export const Line = styled.img`
   left: 50%;
   transform: translate(-50% , -50%);
   height: 21rem;
+  
+  @media(max-width: 1366px) {
+    width: 30px;
+    height: 200px;
+    bottom: -10%;
+  }
+
+  @media(max-width: 1120px) {
+    width: 30px;
+    height: 150px;
+    bottom: -10%;
+  }
 
   @media(max-width: 1024px) {
     display: none;
