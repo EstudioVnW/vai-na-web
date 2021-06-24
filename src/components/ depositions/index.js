@@ -105,24 +105,6 @@ const Depositions = ({ home }) => {
                         </S.IdentificationResponsive>
                     </S.BoxSlide>
 
-                    {/* PATRICIA */}
-                    <S.BoxSlide>
-                        <S.DescriptionResponsive>
-                            “Even with a different language and time zone, 
-                            the young people of Vai na Web <S.Bold>helped us to design and develop a 
-                            brand new website to serve our customers.</S.Bold> Thank you Vai na Web
-                            for your commitment, dedication and creativity.”
-                        </S.DescriptionResponsive>
-                        <S.IdentificationResponsive>
-                            <S.ImagePeopleResponsivePatricia src={Patricia} />
-                            <S.TextIdentificationResponsive>    
-                                <S.NameResponsive>Patrícia Zaundi</S.NameResponsive>
-                                <S.OfficeResponsive>Diretora Executiva</S.OfficeResponsive>
-                                <S.ImageCompanyResponsive src={PatriciaCompany} />
-                            </S.TextIdentificationResponsive>
-                        </S.IdentificationResponsive>
-                    </S.BoxSlide>
-
                     {/* ELSON */}
                     <S.BoxSlide>
                         <S.DescriptionResponsive>
@@ -138,6 +120,24 @@ const Depositions = ({ home }) => {
                                 <S.NameResponsive>Elson Cordeiro</S.NameResponsive>
                                 <S.OfficeResponsive>Diretor de Operações e Serviços</S.OfficeResponsive>
                                 <S.ImageCompanyResponsive src={ElsonCompany} />
+                            </S.TextIdentificationResponsive>
+                        </S.IdentificationResponsive>
+                    </S.BoxSlide>
+
+                    {/* PATRICIA */}
+                    <S.BoxSlide>
+                        <S.DescriptionResponsive>
+                            “Even with a different language and time zone, 
+                            the young people of Vai na Web <S.Bold>helped us to design and develop a 
+                            brand new website to serve our customers.</S.Bold> Thank you Vai na Web
+                            for your commitment, dedication and creativity.”
+                        </S.DescriptionResponsive>
+                        <S.IdentificationResponsive>
+                            <S.ImagePeopleResponsivePatricia src={Patricia} />
+                            <S.TextIdentificationResponsive>    
+                                <S.NameResponsive>Patrícia Zaundi</S.NameResponsive>
+                                <S.OfficeResponsive>Diretora Executiva</S.OfficeResponsive>
+                                <S.ImageCompanyResponsive src={PatriciaCompany} />
                             </S.TextIdentificationResponsive>
                         </S.IdentificationResponsive>
                     </S.BoxSlide>

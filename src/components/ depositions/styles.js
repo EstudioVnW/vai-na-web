@@ -336,10 +336,7 @@ export const DepositionsSlidesResponsive = styled.div`
     display: none;
 
     @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
+        display: flex;  
     }
     
 `;
@@ -347,8 +344,10 @@ export const DepositionsSlidesResponsive = styled.div`
 export const AnimationSlide = styled.div`
 
     @media (max-width: 768px) {
-     
+        overflow: hidden;
+        overflow-x: scroll;
     }
+    
     
 `;
 
@@ -365,6 +364,7 @@ export const BoxSlide = styled.div`
         flex-direction: column;
         align-items: center;  
         justify-content: space-around; 
+
          
 }
 
@@ -386,6 +386,7 @@ export const DescriptionResponsive = styled.p`
 
 @media (max-width: 360px) {
     font-size: 0.8rem;
+    line-height: 1.2rem; 
 
 }
 `;
