@@ -92,6 +92,10 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin-top: 8rem;
+
+@media (max-width: 768px) {
+    display: none;
+}
 `;
 
 
@@ -296,9 +300,6 @@ export const ImageElsonCompany = styled.img`
 
 `;
 
-
-
-
 export const Name = styled.h1`
 color: #FF611E;
 
@@ -327,10 +328,117 @@ color: #00145D;
 
 `;
 
+//RESPOSIVO
+
+
+export const DepositionsSlidesResponsive = styled.div`
+    
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+`;
+
+export const AnimationSlide = styled.div`
+
+    @media (max-width: 768px) {
+     
+    }
+    
+`;
+
+export const BoxSlide = styled.div`
+
+    @media (max-width: 768px) {
+        width: 25rem;
+        height: 28rem;
+        margin-top: 50px;
+        border: 2px solid #00145D;   
+        border-radius: 20px;
+        box-shadow: 0px 0px 22px #00000029;   
+        display: flex;
+        flex-direction: column;
+        align-items: center;  
+        justify-content: space-around; 
+         
+}
+
+    @media (max-width: 360px) {
+        width: 20rem;
+        height: 22rem;
+
+    }
+`;
+
+export const DescriptionResponsive = styled.p`
+
+@media (max-width: 768px) {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.8rem;    
+    width: 80%;    
+}
+`;
+export const IdentificationResponsive = styled.div`
+    @media (max-width: 768px) {
+        display: flex;  
+        border-top: 2px solid #FED5B2;
+        width: 90%;
+        height: 35%;
+        align-items: center;
+        justify-content: center; 
+    }
+`;
+export const ImagePeopleResponsive = styled.img`
+@media (max-width: 768px) {
+    width: 9rem;  
+}
+`;
+export const ImagePeopleResponsivePatricia = styled.img`
+@media (max-width: 768px) {
+    width: 8rem;  
+}
+`;
+
+export const TextIdentificationResponsive = styled.div`
+
+@media (max-width: 768px) {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+`;
+
+export const NameResponsive = styled.h1`
+@media (max-width: 768px) {
+    color: #FF611E;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+`;
+export const OfficeResponsive = styled.p`
+@media (max-width: 768px) {
+    color: #00145D;
+    text-align: left;
+    font-size: 0.8rem;
+}
+`;
+export const ImageCompanyResponsive = styled.img`
+@media (max-width: 768px) {
+    width: 12rem; 
+    margin-top: 1rem; 
+}
+`;
+
 export const Bold = styled.span`
     font-weight: 600;
 `;
-
 
 export const StyledLink = styled(Link)`
 	color: #0F2B92;
