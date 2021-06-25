@@ -17,7 +17,12 @@ export const Cards = styled.div`
   cursor: pointer;
 
   @media (max-width: 1440px) {
-    padding: 2rem 2rem;
+    padding: 3rem 2rem;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 2rem 1rem;
   }
 
   @media (max-width: 790px) {
@@ -37,8 +42,19 @@ export const Card = styled.div`
   transition: 0.2s ease-in-out;
   will-transform: scale;
 
+  
   @media (max-width: 1440px) {
     height: auto;
+  }
+
+  @media (max-width: 1366px) {
+    width: 30%; 
+    padding: 1.5rem 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: 32%; 
+    padding: 1.5rem 1.5rem;
   }
 
   @media (max-width: 790px) {
@@ -59,6 +75,10 @@ export const CardDetail = styled.div`
   margin-bottom: 3rem;
   border-bottom: 0.2vw solid #0f2b92;
 
+  @media (max-width: 1366px) {
+    margin-bottom: 1.8rem;
+  }
+
   @media (max-width: 790px) {
     padding-bottom: 1rem;
     border-bottom-width: 1vw;
@@ -73,6 +93,12 @@ export const CardCircle = styled.div`
   border-radius: 50%;
   background: #00145d;
 
+  @media (max-width: 1366px) {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+
   @media (max-width: 790px) {
     width: 1.2em;
     height: 1.2em;
@@ -85,6 +111,18 @@ export const CardText = styled.div`
   line-height: 2.188rem;
   transition: 0.5s ease;
 
+  @media (max-width: 1366px) {
+   font-size: 1.240rem; 
+   line-height: 1.8rem;
+   padding: 1.6rem 0;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 1.220rem; 
+    line-height: 2rem;
+    padding: 1.3rem 0;
+   }
+
   @media (max-width: 790px) {
     font-size: 0.875rem;
     line-height: 1.313rem;
@@ -95,6 +133,15 @@ export const CardText = styled.div`
 export const CardTitle = styled.h3`
   font: 800 2.188rem 'Usual', sans-serif;
   line-height: 2.938rem;
+
+  @media (max-width: 1366px) {
+    font-size: 1.6rem; 
+    line-height: 2rem;
+   }
+
+   @media (max-width: 1024px) {
+    font-size: 1.3rem; 
+   }
 
   @media (max-width: 790px) {
     font: 800 1.188rem 'Usual', sans-serif;
@@ -115,6 +162,18 @@ export const IconBg = styled.figure`
   background-position: top;
   background-size: 94%;
   transition: 0.5s ease;
+
+  @media (max-width: 1366px) {
+    width: 20%;
+    top: 10%;
+    right: 6.5%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 30%;
+    top: 6%;
+    right: 6.5%;
+  }
 
   @media (max-width: 790px) {
     width: 20%;

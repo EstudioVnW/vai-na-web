@@ -13,6 +13,9 @@ justify-content: space-evenly;
    flex-direction: column-reverse;
    align-items: center;
 }
+@media (max-width: 360px) {
+	margin-top: 4rem;
+}
 
 `;
 export const SquadsImageButton = styled.div`
@@ -36,6 +39,10 @@ align-items: center;
 @media (max-width: 768px) {
       width: 80%;
    }
+   @media (max-width: 360px) {
+      width: 100%;
+   }
+   
 `;
 
 export const SquadsImage = styled.div`
@@ -65,6 +72,10 @@ align-items: center;
    width: 100%;
    margin-top: 50px;
 }
+@media (max-width: 360px) {
+	width: 100%;
+}
+
 `;
 export const ButtonSquads = styled.div`
 
@@ -107,6 +118,10 @@ width: 45%;
 @media (max-width: 768px) {
    width: 85%;
 }
+@media (max-width: 360px) {
+	width: 80%;
+}
+
 
 `;
 export const SquadsTextTitle = styled.h1`
@@ -167,7 +182,7 @@ font-weight: 500;
 }
 
 @media (max-width: 360px) {
-	font-size: 1.5rem;
+	font-size: 1rem;
 }
 `;
 export const SquadsTextDescription = styled.p`
@@ -222,7 +237,12 @@ margin-top: 20px;
 
 @media (max-width: 768px) {
    margin-top: 50px;
+
 }
+@media (max-width: 360px) {
+	align-items: start;
+}
+
 `;
 export const ImageSquadBack = styled.div`
 
@@ -243,10 +263,19 @@ width: 6rem;
 @media (max-width: 768px) {
    width: 8rem;
 }
+
+@media (max-width: 360px) {
+	width: 5rem;
+}
 `;
 export const BoxTextBack = styled.div`
 width: 70%;
 margin-right: 2.5rem;
+
+@media (max-width: 360px) {
+	margin-right: 0;
+   width: 65%;
+}
 
 `;
 export const BoxTextBackTitle = styled.h1`
@@ -276,7 +305,7 @@ color: #272727;
 }
 
 @media (max-width: 360px) {
-	font-size: 1.5rem;
+	font-size: 1rem;
 }
 `;
 export const BoxTextBackDescription = styled.p`
@@ -306,7 +335,7 @@ font-size: 0.9rem;
 }
 
 @media (max-width: 360px) {
-	font-size: 1rem;
+	font-size: 0.8rem;
 }
 `;	
                 
@@ -335,6 +364,9 @@ margin-top: 20px;
 @media (max-width: 768px) {
    margin-top: 50px;
 }
+@media (max-width: 360px) {
+	align-items: start;
+}
 `;
 export const ImageSquadCanais = styled.div`
 
@@ -357,12 +389,22 @@ width: 6rem;
 @media (max-width: 768px) {
    width: 8rem;
 }
+
+@media (max-width: 360px) {
+	width: 6rem;
+}
+@media (max-width: 360px) {
+	width: 5rem;
+}
 `;
 export const BoxTextCanais = styled.div`
 width: 70%;
 margin-right: 2.5rem;
 
-
+@media (max-width: 360px) {
+	margin-right: 0;
+   width: 65%;
+}
 `;
 export const BoxTextCanaisTitle = styled.h1`
 font-size: 1.2rem;
@@ -390,7 +432,8 @@ color: #272727;
 }
 
 @media (max-width: 360px) {
-	font-size: 1.5rem;
+	font-size: 1rem;
+   width: 100%;
 }
 
 `;
@@ -421,7 +464,8 @@ font-size: 0.9rem;
 }
 
 @media (max-width: 360px) {
-	font-size: 1rem;
+	font-size: 0.8rem;
+   width: 100%;
 }
 `;	
                 
@@ -450,6 +494,10 @@ margin-top: 20px;
 @media (max-width: 768px) {
    margin-top: 50px;
 }
+
+@media (max-width: 360px) {
+	align-items: start;
+}
 `;
 export const ImageSquadMVPs = styled.div`
 
@@ -472,12 +520,19 @@ width: 6rem;
 @media (max-width: 768px) {
    width: 8rem;
 }
+
+@media (max-width: 360px) {
+	width: 5rem;
+}
 `;
 export const BoxTextMVPs = styled.div`
 width: 70%;
 margin-right: 2.5rem;
 
-
+@media (max-width: 360px) {
+	margin-right: 0;
+   width: 65%;
+}
 `;
 export const BoxTextMVPsTitle = styled.h1`
 font-size: 1.2rem;
@@ -504,7 +559,8 @@ color: #272727;
    font-size: 2.5rem;
 }
 @media (max-width: 360px) {
-	font-size: 1.5rem;
+	font-size: 1rem;
+   width: 100%;
 }
 `;
 export const BoxTextMVPsDescription = styled.p`
@@ -533,7 +589,8 @@ font-size: 0.9rem;
    font-size: 2rem;
 }
 @media (max-width: 360px) {
-	font-size: 1rem;
+	font-size: 0.8rem;
+   width: 100%;
 }
 `;			
 

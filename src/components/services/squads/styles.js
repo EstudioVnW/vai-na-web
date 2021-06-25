@@ -10,10 +10,17 @@ export const SquadsContainer = styled.section`
   height: 75vh;
   margin: 0 auto;
 
+  @media(max-width: 1366px) {
+    max-width: 100vw;
+    padding: 4rem 0;
+  }
+
   @media(max-width: 1024px) {
     max-width: 100vw;
     padding: 0;
     align-items: flex-end;
+    justify-content: center;
+    background: red;
   }
 `;
 
@@ -25,11 +32,23 @@ export const SquadsBg = styled.div`
   background: #eff1f8;
   position: relative;
 
-  @media(max-width: 1024px) {
+  @media(max-width: 1366px) {
     padding: 0;
-    min-height: 45vh;
+    min-height: 70vh;
+    width: 65%;
+    padding: 4rem 7rem;
+    display: flex;
+    align-items: center;
+  }
+
+  @media(max-width: 1024px) {
+    padding-bottom: 0.8rem;
+    min-height: 80vh;
     width: 100%;
-    padding: 17rem 2rem 2rem; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 0;
   }
 
   @media(max-width: 640px) {
@@ -43,8 +62,21 @@ export const SquadsText = styled.p`
   font: 300 2.188rem 'Usual', sans-serif;
   line-height: 3rem;
 
+  @media (max-width: 1366px) {
+    width: 60%;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 1120px) {
+    font-size: 1.4rem;
+    width: 70%;
+  }
+
   @media(max-width: 1024px) {
-    width: 100%;
+    width: 70%;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    padding-bottom: 1rem;
   }
 
   @media(max-width: 790px) {
@@ -61,17 +93,24 @@ export const SquadsBox = styled.figure`
   position: absolute;
 
   @media(max-width: 1024px) {
-    top: 0%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    width: 55%;
+    top: 25%;
+    display: flex;
+    justify-content: center;
   }
 
   @media(max-width: 790px) {
     width: 90%;
+    top: 80%;
   }
 `;
 
 export const SquadsImg = styled.img`
+
+  @media (max-width: 1024px) {
+    width: 85%;
+  }
 `;
 
 export const SquadsIcon = styled.div`
@@ -90,15 +129,21 @@ export const SquadsIcon = styled.div`
   background-size: cover;
   cursor: pointer;
 
+  
   @media(max-width: 1440px) {
     width: 25vw;
     height: 25vw;
   }
 
+  @media(max-width: 1366px) {
+    width: 15vw;
+    height: 15vw;
+  }
+
   @media(max-width: 1024px) {
-    width: 30vw;
-    height: 30vw;
-    top: -10%;
+    width: 20vw;
+    height: 20vw;
+    top: -14%;
     left: 50%;
     transform: translate(-50% , -50%);
   }
@@ -128,6 +173,22 @@ export const IconText = styled.p`
   span {
     font: 700 3.938rem 'Usual', sans-serif;
     color: #0f2b92;
+  }
+
+  @media(max-width: 1366px) {
+    font-size: 1.2rem;
+
+    span {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media(max-width: 1120px) {
+    font-size: 1rem;
+
+    span {
+      font-size: 1.9rem;
+    }
   }
 
   @media(max-width: 768px) {
