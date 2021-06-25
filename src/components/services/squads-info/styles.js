@@ -4,7 +4,7 @@ export const SquadsContainer = styled.section`
   max-width: 90vw;
   min-height: 70vh;
   margin: 0 auto;
-  padding: 6rem 2rem;
+  padding: 6rem 1.9rem;
 
   @media (max-width: 1366px) {
     max-width: 85vw;
@@ -147,7 +147,6 @@ export const SquadsBox = styled.div`
  
   }
 `
-
 export const SquadsPerson = styled.p`
   position: relative;
   width: 50%;
@@ -201,7 +200,6 @@ export const SquadsPerson = styled.p`
     left: 0;
   }
 `
-
 export const Line = styled.img`
   position: absolute;
   bottom: 35%;
