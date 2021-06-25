@@ -4,10 +4,10 @@ import * as S from './styles';
 //Imgs
 import Sirio from '../../../images/images/sirio.png';
 import Proadi from '../../../images/images/proadi.png';
-import Reg from '../../../images/images/reg.png';
+import Reg from '../../../images/images/Reg.png';
 import Its from '../../../images/images/its.png';
 import Lai from '../../../images/images/lai.png';
-import Quickcash from '../../../images/images/quickcash.png';
+import Quickcash from '../../../images/images/QuickCash.png';
 import QuickcashDesktop from '../../../images/images/quickcashDesktop.png';
 import QuickcashMobile from '../../../images/images/quickcashMobile.png';
 import Votorantim from '../../../images/images/votorantim.png';
