@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 // Components
 import CardAuthor from '../components/blog/cardAuthor';
-import Layout from '../components/Layouts';
+import Layout from '../components/layout';
 import PageTitle from '../components/pageTitle/pageTitle';
 
 // styles

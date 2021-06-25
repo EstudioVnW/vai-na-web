@@ -1,0 +1,45 @@
+import React from 'react';
+import * as S from './styles';
+import Button from '../../button/Button';
+
+import { navigate } from 'gatsby';
+
+import squadsImg from '../../../images/images/squadsImg.png';
+
+
+const Squads = (props) => {
+  const redirectToConcact = () => {
+    navigate('/contact/');
+  }
+  return (
+    <S.SquadsContainer>
+      <S.SquadsBg>
+        <S.SquadsText>
+          Toda vez que sua empresa contrata os squads do Vai na Web ela contribui diretamente para
+          <strong> inspirar, equipar e educar mais pessoas </strong>
+          para atender aos desafios da economia digital.
+        </S.SquadsText>
+
+        <S.SquadsBox>
+          <S.SquadsImg src={squadsImg} alt='Alunos do Vai na Web' />
+          <S.SquadsIcon>
+            <S.IconText>
+              <span>100%</span>
+              do faturamento é reinvestido
+            </S.IconText>
+          </S.SquadsIcon>
+        </S.SquadsBox>
+        <Button
+          border='transparent'
+          color='#FFAC2D'
+          background='#0F2B92'
+          funcAction={redirectToConcact}
+        >
+          Reserve seu Squad
+        </Button>
+      </S.SquadsBg>
+    </S.SquadsContainer>
+  )
+};
+
+export default Squads;

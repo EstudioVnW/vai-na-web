@@ -4,9 +4,7 @@ import { graphql } from "gatsby";
 import styled from 'styled-components';
 
 //Components
-import Card from '../../components/blog/card';
-import PostSlider from '../../components/postSlider/postSlider';
-import Layouts from '../../components/Layouts';
+import Layouts from '../../components/layout';
 import ArticleBlog from '../../components/blog/articleBlog';
 
 // styles
@@ -71,34 +69,9 @@ export const query = graphql`
   }
 `
 
-const renderBlog = (data) => {
-  const firstItem = data && data[0];
-  const listSlider = data && data.filter(item => item.id !== firstItem.id);
-
-  return (
-    <>
-      <ContantCard>
-        <Card data={firstItem} />
-      </ContantCard>
-      <PostSlider data={listSlider} />
-    </>
-  )
-}
-
 const Index = ({ data, home }) => {
-  const item = data && data.posts.nodes;
-  const title = `Radar <br/> Vai na Web`;
-  const isTitle = { typePage: 'Blog', title: title };
-
   return (
     <Layouts>
-      {/* <PageTitle data={isTitle} /> */}
-      {/* <ContainerBlog>
-        {!item.length
-          ? <Text>Não há conteúdo no momento</Text>
-          : renderBlog(item)
-        }
-      </ContainerBlog> */}
       <ArticleBlog data={data}/>
     </Layouts>
   )
