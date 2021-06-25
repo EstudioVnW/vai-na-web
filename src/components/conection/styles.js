@@ -23,6 +23,7 @@ export const ImagePeoplesResponsive = styled.img`
 
     @media (max-width: 768px) {
 		display: flex;
+    width: 100%;
 	}
 `;
 

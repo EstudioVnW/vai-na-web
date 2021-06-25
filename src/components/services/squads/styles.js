@@ -102,6 +102,7 @@ export const SquadsBox = styled.figure`
 
   @media(max-width: 790px) {
     width: 90%;
+    top: 80%;
   }
 `;
 
