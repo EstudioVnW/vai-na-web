@@ -9,7 +9,6 @@ export const SquadsContainer = styled.section`
   @media (max-width: 1366px) {
     max-width: 85vw;
     padding: 0.5rem 3rem;
-
   }
 
   @media (max-width: 1024px) {
@@ -21,8 +20,11 @@ export const SquadsContainer = styled.section`
   }
 
   @media (max-width: 790px) {
-    padding: 4rem 0;
+    padding: 0 0; 
+    padding-bottom: 4rem;
     max-width: 100vw;
+    justify-content: space-around;
+    margin-bottom: 8rem;
   }
 `;
 
@@ -34,9 +36,8 @@ export const SquadsContent = styled.figure`
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 0;
   }
-
 `;
 
 export const SquadsTitle = styled.h2`
@@ -57,6 +58,12 @@ export const SquadsTitle = styled.h2`
     font-size: 1.980rem;
     line-height: 2.5rem;
   }
+
+  @media(max-width: 425px) {
+    width: 100vw;
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
 `;
 
 export const SquadsText = styled.p`
@@ -74,6 +81,12 @@ export const SquadsText = styled.p`
   @media(max-width: 1024px) {
     font-size: 1.3rem;
     line-height: 1.8rem;
+  }
+
+  @media(max-width: 425px) {
+    font-size: 1.020rem;
+    line-height: 1.4rem;
+    width: 95%;
   }
 `;
 
@@ -97,6 +110,10 @@ export const SquadsImgMobile = styled.img`
     display: flex;
     width: 75%;
     padding-top: 2rem;
+  }
+
+  @media(max-width: 425px) {
+    width: 100%;
   }
 `;
 
@@ -177,6 +194,11 @@ export const SquadsPerson = styled.p`
     &:nth-child(2) {
       height: auto;
     }
+  }
+
+  @media(max-width: 425px) {
+    font-size: 0.8rem;
+    left: 0;
   }
 `
 
