@@ -45,7 +45,7 @@ color: #00145D;
 }
 
 @media (max-width: 1440px){
-	font-size: 2.8rem;
+	font-size: 2.6rem;
 }
 
 @media (max-width: 1360px){
@@ -79,7 +79,7 @@ color: #272727;
 }
 
 @media (max-width: 1440px){
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 @media (max-width: 1360px){

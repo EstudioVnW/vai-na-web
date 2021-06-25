@@ -24,7 +24,7 @@ justify-content: center;
 }
  
  @media (max-width: 1440px) {
-	height: 30rem;
+	height: 32rem;
 	width: 70%;
  }
 
@@ -77,7 +77,7 @@ color: #FF611E;
 }
 
  @media (max-width: 1440px){
-	font-size: 2.8rem;
+	font-size: 2.6rem;
 	width: 100%;
  }
 
@@ -114,7 +114,7 @@ color: #272727;
 }
 
  @media (max-width: 1440px){
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	width: 90%;
  }
 
