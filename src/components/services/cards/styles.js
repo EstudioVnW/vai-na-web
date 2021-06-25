@@ -98,7 +98,6 @@ export const CardCircle = styled.div`
     height: 0.8rem;
   }
 
-
   @media (max-width: 790px) {
     width: 1.2em;
     height: 1.2em;
@@ -124,8 +123,14 @@ export const CardText = styled.div`
    }
 
   @media (max-width: 790px) {
-    font-size: 0.875rem;
-    line-height: 1.313rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 1.45rem 1.25rem 0 0;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
     padding: 1.45rem 1.25rem 0 0;
   }
 `;
@@ -144,9 +149,10 @@ export const CardTitle = styled.h3`
    }
 
   @media (max-width: 790px) {
-    font: 800 1.188rem 'Usual', sans-serif;
-    line-height: 1.625rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
+
 `;
 
 export const IconBg = styled.figure`
