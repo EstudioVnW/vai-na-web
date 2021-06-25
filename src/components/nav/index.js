@@ -59,7 +59,7 @@ const Nav = (props) => {
 						<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
 					</S.Li>
 					<S.Li>
-						<Link rel="noopener noreferrer">Cases</Link>
+						<Link to={'/cases'} rel="noopener noreferrer">Cases</Link>
 					</S.Li>
 					<S.Li>
 						<Link rel="noopener noreferrer">Escola</Link>
