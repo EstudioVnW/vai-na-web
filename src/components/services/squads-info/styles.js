@@ -14,8 +14,8 @@ export const SquadsContainer = styled.section`
   @media (max-width: 1024px) {
     max-width: 100vw;
     display-flex;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: center;
     padding-bottom: 10rem;
   }
 
