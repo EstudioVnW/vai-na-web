@@ -10,12 +10,11 @@ display: flex;
 flex-direction: column;
 
 @media (max-width: 768px) {
-	height: 85rem;
-
+	min-height: 85rem;
 }
 
 @media (max-width: 360px) {
-	height: 165vh;
+	min-height: 165vh;
 }
 
 `;

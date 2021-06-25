@@ -104,7 +104,7 @@ margin-top: 8rem;
 
 export const DepositionsSlideCard = styled.div`
     width: 40rem;
-    height: 27rem;
+    min-height: 27rem;
     box-shadow: 0px 0px 22px #00000029;
     border: 2px solid #00145d;
     border-radius: 20px;
@@ -116,7 +116,7 @@ export const DepositionsSlideCard = styled.div`
 
     @media (min-width: 2560px) {
         width: 80rem;
-        height: 40rem;
+        min-height: 40rem;
     }
 `;
 export const Image = styled.img`

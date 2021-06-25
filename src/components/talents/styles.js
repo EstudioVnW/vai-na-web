@@ -14,22 +14,22 @@ align-items: center;
 justify-content: center;
 
 @media (min-width: 2560px) {
-	height: 60rem;
+	min-height: 60rem;
 	width: 75%;
  }
 
  @media (max-width: 1920px){
-	height: 40rem;
+	min-height: 40rem;
 	width: 75%;
 }
  
  @media (max-width: 1440px) {
-	height: 32rem;
+	min-height: 32rem;
 	width: 70%;
  }
 
  @media (max-width: 1360px){
-	height: 35rem;
+	min-height: 35rem;
 	width: 75%;
 }
 
