@@ -36,6 +36,7 @@ const FooterContainer = styled.div `
 
 const DivisionContainer = styled.div `
 	position: relative;
+	bottom: 0.8rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -46,6 +47,10 @@ const DivisionContainer = styled.div `
 	background: #FED5B2;
 	overflow: hidden;
 	z-index: 1;
+
+	@media (max-width: 700px) {
+		padding: 0.3rem 0;
+	}
 `;
 
 const Division = styled.div `
@@ -57,8 +62,12 @@ const Division = styled.div `
 `;
 
 const DivisionLine = styled.div `
-	height: 1.5px;
+	height: 1.2px;
 	background: #FF611E;
+
+	@media (max-width: 700px) {
+		height: 1px;
+	}
 `;
 
 const DivisionText = styled.p `
@@ -67,10 +76,19 @@ const DivisionText = styled.p `
 	font-weight: 100;
 	color: #0F2B92;
 	text-transform: uppercase;
+
+	@media (max-width: 700px) {
+		font-size: 3em;
+		line-height: 1;
+	}
 `;
 
 const LogoVnW = styled.img `
 	width: 4rem;
+
+	@media (max-width: 700px) {
+		width: 3rem;
+	}
 `;
 
 
@@ -86,7 +104,7 @@ const Container = styled.footer`
 	}
 
 	@media (max-width: 980px) {
-		padding: 9rem 2.6rem 0;
+		padding: 6rem 2.6rem 0;
 	}
 `;
 
@@ -115,7 +133,7 @@ const ContentBox = styled.div`
 			margin-right: 10rem;
 		}
 		@media (max-width: 980px) {
-			margin: 3rem 0 2rem;
+			margin: 2rem 0;
 		}
 	}
 
@@ -133,10 +151,11 @@ const ContentBox = styled.div`
 	}
 `;
 
-const SocialBox = styled.div `
+const TextBox = styled.div`
+	margin-bottom: 4rem;
 
-	@media (max-width: 980px) {
-		width: 100%;
+	@media (max-width: 700px) {
+		margin-bottom: 2rem;
 	}
 `;
 
@@ -151,13 +170,12 @@ const FooterText = styled.p`
 		width: 26vw;
 	}
 	@media (max-width: 980px) {
-		padding: 0 2rem;
 		width: 66%;
 		font-size: 1.5em;
 	}
 	@media (max-width: 700px) {
-		width: 100%;
-    	font-size: 0.8em;
+		width: 95%;
+		font-size: 0.9em;
 	}
 `;
 
@@ -167,13 +185,13 @@ const LinkBox = styled.nav`
 	flex-direction: column;
 	align-content: space-between;
 	width: 27vw;
-	height: 22vh;
+	height: 19vh;
 
 	@media (max-width: 1440px) {
 		width: 38vw;
 	}
 	@media (max-width: 980px) {
-		width: 85vw;
+		width: 89vw;
 		height: 18vh;
 	}
 	@media (max-width: 700px) {
@@ -220,7 +238,7 @@ const Logo = styled.img `
 
 	@media (max-width: 980px) {
 		position: unset;
-		margin-top: 3rem;
+		margin-top: 2.5rem;
 		width: 12rem;
 	}
 
@@ -230,6 +248,15 @@ const Logo = styled.img `
 `;
 
 
+
+
+const SocialBox = styled.div `
+	font-weight: 600;
+
+	@media (max-width: 980px) {
+		width: 100%;
+	}
+`;
 
 const IconBox = styled.figure `
 	display: flex;
@@ -243,7 +270,6 @@ const IconBox = styled.figure `
 
 	@media (max-width: 980px) {
 		width: 100%;
-		padding: 0 2rem;
 	}
 `;
 
@@ -262,7 +288,7 @@ const Icon = styled.img `
 const ImgBox = styled.figure `
 	display: flex;
 	justify-content: space-around;
-	width: 22vw;
+	width: 22rem;
 	max-height: 11rem;
 
 	@media (max-width: 1440px) {
@@ -270,7 +296,7 @@ const ImgBox = styled.figure `
 	}
 	@media (max-width: 980px) {
 		margin: 0 auto;
-		width: 86vw;
+		width: 89vw;
 	}
 `;
 
@@ -289,12 +315,9 @@ const FooterImg = styled.img `
 
 const ImgRow = styled.img `
 	margin-top: 1.4rem;
-	width: 100%;
-	height: 2rem;
 
 	@media (max-width: 980px) {
 		margin-top: 2rem;
-    	height: 7vh;
 	}
 `;
 
@@ -357,11 +380,11 @@ const Footer = () => {
 		<Container>
 			<Content>
 				<div>
-					<div style={{marginBottom: "4rem"}}>
+					<TextBox>
 						<FooterText>
 							Vai na Web tem por missão democratizar o acesso às tecnologias digitais avançadas, reduzir as desigualdades e promover um futuro mais próspero e sustentável.
 						</FooterText>
-					</div>
+					</TextBox>
 
 					<ImgBox>
 						<FooterImg src={logoPacto} alt="Logo Pacto Global" />
@@ -401,7 +424,7 @@ const Footer = () => {
 								<a href="https://medium.com/@olavainaweb" target="_blank" rel="noopener noreferrer">
 									<Icon src={logoMedium} alt="Logo Medium"/>
 								</a>
-								<a href="https://www.linkedin.com/in/vai-na-web-915782184/" target="_blank" rel="noopener noreferrer">
+								<a href="https://br.linkedin.com/company/vainaweb" target="_blank" rel="noopener noreferrer">
 									<Icon src={logoLinkedin} alt="Logo Linkedin"/>
 								</a>
 								<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noopener noreferrer">
