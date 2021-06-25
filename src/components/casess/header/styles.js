@@ -22,7 +22,7 @@ export const Header = styled.section`
 
 export const HeaderTitle = styled.h1`
     position: relative;
-    font: 800 3.1em sans-serif;
+    font: 800 3.1em 'Usual', sans-serif;
     color: #00145d;
     
     @media (max-width: 490px) {
@@ -34,8 +34,8 @@ export const HeaderTitle = styled.h1`
 export const TitleBar = styled.span`
     position: absolute;
     top: 2%;
-    left: -3rem;
-    font: 300 1.2em sans-serif;
+    left: -4rem;
+    font: 300 1.2em 'Usual', sans-serif;
     color: #ff611e;
     
     @media (max-width: 490px) {
@@ -45,7 +45,7 @@ export const TitleBar = styled.span`
 `;
 
 export const HeaderText = styled.p`
-    font: 300 1.9em sans-serif;
+    font: 400 1.9em 'Usual', sans-serif;
 
     @media (max-width: 490px) {
         font-size: 1.45em;

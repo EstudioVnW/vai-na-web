@@ -31,7 +31,7 @@ export const Content = styled.div`
 `;
 
 export const TitleBox = styled.div`
-    font: 300 1.6em sans-serif;
+    font: 300 1.6em 'Usual', sans-serif;
     line-height: 1.5;
 
     @media (max-width: 960px) {
@@ -54,7 +54,7 @@ export const SubTitle = styled.h3`
 export const TextBox = styled.div`
     padding: 1rem 0;
     width: 34vw;
-    font: 300 1.4em sans-serif;
+    font: 300 1.4em 'Usual', sans-serif;
 
     @media (max-width: 960px) {
         width: 65vw;
