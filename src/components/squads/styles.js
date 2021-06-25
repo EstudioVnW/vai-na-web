@@ -137,7 +137,7 @@ font-size: 1.8rem;
 }
 
 @media (max-width: 1440px){
-   font-size: 2.8rem;
+   font-size: 2.6rem;
 }
 
 @media (max-width: 1360px){
@@ -168,7 +168,7 @@ font-weight: 500;
 }
 
 @media (max-width: 1440px){
-   font-size: 1.5rem;
+   font-size: 1.2rem;
 }
 
 @media (max-width: 1360px){
@@ -201,7 +201,7 @@ font-size: 1rem;
 }
 
 @media (max-width: 1440px){
-   font-size: 1.3rem;
+   font-size: 1.2rem;
    width: 100%;
 }
 
@@ -256,6 +256,10 @@ width: 6rem;
 @media (max-width: 1920px){
 	width: 9rem;
 }
+@media (max-width: 1440px){
+	width: 7rem;
+}
+
 @media (max-width: 1360px){
 	width: 7rem;
 }
@@ -383,6 +387,10 @@ width: 6rem;
 }
 
 @media (max-width: 1360px){
+	width: 7rem;
+}
+
+@media (max-width: 1440px){
 	width: 7rem;
 }
 
@@ -514,6 +522,10 @@ width: 6rem;
 }
 
 @media (max-width: 1360px){
+	width: 7rem;
+}
+
+@media (max-width: 1440px){
 	width: 7rem;
 }
 

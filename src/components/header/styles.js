@@ -107,7 +107,7 @@ export const ImageEstudio = styled.img`
 	}
 	@media (max-width: 1440px){
 		right: -1.5rem;
-		bottom: -10%;
+		bottom: -13%;
 	}
 
 	@media (max-width: 1360px){
