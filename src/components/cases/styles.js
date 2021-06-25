@@ -86,7 +86,5 @@ export const ButtonCases = styled.div`
 export const StyledLink = styled(Link)`
 	color: #0F2B92;
 	font-size: 1.125rem;
-	text-decoration: none;
-	
-	
+	text-decoration: none;	
 `;
