@@ -71,15 +71,15 @@ const Depositions = ({ home }) => {
                 //   return null
                 // }}
                 >
-                {/* <S.DepositionsSlideCard> */}
-                    {/* <S.Image src={Vania} /> */}
+                <S.DepositionsSlideCard>
+                    <S.Image src={Vania} />
                     <S.Description>“Estes meninos e meninas são preparados 
                         para o mercado de trabalho e desenvolvem entregas brilhantes. 
                         <S.Bold> O Sírio-Libanês tem muito orgulho dessa parceria que mostrou 
                         que é possível investir em inovação e formação simultaneamente.”</S.Bold>
                     </S.Description>
                     
-                    {/* <S.Identification>
+                    <S.Identification>
                         <S.IdentificationText>
                             <S.Name>Vânia Bezerra</S.Name>
                             <S.Office>Diretora de Compromisso Social</S.Office>
@@ -87,18 +87,18 @@ const Depositions = ({ home }) => {
                         <S.IdentificationCompany>
                             <S.ImageCompany src={VaniaCompany} />
                         </S.IdentificationCompany>
-                    </S.Identification> */}
-                {/* </S.DepositionsSlideCard> */}
+                    </S.Identification>
+                </S.DepositionsSlideCard>
 
-                {/* <S.DepositionsSlideCard>
-                    <S.ImagePatricia src={Patricia} /> */}
+                <S.DepositionsSlideCard>
+                    <S.ImagePatricia src={Patricia} />
                     <S.Description>“Even with a different language and time zone, 
                         the young people of Vai na Web <S.Bold>helped us to design and develop a 
                         brand new website to serve our customers.</S.Bold> Thank you Vai na Web
                          for your commitment, dedication and creativity.”
                     </S.Description>
                     
-                    {/* <S.Identification>
+                    <S.Identification>
                         <S.IdentificationText>
                             <S.Name>Patrícia Zaundi</S.Name>
                             <S.Office>Diretora Executiva</S.Office>
@@ -107,10 +107,10 @@ const Depositions = ({ home }) => {
                             <S.ImageCompany src={PatriciaCompany} />
                         </S.IdentificationCompany>
                     </S.Identification>
-                </S.DepositionsSlideCard> */}
+                </S.DepositionsSlideCard>
 
-                {/* <S.DepositionsSlideCard>
-                    <S.ImageElson src={Elson} /> */}
+                <S.DepositionsSlideCard>
+                    <S.ImageElson src={Elson} />
                     <S.Description>“<S.Bold>Criatividade e usabilidade em escala foi 
                         o que conseguimos acelerar com a experiência de ter dentro 
                         da empresa jovens profissionais do Vai na Web.</S.Bold> Não apenas 
@@ -118,7 +118,7 @@ const Depositions = ({ home }) => {
                         colaboração e alto nível de responsabilidade individual.”
                     </S.Description>
                    
-                    {/* <S.Identification>
+                    <S.Identification>
                         <S.IdentificationText>
                             <S.Name>Elson Cordeiro</S.Name>
                             <S.Office>Diretor de Operações e Serviços</S.Office>
@@ -127,7 +127,7 @@ const Depositions = ({ home }) => {
                             <S.ImageCompany src={ElsonCompany} />
                         </S.IdentificationCompany>
                     </S.Identification>
-                </S.DepositionsSlideCard> */}
+                </S.DepositionsSlideCard>
             </Carousel>
 
             </S.DepositionsSlides> 

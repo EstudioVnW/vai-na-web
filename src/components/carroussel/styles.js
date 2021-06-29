@@ -4,8 +4,6 @@ import { Link } from "gatsby";
 
 
 export const Depositions = styled.div`
-   
-
 `;
 
 export const DepositionsText = styled.div`
@@ -103,7 +101,7 @@ width: 100%;
 `;
 
 
- export const Carousel = styled.div`
+export const Carousel = styled.div`
 
 
  `;
