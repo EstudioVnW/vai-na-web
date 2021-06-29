@@ -1,31 +1,27 @@
 import styled from 'styled-components';
 import { Link } from "gatsby";
 
-
-
 export const Talents = styled.div`
+position: relative;
 background: rgb(254,213,178,0.32);
-width: 70%;
+width: 75%;
+min-height: 40rem;
 border-top-right-radius: 20px;
 border-bottom-right-radius: 20px;
 margin-top: 8rem;
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: flex-start;
 
 @media (min-width: 2560px) {
 	min-height: 60rem;
 	width: 75%;
  }
 
- @media (max-width: 1920px){
-	min-height: 40rem;
-	width: 75%;
-}
- 
  @media (max-width: 1440px) {
 	min-height: 32rem;
 	width: 70%;
+	padding: 2rem 0;
  }
 
  @media (max-width: 1360px){
@@ -33,15 +29,16 @@ justify-content: center;
 	width: 75%;
 }
 
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
 	flex-direction: column;
 	width: 100%;
-	height: 100rem;
+	min-height: 100rem;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 }
-@media (max-width: 360px) {
-	height: 60rem;
+
+@media (max-width: 480px) {
+	min-height: 60rem; 
 }
 
 `;
@@ -56,14 +53,13 @@ justify-content: center;
  }
 
 @media (max-width: 768px) {
-	width: 80%;
+	width: 95%;
 	margin-top: 50px;
 }
-
-
 `;
+
 export const TalentsTextTitle = styled.h1`
-width: 80%;
+width: 90%;
 margin-left: 10%;
 color: #FF611E;
 
@@ -73,12 +69,10 @@ color: #FF611E;
 
  @media (max-width: 1920px){
 	font-size: 3.5rem;
-	width: 85%;
 }
 
  @media (max-width: 1440px){
 	font-size: 2.6rem;
-	width: 100%;
  }
 
  @media (max-width: 1360px){
@@ -92,7 +86,7 @@ color: #FF611E;
 	text-align: left;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	font-size: 2rem;
 }
 `;
@@ -131,7 +125,7 @@ color: #272727;
 	margin-top: 50px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	font-size: 1rem;
 	line-height: 25px;
 	margin-top: 20px;
@@ -140,8 +134,10 @@ color: #272727;
 
 export const ButtonTalents = styled.div`
 width: 80%;
+height: 90px;
 margin-top: 20px;
 display: flex;
+align-items: center;
 justify-content: center;
 
 @media (max-width: 1920px){
@@ -170,46 +166,36 @@ justify-content: center;
 
 `;
 export const TalentsImageInfo = styled.img`
-    width: 40rem;
-	position: relative;
-	left: 5rem;
+	position: absolute;
+    width: 35rem;
+	left: 70%;
 
 	@media (min-width: 2560px) {
-		position: absolute;
-		left: 90rem;
-		width: 60rem;
+		left: 80%;
+		width: 50rem;
 	 }
 
-	@media (max-width: 1920px){
-		position: absolute;
-		left: 65rem;
-		width: 40rem;
-	}
+	 @media (max-width: 1179px){
+		left: 75%;
+		width: 21rem;
+	 }
 
-	@media (max-width: 1440px){
-		position: absolute;
-		left: 50rem;
-		width: 30rem;
-	}
-
-	@media (max-width: 1360px){
-		left: 48rem;
-	}
-
-	@media (max-width: 768px) {
+	 @media (max-width: 768px){
 		display: none;
 	}
+
+
 `;
 
 export const TalentsImageInfoResponsive = styled.img`
 	display: none;
 
-	@media (max-width: 768px) {
-		display: flex;
+	@media (max-width: 768px){
+	    display: block;
 		width: 100%;
 		margin-top: 50px;
 	}
-
+	
 `;
 
 export const Bold = styled.span`
