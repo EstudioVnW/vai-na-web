@@ -13,7 +13,7 @@ flex-direction: column;
 	min-height: 85rem;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	min-height: 165vh;
 }
 
@@ -56,7 +56,7 @@ color: #00145D;
 	font-size: 3.5rem;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	font-size: 2rem;
 	width: 90%;
 }
@@ -92,7 +92,7 @@ color: #272727;
 	line-height: 50px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	font-size: 1rem;
 	line-height: 25px;
 	width: 90%;
@@ -128,14 +128,14 @@ display:none;
 	justify-content: center;
 	margin-top: 50px;
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	margin-top: 20px;
 }
 
 `;
 
 export const SocialImpactImageInfoResponsive = styled.img`
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	width: 80%;
 }
 `;

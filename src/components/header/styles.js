@@ -11,35 +11,15 @@ export const Header = styled.header`
 	border-radius: 0 0 0 20px;
 	margin-left: 2rem;
 	
-	// @media (min-width: 2560px){
-	// 	height: 55vh;
-	// 	margin-left: 6rem;
-	// }
-	// @media (max-width: 1920px){
-	// 	height: 50vh;
-	// }
-	// @media (max-width: 1440px){
-	// 	height: 60vh;
-	// }
-
-	// @media (max-width: 1360px){
-	// 	height: 68vh;
-	// }
-
 	@media (max-width: 768px) {
 		width: 100%;
 		margin-left: 0;	
-		// border-radius: 0;
+		border-radius: 0;
+		min-height: 67vh;
 	}
-
-	// @media (max-width: 360px) {
-	// 	width: 100%;
-	// 	height: 65vh;
-	// }
 `;
 
 export const Wrap = styled.div`
-	// border: 10px solid green;
 	display: flex;
 	width: 95vw;
 	margin: 0 auto;
@@ -48,8 +28,8 @@ export const Wrap = styled.div`
 	flex-flow: column-reverse;
 	min-height: 75vh;
 
-	@media (max-width: 768px){
-		height: 75vh;
+	@media (max-width: 768px) {
+		min-height: 67vh;
 	}
 `;
 
@@ -67,85 +47,19 @@ export const Wrap = styled.div`
 		left: 5%;
 		max-width: 80%;
 		padding: 0.25rem 1rem 2rem;
-		bottom 1rem;
+		top: 32%;
 	}
-
-	// @media (min-width: 2560px){
-	// 	width: 62rem;
-	// 	height: 18rem;
-	// 	left: 13%;
-	// 	bottom: 27%;
-	// }
-	// @media (max-width: 1920px){
-	// 	left: 28%;
-	// }
-	// @media (max-width: 1440px){
-	// 	left: 7%;
-	// 	bottom: 33%;
-	// }
-
-	// @media (max-width: 1360px){
-	// 	left: 2%;
-	// }
-
-	// @media (max-width: 1024px){
-	// 	width: 28rem;
-	// 	height: 10rem;
-	// 	left: 3%;
-	// }
-	// @media (max-width: 768px) {
-	// 	width: 28rem;
-	// 	height: 15rem;
-	// 	left: 13%;
-	// 	bottom: 10%;
-	// }
-	// @media (max-width: 360px) {
-	// 	width: 17rem;
-	// 	height: 12rem;
-	// 	left: 5%;
-	// 	bottom: 8%;
-	// }
  `;
 export const ImageEstudio = styled.img`
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	// width: 50rem;
+    width: 55%;
 
-	// @media (min-width: 2560px) {
-	// 	position: absolute;	
-	// 	right: -2.6rem;
-	// 	bottom: -12%;
-	// 	width: 90rem;
-	// }
-	// @media (max-width: 1920px){
-	// 	right: -1.54rem;
-	// }
-	// @media (max-width: 1440px){
-	// 	right: -1.5rem;
-	// 	bottom: -13%;
-	// }
-
-	// @media (max-width: 1360px){
-	// 	right: -1.5rem;
-	// 	bottom: -10%;
-	// }
-
-	// @media (max-width: 1024px){
-	// 	width: 40rem;
-	// 	right: -1.2rem;
-	// 	bottom: -8%;
-	// }
 	@media (max-width: 768px){
-		// width: 35rem;
-		right: -1.05rem;
+		width: 85%;
 		top: 0%;
 	}
-	// @media (max-width: 360px) {
-	// 	width: 18rem;
-	// 	bottom: 45%;
-	// 	right: -0.55rem;
-	// }
 `;
 
 export const BoxCircle = styled.div`
