@@ -2,15 +2,19 @@ import styled from 'styled-components';
 
 export const AgendaContainer = styled.section`
   max-width: 90vw;
-  min-height: 70vh;
+  min-height: 55vh;
   margin: 0 auto;
   display: flex;
-  padding: 6rem 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
 
-  
   @media (max-width: 1366px) {
     justify-content: center;
     align-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 40vh;
   }
 
   @media (max-width: 790px) {
