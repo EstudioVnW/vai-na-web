@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "gatsby";
+import React, { useState, useEffect } from 'react';
+import { Link, navigate } from "gatsby";
 import Button from '../button/Button';
+
 import * as S from './styles';
 
-//Image
+// images
 import logo from '../../images/icons/logo-VNW.svg';
-import IconMenu from '../../images/images/menu_hamburger.svg';
-import IconClosed from '../../images/images/close.svg';
-
-import { navigate } from 'gatsby';
 
 const Nav = (props) => {
 	const [isShow, setIsShow] = useState(false);
@@ -16,6 +13,20 @@ const Nav = (props) => {
 	const handleMenu = () => {
 		setIsShow(!isShow)
 	}
+
+	const [scrollPosition, setScrollPosition] = useState(0);
+	const handleScroll = () => {
+		const position = window.pageYOffset;
+		setScrollPosition(position);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { passive: true });
+	
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
 
 	let widthViewPort;
 
@@ -30,41 +41,35 @@ const Nav = (props) => {
 	}
 
 	return (
-		<S.Menu>
+		<S.Menu home={props.home} isScrolled={scrollPosition > 0}>
 			<S.Figure>
-				<Link to={'/'} rel="noopener noreferrer">
-					<S.Image src={logo} alt='Logotipo' />
+				<Link to={'/'}>
+					<S.Logo src={logo} alt='Logotipo' />
 				</Link>
 			</S.Figure>
-			<S.BoxImg>
-				<S.ImgMenuOpen	
-					isShow={isShow}
-					src={IconMenu}
-					alt="Icon menu hamburguer"
-					onClick={handleMenu}
-				/>
-				<S.ImgMenuClosed
-					isShow={isShow}
-					src={IconClosed}
-					alt="Icon closed menu"
-					onClick={handleMenu}
-				/>
-			</S.BoxImg>
+			<S.MenuOpen isShow={isShow} onClick={handleMenu}>
+				<span></span>
+			</S.MenuOpen>
 			<S.Wrap isShow={isShow}>
-				<S.Ul>
-					<S.Li>
-						<Link to={'/'} rel="noopener noreferrer">Sobre</Link>
-					</S.Li>
-					<S.Li>
-						<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
-					</S.Li>
-					<S.Li>
-						<Link to={'/cases'} rel="noopener noreferrer">Cases</Link>
-					</S.Li>
-					<S.Li>
-						<Link rel="noopener noreferrer">Escola</Link>
-					</S.Li>
-				</S.Ul>
+				<S.NavList>
+					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+						<Link to={'/'}>Sobre</Link>
+					</S.NavItem>
+					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+						<Link to={'/services'}>Serviços</Link>
+					</S.NavItem>
+					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+						<Link to={'/cases'}>Cases</Link>
+					</S.NavItem>
+					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+						<Link to={'/#'} >Escola</Link>
+					</S.NavItem>
+				</S.NavList>
+				<S.BottomList isShow={isShow}>
+					<S.BottomLink to={'/#'} >Media Kit</S.BottomLink>
+					<S.BottomLink to={'/#'} >Perguntas Frequentes</S.BottomLink>
+					<S.BottomLink to={'/contact'}>Contato</S.BottomLink>
+				</S.BottomList>
 				{isDesktop && (
 					<Button
 						border='transparent'
