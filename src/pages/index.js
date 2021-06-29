@@ -10,8 +10,9 @@ import SocialImpact from '../components/socialImpact';
 import Squads from '../components/squads';
 import Header from '../components/header';
 import Talents from '../components/talents';
-import Depositions from '../components/ depositions';
+import Depositions from '../components/depositions';
 import Conection from '../components/conection';
+import Carroussel from "../components/carroussel";
 
 //Imagens
 
@@ -67,7 +68,8 @@ const Home = (props) => {
         <SocialImpact />
         <Squads />
         <Talents />
-        <Depositions />
+        {/* <Depositions /> */}
+        <Carroussel />
         <Conection />
       </Content>
     </Layouts>
