@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 
 export const Depositions = styled.div`
-
+   
 
 `;
 
@@ -89,15 +89,24 @@ export const DepositionsSubTitle = styled.h2`
 
 
 export const DepositionsSlides = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 8rem;
+display: ${props => props.show ? 'none' : 'flex'};
+margin: 0;
+min-height: 36rem;
+width: 100%;
+
+
+
 
 @media (max-width: 768px) {
     display: none;
 }
 `;
+
+
+ export const Carousel = styled.div`
+
+
+ `;
 
 
 //VANIA
@@ -112,7 +121,7 @@ export const DepositionsSlideCard = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 6rem;
+    margin: 6rem auto 0;
 
     @media (min-width: 2560px) {
         width: 80rem;

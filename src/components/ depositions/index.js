@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as S from './styles';
+import Carousel from 'nuka-carousel';
 
 import Vania from '../../images/images/Vania.png';
 import VaniaCompany from '../../images/images/hospitalSirio.png';
@@ -13,8 +14,9 @@ import Elson from '../../images/images/Elson.png';
 import ElsonCompany from '../../images/images/Petronect.png';
 
 
-
 const Depositions = ({ home }) => {
+
+
 	return (
         <S.Depositions>
             <S.DepositionsText>
@@ -24,7 +26,51 @@ const Depositions = ({ home }) => {
                 </S.DepositionsSubTitle>
             </S.DepositionsText>
 
-            <S.DepositionsSlides>
+           <S.DepositionsSlides>
+                <Carousel
+                animation='zoom'
+                transitionMode='scroll'
+                cellAlign='center'
+                zoomScale={1}
+                cellSpacing={-400}
+                wrapAround={true}
+                // speed={isSmall ? 300 : 500}
+                scrollMode='remainder'
+                slidesToScroll='auto'
+                // slideIndex={slideIndex}
+                // afterSlide={(index) => this.setState({ slideIndex: index })}
+                // renderCenterLeftControls={({ previousSlide }) =>
+                //   !isSmall &&
+                //   showPrevButton && (
+                //     <ArrowButton onClick={previousSlide}>
+                //       <ArrowButtonIcon src={arrowWhite} />
+                //     </ArrowButton>
+                //   )
+                // }
+                // renderCenterRightControls={({ nextSlide }) =>
+                //   !isSmall &&
+                //   showNextButton && (
+                //     <ArrowButton onClick={nextSlide}>
+                //       <ArrowButtonIcon src={arrowWhite} right />
+                //     </ArrowButton>
+                //   )
+                // }
+                // defaultControlsConfig={{
+                //   pagingDotsStyle: {
+                //     fill: 'white',
+                //   },
+                // }}
+                // getControlsContainerStyles={(key) => {
+                //   if (key === 'BottomCenter') {
+                //     return {
+                //       display: slideIndex === 0 ? 'none' : '',
+                //       background: 'blue',
+                //       top: '110%',
+                //     }
+                //   }
+                //   return null
+                // }}
+                >
                 <S.DepositionsSlideCard>
                     <S.Image src={Vania} />
                     <S.Description>“Estes meninos e meninas são preparados 
@@ -82,8 +128,10 @@ const Depositions = ({ home }) => {
                         </S.IdentificationCompany>
                     </S.Identification>
                 </S.DepositionsSlideCard>
-            </S.DepositionsSlides>
+            </Carousel>
 
+            </S.DepositionsSlides> 
+            
             <S.DepositionsSlidesResponsive>
                 <S.AnimationSlide>
                     {/* VANIA */}
