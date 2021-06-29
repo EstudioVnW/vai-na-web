@@ -29,14 +29,16 @@ const Squads = (props) => {
             </S.IconText>
           </S.SquadsIcon>
         </S.SquadsBox>
-        <Button
-          border='transparent'
-          color='#FFAC2D'
-          background='#0F2B92'
-          funcAction={redirectToConcact}
-        >
-          Reserve seu Squad
-        </Button>
+        <S.BoxButton>
+          <Button
+            border='transparent'
+            color='#FFAC2D'
+            background='#0F2B92'
+            funcAction={redirectToConcact}
+          >
+            Reserve seu Squad
+          </Button>
+        </S.BoxButton>
       </S.SquadsBg>
     </S.SquadsContainer>
   )
