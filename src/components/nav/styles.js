@@ -32,8 +32,8 @@ export const Wrap = styled.div`
 		width: 100vw;
 		height: 100vh;
 		display: flex;
-    flex-direction: column;
-		justify-content: space-evenly;
+    	flex-direction: column;
+		justify-content: flex-end;
 		align-items: center;
 		padding: 0;
 		display: ${props => props.isShow ? 'flex' : 'none'};
@@ -47,10 +47,11 @@ export const Ul = styled.ul`
 
 	@media (max-width: 768px) {
 		display: flex;
-    flex-direction: column;
+    	flex-direction: column;
 		width: 70vw;
 		height: 50vh;
 		justify-content: space-evenly;
+		text-align: center;
 	}
 `;
 
@@ -82,6 +83,7 @@ export const Li = styled.li`
 		color: #FDE7A9;
 		font-size: 1.938rem;
 		line-height: 2.313rem;
+		margin-right: 0;
 		padding-bottom: 0.65rem;
 		border-bottom: 0.15rem solid currentColor;
 		width: auto;
@@ -108,16 +110,18 @@ export const Image = styled.img`
 	width: 7rem;
 
 	@media (max-width: 768px) {
-		width: 4rem;
+		width: 5rem;
 	}
 `;
 
 export const ImgMenuOpen = styled.img`
 	display: none;
+	
 	@media (max-width: 768px) {
 		display: ${props => props.isShow ? 'none' : 'flex'};
 		justify-content: flex-end;
 		width: 2rem;
+		cursor: pointer;
 	}
 `;
 
@@ -128,5 +132,24 @@ export const ImgMenuClosed = styled.img`
 		display: ${props => props.isShow ? 'flex' : 'none'};
 		justify-content: flex-end;
 		width: 2rem;
+		cursor: pointer;
+	}
+`;
+
+export const Footer = styled(Ul)`
+	height: 22vh;
+	margin: 7vw;
+`;
+
+export const Items = styled.li`
+	font-size: 1.1rem;
+	color: #FFFFFF;
+	cursor: pointer;
+
+	a {
+		text-decoration: none;
+		color: currentColor;	
+		transition: all 0.15s ease-in;
+		padding: 0.25rem 0;
 	}
 `;

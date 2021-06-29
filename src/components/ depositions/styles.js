@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 
 
 export const Depositions = styled.div`
-
+   
 
 `;
 
@@ -32,7 +32,7 @@ export const DepositionsTitle = styled.h1`
     }
 
     @media (max-width: 1440px) {
-		font-size: 2.8rem;
+		font-size: 2.6rem;
 	}
 
     @media (max-width: 1360px){
@@ -65,7 +65,8 @@ export const DepositionsSubTitle = styled.h2`
     }
 
     @media (max-width: 1440px) {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
+        margin-top: 20px;
 	}
 
     @media (max-width: 1360px){
@@ -88,10 +89,13 @@ export const DepositionsSubTitle = styled.h2`
 
 
 export const DepositionsSlides = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-top: 8rem;
+display: ${props => props.show ? 'none' : 'flex'};
+margin: 0;
+min-height: 36rem;
+width: 100%;
+
+
+
 
 @media (max-width: 768px) {
     display: none;
@@ -99,11 +103,17 @@ margin-top: 8rem;
 `;
 
 
+ export const Carousel = styled.div`
+
+
+ `;
+
+
 //VANIA
 
-export const DepositionsSlideVania = styled.div`
+export const DepositionsSlideCard = styled.div`
     width: 40rem;
-    height: 25rem;
+    min-height: 27rem;
     box-shadow: 0px 0px 22px #00000029;
     border: 2px solid #00145d;
     border-radius: 20px;
@@ -111,14 +121,14 @@ export const DepositionsSlideVania = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 6rem;
+    margin: 6rem auto 0;
 
     @media (min-width: 2560px) {
         width: 80rem;
-        height: 40rem;
+        min-height: 40rem;
     }
 `;
-export const ImageVania = styled.img`
+export const Image = styled.img`
 width: 15.375rem;
 margin-top: -9rem;
 
@@ -128,7 +138,7 @@ margin-top: -9rem;
 }
 
 `;
-export const DescriptionVania = styled.p`
+export const Description = styled.p`
     color: #272727;
     width: 85%;
     text-align: left;
@@ -140,52 +150,31 @@ export const DescriptionVania = styled.p`
         line-height: 2.5rem;
     }
 `;
-export const IdentificationVania = styled.div`
+export const Identification = styled.div`
 width: 90%;
 display: flex;
 justify-content: space-around;
 align-items: center;
-margin-top: 4rem;
+margin-top: 2rem;
 border-top: 2px solid #FED5B2;
 height: 30%;
 
 `;
-export const IdentificationVaniaText = styled.div`
+export const IdentificationText = styled.div`
 
 
 `;
-export const IdentificationVaniaCompany = styled.div`
+export const IdentificationCompany = styled.div`
 
 
 `;
-export const ImageVaniaCompany = styled.img`
+export const ImageCompany = styled.img`
 @media (min-width: 2560px) {
     width: 20rem;
 }
 
 `;
 
-
-
-//PATRICIA
-
-export const DepositionsSlidePatricia = styled.div`
-width: 40rem;
-height: 25rem;
-box-shadow: 0px 0px 22px #00000029;
-border: 2px solid #00145d;
-border-radius: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-margin-top: 10rem;
-
-@media (min-width: 2560px) {
-    width: 80rem;
-    height: 40rem;
-}
-`;
 export const ImagePatricia = styled.img`
     width: 14rem;
     margin-top: -8rem;
@@ -196,107 +185,15 @@ export const ImagePatricia = styled.img`
     }
 
 `;
-export const DescriptionPatricia = styled.p`
-    color: #272727;
-    width: 85%;
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.5rem;
 
-    @media (min-width: 2560px) {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-
-`;
-export const IdentificationPatricia = styled.div`
-width: 90%;
-height: 30%;
-display: flex;
-justify-content: space-around;
-align-items: center;
-margin-top: 6rem;
-border-top: 2px solid #FED5B2;
-`;
-export const IdentificationPatriciaText = styled.div`
-    
-
-`;
-export const IdentificationPatriciaCompany = styled.div`
-
-
-`;
-export const ImagePatriciaCompany = styled.img`
-   
-@media (min-width: 2560px) {
-        width: 20rem;
-    }
-
-`;
-
-
-//ELSON
-
-export const DepositionsSlideElson = styled.div`
-width: 40rem;
-height: 25rem;
-box-shadow: 0px 0px 22px #00000029;
-border: 2px solid #00145d;
-border-radius: 20px;
-display: flex;
-flex-direction: column;
-align-items: center; 
-justify-content: center;
-margin-top: 10rem;
-
-@media (min-width: 2560px) {
-    width: 80rem;
-    height: 40rem;
-}
-`;
 export const ImageElson = styled.img`
-    width: 15.375rem;
-    margin-top: -8rem;
+    width: 15rem;
+    margin-top: -7rem;
 
     @media (min-width: 2560px) {
-        width: 20.375rem;
-        margin-top: -13rem;
+        width: 19rem;
+        margin-top: -10rem;
     }
-`;
-export const DescriptionElson = styled.p`
-    color: #272727;
-    width: 85%;
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.5rem;
-
-    @media (min-width: 2560px) {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-
-`;
-export const IdentificationElson = styled.div`
-width: 90%;
-height: 30%;
-display: flex;
-justify-content: space-around;
-align-items: center;
-margin-top: 2rem;
-border-top: 2px solid #FED5B2;
-`;
-export const IdentificationElsonText = styled.div`
-
-
-`;
-export const IdentificationElsonCompany = styled.div`
-
-
-`;
-export const ImageElsonCompany = styled.img`
-@media (min-width: 2560px) {
-    width: 20rem;
-}
 
 `;
 
@@ -336,10 +233,7 @@ export const DepositionsSlidesResponsive = styled.div`
     display: none;
 
     @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
+        display: flex;  
     }
     
 `;
@@ -347,8 +241,10 @@ export const DepositionsSlidesResponsive = styled.div`
 export const AnimationSlide = styled.div`
 
     @media (max-width: 768px) {
-     
+        overflow: hidden;
+        overflow-x: scroll;
     }
+    
     
 `;
 
@@ -365,6 +261,7 @@ export const BoxSlide = styled.div`
         flex-direction: column;
         align-items: center;  
         justify-content: space-around; 
+
          
 }
 
@@ -386,6 +283,7 @@ export const DescriptionResponsive = styled.p`
 
 @media (max-width: 360px) {
     font-size: 0.8rem;
+    line-height: 1.2rem; 
 
 }
 `;

@@ -61,7 +61,7 @@ export const InfoBox = styled.div`
 `;
 
 export const CaseTitle = styled.h2`
-    font: 800 2.6em sans-serif;
+    font: 800 2.6em 'Usual', sans-serif;
     line-height: 1.2;
     color: #0f2b92;
 
@@ -76,7 +76,7 @@ export const CaseTitle = styled.h2`
 
 export const CaseText = styled.p`
     margin-top: 0.8rem;
-    font: 300 1.3em sans-serif;
+    font: 300 1.3em 'Usual', sans-serif;
     line-height: 1.5;
 
     @media (max-width: 1200px) {
@@ -91,7 +91,7 @@ export const CaseText = styled.p`
 
 export const Hashtag = styled.p`
     margin: 1.5rem 0 2.5rem;
-    font: 600 1.2em sans-serif;
+    font: 600 1.2em 'Usual', sans-serif;
     color: #ff611e;
 
     @media (max-width: 1200px) {
@@ -118,14 +118,14 @@ export const ClientBox = styled.div``;
 export const ClientText = styled.p`
     display: flex;
     flex-direction: column;
-    font: 600 1em sans-serif;
+    font: 600 1em 'Usual', sans-serif;
     color: #0f2b92;
     text-transform: uppercase;
 
     span{
         margin-top: 0.6rem;
-        font: 300 1.2em sans-serif;
-        color: #000;
+        font: 300 1.2em 'Usual', sans-serif;
+        color: #000;00
     }
 
     @media (max-width: 500px) {

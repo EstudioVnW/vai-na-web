@@ -14,22 +14,22 @@ align-items: center;
 justify-content: center;
 
 @media (min-width: 2560px) {
-	height: 60rem;
+	min-height: 60rem;
 	width: 75%;
  }
 
  @media (max-width: 1920px){
-	height: 40rem;
+	min-height: 40rem;
 	width: 75%;
 }
  
  @media (max-width: 1440px) {
-	height: 30rem;
+	min-height: 32rem;
 	width: 70%;
  }
 
  @media (max-width: 1360px){
-	height: 35rem;
+	min-height: 35rem;
 	width: 75%;
 }
 
@@ -77,7 +77,7 @@ color: #FF611E;
 }
 
  @media (max-width: 1440px){
-	font-size: 2.8rem;
+	font-size: 2.6rem;
 	width: 100%;
  }
 
@@ -114,7 +114,7 @@ color: #272727;
 }
 
  @media (max-width: 1440px){
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	width: 90%;
  }
 

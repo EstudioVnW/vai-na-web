@@ -75,6 +75,22 @@ const Nav = (props) => {
 						Reserve seu Squad
 					</Button>
 				)}
+
+				{!isDesktop && (
+					<S.Footer>
+						<S.Items>
+							<Link>Media Kit</Link>
+						</S.Items>
+
+						<S.Items>
+							<Link>Perguntas Frequentes</Link>
+						</S.Items>
+
+						<S.Items>
+							<Link to={'/contact'} rel="noopener noreferrer">Contato</Link>
+						</S.Items>
+					</S.Footer>
+				)}
 			</S.Wrap>
 		</S.Menu>
 	)

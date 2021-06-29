@@ -10,12 +10,11 @@ display: flex;
 flex-direction: column;
 
 @media (max-width: 768px) {
-	height: 85rem;
-
+	min-height: 85rem;
 }
 
 @media (max-width: 360px) {
-	height: 165vh;
+	min-height: 165vh;
 }
 
 `;
@@ -45,7 +44,7 @@ color: #00145D;
 }
 
 @media (max-width: 1440px){
-	font-size: 2.8rem;
+	font-size: 2.6rem;
 }
 
 @media (max-width: 1360px){
@@ -79,7 +78,7 @@ color: #272727;
 }
 
 @media (max-width: 1440px){
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 @media (max-width: 1360px){

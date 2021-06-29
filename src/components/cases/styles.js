@@ -7,15 +7,11 @@ export const Cases = styled.div`
 	align-items: center;
 	flex-direction: column;
 	margin-top: 3rem;
-
-	@media (max-width: 768px) {
-		width: 100%;
-	}
-
 `;
 
 export const BoxCasesImages = styled.div`
 	@media (max-width: 768px) {
+		width: 100%;
 		overflow: hidden;
 		overflow-x: scroll;	
 	}
@@ -30,6 +26,8 @@ export const CasesImages = styled.div`
 	flex-wrap: wrap;
 
 	@media (max-width: 768px) {
+		width: 800vw;
+		justify-content: space-evenly;
 		flex-wrap: nowrap;
 	}
 `;
@@ -60,7 +58,7 @@ export const BoxImage = styled.figure`
 
 	@media (max-width: 768px) {
 		filter: none;
-		width: 50rem;
+		width: 100vw;
 		height: auto;
 
 		&:hover{
@@ -72,15 +70,13 @@ export const BoxImage = styled.figure`
 `;
 export const ImageCases = styled.img`
 	max-width: 100%;
-	max-height: 5rem;
 
 	@media (min-width: 2560px) {
 		max-height: 20rem;
 	}
 
 	@media (max-width: 768px) {
-		width: 100%;
-		
+		width: 50%;
 	}
 
 `;
@@ -90,7 +86,5 @@ export const ButtonCases = styled.div`
 export const StyledLink = styled(Link)`
 	color: #0F2B92;
 	font-size: 1.125rem;
-	text-decoration: none;
-	
-	
+	text-decoration: none;	
 `;

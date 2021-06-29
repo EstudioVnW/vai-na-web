@@ -4,23 +4,25 @@ import * as S from './styles';
 //Image
 import ImageHome from '../../images/images/VNW-66.png';
 
-const Header = (props) => {
+const Header = () => {
 	return (
 		<S.Header>
-			<S.CardHome>
-				<S.BoxCircle>
-					<S.Circles>
-						<S.Circle />
-						<S.Circle />
-						<S.Circle />
-					</S.Circles>
-					<S.TextCircle>#deeptalent</S.TextCircle>
-				</S.BoxCircle>
-				<S.Line></S.Line>
-				<S.Title>Acelere suas entregas digitais</S.Title>
-				<S.SubTitle>Com a força da diversidade e inclusão</S.SubTitle>
-			</S.CardHome>
-			<S.ImageEstudio src={ImageHome} alt='FotoEStudio' />
+			<S.Wrap>
+				<S.CardHome>
+					<S.BoxCircle>
+						<S.Circles>
+							<S.Circle />
+							<S.Circle />
+							<S.Circle />
+						</S.Circles>
+						<S.TextCircle>#deeptalent</S.TextCircle>
+					</S.BoxCircle>
+					<S.Line></S.Line>
+					<S.Title>Acelere suas entregas digitais</S.Title>
+					<S.SubTitle>Com a força da diversidade e inclusão</S.SubTitle>
+				</S.CardHome>
+				<S.ImageEstudio src={ImageHome} alt='FotoEStudio' />
+			</S.Wrap>
 		</S.Header>
 	)
 }
