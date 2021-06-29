@@ -4,27 +4,14 @@ export const SquadsContainer = styled.section`
   max-width: 90vw;
   min-height: 70vh;
   margin: 0 auto;
-  padding: 6rem 1.9rem;
-
-  @media (max-width: 1366px) {
-    max-width: 85vw;
-    padding: 0.5rem 3rem;
-  }
+  padding: 0 1rem;
 
   @media (max-width: 1024px) {
     max-width: 100vw;
     display-flex;
     align-items: flex-start;
     justify-content: center;
-    padding-bottom: 10rem;
-  }
-
-  @media (max-width: 790px) {
-    padding: 0 0; 
-    padding-bottom: 4rem;
-    max-width: 100vw;
-    justify-content: space-around;
-    margin-bottom: 8rem;
+    padding-bottom: 15rem;
   }
 `;
 
@@ -47,23 +34,17 @@ export const SquadsTitle = styled.h2`
   padding: 0 1.55rem;
   margin-bottom: 1rem;
 
-  @media (max-width: 1366px) {
-    font-size: 2rem;
-    padding: 0 1rem;
-    line-height: 2.625rem;
-  }
-
   @media(max-width: 1024px) {
     width: 87.3vw;
-    font-size: 1.980rem;
-    line-height: 2.5rem;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
   }
 
-  @media(max-width: 425px) {
-    width: 100vw;
-    font-size: 1.3rem;
+   @media(max-width: 425px) {
+    width: 100%;
+    font-size: 1.8rem;
     line-height: 2.2rem;
-  }
+  } 
 `;
 
 export const SquadsText = styled.p`
@@ -72,30 +53,20 @@ export const SquadsText = styled.p`
   line-height: 2.438rem;
   margin: 0;
 
-  @media(max-width: 1366px) {
-    font-size: 1.150rem;
-    line-height: 2rem;
-    padding: 0 1rem;
-  }
-
   @media(max-width: 1024px) {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   @media(max-width: 425px) {
-    font-size: 1.020rem;
-    line-height: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
     width: 95%;
   }
 `;
 
 export const SquadsImg = styled.img`
   width: 100%;
-  
-  @media(max-width: 1366px) {
-    width: 100%;
-  }
 
   @media(max-width: 1024px) {
     display: none;
@@ -107,13 +78,9 @@ export const SquadsImgMobile = styled.img`
   width: 100vw;
 
   @media(max-width: 1024px) {
-    display: flex;
-    width: 75%;
-    padding-top: 2rem;
-  }
-
-  @media(max-width: 425px) {
+    display: block;
     width: 100%;
+    padding-top: 2rem;
   }
 `;
 
