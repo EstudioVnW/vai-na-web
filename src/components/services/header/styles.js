@@ -7,23 +7,19 @@ export const HeaderContainer = styled.section`
 	height: calc(100vh - 7rem);
 	position: relative;
 
-/* 	@media (max-width: 790px) {
-	align-items: center;
-	justify-content: flex-start
-} */
+	@media (max-width: 1440px) {
+		height: auto;
+	}
 `;
 
 export const HImg = styled.img`
 	width: 100%;
-/* 	@media (max-width: 1366px) {
-	width: 85%;
-} */
+
 	@media (max-width: 790px) {
 	display: block;
 	width: 100%;
 }
 `;
-
 
 export const HText = styled.p`
 
@@ -31,7 +27,7 @@ export const HText = styled.p`
 
 export const HDownArrow = styled.figure`
 	position: absolute;
-	bottom: 0%;
+	bottom: 5%;
 	left: 0;
 
 	@media (max-width: 790px) {
@@ -53,7 +49,6 @@ export const HTextBox = styled.div`
 		font-size: 0.8rem;
 		line-height: 1.2rem
 	}
-	
 `;
 
 export const HImgLogo = styled.img`
@@ -63,12 +58,8 @@ export const HImgLogo = styled.img`
 	z-index: 5;
 	width: 15%;	
 
-	@media (max-width: 1024px) {
-		width: 20%;	
-	}
-
 	@media (max-width: 790px) {
-    top: 100%;
+    top: 106%;
 	left: 45%;
     transform: translate(-50% , -50%);
 	}
@@ -82,19 +73,11 @@ export const HeaderWrap = styled.div`
 	justify-content: flex-end;
 	align-items: center;
 
-	@media (max-width: 1024px) {
+	@media (max-width: 1440px) {
 		align-items: center;
+		min-height: 0;
+		padding: 5rem 0;
 	}
- 
-	 @media (max-width: 790px) {
-		justify-content: center;
-		align-items: center;
-	 }
- 
-	 @media (max-width: 425px) {
-		 justify-content: flex-end;
-		 align-items: center; 
-	 }
 `;
 
 export const HImgBox = styled.figure`
@@ -127,7 +110,7 @@ export const HCard = styled.div`
 	}
 
 	@media (max-width: 1024px) {
-		bottom: 25%;
+		bottom: 35%;
 	}
 
 	@media (max-width: 790px) {

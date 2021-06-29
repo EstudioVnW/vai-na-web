@@ -5,16 +5,17 @@ import squadsIcon from '../../../images/images/squadsIcon.png';
 export const SquadsContainer = styled.section`
   position: relative;
   display: flex;
-  padding: 2rem 0;
-  max-width: 95vw;
-  height: 75vh;
-  margin: 0 auto;
+  max-width: 100vw;
+  min-height: 70vh;
 
-  @media (max-width: 790px) {
-    padding: 0;
-    padding-bottom: 3rem;
+ @media (max-width: 1024px) {
     align-items: flex-end;
-  }
+    min-height: 0;
+ }
+
+  @media (max-width: 425px) {
+   padding-top: 5rem;
+ } 
 `;
 
 export const SquadsBg = styled.div`
@@ -28,13 +29,12 @@ export const SquadsBg = styled.div`
   justify-content: space-evenly;
 
   @media (max-width: 1024px) {
-    align-items: center;
-    padding-top: 6rem;
-    padding-bottom: 1rem;
-    padding-left: 0;
     width: 100%;
+    align-items: center;
+    padding-left: 0;
     border-radius: 0;
-    justify-content: flex-end;
+    justify-content: center;
+    position: relative;
   }
 `;
 
@@ -53,6 +53,7 @@ export const SquadsText = styled.p`
     font-size: 1.2rem;
     line-height: 2rem;
     width: 50%;
+    order: 1;
   }
 
   @media(max-width: 425px) {
@@ -64,7 +65,12 @@ export const BoxButton = styled.div `
   height: 5rem;
   display: flex;
   align-items: center;
+  padding: 2rem 0;
   
+  @media (max-width: 1024px) {
+    order: 2;
+  }
+
   @media (max-width: 790px) {
     width: 100%;
     justify-content: center;
@@ -84,8 +90,12 @@ export const SquadsBox = styled.figure`
   position: absolute;
 
   @media (max-width: 1024px) {
-    left: 50%;
-    transform: translate(-50% , -120%);
+    position: initial;
+    transform: none;
+    order: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
   }
 
   @media(max-width: 790px) {
@@ -102,9 +112,9 @@ export const SquadsBox = styled.figure`
 `;
 
 export const SquadsImg = styled.img`
- /*  @media (max-width: 425px) {
-    width: 100%;
-  } */
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `;
 
 export const SquadsIcon = styled.div`
@@ -123,14 +133,18 @@ export const SquadsIcon = styled.div`
   background-size: cover;
   cursor: pointer;
 
-  @media (max-width: 790px) {
+  @media (max-width: 1024px) {
     left: 50%;
     top: 0;
+  }
+
+  @media (max-width: 790px) {
     width: 25vw;
     height: 25vw;
   }
 
   @media(max-width: 425px) {
+    top: -5%;
     width: 42vw;
     height: 42vw;
   }
