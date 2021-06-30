@@ -1,5 +1,14 @@
 import React from 'react';
 import * as S from './styles'
+import Button from '../../button/Button';
+
+import { navigate } from 'gatsby';
+
+
+
+const redirectToContact = () => {
+    navigate('/contact/');
+}
 
 const CasesCalltoaction = () => (
     <S.CallContainer>
@@ -7,6 +16,16 @@ const CasesCalltoaction = () => (
             <S.TitleBox>
                 <S.Title>Você tem desafios semelhantes?</S.Title>
                 <S.SubTitle>Deixa a gente te ajudar</S.SubTitle>
+                <S.ButtonBox>
+                    <Button
+                        border='#0e2762'
+                        color='#fbd4b2'
+                        background='#0F2B92'
+                        funcAction={redirectToContact}
+                    >
+                        Reserve seu Squad!
+                    </Button>
+                </S.ButtonBox>
             </S.TitleBox>
 
             <S.TextBox>
