@@ -32,6 +32,7 @@ export const SquadsBg = styled.div`
     width: 100%;
     align-items: center;
     padding-left: 0;
+    padding-bottom: 1rem;
     border-radius: 0;
     justify-content: center;
     position: relative;
@@ -41,13 +42,7 @@ export const SquadsBg = styled.div`
 export const SquadsText = styled.p`
   width: 59.5%;
   font: 300 1.8rem 'Usual', sans-serif;
-  line-height: 3rem;
-
-  @media (max-width: 1366px) {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    width: 40%;
-  }
+  line-height: 2.5rem;
 
   @media (max-width: 1024px) {
     font-size: 1.2rem;

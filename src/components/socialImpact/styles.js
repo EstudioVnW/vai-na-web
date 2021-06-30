@@ -11,6 +11,7 @@ flex-direction: column;
 
 @media (max-width: 768px) {
 	min-height: 85rem;
+	margin-top: 2.3rem;
 }
 
 @media (max-width: 480px) {
@@ -34,21 +35,10 @@ justify-content: center;
 export const SocialImpactTextTitle = styled.h1`
 margin-left: 5%;
 color: #00145D;
+font-size: 2.6rem;
 
 @media (min-width: 2560px) {
 	font-size: 5rem;
-}
-
-@media (max-width: 1920px){
-	font-size: 3.5rem;
-}
-
-@media (max-width: 1440px){
-	font-size: 2.6rem;
-}
-
-@media (max-width: 1360px){
-	font-size: 2.5rem;
 }
 
 @media (max-width: 768px) {
@@ -67,22 +57,15 @@ width: 57%;
 margin-left: 5%;
 margin-top: 15px;
 color: #272727;
+font-size: 1.5rem;
+line-height: 2rem;
 
 @media (min-width: 2560px) {
 	width: 70%;
 	font-size: 2.5rem;
 }
 
-@media (max-width: 1920px){
-	font-size: 1.5rem;
-}
-
-@media (max-width: 1440px){
-	font-size: 1.2rem;
-}
-
 @media (max-width: 1360px){
-	font-size: 1rem;
 	width: 80%;
 }
 

@@ -14,18 +14,15 @@ export const InfoContainer = styled.section`
 
 export const InfoTitle = styled.h2`
   margin: 1rem 3rem;
-  font: 800 3rem 'Usual', sans-serif;
+  font: 800 2.6rem 'Usual', sans-serif;
   color: #00145d;
-
-  @media (max-width: 790px) {
-    font-size: 2.5rem;
-    width: 100%;
+  width: 100%;
   }
 `;
 
 export const InfoText = styled.p`
   margin-left: 3rem;
-  font: 300 1.5em 'Usual', sans-serif;
+  font: 300 1.5rem 'Usual', sans-serif;
 
   @media (max-width: 430px) {
     margin: 0;
