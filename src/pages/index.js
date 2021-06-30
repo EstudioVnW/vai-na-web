@@ -60,7 +60,7 @@ export const query = graphql`
 
 const Home = (props) => {
   return (
-    <Layouts home>
+    <Layouts home={true}>
       <Content>
         <Header/>
         <Cases />

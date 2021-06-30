@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SquadsContainer = styled.section`
   max-width: 90vw;
-  min-height: 70vh;
+  min-height: 50vh;
   margin: 0 auto;
   padding: 0 1rem;
 
@@ -11,7 +11,7 @@ export const SquadsContainer = styled.section`
     display-flex;
     align-items: flex-start;
     justify-content: center;
-    padding-bottom: 15rem;
+   /*  padding-bottom: 15rem; */
   }
 `;
 

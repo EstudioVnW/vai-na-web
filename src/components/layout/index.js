@@ -5,10 +5,10 @@ import * as S from './styles';
 import Nav from '../nav';
 import Footer from '../footer';
 
-const Layouts = ({children}) => {
+const Layouts = ({home, children}) => {
   return (
     <S.Container>
-      <Nav />
+      <Nav home={home} />
         <S.Main>
           {children}
         </S.Main>
