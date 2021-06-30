@@ -2,12 +2,8 @@ import styled from 'styled-components';
 
 export const InfoContainer = styled.section`
   padding: 6rem 4rem;
-
-  @media (max-width: 1366px) {
-    padding: 4rem 4rem;
-  }
-
-  @media (max-width: 430px) {
+  
+  @media (max-width: 790px) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,26 +13,19 @@ export const InfoContainer = styled.section`
 `;
 
 export const InfoTitle = styled.h2`
-  margin: 1rem 4.5vw;
-  font: 800 2.3em 'Usual', sans-serif;
+  margin: 1rem 3rem;
+  font: 800 3rem 'Usual', sans-serif;
   color: #00145d;
-  
-  @media (max-width: 1366px) {
-    margin: .5rem 4.5vw;
-    font-size: 1.8em;
-    line-height: 2.25rem;
+
+  @media (max-width: 790px) {
+    font-size: 2.5rem;
+    width: 100%;
   }
-  
 `;
 
 export const InfoText = styled.p`
-  margin-left: 4.5vw;
-  font: 300 1.9em 'Usual', sans-serif;
-
-  @media (max-width: 1366px) {
-    font-size: 1.3em;
-    line-height: 2.25rem;
-  }
+  margin-left: 3rem;
+  font: 300 1.5em 'Usual', sans-serif;
 
   @media (max-width: 430px) {
     margin: 0;
@@ -58,20 +47,12 @@ export const Infographic = styled.picture`
     padding: .5rem 2vw;
     margin: 1rem 0;
   }
-
-  @media (max-width: 430px) {
-    margin-top: 2rem;
-  }
 `;
 
 export const InfoImg = styled.img`
   width: 100%;
 
-  @media (max-width: 1366px) {
-    width: 90%;
-  }
-
-  @media (max-width: 430px) {
+  @media (max-width: 790px) {
     display: none;
   }
 `;
@@ -80,7 +61,7 @@ export const InfoImgMobile = styled.img`
   display: none;
   width: 100%;
 
-  @media (max-width: 430px) {
+  @media (max-width: 790px) {
     display: block;
   }
 `;

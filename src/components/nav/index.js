@@ -7,26 +7,9 @@ import * as S from './styles';
 // images
 import logo from '../../images/icons/logo-VNW.svg';
 
-const Nav = (props) => {
+const Menu = (props) => {
 	const [isShow, setIsShow] = useState(false);
-
-	const handleMenu = () => {
-		setIsShow(!isShow)
-	}
-
 	const [scrollPosition, setScrollPosition] = useState(0);
-	const handleScroll = () => {
-		const position = window.pageYOffset;
-		setScrollPosition(position);
-	};
-
-	useEffect(() => {
-		window.addEventListener('scroll', handleScroll, { passive: true });
-	
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
 
 	let widthViewPort;
 
@@ -34,14 +17,33 @@ const Nav = (props) => {
 		widthViewPort = document.documentElement.clientWidth
 	}
 
+	const handleMenu = () => {
+		setIsShow(!isShow)
+	}
+
+	const handleScroll = () => {
+		const position = window.pageYOffset;
+		setScrollPosition(position);
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
+
 	const isDesktop = widthViewPort > 769
 
 	const redirectToConcact = () => {
 		navigate('/contact/');
 	}
 
+	const isScrolled = scrollPosition > 0
+
 	return (
-		<S.Menu home={props.home} isScrolled={scrollPosition > 0}>
+		<S.Menu home={props.home} isScrolled={isScrolled}>
 			<S.Figure>
 				<Link to={'/'}>
 					<S.Logo src={logo} alt='Logotipo' />
@@ -80,9 +82,25 @@ const Nav = (props) => {
 						Reserve seu Squad
 					</Button>
 				)}
+
+				{!isDesktop && (
+					<S.Footer>
+						<S.Items>
+							<Link>Media Kit</Link>
+						</S.Items>
+
+						<S.Items>
+							<Link>Perguntas Frequentes</Link>
+						</S.Items>
+
+						<S.Items>
+							<Link to={'/contact'} rel="noopener noreferrer">Contato</Link>
+						</S.Items>
+					</S.Footer>
+				)}
 			</S.Wrap>
 		</S.Menu>
 	)
 }
 
-export default Nav;
+export default Menu;

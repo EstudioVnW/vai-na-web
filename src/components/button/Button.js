@@ -28,7 +28,7 @@ const ContentButton = styled.button`
     font-size: 2rem;
   }  
 
-  @media (max-width: 360px) {
+  @media (max-width: 768px) {
     font-size: 1rem;
 		width: 17rem;
 		height: 4rem;

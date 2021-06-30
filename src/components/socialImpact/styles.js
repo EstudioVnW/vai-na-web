@@ -10,12 +10,11 @@ display: flex;
 flex-direction: column;
 
 @media (max-width: 768px) {
-	height: 85rem;
-
+	min-height: 85rem;
 }
 
-@media (max-width: 360px) {
-	height: 165vh;
+@media (max-width: 480px) {
+	min-height: 165vh;
 }
 
 `;
@@ -45,7 +44,7 @@ color: #00145D;
 }
 
 @media (max-width: 1440px){
-	font-size: 2.8rem;
+	font-size: 2.6rem;
 }
 
 @media (max-width: 1360px){
@@ -57,7 +56,7 @@ color: #00145D;
 	font-size: 3.5rem;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	font-size: 2rem;
 	width: 90%;
 }
@@ -79,7 +78,7 @@ color: #272727;
 }
 
 @media (max-width: 1440px){
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 
 @media (max-width: 1360px){
@@ -93,7 +92,7 @@ color: #272727;
 	line-height: 50px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	font-size: 1rem;
 	line-height: 25px;
 	width: 90%;
@@ -129,14 +128,14 @@ display:none;
 	justify-content: center;
 	margin-top: 50px;
 }
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	margin-top: 20px;
 }
 
 `;
 
 export const SocialImpactImageInfoResponsive = styled.img`
-@media (max-width: 360px) {
+@media (max-width: 480px) {
 	width: 80%;
 }
 `;
