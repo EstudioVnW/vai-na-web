@@ -90,38 +90,63 @@ export const DepositionsSubTitle = styled.h2`
 
 export const DepositionsSlides = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: center;
+justify-content: space-around;
 margin-top: 8rem;
+/* width: 600px; */
 
 @media (max-width: 768px) {
     display: none;
 }
 `;
 
+export const Seta = styled.img`
+    max-width: 2rem;
+
+`;
+
 
 //VANIA
 
 export const DepositionsSlideCard = styled.div`
-    width: 40rem;
-    min-height: 27rem;
+    width: 60rem;
+    max-height: 21rem;
     box-shadow: 0px 0px 22px #00000029;
-    border: 2px solid #00145d;
+    border: ${props => props.focus ? '2px solid #00145d' : '2px solid #FFAC2D'};
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 6rem;
+    order: ${props => props.order};
+    transform: ${props => props.focus ? 'scale(1.25)' : 'none'};
+    background: #FFF;
 
     @media (min-width: 2560px) {
         width: 80rem;
         min-height: 40rem;
     }
+
+    p{
+        display: ${props => props.focus ? 'block' : 'none'};
+    }
+    section{
+        flex-direction: ${props => props.focus ? 'row' : 'column'};
+        border-top: ${props => props.focus ? '2px solid #FED5B2' : 'none'};
+    }
+
 `;
+export const BoxSlideDepositions = styled.div`
+    display: flex;
+    max-width: 90%;
+`;
+
+
 export const Image = styled.img`
-width: 15.375rem;
-margin-top: -9rem;
+width: 13.375rem;
+margin-top: -6rem;
 
 @media (min-width: 2560px) {
     width: 20.375rem;
@@ -133,30 +158,33 @@ export const Description = styled.p`
     color: #272727;
     width: 85%;
     text-align: left;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin-bottom: 2rem;
+    
 
     @media (min-width: 2560px) {
         font-size: 2rem;
         line-height: 2.5rem;
     }
 `;
-export const Identification = styled.div`
+export const Identification = styled.section`
 width: 90%;
 display: flex;
 justify-content: space-around;
 align-items: center;
-margin-top: 2rem;
-border-top: 2px solid #FED5B2;
+margin-bottom: 2rem;
 height: 30%;
 
 `;
 export const IdentificationText = styled.div`
-
+    margin-top: 1rem;
+    width: 70%;
 
 `;
 export const IdentificationCompany = styled.div`
-
+    margin-top: 1rem;
+    width: 30%;
 
 `;
 export const ImageCompany = styled.img`
@@ -167,8 +195,8 @@ export const ImageCompany = styled.img`
 `;
 
 export const ImagePatricia = styled.img`
-    width: 14rem;
-    margin-top: -8rem;
+    width: 12rem;
+    margin-top: -5rem;
 
     @media (min-width: 2560px) {
         width: 19rem;
@@ -178,8 +206,8 @@ export const ImagePatricia = styled.img`
 `;
 
 export const ImageElson = styled.img`
-    width: 15rem;
-    margin-top: -7rem;
+    width: 13rem;
+    margin-top: -6rem;
 
     @media (min-width: 2560px) {
         width: 19rem;
@@ -190,8 +218,8 @@ export const ImageElson = styled.img`
 
 export const Name = styled.h1`
 color: #FF611E;
-
-
+font-size: 2rem;
+width: 100%;
 @media (min-width: 2560px) {
     font-size: 4rem;
     
@@ -204,6 +232,7 @@ color: #FF611E;
 `;
 export const Office = styled.p`
 color: #00145D;
+font-size: 0.8rem;
 
 @media (min-width: 2560px) {
     font-size: 2rem;
