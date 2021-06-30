@@ -38,8 +38,8 @@ export const HDownArrow = styled.figure`
 
 export const HTextBox = styled.div`
 	width: 65%;
-	font: 300 1.3rem sans-serif;
-	line-height: 2rem;
+	font: 300 1.2rem sans-serif;
+	line-height: 1.7rem;
 
 	@media (max-width: 1366px) {
 		font-size: 1.5rem;
@@ -103,7 +103,7 @@ export const HCard = styled.div`
 	padding: 1.35rem;
 	position: absolute;
 	left: 0;
-	bottom: 30%;
+	bottom: 20%;
 	border-radius: 10px;
 
 	@media (max-width: 1366px) {
@@ -149,7 +149,7 @@ export const HCardCircle = styled.div`
 
 export const HCardText = styled.h1`
 	padding: 1.4rem 0.5rem 0.5rem;
-	font: 800 2rem 'Usual', sans-serif;
+	font: 800 3rem 'Usual', sans-serif;
 	color: #00145d;
 	line-height: 1.2;
 	

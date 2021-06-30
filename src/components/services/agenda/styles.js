@@ -51,14 +51,8 @@ export const AgendaImg = styled.figure`
 `;
 
 export const AgendaTitle = styled.h2`
-  font: 800 3rem 'Usual', sans-serif;
-  line-height: 3.625rem;
+  font: 800 2.6rem 'Usual', sans-serif;
   color: #00145d;
-
-  @media (max-width: 1366px) {
-    font-size: 2rem;
-  }
-
 
   @media (max-width: 790px) {
     font-size: 1.875rem;
@@ -69,14 +63,10 @@ export const AgendaTitle = styled.h2`
 export const AgendaText = styled.p`
   margin-top: 1.8rem;
   font: 300 1.5rem 'Usual', sans-serif;
-  line-height: 2.125rem;
-
-  @media (max-width: 1366px) {
-    font-size: 1.040rem;
-  }
+  line-height: 2rem;
 
   @media (max-width: 1120px) {
-    font-size: 1rem;
+    font-size: 1.3rem;
     width: 90%;
   }
 
