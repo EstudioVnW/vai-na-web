@@ -5,6 +5,7 @@ export const HeaderContainer = styled.section`
 	align-items: center;
 	justify-content: center;
 	height: calc(100vh - 7rem);
+	margin-top: 7rem;
 	position: relative;
 
 	@media (max-width: 1440px) {

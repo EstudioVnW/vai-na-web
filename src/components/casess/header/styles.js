@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-    padding: 7rem;
+    padding: 14rem 7rem 7rem 7rem;
     background: #ffe9e0;  
 
     @media (max-width: 800px) {
-        padding: 7rem 4rem 2.5rem;
+        padding: 14rem 4rem 2.5rem;
     }
 `;
 
