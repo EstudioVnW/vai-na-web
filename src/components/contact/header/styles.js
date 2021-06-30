@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const Hheader = styled.header``;
 
 export const HeaderContainer = styled.section`
-    padding: 4vw 5.95vw;
+    padding: calc(4vw + 7rem) 5.95vw 4vw 5.95vw; 
 
     @media (max-width: 1024px) {
-        padding: 4vw 0;
+        padding: calc(4vw + 7rem) 0 4vw 0;
     }
 `;
 
