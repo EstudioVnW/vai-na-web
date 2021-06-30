@@ -8,7 +8,7 @@ import Footer from '../footer';
 const Layouts = ({home, children}) => {
   return (
     <S.Container>
-      <Nav home = {home}/>
+      <Nav home={home} />
         <S.Main>
           {children}
         </S.Main>

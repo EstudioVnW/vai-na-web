@@ -7,14 +7,20 @@ import * as S from './styles';
 // images
 import logo from '../../images/icons/logo-VNW.svg';
 
-const Nav = (props) => {
+const Menu = (props) => {
 	const [isShow, setIsShow] = useState(false);
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	let widthViewPort;
+
+	if (typeof document !== 'undefined') {
+		widthViewPort = document.documentElement.clientWidth
+	}
 
 	const handleMenu = () => {
 		setIsShow(!isShow)
 	}
 
-	const [scrollPosition, setScrollPosition] = useState(0);
 	const handleScroll = () => {
 		const position = window.pageYOffset;
 		setScrollPosition(position);
@@ -22,17 +28,11 @@ const Nav = (props) => {
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll, { passive: true });
-	
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
 
-	let widthViewPort;
-
-	if (typeof document !== `undefined`) {
-		widthViewPort = document.documentElement.clientWidth
-	}
 
 	const isDesktop = widthViewPort > 769
 
@@ -40,10 +40,12 @@ const Nav = (props) => {
 		navigate('/contact/');
 	}
 
+	const isScrolled = scrollPosition > 0
+
 	return (
-		<S.Menu home={props.home} isScrolled={scrollPosition > 0}>
+		<S.Menu home={props.home} isScrolled={isScrolled}>
 			<S.Figure>
-				<Link to={'/'}>
+				<Link to={'/#'}>
 					<S.Logo src={logo} alt='Logotipo' />
 				</Link>
 			</S.Figure>
@@ -53,7 +55,7 @@ const Nav = (props) => {
 			<S.Wrap isShow={isShow}>
 				<S.NavList>
 					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
-						<Link to={'/'}>Sobre</Link>
+						<Link to={'/#'}>Sobre</Link>
 					</S.NavItem>
 					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
 						<Link to={'/services'}>Serviços</Link>
@@ -85,4 +87,4 @@ const Nav = (props) => {
 	)
 }
 
-export default Nav;
+export default Menu;

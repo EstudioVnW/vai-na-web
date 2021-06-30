@@ -11,7 +11,7 @@ export const Menu = styled.nav`
 	width: 100%;
 	height: 7rem;
 	box-shadow: ${props => (props.isScrolled || !props.home) ? '0px 8px 40px #00000019' : 'none'};
-	background: ${props => (props.isScrolled || !props.home) ? '#fff' : 'none'};
+	background: ${props => (props.isScrolled || !props.home) ? '#fff' : 'transparent'};
 	z-index: 10;
 
 	@media (max-width: 1220px) {

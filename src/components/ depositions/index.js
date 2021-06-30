@@ -15,7 +15,6 @@ import ElsonCompany from '../../images/images/Petronect.png';
 
 
 const Depositions = ({ home }) => {
-
 	return (
         <S.Depositions>
             <S.DepositionsText>
@@ -26,63 +25,63 @@ const Depositions = ({ home }) => {
             </S.DepositionsText>
 
             <S.DepositionsSlides>
-                <S.DepositionsSlideVania>
-                    <S.ImageVania src={Vania} />
-                    <S.DescriptionVania>“Estes meninos e meninas são preparados 
+                <S.DepositionsSlideCard>
+                    <S.Image src={Vania} />
+                    <S.Description>“Estes meninos e meninas são preparados 
                         para o mercado de trabalho e desenvolvem entregas brilhantes. 
                         <S.Bold> O Sírio-Libanês tem muito orgulho dessa parceria que mostrou 
                         que é possível investir em inovação e formação simultaneamente.”</S.Bold>
-                    </S.DescriptionVania>
+                    </S.Description>
                     
-                    <S.IdentificationVania>
-                        <S.IdentificationVaniaText>
+                    <S.Identification>
+                        <S.IdentificationText>
                             <S.Name>Vânia Bezerra</S.Name>
                             <S.Office>Diretora de Compromisso Social</S.Office>
-                        </S.IdentificationVaniaText>
-                        <S.IdentificationVaniaCompany>
-                            <S.ImageVaniaCompany src={VaniaCompany} />
-                        </S.IdentificationVaniaCompany>
-                    </S.IdentificationVania>
-                </S.DepositionsSlideVania>
+                        </S.IdentificationText>
+                        <S.IdentificationCompany>
+                            <S.ImageCompany src={VaniaCompany} />
+                        </S.IdentificationCompany>
+                    </S.Identification>
+                </S.DepositionsSlideCard>
 
-                <S.DepositionsSlidePatricia>
+                <S.DepositionsSlideCard>
                     <S.ImagePatricia src={Patricia} />
-                    <S.DescriptionPatricia>“Even with a different language and time zone, 
+                    <S.Description>“Even with a different language and time zone, 
                         the young people of Vai na Web <S.Bold>helped us to design and develop a 
                         brand new website to serve our customers.</S.Bold> Thank you Vai na Web
                          for your commitment, dedication and creativity.”
-                    </S.DescriptionPatricia>
+                    </S.Description>
                     
-                    <S.IdentificationPatricia>
-                        <S.IdentificationPatriciaText>
+                    <S.Identification>
+                        <S.IdentificationText>
                             <S.Name>Patrícia Zaundi</S.Name>
                             <S.Office>Diretora Executiva</S.Office>
-                        </S.IdentificationPatriciaText>
-                        <S.IdentificationPatriciaCompany>
-                            <S.ImagePatriciaCompany src={PatriciaCompany} />
-                        </S.IdentificationPatriciaCompany>
-                    </S.IdentificationPatricia>
-                </S.DepositionsSlidePatricia>
+                        </S.IdentificationText>
+                        <S.IdentificationCompany>
+                            <S.ImageCompany src={PatriciaCompany} />
+                        </S.IdentificationCompany>
+                    </S.Identification>
+                </S.DepositionsSlideCard>
 
-                <S.DepositionsSlideElson>
+                <S.DepositionsSlideCard>
                     <S.ImageElson src={Elson} />
-                    <S.DescriptionElson>“<S.Bold>Criatividade e usabilidade em escala foi 
+                    <S.Description>“<S.Bold>Criatividade e usabilidade em escala foi 
                         o que conseguimos acelerar com a experiência de ter dentro 
                         da empresa jovens profissionais do Vai na Web.</S.Bold> Não apenas 
                         novos produtos mas principalmente novas experiências com grande 
                         colaboração e alto nível de responsabilidade individual.”
-                    </S.DescriptionElson>
+                    </S.Description>
                    
-                    <S.IdentificationElson>
-                        <S.IdentificationElsonText>
+                    <S.Identification>
+                        <S.IdentificationText>
                             <S.Name>Elson Cordeiro</S.Name>
                             <S.Office>Diretor de Operações e Serviços</S.Office>
-                        </S.IdentificationElsonText>
-                        <S.IdentificationElsonCompany>
-                            <S.ImageElsonCompany src={ElsonCompany} />
-                        </S.IdentificationElsonCompany>
-                    </S.IdentificationElson>
-                </S.DepositionsSlideElson>
+                        </S.IdentificationText>
+                        <S.IdentificationCompany>
+                            <S.ImageCompany src={ElsonCompany} />
+                        </S.IdentificationCompany>
+                    </S.Identification>
+                </S.DepositionsSlideCard>
             </S.DepositionsSlides>
 
             <S.DepositionsSlidesResponsive>
