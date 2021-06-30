@@ -253,7 +253,11 @@ export const DepositionsSlidesResponsive = styled.div`
     display: none;
 
     @media (max-width: 768px) {
-        display: flex;  
+        display: flex; 
+        width: 100%; 
+        overflow: scroll hidden;
+        
+        
     }
     
 `;
@@ -261,8 +265,9 @@ export const DepositionsSlidesResponsive = styled.div`
 export const AnimationSlide = styled.div`
 
     @media (max-width: 768px) {
-        overflow: hidden;
-        overflow-x: scroll;
+        display: flex;
+
+        
     }
     
     
@@ -281,13 +286,22 @@ export const BoxSlide = styled.div`
         flex-direction: column;
         align-items: center;  
         justify-content: space-around; 
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
 
          
 }
 
+    @media (max-width: 414px) {
+        margin-left: 0.8rem;
+        margin-right: 0.5rem;
+
+    }
     @media (max-width: 360px) {
         width: 20rem;
         height: 22rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
 
     }
 `;
