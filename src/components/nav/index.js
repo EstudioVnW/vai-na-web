@@ -1,27 +1,38 @@
-import React, { useState } from "react";
-import { Link } from "gatsby";
+import React, { useState, useEffect } from 'react';
+import { Link, navigate } from "gatsby";
 import Button from '../button/Button';
+
 import * as S from './styles';
 
-//Image
+// images
 import logo from '../../images/icons/logo-VNW.svg';
-import IconMenu from '../../images/images/menu_hamburger.svg';
-import IconClosed from '../../images/images/close.svg';
 
-import { navigate } from 'gatsby';
-
-const Nav = (props) => {
+const Menu = (props) => {
 	const [isShow, setIsShow] = useState(false);
+	const [scrollPosition, setScrollPosition] = useState(0);
+
+	let widthViewPort;
+
+	if (typeof document !== 'undefined') {
+		widthViewPort = document.documentElement.clientWidth
+	}
 
 	const handleMenu = () => {
 		setIsShow(!isShow)
 	}
 
-	let widthViewPort;
+	const handleScroll = () => {
+		const position = window.pageYOffset;
+		setScrollPosition(position);
+	};
 
-	if (typeof document !== `undefined`) {
-		widthViewPort = document.documentElement.clientWidth
-	}
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
 
 	const isDesktop = widthViewPort > 769
 
@@ -29,42 +40,38 @@ const Nav = (props) => {
 		navigate('/contact/');
 	}
 
+	const isScrolled = scrollPosition > 0
+
 	return (
-		<S.Menu>
+		<S.Menu home={props.home} isScrolled={isScrolled}>
 			<S.Figure>
-				<Link to={'/'} rel="noopener noreferrer">
-					<S.Image src={logo} alt='Logotipo' />
+				<Link to={'/#'}>
+					<S.Logo src={logo} alt='Logotipo' />
 				</Link>
 			</S.Figure>
-			<S.BoxImg>
-				<S.ImgMenuOpen	
-					isShow={isShow}
-					src={IconMenu}
-					alt="Icon menu hamburguer"
-					onClick={handleMenu}
-				/>
-				<S.ImgMenuClosed
-					isShow={isShow}
-					src={IconClosed}
-					alt="Icon closed menu"
-					onClick={handleMenu}
-				/>
-			</S.BoxImg>
+			<S.MenuOpen isShow={isShow} onClick={handleMenu}>
+				<span></span>
+			</S.MenuOpen>
 			<S.Wrap isShow={isShow}>
-				<S.Ul>
-					<S.Li>
-						<Link to={'/'} rel="noopener noreferrer">Sobre</Link>
-					</S.Li>
-					<S.Li>
-						<Link to={'/services'} rel="noopener noreferrer">Serviços</Link>
-					</S.Li>
-					<S.Li>
-						<Link to={'/cases'} rel="noopener noreferrer">Cases</Link>
-					</S.Li>
-					<S.Li>
-						<Link rel="noopener noreferrer">Escola</Link>
-					</S.Li>
-				</S.Ul>
+				<S.NavList>
+					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+						<Link to={'/#'}>Sobre</Link>
+					</S.NavItem>
+					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+						<Link to={'/services'}>Serviços</Link>
+					</S.NavItem>
+					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+						<Link to={'/cases'}>Cases</Link>
+					</S.NavItem>
+					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+						<Link to={'/#'} >Escola</Link>
+					</S.NavItem>
+				</S.NavList>
+				<S.BottomList isShow={isShow}>
+					<S.BottomLink to={'/#'} >Media Kit</S.BottomLink>
+					<S.BottomLink to={'/#'} >Perguntas Frequentes</S.BottomLink>
+					<S.BottomLink to={'/contact'}>Contato</S.BottomLink>
+				</S.BottomList>
 				{isDesktop && (
 					<Button
 						border='transparent'
@@ -75,25 +82,9 @@ const Nav = (props) => {
 						Reserve seu Squad
 					</Button>
 				)}
-
-				{!isDesktop && (
-					<S.Footer>
-						<S.Items>
-							<Link>Media Kit</Link>
-						</S.Items>
-
-						<S.Items>
-							<Link>Perguntas Frequentes</Link>
-						</S.Items>
-
-						<S.Items>
-							<Link to={'/contact'} rel="noopener noreferrer">Contato</Link>
-						</S.Items>
-					</S.Footer>
-				)}
 			</S.Wrap>
 		</S.Menu>
 	)
 }
 
-export default Nav;
+export default Menu;
