@@ -127,6 +127,7 @@ export const MenuOpen = styled.div`
 		height: 3px;
 		border-radius: 3px;
 		background: #FDE7A9;
+		transition: 0.5s;
 	}
 	&:before {
 		transform: ${props => props.isShow ? 'translateY(12px) rotate(-135deg) scale(1.2)' : 'translateY(0) rotate(0)'};
@@ -141,7 +142,6 @@ export const MenuOpen = styled.div`
 	@media (max-width: 768px) {
 		display: block;
 		z-index: 1;
-		transition: 0.5s;
 	}
 `;
 
