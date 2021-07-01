@@ -17,10 +17,10 @@ const Form = () => {
     const [formContent, setFormContent] = useState({})
     const [status, setStatus] = useState('')
 
-    const handleChange = (type, ev) => {
+    const handleChange = (ev) => {
         setFormContent({
             ...formContent,
-            [type]: ev.target.value,
+            [ev.target.name]: ev.target.value,
         })
     }
 
@@ -58,21 +58,21 @@ const Form = () => {
                     >
                         <S.FormLabel>
                             Nome
-                            <S.FormInput name="text" type="text" onChange={(ev) => handleChange('nome', ev)} />
+                            <S.FormInput name="text" type="text" onChange={handleChange} />
                         </S.FormLabel>
 
                         <S.FormLabel>
                             Email
-                            <S.FormInput name="email" type="email" onChange={(ev) => handleChange('email', ev)} />
+                            <S.FormInput name="email" type="email" onChange={handleChange} />
                         </S.FormLabel>
 
                         <S.FormLabel>
                             Telefone
-                            <S.FormInput name="tel" type="tel" onChange={(ev) => handleChange('telefone', ev)} />
+                            <S.FormInput name="tel" type="tel" onChange={handleChange} />
                         </S.FormLabel>
                         <S.FormLabelMsg>
                             Mensagem
-                            <S.MsgInput name="message" type="message" onChange={(ev) => handleChange('message', ev)} />
+                            <S.MsgInput name="message" type="text" onChange={handleChange} />
                         </S.FormLabelMsg>
                         {status}
                         <S.FormBtn>
