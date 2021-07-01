@@ -58,7 +58,7 @@ const Form = () => {
                     >
                         <S.FormLabel>
                             Nome
-                            <S.FormInput name="text" type="text" onChange={handleChange} />
+                            <S.FormInput name="name" type="text" onChange={handleChange} />
                         </S.FormLabel>
 
                         <S.FormLabel>
