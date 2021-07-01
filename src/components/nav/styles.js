@@ -156,9 +156,6 @@ export const BottomLink = styled(Link)`
 	font-size: 1.1em;
 	line-height: 2.2;
 	text-align: center;
-
-	a {
-		text-decoration: none;
-		cursor: pointer;
-	}
+	text-decoration: none;
+	cursor: pointer;
 `;
