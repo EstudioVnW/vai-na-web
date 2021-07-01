@@ -185,17 +185,13 @@ const LinkBox = styled.nav`
 	flex-direction: column;
 	align-content: space-between;
 	width: 27vw;
-	height: 20vh;
+	height: 12rem;
 
 	@media (max-width: 1440px) {
 		width: 38vw;
 	}
 	@media (max-width: 980px) {
 		width: 89vw;
-		height: 18vh;
-	}
-	@media (max-width: 700px) {
-		height: 27vh;
 	}
 `;
 
