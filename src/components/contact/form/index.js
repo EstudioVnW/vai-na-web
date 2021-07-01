@@ -30,7 +30,7 @@ const Form = () => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact-demo", ...formContent })
+            body: encode({ "form-name": "contact", ...formContent })
         })
             .then(() => {
                 setStatus('Email enviado com sucesso')
@@ -51,7 +51,7 @@ const Form = () => {
                     
                     <S.Form
                         name="contact"
-                        method="post"
+                        method="POST"
                         data-netlify="true"
                         netlify
                         onSubmit={handleSubmit}
