@@ -114,7 +114,7 @@ const TesteCases = () => (
                 </S.Client>
             </S.InfoBox>
             <S.ImgBox>
-                <S.Desktop src={QuickcashDesktop} alt="" />
+                <S.DesktopImg src={QuickcashDesktop} alt="" />
                 <S.MobileImg src={QuickcashMobile} alt="" />
             </S.ImgBox>
         </S.Case>
@@ -147,7 +147,7 @@ const TesteCases = () => (
                 </S.Client>
             </S.InfoBox>
             <S.ImgBox>
-                <S.CaseImg src={VotorantimDesktop} alt="" />
+                <S.DesktopImg src={VotorantimDesktop} alt="" />
                 <S.MobileImg src={VotorantimMobile} alt="" />
             </S.ImgBox>
         </S.Reverse>

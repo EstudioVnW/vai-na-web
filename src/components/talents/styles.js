@@ -59,25 +59,14 @@ justify-content: center;
 `;
 
 export const TalentsTextTitle = styled.h1`
-width: 90%;
+width: 80%;
 margin-left: 10%;
 color: #FF611E;
+font-size: 2.6rem;
 
 @media (min-width: 2560px) {
 	font-size: 5rem;
  }
-
- @media (max-width: 1920px){
-	font-size: 3.5rem;
-}
-
- @media (max-width: 1440px){
-	font-size: 2.6rem;
- }
-
- @media (max-width: 1360px){
-	font-size: 2.5rem;
-}
 
 @media (max-width: 768px) {
 	margin-left: 0;
@@ -92,30 +81,15 @@ color: #FF611E;
 `;
 
 export const TalentsTextDescription = styled.p`
-width: 65%;
+width: 80%;
 margin-left: 10%;
-margin-top: 20px;
+margin-top: 3.12rem;
 color: #272727;
+font-size: 1.5rem;
 
 @media (min-width: 2560px) {
 	font-size: 2.5rem;
  }
-
- @media (max-width: 1920px){
-	font-size: 1.5rem;
-	width: 80%;
-	margin-top: 50px;
-}
-
- @media (max-width: 1440px){
-	font-size: 1.2rem;
-	width: 90%;
- }
-
- @media (max-width: 1360px){
-	font-size: 1.5rem;
-	margin-top: 20px;
-}
 
 @media (max-width: 768px) {
 	margin-left: 0;

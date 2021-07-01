@@ -28,9 +28,9 @@ export const SquadsContent = styled.figure`
 `;
 
 export const SquadsTitle = styled.h2`
-  font: 800 3rem 'Usual', sans-serif;
+  font: 800 2.6rem 'Usual', sans-serif;
   color: #ff611e;
-  line-height: 3.625rem;
+  line-height: 3.2rem;
   padding: 0 1.55rem;
   margin-bottom: 1rem;
 
@@ -49,14 +49,9 @@ export const SquadsTitle = styled.h2`
 
 export const SquadsText = styled.p`
   padding: 0 1.55rem;
-  font: 300 1.625rem 'Usual', sans-serif;
-  line-height: 2.438rem;
+  font: 300 1.5rem 'Usual', sans-serif;
+  line-height: 2rem;
   margin: 0;
-
-  @media(max-width: 1024px) {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
 
   @media(max-width: 425px) {
     font-size: 1.2rem;
