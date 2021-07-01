@@ -399,10 +399,10 @@ const Footer = () => {
 								<Link>Sobre</Link>
 								<Link>Serviços</Link>
 								<Link>Cases</Link>
-								<Link>Escolas</Link>
-								{/* <Link>Perguntas Frequentes</Link>
-								<Link>Media Kit</Link>
-								<Link>Contato</Link> */}
+								{/* <Link>Escolas</Link>
+								<Link>Perguntas Frequentes</Link>
+								<Link>Media Kit</Link> */}
+								<Link>Contato</Link>
 							</LinkBox>
 						</div>
 
