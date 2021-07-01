@@ -129,6 +129,10 @@ font-size: 1.5rem;
    width: 100%;
 }
 
+@media (max-width: 1366px) {
+   margin-top: 15px;
+}
+
 @media (max-width: 768px) {
    font-size: 2rem;
    margin-top: 50px;
@@ -144,6 +148,11 @@ display: flex;
 align-items: start;
 justify-content: flex-start;
 margin: 2rem 0;
+
+@media (max-width: 1366px) {
+   margin: 1rem 0;
+
+}
 
 @media (max-width: 768px) {
    margin-top: 50px;

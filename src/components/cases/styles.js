@@ -12,6 +12,10 @@ export const Cases = styled.div`
 		margin-top: 1rem;
 	}
 
+	@media (max-width: 768px){
+		margin-top: 4rem;
+	}
+
 	@media (max-width: 425px){
 		margin-top: 1rem;
 	}
@@ -93,6 +97,14 @@ export const ImageCases = styled.img`
 
 	@media (max-width: 768px) {
 		width: 20rem;
+	}
+
+`;
+export const ImageCasesM4A = styled.img`
+	max-width: 70%;
+
+	@media (min-width: 2560px) {
+		max-height: 20rem;
 	}
 
 `;
