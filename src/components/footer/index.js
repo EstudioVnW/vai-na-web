@@ -185,7 +185,7 @@ const LinkBox = styled.nav`
 	flex-direction: column;
 	align-content: space-between;
 	width: 27vw;
-	height: 19vh;
+	height: 20vh;
 
 	@media (max-width: 1440px) {
 		width: 38vw;
@@ -404,9 +404,9 @@ const Footer = () => {
 								<Link>Serviços</Link>
 								<Link>Cases</Link>
 								<Link>Escolas</Link>
-								<Link>Perguntas Frequentes</Link>
+								{/* <Link>Perguntas Frequentes</Link>
 								<Link>Media Kit</Link>
-								<Link>Contato</Link>
+								<Link>Contato</Link> */}
 							</LinkBox>
 						</div>
 
