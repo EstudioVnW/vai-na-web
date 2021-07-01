@@ -326,7 +326,8 @@ export const ImagePeopleResponsive = styled.img`
 export const ImagePeopleResponsivePatricia = styled.img`
 
     @media (max-width: 768px) {
-        width: 8rem;  
+        width: 9rem;
+        height: 9rem; 
     }
     @media (max-width: 360px) {
         width: 7rem;
@@ -367,7 +368,7 @@ export const OfficeResponsive = styled.p`
 export const ImageCompanyResponsive = styled.img`
 
     @media (max-width: 768px) {
-        width: 6rem; 
+        width: 8rem; 
         margin-top: 1rem; 
     }
     @media (max-width: 360px) {
