@@ -129,7 +129,6 @@ font-size: 1.5rem;
    width: 100%;
 }
 
-
 @media (max-width: 768px) {
    font-size: 2rem;
    margin-top: 50px;
@@ -144,9 +143,7 @@ export const SquadsTextBack = styled.div`
 display: flex;
 align-items: start;
 justify-content: flex-start;
-margin-top: 20px;
 margin: 2rem 0;
-
 
 @media (max-width: 768px) {
    margin-top: 50px;
@@ -170,11 +167,11 @@ width: 6rem;
 	width: 9rem;
 }
 @media (max-width: 1440px){
-	width: 7rem;
+	width: 6rem;
 }
 
 @media (max-width: 1360px){
-	width: 7rem;
+	width: 6rem;
 }
 
 @media (max-width: 768px) {
@@ -205,6 +202,10 @@ font-size: 2rem;
    width: 100%;
 }
 
+@media (max-width: 1360px){
+	font-size: 1.5rem;
+}
+
 @media (max-width: 768px) {
    font-size: 2.5rem;
    width: 90%;
@@ -223,6 +224,11 @@ line-height: 2rem;
 @media (min-width: 2560px) {
    font-size: 2.5rem;
    width: 100%;
+}
+
+@media (max-width: 1440px){
+	font-size: 1rem;
+   line-height: 1.5rem;
 }
 
 @media (max-width: 768px) {

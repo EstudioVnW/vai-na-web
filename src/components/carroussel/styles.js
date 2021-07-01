@@ -58,6 +58,9 @@ export const DepositionsSubTitle = styled.h2`
         font-size: 1.5rem;
         margin-top: 20px;
     }
+    @media (max-width: 1360px){
+        font-size: 1.3rem;
+    }
     @media (max-width: 768px) {
 		font-size: 2rem;
         width: 75%;
@@ -77,6 +80,7 @@ flex-direction: row;
 align-items: center;
 justify-content: space-around;
 margin-top: 8rem;
+max-width: 100%;
 
 @media (max-width: 768px) {
     display: none;
@@ -104,6 +108,11 @@ export const DepositionsSlideCard = styled.div`
     order: ${props => props.order};
     transform: ${props => props.focus ? 'scale(1.25)' : 'none'};
     background: #FFF;
+
+    @media (min-width: 1024px) {
+        margin-top: 2rem;
+        min-height: 20rem;
+    }
 
     @media (min-width: 2560px) {
         width: 80rem;
@@ -142,6 +151,9 @@ export const Description = styled.p`
     line-height: 1.2rem;
     margin-bottom: 2rem;
     
+    @media (min-width: 1024px) {
+        margin-bottom: 1rem;
+    }
 
     @media (min-width: 2560px) {
         font-size: 2rem;
@@ -201,6 +213,9 @@ export const Name = styled.h1`
         font-size: 4rem;
         
     }
+    @media (min-width: 1024px) {
+        font-size: 1.5rem;
+    }
     @media (max-width: 768px) {
         font-size: 2rem;
     }
@@ -212,6 +227,11 @@ font-size: 0.8rem;
 @media (min-width: 2560px) {
     font-size: 2rem;
 }
+
+@media (min-width: 1024px) {
+        font-size: 0.7rem;
+    }
+
 @media (max-width: 768px) {
     font-size: 1rem;
 }
