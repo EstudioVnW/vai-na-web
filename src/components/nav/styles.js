@@ -27,6 +27,7 @@ export const Wrap = styled.div`
   	display: flex;
   	align-items: center;
 	padding-left: 7.25rem;
+	height: 100%;
 	transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 
 	@media (max-width: 1220px) {
@@ -75,8 +76,8 @@ export const NavItem = styled.li`
 		transition: all 0.2s ease-in;
 		cursor: pointer;
 
-		&:hover{
-			border-bottom: 0.2rem solid ${props => (props.isScrolled || !props.home) ? '#0F2B92' : '#FDE7A9'};
+		&:hover {
+			border-bottom: 0.2rem solid ${props => props.home ? '#FDE7A9' : 'none'};
 			font-weight: bold;
 		}
 	}

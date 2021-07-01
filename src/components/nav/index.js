@@ -36,7 +36,7 @@ const Menu = (props) => {
 
 	const isDesktop = widthViewPort > 769
 
-	const redirectToConcact = () => {
+	const redirectToContact = () => {
 		navigate('/contact/');
 	}
 
@@ -55,17 +55,17 @@ const Menu = (props) => {
 			<S.Wrap isShow={isShow}>
 				<S.NavList>
 					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
-						<Link to={'/#'}>Sobre</Link>
+						<Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to={'/'}>Sobre</Link>
 					</S.NavItem>
 					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
-						<Link to={'/services'}>Serviços</Link>
+						<Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to={'/services'}>Serviços</Link>
 					</S.NavItem>
 					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
-						<Link to={'/cases'}>Cases</Link>
+						<Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to={'/cases'}>Cases</Link>
 					</S.NavItem>
-					<S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
+					{/* <S.NavItem home={props.home} isScrolled={scrollPosition > 0}>
 						<Link to={'/#'} >Escola</Link>
-					</S.NavItem>
+					</S.NavItem> */}
 				</S.NavList>
 				<S.BottomList isShow={isShow}>
 					<S.BottomLink to={'/#'} >Media Kit</S.BottomLink>
@@ -74,12 +74,12 @@ const Menu = (props) => {
 				</S.BottomList>
 				{isDesktop && (
 					<Button
-						border='transparent'
-						color='#FFAC2D'
+						border={props.home ? '##FFAC2D' : '#0e2762'}
+						color={props.home ? '#FFAC2D' : '#fbd4b2'}
 						background='#0F2B92'
-						funcAction={redirectToConcact}
+						funcAction={redirectToContact}
 					>
-						Reserve seu Squad
+						Reserve seu Squad!
 					</Button>
 				)}
 			</S.Wrap>
