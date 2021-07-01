@@ -6,7 +6,7 @@ import Vania from '../../images/images/Vania.png';
 import VaniaCompany from '../../images/images/hospitalSirio.png';
 
 
-import Patricia from '../../images/images/Patricia2.png';
+import Patricia from '../../images/images/Patricia.png';
 import PatriciaCompany from '../../images/images/QuickCash.png';
 
 
@@ -166,7 +166,7 @@ const Depositions = ({ home }) => {
 							for your commitment, dedication and creativity.”
 						</S.DescriptionResponsive>
 						<S.IdentificationResponsive>
-							<S.ImagePeopleResponsivePatricia src={Patricia} />
+							<S.ImagePeopleResponsivePatricia src={Patricia} height="110px" style={{marginTop: '-0.7rem'}} />
 							<S.TextIdentificationResponsive>    
 								<S.NameResponsive>Patrícia Zaundi</S.NameResponsive>
 								<S.OfficeResponsive>Diretora Executiva</S.OfficeResponsive>
