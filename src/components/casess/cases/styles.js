@@ -139,7 +139,6 @@ export const Date = styled.div`
     }
 `;
 
-
 export const LogoBox = styled.figure`
     margin-top: 0.6rem;
 
@@ -176,8 +175,7 @@ export const MobileImg = styled.img`
     }
 `;
 
-
-export const Desktop =  styled(CaseImg)`
+export const DesktopImg =  styled.img`
     @media (max-width: 1000px) {
         display: none;
     }

@@ -2,24 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContentButton = styled.button`
-  width: ${props => props.width || '18rem'};
-  height: 3.375rem;
-  font-size: 1.5rem;
-  font-weight: 600;
+  width: ${props => props.width || '17rem'};
+  height: 3.5rem;
+  font: 600 1.3em 'Usual', sans-serif;
 	color: ${props => props.color || '#FED5B2'};
-  background:  ${props => props.background || '#0F2B92'};
-  border: 0.15rem solid ${props => props.border || '#00145D'};
-  border-radius: 35px;
   text-align: center;
-  transition: height 0.25s ease-in-out;
+  border-radius: 35px;
+  border: 2px solid ${props => props.border || '#00145D'};
+  background:  ${props => props.background || '#0F2B92'};
+  transition: border 0.15s ease-out, height 0.18s ease-in,  color 0.15s ease;
 
 	:hover {
-		color: ${props => props.colorHover || '#00145D'};
-		background-color: ${props => props.backgroundHover || '#FED5B2'};
-    border: none;
+    height: 3.8rem;
+		color: ${props => props.colorHover || '#000'};
+    border-width: 0;
     box-shadow: 0px 0px 20px #0F2B9240;
-    height: 3.675rem;
-    // height: 4rem;
+		background-color: ${props => props.backgroundHover || '#FED5B2'};
   }
 
   @media (min-width: 2560px) {

@@ -31,12 +31,12 @@ const Squads = (props) => {
         </S.SquadsBox>
         <S.BoxButton>
           <Button
-            border='transparent'
-            color='#FFAC2D'
+            border='#0e2762'
+            color='#fbd4b2'
             background='#0F2B92'
             funcAction={redirectToConcact}
           >
-            Reserve seu Squad
+            Reserve seu Squad!
           </Button>
         </S.BoxButton>
       </S.SquadsBg>

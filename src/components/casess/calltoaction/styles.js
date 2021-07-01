@@ -31,10 +31,13 @@ export const Content = styled.div`
 `;
 
 export const TitleBox = styled.div`
-    font: 300 1.6em 'Usual', sans-serif;
+    font: 300 0.9rem 'Usual', sans-serif;
     line-height: 1.5;
 
     @media (max-width: 960px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         font-size: 1.4em;
     }
 
@@ -44,17 +47,59 @@ export const TitleBox = styled.div`
 `;
 
 export const Title = styled.h2`
+    font-size: 2.6em;
     font-weight: 800;
 `;
 
 export const SubTitle = styled.h3`
-    font-weight: 300;
+    font-size: 2em;
+    font-weight: 500;
 `;
+
+export const ButtonBox = styled.div`
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    width: 18rem;
+    height: 4rem;
+
+    button {
+        width: 100%;
+        font-size: 1.5em;
+        border-radius: 22px;
+        transition: all 0.3s ease-out;
+
+        @media (max-width: 960px) {
+            height: 3rem;
+            font-size: 1em;
+        }
+
+        @media (max-width: 680px) {
+            font-size: 1.4em;
+        }
+    }
+
+
+    &:hover {
+        button {
+            height: 3.5rem;
+            transform: translatey(-3px);
+        }
+    }
+
+    @media (max-width: 680px) {
+        width: 14rem;
+    }
+`
 
 export const TextBox = styled.div`
     padding: 1rem 0;
-    width: 34vw;
+    width: 37vw;
     font: 300 1.4em 'Usual', sans-serif;
+
+    strong {
+        font-weight: 600;
+    }
 
     @media (max-width: 960px) {
         width: 65vw;
