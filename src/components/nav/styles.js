@@ -77,7 +77,7 @@ export const NavItem = styled.li`
 		cursor: pointer;
 
 		&:hover {
-			border-bottom: 0.2rem solid ${props => (props.isScrolled || !props.home) ? '#0F2B92' : '#FDE7A9'};
+			border-bottom: 0.2rem solid ${props => props.home ? 'currentColor' : 'none'};
 			font-weight: bold;
 		}
 	}
