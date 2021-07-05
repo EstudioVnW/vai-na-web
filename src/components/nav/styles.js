@@ -77,7 +77,7 @@ export const NavItem = styled.li`
 		cursor: pointer;
 
 		&:hover {
-			border-bottom: 0.2rem solid ${props => props.home ? '#FDE7A9' : 'none'};
+			border-bottom: 0.2rem solid ${props => props.home ? 'currentColor' : 'none'};
 			font-weight: bold;
 		}
 	}
@@ -156,9 +156,6 @@ export const BottomLink = styled(Link)`
 	font-size: 1.1em;
 	line-height: 2.2;
 	text-align: center;
-
-	a {
-		text-decoration: none;
-		cursor: pointer;
-	}
+	text-decoration: none;
+	cursor: pointer;
 `;

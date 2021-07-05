@@ -25,9 +25,6 @@ export const DepositionsTitle = styled.h1`
     @media (max-width: 1440px) {
 		font-size: 2.6rem;
 	}
-    @media (max-width: 1360px){
-        font-size: 2.5rem;
-    }
     @media (max-width: 768px) {
 		font-size: 3.5rem;
         width: 80%;
@@ -51,16 +48,10 @@ export const DepositionsSubTitle = styled.h2`
         margin-top: 50px;
     }
     @media (max-width: 1440px) {
-		font-size: 1.2rem;
+		font-size: 1.5rem;
         margin-top: 20px;
 	}
-    @media (max-width: 1360px){
-        font-size: 1.5rem;
-        margin-top: 20px;
-    }
-    @media (max-width: 1360px){
-        font-size: 1.3rem;
-    }
+
     @media (max-width: 768px) {
 		font-size: 2rem;
         width: 75%;
@@ -185,8 +176,8 @@ export const ImageCompany = styled.img`
 `;
 
 export const ImagePatricia = styled.img`
-    width: 12rem;
-    margin-top: -5rem;
+    width: 13rem;
+    margin-top: -6rem;
 
     @media (min-width: 2560px) {
         width: 19rem;

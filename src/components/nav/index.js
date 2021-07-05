@@ -68,8 +68,8 @@ const Menu = (props) => {
 					</S.NavItem> */}
 				</S.NavList>
 				<S.BottomList isShow={isShow}>
-					<S.BottomLink to={'/#'} >Media Kit</S.BottomLink>
-					<S.BottomLink to={'/#'} >Perguntas Frequentes</S.BottomLink>
+					{/* <S.BottomLink to={'/#'} >Media Kit</S.BottomLink>
+					<S.BottomLink to={'/#'} >Perguntas Frequentes</S.BottomLink> */}
 					<S.BottomLink to={'/contact'}>Contato</S.BottomLink>
 				</S.BottomList>
 				{isDesktop && (

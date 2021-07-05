@@ -41,7 +41,7 @@ const Cases = ({ home }) => {
                             <S.ImageCases src={ImageSedimenta} alt='Sedimenta JPM' />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageM4A} alt='Match 4 Action' />
+                            <S.ImageCasesM4A src={ImageM4A} alt='Match 4 Action' />
                         </S.BoxImage>
                     </S.CasesImages>	
                 </S.BoxCasesImages>
