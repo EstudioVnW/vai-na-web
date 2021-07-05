@@ -77,7 +77,7 @@ export const NavItem = styled.li`
 		cursor: pointer;
 
 		&:hover {
-			border-bottom: 0.2rem solid ${props => props.home ? '#FDE7A9' : 'none'};
+			border-bottom: 0.2rem solid ${props => props.home ? 'currentColor' : 'none'};
 			font-weight: bold;
 		}
 	}

@@ -5,7 +5,7 @@ import ButtonHome from '../button/Button';
 
 import PeoplesSquad from '../../images/images/VaiNaWeb-196.png';
 import Back from '../../images/images/Group11078.svg';
-import Canais from '../../images/images/Group10972.svg';
+import Canais from '../../images/images/Group10971.svg';
 import MVPs from '../../images/images/Group10972.svg';
 
 const Squads = ({ home }) => {
@@ -70,8 +70,8 @@ const Squads = ({ home }) => {
 						<S.BoxTextBack>
 							<S.BoxTextBackTitle>MVPs ágeis e em escala</S.BoxTextBackTitle>
 							<S.BoxTextBackDescription>Descoberta, ideação e
-								implementação de MVPs. Valide rapidamente
-								a viabilidade e melhorias do seu projeto.
+								implementação de MVPs. <span>Valide rapidamente
+								a viabilidade e melhorias do seu projeto.</span>
 							</S.BoxTextBackDescription>
 						</S.BoxTextBack>
 					</S.SquadsTextBack>
