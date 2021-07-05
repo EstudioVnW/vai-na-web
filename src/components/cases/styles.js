@@ -58,11 +58,12 @@ export const BoxImage = styled.figure`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 20px;
 	-webkit-fter: grayscale(100%);
 	filter: grayscale(100%);
+	transition: box-shadow 0.3s ease;
 
 	&:hover {
-		border-radius: 20px;
 		filter: none;
 		box-shadow: 0 0 30px #0F2B9233;
 	}
