@@ -75,10 +75,10 @@ export const HeaderWrap = styled.div`
 	align-items: center;
 
 	@media (max-width: 1440px) {
-		align-items: center;
 		min-height: 0;
-		padding: 5rem 0;
+		padding: 3rem 0;
 	}
+
 `;
 
 export const HImgBox = styled.figure`

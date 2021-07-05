@@ -72,6 +72,9 @@ export const ConectionLineImage = styled.img`
 
 `;
 export const ConectionButton = styled.div`
-
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  
 `;
 
