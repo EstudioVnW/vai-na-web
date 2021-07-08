@@ -1,19 +1,26 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-    padding: 14rem 7rem 7rem 7rem;
+    //padding: 14rem 7rem 7rem 7rem;
+    padding: 14rem 0 7rem 0;
+    
     background: #ffe9e0;  
 
     @media (max-width: 800px) {
-        padding: 14rem 4rem 2.5rem;
+        padding: 14rem 2rem 2.5rem;
     }
+`;
+
+export const Wrap = styled.div`
+    width: 80%;
+    margin: 0 auto;
 `;
 
 export const Header = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 15vh;
+    min-height: 12vh;
 
     @media (max-width: 490px) {
         min-height: 30vh;
@@ -22,7 +29,7 @@ export const Header = styled.section`
 
 export const HeaderTitle = styled.h1`
     position: relative;
-    font: 800 3.1em 'Usual', sans-serif;
+    font: 800 2.72rem 'Usual', sans-serif;
     color: #00145d;
     
     @media (max-width: 490px) {
@@ -45,8 +52,8 @@ export const TitleBar = styled.span`
 `;
 
 export const HeaderText = styled.p`
-    font: 400 1.9em 'Usual', sans-serif;
-
+    font: 400 1.6rem 'Usual', sans-serif;
+    
     @media (max-width: 490px) {
         font-size: 1.45em;
     }
