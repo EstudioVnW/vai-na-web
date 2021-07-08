@@ -1,34 +1,32 @@
 import styled from 'styled-components';
 
 export const InfoContainer = styled.section`
-  padding: 6rem 4rem;
+  width: 80%;
+  margin: 0 auto;
   
   @media (max-width: 790px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem;
     text-align: center;
   }
 `;
 
 export const InfoTitle = styled.h2`
-  margin: 1rem 3rem;
-  font: 800 2.6rem 'Usual', sans-serif;
+  font: 800 2rem 'Usual', sans-serif;
   color: #00145d;
-  width: 100%;
+  padding-top: 4rem;
+
   }
 `;
 
 export const InfoText = styled.p`
-  margin-left: 3rem;
-  font: 300 1.5rem 'Usual', sans-serif;
+  font: 300 1.3rem 'Usual', sans-serif;
+  padding-top: 0.5rem;
 
   @media (max-width: 430px) {
     margin: 0;
-    width: 90%;
-    font-size: 1rem;
-    line-height: 1.438rem;
+    text-align: center;
   }
 `;
 

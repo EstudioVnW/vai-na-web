@@ -8,6 +8,7 @@ import squads from '../../../images/images/squads.png';
 
 const SquadsInfo = () => (
   <S.SquadsContainer>
+    <S.SquadsWrap>
     <S.SquadsTitle>
       Como você pode configurar<br/>
       os squads remotos do Vai na Web
@@ -18,6 +19,7 @@ const SquadsInfo = () => (
     <S.SquadsText>
       E para alcançar resultados positivos, vamos te ajudar a definir o melhor time.
     </S.SquadsText>
+    </S.SquadsWrap>
     <S.SquadsContent>
       <S.SquadsImg
         src={squads}
