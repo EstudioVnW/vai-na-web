@@ -5,8 +5,8 @@ import squadsIcon from '../../../images/images/squadsIcon.png';
 export const SquadsContainer = styled.section`
   position: relative;
   display: flex;
-  max-width: 100vw;
-  min-height: 70vh;
+  max-width: 100%;
+  min-height: 60vh;
 
  @media (max-width: 1024px) {
     align-items: flex-end;
@@ -20,13 +20,13 @@ export const SquadsContainer = styled.section`
 
 export const SquadsBg = styled.div`
   width: 65%;
-  padding-left: 7rem;
   border-radius: 0 20px 20px 0;
   background: #eff1f8;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -36,23 +36,30 @@ export const SquadsBg = styled.div`
     border-radius: 0;
     justify-content: center;
     position: relative;
+    flex-direction: column-reverse;
   }
 `;
 
+export const SquadsWrap = styled.div `
+  width: 80%;
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
+  
+`
+
 export const SquadsText = styled.p`
   width: 59.5%;
-  font: 300 1.8rem 'Usual', sans-serif;
-  line-height: 2.5rem;
+  font: 300 1.3rem 'Usual', sans-serif;
+  line-height: 1.6rem;
 
   @media (max-width: 1024px) {
-    font-size: 1.2rem;
-    line-height: 2rem;
-    width: 50%;
+    width: 100%;
     order: 1;
   }
 
   @media(max-width: 425px) {
-    width: 85%;
+    width: 100%;
   } 
 `;
 
@@ -64,16 +71,7 @@ export const BoxButton = styled.div `
   
   @media (max-width: 1024px) {
     order: 2;
-  }
-
-  @media (max-width: 790px) {
-    width: 100%;
-    justify-content: center;
-  }
-
-  @media (max-width: 425px) {
-    justify-content: flex-start;
-    padding: 1.5rem;
+    padding-top: 4rem;
   }
 `;
 

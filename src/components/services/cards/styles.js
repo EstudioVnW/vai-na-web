@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import cardsCircle from '../../../images/images/cardsCircle.svg';
 
 export const Container = styled.section`
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  background: #eff1f8;
   @media (max-width: 790px) {
     overflow: hidden;
     overflow-x: scroll;
@@ -9,21 +13,12 @@ export const Container = styled.section`
 `;
 
 export const Cards = styled.div`
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 4rem 7.5rem;
   min-height: 35vh;
-  background: #eff1f8;
   cursor: pointer;
-
-  @media (max-width: 1440px) {
-    padding: 3rem 2rem;
-    justify-content: space-evenly;
-  }
-
-  @media (max-width: 1024px) {
-    padding: 2rem 1rem;
-  }
 
   @media (max-width: 790px) {
     padding: 2rem 1.45rem;
@@ -42,19 +37,8 @@ export const Card = styled.div`
   transition: 0.2s ease-in-out;
   will-transform: scale;
 
-  
   @media (max-width: 1440px) {
     height: auto;
-  }
-
-  @media (max-width: 1366px) {
-    width: 30%; 
-    padding: 1.5rem 1.5rem;
-  }
-
-  @media (max-width: 1024px) {
-    width: 32%; 
-    padding: 1.5rem 1.5rem;
   }
 
   @media (max-width: 790px) {
@@ -92,66 +76,17 @@ export const CardCircle = styled.div`
   height: 1.05em;
   border-radius: 50%;
   background: #00145d;
-
-  @media (max-width: 1366px) {
-    width: 0.8rem;
-    height: 0.8rem;
-  }
-
-  @media (max-width: 790px) {
-    width: 1.2em;
-    height: 1.2em;
-  }
 `;
 
 export const CardText = styled.div`
   padding: 2rem 9% 0 0;
-  font: 300 1.5rem 'Usual', sans-serif;
-  line-height: 2.188rem;
+  font: 300 1.3rem 'Usual', sans-serif;
+  line-height: 1.6rem;
   transition: 0.5s ease;
-
-  @media (max-width: 1366px) {
-   font-size: 1.240rem; 
-   line-height: 1.8rem;
-   padding: 1.6rem 0;
-  }
-
-  @media (max-width: 1024px) {
-    font-size: 1.220rem; 
-    line-height: 2rem;
-    padding: 1.3rem 0;
-   }
-
-  @media (max-width: 790px) {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding: 1.45rem 1.25rem 0 0;
-  }
-
-  @media (max-width: 425px) {
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-    padding: 1.45rem 1.25rem 0 0;
-  }
 `;
 
 export const CardTitle = styled.h3`
-  font: 800 2.188rem 'Usual', sans-serif;
-  line-height: 2.938rem;
-
-  @media (max-width: 1366px) {
-    font-size: 1.6rem; 
-    line-height: 2rem;
-   }
-
-   @media (max-width: 1024px) {
-    font-size: 1.3rem; 
-   }
-
-  @media (max-width: 790px) {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-  }
+  font: 800 2rem 'Usual', sans-serif;
 
 `;
 

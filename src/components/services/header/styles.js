@@ -68,7 +68,7 @@ export const HImgLogo = styled.img`
 
 export const HeaderWrap = styled.div`
 	position: relative;
-	width: 90%;
+	width: 80%;
 	height: 90%;
 	display: flex;
 	justify-content: flex-end;
