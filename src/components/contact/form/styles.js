@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
+
+
+
 export const Contato = styled.main`
+
 `;
 
 export const ContatoContainer = styled.section`
@@ -27,7 +31,8 @@ export const FormContainer = styled.div`
 `;
 
 export const FormTitle = styled.h1`
-    font: 900 2rem sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
     color: #00145d;
 
     @media (max-width: 700px) {
@@ -39,7 +44,8 @@ export const FormTitle = styled.h1`
 export const FormText = styled.p`
     margin-top: 1.5rem;
     width: 80%;
-    font: 300 1.3rem sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
     line-height: 1.5rem;
 
     @media (max-width: 700px) {
@@ -71,7 +77,8 @@ export const Form = styled.form`
 export const FormLabel = styled.label`
     margin-top: 2rem;
     padding: 7px 14px;
-    font: 600 1.3rem sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
     color: #00145d;
     border-radius: 10px;
     background: #e7e9f4;
@@ -140,7 +147,7 @@ export const Btn = styled.button`
 
 export const Sidebar = styled.aside`
     margin-top: 2rem;
-    width: 54%;
+    width: 60%;
 
     @media (max-width: 700px) {
         width: 50%;
@@ -170,7 +177,8 @@ export const SideInfo = styled.div`
 `;
 
 export const SideTitle = styled.h3`
-    font: 800 1.3rem sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
     color: #00145d;
 
     @media (max-width: 700px) {
@@ -179,7 +187,9 @@ export const SideTitle = styled.h3`
 `;
 
 export const SideText = styled.p`
-    font: 300 1.3rem sans-serif;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1.3rem;
     line-height: 1.5rem;
 
     @media (max-width: 1024px) {
