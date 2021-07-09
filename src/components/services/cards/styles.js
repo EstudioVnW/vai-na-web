@@ -6,9 +6,11 @@ export const Container = styled.section`
   margin: 0 auto;
   padding: 3rem 0;
   background: #eff1f8;
+
   @media (max-width: 790px) {
     overflow: hidden;
     overflow-x: scroll;
+    padding: 0;
   }
 `;
 
@@ -83,10 +85,19 @@ export const CardText = styled.div`
   font: 300 1.3rem 'Usual', sans-serif;
   line-height: 1.6rem;
   transition: 0.5s ease;
+
+  @media (max-width: 425px) {
+    font-size: 1.05rem;
+    padding: 1rem 9% 0 0;
+  }
 `;
 
 export const CardTitle = styled.h3`
   font: 800 2rem 'Usual', sans-serif;
+
+  @media (max-width: 425px) {
+    font-size: 1.7rem;
+  }
 
 `;
 

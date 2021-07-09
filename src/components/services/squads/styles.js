@@ -60,6 +60,7 @@ export const SquadsText = styled.p`
 
   @media(max-width: 425px) {
     width: 100%;
+    font-size: 1.05rem;
   } 
 `;
 
