@@ -5,11 +5,11 @@ export const AgendaContainer = styled.section`
   min-height: auto;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
   padding-top: 2rem;
-
+  
   @media (max-width: 1024px) {
     min-height: 40vh;
+    flex-direction: column;
   }
 
 `;
@@ -21,6 +21,7 @@ export const AgendaWrap = styled.div `
   justify-content: space-between;
 
   @media (max-width: 790px) {
+    width: 100%;
     flex-direction: column;
     padding: 0;
   }
@@ -30,8 +31,9 @@ export const AgendaBox = styled.div`
   width: 45%;
 
   @media (max-width: 790px) {
-    width: 100%;
+    width: 80%;
     padding: 2rem 0;
+    margin: 0 auto;
   }
 `;
 
@@ -46,12 +48,20 @@ export const AgendaImg = styled.figure`
 export const AgendaTitle = styled.h2`
   font: 800 2rem 'Usual', sans-serif;
   color: #00145d;
+
+  @media (max-width: 425px) {
+    font-size: 1.7rem;
+  }
 `;
 
 export const AgendaText = styled.p`
   margin-top: 1.8rem;
   font: 300 1.3rem 'Usual', sans-serif;
   line-height: 1.6rem;
+
+  @media (max-width: 425px) {
+    font-size: 1.05rem;
+  }
 `;
 
 export const odsImg = styled.img`

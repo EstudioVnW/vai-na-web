@@ -37,6 +37,7 @@ export const SquadsTitle = styled.h2`
 
    @media(max-width: 425px) {
     width: 100%;
+    font-size: 1.7rem;
   } 
 `;
 
@@ -47,6 +48,7 @@ export const SquadsText = styled.p`
 
   @media(max-width: 425px) {
     width: 100%;
+    font-size: 1.05rem;
   } 
 `;
 

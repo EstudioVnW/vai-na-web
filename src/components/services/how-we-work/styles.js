@@ -17,6 +17,8 @@ export const InfoTitle = styled.h2`
   color: #00145d;
   padding-top: 4rem;
 
+  @media (max-width: 425px) {
+    font-size: 1.7rem;
   }
 `;
 
@@ -24,10 +26,11 @@ export const InfoText = styled.p`
   font: 300 1.3rem 'Usual', sans-serif;
   padding-top: 0.5rem;
 
-  @media (max-width: 430px) {
-    margin: 0;
-    text-align: center;
-  }
+    @media (max-width: 425px) {
+      font-size: 1.05rem;
+      padding-bottom: 1.5rem;
+    }
+  
 `;
 
 export const Infographic = styled.picture`

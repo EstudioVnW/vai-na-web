@@ -8,8 +8,33 @@ export const HeaderContainer = styled.section`
 	margin-top: 7rem;
 	position: relative;
 
-	@media (max-width: 1440px) {
+	 @media(max-width: 1440px) {
+		 height: auto;
+	 }
+
+	 `;
+
+	 export const HeaderWrap = styled.div`
+	position: relative;
+	width: 80%;
+	height: 90%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	
+	@media(max-width: 1440px) {
 		height: auto;
+		padding: 2rem 0;
+	}
+
+	@media (max-width: 768px) {
+		margin: 5rem 0;
+	}
+	
+	@media (max-width: 425px) {
+		height: auto;
+		margin-top: 3rem;
+		padding: 5rem 0;
 	}
 `;
 
@@ -28,7 +53,7 @@ export const HText = styled.p`
 
 export const HDownArrow = styled.figure`
 	position: absolute;
-	bottom: 5%;
+	bottom: 0;
 	left: 0;
 
 	@media (max-width: 790px) {
@@ -38,15 +63,11 @@ export const HDownArrow = styled.figure`
 
 export const HTextBox = styled.div`
 	width: 65%;
-	font: 300 1.2rem sans-serif;
-	line-height: 1.7rem;
-
-	@media (max-width: 1366px) {
-		font-size: 1.5rem;
-		line-height: 1.8rem;
-	}
+	font: 300 1.3rem sans-serif;
+	line-height: 1.6rem;
 
 	@media (max-width: 425px) {
+		width: 100%;
 		font-size: 0.8rem;
 		line-height: 1.2rem
 	}
@@ -60,26 +81,17 @@ export const HImgLogo = styled.img`
 	width: 15%;	
 
 	@media (max-width: 790px) {
-    top: 106%;
-	left: 45%;
-    transform: translate(-50% , -50%);
+		top: 106%;
+		left: 50%;
+    	transform: translate(-50% , -50%);
+	}
+	
+	@media (max-width: 425px) {
+		top: 130%;
+		width: 25%;
 	}
 `;
 
-export const HeaderWrap = styled.div`
-	position: relative;
-	width: 80%;
-	height: 90%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-
-	@media (max-width: 1440px) {
-		min-height: 0;
-		padding: 3rem 0;
-	}
-
-`;
 
 export const HImgBox = styled.figure`
 	width: 65%;
@@ -92,7 +104,7 @@ export const HImgBox = styled.figure`
 		align-items: flex-start;
 		justify-content: center;
 		height: 80%;
-		width: 90%;
+		width: 100%;
 	} 
 	
 `;
@@ -110,13 +122,14 @@ export const HCard = styled.div`
 		bottom: 20%;
 	}
 
-	@media (max-width: 1024px) {
-		bottom: 35%;
-	}
-
 	@media (max-width: 790px) {
 		bottom: 73%;
 		padding: 0.4rem;
+	}
+
+	@media (max-width: 425px) {
+		bottom: 70%;
+		width: 70%;
 	}
 `;
 
@@ -142,28 +155,27 @@ export const HCardCircle = styled.div`
 
 	@media (max-width: 790px) {
 		margin-bottom: 0;
-		width: 0.55rem;
-		height: 0.55rem;
+		margin-top: 0.5rem;
+		width: 0.65rem;
+		height: 0.65rem;
 	}
 `;
 
 export const HCardText = styled.h1`
 	padding: 1.4rem 0.5rem 0.5rem;
-	font: 800 3rem 'Usual', sans-serif;
+	width: 98%;
+	font: 800 2.6rem 'Usual', sans-serif;
 	color: #00145d;
-	line-height: 1.2;
 	
 
 	@media (max-width: 1024px) {
-		font-size: 1rem;
-		padding: 0.5rem;
-	} 
-	
-	@media (max-width: 768px) {
 		font-size: 1.5rem;
+		width: 85%;
 	}
 
 	@media (max-width: 425px) {
-		font-size: 0.8rem;
-	}
+		font-size: 1rem;
+		padding: 0.5rem 0.5rem;
+		width: 100%;
+	}  
 `;
