@@ -35,7 +35,7 @@ export const DepositionsTitle = styled.h1`
     }
 `;
 
-export const DepositionsSubTitle = styled.h2`
+export const DepositionsSubTitle = styled.h3`
     color: #272727;
     font-weight: 500;
     font-size: 1.2rem;
@@ -51,10 +51,9 @@ export const DepositionsSubTitle = styled.h2`
 		font-size: 1.5rem;
         margin-top: 20px;
 	}
-
     @media (max-width: 768px) {
 		font-size: 2rem;
-        width: 75%;
+        width: 73%;
         text-align: center;
         margin-top: 0.5rem;
         font-weight: 600;
@@ -66,21 +65,20 @@ export const DepositionsSubTitle = styled.h2`
 
 
 export const DepositionsSlides = styled.div`
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-around;
-margin-top: 8rem;
-max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 8rem;
+    max-width: 100%;
 
-@media (max-width: 768px) {
-    display: none;
-}
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 export const Seta = styled.img`
     max-width: 2rem;
-
 `;
 
 
@@ -104,7 +102,6 @@ export const DepositionsSlideCard = styled.div`
         margin-top: 2rem;
         min-height: 20rem;
     }
-
     @media (min-width: 2560px) {
         width: 80rem;
         min-height: 40rem;
@@ -145,7 +142,6 @@ export const Description = styled.p`
     @media (min-width: 1024px) {
         margin-bottom: 1rem;
     }
-
     @media (min-width: 2560px) {
         font-size: 2rem;
         line-height: 2.5rem;
@@ -202,7 +198,6 @@ export const Name = styled.h1`
 
     @media (min-width: 2560px) {
         font-size: 4rem;
-        
     }
     @media (min-width: 1024px) {
         font-size: 1.5rem;
@@ -212,20 +207,18 @@ export const Name = styled.h1`
     }
 `;
 export const Office = styled.p`
-color: #00145D;
-font-size: 0.8rem;
+    color: #00145D;
+    font-size: 0.8rem;
 
-@media (min-width: 2560px) {
-    font-size: 2rem;
-}
-
-@media (min-width: 1024px) {
-        font-size: 0.7rem;
+    @media (min-width: 2560px) {
+        font-size: 2rem;
     }
-
-@media (max-width: 768px) {
-    font-size: 1rem;
-}
+    @media (min-width: 1024px) {
+            font-size: 0.7rem;
+    }
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
 `;
 
 
@@ -294,6 +287,7 @@ export const DescriptionResponsive = styled.p`
         line-height: 1.2rem; 
     }
 `;
+
 export const IdentificationResponsive = styled.div`
 
     @media (max-width: 768px) {
@@ -303,6 +297,7 @@ export const IdentificationResponsive = styled.div`
         height: 33%;
     }
 `;
+
 export const ImagePeopleResponsive = styled.img`
 
     @media (max-width: 768px) {
@@ -314,6 +309,7 @@ export const ImagePeopleResponsive = styled.img`
         height: 6rem;
     }
 `;
+
 export const ImagePeopleResponsivePatricia = styled.img`
 
     @media (max-width: 768px) {
@@ -322,6 +318,7 @@ export const ImagePeopleResponsivePatricia = styled.img`
     }
     @media (max-width: 360px) {
         width: 7rem;
+        height: 7rem; 
     }
 `;
 

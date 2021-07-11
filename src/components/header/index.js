@@ -21,8 +21,8 @@ const Header = () => {
 					<S.Title>Acelere suas entregas digitais</S.Title>
 					<S.SubTitle>Com a força da diversidade e inclusão</S.SubTitle>
 				</S.CardHome>
+				<S.ImageEstudio src={ImageHome} alt='FotoEStudio' />
 			</S.Wrap>
-			<S.ImageEstudio src={ImageHome} alt='FotoEStudio' />
 		</S.Header>
 	)
 }
