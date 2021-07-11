@@ -74,6 +74,7 @@ const Menu = (props) => {
 				</S.BottomList>
 				{isDesktop && (
 					<Button
+						width='14rem'
 						border={props.home ? '#FFAC2D' : '#0e2762'}
 						color={props.home ? '#FFAC2D' : '#fbd4b2'}
 						background='#0F2B92'
