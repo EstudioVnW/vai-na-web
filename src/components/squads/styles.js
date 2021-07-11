@@ -38,6 +38,11 @@ export const SquadsImageButton = styled.div`
          font-size: 2.9rem;     
          border-radius: 3rem;
       }
+      @media (max-width: 1440px) {
+         width: 14rem;
+         height: 3rem;
+         font-size: 1.1rem;
+      }
       @media (max-width: 430px) {
          bottom: 15%;
          width: 13rem;
@@ -46,6 +51,9 @@ export const SquadsImageButton = styled.div`
       }
    }
 
+   @media (max-width: 1440px) {
+      width: 33%;
+   }
    @media (max-width: 768px) {
       position: relative;
       width: 100%;
@@ -64,6 +72,16 @@ export const SquadsImage = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+   border-radius: 15px;
+   border: 2px solid #09255d;
+   box-shadow: 0 0 10px #e8ebf5;
+   overflow: hidden;
+
+   &:hover {
+      img {
+         transform: scale(1.1) translate(4%, 0);
+      }
+   }
 
    @media (max-width: 768px) {
       margin-top: 1rem;
@@ -79,10 +97,8 @@ export const ButtonSquads = styled.div`
 
 export const ImageSquad = styled.img`
    width: 100%;
-
-   @media (max-width: 768px) {
-      width: 100%;
-   }
+   height: 100%;
+   transition: 0.25s ease-out;
 `;
 
 export const SquadsText = styled.div`
@@ -94,15 +110,15 @@ export const SquadsText = styled.div`
    }
 `;
 
-export const SquadsTextTitle = styled.h1`
+export const SquadsTextTitle = styled.h2`
    color: #00145D;
-   font-size: 2.5rem;
+   font-size: 2rem;
 
    @media (min-width: 2560px) {
       font-size: 4.5rem;
    }
    @media (max-width: 1440px) {
-      font-size: 2rem;
+      font-size: 1.8rem;
    }
    @media (max-width: 1300px) {
       font-size: 1.5rem;
@@ -116,10 +132,10 @@ export const SquadsTextTitle = styled.h1`
 `;
 
 export const SquadsTextSubTitle = styled.h2`
-   width: 70%;
+   width: 61%;
    margin-top: 5px;
    color: #272727;
-   font-size: 1.7rem;
+   font-size: 1.5rem;
    font-weight: 500;
    line-height: 2rem;
 
@@ -129,7 +145,7 @@ export const SquadsTextSubTitle = styled.h2`
       line-height: 1.3;
    }
    @media (max-width: 1440px) {
-      font-size: 1.35rem;
+      font-size: 1.1rem;
       line-height: 1.3;
    }
    @media (max-width: 1300px) {
@@ -153,7 +169,8 @@ export const SquadsTextDescription = styled.p`
    margin-top: 25px;
    width: 90%;
    color: #272727;
-   font-size: 1.36rem;
+	font-size: 1.3rem;
+	line-height: 1.6rem;
 
    @media (min-width: 2560px) {
       font-size:  2.5rem;
@@ -161,11 +178,10 @@ export const SquadsTextDescription = styled.p`
    }
    @media (max-width: 1440px) {
       width: 78%;
-      font-size: 1.08rem;
+      font-size: 0.9rem;
    }
    @media (max-width: 768px) {
       font-size: 2rem;
-      // margin-top: 50px;
    }
    @media (max-width: 480px) {
       width: 100%;
@@ -233,17 +249,19 @@ export const BoxTextBack = styled.div`
       width: 65%;
    }
 `;
-export const BoxTextBackTitle = styled.h1`
-   margin-bottom: 2px;
+
+export const BoxTextBackTitle = styled.h4`
+   margin-bottom: 0.5rem;
    color: #272727;
-   font-size: 1.9rem;
+   font-size: 1.5rem;
 
    @media (min-width: 2560px) {
       width: 100%;
       font-size: 3.3rem;
    }
    @media (max-width: 1440px){
-      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+      font-size: 1.2rem;
    }
    @media (max-width: 1300px) {
       font-size: 1rem;
@@ -256,10 +274,11 @@ export const BoxTextBackTitle = styled.h1`
       font-size: 1.4rem;
    }
 `;
+
 export const BoxTextBackDescription = styled.p`
    color: #272727;
-   font-size: 1.3rem;
-   line-height: 2rem;
+	font-size: 1.3rem;
+	line-height: 1.6rem;
 
    span {
       display: block;
