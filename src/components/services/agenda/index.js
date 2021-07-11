@@ -5,6 +5,7 @@ import ods from '../../../images/images/ods.png';
 
 const Agenda = () => (
   <S.AgendaContainer>
+    <S.AgendaWrap>
     <S.AgendaBox>
       <S.AgendaTitle>Agenda 2030</S.AgendaTitle>
       <S.AgendaText>O Vai na Web contribui com a agenda 2030 e atende diretamente 7 dos 17 Objetivos Globais para o Desenvolvimento Sustentável.</S.AgendaText>
@@ -13,6 +14,7 @@ const Agenda = () => (
     <S.AgendaImg>
       <S.odsImg src={ods} alt="Objetivos Globais para o Desenvolvimento Sustentável"/>
     </S.AgendaImg>
+    </S.AgendaWrap>
   </S.AgendaContainer>
 );
 

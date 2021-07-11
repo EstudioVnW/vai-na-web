@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const CasesContainer = styled.main`
     margin-top: 7vw;
-    padding: 0 2.4rem 3rem 7.7rem;
+`;
 
-    @media (max-width: 1200px) {
-        padding: 0 0 3rem 3rem;
-    }
-    
+export const Wrap = styled.div`
+    width: 80%;
+    margin: 0 auto;
+
     @media (max-width: 1000px) {
-        padding: 0;
+        width: 100%;
     }
 `;
 
@@ -47,6 +47,7 @@ export const Reverse = styled(Case)`
     
     @media (max-width: 1000px) {
         flex-direction: column-reverse;
+        padding-right: 0;
     }
 `;
 
@@ -55,29 +56,30 @@ export const InfoBox = styled.div`
     width: 38vw;
 
     @media (max-width: 1000px) {
-        padding: 0 1.4rem 2rem;
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
     }
 `;
 
 export const CaseTitle = styled.h2`
-    font: 800 2.6em 'Usual', sans-serif;
+    width: 70%;
+    font: 800 2rem 'Usual', sans-serif;
     line-height: 1.2;
     color: #0f2b92;
 
-    @media (max-width: 1200px) {
-        font-size: 2.3em;
+    @media (max-width: 1617px) {
+        width: 100%;
     }
-   
+
     @media (max-width: 500px) {
-        font-size: 1.7em;
+        font-size: 1.7rem;
     }
 `;
 
 export const CaseText = styled.p`
     margin-top: 0.8rem;
-    font: 300 1.3em 'Usual', sans-serif;
-    line-height: 1.5;
+    font: 300 1.3rem 'Usual', sans-serif;
+    line-height: 1.6;
 
     @media (max-width: 1200px) {
         margin-top: 1.2rem;
@@ -91,15 +93,15 @@ export const CaseText = styled.p`
 
 export const Hashtag = styled.p`
     margin: 1.5rem 0 2.5rem;
-    font: 600 1.2em 'Usual', sans-serif;
+    font: 600 1.2rem 'Usual', sans-serif;
     color: #ff611e;
 
     @media (max-width: 1200px) {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     @media (max-width: 500px) {
-        font-size: 0.8em;
+        font-size: 0.8rem;
     }
 `;
 
@@ -118,7 +120,7 @@ export const ClientBox = styled.div``;
 export const ClientText = styled.p`
     display: flex;
     flex-direction: column;
-    font: 600 1em 'Usual', sans-serif;
+    font: 600 1rem 'Usual', sans-serif;
     color: #0f2b92;
     text-transform: uppercase;
 
@@ -158,7 +160,7 @@ export const CaseLogo = styled.img`
 
 export const ImgBox = styled.figure`
     @media (max-width: 1000px) {
-        width: 98vw;
+        width: 100%;
     }
 `;
 
@@ -168,10 +170,10 @@ export const CaseImg = styled.img`
 
 export const MobileImg = styled.img`
     display: none;
-    width: 100%;
-
+    
     @media (max-width: 1000px) {
         display: block;
+        width: 100%;
     }
 `;
 

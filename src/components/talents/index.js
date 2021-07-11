@@ -24,7 +24,7 @@ const Talents = ({ home }) => {
                 </S.TalentsTextDescription>
                 <S.ButtonTalents>
                     <ButtonHome
-                        width='15rem'
+                        width='10rem'
                         background='#FF611E'
                         border='#FFAC2D'
                     >
@@ -33,8 +33,10 @@ const Talents = ({ home }) => {
                 </S.ButtonTalents>
             </S.TalentsText>
             
-            <S.TalentsImageInfo src={AlunosTalents} />
-            <S.TalentsImageInfoResponsive src={AlunosTalentsResponsive} />
+            <S.ImgBox>
+                <S.TalentsImageInfo src={AlunosTalents} />
+                <S.TalentsImageInfoResponsive src={AlunosTalentsResponsive} />
+            </S.ImgBox>
 
         </S.Talents>
     )

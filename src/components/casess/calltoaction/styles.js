@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const CallContainer = styled.section`
-    padding: 5rem 8rem;
-
-    @media (max-width: 1200px) {
-        padding: 5rem;
-    }
+    padding: 5rem 0;
 
     @media (max-width: 800px) {
-        padding: 5rem 1rem;
+        padding: 5rem 0 0;
     }
+`;
+
+export const Wrap = styled.div`
+    width: 80%;
+    margin: 0 auto;
 `;
 
 export const Content = styled.div`
@@ -47,13 +48,21 @@ export const TitleBox = styled.div`
 `;
 
 export const Title = styled.h2`
-    font-size: 2.6em;
+    font-size: 2rem;
     font-weight: 800;
+
+    @media (max-width: 500px) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const SubTitle = styled.h3`
-    font-size: 2em;
+    font-size: 1.4rem;
     font-weight: 500;
+
+    @media (max-width: 500px) {
+        font-size: 1.1rem;
+    }
 `;
 
 export const ButtonBox = styled.div`
@@ -95,7 +104,7 @@ export const ButtonBox = styled.div`
 export const TextBox = styled.div`
     padding: 1rem 0;
     width: 37vw;
-    font: 300 1.4em 'Usual', sans-serif;
+    //font: 300 1.4em 'Usual', sans-serif;
 
     strong {
         font-weight: 600;
@@ -103,13 +112,21 @@ export const TextBox = styled.div`
 
     @media (max-width: 960px) {
         width: 65vw;
-        font-size: 1.2em;
+        //font-size: 1.2em;
     }
 
     @media (max-width: 680px) {
-        width: 72vw;
-        font-size: 0.8em;
+        width: 100%;
+        //font-size: 0.8em;
     }
 `;
 
-export const Text = styled.p``;
+export const Text = styled.p`
+    font: 300 1.3rem 'Usual', sans-serif;
+    line-height: 1.6;
+
+    
+    @media (max-width: 500px) {
+        font-size: .8rem;
+    }
+`;

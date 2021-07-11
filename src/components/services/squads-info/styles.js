@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 
 export const SquadsContainer = styled.section`
-  max-width: 90vw;
+  max-width: 100%;
   min-height: 50vh;
-  margin: 0 auto;
-  padding: 0 1rem;
+  padding-top: 4rem;
 
   @media (max-width: 1024px) {
-    max-width: 100vw;
     display-flex;
     align-items: flex-start;
     justify-content: center;
-   /*  padding-bottom: 15rem; */
   }
 `;
+
+export const SquadsWrap = styled.div `
+  width: 80%;
+  margin: 0 auto;
+`
 
 export const SquadsContent = styled.figure`
   margin-top: 1rem;
@@ -24,40 +26,30 @@ export const SquadsContent = styled.figure`
     flex-direction: column;
     align-items: center;
     margin-top: 0;
+    width: 100%;
   }
 `;
 
 export const SquadsTitle = styled.h2`
-  font: 800 2.6rem 'Usual', sans-serif;
+  font: 800 2rem 'Usual', sans-serif;
   color: #ff611e;
-  line-height: 3.2rem;
-  padding: 0 1.55rem;
-  margin-bottom: 1rem;
-
-  @media(max-width: 1024px) {
-    width: 87.3vw;
-    font-size: 2.2rem;
-    line-height: 2.8rem;
-  }
+  margin: 1rem 0;
 
    @media(max-width: 425px) {
     width: 100%;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    font-size: 1.7rem;
   } 
 `;
 
 export const SquadsText = styled.p`
-  padding: 0 1.55rem;
-  font: 300 1.5rem 'Usual', sans-serif;
-  line-height: 2rem;
+  font: 300 1.3rem 'Usual', sans-serif;
+  line-height: 1.6rem;
   margin: 0;
 
   @media(max-width: 425px) {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    width: 95%;
-  }
+    width: 100%;
+    font-size: 1.05rem;
+  } 
 `;
 
 export const SquadsImg = styled.img`
@@ -70,7 +62,6 @@ export const SquadsImg = styled.img`
 
 export const SquadsImgMobile = styled.img`
   display: none;
-  width: 100vw;
 
   @media(max-width: 1024px) {
     display: block;

@@ -1,49 +1,44 @@
 import styled from 'styled-components';
 
 export const AgendaContainer = styled.section`
-  max-width: 90vw;
-  min-height: 55vh;
+  max-width: 100%;
+  min-height: auto;
   margin: 0 auto;
   display: flex;
-  padding-left: 2rem;
   padding-top: 2rem;
-
-  @media (max-width: 1366px) {
-    justify-content: center;
-    align-items: center;
-  }
-
+  
   @media (max-width: 1024px) {
     min-height: 40vh;
+    flex-direction: column;
   }
 
-  @media (max-width: 790px) {
-    flex-direction: column;
-    padding: 0;
-    max-width: 100vw;
-  }
 `;
 
-export const AgendaBox = styled.div`
-  width: 50%;
-  padding: 0 2rem;
-
-  @media (max-width: 1366px) {
-    padding: 0 1.5rem;
-  }
+export const AgendaWrap = styled.div `
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 
   @media (max-width: 790px) {
     width: 100%;
-    padding: 2.188rem 1.375rem;
+    flex-direction: column;
+    padding: 0;
+  }
+`
+
+export const AgendaBox = styled.div`
+  width: 45%;
+
+  @media (max-width: 790px) {
+    width: 80%;
+    padding: 2rem 0;
+    margin: 0 auto;
   }
 `;
 
 export const AgendaImg = styled.figure`
   width: 50%;
-
-  @media (max-width: 1120px) {
-    width: 65%;
-  }
 
   @media (max-width: 790px) {
     width: 100%;
@@ -51,41 +46,28 @@ export const AgendaImg = styled.figure`
 `;
 
 export const AgendaTitle = styled.h2`
-  font: 800 2.6rem 'Usual', sans-serif;
+  font: 800 2rem 'Usual', sans-serif;
   color: #00145d;
 
-  @media (max-width: 790px) {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  @media (max-width: 425px) {
+    font-size: 1.7rem;
   }
 `;
 
 export const AgendaText = styled.p`
   margin-top: 1.8rem;
-  font: 300 1.5rem 'Usual', sans-serif;
-  line-height: 2rem;
+  font: 300 1.3rem 'Usual', sans-serif;
+  line-height: 1.6rem;
 
-  @media (max-width: 1120px) {
-    font-size: 1.3rem;
-    width: 90%;
-  }
-
-
-  @media (max-width: 790px) {
-    font-size: 1rem;
-    line-height: 1.625rem;
+  @media (max-width: 425px) {
+    font-size: 1.05rem;
   }
 `;
 
 export const odsImg = styled.img`
-  
-@media (max-width: 1366px) {
   width: 100%;
-  margin: 0 auto;
-}
 
 @media (max-width: 790px) {
     width: 100%;
-    margin: 0 auto;
   }
 `;
