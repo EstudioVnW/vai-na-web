@@ -10,11 +10,11 @@ export const Contato = styled.main`
 export const ContatoContainer = styled.section`
     display: flex;
     justify-content: space-between;
-    padding: 2vw 7.5vw;
+    padding: 2vw 9vw;
     width: 90%;
 
     @media (max-width: 1024px) {
-        padding: 2vw 6vw;
+        padding: 2vw 4vw;
     }
 
     @media (max-width: 700px) {
