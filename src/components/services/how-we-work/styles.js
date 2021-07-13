@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 
 export const InfoContainer = styled.section`
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   
   @media (max-width: 790px) {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     text-align: center;
   }
-`;
+  `;
+  
+  export const Wrap = styled.div `
+  width: 80%;
+  margin: 0 auto;
+`
 
 export const InfoTitle = styled.h2`
   font: 800 2rem 'Usual', sans-serif;
