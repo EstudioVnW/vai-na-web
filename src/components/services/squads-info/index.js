@@ -19,7 +19,6 @@ const SquadsInfo = () => (
     <S.SquadsText>
       E para alcançar resultados positivos, vamos te ajudar a definir o melhor time.
     </S.SquadsText>
-    </S.SquadsWrap>
     <S.SquadsContent>
       <S.SquadsImg
         src={squads}
@@ -63,6 +62,7 @@ const SquadsInfo = () => (
           </S.SquadsBox>
       </S.Squads>
     </S.SquadsContent>
+    </S.SquadsWrap>
   </S.SquadsContainer>
 );
 

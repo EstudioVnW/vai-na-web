@@ -6,6 +6,7 @@ import InfoImgMobile from '../../../images/images/infographicMobile.png';
 
 const HowWeWork = () => (
   <S.InfoContainer>
+    <S.Wrap>
       <S.InfoTitle>Como Trabalhamos</S.InfoTitle>
       <S.InfoText>
         Trabalhamos como uma parte remota do seu time acelerando suas entregas web e mobile.
@@ -14,6 +15,7 @@ const HowWeWork = () => (
           <S.InfoImg src={InfoImg} alt="Infográfico Processo Ágil"/>
           <S.InfoImgMobile src={InfoImgMobile} alt="Infográfico Processo Ágil"/>
       </S.Infographic>
+      </S.Wrap>
   </S.InfoContainer>
 )
 

@@ -34,7 +34,7 @@ export const HeaderContainer = styled.section`
 	@media (max-width: 425px) {
 		height: auto;
 		margin-top: 3rem;
-		padding: 5rem 0;
+		padding: 3rem 0 0;
 	}
 `;
 
