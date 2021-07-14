@@ -8,7 +8,7 @@ export const Wrap = styled.div`
     width: 80%;
     margin: 0 auto;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         width: 100%;
     }
 `;
@@ -30,7 +30,7 @@ export const Case = styled.section`
         background: #fed5b2;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         flex-direction: column-reverse;
         margin-bottom: 1rem;
         
@@ -45,7 +45,7 @@ export const Reverse = styled(Case)`
     justify-content: space-between;
     padding-right: 3rem;
     
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         flex-direction: column-reverse;
         padding-right: 0;
     }
@@ -55,8 +55,8 @@ export const InfoBox = styled.div`
     margin-top: 3rem;
     width: 38vw;
 
-    @media (max-width: 1000px) {
-        width: 80%;
+    @media (max-width: 1024px) {
+        width: 90%;
         margin: 0 auto;
     }
 `;
@@ -110,7 +110,7 @@ export const Client = styled.div`
     justify-content: space-between;
     width: 32vw;
     
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         width: 80vw;
     }
 `;
@@ -136,7 +136,7 @@ export const ClientText = styled.p`
 `;
 
 export const Date = styled.div`
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         width: 50%;
     }
 `;
@@ -159,7 +159,7 @@ export const CaseLogo = styled.img`
 `;
 
 export const ImgBox = styled.figure`
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         width: 100%;
     }
 `;
@@ -171,14 +171,14 @@ export const CaseImg = styled.img`
 export const MobileImg = styled.img`
     display: none;
     
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         display: block;
         width: 100%;
     }
 `;
 
 export const DesktopImg =  styled.img`
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         display: none;
     }
 `;
