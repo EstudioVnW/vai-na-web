@@ -20,8 +20,9 @@ export const AgendaWrap = styled.div `
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 790px) {
+  @media (max-width: 1024px) {
     width: 100%;
+    align-items: center;
     flex-direction: column;
     padding: 0;
   }
@@ -30,7 +31,7 @@ export const AgendaWrap = styled.div `
 export const AgendaBox = styled.div`
   width: 45%;
 
-  @media (max-width: 790px) {
+  @media (max-width: 1024px) {
     width: 80%;
     padding: 2rem 0;
     margin: 0 auto;
@@ -40,7 +41,7 @@ export const AgendaBox = styled.div`
 export const AgendaImg = styled.figure`
   width: 50%;
 
-  @media (max-width: 790px) {
+  @media (max-width: 1024px) {
     width: 100%;
   }
 `;

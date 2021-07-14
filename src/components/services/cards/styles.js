@@ -87,7 +87,7 @@ export const CardText = styled.div`
   transition: 0.5s ease;
 
   @media (max-width: 425px) {
-    font-size: 1.05rem;
+    font-size: 1rem;
     padding: 1rem 9% 0 0;
   }
 `;
@@ -96,7 +96,7 @@ export const CardTitle = styled.h3`
   font: 800 2rem 'Usual', sans-serif;
 
   @media (max-width: 425px) {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
   }
 
 `;
