@@ -7,45 +7,77 @@ export const Talents = styled.div`
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 8rem;
-	padding: 5rem 3.4rem 3rem;
-	width: 80%;
-	border-radius: 0 20px 20px 0;
-	background: #fed5b252;
+	padding: 5rem 0 3rem;
 
 	@media (min-width: 2560px) {
 		height: 60rem;
 		width: 75%;
 	}
-	@media (max-width: 1024px) {
-		padding: 3rem 3.4rem 1rem;
+	@media (max-width: 1440px) {
+		padding: 5rem 0 0;
 	}
 	@media (max-width: 768px) {
 		flex-direction: column;
+		margin-top: 2rem;
+		padding: 0;
 		width: 100%;
 		height: 100rem;
 		border-radius: 0;
 	}
 	@media (max-width: 480px) {
-		height: 46rem;
-		padding: 3rem 1.4rem 1rem;
+		height: auto;
 	}
 `;
-export const TalentsText = styled.div`
+
+export const TalentsBackground = styled.div`
+	position: absolute;
+	width: 70%;
 	height: 100%;
+	border-radius: 0 20px 20px 0;
+	background: #fed5b252;
+	z-index: -1;
+	
+	@media (max-width: 768px) {
+		width: 100%;
+		border-radius: 0;
+	}
+`
+
+export const TalentsWrap = styled.div`
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 3rem 1.4rem 1rem;
+	width: 80%;
+	
+	@media (max-width: 1200px) {
+		width: 90%;
+	}
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 3rem 0 0;
+		width: 100%;
+	}
+`
+
+export const TalentsText = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	width: 48%;
 
 	@media (min-width: 2560px) {
 		width: 80%;
 	}
 	@media (max-width: 768px) {
 		justify-content: flex-start;
+		width: 100%;
+		padding: 0 1.4rem;
 	}
 `;
 
 export const TalentsTextTitle = styled.h2`
-	width: 50%;
+	width: 80%;
 	color: #FF611E;
 	font-size: 2rem;
 	font-weight: 800;
@@ -73,8 +105,7 @@ export const TalentsTextTitle = styled.h2`
 `;
 
 export const TalentsTextDescription = styled.p`
-	margin-top: 3.12rem;
-	width: 53%;
+	margin-top: 2rem;
 	color: #272727;
 	font-size: 1.3rem;
     line-height: 1.6rem;
@@ -108,9 +139,9 @@ export const TalentsTextDescription = styled.p`
 `;
 
 export const ButtonTalents = styled.div`
-	width: 50%;
+	width: 100%;
 	height: 90px;
-	margin-top: 20px;
+	margin-top: 2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -131,26 +162,9 @@ export const ButtonTalents = styled.div`
 	}
 `;
 
-export const TalentsImage = styled.div`
-	width: 30%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-	@media (min-width: 2560px) {
-		width: 20%;
-	}
-	@media (max-width: 768px) {
-		display: none;
-	}
-`;
-
 export const ImgBox = styled.figure`
-	position: absolute;
-	top: 4rem;
-	right: -20%;
-	width: 40rem;
-	height: 32rem;
+	width: 30rem;
+	height: 25rem;
     border-radius: 15px;
 	border: 2px solid #FF611E;
 	box-shadow: rgb(232, 235, 245) 0px 0px 10px;
@@ -163,19 +177,22 @@ export const ImgBox = styled.figure`
 	 }
 
 	@media (min-width: 2560px) {
-		left: 80%;
 		width: 50rem;
 	}
 	@media (max-width: 1440px) {
-		width: 30rem;	
-		height: 23rem;
+		width: 25rem;
+		height: 20rem;
 	}
 	@media (max-width: 1024px) {
-		width: 24rem;
-		height: 18rem;
+		width: 20rem;
+		height: 16rem;
 	}
 	@media (max-width: 768px) {
-		display: none;
+		margin-top: 1rem;
+		width: 100vw;
+		height: auto;
+		border: none;
+		border-radius: 0;
 	}
 `;
 
@@ -183,14 +200,19 @@ export const TalentsImageInfo = styled.img`
 	width: 100%;
 	height: 100%;
 	transition: 0.2s ease-out;
+	
+	@media (max-width: 768px) {
+		display: none;
+	}
 `
 
 export const TalentsImageInfoResponsive = styled.img`
 	display: none;
+	width: 100vw;
+	transition: 0.2s ease-out;
 
 	@media (max-width: 768px){
 	    display: block;
-		min-width: 116vw;
 	}
 `;
 

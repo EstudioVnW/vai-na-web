@@ -7,15 +7,15 @@ export const Menu = styled.nav`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 7.25rem;
+	padding: 0 10%;
 	width: 100%;
 	height: 6rem;
 	box-shadow: ${props => (props.isScrolled || !props.home) ? '0px 8px 40px #00000019' : 'none'};
 	background: ${props => (props.isScrolled || !props.home) ? '#fff' : 'transparent'};
 	z-index: 10;
 
-	@media (max-width: 1220px) {
-		padding: 0 4rem;
+	@media (max-width: 1200px) {
+		padding: 0 5%;
 	}
 	@media (max-width: 1024px) {
 		padding: 0 1.5rem;

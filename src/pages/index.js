@@ -19,7 +19,6 @@ import Carroussel from "../components/carroussel";
 // styles
 const Content = styled.div`
   width: 100%;
-
 `;
 
 export const query = graphql`

@@ -13,11 +13,19 @@ export const SocialImpact = styled.div`
 		min-height: 85rem;
 		margin-top: 2.3rem;
 	}
-
 	@media (max-width: 480px) {
 		min-height: 165vh;
 	}
 `;
+
+export const SocialWrap = styled.div`
+	width: 80%;
+	margin: 0 auto;
+
+	@media (max-width: 1200px) {
+		width: 90%;
+	}
+`
 
 export const SocialImpactText = styled.div`
 	width: 100%;
@@ -32,7 +40,6 @@ export const SocialImpactText = styled.div`
 	}
 `;
 export const SocialImpactTextTitle = styled.h2`
-	margin-left: 5%;
 	color: #00145D;
 	font-size: 2rem;
 	font-weight: 800;
@@ -51,8 +58,7 @@ export const SocialImpactTextTitle = styled.h2`
 `;
 
 export const SocialImpactTextDescription = styled.p`
-	width: 57%;
-	margin-left: 5%;
+	width: 75%;
 	margin-top: 15px;
 	color: #272727;
 	font-size: 1.3rem;
@@ -78,6 +84,7 @@ export const SocialImpactTextDescription = styled.p`
 `;
 
 export const SocialImpactImage = styled.div`
+	margin: 1rem 0;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -87,7 +94,7 @@ export const SocialImpactImage = styled.div`
 	}
 `;
 export const SocialImpactImageInfo = styled.img`
-	width: 70%;
+	width: 80%;
 
 	@media (max-width: 768px) {
 	width: 100rem;

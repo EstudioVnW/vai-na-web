@@ -15,23 +15,23 @@ const Squads = (props) => {
     <S.SquadsContainer>
       <S.SquadsBg>
         <S.SquadsWrap>
-        <S.SquadsText>
-          Toda vez que sua empresa contrata os squads do Vai na Web ela contribui diretamente para
-          <strong> inspirar, equipar e educar mais pessoas </strong>
-          para atender aos desafios da economia digital.
-        </S.SquadsText>
-        <S.BoxButton>
-          <Button
-            border='#0e2762'
-            color='#fbd4b2'
-            background='#0F2B92'
-            funcAction={redirectToConcact}
-          >
-            Reserve seu Squad!
-          </Button>
-        </S.BoxButton>
-      </S.SquadsWrap>
-      <S.SquadsBox>
+          <S.SquadsText>
+            Toda vez que sua empresa contrata os squads do Vai na Web ela contribui diretamente para
+            <strong> inspirar, equipar e educar mais pessoas </strong>
+            para atender aos desafios da economia digital.
+          </S.SquadsText>
+          <S.BoxButton>
+            <Button
+              border='#0e2762'
+              color='#fbd4b2'
+              background='#0F2B92'
+              funcAction={redirectToConcact}
+            >
+              Reserve seu Squad!
+            </Button>
+          </S.BoxButton>
+        </S.SquadsWrap>
+        <S.SquadsBox>
           <S.SquadsImg src={squadsImg} alt='Alunos do Vai na Web' />
           <S.SquadsIcon>
             <S.IconText>

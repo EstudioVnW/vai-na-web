@@ -15,6 +15,11 @@ export const SquadsContainer = styled.section`
 export const SquadsWrap = styled.div `
   width: 80%;
   margin: 0 auto;
+  background: pink;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `
 
 export const SquadsContent = styled.figure`
@@ -35,8 +40,11 @@ export const SquadsTitle = styled.h2`
   color: #ff611e;
   margin: 1rem 0;
 
+  @media (max-width: 1024px) {
+    width: 80%;
+    margin: 0 auto;
+  }
    @media(max-width: 425px) {
-    width: 100%;
     font-size: 1.7rem;
   } 
 `;
@@ -46,8 +54,12 @@ export const SquadsText = styled.p`
   line-height: 1.6rem;
   margin: 0;
 
+  @media (max-width: 1024px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   @media(max-width: 425px) {
-    width: 100%;
     font-size: 1.05rem;
   } 
 `;

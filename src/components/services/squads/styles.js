@@ -3,53 +3,65 @@ import styled from 'styled-components';
 import squadsIcon from '../../../images/images/squadsIcon.png';
 
 export const SquadsContainer = styled.section`
-  position: relative;
   display: flex;
   max-width: 100%;
-  min-height: 60vh;
-
- @media (max-width: 1024px) {
-    align-items: flex-end;
-    min-height: 0;
- }
+  min-height: 65vh;
 
   @media (max-width: 425px) {
-   padding-top: 5rem;
- } 
+    justify-content: flex-end;
+    margin-top: 3rem;
+    min-height: 40vh;
+  }
+
 `;
 
 export const SquadsBg = styled.div`
-  width: 65%;
-  border-radius: 0 20px 20px 0;
-  background: #eff1f8;
-  position: relative;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
+  position: relative;
   
+  ::before {
+    border-radius: 0 20px 20px 0;
+    background: #eff1f8;
+    content: '';
+    display: block;
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
 
   @media (max-width: 1024px) {
     width: 100%;
     align-items: center;
-    padding-left: 0;
-    padding-bottom: 1rem;
-    border-radius: 0;
-    justify-content: center;
-    position: relative;
+    justify-content: flex-start;
     flex-direction: column-reverse;
+
+    ::before {
+      width: 100%;
+      height: 70%;
+      border-radius: 0;
+    }
   }
 `;
 
 export const SquadsWrap = styled.div `
-  width: 80%;
+  width: 30%;
   margin: 0 auto;
   display: flex; 
   flex-direction: column;
+  justify-content: space-between;
   
+  @media (max-width: 1024px) {
+    width: 80%;
+  }
 `
 
 export const SquadsText = styled.p`
-  width: 59.5%;
+  width: 100%;
   font: 300 1.3rem 'Usual', sans-serif;
   line-height: 1.6rem;
 
@@ -65,62 +77,49 @@ export const SquadsText = styled.p`
 `;
 
 export const BoxButton = styled.div `
-  height: 5rem;
+
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 3rem 0 0;
   
   @media (max-width: 1024px) {
     order: 2;
-    padding-top: 4rem;
+    padding-bottom: 2rem; 
   }
 `;
 
 export const SquadsBox = styled.figure`
-  width: 60%;
-  top: 50%;
-  left: 100%;
-  transform: translate(-50% , -50%);
-  position: absolute;
+  width: 50%;
+  position: relative;
 
   @media (max-width: 1024px) {
-    position: initial;
     transform: none;
     order: 0;
     left: 0;
     display: flex;
     justify-content: center;
+    width: 80%;
   }
-
-  @media(max-width: 790px) {
-    width: 90%;
-    top: 46%;
-    display: flex;
-   justify-content: center;
-  }
-
-   @media(max-width: 425px) {
-    width: 100%;
-    top: 30%;
-  } 
 `;
 
 export const SquadsImg = styled.img`
-  @media (max-width: 1024px) {
     width: 80%;
-  }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 `;
 
 export const SquadsIcon = styled.div`
   position: absolute;
   top: 5%;
-  left: 100%;
+  left: 75%;
   transform: translate(-50% , -50%);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 17vw;
-  height: 17vw;
+  width: 12vw;
+  height: 12vw;
   border-radius: 50%;
   background-image: url(${squadsIcon});
   background-repeat: no-repeat;
@@ -128,19 +127,21 @@ export const SquadsIcon = styled.div`
   cursor: pointer;
 
   @media (max-width: 1024px) {
+    width: 20vw;
+    height: 20vw;
     left: 50%;
     top: 0;
   }
 
-  @media (max-width: 790px) {
+  @media (max-width:768px) {
+    top: -5%;
     width: 25vw;
     height: 25vw;
   }
 
   @media(max-width: 425px) {
-    top: -5%;
-    width: 42vw;
-    height: 42vw;
+    width: 40vw;
+    height: 40vw;
   }
 `;
 
@@ -149,7 +150,7 @@ export const IconText = styled.p`
   flex-direction: column;
   width: 75%;
   padding: 20% 0;
-  font: 300 1.2rem 'Usual', sans-serif;
+  font: 300 1rem 'Usual', sans-serif;
   text-align: center;
 
   &:hover {
@@ -161,15 +162,24 @@ export const IconText = styled.p`
   }
 
   span {
-    font: 700 1.8rem 'Usual', sans-serif;
+    font: 700 1.5rem 'Usual', sans-serif;
     color: #0f2b92;
   }
 
-  @media(max-width: 1024px) {
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
     font-size: 0.8rem;
 
     span {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
   }
+
 `;
