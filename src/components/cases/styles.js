@@ -6,22 +6,22 @@ export const Cases = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 3rem;
+	margin-top: 4rem;
 
 	@media (max-width: 1440px){
 		margin-top: 1rem;
 	}
-
 	@media (max-width: 768px){
 		margin-top: 4rem;
 	}
-
-	@media (max-width: 425px){
+	@media (max-width: 480px){
 		margin-top: 1rem;
 	}
 `;
 
 export const BoxCasesImages = styled.div`
+	width: 80%;
+
 	@media (max-width: 768px) {
 		width: 100%;
 		overflow: hidden;
@@ -53,7 +53,7 @@ export const CasesImages = styled.div`
 export const BoxImage = styled.figure`
 	width: 20%;
 	height: 6.5rem;
-	margin: 0.5rem;
+	margin: 0.5rem 1.2rem;
 	padding: 0.7rem;
 	display: flex;
 	justify-content: center;
@@ -74,7 +74,6 @@ export const BoxImage = styled.figure`
 		margin: 0;
 		padding: 0.5rem;
 	}
-
 	@media (max-width: 768px) {
 		filter: none;
 		width: 11%;
@@ -85,30 +84,29 @@ export const BoxImage = styled.figure`
 		&:hover{
 			box-shadow: none;
 		}
-
 	}
 
 `;
+
 export const ImageCases = styled.img`
 	max-width: 100%;
 
 	@media (min-width: 2560px) {
 		max-height: 20rem;
 	}
-
 	@media (max-width: 768px) {
 		width: 20rem;
 	}
-
 `;
+
 export const ImageCasesM4A = styled.img`
 	max-width: 70%;
 
 	@media (min-width: 2560px) {
 		max-height: 20rem;
 	}
-
 `;
+
 export const ButtonCases = styled.div`
 	margin-top: 2rem;
 	display:flex;
@@ -120,6 +118,7 @@ export const ButtonCases = styled.div`
 		margin-top: 0;
 	}
 `;
+
 export const StyledLink = styled(Link)`
 	color: #0F2B92;
 	font-size: 1.125rem;
