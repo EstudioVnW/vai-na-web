@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CallContainer = styled.section`
     padding: 5rem 0;
 
-    @media (max-width: 800px) {
+    @media (max-width: 1024px) {
         padding: 5rem 0 0;
     }
 `;
@@ -11,6 +11,10 @@ export const CallContainer = styled.section`
 export const Wrap = styled.div`
     width: 80%;
     margin: 0 auto;
+
+    @media (max-width: 1024px){
+        width: 90%;
+    }
 `;
 
 export const Content = styled.div`
@@ -23,7 +27,7 @@ export const Content = styled.div`
         padding: 3rem 0;
     }
     
-     @media (max-width: 960px) {
+     @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;
         padding: 1.5rem 0;
@@ -34,8 +38,8 @@ export const Content = styled.div`
 export const TitleBox = styled.div`
     font: 300 0.9rem 'Usual', sans-serif;
     line-height: 1.5;
-
-    @media (max-width: 960px) {
+    
+    @media (max-width: 1024px) {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -78,7 +82,7 @@ export const ButtonBox = styled.div`
         border-radius: 22px;
         transition: all 0.3s ease-out;
 
-        @media (max-width: 960px) {
+        @media (max-width: 1024px) {
             height: 3rem;
             font-size: 1em;
         }
@@ -104,20 +108,17 @@ export const ButtonBox = styled.div`
 export const TextBox = styled.div`
     padding: 1rem 0;
     width: 37vw;
-    //font: 300 1.4em 'Usual', sans-serif;
 
     strong {
         font-weight: 600;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1024px) {
         width: 65vw;
-        //font-size: 1.2em;
     }
 
     @media (max-width: 680px) {
         width: 100%;
-        //font-size: 0.8em;
     }
 `;
 

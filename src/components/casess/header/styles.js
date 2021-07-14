@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
-    //padding: 14rem 7rem 7rem 7rem;
-    padding: 14rem 0 7rem 0;
-    
+    padding: 14rem 0 7rem 0;    
     background: #ffe9e0;  
 
-    @media (max-width: 800px) {
-        padding: 14rem 2rem 2.5rem;
+    @media (max-width: 1024px) {
+        padding: 14rem 2rem 7rem;
     }
 `;
 
@@ -21,9 +19,9 @@ export const Header = styled.section`
     flex-direction: column;
     justify-content: space-between;
     min-height: 12vh;
-
+   
     @media (max-width: 490px) {
-        min-height: 30vh;
+        min-height: auto;
      }
 `;
 
@@ -32,6 +30,10 @@ export const HeaderTitle = styled.h1`
     font: 800 2.72rem 'Usual', sans-serif;
     color: #00145d;
     
+    @media (max-width: 1024px){
+        margin-bottom: 2rem;
+    }
+
     @media (max-width: 490px) {
         font-size: 2.55em;
         line-height: 1;

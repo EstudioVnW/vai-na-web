@@ -17,7 +17,7 @@ export const ContatoContainer = styled.section`
         padding: 2vw 4vw;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         flex-direction: column;
     }
 `;
@@ -25,7 +25,7 @@ export const ContatoContainer = styled.section`
 export const FormContainer = styled.div`
     width: 80%;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         width: auto;
     }
 `;
@@ -35,8 +35,10 @@ export const FormTitle = styled.h1`
     font-size: 2rem;
     color: #00145d;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         font-size: 2em;
+        font-weight: 800;
+        line-height: 1.6rem;
         margin: 0.3rem 0;
     }
 `;
@@ -48,27 +50,27 @@ export const FormText = styled.p`
     font-weight: 300;
     line-height: 1.5rem;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         margin: 0 0 1.5rem;
         width: auto;
-        font-size: 1.2em;
+        font-size: 1.3rem;
     }
 
-    @media (max-width: 490px) {
+    /* @media (max-width: 490px) {
         font-size: 0.95em;
-    }
+    } */
 `;
 
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    width: 84%;
+    width: 84%;    
 
     @media (max-width: 1024px) {
         width: 90%;
     }
     
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         width: auto;
     }
     
@@ -83,7 +85,15 @@ export const FormLabel = styled.label`
     border-radius: 10px;
     background: #e7e9f4;
 
-    @media (max-width: 700px) {
+    input:invalid {
+        background-color: #ffdddd;
+    }
+
+    input:invalid {
+        border: 5px solid #ffdddd;
+    }
+
+    @media (max-width: 768px) {
             margin: 0 0 1rem;
             font-size: 1.2em;
     }
@@ -105,6 +115,7 @@ export const FormInput = styled.input`
     border: none;
     outline: none;
     background: #e7e9f4;
+
 `;
 
 export const MsgInput = styled.textarea`
@@ -120,7 +131,7 @@ export const MsgInput = styled.textarea`
 `;
 
 export const FormBtn = styled.div`
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         display: flex;
         justify-content: center;
     }
@@ -137,7 +148,7 @@ export const Btn = styled.button`
     border: none;
     background: #0f2b92;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         width: 6.6rem;
         padding: 0.8rem 0 0.6rem;
         font-size: 1em;
@@ -149,11 +160,11 @@ export const Sidebar = styled.aside`
     margin-top: 2rem;
     width: 60%;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         width: 50%;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         width: 95%;
     }
 `;
@@ -181,7 +192,7 @@ export const SideTitle = styled.h3`
     font-size: 1.3rem;
     color: #00145d;
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         font-size: 1.1em;
     }
 `;
@@ -196,7 +207,7 @@ export const SideText = styled.p`
         font-size: 1.2em;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         font-size: 1.1em;
     }
 `; 
