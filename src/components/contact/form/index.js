@@ -17,6 +17,8 @@ const Form = () => {
     const [formContent, setFormContent] = useState({})
     const [status, setStatus] = useState('')
 
+    const [selectedInput, setSelectedInput] = useState(undefined)
+
     const handleChange = (ev) => {
         setFormContent({
             ...formContent,
@@ -26,6 +28,7 @@ const Form = () => {
 
     const handleSubmit = (ev) => {
         ev.preventDefault();
+        setSelectedInput(undefined)
 
         fetch("/", {
             method: "POST",
@@ -38,6 +41,15 @@ const Form = () => {
             .catch(() => {
                 setStatus('Algo deu errado, tente novamente mais tarde')
             })
+    }
+
+    const handleFocus = (ev) => {
+        setSelectedInput(ev.target.name)
+        
+    }
+
+    const handleClear = (id) => {
+        document.getElementById(id).value = ''
     }
 
     return (
@@ -56,23 +68,27 @@ const Form = () => {
                         netlify
                         onSubmit={handleSubmit}
                     >
-                        <S.FormLabel>
+                        <S.FormLabel selected={selectedInput === 'name'}>
                             Nome
-                            <S.FormInput name="name" type="text" onChange={handleChange} />
+                            <S.FormInput id='inpName' name="name" type="text" onChange={handleChange} onFocus={handleFocus} />
+                            {selectedInput === 'name' && <S.BtnLimpar onClick={() => handleClear('inpName')}>Limpar</S.BtnLimpar>}
                         </S.FormLabel>
 
-                        <S.FormLabel>
+                        <S.FormLabel selected={selectedInput === 'email'}>
                             Email
-                            <S.FormInput name="email" type="email" onChange={handleChange} />
+                            <S.FormInput id='inpEmail' name="email" type="email" onChange={handleChange} onFocus={handleFocus} />
+                            {selectedInput === 'email' && <S.BtnLimpar onClick={() => handleClear('inpEmail')}>Limpar</S.BtnLimpar>}
                         </S.FormLabel>
 
-                        <S.FormLabel>
+                        <S.FormLabel selected={selectedInput === 'tel'}>
                             Telefone
-                            <S.FormInput name="tel" type="tel" onChange={handleChange} />
+                            <S.FormInput id='inpTel' name="tel" type="tel" onChange={handleChange} onFocus={handleFocus} />
+                            {selectedInput === 'tel' && <S.BtnLimpar onClick={() => handleClear('inpTel')}>Limpar</S.BtnLimpar>}
                         </S.FormLabel>
-                        <S.FormLabelMsg>
+                        <S.FormLabelMsg selected={selectedInput === 'message'}>
                             Mensagem
-                            <S.MsgInput name="message" type="text" onChange={handleChange} />
+                            <S.MsgInput id='inpMessage' name="message" type="text" onChange={handleChange} onFocus={handleFocus} />
+                            {selectedInput === 'message' && <S.BtnLimpar onClick={() => handleClear('inpMessage')}>Limpar</S.BtnLimpar>}
                         </S.FormLabelMsg>
                         {status}
                         <S.FormBtn>
