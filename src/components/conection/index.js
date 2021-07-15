@@ -3,15 +3,11 @@ import styled from 'styled-components';
 import * as S from './styles';
 import ButtonHome from '../button/Button';
 
-import PeoplesImageFirst from '../../images/images/Group11292.png';
-import PeoplesImageSecond from '../../images/images/Group11293.png';
+import PeoplesImageFirst from '../../images/images/Grupo11293.png';
+import PeoplesImageSecond from '../../images/images/Grupo11292.png';
 import PeoplesImageFirstResponsive from '../../images/images/Fotos_bolinhas_1.png';
 import PeoplesImageSecondResponsive from '../../images/images/Fotos_bolinhas_2.png';
 import Line from '../../images/images/Linha.svg';
-
-
-
-
 
 const Conection = ({ home }) => {
 
@@ -25,7 +21,7 @@ const Conection = ({ home }) => {
                 <S.ConectionLineImage src={Line} />
                 <S.ConectionButton>
                     <ButtonHome
-                    width='22rem'
+                    width='20rem'
                     background='#0F2B92'
                     border='#0F2B92'
                     >

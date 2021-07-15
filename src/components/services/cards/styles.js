@@ -80,23 +80,25 @@ export const CardCircle = styled.div`
   background: #00145d;
 `;
 
-export const CardText = styled.div`
+export const CardText = styled.p`
   padding: 2rem 9% 0 0;
   font: 300 1.3rem 'Usual', sans-serif;
   line-height: 1.6rem;
   transition: 0.5s ease;
 
   @media (max-width: 425px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
     padding: 1rem 9% 0 0;
   }
 `;
 
 export const CardTitle = styled.h3`
   font: 800 2rem 'Usual', sans-serif;
+  width: 96%;
 
   @media (max-width: 425px) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
 `;

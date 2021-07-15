@@ -18,8 +18,7 @@ const Cards = () => (
         <S.IconBg>
           <S.CardIcon src={backlogIcon} alt='' />
         </S.IconBg>
-        <S.CardTitle>Backlog de</S.CardTitle>
-        <S.CardTitle>Produtos Digitais</S.CardTitle>
+        <S.CardTitle>Backlog de Produtos Digitais</S.CardTitle>
         <S.CardText>Crie ou aprimore funcionalidades que geram valor para o usuário através de entregas contínuas de design e desenvolvimento web e mobile.</S.CardText>
       </S.Card>
 
@@ -32,8 +31,7 @@ const Cards = () => (
         <S.IconBg>
           <S.CardIcon src={responsiveIcon} alt='' />
         </S.IconBg>
-        <S.CardTitle>Canais digitais,</S.CardTitle>
-        <S.CardTitle>responsivos e acessíveis</S.CardTitle>
+        <S.CardTitle>Canais digitais, responsivos e acessíveis</S.CardTitle>
         <S.CardText>
           Desenvolva sites, sistemas, portais, e-commerces dinâmicos que beneficiem
           <strong> todos</strong>
@@ -50,8 +48,7 @@ const Cards = () => (
         <S.IconBg>
           <S.CardIcon src={mvpIcon} alt='' />
         </S.IconBg>
-        <S.CardTitle>MVPs ágeis</S.CardTitle>
-        <S.CardTitle>e escaláveis</S.CardTitle>
+        <S.CardTitle>MVPs ágeis e escaláveis</S.CardTitle>
         <S.CardText>Descoberta, ideação e implementação de MVPs rapidamente e em escala. Agende, sem custo, uma sessão de descoberta de requisitos.</S.CardText>
       </S.Card>
     </S.Cards>
