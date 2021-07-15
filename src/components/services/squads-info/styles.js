@@ -3,19 +3,17 @@ import styled from 'styled-components';
 export const SquadsContainer = styled.section`
   max-width: 100%;
   min-height: 50vh;
-  padding-top: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
 
   @media (max-width: 1024px) {
-    display-flex;
-    align-items: flex-start;
-    justify-content: center;
+    margin-bottom: 3rem;
   }
 `;
 
 export const SquadsWrap = styled.div `
   width: 80%;
   margin: 0 auto;
-  background: pink;
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -41,11 +39,11 @@ export const SquadsTitle = styled.h2`
   margin: 1rem 0;
 
   @media (max-width: 1024px) {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
    @media(max-width: 425px) {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   } 
 `;
 
@@ -55,12 +53,13 @@ export const SquadsText = styled.p`
   margin: 0;
 
   @media (max-width: 1024px) {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
   @media(max-width: 425px) {
-    font-size: 1.05rem;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
   } 
 `;
 
@@ -85,7 +84,6 @@ export const SquadsImgMobile = styled.img`
 export const Squads = styled.div`
   position: relative;
   display: flex;
-  padding: 2rem 3rem;
   text-align: center;
 
   @media(max-width: 1024px) {
@@ -99,80 +97,55 @@ export const Squads = styled.div`
 
 export const SquadsBox = styled.div`
   width: 100%;
-  margin: 0.25rem;
+  margin: 0.5rem;
   display: flex;
   justify-content: center;
-  
-  @media(max-width: 1366px) {
-    margin: 0;
+
+  @media (max-width: 425px) {
+    justify-content: space-around;
   }
 
-  @media(max-width: 1024px) {
-    margin: 0;
- 
-  }
 `
 export const SquadsPerson = styled.p`
   position: relative;
   width: 50%;
   font: 800 1.5em 'Usual', sans-serif;
-  bottom: -25%;
-
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   &:nth-child(2) {
-    height: 15rem;
-    bottom: 0%;
-  }
-
-  @media(max-width: 1366px) {
-    font-size: 1.2rem;
-    top: -30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 2%;
-
-    &:nth-child(2) {
-      height: 8rem;
-      top: 0;
-    }
-  }
-
-  @media(max-width: 1120px) {
-    font-size: 1rem;
-    top: -30%;
-    width: 45%;
-
-    &:nth-child(2) {
-      height: 5rem;
-      top: 0;
-    }
+    height: 13rem;
+    bottom: -25%;
   }
 
   @media(max-width: 1024px) {
-    font-size: 1.1rem;
-    line-height: 1.375rem;
-    margin: 0.45rem;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
     width: 40%;
-    bottom: 0;
-
+    
     &:nth-child(2) {
       height: auto;
+      bottom: 0;
     }
   }
 
   @media(max-width: 425px) {
     font-size: 0.8rem;
     left: 0;
+    width: 30%;
   }
 `
 export const Line = styled.img`
   position: absolute;
-  bottom: 35%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50% , -50%);
-  height: 21rem;
+  height: 15rem;
+  width: 15rem;
   
-  @media(max-width: 1366px) {
+/*   @media(max-width: 1366px) {
     width: 30px;
     height: 200px;
     bottom: -10%;
@@ -183,7 +156,7 @@ export const Line = styled.img`
     height: 150px;
     bottom: -10%;
   }
-
+ */
   @media(max-width: 1024px) {
     display: none;
   }
