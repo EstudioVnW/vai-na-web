@@ -11,8 +11,8 @@ const ServiceHeader = () => (
             <S.HImgBox>
                 <S.HImg src={headerImg} alt="Três mulheres sorrindo para o computador"/>
                 <S.HTextBox>
-                    <S.HText><i>"Por meio de trabalho duro e educação, podemos promover uma economia forte e oportunidades para todos"</i></S.HText>
-                    <S.HText><strong>Julia Gillard</strong></S.HText>
+                    <S.HDescription><i>"Por meio de trabalho duro e educação, podemos promover uma economia forte e oportunidades para todos"</i></S.HDescription>
+                    <S.HDescription><strong>Julia Gillard</strong></S.HDescription>
                 </S.HTextBox>
                 <S.HImgLogo src={estudioLogo} alt="Logo Estúdio Vai na Web"/>
             </S.HImgBox>
