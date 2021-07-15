@@ -23,7 +23,7 @@ export const DepositionsTitle = styled.h2`
 		font-size: 5rem;
 	}
     @media (max-width: 768px) {
-		font-size: 3.5rem;
+		font-size: 1.6rem;
         width: 80%;
         text-align: center;
 	}
@@ -45,11 +45,12 @@ export const DepositionsSubTitle = styled.h3`
         margin-top: 20px;
 	}
     @media (max-width: 768px) {
-		font-size: 2rem;
         width: 73%;
-        text-align: center;
         margin-top: 0.5rem;
+        text-align: center;
+        font-size: 1.25rem;
         font-weight: 600;
+        line-height: 1.4;
 	}
     @media (max-width: 480px) {
         font-size: 0.9rem;

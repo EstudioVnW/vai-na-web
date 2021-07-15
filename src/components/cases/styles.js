@@ -6,15 +6,12 @@ export const Cases = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 4rem;
+	margin-top: 5rem;
 
-	@media (max-width: 1440px){
-		margin-top: 1rem;
+	@media (max-width: 1440px) {
+		margin-top: 2rem;
 	}
-	@media (max-width: 768px){
-		margin-top: 4rem;
-	}
-	@media (max-width: 480px){
+	@media (max-width: 480px) {
 		margin-top: 1rem;
 	}
 `;
@@ -22,13 +19,15 @@ export const Cases = styled.div`
 export const BoxCasesImages = styled.div`
 	width: 80%;
 
+	@media (max-width: 1200px) {
+		width: 100%;
+	}
 	@media (max-width: 768px) {
 		width: 100%;
 		overflow: hidden;
 		overflow-x: scroll;
-		margin-bottom: 1rem;
 
-		&::-webkit-scrollbar{
+		&::-webkit-scrollbar {
 			width: 0;
 		}
 	}
@@ -51,9 +50,9 @@ export const CasesImages = styled.div`
 `;
 
 export const BoxImage = styled.figure`
-	width: 20%;
-	height: 6.5rem;
-	margin: 0.5rem 1.2rem;
+	width: 21%;
+	height: 6rem;
+	margin: 0.2rem 1.2rem;
 	padding: 0.7rem;
 	display: flex;
 	justify-content: center;
@@ -73,6 +72,9 @@ export const BoxImage = styled.figure`
 		height: 10rem;
 		margin: 0;
 		padding: 0.5rem;
+	}
+	@media (max-width: 1200px){
+		width: 20%;
 	}
 	@media (max-width: 768px) {
 		filter: none;
@@ -113,9 +115,25 @@ export const ButtonCases = styled.div`
 	align-items: center;
 	justify-content: center;
 	height: 4rem;
+	font-size: 0.8rem;
+	font-weight: 800;
 
 	@media (max-width: 768px) {
 		margin-top: 0;
+
+		button {
+			width: 21rem;
+			height: 3.3rem;
+			font-size: 1.2rem;
+		}
+	}
+	@media (max-width: 480px) {
+
+		button {
+			width: 17rem;
+			height: 2.7rem;
+			font-size: 1rem;
+		}
 	}
 `;
 
