@@ -84,14 +84,9 @@ export const FormLabel = styled.label`
     color: #00145d;
     border-radius: 10px;
     background: #e7e9f4;
+    display: flex;
 
-    input:invalid {
-        background-color: #ffdddd;
-    }
-
-    input:invalid {
-        border: 5px solid #ffdddd;
-    }
+    border: ${props => props.selected ? '1px solid #00145D' : 'none' };
 
     @media (max-width: 768px) {
             margin: 0 0 1rem;
@@ -103,8 +98,20 @@ export const FormLabel = styled.label`
     }
 `;
 
+export const BtnLimpar = styled.span`
+    font-weight: 400;
+    
+
+`;
+
 export const FormLabelMsg = styled(FormLabel)`
-    height: 50vh;
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        height: 70vh;
+    }
 `;
 
 export const FormInput = styled.input`
