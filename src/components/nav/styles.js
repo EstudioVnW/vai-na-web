@@ -14,6 +14,9 @@ export const Menu = styled.nav`
 	background: ${props => (props.isScrolled || !props.home) ? '#fff' : 'transparent'};
 	z-index: 10;
 
+	@media (min-width: 1900px) {
+		height: 8rem;
+	}
 	@media (max-width: 1200px) {
 		padding: 0 5%;
 	}
@@ -30,11 +33,15 @@ export const Wrap = styled.div`
 	height: 100%;
 	transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 
-	button {
-		height: 3.1rem;
-		font: 600 1em 'Usual',sans-serif;
-	}
 
+	button {
+		font-size: 1.05rem;
+		
+		@media (min-width: 1900px) {
+			font-size: 1.6rem;
+		}
+	}
+	
 	@media (max-width: 1220px) {
 		padding-left: 0;
 	}
@@ -87,6 +94,10 @@ export const NavItem = styled.li`
 		}
 	}
 
+	@media (min-width: 1900px) {
+		width: 9rem;
+		font-size: 1.6rem;
+	}
 	@media (max-width: 1024px) {
 		margin-right: 0;
 		font-size: 1.2em;
@@ -112,6 +123,10 @@ export const Figure = styled.figure`
 export const Logo = styled.img`
 	display: flex;
 	width: 5rem;
+
+	@media (min-width: 1900px) {
+		width: 9rem;
+	}
 `;
 
 export const MenuOpen = styled.div`

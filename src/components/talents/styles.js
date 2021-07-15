@@ -18,10 +18,9 @@ export const Talents = styled.div`
 	}
 	@media (max-width: 768px) {
 		flex-direction: column;
-		margin-top: 2rem;
+		margin-top: 0.8rem;
 		padding: 0;
 		width: 100%;
-		height: 100rem;
 		border-radius: 0;
 	}
 	@media (max-width: 480px) {
@@ -32,7 +31,7 @@ export const Talents = styled.div`
 export const TalentsBackground = styled.div`
 	position: absolute;
 	width: 70%;
-	height: 100%;
+    height: 85%;
 	border-radius: 0 20px 20px 0;
 	background: #fed5b252;
 	z-index: -1;
@@ -55,7 +54,7 @@ export const TalentsWrap = styled.div`
 	}
 	@media (max-width: 768px) {
 		flex-direction: column;
-		padding: 3rem 0 0;
+		padding: 2rem 0 0;
 		width: 100%;
 	}
 `
@@ -86,16 +85,13 @@ export const TalentsTextTitle = styled.h2`
 		font-size: 5rem;
 	}
 	@media (max-width: 1440px) {
+		width: 90%;
 		font-size: 1.8rem;
-	}
-	@media (max-width: 1024px) {
-		width: 60%;
-		font-size: 1.5rem;
 	}
 	@media (max-width: 768px) {
 		margin-left: 0;
 		width: 100%;
-		font-size: 4rem;
+		font-size: 2rem;
 		text-align: left;
 	}
 	@media (max-width: 480px) {
@@ -106,32 +102,30 @@ export const TalentsTextTitle = styled.h2`
 
 export const TalentsTextDescription = styled.p`
 	margin-top: 2rem;
-	color: #272727;
+	color: #000;
 	font-size: 1.3rem;
-    line-height: 1.6rem;
+	line-height: 1.25;
 
 	@media (min-width: 2560px) {
 		font-size: 2.5rem;
 	}
 	@media (max-width: 1440px) {
 		margin-top: 1.6rem;
-		font-size: 1rem;
-    	line-height: 1.6rem;
+		font-size: 1.1rem;
 	}
-	@media (max-width 1024px) {
+	@media (max-width: 1024px) {
 		margin-top: 1.2rem;
-		width: 70%;
+		width: 90%;
 		font-size: 0.9rem;
 	}
 	@media (max-width: 768px) {
-		margin-left: 0;
+		margin-top: 2rem;
 		width: 100%;
-		font-size: 2rem;
-		line-height: 50px;
-		margin-top: 50px;
+		font-size: 1rem;
+		line-height: 1.58;
 	}
 	@media (max-width: 480px) {
-		margin-top: 20px;
+		margin-top: 1rem;
 		padding-right: 2rem;
 		font-size: 0.9rem;
 		line-height: 1.6;
@@ -150,6 +144,8 @@ export const ButtonTalents = styled.div`
 		margin-top: 1.5rem;
 	}
 	@media (max-width: 1024px) {
+		margin: 0;
+
 		button {
 			width: 9rem;
 			height: 3.2rem;
@@ -157,7 +153,7 @@ export const ButtonTalents = styled.div`
 		}
 	}
 	@media (max-width: 768px) {
-		margin: 0;
+		margin-top: 1rem;
 		width: 100%;
 	}
 `;
@@ -188,8 +184,8 @@ export const ImgBox = styled.figure`
 		height: 16rem;
 	}
 	@media (max-width: 768px) {
-		margin-top: 1rem;
-		width: 100vw;
+		margin: 1rem auto 0;
+		width: 100%;
 		height: auto;
 		border: none;
 		border-radius: 0;
@@ -208,7 +204,8 @@ export const TalentsImageInfo = styled.img`
 
 export const TalentsImageInfoResponsive = styled.img`
 	display: none;
-	width: 100vw;
+	width: 100%;
+	height: 100%;
 	transition: 0.2s ease-out;
 
 	@media (max-width: 768px){
