@@ -7,7 +7,7 @@ export const Header = styled.header`
 	border-radius: 0 0 0 20px;
 	margin-left: 3.4rem;
 	
-	@media (min-width: 1800px) {
+	@media (min-width: 1900px) {
 		margin-left: 5rem;
 	}
 	@media (max-width: 1200px) {
@@ -28,24 +28,24 @@ export const Wrap = styled.div`
 	flex-flow: column-reverse;
 	justify-content: center;
 	margin: 0 auto;
-	padding-left: 3.7rem;
+	padding-left: 7%;
 	min-height: calc(54.3vh + 7rem);
 
-	@media (min-width: 1800px) {
+	@media (min-width: 1900px) {
 		min-height: calc(65vh + 7rem);
 	}
 	@media (max-width: 1440px) {
-		min-height: calc(52vh + 10rem);
+		min-height: calc(50vh + 10rem);
 	}
 	@media (max-width: 1200px) {
-		padding-left: 1.4rem;
+		padding-left: 4%;
 		min-height: calc(48vh + 10rem);
 	}
 	@media (max-width: 768px) {
 		padding-top: 0;
 		min-height: calc(55vh + 7rem);
 	}
-	@media (max-width: 360px){
+	@media (max-width: 480px){
 		min-height: calc(65vh + 7rem);
 	}
 `;
@@ -59,7 +59,7 @@ export const Wrap = styled.div`
 	background: #FED5B2;
 	z-index: 1;
 
-	@media (min-width: 1800px) {
+	@media (min-width: 1900px) {
 		max-width: 45%;
 	}
 	@media (max-width: 1440px) {
@@ -73,7 +73,7 @@ export const Wrap = styled.div`
 		max-width: 75%;
 		border-radius: 10px;
 	}
-	@media (max-width: 500px){
+	@media (max-width: 480px){
 		bottom: 10%;
 	}
  `;
@@ -142,7 +142,7 @@ export const Title = styled.h1`
 		margin-top: 10px;
 		font-size: 1.7rem;
 	}
-	@media (max-width: 500px) {
+	@media (max-width: 480px) {
  		font-size: 1.5rem;
 	}
 `;
@@ -163,7 +163,7 @@ export const SubTitle = styled.h2`
 		margin-top: 5px;
 		font-weight: 500;
 	}
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
 	 	font-size: 1.3rem;
 		line-height: 1.4;
 	 }
@@ -173,21 +173,15 @@ export const ImageEstudio = styled.img`
 	position: absolute;
 	right: 0;
 	bottom: -7.5%;
-	width: 49.3rem;
-	height: 31.6rem;
+	width: 50%;
 
-	@media (min-width: 1800px) {
-		width: 60rem;
-		height: auto;
-	}
-	@media (max-width: 1440px) {
-		bottom: -8%;
-		width: 42rem;
+	@media (min-width: 1900px) {
+		width: 55%;
 		height: auto;
 	}
 	@media (max-width: 1200px) {
 		bottom: -5%;
-		width: 33rem;
+		width: 65%;
 	}
 	@media (max-width: 768px) {
 		width: 85%;

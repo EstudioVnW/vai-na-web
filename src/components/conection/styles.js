@@ -10,15 +10,16 @@ export const Conection = styled.div`
   @media (max-width: 768px) {
 		flex-direction: column;
 	}
-
 `;
+
 export const ImagePeoples = styled.img`
-  width: 30%;
+  width: 28%;
 
   @media (max-width: 768px) {
 		display: none;
 	}
 `;
+
 export const ImagePeoplesResponsive = styled.img`
   display: none;
 
@@ -34,6 +35,7 @@ export const ConectionCenter = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
 export const ConectionTitle = styled.h1`
   width: 100%;
   color: #00145D;
@@ -44,16 +46,13 @@ export const ConectionTitle = styled.h1`
   @media (min-width: 2560px) {
       font-size: 3rem;
   }
-  @media (max-width: 1920px) {
-      font-size: 3rem;
-  }
   @media (max-width: 1440px){
     font-size: 2.3rem;
   }
   @media (max-width: 768px) {
 		width: 90%;
 	}
-  @media (max-width: 360px) {
+  @media (max-width: 480px) {
     font-size: 1.2rem;
   }
 `;
@@ -70,5 +69,13 @@ export const ConectionButton = styled.div`
   display: flex;
   align-items: center;
   height: 5rem;
+
+  @media (max-width: 480px) {
+    button {
+      width: 14rem;
+      height: 2.7rem;
+      font-size: 0.9rem;
+    }
+  }
 `;
 
