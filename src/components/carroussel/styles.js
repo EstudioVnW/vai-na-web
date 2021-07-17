@@ -237,10 +237,6 @@ export const AnimationSlide = styled.div`
 
 export const BoxSlide = styled.div`
 
-    &:lastchild div img {
-        background: pink;
-    }
-
     @media (max-width: 768px) {
         width: 25rem;
         height: 28rem;
@@ -255,15 +251,10 @@ export const BoxSlide = styled.div`
         margin-left: 2.5rem;
         margin-right: 2.5rem; 
     }
-    @media (max-width: 414px) {
-        margin-left: 0.8rem;
-        margin-right: 0.5rem;
-    }
     @media (max-width: 480px) {
         width: 17rem;
         height: 18rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin: 50px 2rem 0 0;
     }
 `;
 

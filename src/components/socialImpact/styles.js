@@ -20,7 +20,7 @@ export const SocialWrap = styled.div`
 	margin: 0 auto;
 
 	@media (max-width: 1200px) {
-		width: 90%;
+		width: 88%;
 	}
 `;
 
@@ -36,7 +36,7 @@ export const SocialImpactTextTitle = styled.h2`
 	font-size: 2rem;
 	font-weight: 800;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 1900px) {
 		font-size: 5rem;
 	}
 	@media (max-width: 768px) {
@@ -58,7 +58,7 @@ export const SocialImpactTextDescription = styled.p`
 	font-size: 1.3rem;
 	line-height: 1.2;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 1900px) {
 		width: 70%;
 		font-size: 2.5rem;
 	}
