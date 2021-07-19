@@ -10,6 +10,9 @@ export const SocialImpact = styled.div`
 	display: flex;
 	flex-direction: column;
 
+	@media (min-width: 2200px) {
+		padding: 6rem 0;
+	}
 	@media (max-width: 480px) {
 		min-height: 170vh;
 	}
@@ -36,8 +39,8 @@ export const SocialImpactTextTitle = styled.h2`
 	font-size: 2rem;
 	font-weight: 800;
 
-	@media (min-width: 1900px) {
-		font-size: 5rem;
+	@media (min-width: 2200px) {
+		font-size: 3.8rem;
 	}
 	@media (max-width: 768px) {
 		width: 70%;
@@ -58,9 +61,9 @@ export const SocialImpactTextDescription = styled.p`
 	font-size: 1.3rem;
 	line-height: 1.2;
 
-	@media (min-width: 1900px) {
-		width: 70%;
-		font-size: 2.5rem;
+	@media (min-width: 2200px) {
+		width: 80%;
+		font-size: 2rem;
 	}
 	@media (max-width: 1360px){
 		width: 80%;
