@@ -14,7 +14,7 @@ export const Menu = styled.nav`
 	background: ${props => (props.isScrolled || !props.home) ? '#fff' : 'transparent'};
 	z-index: 10;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		height: 8rem;
 	}
 	@media (max-width: 1200px) {
@@ -37,7 +37,7 @@ export const Wrap = styled.div`
 	button {
 		font-size: 1.05rem;
 		
-		@media (min-width: 1900px) {
+		@media (min-width: 2200px) {
 			font-size: 1.6rem;
 		}
 	}
@@ -94,7 +94,7 @@ export const NavItem = styled.li`
 		}
 	}
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		width: 9rem;
 		font-size: 1.6rem;
 	}
@@ -124,7 +124,7 @@ export const Logo = styled.img`
 	display: flex;
 	width: 5rem;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		width: 9rem;
 	}
 `;

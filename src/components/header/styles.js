@@ -7,7 +7,7 @@ export const Header = styled.header`
 	border-radius: 0 0 0 20px;
 	margin-left: 3.4rem;
 	
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
 		margin-left: 5rem;
 	}
 	@media (max-width: 1200px) {
@@ -31,7 +31,7 @@ export const Wrap = styled.div`
 	padding-left: 7%;
 	min-height: calc(54.3vh + 7rem);
 
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
 		min-height: calc(65vh + 7rem);
 	}
 	@media (max-width: 1440px) {
@@ -53,15 +53,14 @@ export const Wrap = styled.div`
  export const CardHome = styled.div`
  	margin-top: 3rem;
 	padding: 0.55rem 2rem 2rem;
-	max-width: 55%;
+	max-width: 56%;
 	border-radius: 15px;
 	box-shadow: 0 0 30px #09255d80;
 	background: #FED5B2;
 	z-index: 1;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
 		padding: 2rem 3rem 3rem;
-		max-width: 52%;
 		border-radius: 25px;
 	}
 	@media (max-width: 1440px) {
@@ -91,7 +90,7 @@ export const Circles = styled.div`
 	justify-content: space-between;
 	width: 4.37rem;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
 		width: 6rem;
 	}
 	@media (max-width: 1200px) {
@@ -106,7 +105,7 @@ export const Circle = styled.div`
 	border-radius: 50%;
 	margin-top: 15px;
 	
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
 		margin: 1rem 0;
 		width: 25px;
 		height: 25px;
@@ -123,7 +122,7 @@ export const TextCircle = styled.p`
 	font-size: 1.1rem;
 	font-weight: lighter;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
 		font-size: 2rem;
 	}
     @media (max-width: 1200px){
@@ -142,13 +141,14 @@ export const Line = styled.div`
 `;
 
 export const Title = styled.h1`
+	margin-top: 15px;
 	padding-top: 0.45rem;
 	font-size: 2.7rem;
+	font-weight: 800;
 	color: #272727;
-	margin-top: 15px;
 
-	@media (min-width: 2560px) {
-		font-size: 4.5rem;
+	@media (min-width: 2200px) {
+		font-size: 4rem;
 	}
 	@media (max-width: 1440px){
 		font-size: 2rem;
@@ -171,8 +171,8 @@ export const SubTitle = styled.h2`
 	color: #272727;
 	margin-top: 10px;
 	
-	@media (min-width: 2560px) {
-		font-size: 3.2rem;
+	@media (min-width: 2200px) {
+		font-size: 2.9rem;
 	}
 	@media (max-width: 1440px){
 		font-size: 1.4rem;
@@ -196,7 +196,7 @@ export const ImageEstudio = styled.img`
 	bottom: -7.5%;
 	width: 50%;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
 		width: 55%;
 		height: auto;
 	}

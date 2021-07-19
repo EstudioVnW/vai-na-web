@@ -20,28 +20,28 @@ const Cases = ({ home }) => {
                 <S.BoxCasesImages>
                     <S.CasesImages>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageSirio} alt='Hospital Sírio Libanês'  />
+                            <S.ImageCases src={ImageSirio} alt='Logo do Hospital Sírio Libanês'  />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageVotorantim} alt='Instituto Votorantim' />
+                            <S.ImageCases src={ImageVotorantim} alt='Logo do Instituto Votorantim' />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImagePetronect} alt='Petronect' width="70%" />
+                            <S.ImageCases src={ImagePetronect} alt='Logo da Petronect' style={{padding: '2rem'}} />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageProadiSus} alt='ProadiSUS' />
+                            <S.ImageCases src={ImageProadiSus} alt='Logo da ProadiSUS' />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageQuickCash} alt='QuickCash' width="77%" />
+                            <S.ImageCases src={ImageQuickCash} alt='Logo da QuickCash' style={{padding: '2rem'}} />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageIts} alt='Instituto de Tecnologia E Sociedade do Rio' width="60%" />
+                            <S.ImageCases src={ImageIts} alt='Logo do Instituto de Tecnologia E Sociedade do Rio' style={{padding: '2rem'}} />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageSedimenta} alt='Sedimenta JPM' />
+                            <S.ImageCases src={ImageSedimenta} alt='Logo da Sedimenta JPM' />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCasesM4A src={ImageM4A} alt='Match 4 Action' width="40%" />
+                            <S.ImageCasesM4A src={ImageM4A} alt='Logo da Match 4 Action' style={{padding: '2rem'}} />
                         </S.BoxImage>
                     </S.CasesImages>	
                 </S.BoxCasesImages>
