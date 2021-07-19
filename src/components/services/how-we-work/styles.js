@@ -15,6 +15,10 @@ export const InfoContainer = styled.section`
   export const Wrap = styled.div `
   width: 80%;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 export const InfoTitle = styled.h2`
@@ -23,7 +27,7 @@ export const InfoTitle = styled.h2`
   padding-top: 4rem;
 
   @media (max-width: 425px) {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -32,7 +36,7 @@ export const InfoText = styled.p`
   padding-top: 0.5rem;
 
     @media (max-width: 425px) {
-      font-size: 1.05rem;
+      font-size: 0.8rem;
       padding-bottom: 1.5rem;
     }
   

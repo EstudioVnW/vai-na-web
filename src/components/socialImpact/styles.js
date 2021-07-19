@@ -6,59 +6,59 @@ import { Link } from "gatsby";
 export const SocialImpact = styled.div`
 	background: rgb(15,43,146,0.07);
 	margin-top: 5rem;
+	padding: 3rem 0;
 	display: flex;
 	flex-direction: column;
 
-	@media (max-width: 768px) {
-		min-height: 85rem;
-		margin-top: 2.3rem;
-	}
-
 	@media (max-width: 480px) {
-		min-height: 165vh;
+		min-height: 170vh;
+	}
+`;
+
+export const SocialWrap = styled.div`
+	width: 80%;
+	margin: 0 auto;
+
+	@media (max-width: 1200px) {
+		width: 88%;
 	}
 `;
 
 export const SocialImpactText = styled.div`
 	width: 100%;
-	margin-top: 4rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-	@media (max-width: 768px) {
-		width: 90%;
-
-	}
 `;
+
 export const SocialImpactTextTitle = styled.h2`
-	margin-left: 5%;
 	color: #00145D;
 	font-size: 2rem;
 	font-weight: 800;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 1900px) {
 		font-size: 5rem;
 	}
 	@media (max-width: 768px) {
 		width: 70%;
-		font-size: 3.5rem;
+		font-size: 1.6rem;
+		letter-spacing: -1px;
 	}
 	@media (max-width: 480px) {
-		font-size: 2rem;
 		width: 90%;
+		font-size: 2rem;
+		line-height: 1.1;
 	}
 `;
 
 export const SocialImpactTextDescription = styled.p`
-	width: 57%;
-	margin-left: 5%;
-	margin-top: 15px;
-	color: #272727;
+	width: 75%;
+	margin-top: 0.7rem;
+	color: #000;
 	font-size: 1.3rem;
-	line-height: 1.6rem;
+	line-height: 1.2;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 1900px) {
 		width: 70%;
 		font-size: 2.5rem;
 	}
@@ -67,17 +67,18 @@ export const SocialImpactTextDescription = styled.p`
 	}
 	@media (max-width: 768px) {
 		width: 100%;
-		font-size: 2rem;
-		line-height: 50px;
+		font-size: 1rem;
+		line-height: 1.58;
 	}
 	@media (max-width: 480px) {
-		font-size: 1rem;
-		line-height: 25px;
 		width: 90%;
+		font-size: 0.9rem;
+		line-height: 1.7;
 	}
 `;
 
 export const SocialImpactImage = styled.div`
+	margin: 1rem 0;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -87,15 +88,15 @@ export const SocialImpactImage = styled.div`
 	}
 `;
 export const SocialImpactImageInfo = styled.img`
-	width: 70%;
+	width: 80%;
 
 	@media (max-width: 768px) {
-	width: 100rem;
+		width: 100rem;
 	}
 `;
 
 export const SocialImpactImageResponsive = styled.div`
-	display:none;
+	display: none;
 
 	@media (max-width: 768px) {
 		width: 100%;
@@ -104,13 +105,15 @@ export const SocialImpactImageResponsive = styled.div`
 		margin-top: 50px;
 	}
 	@media (max-width: 480px) {
-		margin-top: 20px;
+		margin-top: 2rem;
 	}
 `;
 
 export const SocialImpactImageInfoResponsive = styled.img`
+	width: 60%;
+
 	@media (max-width: 480px) {
-		width: 80%;
+		width: 100%;
 	}
 `;
 

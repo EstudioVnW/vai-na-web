@@ -32,7 +32,7 @@ export const AgendaBox = styled.div`
   width: 45%;
 
   @media (max-width: 1024px) {
-    width: 80%;
+    width: 90%;
     padding: 2rem 0;
     margin: 0 auto;
   }
@@ -51,7 +51,7 @@ export const AgendaTitle = styled.h2`
   color: #00145d;
 
   @media (max-width: 425px) {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -61,7 +61,8 @@ export const AgendaText = styled.p`
   line-height: 1.6rem;
 
   @media (max-width: 425px) {
-    font-size: 1.05rem;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
   }
 `;
 

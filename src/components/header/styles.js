@@ -7,7 +7,7 @@ export const Header = styled.header`
 	border-radius: 0 0 0 20px;
 	margin-left: 3.4rem;
 	
-	@media (min-width: 1800px) {
+	@media (min-width: 2560px) {
 		margin-left: 5rem;
 	}
 	@media (max-width: 1200px) {
@@ -28,25 +28,25 @@ export const Wrap = styled.div`
 	flex-flow: column-reverse;
 	justify-content: center;
 	margin: 0 auto;
-	padding-left: 3.7rem;
+	padding-left: 7%;
 	min-height: calc(54.3vh + 7rem);
 
-	@media (min-width: 1800px) {
+	@media (min-width: 2560px) {
 		min-height: calc(65vh + 7rem);
 	}
 	@media (max-width: 1440px) {
-		min-height: calc(52vh + 10rem);
+		min-height: calc(50vh + 10rem);
 	}
 	@media (max-width: 1200px) {
-		padding-left: 1.4rem;
+		padding-left: 4%;
 		min-height: calc(48vh + 10rem);
 	}
 	@media (max-width: 768px) {
 		padding-top: 0;
 		min-height: calc(55vh + 7rem);
 	}
-	@media (max-width: 360px){
-		min-height: calc(65vh + 7rem);
+	@media (max-width: 480px){
+		min-height: calc(61vh + 7rem);
 	}
 `;
 
@@ -59,8 +59,10 @@ export const Wrap = styled.div`
 	background: #FED5B2;
 	z-index: 1;
 
-	@media (min-width: 1800px) {
-		max-width: 45%;
+	@media (min-width: 2560px) {
+		padding: 2rem 3rem 3rem;
+		max-width: 52%;
+		border-radius: 25px;
 	}
 	@media (max-width: 1440px) {
 		padding: 0.55rem 1.2rem 1.2rem;
@@ -70,11 +72,13 @@ export const Wrap = styled.div`
 		position: absolute;
 		left: 5%;
 		bottom: 18%;
-		max-width: 75%;
+		max-width: 72%;
 		border-radius: 10px;
 	}
-	@media (max-width: 500px){
+	@media (max-width: 480px){
+		left: 1.4rem;
 		bottom: 10%;
+		padding: 0 0.8rem 0.6rem;
 	}
  `;
 
@@ -87,6 +91,9 @@ export const Circles = styled.div`
 	justify-content: space-between;
 	width: 4.37rem;
 
+	@media (min-width: 2560px) {
+		width: 6rem;
+	}
 	@media (max-width: 1200px) {
 		width: 2.7rem;
 	}
@@ -99,6 +106,11 @@ export const Circle = styled.div`
 	border-radius: 50%;
 	margin-top: 15px;
 	
+	@media (min-width: 2560px) {
+		margin: 1rem 0;
+		width: 25px;
+		height: 25px;
+	}
 	@media (max-width: 1200px) {
 		width: 10px;
     	height: 10px;
@@ -111,6 +123,9 @@ export const TextCircle = styled.p`
 	font-size: 1.1rem;
 	font-weight: lighter;
 
+	@media (min-width: 2560px) {
+		font-size: 2rem;
+	}
     @media (max-width: 1200px){
 	 	font-size: 0.8rem;
 	 }
@@ -132,6 +147,9 @@ export const Title = styled.h1`
 	color: #272727;
 	margin-top: 15px;
 
+	@media (min-width: 2560px) {
+		font-size: 4.5rem;
+	}
 	@media (max-width: 1440px){
 		font-size: 2rem;
 	}
@@ -139,10 +157,10 @@ export const Title = styled.h1`
 	 	font-size: 1.4rem;
 	}
 	@media (max-width: 768px) {
-		margin-top: 10px;
+		margin-top: 4px;
 		font-size: 1.7rem;
 	}
-	@media (max-width: 500px) {
+	@media (max-width: 480px) {
  		font-size: 1.5rem;
 	}
 `;
@@ -153,6 +171,9 @@ export const SubTitle = styled.h2`
 	color: #272727;
 	margin-top: 10px;
 	
+	@media (min-width: 2560px) {
+		font-size: 3.2rem;
+	}
 	@media (max-width: 1440px){
 		font-size: 1.4rem;
 	}
@@ -160,10 +181,10 @@ export const SubTitle = styled.h2`
 	 	font-size: 1rem;
     }
 	@media (max-width: 768px) {
-		margin-top: 5px;
+		margin-top: 2px;
 		font-weight: 500;
 	}
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
 	 	font-size: 1.3rem;
 		line-height: 1.4;
 	 }
@@ -173,25 +194,20 @@ export const ImageEstudio = styled.img`
 	position: absolute;
 	right: 0;
 	bottom: -7.5%;
-	width: 49.3rem;
-	height: 31.6rem;
+	width: 50%;
 
-	@media (min-width: 1800px) {
-		width: 60rem;
-		height: auto;
-	}
-	@media (max-width: 1440px) {
-		bottom: -8%;
-		width: 42rem;
+	@media (min-width: 2560px) {
+		width: 55%;
 		height: auto;
 	}
 	@media (max-width: 1200px) {
 		bottom: -5%;
-		width: 33rem;
+		width: 65%;
 	}
 	@media (max-width: 768px) {
-		width: 85%;
 		top: 7rem;
+		width: 81%;
+		border-radius: 10px 0 0 10px;
 	}
 `;
 

@@ -26,29 +26,30 @@ const Cases = ({ home }) => {
                             <S.ImageCases src={ImageVotorantim} alt='Instituto Votorantim' />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImagePetronect} alt='Petronect' />
+                            <S.ImageCases src={ImagePetronect} alt='Petronect' width="70%" />
                         </S.BoxImage>
                         <S.BoxImage>
                             <S.ImageCases src={ImageProadiSus} alt='ProadiSUS' />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageQuickCash} alt='QuickCash' />
+                            <S.ImageCases src={ImageQuickCash} alt='QuickCash' width="77%" />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCases src={ImageIts} alt='Instituto de Tecnologia E Sociedade do Rio' />
+                            <S.ImageCases src={ImageIts} alt='Instituto de Tecnologia E Sociedade do Rio' width="60%" />
                         </S.BoxImage>
                         <S.BoxImage>
                             <S.ImageCases src={ImageSedimenta} alt='Sedimenta JPM' />
                         </S.BoxImage>
                         <S.BoxImage>
-                            <S.ImageCasesM4A src={ImageM4A} alt='Match 4 Action' />
+                            <S.ImageCasesM4A src={ImageM4A} alt='Match 4 Action' width="40%" />
                         </S.BoxImage>
                     </S.CasesImages>	
                 </S.BoxCasesImages>
             
                 <S.ButtonCases>
                     <ButtonHome 
-                        width='28rem'
+                        width='18.5rem'
+                        height='3.1rem'
                         colorHover='#272727'
                         border='#FFAC2D' 
                         color='#FFFFFF'
