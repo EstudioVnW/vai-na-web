@@ -8,6 +8,9 @@ export const Cases = styled.div`
 	flex-direction: column;
 	margin-top: 5rem;
 
+	@media (min-width: 1900px) {
+		margin-top: 8rem;
+	}
 	@media (max-width: 1440px) {
 		margin-top: 2rem;
 	}

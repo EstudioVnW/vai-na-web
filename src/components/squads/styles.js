@@ -23,7 +23,7 @@ export const Wrap = styled.div`
    }
    @media (max-width: 768px) {
       flex-direction: column-reverse;
-      width: 88vw;
+      width: 88%;
    }
 `;
 
@@ -58,8 +58,8 @@ export const SquadsImageButton = styled.div`
    }
    @media (max-width: 768px) {
       position: relative;
-      width: 80%;
       margin: 1rem auto 0;
+      width: 100%;
 
       button {
          position: absolute;
@@ -88,7 +88,7 @@ export const SquadsImage = styled.div`
    }
 
    @media (max-width: 768px) {
-      margin-top: 2rem;
+      margin-top: 1rem;
       border-radius: 10px;
    }
 `;
