@@ -87,10 +87,22 @@ export const BoxButton = styled.div `
   display: flex;
   align-items: center;
   height: 6rem;
-  //padding: 3rem 0 0;
-  
+
   @media (max-width: 1024px) {
     order: 2;
+  }
+
+  @media (max-width: 425px) {
+    Button {
+      font-size: 0.8rem;
+      height: 40%;
+      width: 50%;
+
+      &:hover {
+        height: 45%;
+      }
+
+    }
   }
 `;
 

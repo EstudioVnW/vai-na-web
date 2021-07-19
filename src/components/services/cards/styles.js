@@ -124,19 +124,7 @@ export const IconBg = styled.figure`
   }
 
   @media (max-width: 1024px) {
-    width: 30%;
-    top: 6%;
-    right: 6.5%;
-  }
-
-  @media (max-width: 790px) {
-    width: 20%;
-    top: 5%;
-    right: 6.5%;
-  }
-
-  @media (max-width: 460px) {
-    top: 9%;
+    top: 7%;
   }
 `;
 
