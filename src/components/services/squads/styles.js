@@ -86,11 +86,11 @@ export const SquadsText = styled.p`
 export const BoxButton = styled.div `
   display: flex;
   align-items: center;
-  padding: 3rem 0 0;
+  height: 6rem;
+  //padding: 3rem 0 0;
   
   @media (max-width: 1024px) {
     order: 2;
-    padding-bottom: 2rem; 
   }
 `;
 
@@ -156,8 +156,9 @@ export const IconText = styled.p`
   flex-direction: column;
   width: 75%;
   padding: 20% 0;
-  font: 300 1rem 'Usual', sans-serif;
+  font: 300 0.8rem 'Usual', sans-serif;
   text-align: center;
+  transition: 0.2s;
 
   &:hover {
     font-weight: 800;
@@ -168,7 +169,7 @@ export const IconText = styled.p`
   }
 
   span {
-    font: 700 1.5rem 'Usual', sans-serif;
+    font: 700 1.4rem 'Usual', sans-serif;
     color: #0f2b92;
   }
 
