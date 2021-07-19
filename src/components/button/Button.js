@@ -19,7 +19,7 @@ const ContentButton = styled.button`
     border-width: 0;
 		background-color: ${props => props.backgroundHover || '#FED5B2'};
   }
-  @media (min-width: 1900px) {
+  @media (min-width: 2200px) {
     width: 20rem;
     height: 4.2rem;
   }  

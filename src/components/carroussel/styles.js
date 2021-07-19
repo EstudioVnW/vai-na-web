@@ -19,8 +19,8 @@ export const DepositionsTitle = styled.h2`
     font-size: 2rem;
     font-weight: 800;
 
-    @media (min-width: 2560px) {
-		font-size: 5rem;
+    @media (min-width: 2200px) {
+		font-size: 3.8rem;
 	}
     @media (max-width: 768px) {
 		font-size: 1.6rem;
@@ -37,8 +37,8 @@ export const DepositionsSubTitle = styled.h3`
     font-weight: 500;
     font-size: 1.3rem;
 
-    @media (min-width: 2560px) {
-		font-size: 3rem;
+    @media (min-width: 2200px) {
+		font-size: 2.4rem;
 	}
     @media (max-width: 1440px) {
 		font-size: 1.5rem;
@@ -65,6 +65,9 @@ export const DepositionsSlides = styled.div`
     margin-top: 8rem;
     max-width: 100%;
 
+    @media (min-width: 2200px) {
+        margin-top: 15rem;
+    }
     @media (max-width: 768px) {
         display: none;
     }
@@ -95,7 +98,7 @@ export const DepositionsSlideCard = styled.div`
         margin-top: 2rem;
         min-height: 20rem;
     }
-    @media (min-width: 2560px) {
+    @media (min-width: 2200px) {
         width: 80rem;
         min-height: 40rem;
     }
@@ -119,7 +122,7 @@ export const Image = styled.img`
     width: 13.375rem;
     margin-top: -6rem;
 
-    @media (min-width: 2560px) {
+    @media (min-width: 2200px) {
         width: 20.375rem;
         margin-top: -15rem;
     }
@@ -135,7 +138,7 @@ export const Description = styled.p`
     @media (min-width: 1024px) {
         margin-bottom: 1rem;
     }
-    @media (min-width: 2560px) {
+    @media (min-width: 2200px) {
         font-size: 2rem;
         line-height: 2.5rem;
     }
@@ -159,7 +162,7 @@ export const IdentificationCompany = styled.div`
 
 `;
 export const ImageCompany = styled.img`
-    @media (min-width: 2560px) {
+    @media (min-width: 2200px) {
         width: 20rem;
     }
 `;
@@ -168,7 +171,7 @@ export const ImagePatricia = styled.img`
     width: 13rem;
     margin-top: -6rem;
 
-    @media (min-width: 2560px) {
+    @media (min-width: 2200px) {
         width: 19rem;
         margin-top: -10rem;
     }
@@ -178,7 +181,7 @@ export const ImageElson = styled.img`
     width: 13rem;
     margin-top: -6rem;
 
-    @media (min-width: 2560px) {
+    @media (min-width: 2200px) {
         width: 19rem;
         margin-top: -10rem;
     }
@@ -189,7 +192,7 @@ export const Name = styled.h1`
     font-size: 2rem;
     width: 100%;
 
-    @media (min-width: 2560px) {
+    @media (min-width: 2200px) {
         font-size: 4rem;
     }
     @media (min-width: 1024px) {
@@ -203,7 +206,7 @@ export const Office = styled.p`
     color: #00145D;
     font-size: 0.8rem;
 
-    @media (min-width: 2560px) {
+    @media (min-width: 2200px) {
         font-size: 2rem;
     }
     @media (min-width: 1024px) {

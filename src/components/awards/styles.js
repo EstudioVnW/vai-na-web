@@ -8,6 +8,9 @@ export const Awards = styled.section`
     width: 100%;
     background: #eff1f8;
 
+    @media (min-width: 2200px) {
+        padding: 4rem 0 15rem;
+    }
     @media (max-width: 768px) {
         padding: 4rem 0;
     }
@@ -60,6 +63,9 @@ export const AwardsTitle = styled.h2`
     font-weight: 800;
     color: #00145d;
 
+    @media (min-width: 2200px) {
+        font-size: 3.8rem;
+    }
     @media (max-width: 480px) {
         margin-bottom: 0.3rem;
         width: 60%;
@@ -70,6 +76,10 @@ export const AwardsTitle = styled.h2`
 export const AwardsSubtitle = styled.h3`
     font-size: 1.3rem;
 
+    @media (min-width: 2200px) {
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
     @media (max-width: 480px) {
         width: 66%;
         font-size: 1rem;
@@ -115,6 +125,10 @@ export const ImgBox = styled.div`
         }
     }
 
+    @media (min-width: 2200px) {
+        width: 50%;
+        height: auto;
+    }
     @media (max-width: 768px) {
         margin-right: 0.8rem;
     }
@@ -142,6 +156,9 @@ export const ImgTitle = styled.h3`
     font-size: 1.5rem;
     color: #272727;
     
+    @media (min-width: 2200px) {
+        font-size: 2.4rem;
+    }
     @media (max-width: 1200px) {
         font-size: 1.4rem;
     }
@@ -153,8 +170,11 @@ export const ImgTitle = styled.h3`
 export const ImgText = styled.p`
     width: 90%;
     font-size: 1.1rem;
-    line-height: 1.6rem;
+    line-height: 1.4;
 
+    @media (min-width: 2200px) {
+        font-size: 1.8rem;
+    }
     @media (max-width: 1200px) {
         font-size: 1rem;
     }
@@ -221,6 +241,9 @@ export const RowImgBox = styled.div`
         }
     }
 
+    @media (min-width: 2200px) {
+        height: 20rem;
+    }
     @media (max-width: 768px) {
         margin-bottom: 0;
         border-radius: 10px;
@@ -231,6 +254,9 @@ export const RowInfo = styled.p`
     width: 90.8%;
     font-size: 1rem;
 
+    @media (min-width: 2200px) {
+        font-size: 1.5rem;
+    }
     @media (max-width: 1200px) {
         font-size: 0.9rem;
     }
