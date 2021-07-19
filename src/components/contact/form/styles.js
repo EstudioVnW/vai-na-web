@@ -85,6 +85,7 @@ export const FormLabel = styled.label`
     border-radius: 10px;
     background: #e7e9f4;
     display: flex;
+    align-items: center;
 
     border: ${props => props.selected ? '1px solid #00145D' : 'none' };
 
@@ -100,18 +101,19 @@ export const FormLabel = styled.label`
 
 export const BtnLimpar = styled.span`
     font-weight: 400;
-    
+    font-size: 0.8rem;
+`;
 
+export const BtnLimparMsg = styled.span`
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-left: 90%;
 `;
 
 export const FormLabelMsg = styled(FormLabel)`
-    height: 75vh;
+    height: 50vh;
     display: flex;
     flex-wrap: wrap;
-
-    @media (max-width: 768px) {
-        height: 70vh;
-    }
 `;
 
 export const FormInput = styled.input`
@@ -128,7 +130,7 @@ export const FormInput = styled.input`
 export const MsgInput = styled.textarea`
     margin: 1rem 0;
     width: 100%;
-    height: 85%;
+    height: 70%;
     font: 300 1.3rem sans-serif;
     color: #00145d;
     background: #e7e9f4;

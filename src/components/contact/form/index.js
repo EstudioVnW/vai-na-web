@@ -88,7 +88,7 @@ const Form = () => {
                         <S.FormLabelMsg selected={selectedInput === 'message'}>
                             Mensagem
                             <S.MsgInput id='inpMessage' name="message" type="text" onChange={handleChange} onFocus={handleFocus} />
-                            {selectedInput === 'message' && <S.BtnLimpar onClick={() => handleClear('inpMessage')}>Limpar</S.BtnLimpar>}
+                            {selectedInput === 'message' && <S.BtnLimparMsg onClick={() => handleClear('inpMessage')}>Limpar</S.BtnLimparMsg>}
                         </S.FormLabelMsg>
                         {status}
                         <S.FormBtn>
