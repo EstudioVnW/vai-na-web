@@ -6,12 +6,10 @@ export const Talents = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 8rem;
 	padding: 5rem 0 3rem;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
 		height: 60rem;
-		width: 75%;
 	}
 	@media (max-width: 1440px) {
 		padding: 5rem 0 0;
@@ -46,7 +44,7 @@ export const TalentsWrap = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
-	padding: 3rem 1.4rem 1rem;
+	padding: 3rem 0 1rem;
 	width: 80%;
 	
 	@media (max-width: 1200px) {
@@ -65,9 +63,6 @@ export const TalentsText = styled.div`
 	justify-content: center;
 	width: 48%;
 
-	@media (min-width: 2560px) {
-		width: 80%;
-	}
 	@media (max-width: 768px) {
 		justify-content: flex-start;
 		width: 100%;
@@ -81,8 +76,9 @@ export const TalentsTextTitle = styled.h2`
 	font-size: 2rem;
 	font-weight: 800;
 
-	@media (min-width: 2560px) {
-		font-size: 5rem;
+	@media (min-width: 2200px) {
+		width: 100%;
+		font-size: 3.8rem;
 	}
 	@media (max-width: 1440px) {
 		width: 90%;
@@ -106,8 +102,8 @@ export const TalentsTextDescription = styled.p`
 	font-size: 1.3rem;
 	line-height: 1.25;
 
-	@media (min-width: 2560px) {
-		font-size: 2.5rem;
+	@media (min-width: 2200px) {
+		font-size: 1.8rem;
 	}
 	@media (max-width: 1440px) {
 		margin-top: 1.6rem;
@@ -172,16 +168,16 @@ export const ImgBox = styled.figure`
 		}
 	 }
 
-	@media (min-width: 2560px) {
-		width: 50rem;
+	@media (min-width: 2200px) {
+		width: 50%;
+	}
+	@media (min-width: 1800px) {
+		width: 45%;
+		height: auto;
 	}
 	@media (max-width: 1440px) {
 		width: 25rem;
 		height: 20rem;
-	}
-	@media (max-width: 1024px) {
-		width: 20rem;
-		height: 16rem;
 	}
 	@media (max-width: 768px) {
 		margin: 1rem auto 0;

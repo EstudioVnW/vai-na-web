@@ -8,6 +8,9 @@ export const Cases = styled.div`
 	flex-direction: column;
 	margin-top: 5rem;
 
+	@media (min-width: 1900px) {
+		margin-top: 8rem;
+	}
 	@media (max-width: 1440px) {
 		margin-top: 2rem;
 	}
@@ -61,17 +64,19 @@ export const BoxImage = styled.figure`
 	-webkit-fter: grayscale(100%);
 	filter: grayscale(100%);
 	transition: box-shadow 0.3s ease;
+	overflow: hidden;
 
 	&:hover {
 		filter: none;
 		box-shadow: 0 0 30px #0F2B9233;
 	}
 
-	@media (min-width: 2560px) {
-		width: 25%;
-		height: 10rem;
-		margin: 0;
-		padding: 0.5rem;
+	@media (min-width: 2200px) {
+		margin: 0.5rem;
+		padding: 1rem;
+		width: 24%;
+    	height: 10rem;
+		border-radius: 2rem;
 	}
 	@media (max-width: 1200px){
 		width: 20%;
@@ -93,7 +98,8 @@ export const BoxImage = styled.figure`
 export const ImageCases = styled.img`
 	max-width: 100%;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
+		width: 80%;
 		max-height: 20rem;
 	}
 	@media (max-width: 768px) {
@@ -104,20 +110,32 @@ export const ImageCases = styled.img`
 export const ImageCasesM4A = styled.img`
 	max-width: 70%;
 
-	@media (min-width: 2560px) {
+	@media (min-width: 2200px) {
+		width: 50%;
 		max-height: 20rem;
 	}
 `;
 
 export const ButtonCases = styled.div`
-	margin-top: 2rem;
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 2rem;
 	height: 4rem;
 	font-size: 0.8rem;
-	font-weight: 800;
-
+	font-weight: 500;
+	
+	@media (min-width: 2200px) {
+		margin: 4rem 0 3rem;
+		
+		button {
+			width: 35rem;
+			height: 5.5rem;
+			border-radius: 3rem;
+			font-size: 2rem;
+			font-weight: 500;
+		}
+	}
 	@media (max-width: 768px) {
 		margin-top: 0;
 

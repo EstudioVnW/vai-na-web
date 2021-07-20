@@ -83,7 +83,7 @@ const DivisionLine = styled.div `
 	height: 1.2px;
 	background: #FF611E;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		height: 3px;
 	}
 	@media (max-width: 700px) {
@@ -98,7 +98,7 @@ const DivisionText = styled.p `
 	color: #0F2B92;
 	text-transform: uppercase;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		font-size: 7em;
 	}
 	@media (max-width: 700px) {
@@ -110,7 +110,7 @@ const DivisionText = styled.p `
 const LogoVnW = styled.img `
 	width: 4rem;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		width: 7rem;
 	}
 	@media (max-width: 700px) {
@@ -126,7 +126,7 @@ const Container = styled.footer`
 	background: #00145D;
     z-index: -1;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		margin-top: 2rem;
 	}
 	@media (min-width: 1700px) {
@@ -186,7 +186,7 @@ const ContentBox = styled.div`
 const TextBox = styled.div`
 	margin-bottom: 4rem;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		margin-bottom: 6rem;
 	}
 	@media (max-width: 700px) {
@@ -201,7 +201,7 @@ const FooterText = styled.p`
 	line-height: 1.6;
 	letter-spacing: 0.025rem;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		font-size: 2em;
 	}
 	@media (max-width: 1440px) {
@@ -226,7 +226,7 @@ const LinkBox = styled.ul`
 	height: 12rem;
 	list-style: none;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		height: 20rem;
 	}
 	@media (max-width: 1440px) {
@@ -244,7 +244,7 @@ const LinkText = styled.p`
 	line-height: 1.6;
 	letter-spacing: 0.025rem;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		font-size: 2em;
 	}
 	@media (max-width: 980px) {
@@ -266,7 +266,7 @@ const FooterLink = styled.li`
 		color: #fff;
 	}
 	
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		margin-bottom: 1.5rem;
 		font-size: 1.8em;
 	}
@@ -284,7 +284,7 @@ const Logo = styled.img `
 	right: 0;
 	width: 10rem;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		width: 12vw;
 	}
 	@media (max-width: 980px) {
@@ -314,7 +314,7 @@ const IconBox = styled.figure `
 	margin-top: 1.8rem;
 	width: 66%;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		width: 90%;
 	}
 	@media (max-width: 1440px) {
@@ -329,7 +329,7 @@ const Icon = styled.img `
 	width: 2.3rem;
 	cursor: pointer;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		width: 4.4rem;
 	}
 	@media (max-width: 980px) {
@@ -346,7 +346,7 @@ const ImgBox = styled.figure `
 	width: 22rem;
 	max-height: 11rem;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		width: 38rem;
 	}
 	@media (max-width: 1440px) {
@@ -388,7 +388,7 @@ const Baseboard = styled.div `
 	text-align: center;
 	border-top: 2px solid #0f2b92;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		margin-top: 5rem;
 	}
 `;
@@ -397,7 +397,7 @@ const Text = styled.p `
 	color: #FFAC2D;
 	font-size: 1em;
 
-	@media (min-width: 1900px) {
+	@media (min-width: 2200px) {
 		font-size: 1.5em;
 	}
 	@media (max-width: 700px) {

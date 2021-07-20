@@ -12,6 +12,7 @@ import Header from '../components/header';
 import Talents from '../components/talents';
 import Conection from '../components/conection';
 import Carroussel from "../components/carroussel";
+import Awards from "../components/awards";
 
 //Imagens
 
@@ -67,6 +68,7 @@ const Home = (props) => {
         <Squads />
         <Talents />
         <Carroussel />
+        <Awards />
         <Conection />
       </Content>
     </Layouts>

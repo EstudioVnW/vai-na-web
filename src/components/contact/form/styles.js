@@ -102,16 +102,13 @@ export const FormLabel = styled.label`
 export const BtnLimpar = styled.span`
     font-weight: 400;
     font-size: 0.8rem;
-
 `;
 
 export const BtnLimparMsg = styled.span`
     font-weight: 400;
     font-size: 0.8rem;
     margin-left: 90%;
-
 `;
-
 
 export const FormLabelMsg = styled(FormLabel)`
     height: 50vh;
