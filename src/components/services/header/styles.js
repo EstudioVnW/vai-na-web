@@ -7,7 +7,12 @@ export const HeaderContainer = styled.section`
 	height: 100vh;
 	position: relative;
 
+		@media (max-width: 1366px) {
+			align-items: flex-end;
+		}
+
 		@media (max-width: 1024px) {
+			align-items: center;
 			margin-top: 1rem;
 			height: 70vh;
 		}
@@ -18,8 +23,7 @@ export const HeaderContainer = styled.section`
 		}
 
 		@media (max-width: 425px) {
-			height: 70vh;
-			/* align-items: flex-end; */
+			height: 75vh;
 		}
 	 `;
 
@@ -30,7 +34,6 @@ export const HeaderContainer = styled.section`
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-	
 
 		@media (max-width: 1024px) {
 			height: 60%;
@@ -44,8 +47,6 @@ export const HeaderContainer = styled.section`
 		@media (max-width: 425px) {
 			height: 90%;
 		}
-
-
 	`;
 
 export const HImg = styled.img`
@@ -53,7 +54,7 @@ export const HImg = styled.img`
 
 	@media (max-width: 790px) {
 	display: block;
-	width: 100%;
+	width: 95%;
 }
 `;
 
@@ -71,8 +72,8 @@ export const HDescription = styled.p`
 export const HTextBox = styled.div`
 	width: 70%;
 
-	@media (max-width: 425px) {
-		width: 100%;
+	@media (max-width: 790px) {
+		width: 95%;
 	}
 
 `;
@@ -89,8 +90,8 @@ export const HDownArrow = styled.figure`
 
 export const HImgLogo = styled.img`
 	position: absolute;
-	bottom: 80%;
-	right: 0;
+	bottom: 85%;
+	left: 90%;
 	z-index: 5;
 	width: 15%;	
 
@@ -114,7 +115,6 @@ export const HImgBox = styled.figure`
 	position: relative;
 	
 	@media (max-width: 790px) {
-		align-items: flex-start;
 		justify-content: center;
 		height: 70%;
 		width: 100%;
