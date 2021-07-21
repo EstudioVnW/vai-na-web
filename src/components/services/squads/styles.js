@@ -27,7 +27,6 @@ export const SquadsBg = styled.div`
   justify-content: space-evenly;
   position: relative;
 
-  
   ::before {
     border-radius: 0 20px 20px 0;
     background: #eff1f8;
@@ -109,6 +108,7 @@ export const BoxButton = styled.div `
 export const SquadsBox = styled.figure`
   width: 50%;
   position: relative;
+  border: 2px solid black;
 
   @media (max-width: 1024px) {
     transform: none;
@@ -122,6 +122,7 @@ export const SquadsBox = styled.figure`
 
 export const SquadsImg = styled.img`
     width: 80%;
+    border: 2px solid black;
 
     @media (max-width: 768px) {
       width: 100%;

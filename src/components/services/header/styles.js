@@ -49,14 +49,36 @@ export const HeaderContainer = styled.section`
 		}
 	`;
 
-export const HImg = styled.img`
+export const HImgBox = styled.figure`
 	width: 100%;
+	border-radius: 0.93rem;
+	border: 2px solid #00145D;
+	overflow: hidden;
+	box-shadow: 0 0 10px 10px rgb(232, 235, 245);
 
 	@media (max-width: 790px) {
 	display: block;
 	width: 95%;
 }
 `;
+
+export const HImg = styled.img `
+	width: 100%;
+	transform: scale(1.040);
+	transition: transform 0.2s;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	@media (max-width: 790px) {
+		transform: scale(1.2)
+
+		&:hover {
+			transform: scale(1.25)
+		}
+	}
+`
 
 export const HDescription = styled.p`
 	font: 300 1.3rem sans-serif;
@@ -107,7 +129,7 @@ export const HImgLogo = styled.img`
 `;
 
 
-export const HImgBox = styled.figure`
+export const HContentBox = styled.div`
 	width: 65%;
 	display: flex;
 	flex-direction: column;
