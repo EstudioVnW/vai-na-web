@@ -29,21 +29,24 @@ const SchoolHeader = () => (
                                 Inscreva-se
                             </Button>
                             <S.Link
+                                //href="https://api.whatsapp.com/send?phone=5521976365325&text=Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida"
                                 href="https://web.whatsapp.com/"
                                 target="_blank"
                             >
                                 <S.IconWhats src={IconWhatsapp} alt="Icon WhatsApp" />
-                            </S.Link>            
-                            <S.DownArrow src={downArrow} alt="Seta apontando para baixo"/>
+                            </S.Link>
+                            <S.DownArrow src={downArrow} alt="Seta apontando para baixo" />
                         </S.BoxButton>
                     </S.BoxText>
 
                 </S.BoxInfo>
 
-                <S.BoxImg>
+                <S.BoxImgs>
                     <S.Logo src={EstudioLogo} alt="Logo Vai na Web" />
-                    <S.ImgEstudio src={PhotoEstudio} alt="Foto Estudio" />
-                </S.BoxImg>
+                    <S.BoxEstudio>
+                        <S.ImgEstudio src={PhotoEstudio} alt="Foto Estudio" />
+                    </S.BoxEstudio>
+                </S.BoxImgs>
             </S.BoxHeader>
         </S.Wrap>
     </S.Container>
