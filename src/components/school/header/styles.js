@@ -17,8 +17,14 @@ export const Wrap = styled.div`
 		min-height: calc(100vh - 8rem);
 	}
 
+    @media (max-width: 1024px) {
+		min-height: calc(50vh - 8rem);
+        padding-bottom: 6rem;
+	}
+
     @media (max-width: 768px){
         width: 90%;
+        min-height: calc(100vh - 6rem);
     }
 `;
 
@@ -52,7 +58,12 @@ export const BoxTitle = styled.div`
     position: relative;
     display:flex;
     width:100%;
+    
+    @media (max-width: 768px){
+        margin: 1rem 0;
+    }
 `;
+
 export const Title = styled.h1`
     font: 800 2.72rem 'Usual', sans-serif;
     color: #FF611E;
@@ -60,12 +71,13 @@ export const Title = styled.h1`
     @media (min-width: 1371px){
         width: 557px;
     }
-    
+
     @media (max-width: 500px){
         width: 260px;
         font-size: 1.6rem;
     }
 `;
+
 export const TitleBar = styled.span`
     position: absolute;
     left: -3rem;
@@ -86,13 +98,12 @@ export const TitleBar = styled.span`
 export const BoxText = styled.div`
     width: 100%;
 
-    @media (max-width: 798px){
+    @media (max-width: 768px){
         position: absolute;
         bottom: -155px;
-    }
-
+    
     @media (max-width: 500px){
-        bottom: -90px;
+        bottom: -95px;
     }
 `;
 
@@ -158,7 +169,7 @@ export const DownArrow = styled.img`
     }
 `;
 
-export const BoxImg = styled.div`
+export const BoxImgs = styled.div`
     position: relative;
     width: 50%;
 
@@ -172,7 +183,8 @@ export const Logo = styled.img`
     width: 22%;
     position: absolute;
     right: 0;
-    top:-5%;
+    top:-13%;
+    z-index: 5;
 
     @media (max-width: 768px){
         top: 160%;
@@ -181,6 +193,24 @@ export const Logo = styled.img`
     }
 `;
 
+
+export const BoxEstudio = styled.div`
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid #09255d;
+    box-shadow: 0px 0px 20px #0f2b9240;
+    overflow: hidden;
+
+    &:hover {
+        img {
+            transform: scale(1.3);
+        }
+    }
+`;
+
 export const ImgEstudio = styled.img`
+    width:100%;
+    transform: scale(1.2);
+    transition: 0.25s ease-out;
 `;
     
