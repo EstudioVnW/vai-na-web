@@ -32,7 +32,9 @@ const Squads = (props) => {
           </S.BoxButton>
         </S.SquadsWrap>
         <S.SquadsBox>
+          <S.BoxSquadImg>
           <S.SquadsImg src={squadsImg} alt='Alunos do Vai na Web' />
+          </S.BoxSquadImg>
           <S.SquadsIcon>
             <S.IconText>
               <span>100%</span>

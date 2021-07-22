@@ -3,11 +3,14 @@ import styled from 'styled-components';
 export const SquadsContainer = styled.section`
   max-width: 100%;
   min-height: 50vh;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  margin: 5rem auto;
 
   @media (max-width: 1024px) {
     margin-bottom: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 8rem;
   }
 `;
 
@@ -21,7 +24,7 @@ export const SquadsWrap = styled.div `
 `
 
 export const SquadsContent = styled.figure`
-  margin-top: 1rem;
+  margin-top: 2rem;
   position: relative;
 
   @media (max-width: 1024px){
@@ -36,7 +39,8 @@ export const SquadsContent = styled.figure`
 export const SquadsTitle = styled.h2`
   font: 800 2rem 'Usual', sans-serif;
   color: #ff611e;
-  margin: 1rem 0;
+  padding-bottom: 1rem;
+
 
   @media (max-width: 1024px) {
     width: 90%;
@@ -50,7 +54,6 @@ export const SquadsTitle = styled.h2`
 export const SquadsText = styled.p`
   font: 300 1.3rem 'Usual', sans-serif;
   line-height: 1.6rem;
-  margin: 0;
 
   @media (max-width: 1024px) {
     width: 90%;
@@ -63,9 +66,29 @@ export const SquadsText = styled.p`
   } 
 `;
 
+export const BoxSquadImg = styled.div `
+  overflow: hidden;
+  border: 2px solid #FF611E;
+  border-radius: 10px;
+  margin-top: 2rem;
+
+  @media(max-width: 768px) {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+
+`
+
 export const SquadsImg = styled.img`
   width: 100%;
+  transform: scale(1.08);
+  transition: 0.2s;
 
+    &:hover {
+      transform: scale(1.125)
+    }
+ 
   @media(max-width: 1024px) {
     display: none;
   }
@@ -77,7 +100,6 @@ export const SquadsImgMobile = styled.img`
   @media(max-width: 1024px) {
     display: block;
     width: 100%;
-    padding-top: 2rem;
   }
 `;
 
@@ -144,19 +166,7 @@ export const Line = styled.img`
   transform: translate(-50% , -50%);
   height: 15rem;
   width: 15rem;
-  
-/*   @media(max-width: 1366px) {
-    width: 30px;
-    height: 200px;
-    bottom: -10%;
-  }
 
-  @media(max-width: 1120px) {
-    width: 30px;
-    height: 150px;
-    bottom: -10%;
-  }
- */
   @media(max-width: 1024px) {
     display: none;
   }

@@ -5,18 +5,20 @@ import squadsIcon from '../../../images/images/squadsIcon.png';
 export const SquadsContainer = styled.section`
   display: flex;
   max-width: 100%;
-  min-height: 65vh;
+  min-height: 60vh;
   
   @media (max-width: 1024px) {
     min-height: 55vh;
   }
 
-  @media (max-width: 425px) {
-    justify-content: flex-end;
-    margin-top: 3rem;
-    min-height: 40vh;
+  @media (max-width: 768px) {
+    margin-top: 5rem;
   }
 
+  @media (max-width: 425px) {
+    justify-content: flex-end;
+    min-height: 40vh;
+  }
 
 `;
 
@@ -69,6 +71,7 @@ export const SquadsText = styled.p`
   width: 100%;
   font: 300 1.3rem 'Usual', sans-serif;
   line-height: 1.6rem;
+  padding-bottom: 1.6rem;
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -79,6 +82,7 @@ export const SquadsText = styled.p`
     width: 100%;
     font-size: 0.8rem;
     line-height: 1.3rem;
+    padding-bottom: 0;
   } 
 `;
 
@@ -108,7 +112,6 @@ export const BoxButton = styled.div `
 export const SquadsBox = styled.figure`
   width: 50%;
   position: relative;
-  border: 2px solid black;
 
   @media (max-width: 1024px) {
     transform: none;
@@ -120,9 +123,28 @@ export const SquadsBox = styled.figure`
   }
 `;
 
-export const SquadsImg = styled.img`
-    width: 80%;
-    border: 2px solid black;
+export const BoxSquadImg = styled.figure `
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 2px solid #00145D;
+  border-radius: 10px;
+  
+  @media(max-width: 1024px) {
+    margin-bottom: 2rem;
+  }
+  `
+  
+  export const SquadsImg = styled.img`
+  width: 100%;
+  transition: 0.2s;
+  transform: scale(1.15);
+  
+  &:hover {
+      transform: scale(1.2);
+    }
 
     @media (max-width: 768px) {
       width: 100%;
@@ -161,6 +183,7 @@ export const SquadsIcon = styled.div`
   @media(max-width: 425px) {
     width: 40vw;
     height: 40vw;
+    top: -20%;
   }
 `;
 
