@@ -4,9 +4,9 @@ import * as S from './styles';
 import Vania from '../../images/images/Vania.png';
 import VaniaCompany from '../../images/images/sirio.png';
 import Patricia from '../../images/images/Patricia.png';
-import PatriciaCompany from '../../images/images/quickcash.png';
+import PatriciaCompany from '../../images/images/QuickCash.png';	
 import Elson from '../../images/images/Elson.png';
-import ElsonCompany from '../../images/images/petronect.png';
+import ElsonCompany from '../../images/images/Petronect.png';
 import Left from '../../images/images/Path 7687.svg';
 import Right from '../../images/images/Path 7686.svg';
 
