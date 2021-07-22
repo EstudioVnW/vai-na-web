@@ -33,6 +33,15 @@ const DepositionsSchool = () => {
         <S.Container>
             <S.BoxWrap>
 
+                <S.BoxText>
+                    <S.Title>
+                        Uma Nova Geração de Talentos
+                    </S.Title>
+                    <S.Subtitle>
+                        O que nossos jovens têm a dizer sobre sua jornada no Vai na Web
+                    </S.Subtitle>
+                </S.BoxText>
+
                 <S.Slide>
                     <S.LeftArrow
                         src={Left}
@@ -56,7 +65,9 @@ const DepositionsSchool = () => {
                             <S.Card>
                                 <S.CardContainer>
 
+                                    <S.BoxImg>
                                     <S.ImgPerson src={Cleidemara} alt="Foto de Cleidemara, Product Owner" />
+                                    </S.BoxImg>
 
                                     <S.Descrition>
                                         “Eu procurava uma requalificação no mercado de trabalho e o Vai na Web me
@@ -80,7 +91,9 @@ const DepositionsSchool = () => {
                             <S.Card>
                                 <S.CardContainer>
 
+                                    <S.BoxImg>
                                     <S.ImgPerson src={AnnaLuiza} alt="Foto de Anna Luiza, Desenvolvedora Front-end Pleno" />
+                                    </S.BoxImg>
 
                                     <S.Descrition>
                                         “O Vai na Web representa o recomeço para mim. Quando terminei a faculdade de administração,
@@ -104,8 +117,10 @@ const DepositionsSchool = () => {
                             {/*Mateus*/}
                             <S.Card>
                                 <S.CardContainer>
-
+                                    
+                                    <S.BoxImg>
                                     <S.ImgPerson src={Mateus} alt="Foto de Mateus, Desenvolvedor Front-End" />
+                                    </S.BoxImg>
 
                                     <S.Descrition>
                                         “Achei o meu espaço, meu mindset foi ‘upado’! Aprendi muito sobre meu espaço na sociedade, meus deveres e direitos.
@@ -127,7 +142,9 @@ const DepositionsSchool = () => {
                             <S.Card>
                                 <S.CardContainer>
 
+                                    <S.BoxImg>
                                     <S.ImgPerson src={Camila} alt="Foto de Cleidemara, Product Owner" />
+                                    </S.BoxImg>
 
                                     <S.Descrition>
                                         "O Vai na Web abriu um novo mundo e me trouxe muitas conquistas: colegas profissionais,
@@ -151,7 +168,9 @@ const DepositionsSchool = () => {
                             <S.Card>
                                 <S.CardContainer>
 
+                                    <S.BoxImg>
                                     <S.ImgPerson src={Maria} alt="Foto de Cleidemara, Product Owner" />
+                                    </S.BoxImg>
 
                                     <S.Descrition>
                                         "O Vai na Web mudou a minha vida! Fiz o curso de programação, me formei
@@ -175,7 +194,9 @@ const DepositionsSchool = () => {
                             <S.Card>
                                 <S.CardContainer>
 
+                                    <S.BoxImg>
                                     <S.ImgPerson src={Rhuan} alt="Foto de Cleidemara, Product Owner" />
+                                    </S.BoxImg>
 
                                     <S.Descrition>
                                         “O Vai na Web é uma lugar de responsabilidade, desafios e conhecimento que me
@@ -198,7 +219,9 @@ const DepositionsSchool = () => {
                             <S.Card>
                                 <S.CardContainer>
 
+                                    <S.BoxImg>
                                     <S.ImgPerson src={Jeziel} alt="Foto de Cleidemara, Product Owner" />
+                                    </S.BoxImg>
 
                                     <S.Descrition>
                                         “O Vai na Web é mais que uma escola que você aprende a programar.
@@ -220,8 +243,10 @@ const DepositionsSchool = () => {
                             <S.Card>
                                 <S.CardContainer>
 
+                                    <S.BoxImg>
                                     <S.ImgPerson src={Luan} alt="Foto de Cleidemara, Product Owner" />
-
+                                    </S.BoxImg>
+                                    
                                     <S.Descrition>
                                         “Obtive muito aprendizado na área de desenvolvimento
                                         graças ao acolhimento e à disposição de todos, que me ajudaram na
