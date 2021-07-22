@@ -107,7 +107,8 @@ export const BtnLimpar = styled.span`
 export const BtnLimparMsg = styled.span`
     font-weight: 400;
     font-size: 0.8rem;
-    margin-left: 90%;
+    margin-left: 60%;
+    margin-top: 2%;
 `;
 
 export const FormLabelMsg = styled(FormLabel)`
