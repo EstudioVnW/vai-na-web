@@ -109,7 +109,7 @@ export const TalentsTextDescription = styled.p`
 		margin-top: 1.6rem;
 		font-size: 1.1rem;
 	}
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		margin-top: 1.2rem;
 		width: 90%;
 		font-size: 0.9rem;
@@ -139,9 +139,8 @@ export const ButtonTalents = styled.div`
 	@media (max-width: 1920px) {
 		margin-top: 1.5rem;
 	}
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		margin: 0;
-
 		button {
 			width: 9rem;
 			height: 3.2rem;
