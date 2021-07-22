@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 
 export const Awards = styled.section`
-    margin-top: 8rem;
     padding: 4rem 0 10rem;
     width: 100%;
     background: #eff1f8;
