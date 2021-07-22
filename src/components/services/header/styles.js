@@ -7,7 +7,12 @@ export const HeaderContainer = styled.section`
 	height: 100vh;
 	position: relative;
 
+		@media (max-width: 1366px) {
+			align-items: flex-end;
+		}
+
 		@media (max-width: 1024px) {
+			align-items: center;
 			margin-top: 1rem;
 			height: 70vh;
 		}
@@ -18,8 +23,7 @@ export const HeaderContainer = styled.section`
 		}
 
 		@media (max-width: 425px) {
-			height: 70vh;
-			/* align-items: flex-end; */
+			height: 75vh;
 		}
 	 `;
 
@@ -30,7 +34,6 @@ export const HeaderContainer = styled.section`
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-	
 
 		@media (max-width: 1024px) {
 			height: 60%;
@@ -44,18 +47,38 @@ export const HeaderContainer = styled.section`
 		@media (max-width: 425px) {
 			height: 90%;
 		}
-
-
 	`;
 
-export const HImg = styled.img`
+export const HImgBox = styled.figure`
 	width: 100%;
+	border-radius: 0.93rem;
+	border: 2px solid #00145D;
+	overflow: hidden;
+	box-shadow: 0 0 10px 10px rgb(232, 235, 245);
 
 	@media (max-width: 790px) {
 	display: block;
-	width: 100%;
+	width: 95%;
 }
 `;
+
+export const HImg = styled.img `
+	width: 100%;
+	transform: scale(1.040);
+	transition: transform 0.2s;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	@media (max-width: 790px) {
+		transform: scale(1.2)
+
+		&:hover {
+			transform: scale(1.25)
+		}
+	}
+`
 
 export const HDescription = styled.p`
 	font: 300 1.3rem sans-serif;
@@ -71,8 +94,8 @@ export const HDescription = styled.p`
 export const HTextBox = styled.div`
 	width: 70%;
 
-	@media (max-width: 425px) {
-		width: 100%;
+	@media (max-width: 790px) {
+		width: 95%;
 	}
 
 `;
@@ -89,8 +112,8 @@ export const HDownArrow = styled.figure`
 
 export const HImgLogo = styled.img`
 	position: absolute;
-	bottom: 80%;
-	right: 0;
+	bottom: 85%;
+	left: 90%;
 	z-index: 5;
 	width: 15%;	
 
@@ -106,7 +129,7 @@ export const HImgLogo = styled.img`
 `;
 
 
-export const HImgBox = styled.figure`
+export const HContentBox = styled.div`
 	width: 65%;
 	display: flex;
 	flex-direction: column;
@@ -114,7 +137,6 @@ export const HImgBox = styled.figure`
 	position: relative;
 	
 	@media (max-width: 790px) {
-		align-items: flex-start;
 		justify-content: center;
 		height: 70%;
 		width: 100%;

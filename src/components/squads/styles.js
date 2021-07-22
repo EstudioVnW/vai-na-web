@@ -215,7 +215,7 @@ export const SquadsTextBack = styled.div`
    @media (max-width: 768px) {
       margin: 1.5rem 0;
    }
-   @media (max-width: 360px) {
+   @media (max-width: 480px) {
       align-items: start;
       justify-content: flex-start;
       margin-top: 2.2rem;
@@ -247,7 +247,7 @@ export const BoxTextBack = styled.div`
       margin-left: 3rem;
       width: 100%;
    }
-   @media (max-width: 360px) {
+   @media (max-width: 480px) {
       margin-right: 0;
       width: 68%;
    }

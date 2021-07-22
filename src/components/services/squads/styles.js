@@ -27,7 +27,6 @@ export const SquadsBg = styled.div`
   justify-content: space-evenly;
   position: relative;
 
-  
   ::before {
     border-radius: 0 20px 20px 0;
     background: #eff1f8;
@@ -87,16 +86,29 @@ export const BoxButton = styled.div `
   display: flex;
   align-items: center;
   height: 6rem;
-  //padding: 3rem 0 0;
-  
+
   @media (max-width: 1024px) {
     order: 2;
+  }
+
+  @media (max-width: 425px) {
+    Button {
+      font-size: 0.8rem;
+      height: 40%;
+      width: 50%;
+
+      &:hover {
+        height: 45%;
+      }
+
+    }
   }
 `;
 
 export const SquadsBox = styled.figure`
   width: 50%;
   position: relative;
+  border: 2px solid black;
 
   @media (max-width: 1024px) {
     transform: none;
@@ -110,6 +122,7 @@ export const SquadsBox = styled.figure`
 
 export const SquadsImg = styled.img`
     width: 80%;
+    border: 2px solid black;
 
     @media (max-width: 768px) {
       width: 100%;

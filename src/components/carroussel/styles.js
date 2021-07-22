@@ -3,14 +3,29 @@ import { Link } from "gatsby";
 
 
 
-export const Depositions = styled.div``;
+export const Depositions = styled.div`
+    padding: 7rem 0;
+
+    @media (max-width: 768px) {
+        padding: 4rem 0;
+    }
+`;
 
 export const DepositionsText = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
+    margin: 0 auto 10rem;
+    width: 80%;
+
+    @media (min-width: 2200px) {
+        margin: 0 auto 16rem;
+    }
+    @media (max-width: 768px) {
+        margin: 0 auto;
+        width: 100%;
+    }
 `;
 
 export const DepositionsTitle = styled.h2`
@@ -36,13 +51,13 @@ export const DepositionsSubTitle = styled.h3`
     color: #272727;
     font-weight: 500;
     font-size: 1.3rem;
+    text-align: center;
 
     @media (min-width: 2200px) {
 		font-size: 2.4rem;
 	}
     @media (max-width: 1440px) {
 		font-size: 1.5rem;
-        margin-top: 20px;
 	}
     @media (max-width: 768px) {
         width: 73%;
@@ -62,139 +77,148 @@ export const DepositionsSlides = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 8rem;
     max-width: 100%;
 
-    @media (min-width: 2200px) {
-        margin-top: 15rem;
-    }
     @media (max-width: 768px) {
         display: none;
     }
 `;
 
-export const Seta = styled.img`
-    max-width: 2rem;
+export const BoxSlideDepositions = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+    @media (max-width: 1200px) {
+        width: 88%;
+    }
 `;
 
+export const Seta = styled.img`
+    width: 1.4rem;
+`;
 
-// VANIA
 export const DepositionsSlideCard = styled.div`
-    width: 60rem;
-    max-height: 21rem;
-    box-shadow: 0px 0px 22px #00000029;
-    border: ${props => props.focus ? '2px solid #00145d' : '2px solid #FFAC2D'};
-    border-radius: 20px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 6rem;
+    justify-content: flex-end;
+    padding: 1.2rem;
+    width: ${props => props.focus ? '42%' : '28%'};
+    height: ${props => props.focus ? '17rem' : '12rem'};
+    box-shadow: 0px 0px 22px #00000029;
+    border: ${props => props.focus ? '1px solid #00145d' : '1px solid #FFAC2D'};
+    border-radius: 12px;
     order: ${props => props.order};
     transform: ${props => props.focus ? 'scale(1.25)' : 'none'};
     background: #FFF;
+    z-index: ${props => props.focus ? '1' : '-1'};
 
-    @media (min-width: 1024px) {
-        margin-top: 2rem;
-        min-height: 20rem;
-    }
     @media (min-width: 2200px) {
-        width: 80rem;
-        min-height: 40rem;
+        padding: 2rem;
+        height: ${props => props.focus ? '30rem' : '20rem'};
+        border: ${props => props.focus ? '2px solid #00145d' : '2px solid #FFAC2D'};
+        border-radius: 1rem;
+    }
+    @media (max-width: 1200px) {
+        padding: 1rem;
+        width: ${props => props.focus ? '40%' : '30%'};
     }
 
-    p{
+    p {
         display: ${props => props.focus ? 'block' : 'none'};
     }
-    section{
+    div {
         flex-direction: ${props => props.focus ? 'row' : 'column'};
-        border-top: ${props => props.focus ? '2px solid #FED5B2' : 'none'};
+    }
+    img {
+        width: ${props => props.focus ? '15rem' : '13rem'};
+        top: ${props => props.focus ? '-50%' : '-56%'};
+        
+        @media (min-width: 2200px) {
+            width: ${props => props.focus ? '20rem' : '18rem'};
+            top: ${props => props.focus ? '-38%' : '-45%'};
+        }
+        @media (max-width: 1200px) {
+            width: ${props => props.focus ? '12rem' : '10rem'};
+            top: ${props => props.focus ? '-40%' : '-46%'};
+        }
     }
 `;
 
-export const BoxSlideDepositions = styled.div`
-    display: flex;
-    max-width: 80%;
-`;
-
-
 export const Image = styled.img`
-    width: 13.375rem;
-    margin-top: -6rem;
+    position: absolute;
 
     @media (min-width: 2200px) {
         width: 20.375rem;
-        margin-top: -15rem;
     }
 `;
 export const Description = styled.p`
+    padding: 4rem 5px 2rem;
     color: #272727;
-    width: 85%;
     text-align: left;
     font-size: 0.8rem;
     line-height: 1.2rem;
-    margin-bottom: 2rem;
     
-    @media (min-width: 1024px) {
-        margin-bottom: 1rem;
-    }
     @media (min-width: 2200px) {
-        font-size: 2rem;
+        padding: 0 10px 4rem;
+        font-size: 1.5rem;
         line-height: 2.5rem;
     }
+    @media (max-width: 1200px) {
+        font-size: 0.68rem;
+    }
 `;
-export const Identification = styled.section`
-    width: 90%;
+
+export const Identification = styled.div`
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
-    height: 30%;
-`;
-export const IdentificationText = styled.div`
-    margin-top: 1rem;
-    width: 70%;
-
-`;
-export const IdentificationCompany = styled.div`
-    margin-top: 1rem;
-    width: 30%;
-
-`;
-export const ImageCompany = styled.img`
-    @media (min-width: 2200px) {
-        width: 20rem;
-    }
-`;
-
-export const ImagePatricia = styled.img`
-    width: 13rem;
-    margin-top: -6rem;
-
-    @media (min-width: 2200px) {
-        width: 19rem;
-        margin-top: -10rem;
-    }
-`;
-
-export const ImageElson = styled.img`
-    width: 13rem;
-    margin-top: -6rem;
-
-    @media (min-width: 2200px) {
-        width: 19rem;
-        margin-top: -10rem;
-    }
-`;
-
-export const Name = styled.h1`
-    color: #FF611E;
-    font-size: 2rem;
+    padding: ${props => props.focus ? '0.6rem 5px 0' : '4rem 0 0'};
     width: 100%;
+    height: 100%;
+    border-top: ${props => props.focus ? '1px solid #FED5B2' : 'none'};
 
     @media (min-width: 2200px) {
-        font-size: 4rem;
+        justify-content: ${props => props.focus ? 'space-between' : 'space-evenly'};
+        height: ${props => props.focus ? '25%' : '100%'};
     }
+
+    div {
+        width: ${props => props.focus ? '70%' : '100%'};
+        text-align: ${props => props.focus ? 'left' : 'center'};
+    }
+    div h4 {
+        font-size: ${props => props.focus ? '1rem' : '1.5rem'};
+        
+        @media (min-width: 2200px) {
+            font-size: ${props => props.focus ? '2rem' : '2.6rem'};
+        }
+    }
+    img {
+        width: ${props => props.focus ? '9rem' : '8rem'};
+
+        @media (min-width: 2200px) {
+            width: ${props => props.focus ? '18rem' : '15rem'};
+        }
+        @media (max-width: 1200px) {
+            width: ${props => props.focus ? '7rem' : '6rem'};
+        }
+    }
+`;
+
+export const IdentificationText = styled.div``;
+
+export const ImageCompany = styled.img``;
+
+export const Name = styled.h4`
+    padding-bottom: 5px;
+    width: 100%;
+    font-weight: 800;
+    color: #FF611E;
+
     @media (min-width: 1024px) {
         font-size: 1.5rem;
     }
@@ -202,15 +226,14 @@ export const Name = styled.h1`
         font-size: 2rem;
     }
 `;
+
 export const Office = styled.p`
     color: #00145D;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 300;
 
     @media (min-width: 2200px) {
-        font-size: 2rem;
-    }
-    @media (min-width: 1024px) {
-            font-size: 0.7rem;
+        font-size: 1.2rem;
     }
     @media (max-width: 768px) {
         font-size: 1rem;
@@ -227,7 +250,6 @@ export const DepositionsSlidesResponsive = styled.div`
         width: 100%; 
         overflow: scroll hidden;
     }
-    
 `;
 
 export const AnimationSlide = styled.div`
@@ -255,9 +277,9 @@ export const BoxSlide = styled.div`
         margin-right: 2.5rem; 
     }
     @media (max-width: 480px) {
-        width: 17rem;
+        width: 18rem;
         height: 18rem;
-        margin: 50px 2rem 0 0;
+        margin: 2rem 2rem 0 0;
     }
 `;
 
@@ -312,9 +334,9 @@ export const ImagePeopleResponsivePatricia = styled.img`
 export const TextIdentificationResponsive = styled.div`
 
     @media (max-width: 768px) {
-        padding-top: 1rem;
         display: flex;
         flex-direction: column;
+        padding-top: 1rem;
     }
 `;
 
@@ -347,7 +369,7 @@ export const ImageCompanyResponsive = styled.img`
         margin-top: 1rem; 
     }
     @media (max-width: 480px) {
-        margin-top: 0.2rem;
+        margin-top: 0.5rem;
     }
 `;
 

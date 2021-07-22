@@ -21,7 +21,6 @@ export const Menu = styled.nav`
 		padding: 0 5%;
 	}
 	@media (max-width: 1024px) {
-		padding: 0 1.5rem;
 		box-shadow: none;
 	}
 `;
@@ -97,10 +96,6 @@ export const NavItem = styled.li`
 	@media (min-width: 2200px) {
 		width: 9rem;
 		font-size: 1.6rem;
-	}
-	@media (max-width: 1024px) {
-		margin-right: 0;
-		font-size: 1.2em;
 	}
 	@media (max-width: 768px) {
 		margin-right: 0;

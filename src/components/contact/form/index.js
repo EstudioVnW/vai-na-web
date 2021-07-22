@@ -16,7 +16,7 @@ function encode(data) {
 const Form = () => {
     const [formContent, setFormContent] = useState({})
     const [status, setStatus] = useState('')
-
+    const [errors, setErrors] = useState([])
     const [selectedInput, setSelectedInput] = useState(undefined)
 
     const handleChange = (ev) => {
@@ -29,7 +29,25 @@ const Form = () => {
     const handleSubmit = (ev) => {
         ev.preventDefault();
         setSelectedInput(undefined)
+        const errorName = !formContent?.name?.length
+        console.log(errorName)
+        const errorEmail = !formContent?.email?.length
+        console.log(errorEmail)
+        const errorTel = !formContent?.tel?.length
+        console.log(errorTel)
+        const errorMessage = !formContent?.message?.length
+        console.log(errorMessage)
+        if (!errorName && !errorEmail && !errorTel && !errorMessage) {
+            postForm()
+        } else {
+            let test = [{errorName}, {errorEmail}, {errorTel}, {errorMessage}]
+            let  test2 = test.filter(i => i[0] === true)
+            console.log(test2)
+            // setErrors(test2)
+        }
+    }
 
+    const postForm = () => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -87,8 +105,8 @@ const Form = () => {
                         </S.FormLabel>
                         <S.FormLabelMsg selected={selectedInput === 'message'}>
                             Mensagem
-                            <S.MsgInput id='inpMessage' name="message" type="text" onChange={handleChange} onFocus={handleFocus} />
                             {selectedInput === 'message' && <S.BtnLimparMsg onClick={() => handleClear('inpMessage')}>Limpar</S.BtnLimparMsg>}
+                            <S.MsgInput id='inpMessage' name="message" type="text" onChange={handleChange} onFocus={handleFocus} />
                         </S.FormLabelMsg>
                         {status}
                         <S.FormBtn>
