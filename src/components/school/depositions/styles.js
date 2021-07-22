@@ -13,6 +13,35 @@ export const BoxWrap = styled.div`
     }
 `;
 
+export const BoxText = styled.div `
+    margin: 2rem auto;
+
+    @media (max-width: 768px) {
+        margin: 0 auto;
+    }
+`
+
+export const Title = styled.h2 `
+    font: 800 2rem 'Usual', sans-serif;
+    color: #FF611E;
+    padding-bottom: 0.8rem;
+
+    @media (max-width: 425px) {
+        font-size: 1.2rem;
+        width: 200px;
+    }
+`
+
+export const Subtitle = styled.p `
+    font: 300 1.3rem 'Usual', sans-serif;
+    line-height: 1.6rem;
+
+    @media (max-width: 425px) {
+        font-size: 0.8rem;
+        width: 230px;
+    }
+`
+
 export const Slide = styled.div`
     width: 100%;
     position: relative;
@@ -37,16 +66,12 @@ export const BoxCards = styled.div`
     width: 211.5vw;
     transition: 0.5s ease-in-out; 
     
-    @media (max-width: 1185px){
-        width: 150vw;
-    }
-    
     @media (max-width: 768px){
-        width: 250vw;
+        width: 450vw;
     }
     
     @media (max-width: 500px){
-        width: 340vw;
+        width: 720vw;
     }
     `;
     
@@ -57,7 +82,7 @@ export const BoxCards = styled.div`
     -webkit-transform: translate(-50%,-50%);
     cursor: pointer;
     
-    @media (max-width: 1024px){
+    @media (max-width: 768px){
         display:none;
     }
     `;
@@ -69,8 +94,6 @@ export const BoxCards = styled.div`
     `;
     
     export const Card = styled.div`
-    background: ${props => props.background};
-    //width: 27rem;
     width: 12.2%;
     height: auto;
     display:flex;
@@ -80,15 +103,8 @@ export const BoxCards = styled.div`
     border-radius: 20px;
     transition: 0.2s ease-in-out;
     border: 2px solid #00145D;
+    box-shadow: 0px 0px 8px #00000029;
     cursor: pointer;
-
-    position: relative;
-
-
-    
-    /* &:hover{
-        transform: ${props => props.isHover ? 'scale(1)' : 'scale(1.025)'};
-    } */
     `;
     
     export const CardContainer = styled.div`
@@ -98,21 +114,31 @@ export const BoxCards = styled.div`
     flex-direction: column;
     justify-content: center;
     `;
-    
+
     export const Descrition = styled.p`
     font: 300 1rem 'Usual', sans-serif;
     line-height: 1.4rem;
     margin-bottom: 1.6rem;
     padding-bottom: 1.6rem;
     border-bottom: 2px solid #FED5B2;
-    margin: 4.5rem auto 1rem auto;
+
+        @media (max-width: 1024px) {
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
     `;
 
     export const Name = styled.p `
         font: 800 1.5rem 'Usual', sans-serif;
-        line-height: 2rem;
+        line-height: 2.5rem;
         color: #FF611E;
         text-align: center;
+
+        @media (max-width: 1024px) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
     `;
 
     export const About = styled.p `
@@ -123,12 +149,28 @@ export const BoxCards = styled.div`
         width: 90%;
         padding-bottom: 1rem;
        /*  margin: 5rem auto 0 auto; */
+
+       @media (max-width: 1024px) {
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+    `
+
+    export const BoxImg = styled.figure `
+        padding: 3rem 0;
+        width: 100%;
+        position: relative;
     `
 
     export const ImgPerson = styled.img `
+        width: 180px;
         position: absolute;
+        -webkit-transform: translate(-50%, 0);
+        top: -80%;
+        left: 50%;
+     /*    position: absolute;
         width: 180px;
         top: -25%;
         left: 50%;
-        -webkit-transform: translate(-50%, 0);
+         */
     `;
