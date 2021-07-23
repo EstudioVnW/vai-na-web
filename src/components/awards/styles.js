@@ -1,14 +1,13 @@
 import { Link } from "gatsby";
 import styled from 'styled-components';
 
-
 export const Awards = styled.section`
     padding: 4rem 0 10rem;
     width: 100%;
     background: #eff1f8;
 
     @media (min-width: 2200px) {
-        padding: 4rem 0 15rem;
+        padding: 5rem 0 20rem;
     }
     @media (max-width: 768px) {
         padding: 4rem 0;
@@ -65,6 +64,9 @@ export const AwardsTitle = styled.h2`
     @media (min-width: 2200px) {
         font-size: 3.8rem;
     }
+    @media (max-width: 1440px) {
+        font-size: 1.8rem;
+    }
     @media (max-width: 480px) {
         margin-bottom: 0.3rem;
         width: 60%;
@@ -74,10 +76,13 @@ export const AwardsTitle = styled.h2`
 
 export const AwardsSubtitle = styled.h3`
     font-size: 1.3rem;
-
+    font-weight: 400;
+    
     @media (min-width: 2200px) {
         font-size: 2.2rem;
-        font-weight: 500;
+    }
+    @media (max-width: 1440px) {
+        font-size: 1.1rem;
     }
     @media (max-width: 480px) {
         width: 66%;
@@ -103,30 +108,28 @@ export const AwardsBox = styled.div`
 
 export const ImgBox = styled.div`
     margin-right: 2rem;
-    width: 30rem;
-    height: 20rem;
+    width: 40rem;
+    height: 25rem;
     border-radius: 15px;
     border: 1px solid #09255d;
     transition: 0.2s ease-out;
     overflow: hidden;
 
-    img {
-        width: 100%;
-        height: 100%;
-        transition: 0.2s ease-out;
-    }
-
     &:hover {
         box-shadow: 0px 0px 20px #0f2b9240;
-        
         img {
-            transform: scale(1.08) translatey(-2%);
+            transform: scale(1.12, 1.30) translatey(1%);
         }
     }
 
     @media (min-width: 2200px) {
         width: 50%;
-        height: auto;
+        height: 38rem;
+        border-radius: 1rem;
+    }
+    @media (max-width: 1440px) {
+        width: 30rem;
+        height: 20rem;
     }
     @media (max-width: 768px) {
         margin-right: 0.8rem;
@@ -135,6 +138,19 @@ export const ImgBox = styled.div`
         width: 18rem;
         height: 12.4rem;
         border-radius: 10px;
+    }
+`;
+
+export const WomenAward = styled.img`
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease-out;
+    transform: scale(1, 1.18) translatey(1.5%);
+
+    @media (min-width: 2200px) {
+        &:hover {
+            transform: scale(1.05, 1.25) translatey(-0.5%);
+        }
     }
 `;
 
@@ -158,8 +174,8 @@ export const ImgTitle = styled.h3`
     @media (min-width: 2200px) {
         font-size: 2.4rem;
     }
-    @media (max-width: 1200px) {
-        font-size: 1.4rem;
+    @media (max-width: 1440px) {
+        font-size: 1.2rem;
     }
     @media (max-width: 768px) {
         margin-bottom: 0.3rem;
@@ -174,7 +190,7 @@ export const ImgText = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.8rem;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 1440px) {
         font-size: 1rem;
     }
     @media (max-w)
@@ -183,23 +199,19 @@ export const ImgText = styled.p`
 export const AwardsRow = styled.div`
     display: flex;
     justify-content: space-between;
+    height: 14rem;
 
+    @media (max-width: 1440px) {
+        height: 12rem;
+    }
     @media (max-width: 768px) {
         margin: 1.2rem 0;
     }
 `;
 
 export const RowBox = styled.div`
-    width: 24.3%;
-    height: 13rem;
-
-    &:last-child {
-        div {
-            img {
-                width: auto;
-            }
-        }
-    }
+    width: 24%;
+    height: 100%;
 
     @media (max-width: 1200px) {
         height: 9rem;
@@ -212,6 +224,30 @@ export const RowBox = styled.div`
     @media (max-width: 480px) {
         width: 18rem;
         height: 12.4rem;
+    }
+
+    &:first-child img {
+        transform: scale(1.3, 1.02);
+        &:hover {
+            transform: scale(1.45, 1.15);
+        }
+    }&:nth-child(2) img {
+        transform: scale(1.1, 0.9);
+        &:hover {
+            transform: scale(1.25, 1);
+        }
+    }&:nth-child(3) img {
+        padding: .9rem 0 0 .7rem;
+        transform: scale(1.6, 1.4);
+        &:hover {
+            transform: scale(1.75, 1.53);
+        }
+    }&:last-child img {
+        padding: 1rem;
+        width: auto;
+        &:hover {
+            transform: scale(1.15);
+        }
     }
 `;
 
@@ -226,37 +262,35 @@ export const RowImgBox = styled.div`
     background: #fff;
     overflow: hidden;
 
-    img {
-        width: 100%;
-        height: 100%;
-        transition: 0.2s ease-out;
-    }
-
-    &:hover {
-        box-shadow: 0px 0px 20px #0f2b9240;
-        
-        img {
-            transform: scale(1.1);
-        }
-    }
-
     @media (min-width: 2200px) {
         height: 20rem;
+        border-radius: 1rem;
     }
     @media (max-width: 768px) {
         margin-bottom: 0;
         border-radius: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        transition: 0.25s ease-out;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 20px #0f2b9240;
     }
 `;
 
 export const RowInfo = styled.p`
     width: 90.8%;
     font-size: 1rem;
+    color: #272727;
 
     @media (min-width: 2200px) {
         font-size: 1.5rem;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 1440px) {
         font-size: 0.9rem;
     }
     @media (max-width: 768px) {

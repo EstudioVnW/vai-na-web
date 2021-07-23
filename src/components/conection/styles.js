@@ -4,9 +4,12 @@ import { Link } from "gatsby";
 export const Conection = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 5rem;
+  margin-top: 1rem;
   max-width: 100%;
 
+  @media (min-width: 2200px) {
+    margin-top: 5rem;
+  }
   @media (max-width: 768px) {
 		flex-direction: column;
 	}
