@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import StickerBg from '../../../images/images/Group11348.svg';
 
 export const Container = styled.div`
+    padding: 5rem 0;
     width: 100%;
 `;
 
@@ -8,12 +10,16 @@ export const Wrap = styled.div`
     width: 80%;
     margin: 0 auto;
 
+    @media (max-width: 1200px){
+        width: 88%;
+    }
     @media (max-width: 768px){
         width: 90%;
     }
 `;
 
 export const BoxText = styled.div``;
+
 export const Title = styled.h2`
     margin-bottom: 1rem;
     font: 800 2rem 'Usual', sans-serif;
@@ -41,8 +47,7 @@ export const Cards = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 2rem 0;
-    //width: 113rem;
-    width: 100vw;
+    width: 103vw;
     transition: 1s ease-in-out; 
 
     @media (max-width: 1185px){
@@ -78,14 +83,13 @@ export const RightArrow = styled(LeftArrow)`
 
 export const Card = styled.div`
     background: ${props => props.background};
-    //width: 27rem;
-    width: 23.5%;
+    width: 24.4%;
     height: 28rem;
     display:flex;
     flex-direction: column;
     align-items:center;
     justify-content: ${props => props.justifyContent || "center"};
-    border-radius: 20px;
+    border-radius: 15px;
     transition: 0.2s ease-in-out;
     cursor: pointer;
 
@@ -95,29 +99,45 @@ export const Card = styled.div`
 `;
 
 export const CardContainer = styled.div`
-    width: 90%;
-    height: 90%;
+    padding: 2rem;
+    height: 100%;
 `;
 
 export const CardDetail = styled.div`
-  display: flex;
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.2rem;
-  border-bottom: .2rem solid ${props => props.borderFill};
-
+    position: relative;
+    display: flex;
+    padding-bottom: 1.2rem;
+    border-bottom: .2rem solid ${props => props.borderFill};
 `;
 
 export const CardCircle = styled.div`
-  margin-right: 0.5rem;
-  width: 1.05rem;
-  height: 1.05rem;
-  border-radius: 50%;
-  background: ${props => props.background};
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: ${props => props.background};
+`;
+
+export const StickerBox = styled.figure`
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    background: url(${StickerBg});
+    background-size: cover;
+    background-repeat: no-repeat;
+`;
+
+export const Sticker = styled.img`
+    padding: 3rem;
 `;
 
 export const CarreiraTxt = styled.p`
-    font: 800 .9rem 'Usual', sans-serif;
-    margin-bottom: 1rem;
+    padding: 1.2rem 0 0.5rem;
+    font: 400 .9rem 'Usual', sans-serif;
     text-transform: uppercase;
 `;
 
