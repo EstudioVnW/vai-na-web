@@ -8,6 +8,10 @@ export const Wrap = styled.div`
     width: 80%;
     margin: 0 auto;
 
+    @media (max-width: 1750px){
+        width: 85%;
+    }
+
     @media (max-width: 1024px) {
         width: 100%;
     }
@@ -72,7 +76,7 @@ export const CaseTitle = styled.h2`
     }
 
     @media (max-width: 500px) {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 `;
 
@@ -81,13 +85,12 @@ export const CaseText = styled.p`
     font: 300 1.3rem 'Usual', sans-serif;
     line-height: 1.6;
 
-    @media (max-width: 1200px) {
-        margin-top: 1.2rem;
-        font-size: 1.2em;
+    @media (max-width: 1400px){
+        font-size: 1rem;
     }
     
     @media (max-width: 500px) {
-        font-size: 1.05em;
+        font-size: .9rem;
     }
 `;
 
@@ -96,12 +99,12 @@ export const Hashtag = styled.p`
     font: 600 1.2rem 'Usual', sans-serif;
     color: #ff611e;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
         font-size: 1rem;
     }
 
     @media (max-width: 500px) {
-        font-size: 0.8rem;
+        font-size: .9rem;
     }
 `;
 
@@ -126,12 +129,12 @@ export const ClientText = styled.p`
 
     span{
         margin-top: 0.6rem;
-        font: 300 1.2em 'Usual', sans-serif;
+        font: 300 1rem 'Usual', sans-serif;
         color: #000;00
     }
 
     @media (max-width: 500px) {
-        font-size: 1em;
+        font-size: .9rem;
     }
 `;
 
@@ -142,12 +145,14 @@ export const Date = styled.div`
 `;
 
 export const LogoBox = styled.figure`
+    display: flex;
+    align-items:center;
     margin-top: 0.6rem;
 
     @media (max-width: 500px) {
-        display: flex;
         flex-direction: column;
-     }
+        align-items: start;
+    }
 `;
 
 export const CaseLogo = styled.img`

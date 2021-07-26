@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import * as S from './styles';
 import ButtonHome from '../button/Button';
 
-import PeoplesImageFirst from '../../images/images/Grupo11293.png';
-import PeoplesImageSecond from '../../images/images/Grupo11292.png';
+import PeoplesImageFirst from '../../images/images/Img_pessoas_esquerda.png';
+import PeoplesImageSecond from '../../images/images/Img_pessoas_direita.png';
 import PeoplesImageFirstResponsive from '../../images/images/Fotos_bolinhas_1.png';
 import PeoplesImageSecondResponsive from '../../images/images/Fotos_bolinhas_2.png';
 import Line from '../../images/images/Linha.svg';

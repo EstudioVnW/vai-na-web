@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import * as S from './styles';
 
 import WomenInTech from '../../images/images/img-midia1.png';
-import Encontro from '../../images/images/img-midia2.jpg';
-import Universa from '../../images/images/img-midia3.jpg';
+import Encontro from '../../images/images/img-midia2.jpeg';
+import Universa from '../../images/images/img-midia3.jpeg';
 import Tilt from '../../images/images/img-midia4.png';
 import BusinessLead from '../../images/images/img-midia5.png';
 
@@ -22,7 +22,7 @@ const Awards = ({ home }) => {
                 <S.AwardsContent>
                     <S.AwardsBox>
                         <S.ImgBox>
-                            <img src={WomenInTech} />
+                            <S.WomenAward src={WomenInTech} />
                         </S.ImgBox>
                         <S.AwardsInfo>
                             <S.ImgTitle>Prêmio Women InTech</S.ImgTitle>
@@ -33,25 +33,25 @@ const Awards = ({ home }) => {
                     <S.AwardsRow>
                         <S.RowBox>
                             <S.RowImgBox>
-                                <img src={Encontro} />
+                                <img src={Encontro} alt="Encontro com Fátima Bernardes" />
                             </S.RowImgBox>
                             <S.RowInfo>Cris dos Prazeres aposta na educação para criar oportunidade para jovens de comunidades</S.RowInfo>
                         </S.RowBox>
                         <S.RowBox>
                             <S.RowImgBox>
-                                <img src={Universa} />
+                                <img src={Universa} alt="Logo da Universa" />
                             </S.RowImgBox>
                             <S.RowInfo>Carioca é finalista de prêmio global ao levar jovens de favela à tecnologia</S.RowInfo>
                         </S.RowBox>
                         <S.RowBox>
                             <S.RowImgBox>
-                                <img src={Tilt} />
+                                <img src={Tilt} alt="Logo da Tilt" />
                             </S.RowImgBox>
                             <S.RowInfo>Coworking da favela prepara jovem preto e periférico para mercado tech</S.RowInfo>
                         </S.RowBox>
                         <S.RowBox>
                             <S.RowImgBox>
-                                <img src={BusinessLead} />
+                                <img src={BusinessLead} alt="Logo da Business Lead" />
                             </S.RowImgBox>
                             <S.RowInfo>Estudantes de Stanford em Ohio, EUA visitam o Vai na Web no Rio de Janeiro, Brasil.</S.RowInfo>
                         </S.RowBox>
