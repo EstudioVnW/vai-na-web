@@ -3,7 +3,7 @@ import cardsCircle from '../../../images/images/cardsCircle.svg';
 
 export const Container = styled.section`
   width: 100%;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 3rem 0;
   background: #eff1f8;
 

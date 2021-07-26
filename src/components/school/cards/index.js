@@ -5,6 +5,12 @@ import * as S from './styles';
 import Button from '../../button/Button';
 import Left from '../../../images/images/Path 7687.svg';
 import Right from '../../../images/images/Path 7686.svg';
+import StickerBg from '../../../images/images/Group11348.svg';
+import Sticker1 from '../../../images/images/Group7291.svg';
+import Sticker2 from '../../../images/images/Group7286.svg';
+import Sticker3 from '../../../images/images/Group7288.svg';
+import Sticker4 from '../../../images/images/noun_Data_2723012.svg';
+import Sticker5 from '../../../images/images/noun_requirements_2927751.svg';
 
 const CardsSchool = () => {
     const [pos, setPos] = useState({ posX: 0 })
@@ -46,12 +52,16 @@ const CardsSchool = () => {
                                 transform: `translate(${pos.posX}vw, 0)`
                             }}>
 
-                            <S.Card background="#FDE7A9">
+                            <S.Card background="#fdecbb">
                                 <S.CardContainer>
-                                    <S.CardDetail borderFill="#FFAC2D">
-                                        <S.CardCircle background="#FFAC2D"></S.CardCircle>
-                                        <S.CardCircle background="#FFAC2D"></S.CardCircle>
-                                        <S.CardCircle background="#FFAC2D"></S.CardCircle>
+                                    <S.CardDetail borderFill="#ffac2d">
+                                        <S.CardCircle background="#ffac2d"></S.CardCircle>
+                                        <S.CardCircle background="#ffac2d"></S.CardCircle>
+                                        <S.CardCircle background="#ffac2d"></S.CardCircle>
+
+                                        <S.StickerBox>
+                                            <S.Sticker src={Sticker1} alt='' />
+                                        </S.StickerBox>
                                     </S.CardDetail>
 
                                     <S.CarreiraTxt>Carreira</S.CarreiraTxt>
@@ -64,12 +74,16 @@ const CardsSchool = () => {
                                 </S.CardContainer>
                             </S.Card>
 
-                            <S.Card background={"#F5B279"}>
+                            <S.Card background={"#ffc5ac"}>
                                 <S.CardContainer>
-                                    <S.CardDetail borderFill="#FF611E">
-                                        <S.CardCircle background="#FF611E"></S.CardCircle>
-                                        <S.CardCircle background="#FF611E"></S.CardCircle>
-                                        <S.CardCircle background="#FF611E"></S.CardCircle>
+                                    <S.CardDetail borderFill="#ff611e">
+                                        <S.CardCircle background="#ff611e"></S.CardCircle>
+                                        <S.CardCircle background="#ff611e"></S.CardCircle>
+                                        <S.CardCircle background="#ff611e"></S.CardCircle>
+
+                                        <S.StickerBox>
+                                            <S.Sticker src={Sticker2} alt='' />
+                                        </S.StickerBox>
                                     </S.CardDetail>
 
                                     <S.CarreiraTxt>Carreira</S.CarreiraTxt>
@@ -82,12 +96,16 @@ const CardsSchool = () => {
                                 </S.CardContainer>
                             </S.Card>
 
-                            <S.Card background={"#FED5B2"}>
+                            <S.Card background={"#fed7b5"}>
                                 <S.CardContainer>
-                                    <S.CardDetail borderFill="#F5B279">
-                                        <S.CardCircle background="#F5B279"></S.CardCircle>
-                                        <S.CardCircle background="#F5B279"></S.CardCircle>
-                                        <S.CardCircle background="#F5B279"></S.CardCircle>
+                                    <S.CardDetail borderFill="#f5b279">
+                                        <S.CardCircle background="#f5b279"></S.CardCircle>
+                                        <S.CardCircle background="#f5b279"></S.CardCircle>
+                                        <S.CardCircle background="#f5b279"></S.CardCircle>
+
+                                        <S.StickerBox>
+                                            <S.Sticker src={Sticker3} alt='' />
+                                        </S.StickerBox>
                                     </S.CardDetail>
 
                                     <S.CarreiraTxt>Carreira</S.CarreiraTxt>
@@ -107,6 +125,10 @@ const CardsSchool = () => {
                                             <S.CardCircle background="#00145D"></S.CardCircle>
                                             <S.CardCircle background="#00145D"></S.CardCircle>
                                             <S.CardCircle background="#00145D"></S.CardCircle>
+
+                                            <S.StickerBox>
+                                                <S.Sticker src={Sticker4} alt='' />
+                                            </S.StickerBox>
                                         </S.CardDetail>
 
                                         <S.CarreiraTxt>Carreira</S.CarreiraTxt>
@@ -120,6 +142,10 @@ const CardsSchool = () => {
                                             <S.CardCircle background="#00145D"></S.CardCircle>
                                             <S.CardCircle background="#00145D"></S.CardCircle>
                                             <S.CardCircle background="#00145D"></S.CardCircle>
+
+                                            <S.StickerBox>
+                                                <S.Sticker src={Sticker5} alt='' />
+                                            </S.StickerBox>
                                         </S.CardDetail>
 
                                         <S.CarreiraTxt>Carreira</S.CarreiraTxt>

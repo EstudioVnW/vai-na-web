@@ -20,14 +20,16 @@ const SquadsInfo = () => (
       E para alcançar resultados positivos, vamos te ajudar a definir o melhor time.
     </S.SquadsText>
     <S.SquadsContent>
+      <S.BoxSquadImg>
       <S.SquadsImg
         src={squads}
         alt="Equipe de seis pessoas sorrindo e discutindo juntos no sofá"
-      />
+        />
       <S.SquadsImgMobile
         src={squadsMobile}
         alt="Equipe de seis pessoas sorrindo e discutindo juntos no sofá"
-      />
+        />
+        </S.BoxSquadImg>
         <S.Squads>
           <S.MobLineV src={mobileLine2} alt="" />
           <S.SquadsBox>

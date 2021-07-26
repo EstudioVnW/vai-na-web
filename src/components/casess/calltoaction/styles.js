@@ -12,6 +12,10 @@ export const Wrap = styled.div`
     width: 80%;
     margin: 0 auto;
 
+    @media (max-width: 1750px){
+        width: 85%;
+    }
+
     @media (max-width: 1024px){
         width: 90%;
     }
@@ -56,7 +60,7 @@ export const Title = styled.h2`
     font-weight: 800;
 
     @media (max-width: 500px) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 `;
 
@@ -65,7 +69,7 @@ export const SubTitle = styled.h3`
     font-weight: 500;
 
     @media (max-width: 500px) {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 `;
 
@@ -88,7 +92,7 @@ export const ButtonBox = styled.div`
         }
 
         @media (max-width: 680px) {
-            font-size: 1.4em;
+            font-size: 1rem;
         }
     }
 
@@ -126,8 +130,13 @@ export const Text = styled.p`
     font: 300 1.3rem 'Usual', sans-serif;
     line-height: 1.6;
 
-    
+    @media (max-width: 1400px){
+        font-size: 1rem;
+    }
+
     @media (max-width: 500px) {
-        font-size: .8rem;
+        font-size: .9rem;
+        width: 87%;
+        margin: 0 auto;
     }
 `;
