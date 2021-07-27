@@ -4,11 +4,8 @@ import { Link } from "gatsby";
 
 
 export const Depositions = styled.div`
-    padding: 5rem 0 9rem;
+    padding: 7rem 0;
 
-    @media (min-width: 2200px) {
-        padding: 5rem 0 12rem;
-    }
     @media (max-width: 768px) {
         padding: 4rem 0;
     }

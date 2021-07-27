@@ -22,7 +22,7 @@ const Awards = ({ home }) => {
                 <S.AwardsContent>
                     <S.AwardsBox>
                         <S.ImgBox>
-                            <S.WomenAward src={WomenInTech} />
+                            <img src={WomenInTech} />
                         </S.ImgBox>
                         <S.AwardsInfo>
                             <S.ImgTitle>Prêmio Women InTech</S.ImgTitle>
@@ -33,25 +33,25 @@ const Awards = ({ home }) => {
                     <S.AwardsRow>
                         <S.RowBox>
                             <S.RowImgBox>
-                                <img src={Encontro} alt="Encontro com Fátima Bernardes" />
+                                <img src={Encontro} />
                             </S.RowImgBox>
                             <S.RowInfo>Cris dos Prazeres aposta na educação para criar oportunidade para jovens de comunidades</S.RowInfo>
                         </S.RowBox>
                         <S.RowBox>
                             <S.RowImgBox>
-                                <img src={Universa} alt="Logo da Universa" />
+                                <img src={Universa} />
                             </S.RowImgBox>
                             <S.RowInfo>Carioca é finalista de prêmio global ao levar jovens de favela à tecnologia</S.RowInfo>
                         </S.RowBox>
                         <S.RowBox>
                             <S.RowImgBox>
-                                <img src={Tilt} alt="Logo da Tilt" />
+                                <img src={Tilt} />
                             </S.RowImgBox>
                             <S.RowInfo>Coworking da favela prepara jovem preto e periférico para mercado tech</S.RowInfo>
                         </S.RowBox>
                         <S.RowBox>
                             <S.RowImgBox>
-                                <img src={BusinessLead} alt="Logo da Business Lead" />
+                                <img src={BusinessLead} />
                             </S.RowImgBox>
                             <S.RowInfo>Estudantes de Stanford em Ohio, EUA visitam o Vai na Web no Rio de Janeiro, Brasil.</S.RowInfo>
                         </S.RowBox>

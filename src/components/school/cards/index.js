@@ -5,7 +5,6 @@ import * as S from './styles';
 import Button from '../../button/Button';
 import Left from '../../../images/images/Path 7687.svg';
 import Right from '../../../images/images/Path 7686.svg';
-import StickerBg from '../../../images/images/Group11348.svg';
 import Sticker1 from '../../../images/images/Group7291.svg';
 import Sticker2 from '../../../images/images/Group7286.svg';
 import Sticker3 from '../../../images/images/Group7288.svg';
@@ -17,7 +16,7 @@ const CardsSchool = () => {
 
     const _rightArrow = () => {
         console.log('direita');
-        setPos({ posX: -21})
+        setPos({ posX: -33})
     }
 
     const _leftArrow = () => {
