@@ -1,12 +1,16 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 import * as S from './styles';
-
 import ButtonHome from '../../button/Button';
 
 import PeoplesSquad from '../../../images/images/VaiNaWeb-196.png';
 import Back from '../../../images/images/Group11078.svg';
 import Canais from '../../../images/images/Group10971.svg';
 import MVPs from '../../../images/images/Group10972.svg';
+
+const redirectToContact = () => {
+  navigate('/contact/');
+};
 
 const Squads = () => (
   <S.Squads>
@@ -19,6 +23,7 @@ const Squads = () => (
           <ButtonHome
             backgroundHover="#FF611E"
             color="#FED5B2"
+            funcAction={redirectToContact}
           >
             Reserve seu Squad!
           </ButtonHome>
