@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 
 export const Talents = styled.div`
 	position: relative;
@@ -38,7 +38,7 @@ export const TalentsBackground = styled.div`
 		width: 100%;
 		border-radius: 0;
 	}
-`
+`;
 
 export const TalentsWrap = styled.div`
 	display: flex;
@@ -55,7 +55,7 @@ export const TalentsWrap = styled.div`
 		padding: 2rem 0 0;
 		width: 100%;
 	}
-`
+`;
 
 export const TalentsText = styled.div`
 	display: flex;
@@ -195,7 +195,7 @@ export const TalentsImageInfo = styled.img`
 	@media (max-width: 768px) {
 		display: none;
 	}
-`
+`;
 
 export const TalentsImageInfoResponsive = styled.img`
 	display: none;
