@@ -1,6 +1,4 @@
-import { Link } from "gatsby";
 import styled from 'styled-components';
-
 
 export const Awards = styled.section`
     padding: 4rem 0 10rem;
@@ -153,14 +151,9 @@ export const AwardsInfo = styled.div`
 export const ImgTitle = styled.h3`
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-weight: 700;
     color: #272727;
     
-    @media (min-width: 2200px) {
-        font-size: 2.4rem;
-    }
-    @media (max-width: 1200px) {
-        font-size: 1.4rem;
-    }
     @media (max-width: 768px) {
         margin-bottom: 0.3rem;
     }

@@ -1,10 +1,15 @@
 import styled from 'styled-components';
-import { Link } from "gatsby";
-
-
+import { Link } from 'gatsby';
 
 export const Depositions = styled.div`
-    padding: 7rem 0;
+    width: 90%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
 
     @media (max-width: 768px) {
         padding: 4rem 0;
@@ -12,16 +17,12 @@ export const Depositions = styled.div`
 `;
 
 export const DepositionsText = styled.div`
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto 10rem;
+    margin: 2rem auto 2rem;
     width: 80%;
 
-    @media (min-width: 2200px) {
-        margin: 0 auto 16rem;
-    }
     @media (max-width: 768px) {
         margin: 0 auto;
         width: 100%;
@@ -34,14 +35,11 @@ export const DepositionsTitle = styled.h2`
     font-size: 2rem;
     font-weight: 800;
 
-    @media (min-width: 2200px) {
-		font-size: 3.8rem;
-	}
     @media (max-width: 768px) {
-		font-size: 1.6rem;
+        font-size: 1.6rem;
         width: 80%;
         text-align: center;
-	}
+    }
     @media (max-width: 480px) {
         font-size: 1.8rem;
     }
@@ -53,12 +51,9 @@ export const DepositionsSubTitle = styled.h3`
     font-size: 1.3rem;
     text-align: center;
 
-    @media (min-width: 2200px) {
-		font-size: 2.4rem;
-	}
     @media (max-width: 1440px) {
-		font-size: 1.5rem;
-	}
+        font-size: 1.5rem;
+    }
     @media (max-width: 768px) {
         width: 73%;
         margin-top: 0.5rem;
@@ -66,18 +61,18 @@ export const DepositionsSubTitle = styled.h3`
         font-size: 1.25rem;
         font-weight: 600;
         line-height: 1.4;
-	}
+    }
     @media (max-width: 480px) {
         font-size: 0.9rem;
     }
 `;
 
-
 export const DepositionsSlides = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    max-width: 100%;
+    justify-content: center;
+    padding: 10rem 0;
+    width: 100%;
 
     @media (max-width: 768px) {
         display: none;
@@ -97,6 +92,7 @@ export const BoxSlideDepositions = styled.div`
 
 export const Seta = styled.img`
     width: 1.4rem;
+    margin: 1rem;
 `;
 
 export const DepositionsSlideCard = styled.div`
@@ -106,55 +102,36 @@ export const DepositionsSlideCard = styled.div`
     align-items: center;
     justify-content: flex-end;
     padding: 1.2rem;
-    width: ${props => props.focus ? '42%' : '28%'};
-    height: ${props => props.focus ? '17rem' : '12rem'};
+    width: ${(props) => (props.focus ? '42%' : '28%')};
+    min-height: ${(props) => (props.focus ? '18rem' : '12rem')};
     box-shadow: 0px 0px 22px #00000029;
-    border: ${props => props.focus ? '1px solid #00145d' : '1px solid #FFAC2D'};
+    border: ${(props) => (props.focus ? '1px solid #00145d' : '1px solid #FFAC2D')};
     border-radius: 12px;
-    order: ${props => props.order};
-    transform: ${props => props.focus ? 'scale(1.25)' : 'none'};
+    order: ${(props) => props.order};
+    transform: ${(props) => (props.focus ? 'scale(1.25)' : 'none')};
     background: #FFF;
-    z-index: ${props => props.focus ? '1' : '-1'};
-
-    @media (min-width: 2200px) {
-        padding: 2rem;
-        height: ${props => props.focus ? '30rem' : '20rem'};
-        border: ${props => props.focus ? '2px solid #00145d' : '2px solid #FFAC2D'};
-        border-radius: 1rem;
-    }
-    @media (max-width: 1200px) {
-        padding: 1rem;
-        width: ${props => props.focus ? '40%' : '30%'};
-    }
+    z-index: ${(props) => (props.focus ? '1' : '-1')};
 
     p {
-        display: ${props => props.focus ? 'block' : 'none'};
+        display: ${(props) => (props.focus ? 'block' : 'none')};
     }
     div {
-        flex-direction: ${props => props.focus ? 'row' : 'column'};
-    }
-    img {
-        width: ${props => props.focus ? '15rem' : '13rem'};
-        top: ${props => props.focus ? '-50%' : '-56%'};
-        
-        @media (min-width: 2200px) {
-            width: ${props => props.focus ? '20rem' : '18rem'};
-            top: ${props => props.focus ? '-38%' : '-45%'};
-        }
-        @media (max-width: 1200px) {
-            width: ${props => props.focus ? '12rem' : '10rem'};
-            top: ${props => props.focus ? '-40%' : '-46%'};
-        }
+        flex-direction: ${(props) => (props.focus ? 'row' : 'column')};
     }
 `;
 
 export const Image = styled.img`
     position: absolute;
 
-    @media (min-width: 2200px) {
-        width: 20.375rem;
+    width: ${(props) => (props.focus ? '15rem' : '13rem')};
+    top: ${(props) => (props.focus ? '-42%' : '-55%')};
+
+    @media (max-width: 1200px) {
+        width: ${(props) => (props.focus ? '12rem' : '10rem')};
+        top: ${(props) => (props.focus ? '-40%' : '-46%')};
     }
 `;
+
 export const Description = styled.p`
     padding: 4rem 5px 2rem;
     color: #272727;
@@ -162,11 +139,6 @@ export const Description = styled.p`
     font-size: 0.8rem;
     line-height: 1.2rem;
     
-    @media (min-width: 2200px) {
-        padding: 0 10px 4rem;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-    }
     @media (max-width: 1200px) {
         font-size: 0.68rem;
     }
@@ -176,42 +148,28 @@ export const Identification = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: ${props => props.focus ? '0.6rem 5px 0' : '4rem 0 0'};
+    padding: ${(props) => (props.focus ? '0.6rem 5px 0' : '4rem 0 0')};
     width: 100%;
     height: 100%;
-    border-top: ${props => props.focus ? '1px solid #FED5B2' : 'none'};
-
-    @media (min-width: 2200px) {
-        justify-content: ${props => props.focus ? 'space-between' : 'space-evenly'};
-        height: ${props => props.focus ? '25%' : '100%'};
-    }
+    border-top: ${(props) => (props.focus ? '1px solid #FED5B2' : 'none')};
 
     div {
-        width: ${props => props.focus ? '70%' : '100%'};
-        text-align: ${props => props.focus ? 'left' : 'center'};
+        width: ${(props) => (props.focus ? '70%' : '100%')};
+        text-align: ${(props) => (props.focus ? 'left' : 'center')};
     }
     div h4 {
-        font-size: ${props => props.focus ? '1rem' : '1.5rem'};
-        
-        @media (min-width: 2200px) {
-            font-size: ${props => props.focus ? '2rem' : '2.6rem'};
-        }
+        font-size: ${(props) => (props.focus ? '1rem' : '1.5rem')};
     }
     img {
-        width: ${props => props.focus ? '9rem' : '8rem'};
+        width: ${(props) => (props.focus ? '9rem' : '8rem')};
 
-        @media (min-width: 2200px) {
-            width: ${props => props.focus ? '18rem' : '15rem'};
-        }
         @media (max-width: 1200px) {
-            width: ${props => props.focus ? '7rem' : '6rem'};
+            width: ${(props) => (props.focus ? '7rem' : '6rem')};
         }
     }
 `;
 
 export const IdentificationText = styled.div``;
-
-export const ImageCompany = styled.img``;
 
 export const Name = styled.h4`
     padding-bottom: 5px;
@@ -232,14 +190,13 @@ export const Office = styled.p`
     font-size: 0.7rem;
     font-weight: 300;
 
-    @media (min-width: 2200px) {
-        font-size: 1.2rem;
-    }
     @media (max-width: 768px) {
         font-size: 1rem;
     }
 `;
 
+export const ImageCompany = styled.img`
+`;
 
 // RESPONSIVO
 export const DepositionsSlidesResponsive = styled.div`
@@ -249,47 +206,37 @@ export const DepositionsSlidesResponsive = styled.div`
         display: flex; 
         width: 100%; 
         overflow: scroll hidden;
+        padding-left: 1.25rem;
     }
 `;
 
 export const AnimationSlide = styled.div`
-
     @media (max-width: 768px) {
         display: flex;
-        padding: 0 1.5rem;    
     }
 `;
 
 export const BoxSlide = styled.div`
-
     @media (max-width: 768px) {
-        width: 25rem;
-        height: 28rem;
+        width: 18rem;
         margin-top: 50px;
         border: 2px solid #00145D;   
         border-radius: 20px;
         box-shadow: 0px 0px 22px #00000029;   
         display: flex;
         flex-direction: column;
-        align-items: center;  
-        justify-content: space-around; 
-        margin-left: 2.5rem;
-        margin-right: 2.5rem; 
-    }
-    @media (max-width: 480px) {
-        width: 18rem;
-        height: 18rem;
-        margin: 2rem 2rem 0 0;
+        align-items: space-between;  
+        justify-content: space-between;
+        margin-right: 1rem;
+        padding: 1rem;
     }
 `;
 
 export const DescriptionResponsive = styled.p`
-
     @media (max-width: 768px) {
         font-size: 1rem;
         text-align: left;
         line-height: 1.8rem;    
-        width: 88%;   
     }
     @media (max-width: 480px) {
         font-size: 0.8rem;
@@ -298,25 +245,15 @@ export const DescriptionResponsive = styled.p`
 `;
 
 export const IdentificationResponsive = styled.div`
-
     @media (max-width: 768px) {
         display: flex;  
         border-top: 2px solid #FED5B2;
-        width: 92%;
-        height: 33%;
+        height: 40%;
     }
 `;
 
 export const ImagePeopleResponsive = styled.img`
-
-    @media (max-width: 768px) {
-        width: 9rem;  
-    }
-    @media (max-width: 480px) {
-        margin-top: -0.5rem;
-        width: 6rem;
-        height: 6rem;
-    }
+    max-width: 40%;
 `;
 
 export const ImagePeopleResponsivePatricia = styled.img`
@@ -332,7 +269,6 @@ export const ImagePeopleResponsivePatricia = styled.img`
 `;
 
 export const TextIdentificationResponsive = styled.div`
-
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
@@ -341,7 +277,6 @@ export const TextIdentificationResponsive = styled.div`
 `;
 
 export const NameResponsive = styled.h1`
-
     @media (max-width: 768px) {
         color: #FF611E;
         text-align: left;
@@ -352,7 +287,6 @@ export const NameResponsive = styled.h1`
     }
 `;
 export const OfficeResponsive = styled.p`
-
     @media (max-width: 768px) {
         color: #00145D;
         text-align: left;
@@ -363,13 +297,9 @@ export const OfficeResponsive = styled.p`
     }
 `;
 export const ImageCompanyResponsive = styled.img`
-
     @media (max-width: 768px) {
         width: 8rem; 
         margin-top: 1rem; 
-    }
-    @media (max-width: 480px) {
-        margin-top: 0.5rem;
     }
 `;
 
@@ -378,7 +308,7 @@ export const Bold = styled.span`
 `;
 
 export const StyledLink = styled(Link)`
-	color: #0F2B92;
-	font-size: 1.125rem;
-	text-decoration: none;
+    color: #0F2B92;
+    font-size: 1.125rem;
+    text-decoration: none;
 `;
