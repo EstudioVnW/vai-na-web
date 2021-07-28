@@ -110,6 +110,23 @@ export const HDownArrow = styled.figure`
 	}
 `;
 
+export const HImgLogo = styled.img`
+	position: absolute;
+	bottom: 85%;
+	left: 90%;
+	z-index: 5;
+	width: 15%;	
+
+	@media (max-width: 790px) {
+		top: 120%;
+		left: 50%;
+    	transform: translate(-50% , -50%);
+	}
+	
+	@media (max-width: 425px) {
+		top: 110%;
+	}
+`;
 
 
 export const HContentBox = styled.div`

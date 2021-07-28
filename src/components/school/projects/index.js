@@ -1,7 +1,6 @@
 import React from 'react';
 import * as S from './styles';
 
-//Components
 import StarWars from '../../../images/images/studentProjects/starWars.png';
 import Portflow from '../../../images/images/studentProjects/portflow.png';
 import TheWitcher from '../../../images/images/studentProjects/theWitcher.png';

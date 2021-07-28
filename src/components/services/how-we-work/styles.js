@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InfoContainer = styled.section`
   width: 100%;
-  margin: 5rem auto;
+  margin: 0 auto;
   
   @media (max-width: 790px) {
     display: flex;
@@ -24,7 +24,7 @@ export const InfoContainer = styled.section`
 export const InfoTitle = styled.h2`
   font: 800 2rem 'Usual', sans-serif;
   color: #00145d;
-  /* padding-top: 4rem; */
+  padding-top: 4rem;
 
   @media (max-width: 425px) {
     font-size: 1.2rem;

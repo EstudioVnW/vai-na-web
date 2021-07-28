@@ -12,10 +12,6 @@ export const HeaderContainer = styled.header`
 export const Wrap = styled.div`
     width: 80%;
     margin: 0 auto;
-
-    @media (max-width: 1750px){
-        width: 85%;
-    }
 `;
 
 export const Header = styled.section`
@@ -51,7 +47,7 @@ export const TitleBar = styled.span`
     font: 300 1.2em 'Usual', sans-serif;
     color: #ff611e;
     
-    @media (max-width: 613px) {
+    @media (max-width: 490px) {
         top: -4%;
         left: -2.5rem;
     }

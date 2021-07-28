@@ -15,7 +15,7 @@ const school = () => {
       <Cards />
       <Classes />
       <Depositions />
-      <Projects />
+      <Projects /> 
     </Layouts>
   )
 }
