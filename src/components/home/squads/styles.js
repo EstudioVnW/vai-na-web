@@ -1,10 +1,13 @@
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import styled from 'styled-components';
-
 
 export const Squads = styled.div`
    width: 100%;
    padding: 7rem 0 4rem;
+
+   @media (min-width: 1025px) {
+      min-height: 100vh;
+   }
 
    @media (min-width: 2200px) {
       padding: 12rem 0;
@@ -257,21 +260,11 @@ export const BoxTextBackTitle = styled.h4`
    margin-bottom: 0.5rem;
    color: #272727;
    font-size: 1.5rem;
+   font-weight: 700;
 
-   @media (min-width: 2200px) {
-      width: 100%;
-      font-size: 2.4rem;
-   }
    @media (max-width: 1440px){
       margin-bottom: 0.5rem;
       font-size: 1.2rem;
-   }
-   @media (max-width: 768px) {
-      width: 88%;
-      font-size: 1.4rem;
-   }
-   @media (max-width: 480px) {
-      font-size: 1.4rem;
    }
 `;
 
@@ -301,8 +294,8 @@ export const BoxTextBackDescription = styled.p`
       font-size: 0.85rem;
       line-height: 1.4;
    }
-`;	
-                             
+`;
+
 export const Bold = styled.span`
    font-weight: 600;
 `;

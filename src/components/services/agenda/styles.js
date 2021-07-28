@@ -3,17 +3,15 @@ import styled from 'styled-components';
 export const AgendaContainer = styled.section`
   max-width: 100%;
   min-height: auto;
-  margin: 6rem 0 auto;
+  margin: 0 auto;
   display: flex;
-
+  padding-top: 2rem;
+  
   @media (max-width: 1024px) {
     min-height: 40vh;
     flex-direction: column;
   }
 
-  @media (max-width: 768px) {
-    margin: 3rem auto;
-  }
 `;
 
 export const AgendaWrap = styled.div `
