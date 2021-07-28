@@ -1,6 +1,4 @@
-import { Link } from "gatsby";
 import styled from 'styled-components';
-
 
 export const Awards = styled.section`
     padding: 4rem 0 10rem;

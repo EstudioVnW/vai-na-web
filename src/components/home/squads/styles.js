@@ -1,10 +1,13 @@
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import styled from 'styled-components';
-
 
 export const Squads = styled.div`
    width: 100%;
    padding: 7rem 0 4rem;
+
+   @media (min-width: 1025px) {
+      min-height: 100vh;
+   }
 
    @media (min-width: 2200px) {
       padding: 12rem 0;
@@ -301,8 +304,8 @@ export const BoxTextBackDescription = styled.p`
       font-size: 0.85rem;
       line-height: 1.4;
    }
-`;	
-                             
+`;
+
 export const Bold = styled.span`
    font-weight: 600;
 `;

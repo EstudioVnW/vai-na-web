@@ -1,21 +1,18 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { graphql } from "gatsby";
-import './index.css';
+import { graphql } from 'gatsby';
 
-//Components
+// Components
 import Layouts from '../components/layout';
-import Cases from '../components/cases';
-import SocialImpact from '../components/socialImpact';
-import Squads from '../components/squads';
-import Header from '../components/header';
-import Talents from '../components/talents';
-import Conection from '../components/conection';
-import Carroussel from "../components/carroussel";
-import Awards from "../components/awards";
+import Header from '../components/home/header';
 
-//Imagens
-
+import Awards from '../components/home/awards';
+import Carroussel from '../components/home/carroussel';
+import Cases from '../components/home/cases';
+import Conection from '../components/home/conection';
+import SocialImpact from '../components/home/socialImpact';
+import Squads from '../components/home/squads';
+import Talents from '../components/home/talents';
 
 // styles
 const Content = styled.div`
@@ -56,23 +53,21 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-const Home = (props) => {
-  return (
-    <Layouts home={true}>
-      <Content>
-        <Header/>
-        <Cases />
-        <SocialImpact />
-        <Squads />
-        <Talents />
-        <Carroussel />
-        <Awards />
-        <Conection />
-      </Content>
-    </Layouts>
-  )
-}
+const Home = () => (
+  <Layouts home>
+    <Content>
+      <Header />
+      <Cases />
+      <SocialImpact />
+      <Squads />
+      <Talents />
+      <Carroussel />
+      <Awards />
+      <Conection />
+    </Content>
+  </Layouts>
+);
 
 export default Home;
