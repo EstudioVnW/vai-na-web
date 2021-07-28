@@ -260,21 +260,11 @@ export const BoxTextBackTitle = styled.h4`
    margin-bottom: 0.5rem;
    color: #272727;
    font-size: 1.5rem;
+   font-weight: 700;
 
-   @media (min-width: 2200px) {
-      width: 100%;
-      font-size: 2.4rem;
-   }
    @media (max-width: 1440px){
       margin-bottom: 0.5rem;
       font-size: 1.2rem;
-   }
-   @media (max-width: 768px) {
-      width: 88%;
-      font-size: 1.4rem;
-   }
-   @media (max-width: 480px) {
-      font-size: 1.4rem;
    }
 `;
 
