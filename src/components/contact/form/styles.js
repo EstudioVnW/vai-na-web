@@ -1,7 +1,11 @@
-import styled from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 
 
 
+export const LoadingAnimation = keyframes`
+  0%   { background-position: 0 0; }
+  100% { background-position: -200% 0; }
+`;
 
 export const Contato = styled.main`
 
@@ -83,11 +87,10 @@ export const FormLabel = styled.label`
     font-weight: 600;
     color: #00145d;
     border-radius: 10px;
-    background: #e7e9f4;
+    background: ${props => props.isError ? '#FF611E26' : '#e7e9f4' };
     display: flex;
     align-items: center;
-
-    border: ${props => props.selected ? '1px solid #00145D' : 'none' };
+    border: ${props => props.selected ? '1px solid #00145D' : 'none'};
 
     @media (max-width: 768px) {
             margin: 0 0 1rem;
@@ -115,6 +118,7 @@ export const FormLabelMsg = styled(FormLabel)`
     height: 50vh;
     display: flex;
     flex-wrap: wrap;
+    
 `;
 
 export const FormInput = styled.input`
@@ -124,8 +128,14 @@ export const FormInput = styled.input`
     color: #00145d;
     border: none;
     outline: none;
-    background: #e7e9f4;
+    
+    background: ${props => props.isError ? '#e7e9f4' : '#ff611e00' };
 
+    ::-webkit-outer-spin-button,
+    ::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 `;
 
 export const MsgInput = styled.textarea`
@@ -134,7 +144,7 @@ export const MsgInput = styled.textarea`
     height: 70%;
     font: 300 1.3rem sans-serif;
     color: #00145d;
-    background: #e7e9f4;
+    background: ${props => props.isError ? '#e7e9f4' : '#ff611e00' };
     border: none;
     outline: none;
     resize: none;
@@ -151,14 +161,24 @@ export const Btn = styled.button`
     margin-top: 2.4rem;
     padding: 1rem 0 0.8rem;
     width: 8.8rem;
-    font: 300 1.5em sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
     color: #fed5b2;
     border-radius: 30px;
     box-shadow: 0 0 10px #aaa;
     border: none;
     background: #0f2b92;
+    outline: none;
 
-    @media (max-width: 768px) {
+     ${({ isLoading }) => isLoading && css`
+        border: 1px solid #00145D;
+        background: repeating-linear-gradient(to right, #0F2B9277, #0F2B9277, #00145D);
+        background-size: 200% auto;
+        background-position: 0 100%;
+        animation: ${LoadingAnimation} 1.5s infinite linear;
+    `}
+
+     @media (max-width: 768px) {
         width: 6.6rem;
         padding: 0.8rem 0 0.6rem;
         font-size: 1em;
