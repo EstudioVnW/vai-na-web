@@ -36,10 +36,10 @@ export const DepositionsTitle = styled.h2`
     font-weight: 800;
 
     @media (max-width: 768px) {
-		font-size: 1.6rem;
+        font-size: 1.6rem;
         width: 80%;
         text-align: center;
-	}
+    }
     @media (max-width: 480px) {
         font-size: 1.8rem;
     }
@@ -52,8 +52,8 @@ export const DepositionsSubTitle = styled.h3`
     text-align: center;
 
     @media (max-width: 1440px) {
-		font-size: 1.5rem;
-	}
+        font-size: 1.5rem;
+    }
     @media (max-width: 768px) {
         width: 73%;
         margin-top: 0.5rem;
@@ -61,7 +61,7 @@ export const DepositionsSubTitle = styled.h3`
         font-size: 1.25rem;
         font-weight: 600;
         line-height: 1.4;
-	}
+    }
     @media (max-width: 480px) {
         font-size: 0.9rem;
     }
@@ -308,7 +308,7 @@ export const Bold = styled.span`
 `;
 
 export const StyledLink = styled(Link)`
-	color: #0F2B92;
-	font-size: 1.125rem;
-	text-decoration: none;
+    color: #0F2B92;
+    font-size: 1.125rem;
+    text-decoration: none;
 `;

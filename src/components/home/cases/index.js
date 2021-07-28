@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { navigate } from 'gatsby';
 import ButtonHome from '../../button/Button';
 import * as S from './styles';
 
@@ -12,6 +13,10 @@ import ImageQuickCash from '../../../images/images/QuickCash.png';
 import ImageIts from '../../../images/images/192205155_822241138394982_1188246794454052303_n.png';
 import ImageSedimenta from '../../../images/images/SedimentaJPM.svg';
 import ImageM4A from '../../../images/images/m4a.png';
+
+const redirectToContact = () => {
+  navigate('/cases/');
+};
 
 const Cases = () => (
   <S.Cases>
@@ -52,6 +57,7 @@ const Cases = () => (
         border="#FFAC2D"
         color="#FFFFFF"
         background="#FF611E"
+        funcAction={redirectToContact}
       >
         Veja nossos Cases de Sucesso!
       </ButtonHome>
