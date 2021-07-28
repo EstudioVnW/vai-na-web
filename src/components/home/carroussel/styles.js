@@ -206,7 +206,7 @@ export const DepositionsSlidesResponsive = styled.div`
         display: flex; 
         width: 100%; 
         overflow: scroll hidden;
-        padding-left: 1rem;
+        padding-left: 1.25rem;
     }
 `;
 
@@ -218,7 +218,7 @@ export const AnimationSlide = styled.div`
 
 export const BoxSlide = styled.div`
     @media (max-width: 768px) {
-        width: 23rem;
+        width: 18rem;
         margin-top: 50px;
         border: 2px solid #00145D;   
         border-radius: 20px;
@@ -277,7 +277,6 @@ export const TextIdentificationResponsive = styled.div`
 `;
 
 export const NameResponsive = styled.h1`
-
     @media (max-width: 768px) {
         color: #FF611E;
         text-align: left;
