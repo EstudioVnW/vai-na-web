@@ -10,21 +10,22 @@ export const InfoContainer = styled.section`
     flex-direction: column;
     text-align: center;
   }
-  `;
+`;
   
-  export const Wrap = styled.div `
-  width: 80%;
+export const Wrap = styled.div `
+  width: 85%;
   margin: 0 auto;
 
   @media (max-width: 768px) {
     width: 90%;
   }
-`
+`;
 
 export const InfoTitle = styled.h2`
   font: 800 2rem 'Usual', sans-serif;
   color: #00145d;
   padding-top: 4rem;
+  padding-left: 3%;
 
   @media (max-width: 425px) {
     font-size: 1.2rem;
@@ -34,19 +35,19 @@ export const InfoTitle = styled.h2`
 export const InfoText = styled.p`
   font: 300 1.3rem 'Usual', sans-serif;
   padding-top: 0.5rem;
+  padding-left: 3%;
 
-    @media (max-width: 425px) {
-      font-size: 0.8rem;
-      padding-bottom: 1.5rem;
-    }
-  
+  @media (max-width: 425px) {
+    font-size: 0.8rem;
+    padding-bottom: 1.5rem;
+  }
 `;
 
-export const Infographic = styled.picture`
+export const Infographic = styled.figure`
   display: flex;
   justify-content: center;
-  padding: 1.5rem 4vw;
-  margin: 2rem 0;
+  padding: 0 1rem;
+  margin: 2.2rem 0;
   border-radius: 20px;
   background: #fef4d8;
 

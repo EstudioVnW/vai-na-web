@@ -3,8 +3,7 @@ import styled from 'styled-components';
 export const SquadsContainer = styled.section`
   max-width: 100%;
   min-height: 50vh;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  padding: 5rem 0 8rem;
 
   @media (max-width: 1024px) {
     margin-bottom: 3rem;
@@ -21,7 +20,7 @@ export const SquadsWrap = styled.div `
 `
 
 export const SquadsContent = styled.figure`
-  margin-top: 1rem;
+  margin-top: 2rem;
   position: relative;
 
   @media (max-width: 1024px){
@@ -36,7 +35,7 @@ export const SquadsContent = styled.figure`
 export const SquadsTitle = styled.h2`
   font: 800 2rem 'Usual', sans-serif;
   color: #ff611e;
-  margin: 1rem 0;
+  margin: 10px 0;
 
   @media (max-width: 1024px) {
     width: 90%;
@@ -49,7 +48,7 @@ export const SquadsTitle = styled.h2`
 
 export const SquadsText = styled.p`
   font: 300 1.3rem 'Usual', sans-serif;
-  line-height: 1.6rem;
+  line-height: 1.5;
   margin: 0;
 
   @media (max-width: 1024px) {
