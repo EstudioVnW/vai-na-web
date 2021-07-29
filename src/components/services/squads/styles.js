@@ -10,7 +10,6 @@ export const SquadsContainer = styled.section`
   @media (max-width: 1024px) {
     min-height: 55vh;
   }
-
   @media (max-width: 425px) {
     justify-content: flex-end;
     margin-top: 3rem;
@@ -66,9 +65,10 @@ export const SquadsWrap = styled.div `
 `
 
 export const SquadsText = styled.p`
+  margin: 1rem 0;
   width: 100%;
   font: 300 1.3rem 'Usual', sans-serif;
-  line-height: 1.6rem;
+  line-height: 1.5;
 
   @media (max-width: 1024px) {
     width: 100%;
@@ -91,6 +91,12 @@ export const BoxButton = styled.div `
     order: 2;
   }
 
+  button {
+    height: 3.4rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
   @media (max-width: 425px) {
     Button {
       font-size: 0.8rem;
@@ -108,7 +114,6 @@ export const BoxButton = styled.div `
 export const SquadsBox = styled.figure`
   width: 50%;
   position: relative;
-  border: 2px solid black;
 
   @media (max-width: 1024px) {
     transform: none;
@@ -122,7 +127,6 @@ export const SquadsBox = styled.figure`
 
 export const SquadsImg = styled.img`
     width: 80%;
-    border: 2px solid black;
 
     @media (max-width: 768px) {
       width: 100%;
@@ -167,9 +171,9 @@ export const SquadsIcon = styled.div`
 export const IconText = styled.p`
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 72%;
   padding: 20% 0;
-  font: 300 0.8rem 'Usual', sans-serif;
+  font: 500 1.1rem 'Usual', sans-serif;
   text-align: center;
   transition: 0.2s;
 
@@ -182,7 +186,7 @@ export const IconText = styled.p`
   }
 
   span {
-    font: 700 1.4rem 'Usual', sans-serif;
+    font: 700 2rem 'Usual', sans-serif;
     color: #0f2b92;
   }
 
