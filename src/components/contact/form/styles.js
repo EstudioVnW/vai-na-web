@@ -85,12 +85,12 @@ export const FormLabel = styled.label`
     padding: 7px 14px;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #00145d;
+    color: ${props => props.isError ? '#FF611E' : '#00145d' };
     border-radius: 10px;
     background: ${props => props.isError ? '#FF611E26' : '#e7e9f4' };
     display: flex;
     align-items: center;
-    border: ${props => props.selected ? '1px solid #00145D' : 'none'};
+    border: ${props => props.isError ? '1px solid #FF611E' : props.selected ? '1px solid #00145D' : 'none'};
 
     @media (max-width: 768px) {
             margin: 0 0 1rem;
@@ -112,6 +112,77 @@ export const BtnLimparMsg = styled.span`
     font-size: 0.8rem;
     margin-left: 60%;
     margin-top: 2%;
+`;
+export const ErroName = styled.span`
+    font-weight: 400;
+    font-size: 0.8rem;
+    width: 25%;
+
+    @media (min-width: 2560px) {
+        width: 11%;
+    }
+
+    @media (max-width: 768px) {
+        width: 16%;
+    }
+    @media (max-width: 375px) {
+        width: 53%;
+    }
+`;
+export const ErroEmail = styled.span`
+    font-weight: 400;
+    font-size: 0.8rem;
+    width: 23%;
+
+    @media (min-width: 2560px) {
+        width: 10%;
+    }
+
+    @media (max-width: 768px) {
+        width: 15%;
+    }
+
+    @media (max-width: 375px) {
+        width: 78%;
+    }
+
+    @media (max-width: 375px) {
+        width: 53%;
+    }
+`;
+export const ErroTel = styled.span`
+    font-weight: 400;
+    font-size: 0.8rem;
+    width: 35%;
+
+    @media (min-width: 2560px) {
+        width: 13%;
+    }
+
+    @media (max-width: 768px) {
+        width: 21%;
+    }
+
+    @media (max-width: 375px) {
+        width: 84%;
+    }
+`;
+export const ErroMessage = styled.span`
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-left: 42%;
+
+    @media (min-width: 2560px) {
+        margin-left: 70%;
+    }
+    
+    @media (max-width: 768px) {
+        margin-left: 58%;
+    }
+
+    @media (max-width: 375px) {
+        margin-left: 17%;
+    }
 `;
 
 export const FormLabelMsg = styled(FormLabel)`
@@ -150,12 +221,81 @@ export const MsgInput = styled.textarea`
     resize: none;
 `;
 
-export const FormBtn = styled.div`
-    @media (max-width: 768px) {
-        display: flex;
-        justify-content: center;
+export const MessageFalha = styled.span`
+    width: 10rem;
+    height: 3.5rem;
+    padding: 1rem 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FDE7A9;
+    text-align: center;
+    border-radius: 35px;
+    box-shadow: 0px 0px 20px #0F2B9240;
+    border: 2px solid #FF611E;
+    background:  #FF611E;
+    transition: border 0.15s ease-out, height 0.18s ease-in, color 0.15s ease;
+
+    @media (min-width: 2560px) {
+        width: 17rem;
+        height: 5rem;
+        font-size: 1.5rem;
+        padding: 1.5rem 0.5rem;
     }
 `;
+export const ButtonReload = styled.button`
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid #FFAC2D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFAC2D;
+
+    img{
+        width: 70%;
+    }
+
+    @media (min-width: 2560px) {
+        width: 5rem;
+        height: 5rem;
+    }
+`;
+
+export const TextError = styled.p`
+    width: 50%;
+    font-size: 0.8rem;
+    color: #272727;
+    font-weight: 600;
+
+    @media (max-width: 2560px) {
+        font-size: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        width: 45%;
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+    @media (max-width: 375px) {
+        width: 100%;
+        font-size: 0.65rem;
+        margin-top: 1rem;
+    }
+`;
+
+export const FormBtn = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+
+
+    @media (max-width: 375px) {
+        flex-wrap: wrap;
+    }
+`;
+
 
 export const Btn = styled.button`
     margin-top: 2.4rem;
