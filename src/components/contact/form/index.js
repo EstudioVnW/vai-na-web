@@ -23,6 +23,7 @@ const Form = () => {
   const [selectedInput, setSelectedInput] = useState(undefined);
   const [sendingForm, setSendingForm] = useState(undefined);
 
+
   const handleChange = (ev) => {
     setFormContent({
       ...formContent,
@@ -45,6 +46,7 @@ const Form = () => {
     const errorTel = !formContent?.tel?.length;
     const errorMessage = !formContent?.message?.length;
     console.log(!errorName && !errorEmail && !errorTel && !errorMessage);
+
     if (!errorName && !errorEmail && !errorTel && !errorMessage) {
       postForm();
     } else {
@@ -57,6 +59,7 @@ const Form = () => {
 
       setErrors(isErrors);
       setStatus('');
+
     }
   }
 
@@ -90,6 +93,7 @@ const Form = () => {
   const handleClear = (id) => {
     document.getElementById(id).value = ''
   }
+
   return (
     <S.Contato>
       <S.ContatoContainer>
@@ -98,6 +102,7 @@ const Form = () => {
           <S.FormText>Você está a um click de destravar seu backlog com os squads estendidos do Vai na Web
             e formar sua nova força de trabalho.</S.FormText>
           <S.FormText>Entraremos em contato em até 24h. Não enviamos spam.</S.FormText>
+
           <S.Form
             name="contact"
             method="POST"
@@ -113,6 +118,7 @@ const Form = () => {
                 ? <S.BtnLimpar onClick={() => handleClear('inpName')}>Limpar</S.BtnLimpar>
                 : errors?.name && <S.ErroName>Nome Inválido</S.ErroName>
               }
+
             </S.FormLabel>
 
             <S.FormLabel selected={selectedInput === 'email'} isError={errors.email}>
@@ -122,6 +128,7 @@ const Form = () => {
                 ? <S.BtnLimpar onClick={() => handleClear('inpEmail')}>Limpar</S.BtnLimpar>
                 : errors?.email && <S.ErroEmail>Email Inválido</S.ErroEmail>
               }
+
             </S.FormLabel>
 
             <S.FormLabel selected={selectedInput === 'tel'} isError={errors.tel}>
