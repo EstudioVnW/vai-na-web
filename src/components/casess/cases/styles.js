@@ -1,13 +1,20 @@
 import styled from 'styled-components';
 
 export const CasesContainer = styled.main`
-    margin-top: 7vw;
+    margin-top: 6rem;
+    
+    @media (max-width: 480px) {
+        margin: 0;
+    }
 `;
 
 export const Wrap = styled.div`
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 
+    @media (max-width: 1200px) {
+        width: 95%;
+    }
     @media (max-width: 1024px) {
         width: 100%;
     }
@@ -19,23 +26,28 @@ export const Case = styled.section`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    :after{
-        content: '';
-        position: absolute;
-        top: -1%;
-        display: none;
-        left: 5%;
-        width: 90%;
-        height: 4px;
-        background: #fed5b2;
+
+    :not(:first-child) {
+        :after {
+            content: '';
+            position: absolute;
+            top: -1%;
+            display: none;
+            left: 5%;
+            width: 90%;
+            height: 4px;
+            background: #fed5b2;
+        }
     }
 
     @media (max-width: 1024px) {
         flex-direction: column-reverse;
-        margin-bottom: 1rem;
-        
-        :after {
-            display: block;
+        margin-bottom: 6rem;
+
+        :not(:first-child) {
+            :after {
+                display: block;
+            }
         }
     }
 `;
@@ -43,7 +55,6 @@ export const Case = styled.section`
 export const Reverse = styled(Case)`
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding-right: 3rem;
     
     @media (max-width: 1024px) {
         flex-direction: column-reverse;
@@ -52,115 +63,249 @@ export const Reverse = styled(Case)`
 `;
 
 export const InfoBox = styled.div`
-    margin-top: 3rem;
-    width: 38vw;
+    margin: 0 5%;
+    width: 50%;
 
+    @media (max-width: 1200px) {
+        margin: 0 3%;
+        width: 44%;
+    }
     @media (max-width: 1024px) {
         width: 90%;
         margin: 0 auto;
     }
+    @media (max-width: 480px) {
+        width: 88%;
+    }
 `;
 
 export const CaseTitle = styled.h2`
-    width: 70%;
+    margin-bottom: 1rem;
+    width: 80%;
     font: 800 2rem 'Usual', sans-serif;
     line-height: 1.2;
     color: #0f2b92;
 
-    @media (max-width: 1617px) {
+    @media (min-width: 2200px) {
+        font-size: 3.8rem;
+    }
+    @media (max-width: 1440px) {
         width: 100%;
     }
-
-    @media (max-width: 500px) {
-        font-size: 1.7rem;
+    @media (max-width: 480px) {
+        font-size: 1.9rem;
     }
 `;
 
 export const CaseText = styled.p`
-    margin-top: 0.8rem;
-    font: 300 1.3rem 'Usual', sans-serif;
+    margin-top: 10px;
+    font: 400 1.1em 'Usual',sans-serif;
     line-height: 1.6;
 
-    @media (max-width: 1200px) {
-        margin-top: 1.2rem;
+    @media (min-width: 2200px) {
+        font-size: 2rem;
+    }
+    @media (max-width: 1440px) {
+        font-size: 1rem;
+    }
+    @media (max-width: 1024px) {
         font-size: 1.2em;
     }
-    
-    @media (max-width: 500px) {
-        font-size: 1.05em;
+    @media (max-width: 480px) {
+        margin-top: 1.2rem;
+        font-size: 0.9rem;
     }
 `;
 
 export const Hashtag = styled.p`
-    margin: 1.5rem 0 2.5rem;
-    font: 600 1.2rem 'Usual', sans-serif;
+    margin: 1.5rem 0 2rem;
+    font: 600 1.1rem 'Usual', sans-serif;
     color: #ff611e;
 
-    @media (max-width: 1200px) {
+    @media (min-width: 2200px) {
+        margin: 2.5rem 0 3rem;
+        font-size: 2rem;
+    }
+    @media (max-width: 1440px) {
         font-size: 1rem;
     }
+    @media (max-width: 1024px) {
+        font-size: 1.2em;
+    }
+    @media (max-width: 480px) {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+`;
 
-    @media (max-width: 500px) {
-        font-size: 0.8rem;
+export const TopClient = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    
+    @media (min-width: 2200px) {
+        width: 95%;
+    }
+    @media (max-width: 1200px) {
+        width: 95%;
+    }
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+    @media (max-width: 480px) {
+        width: 85%;
+    }
+
+    div {
+        margin-right: 1rem;
+    }
+    figure {
+        margin-top: 0.6rem;
     }
 `;
 
 export const Client = styled.div`
     display: flex;
     justify-content: space-between;
-    width: 32vw;
-    
-    @media (max-width: 1024px) {
-        width: 80vw;
+    width: 60%;
+
+    @media (max-width: 480px) {
+        width: 80%;
     }
 `;
 
-export const ClientBox = styled.div``;
+export const ClientBox = styled.div`
+    margin-right: 2rem;
+    width: 100%;
+`;
+
+export const RightClient = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 22rem;
+
+    @media (min-width: 2200px) {
+        width: 60%;
+    }
+    @media (max-width: 1024px) {
+        width: 60%;
+    }
+    @media (max-width: 480px) {  
+        width: 80%;
+    }
+`;
+
+export const RightClientBox = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2rem;
+
+    @media (min-width: 2200px) {
+        width: 100%;
+    }
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+    @media (max-width: 768px) {
+        figure {
+            margin-top: 1rem;
+        }
+    }
+    img {
+        width: 100%;
+    }
+`;
 
 export const ClientText = styled.p`
     display: flex;
     flex-direction: column;
     font: 600 1rem 'Usual', sans-serif;
+    letter-spacing: 1px;
     color: #0f2b92;
     text-transform: uppercase;
 
     span{
-        margin-top: 0.6rem;
-        font: 300 1.2em 'Usual', sans-serif;
-        color: #000;00
+        margin-top: 0.8rem;
+        font: 400 1.2em 'Usual', sans-serif;
+        color: #000;
     }
 
-    @media (max-width: 500px) {
-        font-size: 1em;
+    @media (min-width: 2200px) {
+        font-size: 1.8rem;
+        span {
+            font-size: 2rem;
+        }
+    }
+    @media (max-width: 1440px) {
+        font-size: 0.8rem;
+        span {
+            font-size: 1rem;
+        }
+    }
+    @media (max-width: 1024px) {
+        font-size: 1.2em;
+    }
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
     }
 `;
 
 export const Date = styled.div`
     @media (max-width: 1024px) {
-        width: 50%;
+        width: 30%;
+    }
+    @media (max-width: 480px) { 
+        font-size: 0.8em;
     }
 `;
 
 export const LogoBox = styled.figure`
-    margin-top: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
-    @media (max-width: 500px) {
+    @media (max-width: 1024px) {
+        margin-top: 10px;
+    }
+    @media (max-width: 480px) {
         display: flex;
         flex-direction: column;
+        margin: 0;
      }
 `;
 
-export const CaseLogo = styled.img`
-    width: 49%;
+export const TopCaseLogo = styled.img`
+    width: 50%;
 
-    @media (max-width: 500px) {
-        width: 70%;
+    @media (max-width: 480px) {
+        margin-bottom: 10px;
+        width: 90%;
+    }
+`;
+
+export const CaseLogo = styled.img`
+    width: 90%;
+
+    @media (max-width: 480px) {
+        width: 100%;
     }
 `;
 
 export const ImgBox = styled.figure`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 10px;
+    width: 62%;
+
     @media (max-width: 1024px) {
+        margin: 5rem 0 3rem;
         width: 100%;
+    }
+    @media (max-width: 480px) {
+        margin: 2rem 0;
     }
 `;
 
