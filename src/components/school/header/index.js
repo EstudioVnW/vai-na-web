@@ -33,8 +33,7 @@ const SchoolHeader = () => (
                                 </Button>
                             </S.Link>
                             <S.Link
-                                //href="https://api.whatsapp.com/send?phone=5521976365325&text=Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida"
-                                href="https://web.whatsapp.com/"
+                                href="https://api.whatsapp.com/send?phone=5521982448898&text=Ol%C3%A1,%20tudo%20bem?%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida"
                                 target="_blank"
                             >
                                 <S.IconWhats src={IconWhatsapp} alt="Icon WhatsApp" />
