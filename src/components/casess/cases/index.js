@@ -4,7 +4,7 @@ import * as S from './styles';
 //Imgs
 import Sirio from '../../../images/images/sirio.png';
 import Proadi from '../../../images/images/proadi.png';
-import Reg from '../../../images/images/reg.png';
+import Reg from '../../../images/images/Reg.png';
 import Its from '../../../images/images/its.png';
 import Lai from '../../../images/images/lai.gif';
 import Quickcash from '../../../images/images/QuickCash.png';
