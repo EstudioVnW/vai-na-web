@@ -12,6 +12,7 @@ const ContentButton = styled.button`
   border: 2px solid ${props => props.border || '#00145D'};
   background:  ${props => props.background || '#0F2B92'};
   transition: border 0.15s ease-out, height 0.18s ease-in, color 0.15s ease;
+  cursor: pointer;
 
 	:hover {
     height: 3.5rem;

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const Link = styled.a``;
+
 export const Container = styled.div`
     width: 100%;
     background: rgb(255, 240, 233);
@@ -78,7 +80,6 @@ export const Project = styled.div`
         transition: .5s;
         opacity: 1;
     }
-
     @media (max-width: 1024px){
         width: 15.5%;
         margin-bottom: 3rem;
@@ -93,7 +94,6 @@ export const Name = styled.h3`
         padding-top: 1rem;
         font-size: 1.5rem;
     }
-
     @media (max-width: 500px){
         font-size: 1rem;
     }
@@ -106,7 +106,6 @@ export const Address = styled.p`
     @media (max-width: 1024px){
         font-size: 1.2rem;
     }
-    
     @media (max-width: 500px){
         font-size: .8rem;
     }

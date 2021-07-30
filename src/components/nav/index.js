@@ -67,7 +67,7 @@ const Menu = (props) => {
             <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/cases">Cases</Link>
           </S.NavItem>
           <S.NavItem home={home} isScrolled={scrollPosition > 0}>
-            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/school">Escola</Link>
+            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/school">Carreiras</Link>
           </S.NavItem>
         </S.NavList>
         <S.BottomList isShow={isShow}>
