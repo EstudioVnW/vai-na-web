@@ -130,8 +130,7 @@ export const FormInput = styled.input`
     font: 300 1em sans-serif;
     color: #00145d;
     border: none;
-    outline: none;
-    
+    outline: none; 
     background: ${props => props.isError ? '#e7e9f4' : '#ff611e00' };
 
     ::-webkit-outer-spin-button,
