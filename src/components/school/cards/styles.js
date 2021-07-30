@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import StickerBg from '../../../images/images/Group11348.svg';
 
+export const Link = styled.a``;
+
 export const Container = styled.div`
     padding: 5rem 0;
     width: 100%;

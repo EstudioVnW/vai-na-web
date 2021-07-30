@@ -222,7 +222,8 @@ const LinkBox = styled.ul`
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-content: space-between;
-	width: 27vw;
+    padding-right: 6rem;
+    width: 30vw;
 	height: 12rem;
 	list-style: none;
 
@@ -233,6 +234,7 @@ const LinkBox = styled.ul`
 		width: 38vw;
 	}
 	@media (max-width: 980px) {
+		margin: 2rem 0 0;
 		width: 89vw;
 	}
 `;
@@ -472,10 +474,10 @@ const Footer = () => {
 									<FooterLink>
 										<Link to={'/cases'}>Cases</Link>
 									</FooterLink>
-									{/* <FooterLink>
-										<Link>Escolas</Link>
-									</FooterLink>
 									<FooterLink>
+										<Link to={'/school'}>Carreiras</Link>
+									</FooterLink>
+									{/* <FooterLink>
 										<Link>Perguntas Frequentes</Link>
 									</FooterLink>
 									<FooterLink>

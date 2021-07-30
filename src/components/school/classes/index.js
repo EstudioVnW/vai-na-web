@@ -11,7 +11,8 @@ import Class from '../../../images/images/class.svg';
 import Classes from '../../../images/images/classes.svg';
 import Presentation from '../../../images/images/presentation.svg';
 
-import VnWSchhol from '../../../images/images/VNW-44.png';
+import VnWSchool from '../../../images/images/VNW-44.png';
+import VnWSchoolMobile from '../../../images/images/VNW-444.png';
 
 const ClassesSchool = () => (
     <S.Container>
@@ -58,9 +59,10 @@ const ClassesSchool = () => (
             </S.BoxTaskDown>
         </S.Wrap>
 
-        <S.BoxVnWSchhol>
-            <S.VnWSchhol src={VnWSchhol} alt="Estudo coletivo"/>
-        </S.BoxVnWSchhol>
+        <S.BoxVnWSchool>
+            <S.VnWSchool src={VnWSchool} alt="Estudo coletivo"/>
+            <S.VnWSchoolMobile src={VnWSchoolMobile} alt="Estudo coletivo"/>
+        </S.BoxVnWSchool>
     </S.Container>
 );
 
