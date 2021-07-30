@@ -111,16 +111,16 @@ const Form = () => {
               <S.FormInput id='inpName' name="name" value={formContent?.name || ''} type="text" onChange={handleChange} onFocus={handleFocus} />
               {selectedInput === 'name' && formContent?.name?.length
                 ? <S.BtnLimpar onClick={() => handleClear('inpName')}>Limpar</S.BtnLimpar>
-                : errors?.name && <S.ErroName>Nome Inválido</S.ErroName>
+                : errors?.name && <S.ErroInput>Nome Inválido</S.ErroInput>
               }
             </S.FormLabel>
 
             <S.FormLabel selected={selectedInput === 'email'} isError={errors.email}>
               Email
-              <S.FormInput id='inpEmail' name="email" type="email" onChange={handleChange} onFocus={handleFocus} />
+              <S.FormInput id='inpEmail' name="email" value={formContent?.email || ''} type="email" onChange={handleChange} onFocus={handleFocus} />
               {selectedInput === 'email' && formContent?.email?.length
                 ? <S.BtnLimpar onClick={() => handleClear('inpEmail')}>Limpar</S.BtnLimpar>
-                : errors?.email && <S.ErroEmail>Email Inválido</S.ErroEmail>
+                : errors?.email && <S.ErroInput>Email Inválido</S.ErroInput>
               }
             </S.FormLabel>
 
@@ -129,16 +129,16 @@ const Form = () => {
               <S.FormInput id='inpTel' name="tel" value={formContent?.tel ? phoneMask(formContent?.tel) : ''} type="tel" onChange={handleChange} onFocus={handleFocus} />
               {selectedInput === 'tel' && formContent?.tel?.length
                 ? <S.BtnLimpar onClick={() => handleClear('inpTel')}>Limpar</S.BtnLimpar>
-                : errors?.tel && <S.ErroTel>Telefone Inválido</S.ErroTel>
+                : errors?.tel && <S.ErroInput>Telefone Inválido</S.ErroInput>
               }
             </S.FormLabel>
             <S.FormLabelMsg selected={selectedInput === 'message'} isError={errors.message}>
               Mensagem
               {selectedInput === 'message' && formContent?.message?.length
               ? <S.BtnLimparMsg onClick={() => handleClear('inpMessage')}>Limpar</S.BtnLimparMsg>
-              : errors?.message && <S.ErroMessage>Campo não preenchido</S.ErroMessage>
+              : errors?.message && <S.ErroInput>Campo não preenchido</S.ErroInput>
               }
-              <S.MsgInput id='inpMessage' name="message" type="text" onChange={handleChange} onFocus={handleFocus} />
+              <S.MsgInput id='inpMessage' name="message" value={formContent?.message || ''} type="text" onChange={handleChange} onFocus={handleFocus} />
             </S.FormLabelMsg>
             {status}
             <S.FormBtn>
