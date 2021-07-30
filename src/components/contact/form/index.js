@@ -7,6 +7,9 @@ import localIcon from '../../../images/icons/localIcon.svg';
 import mailIcon from '../../../images/icons/mailIcon.svg';
 import phoneIcon from '../../../images/icons/phoneIcon.svg';
 
+import reload from '../../../images/images/noun_reload_992754.svg';
+
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -18,7 +21,7 @@ const Form = () => {
   const [status, setStatus] = useState('');
   const [errors, setErrors] = useState({});
   const [selectedInput, setSelectedInput] = useState(undefined);
-  const [sendingForm, setSendingForm] = useState(false)
+  const [sendingForm, setSendingForm] = useState(undefined);
 
   const handleChange = (ev) => {
     setFormContent({
@@ -41,7 +44,7 @@ const Form = () => {
     const errorEmail = !formContent?.email?.length;
     const errorTel = !formContent?.tel?.length;
     const errorMessage = !formContent?.message?.length;
-
+    console.log(!errorName && !errorEmail && !errorTel && !errorMessage);
     if (!errorName && !errorEmail && !errorTel && !errorMessage) {
       postForm();
     } else {
@@ -53,6 +56,7 @@ const Form = () => {
       };
 
       setErrors(isErrors);
+      setStatus('');
     }
   }
 
@@ -64,13 +68,16 @@ const Form = () => {
       body: encode({ "form-name": "contact", ...formContent })
     })
       .then(() => {
-        setStatus('Email enviado com sucesso')
-        setTimeout(() => {setSendingForm(false)}, 500)
-        
+        setFormContent({});
+        setStatus('Email enviado com sucesso');
+        setTimeout(() => {setSendingForm(undefined)}, 500);
+        console.log('sucesso');
       })
       .catch(() => {
-        setStatus('Algo deu errado, tente novamente mais tarde')
-        setTimeout(() => {setSendingForm(false)}, 500)
+        setStatus('Algo deu errado, tente novamente mais tarde');
+        setTimeout(() => {setSendingForm(false)}, 500);
+        console.log('falha');
+
       })
       
   }
@@ -83,7 +90,6 @@ const Form = () => {
   const handleClear = (id) => {
     document.getElementById(id).value = ''
   }
-console.log(sendingForm)
   return (
     <S.Contato>
       <S.ContatoContainer>
@@ -92,7 +98,6 @@ console.log(sendingForm)
           <S.FormText>Você está a um click de destravar seu backlog com os squads estendidos do Vai na Web
             e formar sua nova força de trabalho.</S.FormText>
           <S.FormText>Entraremos em contato em até 24h. Não enviamos spam.</S.FormText>
-          {console.log(errors)}
           <S.Form
             name="contact"
             method="POST"
@@ -100,34 +105,57 @@ console.log(sendingForm)
             netlify
             onSubmit={handleSubmit}
           >
+            {console.log('formContent', formContent)}
             <S.FormLabel selected={selectedInput === 'name'} isError={errors.name}>
               Nome
-              <S.FormInput id='inpName' name="name" type="text" onChange={handleChange} onFocus={handleFocus} />
-              {selectedInput === 'name' && <S.BtnLimpar onClick={() => handleClear('inpName')}>Limpar</S.BtnLimpar>}
+              <S.FormInput id='inpName' name="name" value={formContent?.name || ''} type="text" onChange={handleChange} onFocus={handleFocus} />
+              {selectedInput === 'name' && formContent?.name?.length
+                ? <S.BtnLimpar onClick={() => handleClear('inpName')}>Limpar</S.BtnLimpar>
+                : errors?.name && <S.ErroInput>Nome Inválido</S.ErroInput>
+              }
             </S.FormLabel>
 
             <S.FormLabel selected={selectedInput === 'email'} isError={errors.email}>
               Email
-              <S.FormInput id='inpEmail' name="email" type="email" onChange={handleChange} onFocus={handleFocus} />
-              {selectedInput === 'email' && <S.BtnLimpar onClick={() => handleClear('inpEmail')}>Limpar</S.BtnLimpar>}
+              <S.FormInput id='inpEmail' name="email" value={formContent?.email || ''} type="email" onChange={handleChange} onFocus={handleFocus} />
+              {selectedInput === 'email' && formContent?.email?.length
+                ? <S.BtnLimpar onClick={() => handleClear('inpEmail')}>Limpar</S.BtnLimpar>
+                : errors?.email && <S.ErroInput>Email Inválido</S.ErroInput>
+              }
             </S.FormLabel>
 
             <S.FormLabel selected={selectedInput === 'tel'} isError={errors.tel}>
               Telefone
-              <S.FormInput id='inpTel' name="tel" value={formContent?.tel ? phoneMask(formContent?.tel) : ''} type="tel" pattern="[0-9]{11}" onChange={handleChange} onFocus={handleFocus} />
-              {selectedInput === 'tel' && <S.BtnLimpar onClick={() => handleClear('inpTel')}>Limpar</S.BtnLimpar>}
+              <S.FormInput id='inpTel' name="tel" value={formContent?.tel ? phoneMask(formContent?.tel) : ''} type="tel" onChange={handleChange} onFocus={handleFocus} />
+              {selectedInput === 'tel' && formContent?.tel?.length
+                ? <S.BtnLimpar onClick={() => handleClear('inpTel')}>Limpar</S.BtnLimpar>
+                : errors?.tel && <S.ErroInput>Telefone Inválido</S.ErroInput>
+              }
             </S.FormLabel>
             <S.FormLabelMsg selected={selectedInput === 'message'} isError={errors.message}>
               Mensagem
-              {selectedInput === 'message' && <S.BtnLimparMsg onClick={() => handleClear('inpMessage')}>Limpar</S.BtnLimparMsg>}
-              <S.MsgInput id='inpMessage' name="message" type="text" onChange={handleChange} onFocus={handleFocus} />
+              {selectedInput === 'message' && formContent?.message?.length
+              ? <S.BtnLimparMsg onClick={() => handleClear('inpMessage')}>Limpar</S.BtnLimparMsg>
+              : errors?.message && <S.ErroInput>Campo não preenchido</S.ErroInput>
+              }
+              <S.MsgInput id='inpMessage' name="message" value={formContent?.message || ''} type="text" onChange={handleChange} onFocus={handleFocus} />
             </S.FormLabelMsg>
             {status}
             <S.FormBtn>
-              <S.Btn isLoading={sendingForm} >{sendingForm ? 'Enviando' : 'Enviar!'}</S.Btn>
+              { sendingForm === false || errors.name || errors.email || errors.tell || errors.message
+              ? <>
+              <S.MessageFalha>Falha no envio!</S.MessageFalha>
+              <S.ButtonReload>
+                <img src={reload} alt="" />
+              </S.ButtonReload>
+              <S.TextError>Não foi possível completar seu envio, clique no ícone para reenviar.</S.TextError>
+              </> 
+              : <S.Btn isLoading={sendingForm}>{sendingForm ? 'Enviando' : 'Enviar!'}</S.Btn>
+              }
+              
             </S.FormBtn>
           </S.Form>
-          {errors.name && <p>Não foi possível completar seu envio, clique no ícone para reenviar.</p>}
+          {console.log('sendingForm', sendingForm )}
         </S.FormContainer>
 
         <S.Sidebar>
