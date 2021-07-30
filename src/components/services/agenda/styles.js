@@ -5,7 +5,7 @@ export const AgendaContainer = styled.section`
   min-height: auto;
   margin: 0 auto;
   display: flex;
-  padding-top: 2rem;
+  padding: 8rem 0 3rem;
   
   @media (max-width: 1024px) {
     min-height: 40vh;
