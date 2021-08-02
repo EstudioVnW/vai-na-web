@@ -2,7 +2,6 @@ import React from "react";
 import * as S from './styles';
 
 import downArrow from '../../../images/images/downArrow.svg';
-import estudioLogo from '../../../images/images/estudioLogo.svg';
 import headerImg from '../../../images/images/headerImg.png';
 
 const ServiceHeader = () => (
@@ -16,7 +15,6 @@ const ServiceHeader = () => (
                     <S.HDescription><i>"Por meio de trabalho duro e educação, podemos promover uma economia forte e oportunidades para todos"</i></S.HDescription>
                     <S.HDescription><strong>Julia Gillard</strong></S.HDescription>
                 </S.HTextBox>
-                <S.HImgLogo src={estudioLogo} alt="Logo Estúdio Vai na Web"/>
             </S.HContentBox>
             <S.HCard>
                 <S.HCardDetail>

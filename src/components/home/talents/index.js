@@ -22,13 +22,15 @@ const Talents = () => (
           geramos empregos dignos e reduzimos a lacuna de gênero no país.
         </S.TalentsTextDescription>
         <S.ButtonTalents>
-          <ButtonHome
-            width="10rem"
-            background="#FF611E"
-            border="#FFAC2D"
-          >
-            Faça parte!
-          </ButtonHome>
+          <S.StyledLink to="/school">
+            <ButtonHome
+              width="10rem"
+              background="#FF611E"
+              border="#FFAC2D"
+            >
+              Faça parte!
+            </ButtonHome>
+          </S.StyledLink>
         </S.ButtonTalents>
       </S.TalentsText>
 

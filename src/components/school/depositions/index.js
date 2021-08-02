@@ -20,12 +20,12 @@ const DepositionsSchool = () => {
     const [pos, setPos] = useState({ posX: 0 })
 
     const _rightArrow = () => {
-        if (pos.posX >= -106.4)
-            setPos({ posX: pos.posX - 26.5 })
+        if (pos.posX >= -130)
+            setPos({ posX: pos.posX - 29 })
     }
     const _leftArrow = () => {
         if (pos.posX < 0)
-            setPos({ posX: pos.posX + 26.5 })
+            setPos({ posX: pos.posX + 29 })
     }
 
     return (

@@ -46,13 +46,12 @@ export const Img = styled.img`
     width: 100%;
 `;
 
-export const BoxDesc = styled.div`
+export const BoxDesc = styled.figcaption`
     width: 100%;
     height: 100%;
     position: absolute;
     top:0;
     left: 0;
-    //transform: translateY(110%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +67,7 @@ export const BoxDesc = styled.div`
     }
 `;
 
-export const Project = styled.div`
+export const Project = styled.figure`
     position: relative;
     width: 23%;
     overflow: hidden;
@@ -76,7 +75,6 @@ export const Project = styled.div`
     text-align: center;
 
     &:hover ${BoxDesc} {
-        //transform: translateY(0);
         transition: .5s;
         opacity: 1;
     }
