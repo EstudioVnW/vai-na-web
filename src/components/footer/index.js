@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
-import styled, { keyframes } from 'styled-components';
+import * as S from './styles.js'
 
-//Images
 import logoFacebook from '../../images/icons/icon-facebook.svg';
 import logoInstagram from '../../images/icons/icon-instagram.svg';
 import logoMedium from '../../images/icons/icon-medium.svg';
@@ -13,515 +12,121 @@ import logoPacto from '../../images/icons/logo-pacto.png';
 import logoOds from '../../images/icons/logo-ods.png';
 import iconRow from '../../images/icons/icon-row.png';
 
-
-// animation 	
-const tickerAnimation = keyframes`
-	0% {
-			transform: translate3d(0, 0, 0);
-			-webkit-transform: translate3d(0, 0, 0);
-			visibility: visible;
-	}
-	100% {
-			transform: translate3d(-100%, 0, 0);
-			-webkit-transform: translate3d(-100%, 0, 0);
-	}
-`;
-
-
-// styles
-const FooterContainer = styled.div `
-	position: relative;
-	padding-top: 1.2rem;
-	width: 100%;
-    overflow: hidden;
-
-	@media (min-width: 1600px) {
-		padding-top: 2.2rem;
-	}
-`;
-
-const DivisionContainer = styled.div `
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: .8rem 0;
-	width: 103%;
-	box-shadow: 0px 0px 22px #00145D33;
-	transform: matrix(1,-0.07,0.07,1,-4,60.54);
-	background: #FED5B2;
-	overflow: hidden;
-
-	@media (max-width: 700px) {
-		padding: 0.3rem 0;
-	}
-`;
-
-const DivisionBackground = styled.div`
-	position: absolute;
-	top: 5%;
-	left: -1rem;
-	width: 103%;
-	height: 20rem;
-	transform: matrix(1,-0.07,0.07,1,-4,60.54);
-	background: #09255d;
-	z-index: -1;
-
-	@media (max-width: 980px) {
-		display: none;
-	}
-`
-
-const Division = styled.div `
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	margin: 0.5rem 0;
-	animation: ${tickerAnimation} 50s linear infinite;
-`;
-
-const DivisionLine = styled.div `
-	height: 1.2px;
-	background: #FF611E;
-
-	@media (min-width: 2200px) {
-		height: 3px;
-	}
-	@media (max-width: 700px) {
-		height: 1px;
-	}
-`;
-
-const DivisionText = styled.p `
-	margin: 0 1.5rem;
-	font-size: 4em;
-	font-weight: 100;
-	color: #0F2B92;
-	text-transform: uppercase;
-
-	@media (min-width: 2200px) {
-		font-size: 7em;
-	}
-	@media (max-width: 700px) {
-		font-size: 3em;
-		line-height: 1;
-	}
-`;
-
-const LogoVnW = styled.img `
-	width: 4rem;
-
-	@media (min-width: 2200px) {
-		width: 7rem;
-	}
-	@media (max-width: 700px) {
-		width: 3rem;
-	}
-`;
-
-
-
-const Container = styled.footer`
-	padding: 10rem 15rem 0;
-	height: auto;
-	background: #00145D;
-    z-index: -1;
-
-	@media (min-width: 2200px) {
-		margin-top: 2rem;
-	}
-	@media (min-width: 1700px) {
-		margin-top: 1rem;
-	}
-	@media (max-width: 1440px) {
-		padding: 9rem 4.4rem 0;
-	}
-	@media (max-width: 980px) {
-		padding: 9rem 2.6rem 0;
-	}
-`;
-
-const Content = styled.section`
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-
-	@media (max-width: 980px) {
-		flex-direction: column;
-    	align-items: center;
-	}
-`;
-
-const ContentBox = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	justify-content: space-between;
-	height: 100%;
-	
-	div nav {
-		margin-right: 11rem;
-
-		@media (max-width: 1440px) {
-			margin-right: 10rem;
-		}
-		@media (max-width: 980px) {
-			margin: 2rem 0;
-		}
-	}
-
-	@media (max-width: 980px) {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	&:nth-child(2) {
-		padding-right: 3.7rem;
-
-		@media (max-width: 1440px) {
-			padding-right: 8.6rem;
-		}
-	}
-`;
-
-const TextBox = styled.div`
-	margin-bottom: 4rem;
-
-	@media (min-width: 2200px) {
-		margin-bottom: 6rem;
-	}
-	@media (max-width: 700px) {
-		margin-bottom: 2rem;
-	}
-`;
-
-const FooterText = styled.p`
-	width: 24vw;
-	color: #FFFFFF;
-	font-size: 1.2em;
-	line-height: 1.6;
-	letter-spacing: 0.025rem;
-
-	@media (min-width: 2200px) {
-		font-size: 2em;
-	}
-	@media (max-width: 1440px) {
-		width: 26vw;
-	}
-	@media (max-width: 980px) {
-		width: 66%;
-		font-size: 1.5em;
-	}
-	@media (max-width: 700px) {
-		width: 95%;
-		font-size: 0.9em;
-	}
-`;
-
-const LinkBox = styled.ul`
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: space-between;
-	width: 27vw;
-	height: 12rem;
-	list-style: none;
-
-	@media (min-width: 2200px) {
-		height: 20rem;
-	}
-	@media (max-width: 1440px) {
-		width: 38vw;
-	}
-	@media (max-width: 980px) {
-		width: 89vw;
-	}
-`;
-
-const LinkText = styled.p`
-	margin-bottom: 1rem;
-	color: #FFFFFF;
-	font-size: 1.2em;
-	line-height: 1.6;
-	letter-spacing: 0.025rem;
-
-	@media (min-width: 2200px) {
-		font-size: 2em;
-	}
-	@media (max-width: 980px) {
-		font-size: 1.5em;
-	}
-	@media (max-width: 700px) {
-		font-size: 1em;
-	}
-`;
-
-const FooterLink = styled.li`
-	margin-bottom: 0.5rem;
-	font-size: 1.2em;
-	line-height: 1.5rem;
-	letter-spacing: 0.025rem;
-	cursor: pointer;
-
-	a {
-		color: #fff;
-	}
-	
-	@media (min-width: 2200px) {
-		margin-bottom: 1.5rem;
-		font-size: 1.8em;
-	}
-	@media (max-width: 980px) {
-		font-size: 1.5em;
-	}
-	@media (max-width: 700px) {
-		font-size: 1em;
-	}
-`;
-
-const Logo = styled.img `
-	position: absolute;
-	top: -1rem;
-	right: 0;
-	width: 10rem;
-
-	@media (min-width: 2200px) {
-		width: 12vw;
-	}
-	@media (max-width: 980px) {
-		position: unset;
-		margin-top: 2.5rem;
-		width: 12rem;
-	}
-	@media (max-width: 700px) {
-		width: 7rem;
-	}
-`;
-
-
-
-
-const SocialBox = styled.div `
-	font-weight: 600;
-
-	@media (max-width: 980px) {
-		width: 100%;
-	}
-`;
-
-const IconBox = styled.figure `
-	display: flex;
-	justify-content: space-between;
-	margin-top: 1.8rem;
-	width: 66%;
-
-	@media (min-width: 2200px) {
-		width: 90%;
-	}
-	@media (max-width: 1440px) {
-		width: 90%;
-	}
-	@media (max-width: 980px) {
-		width: 100%;
-	}
-`;
-
-const Icon = styled.img `
-	width: 2.3rem;
-	cursor: pointer;
-
-	@media (min-width: 2200px) {
-		width: 4.4rem;
-	}
-	@media (max-width: 980px) {
-		width: 4rem;
-	}
-	@media (max-width: 700px) {
-		width: 2.8rem;
-	}
-`;
-
-const ImgBox = styled.figure `
-	display: flex;
-	justify-content: space-around;
-	width: 22rem;
-	max-height: 11rem;
-
-	@media (min-width: 2200px) {
-		width: 38rem;
-	}
-	@media (max-width: 1440px) {
-		width: 25vw;
-	}
-	@media (max-width: 980px) {
-		margin: 0 auto;
-		width: 89vw;
-	}
-`;
-
-const FooterImg = styled.img `
-	width: 48%;
-	height: 100%;
-	border-radius: 10px;
-	background: #fff;
-
-	@media (max-width: 980px) {
-		max-width: 25rem;
-	}
-	@media (max-width: 700px) {
-	}
-`;
-
-const ImgRow = styled.img `
-	margin-top: 1.4rem;
-
-	@media (max-width: 980px) {
-		margin-top: 2rem;
-	}
-`;
-
-
-
-const Baseboard = styled.div `
-	margin-top: 2.5rem;
-	padding: 1.5rem 0;
-	width: 100%;
-	text-align: center;
-	border-top: 2px solid #0f2b92;
-
-	@media (min-width: 2200px) {
-		margin-top: 5rem;
-	}
-`;
-
-const Text = styled.p `
-	color: #FFAC2D;
-	font-size: 1em;
-
-	@media (min-width: 2200px) {
-		font-size: 1.5em;
-	}
-	@media (max-width: 700px) {
-		font-size 0.8em
-	}
-`;
-
-
-
 const Footer = () => {
 	return (
-		<FooterContainer  id="footer">
-			<DivisionBackground />
-			<DivisionContainer>
-					<DivisionLine></DivisionLine>
-						<Division>
-							<DivisionText>Mercado</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>Carreira</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>tecnologia</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>Mercado</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>Carreira</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>tecnologia</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>Mercado</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>Carreira</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>tecnologia</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>Mercado</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>Carreira</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-							<DivisionText>tecnologia</DivisionText>
-							<LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
-						</Division>
-					<DivisionLine></DivisionLine>
-			</DivisionContainer>
+		<S.FooterContainer  id="footer">
+			<S.DivisionBackground />
+			<S.DivisionContainer>
+					<S.DivisionLine></S.DivisionLine>
+						<S.Division>
+							<S.DivisionText>Mercado</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>Carreira</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>tecnologia</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>Mercado</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>Carreira</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>tecnologia</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>Mercado</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>Carreira</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>tecnologia</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>Mercado</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>Carreira</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+							<S.DivisionText>tecnologia</S.DivisionText>
+							<S.LogoVnW src={logoVnW} alt="Logo Vai na Web"/>
+						</S.Division>
+					<S.DivisionLine></S.DivisionLine>
+			</S.DivisionContainer>
 
-			<Container>
-				<Content>
+			<S.Container>
+				<S.Content>
 					<div>
-						<TextBox>
-							<FooterText>
+						<S.TextBox>
+							<S.FooterText>
 								Vai na Web tem por missão democratizar o acesso às tecnologias digitais avançadas, reduzir as desigualdades e promover um futuro mais próspero e sustentável.
-							</FooterText>
-						</TextBox>
-						<ImgBox>
-							<FooterImg src={logoPacto} alt="Logo Pacto Global" />
-							<FooterImg src={logoOds} alt="Logo Objetivos de Desenvolvimento Sustentável" />
-						</ImgBox>
-						<ImgBox>
-							<ImgRow src={iconRow} alt="" />
-						</ImgBox>
+							</S.FooterText>
+						</S.TextBox>
+						<S.ImgBox>
+							<S.FooterImg src={logoPacto} alt="Logo Pacto Global" />
+							<S.FooterImg src={logoOds} alt="Logo Objetivos de Desenvolvimento Sustentável" />
+						</S.ImgBox>
+						<S.ImgBox>
+							<S.ImgRow src={iconRow} alt="" />
+						</S.ImgBox>
 					</div>
 					<div>
-						<ContentBox>
+						<S.ContentBox>
 							<div>
-								<LinkBox>
-									<LinkText>Acesso rápido</LinkText>
-									<FooterLink>
+								<S.LinkBox>
+									<S.LinkText>Acesso rápido</S.LinkText>
+									<S.FooterLink>
 										<Link to={'/'}>Sobre</Link>
-									</FooterLink>
-									<FooterLink>
+									</S.FooterLink>
+									<S.FooterLink>
 										<Link to={'/services'}>Serviços</Link>
-									</FooterLink>
-									<FooterLink>
+									</S.FooterLink>
+									<S.FooterLink>
 										<Link to={'/cases'}>Cases</Link>
-									</FooterLink>
-									{/* <FooterLink>
-										<Link>Escolas</Link>
-									</FooterLink>
-									<FooterLink>
+									</S.FooterLink>
+									<S.FooterLink>
+										<Link to={'/school'}>Carreiras</Link>
+									</S.FooterLink>
+									{/* <S.FooterLink>
 										<Link>Perguntas Frequentes</Link>
-									</FooterLink>
-									<FooterLink>
+									</S.FooterLink>
+									<S.FooterLink>
 										<Link>Media Kit</Link>
-									</FooterLink> */}
-									<FooterLink>
+									</S.FooterLink> */}
+									<S.FooterLink>
 										<Link to={'/contact'}>Contato</Link>
-									</FooterLink>
-								</LinkBox>
+									</S.FooterLink>
+								</S.LinkBox>
 							</div>
-							<SocialBox>
-								<FooterText>Fique conectado!</FooterText>
-								<FooterText>Siga nossas redes sociais e fique conectado com todas as novidades.</FooterText>
-								<IconBox>
+							<S.SocialBox>
+								<S.FooterText>Fique conectado!</S.FooterText>
+								<S.FooterText>Siga nossas redes sociais e fique conectado com todas as novidades.</S.FooterText>
+								<S.IconBox>
 									<a href="https://www.facebook.com/vainaweb" target="_blank" rel="noopener noreferrer">
-										<Icon src={logoFacebook} alt="Logo Facebook"/>
+										<S.Icon src={logoFacebook} alt="Logo Facebook" />
 									</a>
 									<a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noopener noreferrer">
-										<Icon iconInst src={logoInstagram} alt="Logo Instagram"/>
+										<S.Icon iconInst src={logoInstagram} alt="Logo Instagram" />
 									</a>
 									<a href="https://medium.com/@olavainaweb" target="_blank" rel="noopener noreferrer">
-										<Icon src={logoMedium} alt="Logo Medium"/>
+										<S.Icon src={logoMedium} alt="Logo Medium" />
 									</a>
 									<a href="https://br.linkedin.com/company/vainaweb" target="_blank" rel="noopener noreferrer">
-										<Icon src={logoLinkedin} alt="Logo Linkedin"/>
+										<S.Icon src={logoLinkedin} alt="Logo Linkedin" />
 									</a>
 									<a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noopener noreferrer">
-										<Icon src={logoYoutube} alt="Logo Youtube"/>
+										<S.Icon src={logoYoutube} alt="Logo Youtube" />
 									</a>
-								</IconBox>
-							</SocialBox>
-						</ContentBox>
+								</S.IconBox>
+							</S.SocialBox>
+						</S.ContentBox>
 					</div>
 					<div>
 						<a href="/" rel="noopener noreferrer">
-							<Logo src={logoVnW} alt="Logo Vai na Web"/>
+							<S.Logo src={logoVnW} alt="Logo Vai na Web"/>
 						</a>
 					</div>
-				</Content>
+				</S.Content>
 
-				<Baseboard>
-					<Text>Site desenvolvido com ❤️ por estudantes do Vai na Web · 2021</Text>
-				</Baseboard>
-			</Container>
+				<S.Baseboard>
+					<S.Text>Site desenvolvido com ❤️ por estudantes do Vai na Web · 2021</S.Text>
+				</S.Baseboard>
+			</S.Container>
 
-		</FooterContainer>
+		</S.FooterContainer>
 	)
 }
 

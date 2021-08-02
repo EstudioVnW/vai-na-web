@@ -119,7 +119,6 @@ export const Card = styled.div`
     transition: 0.2s ease-in-out;
     border: 2px solid #00145D;
     box-shadow: 0px 0px 8px #00000029;
-    cursor: pointer;
 
     @media (max-width: 480px) {
         border-width: 1px;

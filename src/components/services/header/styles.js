@@ -7,47 +7,42 @@ export const HeaderContainer = styled.section`
 	height: 100vh;
 	position: relative;
 
-		@media (max-width: 1366px) {
-			align-items: flex-end;
-		}
-
-		@media (max-width: 1024px) {
-			align-items: center;
-			margin-top: 1rem;
-			height: 70vh;
-		}
-
-		@media (max-width: 768px) {
-			margin-top: 8rem;
-			height: 100vh;			
-		}
-
-		@media (max-width: 425px) {
-			height: 75vh;
-		}
-	 `;
-
-	 export const HeaderWrap = styled.div`
-		position: relative;
-		width: 80%;
-		height: 90%;
-		display: flex;
-		justify-content: flex-end;
+	@media (max-width: 1366px) {
+		align-items: flex-end;
+	}
+	@media (max-width: 1024px) {
 		align-items: center;
+		margin-top: 1rem;
+		height: 70vh;
+	}
+	@media (max-width: 768px) {
+		margin-top: 8rem;
+		height: 100vh;			
+	}
+	@media (max-width: 425px) {
+		height: 75vh;
+	}
+`;
 
-		@media (max-width: 1024px) {
-			height: 60%;
-			width: 90%;
-		}
+export const HeaderWrap = styled.div`
+	position: relative;
+	width: 80%;
+	height: 90%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 
-		@media (max-width: 768px) {
-			height: 70%;
-		}
-
-		@media (max-width: 425px) {
-			height: 90%;
-		}
-	`;
+	@media (max-width: 1024px) {
+		height: 60%;
+		width: 90%;
+	}
+	@media (max-width: 768px) {
+		height: 70%;
+	}
+	@media (max-width: 425px) {
+		height: 90%;
+	}
+`;
 
 export const HImgBox = styled.figure`
 	width: 100%;
@@ -97,7 +92,6 @@ export const HTextBox = styled.div`
 	@media (max-width: 790px) {
 		width: 95%;
 	}
-
 `;
 
 export const HDownArrow = styled.figure`
@@ -109,25 +103,6 @@ export const HDownArrow = styled.figure`
 		display: none;
 	}
 `;
-
-export const HImgLogo = styled.img`
-	position: absolute;
-	bottom: 85%;
-	left: 90%;
-	z-index: 5;
-	width: 15%;	
-
-	@media (max-width: 790px) {
-		top: 120%;
-		left: 50%;
-    	transform: translate(-50% , -50%);
-	}
-	
-	@media (max-width: 425px) {
-		top: 110%;
-	}
-`;
-
 
 export const HContentBox = styled.div`
 	width: 65%;
@@ -141,7 +116,6 @@ export const HContentBox = styled.div`
 		height: 70%;
 		width: 100%;
 	} 
-	
 `;
 
 export const HCard = styled.div`
@@ -156,12 +130,10 @@ export const HCard = styled.div`
 	@media (max-width: 1366px) {
 		bottom: 20%;
 	}
-
 	@media (max-width: 790px) {
 		bottom: 73%;
 		padding: 0.4rem;
 	}
-
 	@media (max-width: 425px) {
 		bottom: 70%;
 		width: 70%;
@@ -206,7 +178,6 @@ export const HCardText = styled.h1`
 	@media (max-width: 1024px) {
 		font-size: 2rem;
 	}
-
 	@media (max-width: 425px) {
 		font-size: 1.2rem;
 		padding: 0.5rem 0.5rem;

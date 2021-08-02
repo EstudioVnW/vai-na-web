@@ -150,6 +150,7 @@ export const BoxButton = styled.div`
 `;
 
 export const Link = styled.a``;
+
 export const IconWhats = styled.img`
     width: 3.3rem;
     margin-left: 2rem;
@@ -170,7 +171,6 @@ export const DownArrow = styled.img`
 `;
 
 export const BoxImgs = styled.div`
-    position: relative;
     width: 50%;
 
     @media (max-width: 768px){
@@ -178,21 +178,6 @@ export const BoxImgs = styled.div`
         width: 100%;
     }
 `;
-
-export const Logo = styled.img`
-    width: 22%;
-    position: absolute;
-    right: 0;
-    top:-13%;
-    z-index: 5;
-
-    @media (max-width: 768px){
-        top: 160%;
-        left: 50%;
-        -webkit-transform: translate(-50%,-50%);
-    }
-`;
-
 
 export const BoxEstudio = styled.div`
     width: 100%;

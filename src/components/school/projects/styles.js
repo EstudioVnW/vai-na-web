@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const Link = styled.a``;
+
 export const Container = styled.div`
     width: 100%;
     background: rgb(255, 240, 233);
@@ -44,13 +46,12 @@ export const Img = styled.img`
     width: 100%;
 `;
 
-export const BoxDesc = styled.div`
+export const BoxDesc = styled.figcaption`
     width: 100%;
     height: 100%;
     position: absolute;
     top:0;
     left: 0;
-    //transform: translateY(110%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,7 +67,7 @@ export const BoxDesc = styled.div`
     }
 `;
 
-export const Project = styled.div`
+export const Project = styled.figure`
     position: relative;
     width: 23%;
     overflow: hidden;
@@ -74,11 +75,9 @@ export const Project = styled.div`
     text-align: center;
 
     &:hover ${BoxDesc} {
-        //transform: translateY(0);
         transition: .5s;
         opacity: 1;
     }
-
     @media (max-width: 1024px){
         width: 15.5%;
         margin-bottom: 3rem;
@@ -93,7 +92,6 @@ export const Name = styled.h3`
         padding-top: 1rem;
         font-size: 1.5rem;
     }
-
     @media (max-width: 500px){
         font-size: 1rem;
     }
@@ -106,7 +104,6 @@ export const Address = styled.p`
     @media (max-width: 1024px){
         font-size: 1.2rem;
     }
-    
     @media (max-width: 500px){
         font-size: .8rem;
     }

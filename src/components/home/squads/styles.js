@@ -42,10 +42,10 @@ export const SquadsImageButton = styled.div`
    button {
       @media (min-width: 2200px) {
          width: 25rem;
-      height: 5.5rem;
-      font-size: 2rem;
-      font-weight: 500;
-      border-radius: 3rem;
+         height: 5.5rem;
+         font-size: 2rem;
+         font-weight: 500;
+         border-radius: 3rem;
       }
       @media (max-width: 1440px) {
          width: 14rem;
@@ -109,6 +109,7 @@ export const ButtonSquads = styled.div`
    align-items: center;
    justify-content: center;
    margin-top: 1rem;
+   height: 3rem;
 
    @media (min-width: 2200px) {
       margin-top: 4rem;

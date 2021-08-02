@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const CallContainer = styled.section`
-    padding: 5rem 0;
 
     @media (max-width: 1024px) {
         padding: 5rem 0 0;
+    }
+    media (max-width: 480px) {
+        padding: 0;
     }
 `;
 
@@ -30,7 +32,7 @@ export const Content = styled.div`
      @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 0;
         text-align: center;
     }
 `;
@@ -55,8 +57,12 @@ export const Title = styled.h2`
     font-size: 2rem;
     font-weight: 800;
 
-    @media (max-width: 500px) {
-        font-size: 1.5rem;
+    @media (min-width: 2200px) {
+        font-size: 3.7rem;
+    }
+    @media (max-width: 480px) {
+        font-size: 1.2rem;
+        color: #272727;
     }
 `;
 
@@ -64,8 +70,11 @@ export const SubTitle = styled.h3`
     font-size: 1.4rem;
     font-weight: 500;
 
-    @media (max-width: 500px) {
-        font-size: 1.1rem;
+    @media (min-width: 2200px) {
+        font-size: 2.7rem;
+    }
+    @media (max-width: 480px) {
+        font-size: 1rem;
     }
 `;
 
@@ -86,28 +95,34 @@ export const ButtonBox = styled.div`
             height: 3rem;
             font-size: 1em;
         }
-
-        @media (max-width: 680px) {
-            font-size: 1.4em;
-        }
     }
 
+    @media (min-width: 2200px) {
+        width: 28rem;
+        height: 10rem;
 
-    &:hover {
         button {
-            height: 3.5rem;
-            transform: translatey(-3px);
+            height: 6.8rem;
+            font-size: 2.2rem;
+            font-weight: 500;
+            border-radius: 45px;
         }
     }
-
     @media (max-width: 680px) {
-        width: 14rem;
+        margin-top: 0.5rem;
+        width: 11.5rem;
+
+        button {
+            height: 2.7rem;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
     }
-`
+`;
 
 export const TextBox = styled.div`
     padding: 1rem 0;
-    width: 37vw;
+    width: 39%;
 
     strong {
         font-weight: 600;
@@ -116,7 +131,6 @@ export const TextBox = styled.div`
     @media (max-width: 1024px) {
         width: 65vw;
     }
-
     @media (max-width: 680px) {
         width: 100%;
     }
@@ -126,8 +140,11 @@ export const Text = styled.p`
     font: 300 1.3rem 'Usual', sans-serif;
     line-height: 1.6;
 
-    
-    @media (max-width: 500px) {
+    @media (min-width: 2200px) {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+    @media (max-width: 480px) {
         font-size: .8rem;
     }
 `;

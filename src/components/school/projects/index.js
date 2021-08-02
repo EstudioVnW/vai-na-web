@@ -23,104 +23,128 @@ const ProjectsSchool = () => (
                 <S.Slide>
 
                     <S.Project>
-                        <S.Img src={StarWars} alt="Site do StarWars" />
+                        <S.Img src={StarWars} alt="Site StarWars" />
+                        <S.Link href="https://liviavieira.github.io/STAR-WARS/" target="_blank">
                         <S.BoxDesc>
-                            <S.Name>Lívia Viera, 17 anos</S.Name>
+                            <S.Name>Lívia Vieira, 17 anos</S.Name>
                             <S.Address>Riacho dos Cavalos, Paraíba</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
                     <S.Project>
-                        <S.Img src={Portflow} alt="Site do Portflow" />
+                        <S.Img src={Portflow} alt="Site Portflow" />
+                        <S.Link href="https://amandagorni.github.io/Portflow-Page/" target="_blank">
                         <S.BoxDesc>
                             <S.Name>Amanda Gorni, 22 anos</S.Name>
                             <S.Address>Itaboraí, Rio de Janeiro</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
                     <S.Project>
-                        <S.Img src={TheWitcher} alt="Site do TheWitcher" />
+                        <S.Img src={TheWitcher} alt="Site The Witcher" />
+                        <S.Link href="https://codepen.io/ryan-cardoso-the-sasster/full/ExNryvK" target="_blank">
                         <S.BoxDesc>
                             <S.Name>Ryan Cardoso, 19 anos</S.Name>
                             <S.Address>Del Castilho, Rio de Janeiro</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
                     <S.Project>
-                        <S.Img src={Life} alt="Site do aluno Anthony" />
+                        <S.Img src={Life} alt="Site Beat" />
+                        <S.Link href="https://anthonyzzin.github.io/Beat/" target="_blank">
                         <S.BoxDesc>
-                            <S.Name>Anthony Nathan, 17anos</S.Name>
-                            <S.Address>Jardim dos Cavalos, Paraíba</S.Address>
+                            <S.Name>Anthony Nathan, 17 anos</S.Name>
+                            <S.Address>Riacho dos Cavalos, Paraíba</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
                     <S.Project>
                         <S.Img src={Crespos} alt="Site Crespos" />
+                        <S.Link href="https://alicecomoura.github.io/crespos/" target="_blank">
                         <S.BoxDesc>
                             <S.Name>Alice Coelho, 21 anos</S.Name>
                             <S.Address>Baixada Fluminense, Nova Iguaçu</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
 
                     <S.Project>
-                        <S.Img src={PMap} alt="Site do Luan" />
+                        <S.Img src={PMap} alt="Site Countdown" />
+                        <S.Link href="https://luanpires94.github.io/countdown-time/" target="_blank">
                         <S.BoxDesc>
                             <S.Name>Luan Pires, 26 anos</S.Name>
                             <S.Address>Complexo do Alemão, Rio de Janeiro</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
 
                     <S.Project>
                         <S.Img src={Dandara} alt="Site da Dandara" />
+                        <S.Link href="https://rhayssadandara.github.io/" target="_blank">
                         <S.BoxDesc>
                             <S.Name>Dandara Nogueira, 22 anos</S.Name>
                             <S.Address>Favela do Arará, Rio de Janeiro</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
 
                     <S.Project>
-                        <S.Img src={BoasPraticas} alt="Site BoasPraticas" />
+                        <S.Img src={BoasPraticas} alt="Site Boas Praticas" />
+                        <S.Link href="https://pamelaferreiralima.github.io/desafio-boas-praticas/" target="_blank">
                         <S.BoxDesc>
                             <S.Name>Pâmela, 23 anos</S.Name>
                             <S.Address>Leme, São Paulo</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
 
                     <S.Project>
-                        <S.Img src={Cactus} alt="Site da Tatiana" />
+                        <S.Img src={Cactus} alt="Site Cacto da Tatiana" />
+                        <S.Link href="https://tati2.github.io/desenho-cacto-position/" target="_blank">
                         <S.BoxDesc>
                             <S.Name>Tatiana Correia, 24 anos</S.Name>
                             <S.Address>São Gonçalo, Rio de Janeiro</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
 
                     <S.Project>
-                        <S.Img src={SiteRenan} alt="Site do Renan" />
+                        <S.Img src={SiteRenan} alt="Site League of Legends" />
+                        <S.Link href="https://renananiceto.github.io/-first-screen-lee-sin/" target="_blank">
                         <S.BoxDesc>
-                            <S.Name>Renan Anicieto, 26 anos</S.Name>
+                            <S.Name>Renan Aniceto, 26 anos</S.Name>
                             <S.Address>Complexo do Alemão, Rio de Janeiro</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
                     <S.Project>
-                        <S.Img src={SiteFelipe} alt="Site do Supernatural" />
+                        <S.Img src={SiteFelipe} alt="Site Supernatural" />
+                        <S.Link href="https://felipesilva99.github.io/SPN/" target="_blank">
                         <S.BoxDesc>
                             <S.Name>Felipe Silva, 22 anos</S.Name>
                             <S.Address>Complexo do Alemão, Rio de Janeiro</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
                     <S.Project>
-                        <S.Img src={SiteMarcus} alt="Site do Marcus" />
+                        <S.Img src={SiteMarcus} alt="Site Amigão" />
+                        <S.Link href="https://caetanomarcus.github.io/Amicao/" target="_blank">
                         <S.BoxDesc>
-                            <S.Name>Marcus Caetano</S.Name>
+                            <S.Name>Marcus Caetano, 29 anos</S.Name>
                             <S.Address>Luz, Nova Iguaçu</S.Address>
                         </S.BoxDesc>
+                        </S.Link>
                     </S.Project>
 
                 </S.Slide>

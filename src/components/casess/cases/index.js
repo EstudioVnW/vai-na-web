@@ -4,9 +4,9 @@ import * as S from './styles';
 //Imgs
 import Sirio from '../../../images/images/sirio.png';
 import Proadi from '../../../images/images/proadi.png';
-import Reg from '../../../images/images/Reg@2x.png';
+import Reg from '../../../images/images/Reg.png';
 import Its from '../../../images/images/its.png';
-import Lai from '../../../images/images/lai.png';
+import Lai from '../../../images/images/lai.gif';
 import Quickcash from '../../../images/images/QuickCash.png';
 import QuickcashDesktop from '../../../images/images/quickcashDesktop.png';
 import QuickcashMobile from '../../../images/images/quickcashMobile.png';
@@ -31,12 +31,12 @@ const TesteCases = () => (
                         resolutividade da Atenção Primária à Saúde.
                     </S.CaseText>
                     <S.Hashtag>#Design #React #Redux #Dynamo #StyledComponents</S.Hashtag>
-                    <S.Client>
+                    <S.TopClient>
                         <S.ClientBox>
                             <S.ClientText>cliente</S.ClientText>
                             <S.LogoBox>
-                                <S.CaseLogo src={Sirio} alt="" />
-                                <S.CaseLogo src={Proadi} alt="" />
+                                <S.TopCaseLogo src={Sirio} alt="" />
+                                <S.TopCaseLogo src={Proadi} alt="" />
                             </S.LogoBox>
                         </S.ClientBox>
                         <S.Date>
@@ -45,7 +45,7 @@ const TesteCases = () => (
                                 <span>2020</span>
                             </S.ClientText>
                         </S.Date>
-                    </S.Client>
+                    </S.TopClient>
                 </S.InfoBox>
                 <S.ImgBox>
                     <S.CaseImg src={Reg} alt="" />
@@ -68,20 +68,20 @@ const TesteCases = () => (
                         essa iniciativa.
                     </S.CaseText>
                     <S.Hashtag>#Design #React.js #Kepler.gl</S.Hashtag>
-                    <S.Client>
-                        <S.ClientBox>
+                    <S.RightClient>
+                        <S.RightClientBox>
                             <S.ClientText>cliente</S.ClientText>
                             <S.LogoBox>
                                 <S.CaseLogo src={Its} alt="" />
                             </S.LogoBox>
-                        </S.ClientBox>
+                        </S.RightClientBox>
                         <S.Date>
                             <S.ClientText>
                                 ano
                                 <span>2021</span>
                             </S.ClientText>
                         </S.Date>
-                    </S.Client>
+                    </S.RightClient>
                 </S.InfoBox>
                 <S.ImgBox>
                     <S.CaseImg src={Lai} alt="" />
@@ -132,20 +132,20 @@ const TesteCases = () => (
                     </S.CaseText>
 
                     <S.Hashtag>#Design #HTML5 #CSS3 #JavaScript</S.Hashtag>
-                    <S.Client>
-                        <S.ClientBox>
+                    <S.RightClient>
+                        <S.RightClientBox>
                             <S.ClientText>cliente</S.ClientText>
                             <S.LogoBox>
                                 <S.CaseLogo src={Votorantim} alt="" />
                             </S.LogoBox>
-                        </S.ClientBox>
+                        </S.RightClientBox>
                         <S.Date>
                             <S.ClientText>
                                 ano
                                 <span>2018</span>
                             </S.ClientText>
                         </S.Date>
-                    </S.Client>
+                    </S.RightClient>
                 </S.InfoBox>
                 <S.ImgBox>
                     <S.DesktopImg src={VotorantimDesktop} alt="" />
