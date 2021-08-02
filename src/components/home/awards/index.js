@@ -22,7 +22,7 @@ const Awards = () => (
             <img src={WomenInTech} />
           </S.ImgBox>
           <S.AwardsInfo>
-            <S.ImgTitle>Prêmio Women InTech</S.ImgTitle>
+            <S.ImgTitle>Prêmio Women in Tech</S.ImgTitle>
             <S.ImgText>Entre centenas de concorrentes globais, o Vai na Web ficou entre os 5 finalistas na categoria "Iniciativa de Maior Impacto para Equilíbrio de Gênero no STEM"</S.ImgText>
           </S.AwardsInfo>
         </S.AwardsBox>
