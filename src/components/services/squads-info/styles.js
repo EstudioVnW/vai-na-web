@@ -108,7 +108,7 @@ export const SquadsBox = styled.div`
 export const SquadsPerson = styled.p`
   position: relative;
   width: 50%;
-  font: 800 1.5em 'Usual', sans-serif;
+  font: 300 1.5em 'Usual', sans-serif;
   bottom: 0;
   display: flex;
   align-items: center;
@@ -166,8 +166,8 @@ export const MobLineH = styled.img`
 
   @media(max-width: 1024px) {
     position: absolute;
-    top: 0.1 %;
-    left: 15 %;
+    top: 0.1%;
+    left: 15%;
     display: block;
   }
 `;
