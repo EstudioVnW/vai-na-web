@@ -103,7 +103,7 @@ export const DepositionsSlideCard = styled.div`
     justify-content: flex-end;
     padding: 1.2rem;
     width: ${(props) => (props.focus ? '42%' : '28%')};
-    min-height: ${(props) => (props.focus ? '18rem' : '12rem')};
+    min-height: ${(props) => (props.focus ? '16rem' : '11rem')};
     box-shadow: 0px 0px 22px #00000029;
     border: ${(props) => (props.focus ? '1px solid #00145d' : '1px solid #FFAC2D')};
     border-radius: 12px;
@@ -123,12 +123,12 @@ export const DepositionsSlideCard = styled.div`
 export const Image = styled.img`
     position: absolute;
 
-    width: ${(props) => (props.focus ? '15rem' : '13rem')};
-    top: ${(props) => (props.focus ? '-42%' : '-55%')};
+    width: ${(props) => (props.focus ? '10rem' : '8rem')};
+    top: ${(props) => (props.focus ? '-33%' : '-36%')};
 
     @media (max-width: 1200px) {
-        width: ${(props) => (props.focus ? '12rem' : '10rem')};
-        top: ${(props) => (props.focus ? '-40%' : '-46%')};
+        width: ${(props) => (props.focus ? '9rem' : '7rem')};
+        top: ${(props) => (props.focus ? '-30%' : '-33%')};
     }
 `;
 
