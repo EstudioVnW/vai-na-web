@@ -38,7 +38,7 @@ const Menu = (props) => {
   const isDesktop = widthViewPort > 769;
 
   const redirectToContact = () => {
-    navigate('/reserveseusquad/');
+    navigate('/reserve-seu-squad/');
   };
 
   const isScrolled = scrollPosition > 0;
@@ -73,7 +73,7 @@ const Menu = (props) => {
         <S.BottomList isShow={isShow}>
           {/* <S.BottomLink to={'/#'} >Media Kit</S.BottomLink>
           <S.BottomLink to={'/#'} >Perguntas Frequentes</S.BottomLink> */}
-          <S.BottomLink to="/reserveseusquad">Contato</S.BottomLink>
+          <S.BottomLink to="/reserve-seu-squad">Contato</S.BottomLink>
         </S.BottomList>
         {isDesktop && (
         <Button
