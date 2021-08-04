@@ -6,7 +6,7 @@ export const Awards = styled.section`
     background: #eff1f8;
 
     @media (min-width: 2200px) {
-        padding: 4rem 0 15rem;
+        padding: 8rem 0 20rem;
     }
     @media (max-width: 768px) {
         padding: 4rem 0;
@@ -111,14 +111,15 @@ export const ImgBox = styled.div`
     img {
         width: 100%;
         height: 100%;
-        transition: 0.2s ease-out;
+        transition: 0.3s ease-out;
+        transform: scale(1.02);
     }
 
     &:hover {
         box-shadow: 0px 0px 20px #0f2b9240;
         
         img {
-            transform: scale(1.08) translatey(-2%);
+            transform: scale(1.1) translatey(-1%);
         }
     }
 
@@ -186,14 +187,6 @@ export const RowBox = styled.div`
     width: 24.3%;
     height: 13rem;
 
-    &:last-child {
-        div {
-            img {
-                width: auto;
-            }
-        }
-    }
-
     @media (max-width: 1200px) {
         height: 9rem;
     }
@@ -216,13 +209,13 @@ export const RowImgBox = styled.div`
     border-radius: 15px;
     border: 1px solid #09255d;
     transition: 0.2s ease-out;
-    background: #fff;
     overflow: hidden;
 
     img {
         width: 100%;
         height: 100%;
-        transition: 0.2s ease-out;
+        transition: 0.3s ease-out;
+        transform: scale(1.02);
     }
 
     &:hover {
@@ -239,6 +232,10 @@ export const RowImgBox = styled.div`
     @media (max-width: 768px) {
         margin-bottom: 0;
         border-radius: 10px;
+
+        img {
+            transform: scale(1.04);
+        }
     }
 `;
 
