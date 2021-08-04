@@ -7,10 +7,13 @@ export const Depositions = styled.div`
     margin: 0 auto;
     position: relative;
 
+    @media (min-width: 2200px) {
+        padding: 5rem 0;
+        width: 80%;
+    }
     @media (max-width: 1024px) {
         width: 100%;
     }
-
     @media (max-width: 768px) {
         padding: 4rem 0;
     }
@@ -23,6 +26,9 @@ export const DepositionsText = styled.div`
     margin: 2rem auto 2rem;
     width: 80%;
 
+    @media (min-width: 2200px) {
+        margin: 0 auto 10rem;
+    }
     @media (max-width: 768px) {
         margin: 0 auto;
         width: 100%;
@@ -35,6 +41,9 @@ export const DepositionsTitle = styled.h2`
     font-size: 2rem;
     font-weight: 800;
 
+    @media (min-width: 2200px) {
+        font-size: 3.8rem;
+    }
     @media (max-width: 768px) {
         font-size: 1.6rem;
         width: 80%;
@@ -51,6 +60,9 @@ export const DepositionsSubTitle = styled.h3`
     font-size: 1.3rem;
     text-align: center;
 
+    @media (min-width: 2200px) {
+        font-size: 2.2rem;
+    }
     @media (max-width: 1440px) {
         font-size: 1.5rem;
     }
@@ -85,6 +97,9 @@ export const BoxSlideDepositions = styled.div`
     justify-content: center;
     width: 80%;
 
+    @media (min-width: 2200px) {
+        width: 100%;
+    }
     @media (max-width: 1200px) {
         width: 88%;
     }
@@ -112,6 +127,13 @@ export const DepositionsSlideCard = styled.div`
     background: #FFF;
     z-index: ${(props) => (props.focus ? '1' : '-1')};
 
+    @media (min-width: 2200px) {
+        padding: 2.8rem;
+        width: ${(props) => (props.focus ? '40%' : '28%')};
+        border-width: 2px;
+        border-radius: 15px;
+    }
+
     p {
         display: ${(props) => (props.focus ? 'block' : 'none')};
     }
@@ -126,6 +148,10 @@ export const Image = styled.img`
     width: ${(props) => (props.focus ? '10rem' : '8rem')};
     top: ${(props) => (props.focus ? '-33%' : '-36%')};
 
+    @media (min-width: 2200px) {
+        width: ${(props) => (props.focus ? '16rem' : '14rem')};
+        top: ${(props) => (props.focus ? '-30%' : '-40%')};
+    }
     @media (max-width: 1200px) {
         width: ${(props) => (props.focus ? '9rem' : '7rem')};
         top: ${(props) => (props.focus ? '-30%' : '-33%')};
@@ -139,6 +165,11 @@ export const Description = styled.p`
     font-size: 0.8rem;
     line-height: 1.2rem;
     
+    @media (min-width: 2200px) {
+        padding: 5rem 10px 4rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
     @media (max-width: 1200px) {
         font-size: 0.68rem;
     }
@@ -153,16 +184,29 @@ export const Identification = styled.div`
     height: 100%;
     border-top: ${(props) => (props.focus ? '1px solid #FED5B2' : 'none')};
 
+    @media (min-width: 2200px) {
+        padding: ${(props) => (props.focus ? '1.8rem 10px 0' : '6rem 0 0')};
+        border-top-width: 3px;
+    }
+
     div {
         width: ${(props) => (props.focus ? '70%' : '100%')};
         text-align: ${(props) => (props.focus ? 'left' : 'center')};
     }
     div h4 {
         font-size: ${(props) => (props.focus ? '1rem' : '1.5rem')};
+
+        @media (min-width: 2200px) {
+            font-size: ${(props) => (props.focus ? '2rem' : '2.8rem')};
+        }
     }
     img {
         width: ${(props) => (props.focus ? '9rem' : '8rem')};
 
+        @media (min-width: 2200px) {
+            width: ${(props) => (props.focus ? '15rem' : '14rem')};
+            font-size: 3.8rem;
+        }
         @media (max-width: 1200px) {
             width: ${(props) => (props.focus ? '7rem' : '6rem')};
         }
@@ -190,13 +234,15 @@ export const Office = styled.p`
     font-size: 0.7rem;
     font-weight: 300;
 
+    @media (min-width: 2200px) {
+        font-size: 1.3rem;
+    }
     @media (max-width: 768px) {
         font-size: 1rem;
     }
 `;
 
-export const ImageCompany = styled.img`
-`;
+export const ImageCompany = styled.img``;
 
 // RESPONSIVO
 export const DepositionsSlidesResponsive = styled.div`
