@@ -7,10 +7,13 @@ export const Depositions = styled.div`
     margin: 0 auto;
     position: relative;
 
+    @media (min-width: 2200px) {
+        padding: 5rem 0;
+        width: 80%;
+    }
     @media (max-width: 1024px) {
         width: 100%;
     }
-
     @media (max-width: 768px) {
         padding: 4rem 0;
     }
@@ -23,6 +26,9 @@ export const DepositionsText = styled.div`
     margin: 2rem auto 2rem;
     width: 80%;
 
+    @media (min-width: 2200px) {
+        margin: 0 auto 10rem;
+    }
     @media (max-width: 768px) {
         margin: 0 auto;
         width: 100%;
@@ -35,6 +41,9 @@ export const DepositionsTitle = styled.h2`
     font-size: 2rem;
     font-weight: 800;
 
+    @media (min-width: 2200px) {
+        font-size: 3.8rem;
+    }
     @media (max-width: 768px) {
         font-size: 1.6rem;
         width: 80%;
@@ -51,6 +60,9 @@ export const DepositionsSubTitle = styled.h3`
     font-size: 1.3rem;
     text-align: center;
 
+    @media (min-width: 2200px) {
+        font-size: 2.2rem;
+    }
     @media (max-width: 1440px) {
         font-size: 1.5rem;
     }
@@ -85,6 +97,9 @@ export const BoxSlideDepositions = styled.div`
     justify-content: center;
     width: 80%;
 
+    @media (min-width: 2200px) {
+        width: 100%;
+    }
     @media (max-width: 1200px) {
         width: 88%;
     }
@@ -103,7 +118,7 @@ export const DepositionsSlideCard = styled.div`
     justify-content: flex-end;
     padding: 1.2rem;
     width: ${(props) => (props.focus ? '42%' : '28%')};
-    min-height: ${(props) => (props.focus ? '18rem' : '12rem')};
+    min-height: ${(props) => (props.focus ? '16rem' : '11rem')};
     box-shadow: 0px 0px 22px #00000029;
     border: ${(props) => (props.focus ? '1px solid #00145d' : '1px solid #FFAC2D')};
     border-radius: 12px;
@@ -111,6 +126,13 @@ export const DepositionsSlideCard = styled.div`
     transform: ${(props) => (props.focus ? 'scale(1.25)' : 'none')};
     background: #FFF;
     z-index: ${(props) => (props.focus ? '1' : '-1')};
+
+    @media (min-width: 2200px) {
+        padding: 2.8rem;
+        width: ${(props) => (props.focus ? '40%' : '28%')};
+        border-width: 2px;
+        border-radius: 15px;
+    }
 
     p {
         display: ${(props) => (props.focus ? 'block' : 'none')};
@@ -123,12 +145,16 @@ export const DepositionsSlideCard = styled.div`
 export const Image = styled.img`
     position: absolute;
 
-    width: ${(props) => (props.focus ? '15rem' : '13rem')};
-    top: ${(props) => (props.focus ? '-42%' : '-55%')};
+    width: ${(props) => (props.focus ? '10rem' : '8rem')};
+    top: ${(props) => (props.focus ? '-33%' : '-36%')};
 
+    @media (min-width: 2200px) {
+        width: ${(props) => (props.focus ? '16rem' : '14rem')};
+        top: ${(props) => (props.focus ? '-30%' : '-40%')};
+    }
     @media (max-width: 1200px) {
-        width: ${(props) => (props.focus ? '12rem' : '10rem')};
-        top: ${(props) => (props.focus ? '-40%' : '-46%')};
+        width: ${(props) => (props.focus ? '9rem' : '7rem')};
+        top: ${(props) => (props.focus ? '-30%' : '-33%')};
     }
 `;
 
@@ -139,6 +165,11 @@ export const Description = styled.p`
     font-size: 0.8rem;
     line-height: 1.2rem;
     
+    @media (min-width: 2200px) {
+        padding: 5rem 10px 4rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
     @media (max-width: 1200px) {
         font-size: 0.68rem;
     }
@@ -153,16 +184,29 @@ export const Identification = styled.div`
     height: 100%;
     border-top: ${(props) => (props.focus ? '1px solid #FED5B2' : 'none')};
 
+    @media (min-width: 2200px) {
+        padding: ${(props) => (props.focus ? '1.8rem 10px 0' : '6rem 0 0')};
+        border-top-width: 3px;
+    }
+
     div {
         width: ${(props) => (props.focus ? '70%' : '100%')};
         text-align: ${(props) => (props.focus ? 'left' : 'center')};
     }
     div h4 {
         font-size: ${(props) => (props.focus ? '1rem' : '1.5rem')};
+
+        @media (min-width: 2200px) {
+            font-size: ${(props) => (props.focus ? '2rem' : '2.8rem')};
+        }
     }
     img {
         width: ${(props) => (props.focus ? '9rem' : '8rem')};
 
+        @media (min-width: 2200px) {
+            width: ${(props) => (props.focus ? '15rem' : '14rem')};
+            font-size: 3.8rem;
+        }
         @media (max-width: 1200px) {
             width: ${(props) => (props.focus ? '7rem' : '6rem')};
         }
@@ -190,13 +234,15 @@ export const Office = styled.p`
     font-size: 0.7rem;
     font-weight: 300;
 
+    @media (min-width: 2200px) {
+        font-size: 1.3rem;
+    }
     @media (max-width: 768px) {
         font-size: 1rem;
     }
 `;
 
-export const ImageCompany = styled.img`
-`;
+export const ImageCompany = styled.img``;
 
 // RESPONSIVO
 export const DepositionsSlidesResponsive = styled.div`
@@ -246,14 +292,22 @@ export const DescriptionResponsive = styled.p`
 
 export const IdentificationResponsive = styled.div`
     @media (max-width: 768px) {
-        display: flex;  
-        border-top: 2px solid #FED5B2;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem;
         height: 40%;
+        border-top: 2px solid #FED5B2;
     }
 `;
 
 export const ImagePeopleResponsive = styled.img`
-    max-width: 40%;
+    width: 7rem;
+    height: 7rem;
+
+    @media (max-width: 480px) {
+        width: 5.5rem;
+        height: 5.5rem; 
+    }
 `;
 
 export const ImagePeopleResponsivePatricia = styled.img`
@@ -263,8 +317,8 @@ export const ImagePeopleResponsivePatricia = styled.img`
         height: 9rem; 
     }
     @media (max-width: 480px) {
-        width: 7rem;
-        height: 7rem; 
+        width: 5.5rem;
+        height: 5.5rem; 
     }
 `;
 
@@ -272,7 +326,7 @@ export const TextIdentificationResponsive = styled.div`
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
-        padding-top: 1rem;
+        padding-top: 0.6rem;
     }
 `;
 
@@ -298,8 +352,8 @@ export const OfficeResponsive = styled.p`
 `;
 export const ImageCompanyResponsive = styled.img`
     @media (max-width: 768px) {
-        width: 8rem; 
-        margin-top: 1rem; 
+        margin-top: 0.5rem;
+        width: 8rem;
     }
 `;
 

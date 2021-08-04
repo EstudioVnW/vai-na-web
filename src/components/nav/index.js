@@ -38,7 +38,7 @@ const Menu = (props) => {
   const isDesktop = widthViewPort > 769;
 
   const redirectToContact = () => {
-    navigate('/contact/');
+    navigate('/reserve-seu-squad/');
   };
 
   const isScrolled = scrollPosition > 0;
@@ -61,19 +61,19 @@ const Menu = (props) => {
             <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/">Sobre</Link>
           </S.NavItem>
           <S.NavItem home={home} isScrolled={scrollPosition > 0}>
-            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/services">Serviços</Link>
+            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/servicos">Serviços</Link>
           </S.NavItem>
           <S.NavItem home={home} isScrolled={scrollPosition > 0}>
             <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/cases">Cases</Link>
           </S.NavItem>
           <S.NavItem home={home} isScrolled={scrollPosition > 0}>
-            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/school">Carreiras</Link>
+            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/carreiras">Carreiras</Link>
           </S.NavItem>
         </S.NavList>
         <S.BottomList isShow={isShow}>
           {/* <S.BottomLink to={'/#'} >Media Kit</S.BottomLink>
           <S.BottomLink to={'/#'} >Perguntas Frequentes</S.BottomLink> */}
-          <S.BottomLink to="/contact">Contato</S.BottomLink>
+          <S.BottomLink to="/reserve-seu-squad">Contato</S.BottomLink>
         </S.BottomList>
         {isDesktop && (
         <Button

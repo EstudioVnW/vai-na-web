@@ -2,8 +2,8 @@ import React from 'react';
 import * as S from './styles';
 
 import WomenInTech from '../../../images/images/img-midia1.png';
-import Encontro from '../../../images/images/img-midia2.jpeg';
-import Universa from '../../../images/images/img-midia3.jpeg';
+import Encontro from '../../../images/images/img-midia2.png';
+import Universa from '../../../images/images/img-midia3.png';
 import Tilt from '../../../images/images/img-midia4.png';
 import BusinessLead from '../../../images/images/img-midia5.png';
 
@@ -22,7 +22,7 @@ const Awards = () => (
             <img src={WomenInTech} />
           </S.ImgBox>
           <S.AwardsInfo>
-            <S.ImgTitle>Prêmio Women InTech</S.ImgTitle>
+            <S.ImgTitle>Prêmio Women in Tech</S.ImgTitle>
             <S.ImgText>Entre centenas de concorrentes globais, o Vai na Web ficou entre os 5 finalistas na categoria "Iniciativa de Maior Impacto para Equilíbrio de Gênero no STEM"</S.ImgText>
           </S.AwardsInfo>
         </S.AwardsBox>
