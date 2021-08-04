@@ -246,14 +246,22 @@ export const DescriptionResponsive = styled.p`
 
 export const IdentificationResponsive = styled.div`
     @media (max-width: 768px) {
-        display: flex;  
-        border-top: 2px solid #FED5B2;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 1rem;
         height: 40%;
+        border-top: 2px solid #FED5B2;
     }
 `;
 
 export const ImagePeopleResponsive = styled.img`
-    max-width: 40%;
+    width: 7rem;
+    height: 7rem;
+
+    @media (max-width: 480px) {
+        width: 5.5rem;
+        height: 5.5rem; 
+    }
 `;
 
 export const ImagePeopleResponsivePatricia = styled.img`
@@ -263,8 +271,8 @@ export const ImagePeopleResponsivePatricia = styled.img`
         height: 9rem; 
     }
     @media (max-width: 480px) {
-        width: 7rem;
-        height: 7rem; 
+        width: 5.5rem;
+        height: 5.5rem; 
     }
 `;
 
@@ -272,7 +280,7 @@ export const TextIdentificationResponsive = styled.div`
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
-        padding-top: 1rem;
+        padding-top: 0.6rem;
     }
 `;
 
@@ -298,8 +306,8 @@ export const OfficeResponsive = styled.p`
 `;
 export const ImageCompanyResponsive = styled.img`
     @media (max-width: 768px) {
-        width: 8rem; 
-        margin-top: 1rem; 
+        margin-top: 0.5rem;
+        width: 8rem;
     }
 `;
 

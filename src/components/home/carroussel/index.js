@@ -56,7 +56,7 @@ const Depositions = () => {
                 <S.Name>Patrícia Zaundi</S.Name>
                 <S.Office>Diretora Executiva</S.Office>
               </S.IdentificationText>
-              <S.ImageCompany src={PatriciaCompany} style={{ padding: '5px' }} />
+              <S.ImageCompany src={PatriciaCompany} />
             </S.Identification>
           </S.DepositionsSlideCard>
 
@@ -124,7 +124,7 @@ const Depositions = () => {
               <S.TextIdentificationResponsive>
                 <S.NameResponsive>Elson Cordeiro</S.NameResponsive>
                 <S.OfficeResponsive>Diretor de Operações e Serviços</S.OfficeResponsive>
-                <S.ImageCompanyResponsive src={ElsonCompany} style={{ padding: '0 14px' }} />
+                <S.ImageCompanyResponsive src={ElsonCompany} style={{ padding: '0 12px' }} />
               </S.TextIdentificationResponsive>
             </S.IdentificationResponsive>
           </S.BoxSlide>
@@ -136,7 +136,7 @@ const Depositions = () => {
               Thank you Vai na Web for your commitment, dedication and creativity.”
             </S.DescriptionResponsive>
             <S.IdentificationResponsive>
-              <S.ImagePeopleResponsivePatricia src={Patricia} height="110px" style={{ marginTop: '-0.7rem' }} />
+              <S.ImagePeopleResponsivePatricia src={Patricia} />
               <S.TextIdentificationResponsive>
                 <S.NameResponsive>Patrícia Zaundi</S.NameResponsive>
                 <S.OfficeResponsive>Diretora Executiva</S.OfficeResponsive>
