@@ -10,14 +10,12 @@ const SquadsInfo = () => (
   <S.SquadsContainer>
     <S.SquadsWrap>
     <S.SquadsTitle>
-      Como você pode configurar<br/>
-      os squads remotos do Vai na Web
+      Configure seus squads
     </S.SquadsTitle>
     <S.SquadsText>
-      Cada projeto demanda uma configuração única.
-    </S.SquadsText>
-    <S.SquadsText>
-      E para alcançar resultados positivos, vamos te ajudar a definir o melhor time.
+      Cada desafio demanda uma composição única de time, 
+      e para alcançar os <br/> melhores resultados vamos te ajudar
+       a configurar o seu squad remoto.
     </S.SquadsText>
     <S.SquadsContent>
       <S.SquadsImg

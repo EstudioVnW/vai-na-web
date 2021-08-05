@@ -8,7 +8,7 @@ import Cards from '../components/services/cards';
 import HowWeWork from '../components/services/how-we-work';
 import Squads from '../components/services/squads';
 import SquadsInfo from '../components/services/squads-info';
-import Agenda from '../components/services/agenda';
+// import Agenda from '../components/services/agenda';
 
 export const query = graphql`
   query  {
@@ -49,11 +49,10 @@ export const query = graphql`
 const Services = () => (
   <Layouts>
     <Header />
+    <SquadsInfo />
     <Cards />
     <HowWeWork />
-    <SquadsInfo />
     <Squads />
-    <Agenda />
   </Layouts>
 );
 

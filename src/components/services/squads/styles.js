@@ -7,6 +7,7 @@ export const SquadsContainer = styled.section`
   max-width: 100%;
   min-height: 65vh;
   
+  
   @media (max-width: 1024px) {
     min-height: 55vh;
   }
@@ -28,7 +29,7 @@ export const SquadsBg = styled.div`
 
   ::before {
     border-radius: 0 20px 20px 0;
-    background: #eff1f8;
+    background: #FED5B232;
     content: '';
     display: block;
     width: 60%;
