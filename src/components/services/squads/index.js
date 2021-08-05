@@ -37,7 +37,7 @@ const Squads = (props) => {
           <S.SquadsIcon>
             <S.IconText>
               <span>100%</span>
-              do faturamento é reinvestido
+              do lucro é reinvestido
             </S.IconText>
           </S.SquadsIcon>
         </S.SquadsBox>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const SquadsContainer = styled.section`
   max-width: 100%;
   min-height: 50vh;
-  padding: 5rem 0 0;
+  padding: 0 0 5rem;
 
   @media (max-width: 1024px) {
     margin-bottom: 3rem;

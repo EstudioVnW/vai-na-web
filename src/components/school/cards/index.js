@@ -28,8 +28,8 @@ const CardsSchool = () => {
         <S.Container>
             <S.Wrap>
                 <S.BoxText>
-                    <S.Title>Conheça nossos programas</S.Title>
-                    <S.SubTitle>Ensino profissional gratuito, alinhado às necessidades do mercado</S.SubTitle>
+                    <S.Title>Conheça nossas carreiras</S.Title>
+                    <S.SubTitle>Ensino profissional, gratuito e alinhado às necessidades do mercado</S.SubTitle>
                 </S.BoxText>
 
                 <S.Slide>
@@ -118,7 +118,7 @@ const CardsSchool = () => {
                             </S.Card>
 
                             <S.Card justifyContent="space-between" isHover='false'>
-                                <S.LittleCard>
+                                <S.LittleCardCientist>
                                     <S.CardContainer>
                                         <S.CardDetail borderFill="#00145D">
                                             <S.CardCircle background="#00145D"></S.CardCircle>
@@ -131,11 +131,11 @@ const CardsSchool = () => {
                                         </S.CardDetail>
 
                                         <S.CarreiraTxt>Carreira</S.CarreiraTxt>
-                                        <S.DevTxt width='250px'>Cientista de Dados (Em Breve)</S.DevTxt>
+                                        <S.DevTxtLittle width='250px'>Cientista de Dados (Em Breve)</S.DevTxtLittle>
                                     </S.CardContainer>
-                                </S.LittleCard>
+                                </S.LittleCardCientist>
 
-                                <S.LittleCard>
+                                <S.LittleCardVtex>
                                     <S.CardContainer>
                                         <S.CardDetail borderFill="#00145D">
                                             <S.CardCircle background="#00145D"></S.CardCircle>
@@ -147,21 +147,21 @@ const CardsSchool = () => {
                                             </S.StickerBox>
                                         </S.CardDetail>
 
-                                        <S.CarreiraTxt>Carreira</S.CarreiraTxt>
-                                        <S.DevTxt width='250px'>Product Owner (Em Breve)</S.DevTxt>
+                                        <S.CarreiraTxt>Especialização</S.CarreiraTxt>
+                                        <S.DevTxtLittle width='250px'>E-commerce Vtex i/o</S.DevTxtLittle>
+                                        <S.PDescVtex>
+                                        <S.Bold>Desenvolve lojas virtuais robustas e escaláveis. </S.Bold>  
+                                        É o profissional responsável por criar e implementar lojas virtuais 
+                                        de alto desempenho, escaláveis e sob medida usando framework Vtex io.
+                                        </S.PDescVtex>
                                     </S.CardContainer>
-                                </S.LittleCard>
+                                </S.LittleCardVtex>
                             </S.Card>
                         </S.Cards>
                     </S.BoxCards>
                 </S.Slide>
 
                 <S.BoxInfo>
-                    <S.Paragraph>
-                        Através do ensino gratuito de programação e habilidades socioemocionais,
-                        preparamos talentos de todo o Brasil, oriundos das classes C, D e E, para atenderem aos desafios da economia digital.
-                    </S.Paragraph>
-
                     <S.BoxButton>
                         <S.Link href="https://forms.gle/h5Q42dVyNbC9vZo28" target="_blank">
                             <Button width='10.5rem'>
