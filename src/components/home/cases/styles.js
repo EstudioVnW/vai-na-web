@@ -9,10 +9,12 @@ export const Cases = styled.div`
 	margin-top: 5rem;
 
 	@media (min-width: 1900px) {
-		margin-top: 8rem;
+		margin-bottom: 8rem;
+		margin-top: -3rem;
 	}
 	@media (max-width: 1440px) {
-		margin-top: 2rem;
+		margin-bottom: 5rem;
+    	margin-top: -3rem;
 	}
 	@media (max-width: 480px) {
 		margin-top: 1rem;
