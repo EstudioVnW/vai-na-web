@@ -11,6 +11,8 @@ import Agenda from '../components/model/agenda';
 const Model = () => (
   <Layouts>
     <Header />
+    <Intro />
+    <Quote />
   </Layouts>
 );
 
