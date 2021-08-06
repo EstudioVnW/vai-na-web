@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const InfoContainer = styled.section`
   width: 100%;
   margin: 0 auto;
+  padding: 5rem 0;
   
   @media (max-width: 790px) {
     display: flex;
@@ -21,20 +22,9 @@ export const Wrap = styled.div `
   }
 `;
 
-export const InfoTitle = styled.h2`
-  font: 800 2rem 'Usual', sans-serif;
-  color: #00145d;
-  padding-top: 4rem;
-  padding-left: 3%;
-
-  @media (max-width: 425px) {
-    font-size: 1.2rem;
-  }
-`;
 
 export const InfoText = styled.p`
-  font: 300 1.3rem 'Usual', sans-serif;
-  padding-top: 0.5rem;
+  font: 400 1.3rem 'Usual', sans-serif;
   padding-left: 3%;
 
   @media (max-width: 425px) {

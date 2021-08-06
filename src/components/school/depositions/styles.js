@@ -39,7 +39,7 @@ export const Title = styled.h2 `
 `;
 
 export const Subtitle = styled.p `
-    font: 300 1.3rem 'Usual', sans-serif;
+    font: 400 1.3rem 'Usual', sans-serif;
     line-height: 1.6rem;
 
     @media (max-width: 480px) {
@@ -86,7 +86,8 @@ export const LeftArrow = styled.img`
     position: absolute;
     top: 50%;
     left: -6%;
-    -webkit-transform: translate(-50%,-50%);
+    /* -webkit-transform: translate(-50%,-50%); */
+    transform: translate(-50%,-50%);
     cursor: pointer;
     
     @media (max-width: 1200px) {
@@ -100,8 +101,8 @@ export const LeftArrow = styled.img`
 export const RightArrow = styled(LeftArrow)`
     left: auto;
     right: -6%;
-    -webkit-transform: translate(50%,-50%);
-    
+    /* -webkit-transform: translate(50%,-50%); */
+    transform: translate(50%,-50%);
     @media (max-width: 1200px) {
         right: -4%;
     }
@@ -187,7 +188,8 @@ export const BoxImg = styled.figure `
 export const ImgPerson = styled.img `
     width: 180px;
     position: absolute;
-    -webkit-transform: translate(-50%, 0);
+    /* -webkit-transform: translate(-50%, 0); */
+    transform: translate(-50%,0);
     top: -80%;
     left: 50%;
 

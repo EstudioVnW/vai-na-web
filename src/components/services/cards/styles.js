@@ -13,6 +13,32 @@ export const Container = styled.section`
     padding: 0;
   }
 `;
+export const CardsText = styled.div`
+
+`;
+export const CardTextTitle = styled.h2`
+  font: 800 2rem 'Usual', sans-serif;
+  color: #0F2B92;
+  padding-top: 1rem;
+  padding-left: 10%;
+
+  @media (max-width: 425px) {
+    font-size: 1.2rem;
+  }
+`;
+export const CardTextSubTitle = styled.p`
+  font: 400 1.3rem 'Usual', sans-serif;
+  color: #272727;
+  padding-top: 0.5rem;
+  padding-left: 10%;
+
+  @media (max-width: 425px) {
+    font-size: 0.8rem;
+  }
+`;
+export const Weight = styled.span`
+  font-weight: 300;
+`;
 
 export const Cards = styled.div`
   width: 80%;
@@ -21,6 +47,7 @@ export const Cards = styled.div`
   justify-content: space-between;
   min-height: 35vh;
   cursor: pointer;
+  padding: 2rem 0;
 
   @media (max-width: 790px) {
     padding: 2rem 1.45rem;
@@ -37,7 +64,7 @@ export const Card = styled.div`
   background: #fff;
   box-shadow: 0 4px 5px #d2d6e6;
   transition: 0.2s ease-in-out;
-  will-transform: scale;
+  /* will-transform: scale; */
 
   @media (max-width: 1440px) {
     height: auto;
