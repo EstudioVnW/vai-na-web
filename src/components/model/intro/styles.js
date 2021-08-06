@@ -6,7 +6,7 @@ export const IntroContainer = styled.section`
 `;
 
 export const Wrap = styled.div`
-    margin: 0 auto 5rem;
+    margin: 0 auto 2rem;
     width: 80%;
 `;
 
