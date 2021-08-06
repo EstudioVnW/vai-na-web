@@ -1,5 +1,5 @@
 import React from 'react';
-import * as S from './styles'
+import * as S from './styles';
 
 import HeaderImg from '../../../images/images/VNW2-17.png';
 
