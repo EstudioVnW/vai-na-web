@@ -72,22 +72,28 @@ const Footer = () => {
 										<Link to={'/'}>Sobre</Link>
 									</S.FooterLink>
 									<S.FooterLink>
-										<Link to={'/services'}>Serviços</Link>
+										<Link to={'/servicos'}>Serviços</Link>
 									</S.FooterLink>
 									<S.FooterLink>
 										<Link to={'/cases'}>Cases</Link>
 									</S.FooterLink>
 									<S.FooterLink>
-										<Link to={'/school'}>Carreiras</Link>
-									</S.FooterLink>
-									{/* <S.FooterLink>
-										<Link>Perguntas Frequentes</Link>
+										<Link to={'/modelo'}>Modelo</Link>
 									</S.FooterLink>
 									<S.FooterLink>
+										<Link to={'/carreiras'}>Carreiras</Link>
+									</S.FooterLink>
+									{/* <S.FooterLink>
+										<Link>Links Úteis</Link>
+									</S.FooterLink> */}
+									{/* <S.FooterLink>
+										<Link>Perguntas Frequentes</Link>
+									</S.FooterLink> */}
+									{/* <S.FooterLink>
 										<Link>Media Kit</Link>
 									</S.FooterLink> */}
 									<S.FooterLink>
-										<Link to={'/contact'}>Contato</Link>
+										<Link to={'/reserve-seu-squad'}>Contato</Link>
 									</S.FooterLink>
 								</S.LinkBox>
 							</div>
