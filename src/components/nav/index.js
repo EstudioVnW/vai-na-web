@@ -58,13 +58,13 @@ const Menu = (props) => {
       <S.Wrap isShow={isShow}>
         <S.NavList>
           <S.NavItem home={home} isScrolled={scrollPosition > 0}>
-            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/">Sobre</Link>
-          </S.NavItem>
-          <S.NavItem home={home} isScrolled={scrollPosition > 0}>
             <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/servicos">Serviços</Link>
           </S.NavItem>
           <S.NavItem home={home} isScrolled={scrollPosition > 0}>
             <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/cases">Cases</Link>
+          </S.NavItem>
+          <S.NavItem home={home} isScrolled={scrollPosition > 0}>
+            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/modelo">Modelo</Link>
           </S.NavItem>
           <S.NavItem home={home} isScrolled={scrollPosition > 0}>
             <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/carreiras">Carreiras</Link>
