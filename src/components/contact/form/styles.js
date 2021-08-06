@@ -48,7 +48,7 @@ export const FormTitle = styled.h1`
 export const FormText = styled.p`
     margin-top: 1.5rem;
     width: 80%;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     line-height: 1.5rem;
 
