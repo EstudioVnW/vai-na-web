@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Squads = styled.div`
    width: 100%;
-   padding: 7rem 0 4rem;
+   padding: 4rem 0 4rem;
 
    @media (min-width: 1025px) {
       min-height: 100vh;
