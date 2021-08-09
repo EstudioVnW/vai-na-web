@@ -5,7 +5,7 @@ export const CallContainer = styled.section`
     @media (max-width: 1024px) {
         padding: 5rem 0 0;
     }
-    media (max-width: 480px) {
+    @media (max-width: 480px) {
         padding: 0;
     }
 `;

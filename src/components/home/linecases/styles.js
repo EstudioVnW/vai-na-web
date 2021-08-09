@@ -17,18 +17,37 @@ export const LineCases = styled.section`
 export const TextCases = styled.p`
 	width: 80%;
 	color: #2727277C;
+
+	@media (max-width: 768px) {
+		font-size: 1.5rem;
+	}
+
 `;
 
 export const BoxImagesCases = styled.div`
 	width: 80%;
 	display: flex;
 	justify-content: space-between;
+
+	@media (max-width: 768px) {
+		overflow: scroll hidden;
+		width: 100%;
+	}
 `;
 export const BoxImage = styled.figure`
-	max-width: 11%;
+	width: 11%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@media (max-width: 768px) {
+		min-width: 30%;
+		padding-left: 5.25rem;
+	}
+	@media (max-width: 425px) {
+		min-width: 50%;
+		padding-left: 2.25rem;
+	}
 `;
 export const ImagesCases = styled.img`
 	width: 100%;

@@ -7,7 +7,7 @@ import { navigate } from 'gatsby';
 
 
 const redirectToContact = () => {
-    navigate('/contact/');
+    navigate('/reserve-seu-squad/');
 }
 
 const CasesCalltoaction = () => (

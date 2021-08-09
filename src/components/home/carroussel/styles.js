@@ -70,8 +70,8 @@ export const DepositionsSubTitle = styled.h3`
         width: 73%;
         margin-top: 0.5rem;
         text-align: center;
-        font-size: 1.25rem;
-        font-weight: 600;
+        font-size: 1.6rem;
+        font-weight: 300;
         line-height: 1.4;
     }
     @media (max-width: 480px) {

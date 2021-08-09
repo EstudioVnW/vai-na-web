@@ -20,6 +20,7 @@ const redirectToContact = () => {
 
 const Cases = () => (
   <S.Cases>
+    <S.TitleCases>Quem já acelerou suas entregas digitais com os squads do VnW</S.TitleCases>
     <S.BoxCasesImages>
       <S.CasesImages>
         <S.BoxImage>
