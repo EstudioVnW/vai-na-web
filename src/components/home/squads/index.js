@@ -9,7 +9,7 @@ import Canais from '../../../images/images/Group10971.svg';
 import MVPs from '../../../images/images/Group10972.svg';
 
 const redirectToContact = () => {
-  navigate('/contact/');
+  navigate('/reserve-seu-squad/');
 };
 
 const Squads = () => (

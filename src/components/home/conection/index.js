@@ -10,7 +10,7 @@ import PeoplesImageSecondResponsive from '../../../images/images/Fotos_bolinhas_
 import Line from '../../../images/images/Linha.svg';
 
 const redirectToContact = () => {
-  navigate('/contact/');
+  navigate('/reserve-seu-squad/');
 };
 
 const Conection = () => (
