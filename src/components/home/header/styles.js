@@ -15,20 +15,20 @@ export const Header = styled.header`
 
 export const Wrap = styled.div`
   position: relative;
-  height 70vh;
+  height: 70vh;
 
   @media (max-width: 1024px){
     border-radius: 0;
-    min-height 50vh;
+    min-height: 50vh;
   }
 
   @media (max-width: 768px){
-    height 85vh;
+    height: 85vh;
     height: calc(100vh - 8rem);
   }
 
   @media (min-height: 2040px){
-    height 50vh;
+    height: 50vh;
   }
 `;
 

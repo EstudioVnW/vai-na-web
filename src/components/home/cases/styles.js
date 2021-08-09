@@ -14,11 +14,32 @@ export const Cases = styled.div`
 	}
 	@media (max-width: 1440px) {
 		margin-bottom: 5rem;
-    	margin-top: -3rem;
+		margin-top: -3rem;
 	}
-	@media (max-width: 480px) {
+	@media (max-width: 768px) {
 		margin-top: 1rem;
 	}
+`;
+
+export const TitleCases = styled.h2`
+	margin-bottom: 3rem;
+    color: #00145D;
+    font-size: 2rem;
+    font-weight: 800;
+	text-align: center;
+	width: 50%;
+
+    @media (min-width: 2200px) {
+        font-size: 3.8rem;
+    }
+	@media (max-width: 1024px) {
+        width: 70%;
+    }
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+        width: 80%;
+        text-align: center;
+    }
 `;
 
 export const BoxCasesImages = styled.div`

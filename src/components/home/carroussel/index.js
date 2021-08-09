@@ -36,7 +36,7 @@ const Depositions = () => {
     <S.Depositions>
       <S.DepositionsText>
         <S.DepositionsTitle>Depoimentos que nos impulsionam</S.DepositionsTitle>
-        <S.DepositionsSubTitle>Veja o que os líderes que já investiram neste modelo têm a dizer sobre nós e nossas entregas</S.DepositionsSubTitle>
+        <S.DepositionsSubTitle>Veja o que os líderes têm a dizer sobre a atuação dos nossos <S.Bold>squads</S.Bold>:</S.DepositionsSubTitle>
       </S.DepositionsText>
 
       <S.DepositionsSlides>

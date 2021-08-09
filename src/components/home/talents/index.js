@@ -28,7 +28,7 @@ const Talents = () => (
               background="#FF611E"
               border="#FFAC2D"
             >
-              Faça parte!
+              Saiba mais
             </ButtonHome>
           </S.StyledLink>
         </S.ButtonTalents>

@@ -5,10 +5,6 @@ export const Squads = styled.div`
    width: 100%;
    padding: 4rem 0 4rem;
 
-   @media (min-width: 1025px) {
-      min-height: 100vh;
-   }
-
    @media (min-width: 2200px) {
       padding: 12rem 0;
    }
@@ -163,12 +159,13 @@ export const SquadsTextSubTitle = styled.h3`
    line-height: 2rem;
 
    @media (min-width: 2200px) {
-      width: 80%;
-      font-size: 2.5rem;
+      width: 90%;
+      font-size: 2rem;
       line-height: 1.3;
    }
    @media (max-width: 1440px) {
       font-size: 1.1rem;
+      width: 88%;
       line-height: 1.3;
    }
    @media (max-width: 768px) {
