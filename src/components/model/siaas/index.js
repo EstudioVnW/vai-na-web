@@ -2,7 +2,7 @@ import React from 'react';
 import * as S from './styles';
 
 import Infografico from '../../../images/images/Infografica-SIaaS.png';
-import InfograficoResponsive from '../../../images/images/Group11422.png';
+import InfograficoResponsive from '../../../images/images/SIaaS-Mobile.png';
 
 const SocialImpact = () => (
   <S.SocialImpact>

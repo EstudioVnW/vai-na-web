@@ -8,6 +8,7 @@ import Quote from '../components/model/quote';
 import SocialImpact from '../components/model/siaas';
 import DigitalEconomy from '../components/model/digitalEconomy';
 import Agenda from '../components/model/agenda';
+import Participate from '../components/model/participate';
 
 const Model = () => (
   <Layouts>
@@ -16,6 +17,8 @@ const Model = () => (
     <Quote />
     <SocialImpact />
     <DigitalEconomy />
+    <Agenda />
+    <Participate />
   </Layouts>
 );
 
