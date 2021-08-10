@@ -3,6 +3,7 @@ import * as S from './styles';
 
 
 import ImageEconomy from '../../../images/images/VNW2-53.png';
+import ImageEconomyResponsive from '../../../images/images/VNW2-53-responsive.png';
 import Image400 from '../../../images/images/Icone-Modelos-01.png';
 import Image48 from '../../../images/images/Icone-Modelos-02.png';
 import Image55 from '../../../images/images/Icone-Modelos-03.png';
@@ -29,6 +30,7 @@ const DigitalEconomy = () => (
 
             <S.BoxImageDigitalEconomy>
                 <S.ImageDigitalEconomy src={ImageEconomy} />
+                <S.ImageDigitalEconomyResponsive src={ImageEconomyResponsive} />
             </S.BoxImageDigitalEconomy>
         </S.BoxDigitalEconomy>
         <S.BoxDigitalEconomyInformations>
