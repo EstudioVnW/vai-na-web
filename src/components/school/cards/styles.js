@@ -326,7 +326,7 @@ export const BoxInfo = styled.div`
 
     @media (max-width: 768px){
         flex-direction: column;
-        align-items: start;
+        align-items: center;
     }
 `;
 
@@ -343,8 +343,9 @@ export const BoxButton = styled.div`
     }
     @media (max-width: 768px) {
         display: flex;
+        justify-content: center;
         align-items: center;
-        width: 12rem;
+        width: 100%;
         height: 3.75rem;
         margin-top: 3rem;
         Button {
