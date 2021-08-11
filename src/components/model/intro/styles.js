@@ -15,6 +15,7 @@ export const IntroContainer = styled.section`
     }
     @media (max-width: 768px) {
         margin: 0;
+        padding-bottom: 0;
     }
 `;
 
@@ -25,7 +26,7 @@ export const Wrap = styled.div`
     @media (max-width: 1200px) {
         width: 90%;
     }
-    @media (max-width: 480px) { 
+    @media (max-width: 480px) {
         width: 88%;
     }
 `;
@@ -105,6 +106,7 @@ export const TextBox = styled.div`
     &:last-child {
         position: absolute;
         right: -5%;
+        margin-bottom: 0;
         padding-right: 0;
         width: 40%;
     }
@@ -121,7 +123,7 @@ export const TextBox = styled.div`
             position: static;
             width: 100%;
 
-            & ${RowText}:nth-child(2) {
+            p:nth-child(2) {
                 font-size: 0.93em;
             }
         }
