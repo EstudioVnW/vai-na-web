@@ -76,6 +76,9 @@ export const DescriptionBoxDigitalEconomy = styled.p`
         font: 300 1.3rem 'Usual',sans-serif;
         margin-top: 1rem;
     }
+    @media (max-width: 480px) {
+		font-size: 1rem;
+	}
 
 `;
 

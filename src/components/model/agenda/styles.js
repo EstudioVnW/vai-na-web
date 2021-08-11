@@ -61,7 +61,7 @@ export const AgendaText = styled.p`
   line-height: 1.6rem;
 
   @media (max-width: 425px) {
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.3rem;
   }
 `;

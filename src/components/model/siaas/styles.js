@@ -38,6 +38,10 @@ export const SocialImpactTextSubTitle = styled.p`
 	letter-spacing: 0.42px;
 	color: #FF611E;
 	text-transform: uppercase;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 	
 	
 `;
@@ -52,12 +56,12 @@ export const SocialImpactTextTitle = styled.h2`
 		font-size: 3.8rem;
 	}
 	@media (max-width: 768px) {
-		width: 70%;
-		font-size: 1.6rem;
+		width: 100%;
+		font-size: 2rem;
 		letter-spacing: -1px;
 	}
 	@media (max-width: 480px) {
-		width: 90%;
+		width: 100%;
 		font-size: 2rem;
 		line-height: 1.1;
 	}
@@ -80,12 +84,13 @@ export const SocialImpactTextDescription = styled.p`
 	}
 	@media (max-width: 768px) {
 		width: 100%;
-		font-size: 1rem;
+		font-size: 1.3rem;
 		line-height: 1.58;
+		text-align: left;
 	}
 	@media (max-width: 480px) {
-		width: 90%;
-		font-size: 0.9rem;
+		width: 100%;
+		font-size: 1rem;
 		line-height: 1.7;
 	}
 `;

@@ -81,7 +81,8 @@ export const Description = styled.p`
     }
 
     @media (max-width: 425px) {
-        font-size: 0.8rem;
+        font-size: 1rem;
         line-height: 1.3rem;
+        margin-top: 1rem;
     }
 `;
