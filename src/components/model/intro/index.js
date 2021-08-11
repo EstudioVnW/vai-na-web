@@ -31,7 +31,7 @@ const ModelIntro = () => (
                     <S.RowText>Majoritariamente mulheres, jovens e negros com moradias em favelas e periferias.</S.RowText>
                 </S.TextBox>
             </S.BoxRow>
-            <S.FontText><strong>Fonte</strong> Organização Internacional do Trabalho e Valor Econômico</S.FontText>
+            <S.SourceText><strong>Fonte</strong> Organização Internacional do Trabalho e Valor Econômico</S.SourceText>
         </S.Wrap>
     </S.IntroContainer>
 );

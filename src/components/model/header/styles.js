@@ -14,8 +14,15 @@ export const HeaderContainer = styled.header`
     @media (max-width: 1440px) { 
         height: 23rem;
     }
+    @media (max-width: 768px) {
+        padding: 10rem 0 2rem;
+        height: 100vh;
+        background: linear-gradient(
+            #FED5B2 0%, #FED5B2 60%,
+            transparent 60%, transparent 100%);
+    }
     @media (max-width: 480px) {
-        padding: 8rem 0 3rem;
+        padding-top: 9rem;
     }
 `;
 
@@ -27,18 +34,24 @@ export const Wrap = styled.div`
     width: 80%;
     height: 100%;
 
-    @media (max-width: 480px) {
-        width: 65%;
+    @media (max-width: 768px) {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
     }
 `;
 
 export const Header = styled.section`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 
+    @media (max-width: 768px) {
+        width: 68%;
+    }
     @media (max-width: 480px) {
-        min-height: auto;
+        margin: 0 auto;
+        width: 64%;
     }
 `;
 
@@ -51,11 +64,10 @@ export const HeaderTitle = styled.h1`
     @media (min-width: 2200px) {
         font-size: 4rem;
     }
-    @media (max-width: 1024px) {
-        margin-bottom: 2rem;
+    @media (max-width: 768px) {
+        margin-bottom: 0.4rem;
     }
     @media (max-width: 480px) {
-        margin-bottom: 10px;
         font-size: 2.4em;
         line-height: 1.1;
     }
@@ -71,9 +83,12 @@ export const TitleBar = styled.span`
     @media (min-width: 2200px) {
         font-size: 4rem;
     }
+    @media (max-width: 768px) {  
+        left: -12%;
+    }
     @media (max-width: 480px) {
         top: -4%;
-        left: -20%;
+        left: -16%;
     }
 `;
 
@@ -84,7 +99,7 @@ export const HeaderText = styled.p`
         font-size: 2.2rem;
     }
     @media (max-width: 480px) {
-        font-size: 1.3em;
+        font-size: 1em;
     }
 `;
 
@@ -94,8 +109,44 @@ export const HeaderImage = styled.img`
     right: 0;
     width: 70%;
 
+    @media (min-width: 1700px) {  
+        width: 60rem;
+    }
+    @media (min-width: 2200px) {  
+        width: 90rem;
+    }
     @media (max-width: 1024px) {
-        top: 44%;
-        width: 60%;
+        top: 50%;
+        right: -6%;
+        width: 66%;
+    }
+    @media (max-width: 768px) {
+        display: none;
+    }
+`;
+
+export const HeaderImageMobile = styled.img`
+    position: absolute;
+    display: none;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        display: block;
+        top: 15%;
+    }
+    @media (max-width: 480px) { 
+        top: 17%;
+    }
+`;
+
+export const DownArrow = styled.img`
+    display: none;
+    width: 1.5rem;
+    
+    @media (max-width: 768px) {
+        display: block;
+    }
+    @media (max-width: 480px) {
+        width: 1rem;
     }
 `;
