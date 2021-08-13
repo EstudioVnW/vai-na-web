@@ -65,7 +65,7 @@ export const Title = styled.h3`
 export const Text = styled.p`
     padding-top: 8px;
     width: 50%;
-    font: 400 1.2rem 'Usual', sans-serif;
+    font: 400 1.3rem 'Usual', sans-serif;
     line-height: 1.6;
 
     @media (min-width: 2200px) {

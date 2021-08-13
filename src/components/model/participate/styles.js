@@ -3,11 +3,9 @@ import styled from 'styled-components';
 export const Participate = styled.section`
     width: 100%;
     margin: 0 auto;
-    padding: 8rem 0 3rem;
+    padding: 4rem 0;
     display: flex;
-    
     justify-content: center;
-    
   
     @media (max-width: 1024px) {
         min-height: 40vh;
@@ -42,11 +40,7 @@ export const TitleButton = styled.h1`
     font: 800 2rem 'Usual', sans-serif;
     color: #272727;
 
-    @media (min-width: 2200px) {
-        font-size: 3.8rem;
-    }
-
-    @media (max-width: 425px) {
+    @media (max-width: 480px) {
         font-size: 1.2rem;
     }
 `;
@@ -55,11 +49,7 @@ export const SubtitleButton = styled.h3`
     color: #272727;
     padding-top: 0.8rem;
 
-    @media (min-width: 2200px) {
-        font-size: 2rem;
-    }
-
-    @media (max-width: 425px) {
+    @media (max-width: 480px) {
         font-size: 1rem;
     }
 `;
@@ -74,7 +64,7 @@ export const BoxButton = styled.div`
 `;
 
 export const BoxDecription = styled.div`
-    width: 50%;
+    width: 55%;
 
     @media (max-width: 1024px) {
         width: 100%;
@@ -82,19 +72,16 @@ export const BoxDecription = styled.div`
 `;
 export const Description = styled.p`
     font: 300 1.3rem 'Usual', sans-serif;
-    line-height: 1.6rem;
+    line-height: 1.4;
 
-    @media (min-width: 2200px) {
-        font-size: 2rem;
-        line-height: 2.2rem;
+    @media (max-width: 1440px) {
+        font-size: 1rem;
     }
-
     @media (max-width: 1024px) {
         text-align: center;
     }
-
-    @media (max-width: 425px) {
-        font-size: 1rem;
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
         line-height: 1.3rem;
         margin-top: 1rem;
     }
