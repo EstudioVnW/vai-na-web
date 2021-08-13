@@ -65,11 +65,13 @@ export const DescriptionBoxDigitalEconomy = styled.p`
 
     @media (min-width: 2200px){
         font-size: 2rem;
+        font-weight: 300;
     }
 
     @media (max-width: 1024px){
         font-size: 1rem;
         margin-top: 0.5rem;
+        font-weight: 300;
     }
 
     @media (max-width: 768px){

@@ -50,6 +50,10 @@ export const AgendaTitle = styled.h2`
   font: 800 2rem 'Usual', sans-serif;
   color: #00145d;
 
+  @media (min-width: 2200px) {
+    font-size: 3.8rem;
+  }
+
   @media (max-width: 425px) {
     font-size: 1.2rem;
   }
@@ -59,6 +63,11 @@ export const AgendaText = styled.p`
   margin-top: 1.8rem;
   font: 300 1.3rem 'Usual', sans-serif;
   line-height: 1.6rem;
+
+  @media (min-width: 2200px) {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
 
   @media (max-width: 425px) {
     font-size: 1rem;

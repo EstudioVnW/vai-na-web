@@ -201,7 +201,7 @@ export const StickerBox = styled.figure`
     background-repeat: no-repeat;
 
     @media (min-width: 2200px) {
-        top: 30%;
+        top: -15%;
     }
     @media (max-width: 1200px) {
         top: 20%;
@@ -260,7 +260,8 @@ export const DevTxtLittle = styled.h3`
     margin-bottom: 1rem;
 
     @media (min-width: 2200px) {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
+        width: 23rem;
     }
     @media (max-width: 768px) {
         margin-bottom: 1.5rem;
@@ -306,10 +307,15 @@ export const PDescVtex = styled.p`
 
     @media (min-width: 2200px) {
         font-size: 1.8rem;
+        line-height: 1.8rem;
     }
     @media (max-width: 480px) {
         font-size: 0.85rem;
         line-height: 1rem;
+    }
+    @media (max-width: 375px) {
+        font-size: 0.85rem;
+        line-height: 0.85rem;
     }
 `;
 
