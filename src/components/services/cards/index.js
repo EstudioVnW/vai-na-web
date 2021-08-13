@@ -8,6 +8,11 @@ import mvpIcon from '../../../images/images/mvpIcon.svg';
 
 const Cards = () => (
   <S.Container>
+    <S.CardsText>
+      <S.CardTextTitle>Acelere suas entregas digitais</S.CardTextTitle>
+      <S.CardTextSubTitle>Através de entregas contínuas de design 
+        e desenvolvimento web e mobile</S.CardTextSubTitle>
+    </S.CardsText>
     <S.Cards>
       <S.Card>
         <S.CardDetail>
@@ -18,8 +23,8 @@ const Cards = () => (
         <S.IconBg>
           <S.CardIcon src={backlogIcon} alt='' />
         </S.IconBg>
-        <S.CardTitle>Backlog de Produtos Digitais</S.CardTitle>
-        <S.CardText>Crie ou aprimore funcionalidades que geram valor para o usuário através de entregas contínuas de design e desenvolvimento web e mobile.</S.CardText>
+        <S.CardTitle>MVPs ágeis e escaláveis</S.CardTitle>
+        <S.CardText>Descoberta, ideação e implementação de MVPs rapidamente e em escala. Agende, sem custo, uma sessão de descoberta de requisitos.</S.CardText>
       </S.Card>
 
       <S.Card>
@@ -48,8 +53,8 @@ const Cards = () => (
         <S.IconBg>
           <S.CardIcon src={mvpIcon} alt='' />
         </S.IconBg>
-        <S.CardTitle>MVPs ágeis e escaláveis</S.CardTitle>
-        <S.CardText>Descoberta, ideação e implementação de MVPs rapidamente e em escala. Agende, sem custo, uma sessão de descoberta de requisitos.</S.CardText>
+        <S.CardTitle>E-commerce<br/><S.Weight>(Powered by Vtex io)</S.Weight></S.CardTitle>
+        <S.CardText>Implantação de lojas online utilizando a plataforma Vtex io. Desenvolvemos os layouts.</S.CardText>
       </S.Card>
     </S.Cards>
   </S.Container>

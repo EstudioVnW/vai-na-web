@@ -93,7 +93,8 @@ export const LeftArrow = styled.img`
     position: absolute;
     top: 50%;
     left: -6%;
-    -webkit-transform: translate(-50%,-50%);
+    /* -webkit-transform: translate(-50%,-50%); */
+    transform:translate(-50%,-50%);
     cursor: pointer;
 
     @media (max-width: 1024px){
@@ -104,7 +105,8 @@ export const LeftArrow = styled.img`
 export const RightArrow = styled(LeftArrow)`
     left: auto;
     right: -6%;
-    -webkit-transform: translate(50%,-50%);
+    /* -webkit-transform: translate(50%,-50%); */
+    transform:translate(-50%,-50%);
 `;
 
 export const Card = styled.div`
@@ -199,7 +201,7 @@ export const StickerBox = styled.figure`
     background-repeat: no-repeat;
 
     @media (min-width: 2200px) {
-        top: 30%;
+        top: -15%;
     }
     @media (max-width: 1200px) {
         top: 20%;
@@ -212,7 +214,7 @@ export const StickerBox = styled.figure`
         height: 15vw;
     }
     @media (max-width: 480px) {
-        top: 50%;
+        top: 15%;
         width: 23vw;
         height: 23vw;
     }
@@ -223,7 +225,7 @@ export const Sticker = styled.img`
 `;
 
 export const CarreiraTxt = styled.p`
-    padding: 1.2rem 0 0.5rem;
+    padding: 0.8rem 0 0.5rem;
     font: 400 .9rem 'Usual', sans-serif;
     text-transform: uppercase;
     
@@ -239,8 +241,8 @@ export const CarreiraTxt = styled.p`
 
 export const DevTxt = styled.h3`
     width: ${props => props.width || '60%'};
-    font: 800 1.7rem 'Usual', sans-serif;
-    margin-bottom: 1.3rem;
+    font: 700 1.7rem 'Usual', sans-serif;
+    margin-bottom: 1rem;
 
     @media (min-width: 2200px) {
         font-size: 2.8rem;
@@ -249,6 +251,25 @@ export const DevTxt = styled.h3`
         margin-bottom: 1.1rem;
         font-size: 1.1rem;
         line-height: 1.4;
+    }
+`;
+
+export const DevTxtLittle = styled.h3`
+    width: ${props => props.width || '60%'};
+    font: 700 1.4rem 'Usual', sans-serif;
+    margin-bottom: 1rem;
+
+    @media (min-width: 2200px) {
+        font-size: 2.2rem;
+        width: 23rem;
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+    }
+    @media (max-width: 480px) {
+        margin-bottom: 0.8rem;
+        font-size: 1.1rem;
+        line-height: 1rem;
     }
 `;
 
@@ -279,32 +300,39 @@ export const PDesc = styled.p`
         line-height: 1.6;
     }
 `;
+export const PDescVtex = styled.p`
+    font: 400 1rem 'Usual', sans-serif;
+    line-height: 1.3rem;
+    color: #272727;
+
+    @media (min-width: 2200px) {
+        font-size: 1.8rem;
+        line-height: 1.8rem;
+    }
+    @media (max-width: 480px) {
+        font-size: 0.85rem;
+        line-height: 1rem;
+    }
+    @media (max-width: 375px) {
+        font-size: 0.85rem;
+        line-height: 0.85rem;
+    }
+`;
+
+export const Bold = styled.span`
+    font-weight: 700;
+`;
+
 
 export const BoxInfo = styled.div`
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     @media (max-width: 768px){
         flex-direction: column;
-        align-items: start;
-    }
-`;
-
-export const Paragraph = styled.p`
-    width: 70%;
-    font: 300 1.3rem 'Usual', sans-serif;
-    line-height: 1.4;
-
-    @media (min-width: 2200px) {
-        font-size: 2rem;
-    }
-    @media (max-width: 768px){
-        width: auto;
-    }
-    @media (max-width: 480px){
-        font-size: .9rem;
+        align-items: center;
     }
 `;
 
@@ -321,8 +349,9 @@ export const BoxButton = styled.div`
     }
     @media (max-width: 768px) {
         display: flex;
+        justify-content: center;
         align-items: center;
-        width: 12rem;
+        width: 100%;
         height: 3.75rem;
         margin-top: 3rem;
         Button {
@@ -340,9 +369,33 @@ export const BoxButton = styled.div`
     }
 `;
 
-export const LittleCard = styled.div`
+export const LittleCardCientist = styled.div`
     width: 100%;
-    height: 48.6%;
+    height: 39%;
+    background: #D4D9EC;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+
+    &:hover{
+        transform: scale(1.025);
+    }
+
+    div {  
+        color: #00145D;
+    }
+
+    @media (max-width: 480px) {
+        div h3{  
+            width: 65%;
+        }
+    }
+`;
+export const LittleCardVtex = styled.div`
+    width: 100%;
+    height: 59%;
     background: #D4D9EC;
     border-radius: 20px;
     display: flex;

@@ -46,6 +46,10 @@ export const ConectionTitle = styled.h1`
 
   @media (max-width: 768px) {
     width: 90%;
+    font-size: 2.25rem;
+  }
+
+  @media (max-width: 425px) {
     font-size: 1.25rem;
   }
 

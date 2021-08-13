@@ -95,9 +95,8 @@ const Form = () => {
       <S.ContatoContainer>
         <S.FormContainer>
           <S.FormTitle>Contato</S.FormTitle>
-          <S.FormText>Você está a um click de destravar seu backlog com os squads estendidos do Vai na Web
-            e formar sua nova força de trabalho.</S.FormText>
-          <S.FormText>Entraremos em contato em até 24h. Não enviamos spam.</S.FormText>
+          <S.FormText>Nos conte sobre o seu desafio de negócio.
+          <br/>Entraremos em contato em até 24h. Não enviamos spam.</S.FormText>
           <S.Form
             name="contact"
             method="POST"

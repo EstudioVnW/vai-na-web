@@ -17,7 +17,7 @@ import SiteMarcus from '../../../images/images/studentProjects/siteMarcus.png';
 const ProjectsSchool = () => (
     <S.Container>
         <S.Wrap>
-            <S.Title>Veja alguns de nossos estudantes</S.Title>
+            <S.Title>Veja alguns trabalhos feitos por nossos estudantes</S.Title>
 
             <S.BoxSlide>
                 <S.Slide>

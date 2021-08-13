@@ -9,7 +9,7 @@ import squadsImg from '../../../images/images/squadsImg.png';
 
 const Squads = (props) => {
   const redirectToConcact = () => {
-    navigate('/contact/');
+    navigate('/reserve-seu-squad/');
   }
   return (
     <S.SquadsContainer>
@@ -18,7 +18,7 @@ const Squads = (props) => {
           <S.SquadsText>
             Toda vez que sua empresa contrata os squads do Vai na Web ela contribui diretamente para
             <strong> inspirar, equipar e educar mais pessoas </strong>
-            para atender aos desafios da economia digital.
+            gratuitamente para atender aos desafios da economia digital.
           </S.SquadsText>
           <S.BoxButton>
             <Button
@@ -37,7 +37,7 @@ const Squads = (props) => {
           <S.SquadsIcon>
             <S.IconText>
               <span>100%</span>
-              do faturamento é reinvestido
+              do lucro é reinvestido
             </S.IconText>
           </S.SquadsIcon>
         </S.SquadsBox>

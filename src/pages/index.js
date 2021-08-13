@@ -10,9 +10,9 @@ import Awards from '../components/home/awards';
 import Carroussel from '../components/home/carroussel';
 import Cases from '../components/home/cases';
 import Conection from '../components/home/conection';
-import SocialImpact from '../components/home/socialImpact';
 import Squads from '../components/home/squads';
 import Talents from '../components/home/talents';
+import LineCases from '../components/home/linecases';
 
 // styles
 const Content = styled.div`
@@ -59,11 +59,11 @@ const Home = () => (
   <Layouts home>
     <Content>
       <Header />
-      <Cases />
-      <SocialImpact />
+      <LineCases />
       <Squads />
       <Talents />
       <Carroussel />
+      <Cases />
       <Awards />
       <Conection />
     </Content>

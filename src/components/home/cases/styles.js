@@ -6,17 +6,28 @@ export const Cases = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 5rem;
+	padding: 2rem 0 4rem;
+`;
 
-	@media (min-width: 1900px) {
-		margin-top: 8rem;
-	}
-	@media (max-width: 1440px) {
-		margin-top: 2rem;
-	}
-	@media (max-width: 480px) {
-		margin-top: 1rem;
-	}
+export const TitleCases = styled.h2`
+	margin-bottom: 3rem;
+    color: #00145D;
+    font-size: 2rem;
+    font-weight: 800;
+	text-align: center;
+	width: 50%;
+
+    @media (min-width: 2200px) {
+        font-size: 3.8rem;
+    }
+	@media (max-width: 1024px) {
+        width: 70%;
+    }
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+        width: 80%;
+        text-align: center;
+    }
 `;
 
 export const BoxCasesImages = styled.div`
