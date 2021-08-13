@@ -6,19 +6,7 @@ export const Cases = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 5rem;
-
-	@media (min-width: 1900px) {
-		margin-bottom: 8rem;
-		margin-top: -3rem;
-	}
-	@media (max-width: 1440px) {
-		margin-bottom: 5rem;
-		margin-top: -3rem;
-	}
-	@media (max-width: 768px) {
-		margin-top: 1rem;
-	}
+	padding: 2rem 0 4rem;
 `;
 
 export const TitleCases = styled.h2`
