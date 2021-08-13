@@ -85,69 +85,20 @@ export const TalentsTextTitle = styled.h2`
     font-size: 3.8rem;
     line-height: 4.5rem;
   }
-
-
-  // @media (max-width: 1440px) {
-  //   width: 90%;
-  //   font-size: 1.8rem;
-  // }
-  // @media (max-width: 768px) {
-  //   margin-left: 0;
-  //   width: 100%;
-  //   font-size: 2rem;
-  //   text-align: left;
-  // }
-  // @media (max-width: 480px) {
-  //   width: 80%;
-  //   font-size: 1.8rem;
-  // }
 `;
 
 export const TalentsTextDescription = styled.p`
    margin-top: 1rem;
    color: #272727;
-   font-weight: 400;
-   font-size: 1rem;
-   line-height: 1.5rem;
+   font: 400 1rem/1.5rem 'Usual', sans-serif;
 
    @media (min-width: 1040px) {
-      font-size: 1.2rem;
-      line-height: 1.85rem;
+      font: 400 1.2rem/1.9rem 'Usual', sans-serif;
    }
 
    @media (min-width: 2200px) {
-      font-size: 2rem;
-      line-height: 2.7rem;
+     font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
-  // margin-top: 2rem;
-  // color: #000;
-  // font-size: 1.3rem;
-  // line-height: 1.25;
-
-  // @media (min-width: 2200px) {
-  //   font-size: 1.8rem;
-  // }
-  // @media (max-width: 1440px) {
-  //   margin-top: 1.6rem;
-  //   font-size: 1.1rem;
-  // }
-  // @media (max-width: 1200px) {
-  //   margin-top: 1.2rem;
-  //   width: 90%;
-  //   font-size: 0.9rem;
-  // }
-  // @media (max-width: 768px) {
-  //   margin-top: 2rem;
-  //   width: 100%;
-  //   font-size: 1rem;
-  //   line-height: 1.58;
-  // }
-  // @media (max-width: 480px) {
-  //   margin-top: 1rem;
-  //   padding-right: 2rem;
-  //   font-size: 0.9rem;
-  //   line-height: 1.6;
-  // }
 `;
 
 export const ButtonTalents = styled.div`

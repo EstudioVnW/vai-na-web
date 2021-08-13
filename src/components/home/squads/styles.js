@@ -146,60 +146,48 @@ export const SquadsTextTitle = styled.h2`
 export const SquadsTextSubTitle = styled.p`
    padding: 0.25rem 0 1rem;
    color: #272727;
-   font-weight: 400;
-   font-size: 1rem;
-   line-height: 1.5rem;
+   font: 400 1rem/1.5rem 'Usual', sans-serif;
 
    @media (min-width: 1040px) {
-      font-size: 1.2rem;
-      line-height: 1.85rem;
       width: 90%;
+      font: 400 1.2rem/1.9rem 'Usual', sans-serif;
    }
 
    @media (min-width: 2200px) {
-      font-size: 2rem;
-      line-height: 2.7rem;
+      font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
 `;
 
 export const SquadsTextDescription = styled.p`
    margin-top: 1rem;
    color: #272727;
-   font-weight: 400;
-   font-size: 1rem;
-   line-height: 1.5rem;
+   font: 400 1rem/1.5rem 'Usual', sans-serif;
 
    @media (min-width: 1040px) {
-      font-size: 1.2rem;
-      line-height: 1.85rem;
+      font: 400 1.2rem/1.9rem 'Usual', sans-serif;
       width: 90%;
    }
 
    @media (min-width: 2200px) {
-      font-size: 2rem;
-      line-height: 2.7rem;
+      font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
 `;
 
 export const BoxTextBackDescription = styled.p`
    color: #272727;
-   font-weight: 400;
-   font-size: 1rem;
-   line-height: 1.5rem;
+   font: 400 1rem/1.5rem 'Usual', sans-serif;
 
    span {
       display: block;
    }
 
    @media (min-width: 1040px) {
-      font-size: 1.2rem;
-      line-height: 1.85rem;
+      font: 400 1.2rem/1.9rem 'Usual', sans-serif;
       width: 90%;
    }
 
    @media (min-width: 2200px) {
-      font-size: 2rem;
-      line-height: 2.7rem;
+      font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
 `;
 
