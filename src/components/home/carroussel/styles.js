@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-export const Depositions = styled.div`
+export const Depositions = styled.section`
     width: 90%;
     padding: 2rem 0;
     margin: 0 auto;

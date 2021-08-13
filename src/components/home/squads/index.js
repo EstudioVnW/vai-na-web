@@ -33,8 +33,9 @@ const Squads = () => (
       <S.SquadsText>
         <S.SquadsTextTitle>Squads estendidos e configuráveis</S.SquadsTextTitle>
         <S.SquadsTextSubTitle>
-        Entregas contínuas de design e desenvolvimento web e mobile.<br /> 
-        A escolha ideal para destravar seu backlog de baixa e média complexidade.
+          Entregas contínuas de design e desenvolvimento web e mobile.
+          <br />
+          A escolha ideal para destravar seu backlog de baixa e média complexidade.
         </S.SquadsTextSubTitle>
 
         <S.SquadsTextBack>
@@ -45,8 +46,8 @@ const Squads = () => (
           <S.BoxTextBack>
             <S.BoxTextBackTitle>MVPs ágeis e em escala</S.BoxTextBackTitle>
             <S.BoxTextBackDescription>
-            Descoberta, ideação e implementação de MVPs. Valide rapidamente a 
-            viabilidade e melhorias do seu projeto.
+              Descoberta, ideação e implementação de MVPs. Valide rapidamente a
+              viabilidade e melhorias do seu projeto.
             </S.BoxTextBackDescription>
           </S.BoxTextBack>
         </S.SquadsTextBack>
@@ -74,8 +75,8 @@ const Squads = () => (
           <S.BoxTextBack>
             <S.BoxTextBackTitle>Ecommerce PWR Vtex i/o</S.BoxTextBackTitle>
             <S.BoxTextBackDescription>
-            Implantação de lojas online, personalizadas, escaláveis 
-            utilizando a plataforma Vtex io.
+              Implantação de lojas online, personalizadas, escaláveis
+              utilizando a plataforma Vtex io.
             </S.BoxTextBackDescription>
           </S.BoxTextBack>
         </S.SquadsTextBack>
@@ -86,7 +87,7 @@ const Squads = () => (
           <S.Bold>Social Impact as a Service</S.Bold>
           {' '}
           (SIaaS)
-          possibilita a entrega de squads estendidos com um custo até 40% 
+          possibilita a entrega de squads estendidos com um custo até 40%
           mais eficiente em comparação aos integradores de tecnologia do mercado.
         </S.SquadsTextDescription>
 
