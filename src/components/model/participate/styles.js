@@ -83,7 +83,14 @@ export const BoxButton = styled.div`
         height: 4rem;
         font-weight: 400;
         border-radius: 30px;
+        transition: 0.2s;
     }
+
+    &:hover button {
+        height: 4rem;
+        transform: translatey(-5px);
+    }
+
     @media (min-width: 2200px) {
         width: 30rem;
         button {
