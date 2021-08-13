@@ -30,7 +30,7 @@ const Conection = () => (
           border="#0F2B92"
           funcAction={redirectToContact}
         >
-          Faça Parte do Movimento!
+          Conheça nosso modelo!
         </ButtonHome>
       </S.ConectionButton>
     </S.ConectionCenter>
