@@ -83,5 +83,6 @@ export const Description = styled.p`
     @media (max-width: 480px) {
         font-size: 0.8rem;
         line-height: 1.3rem;
+        margin-top: 1rem;
     }
 `;

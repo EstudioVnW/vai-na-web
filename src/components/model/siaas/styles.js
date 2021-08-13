@@ -44,6 +44,10 @@ export const SocialImpactTextSubTitle = styled.p`
 	letter-spacing: 0.42px;
 	color: #FF611E;
 	text-transform: uppercase;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 	
 	@media (min-width: 2200px) {
 		font-size: 1.8rem;
@@ -98,12 +102,13 @@ export const SocialImpactTextDescription = styled.p`
 	}
 	@media (max-width: 768px) {
 		width: 100%;
-		font-size: 1rem;
+		font-size: 1.3rem;
 		line-height: 1.58;
+		text-align: left;
 	}
 	@media (max-width: 480px) {
-		width: 90%;
-		font-size: 0.9rem;
+		width: 100%;
+		font-size: 1rem;
 		line-height: 1.7;
 		text-align: start;
 	}
