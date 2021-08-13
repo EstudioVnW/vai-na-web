@@ -118,7 +118,7 @@ export const DepositionsSlideCard = styled.div`
     justify-content: flex-end;
     padding: 1.2rem;
     width: ${(props) => (props.focus ? '42%' : '28%')};
-    min-height: ${(props) => (props.focus ? '16rem' : '11rem')};
+    min-height: ${(props) => (props.focus ? '18rem' : '11rem')};
     box-shadow: 0px 0px 22px #00000029;
     border: ${(props) => (props.focus ? '1px solid #00145d' : '1px solid #FFAC2D')};
     border-radius: 12px;

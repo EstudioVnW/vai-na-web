@@ -155,7 +155,7 @@ export const SquadsTextSubTitle = styled.h3`
    width: 68%;
    color: #272727;
    font-size: 1.3rem;
-   font-weight: 500;
+   font-weight: 400;
    line-height: 2rem;
 
    @media (min-width: 2200px) {
@@ -172,11 +172,10 @@ export const SquadsTextSubTitle = styled.h3`
       margin-top: 0.6rem;
       width: 100%;
       font-size: 1.25rem;
-      font-weight: 600;
       line-height: 1.4;
    }
    @media (max-width: 480px) {
-      font-size: 0.95rem;
+      font-size: 1rem;
       line-height: 1.5rem;
    }
 `;
@@ -185,19 +184,28 @@ export const SquadsTextDescription = styled.p`
    margin-top: 25px;
    width: 90%;
    color: #272727;
-   font-size: 1.1rem;
-   line-height: 1.6;
+   font-size: 1.3rem;
+   font-weight: 400;
+   line-height: 2rem;
 
    @media (min-width: 2200px) {
       width: 100%;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      line-height: 1.3;
+   }
+   @media (max-width: 1440px) {
+      font-size: 1.1rem;
+      line-height: 1.3;
    }
    @media (max-width: 768px) {
-      font-size: 1rem;
+      width: 100%;
+      font-size: 1.25rem;
+      line-height: 1.4;
    }
    @media (max-width: 480px) {
       width: 100%;
-      font-size: 0.8rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
    }
 `;
 
