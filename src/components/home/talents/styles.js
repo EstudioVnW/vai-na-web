@@ -214,6 +214,6 @@ export const Bold = styled.span`
 
 export const StyledLink = styled(Link)`
 	color: #0F2B92;
-	font-size: 1.125rem;
+	font-size: 1.05rem;
 	text-decoration: none;
 `;

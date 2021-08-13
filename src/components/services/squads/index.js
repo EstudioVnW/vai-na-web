@@ -26,9 +26,9 @@ const Squads = (props) => {
               color='#fbd4b2'
               background='#0F2B92'
               funcAction={redirectToConcact}
-              width="14rem"
+              width="16rem"
             >
-              Reserve seu Squad!
+              Conheça nosso modelo!
             </Button>
           </S.BoxButton>
         </S.SquadsWrap>
