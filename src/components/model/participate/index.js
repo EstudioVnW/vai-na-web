@@ -1,11 +1,13 @@
 import React from 'react';
+import { navigate } from 'gatsby';
+
 import * as S from './styles';
 
 import Button from '../../button/Button';
 
 const redirectToContact = () => {
     navigate('/reserve-seu-squad/');
-  };
+}
 
 const Participate = () => (
 
