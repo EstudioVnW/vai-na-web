@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 
 // Components
 import Layouts from '../components/layout';
+import SEO from '../components/SEO';
+
 import Header from '../components/services/header';
 import Cards from '../components/services/cards';
 import HowWeWork from '../components/services/how-we-work';
@@ -47,6 +49,7 @@ export const query = graphql`
 
 const Services = () => (
   <Layouts>
+    <SEO />
     <Header />
     <SquadsInfo />
     <Cards />
