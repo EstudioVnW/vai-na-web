@@ -383,7 +383,8 @@ export const LittleCardCientist = styled.div`
         transform: scale(1.025);
     }
 
-    div {  
+    ${CardContainer} {
+        padding: 1rem 1.5rem;
         color: #00145D;
     }
 
@@ -407,7 +408,8 @@ export const LittleCardVtex = styled.div`
         transform: scale(1.025);
     }
 
-    div {  
+    ${CardContainer} {
+        padding: 1rem 1.5rem;
         color: #00145D;
     }
 
