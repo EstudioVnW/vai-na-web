@@ -93,7 +93,7 @@ export const TalentsTextDescription = styled.p`
    font: 400 1rem/1.5rem 'Usual', sans-serif;
 
    @media (min-width: 1040px) {
-      font: 400 1.2rem/1.9rem 'Usual', sans-serif;
+      font: 400 1rem/1.6rem 'Usual', sans-serif;
    }
 
    @media (min-width: 2200px) {

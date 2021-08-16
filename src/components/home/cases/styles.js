@@ -20,7 +20,7 @@ export const TitleCases = styled.h2`
   font-weight: 800;
   text-align: center;
   padding: 0 2rem;
-  width: 40%;
+  width: 50%;
 
   @media (max-width: 768px) {
     width: 100%;
