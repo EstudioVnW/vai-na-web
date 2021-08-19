@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-export const Squads = styled.div`
+export const Squads = styled.section`
    width: 100%;
    padding: 4rem 0 4rem;
 
@@ -131,81 +131,63 @@ export const SquadsText = styled.div`
 
 export const SquadsTextTitle = styled.h2`
    color: #00145D;
-   font-size: 2rem;
+   font-size: 1.8rem;
    font-weight: 800;
-   letter-spacing: -1px;
+
+   @media (min-width: 1040px) {
+      font-size: 2rem;
+   }
 
    @media (min-width: 2200px) {
       font-size: 3.8rem;
    }
-   @media (max-width: 1440px) {
-      font-size: 1.8rem;
-   }
-   @media (max-width: 768px) {
-      font-size: 2rem;
-      line-height: 1.1;
-   }
-   @media (max-width: 480px) {
-      font-size: 2rem;
-   }
 `;
 
-export const SquadsTextSubTitle = styled.h3`
-   margin-top: 5px;
-   width: 68%;
+export const SquadsTextSubTitle = styled.p`
+   padding: 0.25rem 0 1rem;
    color: #272727;
-   font-size: 1.3rem;
-   font-weight: 400;
-   line-height: 2rem;
+   font: 400 1rem/1.5rem 'Usual', sans-serif;
+
+   @media (min-width: 1040px) {
+      width: 90%;
+      font: 400 1rem/1.6rem 'Usual', sans-serif;
+   }
 
    @media (min-width: 2200px) {
-      width: 90%;
-      font-size: 2rem;
-      line-height: 1.3;
-   }
-   @media (max-width: 1440px) {
-      font-size: 1.1rem;
-      width: 88%;
-      line-height: 1.3;
-   }
-   @media (max-width: 768px) {
-      margin-top: 0.6rem;
-      width: 100%;
-      font-size: 1.25rem;
-      line-height: 1.4;
-   }
-   @media (max-width: 480px) {
-      font-size: 1rem;
-      line-height: 1.5rem;
+      font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
 `;
 
 export const SquadsTextDescription = styled.p`
-   margin-top: 25px;
-   width: 90%;
+   margin-top: 1rem;
    color: #272727;
-   font-size: 1.3rem;
-   font-weight: 400;
-   line-height: 2rem;
+   font: 400 1rem/1.5rem 'Usual', sans-serif;
+
+   @media (min-width: 1040px) {
+      font: 400 1rem/1.6rem 'Usual', sans-serif;
+      width: 90%;
+   }
 
    @media (min-width: 2200px) {
-      width: 100%;
-      font-size: 2rem;
-      line-height: 1.3;
+      font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
-   @media (max-width: 1440px) {
-      font-size: 1.1rem;
-      line-height: 1.3;
+`;
+
+export const BoxTextBackDescription = styled.p`
+   color: #272727;
+   font: 400 1rem/1.5rem 'Usual', sans-serif;
+
+   span {
+      display: block;
    }
-   @media (max-width: 768px) {
-      width: 100%;
-      font-size: 1.25rem;
-      line-height: 1.4;
+
+   @media (min-width: 1040px) {
+      font: 400 1rem/1.6rem 'Usual', sans-serif;
+      width: 90%;
    }
-   @media (max-width: 480px) {
-      width: 100%;
-      font-size: 1rem;
-      line-height: 1.5rem;
+
+   @media (min-width: 2200px) {
+      font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
 `;
 
@@ -232,7 +214,7 @@ export const SquadsTextBack = styled.div`
 `;
 
 export const ImageSquadBack = styled.figure`
-   margin-right: 1.3rem;
+   margin-right: 1rem;
 `;
 
 export const ImageBack = styled.img`
@@ -262,11 +244,12 @@ export const BoxTextBack = styled.div`
    }
 `;
 
+
 export const BoxTextBackTitle = styled.h4`
    color: #272727;
-   font-size: 1.5rem;
+   font-size: 1.2rem;
    font-weight: 700;
-
+   
    @media (max-width: 1440px){
       font-size: 1.2rem;
    }
@@ -290,10 +273,6 @@ export const BoxTextBackDescription = styled.p`
    @media (max-width: 1440px){
       font-size: 1rem;
       line-height: 1.5;
-   }
-   @media (max-width: 768px) {
-      font-size: 1rem; 
-      line-height: 1.5;  
    }
    @media (max-width: 480px) {
       font-size: 0.85rem;
@@ -333,7 +312,7 @@ export const ImageVtexMobile = styled.img`
 `;
 
 export const StyledLink = styled(Link)`
-	color: #0F2B92;
-	font-size: 1.125rem;
-	text-decoration: none;
+   color: #0F2B92;
+   font-size: 1.125rem;
+   text-decoration: none;
 `;

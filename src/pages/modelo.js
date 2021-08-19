@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import Layouts from '../components/layout';
+import SEO from '../components/SEO';
 import Header from '../components/model/header';
 import Intro from '../components/model/intro';
 import Quote from '../components/model/quote';
@@ -12,6 +13,7 @@ import Participate from '../components/model/participate';
 
 const Model = () => (
   <Layouts>
+    <SEO />
     <Header />
     <Intro />
     <Quote />
