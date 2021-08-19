@@ -263,13 +263,11 @@ export const BoxTextBack = styled.div`
 `;
 
 export const BoxTextBackTitle = styled.h4`
-   margin-bottom: 0.5rem;
    color: #272727;
    font-size: 1.5rem;
    font-weight: 700;
 
    @media (max-width: 1440px){
-      margin-bottom: 0.5rem;
       font-size: 1.2rem;
    }
 `;
@@ -278,6 +276,7 @@ export const BoxTextBackDescription = styled.p`
    color: #000;
    font-size: 1.1rem;
 	line-height: 1.6rem;
+   margin-top: 0.5rem;
 
    span {
       display: block;
@@ -304,6 +303,33 @@ export const BoxTextBackDescription = styled.p`
 
 export const Bold = styled.span`
    font-weight: 600;
+`;
+
+export const BoxTitleImage = styled.div`
+   display: flex;
+   align-items: baseline;
+   gap: 1rem;
+`;
+
+export const BoxImageVtex = styled.div`
+   width: 35%;
+   height: 100%;
+`;
+
+export const ImageVtex = styled.img`
+   display: flex;
+
+   @media (max-width: 768px) {
+      display: none;
+   }
+`;
+
+export const ImageVtexMobile = styled.img`
+   display: none;
+
+@media (max-width: 768px) {
+   display: flex;
+}
 `;
 
 export const StyledLink = styled(Link)`

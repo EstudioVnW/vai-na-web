@@ -313,6 +313,17 @@ export const CaseImg = styled.img`
     width: 100%;
 `;
 
+export const ImageSmartphone = styled.img`
+    width: 20%;
+    left: 80%;
+    top: 15%;
+    position: absolute;
+
+    @media (min-width: 2200px) {
+        top: 12%;
+    }
+`;
+
 export const MobileImg = styled.img`
     display: none;
     

@@ -56,23 +56,10 @@ export const ConectionTitle = styled.h1`
 `;
 
 export const ConectionLineImage = styled.img`
-  // width: 100%;
-
-  // @media (max-width: 768px) {
-  //   width: 90%;
-  // }
 `;
 
 export const ConectionButton = styled.div`
   display: flex;
   align-items: center;
   height: 5rem;
-
-  // @media (max-width: 480px) {
-  //   button {
-  //     width: 14rem;
-  //     height: 2.7rem;
-  //     font-size: 0.9rem;
-  //   }
-  // }
 `;

@@ -6,10 +6,13 @@ import Sirio from '../../../images/images/sirio.png';
 import Proadi from '../../../images/images/proadi.png';
 import Reg from '../../../images/images/Reg.png';
 import Its from '../../../images/images/its.png';
-import Lai from '../../../images/images/lai.gif';
+import Lai from '../../../images/images/Gif_final_LAI.gif';
 import Quickcash from '../../../images/images/QuickCash.png';
-import QuickcashDesktop from '../../../images/images/quickcashDesktop.png';
-import QuickcashMobile from '../../../images/images/quickcashMobile.png';
+import QuickcashGif from '../../../images/images/Gif_final_QC.gif';
+import CelularQuickcash from '../../../images/images/Celular_quickcash.png';
+
+// import QuickcashDesktop from '../../../images/images/quickcashDesktop.png';
+// import QuickcashMobile from '../../../images/images/quickcashMobile.png';
 import Votorantim from '../../../images/images/votorantim.png';
 import VotorantimDesktop from '../../../images/images/votorantimDesktop.png';
 import VotorantimMobile from '../../../images/images/votorantimMobile.png';
@@ -112,8 +115,10 @@ const TesteCases = () => (
                     </S.Client>
                 </S.InfoBox>
                 <S.ImgBox>
-                    <S.DesktopImg src={QuickcashDesktop} alt="" />
-                    <S.MobileImg src={QuickcashMobile} alt="" />
+                    {/* <S.DesktopImg src={QuickcashDesktop} alt="" />
+                    <S.MobileImg src={QuickcashMobile} alt="" /> */}
+                    <S.ImageSmartphone src={CelularQuickcash} />
+                    <S.CaseImg src={QuickcashGif} alt="" />
                 </S.ImgBox>
             </S.Case>
 

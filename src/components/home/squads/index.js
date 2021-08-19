@@ -7,6 +7,9 @@ import PeoplesSquad from '../../../images/images/VaiNaWeb-196.png';
 import Back from '../../../images/images/Group11078.svg';
 import Canais from '../../../images/images/Group10971.svg';
 import MVPs from '../../../images/images/Group10972.svg';
+import Vtex from '../../../images/images/Logo-Powered-By-Vtex-(home-serviços).png';
+import VtexMobile from '../../../images/images/Logo-Powered-By-Vtex-(home-mobile).png';
+
 
 const redirectToContact = () => {
   navigate('/reserve-seu-squad/');
@@ -72,7 +75,14 @@ const Squads = () => (
           </S.ImageSquadBack>
 
           <S.BoxTextBack>
-            <S.BoxTextBackTitle>Ecommerce PWR Vtex i/o</S.BoxTextBackTitle>
+            <S.BoxTitleImage>
+              <S.BoxTextBackTitle>E-commerce</S.BoxTextBackTitle>
+              <S.BoxImageVtex>
+                <S.ImageVtex src={Vtex} />
+                <S.ImageVtexMobile src={VtexMobile} />
+              </S.BoxImageVtex>
+            </S.BoxTitleImage>
+            
             <S.BoxTextBackDescription>
             Implantação de lojas online, personalizadas, escaláveis 
             utilizando a plataforma Vtex io.
