@@ -4,8 +4,9 @@ import { graphql } from 'gatsby';
 
 // Components
 import Layouts from '../components/layout';
-import Header from '../components/home/header';
+import SEO from '../components/SEO';
 
+import Header from '../components/home/header';
 import Awards from '../components/home/awards';
 import Carroussel from '../components/home/carroussel';
 import Cases from '../components/home/cases';
@@ -57,6 +58,7 @@ export const query = graphql`
 
 const Home = () => (
   <Layouts home>
+    <SEO />
     <Content>
       <Header />
       <LineCases />

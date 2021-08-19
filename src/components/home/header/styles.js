@@ -48,9 +48,9 @@ export const CardHome = styled.div`
 
   @media (max-width: 768px){
     margin: 0;
-    padding: 0.55rem 1.2rem 1.2rem;
+    padding: 0 1.2rem 1.2rem;
     left: 5%;
-    width: 70%;
+    width: 75%;
     top: 70%;
   }
  `;
@@ -59,6 +59,7 @@ export const BoxCircle = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
 export const Circles = styled.div`
   display: flex;
   justify-content: space-between;
@@ -71,6 +72,7 @@ export const Circles = styled.div`
     width: 2.7rem;
   }
 `;
+
 export const Circle = styled.div`
   display: flex;
   width: 17px;
@@ -89,6 +91,7 @@ export const Circle = styled.div`
     height: 10px;
   }
 `;
+
 export const TextCircle = styled.p`
   display: flex;
   margin-top: 15px;
@@ -99,10 +102,12 @@ export const TextCircle = styled.p`
   @media (min-width: 2200px) {
     font-size: 2rem;
   }
-    @media (max-width: 1200px){
-     font-size: 0.8rem;
-   }
+
+  @media (max-width: 1200px){
+    font-size: 0.8rem;
+  }
 `;
+
 export const Line = styled.div`
   display: flex;
   background: #FFAC2D;
@@ -148,20 +153,21 @@ export const SubTitle = styled.h2`
   @media (min-width: 2200px) {
     font-size: 2.9rem;
   }
+
   @media (max-width: 1440px){
     font-size: 1.4rem;
   }
+
   @media (max-width: 1200px){
-     font-size: 1rem;
-    }
-  @media (max-width: 768px) {
-    margin-top: 2px;
-    font-weight: 500;
+    font-size: 1rem;
   }
-    @media (max-width: 480px) {
-     font-size: 1.3rem;
-    line-height: 1.4;
-   }
+  
+  @media (max-width: 768px) {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.75rem;
+  }
 `;
 
 export const ImageEstudio = styled.img`
