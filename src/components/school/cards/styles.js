@@ -310,7 +310,7 @@ export const PDescVtex = styled.p`
         line-height: 1.8rem;
     }
     @media (max-width: 480px) {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         line-height: 1rem;
     }
     @media (max-width: 375px) {
@@ -417,5 +417,36 @@ export const LittleCardVtex = styled.div`
         div h3{  
             width: 65%;
         }
+    }
+`;
+export const BoxTitleVtex = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100%;
+`;
+export const DevTxtLittleVtex = styled.h3`
+    width: ${props => props.width || '60%'};
+    font: 700 1.4rem 'Usual', sans-serif;
+    margin-bottom: 1rem;
+
+    @media (min-width: 2200px) {
+        font-size: 2.2rem;
+        width: 15rem;
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 1.5rem;
+    }
+    @media (max-width: 480px) {
+        margin-bottom: 0.8rem;
+        font-size: 1.1rem;
+        line-height: 1rem;
+        max-width: 45%;
+    }
+`;
+export const ImgVtex = styled.img`
+    width: 25%;
+
+    @media (max-width: 480px) {
+        width: 15%;
     }
 `;

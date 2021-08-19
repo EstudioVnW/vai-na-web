@@ -10,6 +10,7 @@ import Sticker2 from '../../../images/images/Group7286.svg';
 import Sticker3 from '../../../images/images/Group7288.svg';
 import Sticker4 from '../../../images/images/noun_Data_2723012.svg';
 import Sticker5 from '../../../images/images/noun_requirements_2927751.svg';
+import ImageVtex from '../../../images/images/LogoPoweredByVtex(carreiras).png';
 
 const CardsSchool = () => {
     const [pos, setPos] = useState({ posX: 0 })
@@ -148,7 +149,11 @@ const CardsSchool = () => {
                                         </S.CardDetail>
 
                                         <S.CarreiraTxt>Especialização</S.CarreiraTxt>
-                                        <S.DevTxtLittle width='250px'>E-commerce Vtex i/o</S.DevTxtLittle>
+                                        <S.BoxTitleVtex>
+                                            <S.DevTxtLittleVtex width='150px'>E-commerce</S.DevTxtLittleVtex>
+                                            <S.ImgVtex src={ImageVtex} />
+                                        </S.BoxTitleVtex>
+                                        
                                         <S.PDescVtex>
                                         <S.Bold>Desenvolve lojas virtuais robustas e escaláveis. </S.Bold>  
                                         É o profissional responsável por criar e implementar lojas virtuais 

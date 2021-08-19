@@ -57,7 +57,7 @@ export const Cards = styled.div`
 
 export const Card = styled.div`
   position: relative;
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   width: 32.7%;
   height: 32.875rem;
   border-radius: 20px;
@@ -108,7 +108,7 @@ export const CardCircle = styled.div`
 `;
 
 export const CardText = styled.p`
-  padding: 2rem 9% 0 0;
+  padding: 2.2rem 9% 0 0;
   font: 300 1.3rem 'Usual', sans-serif;
   line-height: 1.6rem;
   transition: 0.5s ease;
@@ -158,4 +158,15 @@ export const IconBg = styled.figure`
 export const CardIcon = styled.img`
   padding: 25%;
   width: 100%;
+`;
+
+export const CardVtexImage = styled.div`
+  width: 100%;
+  padding-top: 9rem;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+export const ImageVtex = styled.img`
+  max-width: 60%;
 `;
