@@ -30,6 +30,7 @@ export const Wrap = styled.div`
 `;
 
 export const SquadsImageButton = styled.div`
+   position: relative;
    width: 40%;
    display: flex;
    flex-direction: column;
@@ -44,6 +45,8 @@ export const SquadsImageButton = styled.div`
          border-radius: 3rem;
       }
       @media (max-width: 1440px) {
+         position: absolute;
+         bottom: 16%;
          width: 14rem;
          height: 3rem;
          font-size: 1.1rem;
