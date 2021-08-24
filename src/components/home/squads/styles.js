@@ -173,24 +173,6 @@ export const SquadsTextDescription = styled.p`
    }
 `;
 
-export const BoxTextBackDescription = styled.p`
-   color: #272727;
-   font: 400 1rem/1.5rem 'Usual', sans-serif;
-
-   span {
-      display: block;
-   }
-
-   @media (min-width: 1040px) {
-      font: 400 1rem/1.6rem 'Usual', sans-serif;
-      width: 90%;
-   }
-
-   @media (min-width: 2200px) {
-      font: 400 2rem/2.7rem 'Usual', sans-serif;
-   }
-`;
-
 export const SquadsTextBack = styled.div`
    display: flex;
    align-items: center;
@@ -250,8 +232,8 @@ export const BoxTextBackTitle = styled.h4`
    font-size: 1.2rem;
    font-weight: 700;
    
-   @media (max-width: 1440px){
-      font-size: 1.2rem;
+   @media (min-width: 2200px){
+      font-size: 2rem;
    }
 `;
 

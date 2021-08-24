@@ -57,10 +57,6 @@ export const FormText = styled.p`
         width: auto;
         font-size: 1.3rem;
     }
-
-    /* @media (max-width: 490px) {
-        font-size: 0.95em;
-    } */
 `;
 
 export const Form = styled.form`
