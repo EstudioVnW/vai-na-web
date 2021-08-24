@@ -7,7 +7,7 @@ import PeoplesSquad from '../../../images/images/VaiNaWeb-196.png';
 import Back from '../../../images/images/Group11078.svg';
 import Canais from '../../../images/images/Group10971.svg';
 import MVPs from '../../../images/images/Group10972.svg';
-import Vtex from '../../../images/images/Logo-Powered-By-Vtex-(home-serviços).png';
+import Vtex from '../../../images/images/Logo-Powered-By-Vtex(home-serviços).png';
 import VtexMobile from '../../../images/images/Logo-Powered-By-Vtex-(home-mobile).png';
 
 

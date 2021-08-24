@@ -46,7 +46,6 @@ export const SquadsImageButton = styled.div`
       }
       @media (max-width: 1440px) {
          position: absolute;
-         bottom: 16%;
          width: 14rem;
          height: 3rem;
          font-size: 1.1rem;

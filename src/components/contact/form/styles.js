@@ -191,7 +191,7 @@ export const ButtonReload = styled.button`
 `;
 
 export const TextError = styled.p`
-    width: 40%;
+    width: 65%;
     font-size: 0.8rem;
     color: #272727;
     font-weight: 600;
@@ -200,31 +200,37 @@ export const TextError = styled.p`
         font-size: 0.9rem;
     }
 
-    @media (max-width: 1024px) {
-        width: 34%;
-        font-size: 0.6rem;
-    }
-
     @media (max-width: 425px) {
-        width: 100%;
-        margin-top: 0.5rem;
+        width: 65%;
+        font-size: 0.8rem;
     }
 `;
 
 export const FormBtn = styled.div`
     display: flex;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 2rem;
 
+    @media (min-width: 2200px) {
+        width: 65%;
+    }
+
+    @media (max-width: 768px) {
+        width: 80%;
+    }
+
     @media (max-width: 425px) {
         flex-wrap: wrap;
+        width: 100%;
     }
 `;
 
 
 export const Btn = styled.button`
-    margin-top: 2.4rem;
+    /* margin-top: 2.4rem; */
     padding: 1rem 0 0.8rem;
     width: 8.8rem;
     font-weight: 300;
