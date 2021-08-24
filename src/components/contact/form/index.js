@@ -143,11 +143,12 @@ const Form = () => {
             <S.FormBtn>
               { sendingForm === false || errors.name || errors.email || errors.tell || errors.message
               ? <>
-              <S.MessageFalha>Falha no envio!</S.MessageFalha>
+              {/* <S.MessageFalha>Falha no envio!</S.MessageFalha>
               <S.ButtonReload>
                 <img src={reload} alt="" />
-              </S.ButtonReload>
-              <S.TextError>Não foi possível completar seu envio, clique no ícone para reenviar.</S.TextError>
+              </S.ButtonReload> */}
+              <S.Btn isLoading={sendingForm}>{sendingForm ? 'Enviando' : 'Enviar!'}</S.Btn>
+              <S.TextError>Alguns campos estão vazios. Por favor, preencher todos os campos para enviar.</S.TextError>
               </> 
               : <S.Btn isLoading={sendingForm}>{sendingForm ? 'Enviando' : 'Enviar!'}</S.Btn>
               }
