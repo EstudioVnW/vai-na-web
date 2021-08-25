@@ -42,10 +42,10 @@ const Form = () => {
       /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
     )
 
-    const errorName = !formContent?.name?.length && 'Nome é obrigatório';
-    const errorEmail = !formContent?.email?.length ? 'Email é obrigatório' : !pattern.test(formContent.email) && 'Email inválido';
-    const errorTel = !formContent?.tel?.length ? 'Telefone é obrigatório' : formContent?.tel?.replace(/\D+/g, '').length < 11 && 'Telefone inválido';
-    const errorMessage = !formContent?.message?.length && 'Mensagem é obrigatória';
+    const errorName = !formContent?.name?.length && 'Campo não preenchido';
+    const errorEmail = !formContent?.email?.length ? 'Campo não preenchido' : !pattern.test(formContent.email) && 'Email inválido';
+    const errorTel = !formContent?.tel?.length ? 'Campo não preenchido' : formContent?.tel?.replace(/\D+/g, '').length < 11 && 'Telefone inválido';
+    const errorMessage = !formContent?.message?.length && 'Campo não preenchido';
 
     if (!errorName && !errorEmail && !errorTel && !errorMessage) {
       postForm();
@@ -204,11 +204,12 @@ const Form = () => {
               { sendingForm === false || errors.name || errors.email || errors.tell || errors.message
                 ?
                   <>
-                    <S.Btn isLoading={sendingForm}>
-                      {sendingForm ? 'Enviando' : 'Enviar!'}
-                    </S.Btn>
+                    <S.BtnError>
+                      Falha no envio
+                    </S.BtnError>
                     <S.TextError>
-                      Alguns campos estão vazios. Por favor, preencher todos os campos para enviar.
+                      Alguns campos estão vazios. Por favor, preencher todos 
+                      os campos para enviar.
                     </S.TextError>
                   </>
                 :

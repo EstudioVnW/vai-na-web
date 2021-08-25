@@ -166,43 +166,49 @@ export const MessageFalha = styled.span`
         padding: 1.5rem 1.875rem;
     }
 `;
-export const ButtonReload = styled.button`
-    width: 3.5rem;
-    height: 3.5rem;
-    margin: 0 1.375rem 0 0.75rem;
-    border: 2px solid #FFAC2D;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FFAC2D;
+// export const ButtonReload = styled.button`
+//     width: 3.5rem;
+//     height: 3.5rem;
+//     margin: 0 1.375rem 0 0.75rem;
+//     border: 2px solid #FFAC2D;
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: #FFAC2D;
 
-    img{
-        width: 70%;
-    }
+//     img{
+//         width: 70%;
+//     }
 
-    @media (min-width: 2560px) {
-        width: 5rem;
-        height: 5rem;
-    }
-    @media (min-width: 1024px) {
-        margin: 0 1rem 0 0.75rem;
-    }
-`;
+//     @media (min-width: 2560px) {
+//         width: 5rem;
+//         height: 5rem;
+//     }
+//     @media (min-width: 1024px) {
+//         margin: 0 1rem 0 0.75rem;
+//     }
+// `;
 
 export const TextError = styled.p`
-    width: 65%;
+    width: 50%;
     font-size: 0.8rem;
     color: #272727;
     font-weight: 600;
 
-    @media (max-width: 2560px) {
+    @media (min-width: 2200px) {
         font-size: 0.9rem;
+        width: 60%;
+    }
+
+    @media (max-width: 768px) {
+        width: 65%;
     }
 
     @media (max-width: 425px) {
-        width: 65%;
+        width: 100%;
         font-size: 0.8rem;
+        margin-top: 0.5rem;
     }
 `;
 
@@ -228,6 +234,23 @@ export const FormBtn = styled.div`
     }
 `;
 
+export const BtnError = styled.button`
+    /* margin-top: 2.4rem; */
+    padding: 1rem 1.5rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #FDE7A9;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #aaa;
+    border: none;
+    outline: none;
+    background: #FF611E;
+
+    @media (max-width: 768px) {
+        font-size: 1em;
+    }
+    
+`;
 
 export const Btn = styled.button`
     /* margin-top: 2.4rem; */
@@ -235,12 +258,12 @@ export const Btn = styled.button`
     width: 8.8rem;
     font-weight: 300;
     font-size: 1.5rem;
-    color: #fed5b2;
+    color: ${props => props.isError ? '#FDE7A9' : '#FED5B2' };
     border-radius: 30px;
     box-shadow: 0 0 10px #aaa;
     border: none;
-    background: #0f2b92;
     outline: none;
+    background: ${props => props.isError ? '#ff611e' : '#0F2B92' };
 
      ${({ isLoading }) => isLoading && css`
         border: 1px solid #00145D;
