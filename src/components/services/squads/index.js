@@ -9,7 +9,7 @@ import squadsImg from '../../../images/images/squadsImg.png';
 
 const Squads = (props) => {
   const redirectToConcact = () => {
-    navigate('/reserve-seu-squad/');
+    navigate('/modelo/');
   }
   return (
     <S.SquadsContainer>
