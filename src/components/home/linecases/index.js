@@ -122,7 +122,7 @@ const lineCases = () => (
         />
       </S.BoxImage>
     </S.BoxImagesCases>
-    
+
   </S.LineCases>
 );
 

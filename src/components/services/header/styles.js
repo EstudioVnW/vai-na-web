@@ -1,3 +1,4 @@
+/* eslint-disable no-tabs */
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.section`
@@ -10,15 +11,18 @@ export const HeaderContainer = styled.section`
 	@media (max-width: 1366px) {
 		align-items: flex-end;
 	}
+
 	@media (max-width: 1024px) {
 		align-items: center;
 		margin-top: 1rem;
 		height: 70vh;
 	}
+
 	@media (max-width: 768px) {
 		margin-top: 8rem;
 		height: 100vh;			
 	}
+	
 	@media (max-width: 425px) {
 		height: 75vh;
 	}
@@ -36,9 +40,11 @@ export const HeaderWrap = styled.div`
 		height: 60%;
 		width: 90%;
 	}
+
 	@media (max-width: 768px) {
 		height: 70%;
 	}
+
 	@media (max-width: 425px) {
 		height: 90%;
 	}
@@ -52,12 +58,12 @@ export const HImgBox = styled.figure`
 	box-shadow: 0 0 10px 10px rgb(232, 235, 245);
 
 	@media (max-width: 790px) {
-	display: block;
-	width: 95%;
-}
+		display: block;
+		width: 95%;
+	}
 `;
 
-export const HImg = styled.img `
+export const HImg = styled.img`
 	width: 100%;
 	transform: scale(1.040);
 	transition: transform 0.2s;
@@ -73,7 +79,7 @@ export const HImg = styled.img `
 			transform: scale(1.25)
 		}
 	}
-`
+`;
 
 export const HDescription = styled.p`
 	font: 300 1.3rem sans-serif;
@@ -130,10 +136,12 @@ export const HCard = styled.div`
 	@media (max-width: 1366px) {
 		bottom: 20%;
 	}
+
 	@media (max-width: 790px) {
 		bottom: 73%;
 		padding: 0.4rem;
 	}
+
 	@media (max-width: 425px) {
 		bottom: 70%;
 		width: 70%;
@@ -173,11 +181,11 @@ export const HCardText = styled.h1`
 	width: 98%;
 	font: 800 2.6rem 'Usual', sans-serif;
 	color: #00145d;
-	
 
 	@media (max-width: 1024px) {
 		font-size: 2rem;
 	}
+
 	@media (max-width: 425px) {
 		font-size: 1.2rem;
 		padding: 0.5rem 0.5rem;

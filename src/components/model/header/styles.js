@@ -11,9 +11,11 @@ export const HeaderContainer = styled.header`
     @media (min-width: 2200px) {
         height: 30rem;
     }
+
     @media (max-width: 1440px) { 
         height: 23rem;
     }
+
     @media (max-width: 768px) {
         padding: 10rem 0 2rem;
         height: 100vh;
@@ -21,6 +23,7 @@ export const HeaderContainer = styled.header`
             #FED5B2 0%, #FED5B2 60%,
             transparent 60%, transparent 100%);
     }
+
     @media (max-width: 480px) {
         padding-top: 9rem;
     }
@@ -49,6 +52,7 @@ export const Header = styled.section`
     @media (max-width: 768px) {
         width: 68%;
     }
+
     @media (max-width: 480px) {
         margin: 0 auto;
         width: 64%;
@@ -64,9 +68,11 @@ export const HeaderTitle = styled.h1`
     @media (min-width: 2200px) {
         font-size: 4rem;
     }
+
     @media (max-width: 768px) {
         margin-bottom: 0.4rem;
     }
+
     @media (max-width: 480px) {
         font-size: 2.4em;
         line-height: 1.1;
@@ -83,9 +89,11 @@ export const TitleBar = styled.span`
     @media (min-width: 2200px) {
         font-size: 4rem;
     }
+
     @media (max-width: 768px) {  
         left: -12%;
     }
+
     @media (max-width: 480px) {
         top: -4%;
         left: -16%;
@@ -98,6 +106,7 @@ export const HeaderText = styled.p`
     @media (min-width: 2200px) {
         font-size: 2.2rem;
     }
+
     @media (max-width: 480px) {
         font-size: 1em;
     }
@@ -112,14 +121,17 @@ export const HeaderImage = styled.img`
     @media (min-width: 1700px) {  
         width: 60rem;
     }
+
     @media (min-width: 2200px) {  
         width: 90rem;
     }
+
     @media (max-width: 1024px) {
         top: 50%;
         right: -6%;
         width: 66%;
     }
+
     @media (max-width: 768px) {
         display: none;
     }
@@ -134,6 +146,7 @@ export const HeaderImageMobile = styled.img`
         display: block;
         top: 15%;
     }
+
     @media (max-width: 480px) { 
         top: 17%;
     }
@@ -146,6 +159,7 @@ export const DownArrow = styled.img`
     @media (max-width: 768px) {
         display: block;
     }
+
     @media (max-width: 480px) {
         width: 1rem;
     }

@@ -12,8 +12,8 @@ export const InfoContainer = styled.section`
     text-align: center;
   }
 `;
-  
-export const Wrap = styled.div `
+
+export const Wrap = styled.div`
   width: 85%;
   margin: 0 auto;
 
@@ -21,7 +21,6 @@ export const Wrap = styled.div `
     width: 90%;
   }
 `;
-
 
 export const InfoText = styled.p`
   font: 400 1.3rem 'Usual', sans-serif;
@@ -63,5 +62,3 @@ export const InfoImgMobile = styled.img`
     display: block;
   }
 `;
-
-

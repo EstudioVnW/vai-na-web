@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Conection = styled.div`
   display: flex;
   justify-content: space-between;
+
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -10,6 +11,7 @@ export const Conection = styled.div`
 
 export const ImagePeoples = styled.img`
   max-width: 30%;
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -17,6 +19,7 @@ export const ImagePeoples = styled.img`
 
 export const ImagePeoplesResponsive = styled.img`
   display: none;
+
   @media (max-width: 768px) {
     display: flex;
     width: 100%;
@@ -36,13 +39,16 @@ export const ConectionTitle = styled.h1`
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
+  
   @media (max-width: 1440px){
     font-size: 2.3rem;
   }
+
   @media (max-width: 768px) {
     width: 90%;
     font-size: 2.25rem;
   }
+
   @media (max-width: 425px) {
     font-size: 1.25rem;
   }
@@ -55,8 +61,4 @@ export const ConectionButton = styled.div`
   display: flex;
   align-items: center;
   height: 5rem;
-<<<<<<< Updated upstream
 `;
-=======
-`;
->>>>>>> Stashed changes

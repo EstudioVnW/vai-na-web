@@ -29,7 +29,7 @@ const Conection = () => (
           background="#0F2B92"
           border="#0F2B92"
           funcAction={redirectToContact}
-          colorHover='#FFF'
+          colorHover="#FFF"
         >
           Conheça nosso modelo!
         </ButtonHome>

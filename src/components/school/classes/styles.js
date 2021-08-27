@@ -11,6 +11,7 @@ export const Container = styled.div`
         margin-bottom: 30rem;
         min-height: 85rem;
     }
+
     @media (max-width: 480px) {
         margin: 0;
     }
@@ -37,6 +38,7 @@ export const Title = styled.h2`
     @media (min-width: 2200px) {
         font-size: 3.8rem;
     }
+
     @media (max-width: 480px) {
         margin: 2rem 0;
         width: 80%;
@@ -53,14 +55,17 @@ export const BoxTask = styled.div`
     @media (min-width: 2200px) {
         max-width: 100%;
     }
+
     @media (max-width: 1200px) {
         width: 77%;
     }
+
     @media (max-width: 900px){
         width: 100%;
         flex-wrap: wrap;
         justify-content: center;
     }
+
     @media (max-width: 480px){
         flex-direction: column;
     }
@@ -75,6 +80,7 @@ export const BoxTaskDown = styled(BoxTask)`
         margin-top: 3rem;
         max-width: 100%;
     }
+
     @media (max-width: 900px){
         margin-top: 1rem;
     }
@@ -91,6 +97,7 @@ export const Task = styled.figure`
     @media (min-width: 2200px) {
         width: 20rem;
     }
+
     @media (max-width: 900px){
         margin-bottom: 2.5rem;
         
@@ -115,6 +122,7 @@ export const Paragraph = styled.figcaption`
         width: 95%;
         font-size: 1.8rem;
     }
+
     @media (max-width: 480px) {
         width: 85%;
     }
@@ -135,9 +143,11 @@ export const BoxVnWSchool = styled.figure`
         top: 72%;
         width: 60%;
     }
+
     @media (max-width: 1200px) {
         width: 70%;
     }
+
     @media (max-width: 900px){
         position: relative;
         width: 100%;

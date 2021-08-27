@@ -11,9 +11,11 @@ export const Depositions = styled.section`
         padding: 5rem 0;
         width: 80%;
     }
+
     @media (max-width: 1024px) {
         width: 100%;
     }
+
     @media (max-width: 768px) {
         padding: 4rem 0;
     }
@@ -29,6 +31,7 @@ export const DepositionsText = styled.div`
     @media (min-width: 2200px) {
         margin: 0 auto 10rem;
     }
+
     @media (max-width: 768px) {
         margin: 0 auto;
         width: 100%;
@@ -44,11 +47,13 @@ export const DepositionsTitle = styled.h2`
     @media (min-width: 2200px) {
         font-size: 3.8rem;
     }
+
     @media (max-width: 768px) {
         font-size: 1.8rem;
         width: 80%;
         text-align: center;
     }
+
     @media (max-width: 480px) {
         font-size: 1.8rem;
     }
@@ -63,9 +68,11 @@ export const DepositionsSubTitle = styled.h3`
     @media (min-width: 2200px) {
         font-size: 2.2rem;
     }
+
     @media (max-width: 1440px) {
         font-size: 1.5rem;
     }
+
     @media (max-width: 768px) {
         width: 73%;
         margin-top: 0.5rem;
@@ -74,6 +81,7 @@ export const DepositionsSubTitle = styled.h3`
         font-weight: 300;
         line-height: 1.4;
     }
+
     @media (max-width: 480px) {
         font-size: 0.9rem;
     }
@@ -100,6 +108,7 @@ export const BoxSlideDepositions = styled.div`
     @media (min-width: 2200px) {
         width: 100%;
     }
+
     @media (max-width: 1200px) {
         width: 88%;
     }
@@ -137,6 +146,7 @@ export const DepositionsSlideCard = styled.div`
     p {
         display: ${(props) => (props.focus ? 'block' : 'none')};
     }
+
     div {
         flex-direction: ${(props) => (props.focus ? 'row' : 'column')};
     }
@@ -144,7 +154,6 @@ export const DepositionsSlideCard = styled.div`
 
 export const Image = styled.img`
     position: absolute;
-
     width: ${(props) => (props.focus ? '10rem' : '8rem')};
     top: ${(props) => (props.focus ? '-33%' : '-36%')};
 
@@ -152,6 +161,7 @@ export const Image = styled.img`
         width: ${(props) => (props.focus ? '16rem' : '14rem')};
         top: ${(props) => (props.focus ? '-30%' : '-40%')};
     }
+
     @media (max-width: 1200px) {
         width: ${(props) => (props.focus ? '9rem' : '7rem')};
         top: ${(props) => (props.focus ? '-30%' : '-33%')};
@@ -170,6 +180,7 @@ export const Description = styled.p`
         font-size: 1.5rem;
         line-height: 1.4;
     }
+
     @media (max-width: 1200px) {
         font-size: 0.68rem;
     }
@@ -193,6 +204,7 @@ export const Identification = styled.div`
         width: ${(props) => (props.focus ? '70%' : '100%')};
         text-align: ${(props) => (props.focus ? 'left' : 'center')};
     }
+
     div h4 {
         font-size: ${(props) => (props.focus ? '1rem' : '1.5rem')};
 
@@ -200,6 +212,7 @@ export const Identification = styled.div`
             font-size: ${(props) => (props.focus ? '2rem' : '2.8rem')};
         }
     }
+
     img {
         width: ${(props) => (props.focus ? '9rem' : '8rem')};
 
@@ -207,6 +220,7 @@ export const Identification = styled.div`
             width: ${(props) => (props.focus ? '15rem' : '14rem')};
             font-size: 3.8rem;
         }
+
         @media (max-width: 1200px) {
             width: ${(props) => (props.focus ? '7rem' : '6rem')};
         }
@@ -224,6 +238,7 @@ export const Name = styled.h4`
     @media (min-width: 1024px) {
         font-size: 1.5rem;
     }
+
     @media (max-width: 768px) {
         font-size: 2rem;
     }
@@ -237,6 +252,7 @@ export const Office = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.3rem;
     }
+
     @media (max-width: 768px) {
         font-size: 1rem;
     }
@@ -284,6 +300,7 @@ export const DescriptionResponsive = styled.p`
         text-align: left;
         line-height: 1.8rem;    
     }
+
     @media (max-width: 480px) {
         font-size: 0.8rem;
         line-height: 1.2rem; 
@@ -311,11 +328,11 @@ export const ImagePeopleResponsive = styled.img`
 `;
 
 export const ImagePeopleResponsivePatricia = styled.img`
-
     @media (max-width: 768px) {
         width: 9rem;
         height: 9rem; 
     }
+
     @media (max-width: 480px) {
         width: 5.5rem;
         height: 5.5rem; 
@@ -336,6 +353,7 @@ export const NameResponsive = styled.h1`
         text-align: left;
         font-size: 1.5rem;
     }
+
     @media (max-width: 480px) {
         font-size: 1rem;
     }
@@ -346,6 +364,7 @@ export const OfficeResponsive = styled.p`
         text-align: left;
         font-size: 0.8rem;
     }
+    
     @media (max-width: 480px) {
         font-size: 0.6rem;
     }

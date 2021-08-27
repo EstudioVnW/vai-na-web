@@ -7,12 +7,15 @@ export const IntroContainer = styled.section`
     @media (min-width: 1700px) {
         margin-top: 12rem;
     }
+
     @media (min-width: 2200px) {
         margin-top: 24rem;
     }
+
     @media (max-width: 1024px) {
         margin-top: 4rem;
     }
+
     @media (max-width: 768px) {
         margin: 0;
         padding-bottom: 0;
@@ -26,6 +29,7 @@ export const Wrap = styled.div`
     @media (max-width: 1200px) {
         width: 90%;
     }
+
     @media (max-width: 480px) {
         width: 88%;
     }
@@ -48,13 +52,16 @@ export const Title = styled.h3`
     @media (min-width: 2200px) {
         font-size: 3.8em;
     }
+
     @media (max-width: 1200px) {
         margin-right: 2rem;
     }
+
     @media (max-width: 768px) {
         margin: 0 0 2rem;
         width: 100%;
     }
+
     @media (max-width: 480px) {
         margin-bottom: 1rem;
         padding-right: 1rem;
@@ -71,13 +78,16 @@ export const Text = styled.p`
     @media (min-width: 2200px) {
         font-size: 2.1em;
     }
+
     @media (max-width: 1440px) {
         font-size: 1em;
     }
+
     @media (max-width: 768px) {
         width: 100%;
         font-size: 1.3em;
     }
+
     @media (max-width: 480px) {
         font-size: 0.9em;
     }
@@ -91,6 +101,7 @@ export const BoxRow = styled.div`
     @media (min-width: 2200px) {
         margin: 5rem 0 4rem;
     }
+
     @media (max-width: 768px) {
         flex-direction: column;
         margin: 2.5rem 0 2rem;
@@ -114,6 +125,7 @@ export const TextBox = styled.div`
     @media (min-width: 2200px) {
         padding: 0 1rem 10px 20px;
     }
+
     @media (max-width: 768px) {
         margin-bottom: 2rem;
         padding: 0 0.7rem 0.4rem;
@@ -144,6 +156,7 @@ export const RowNumber = styled.p`
         font-weight: 700;
         line-height: 1.6;
     }
+
     p {
         margin-left: 10px;
         font-size: 0.38em;
@@ -152,6 +165,7 @@ export const RowNumber = styled.p`
     @media (min-width: 2200px) {
         font-size: 5em;
     }
+
     @media (max-width: 1440px) {
         font-size: 2.6em;
 
@@ -159,9 +173,11 @@ export const RowNumber = styled.p`
             font-size: 0.35em;
         }
     }
+
     @media (max-width: 1024px) {
         font-size: 2.2em;
     }
+
     @media (max-width: 768px) {
         display: initial;
         margin: 0;
@@ -188,12 +204,15 @@ export const RowText = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.9em;
     }
+
     @media (max-width: 1440px) {
         font-size: 0.9em;
     }
+
     @media (max-width: 1024px) {
         font-size: 0.77em;
     }
+
     @media (max-width: 768px) {
         padding: 0 1rem 0 5px;
         font-size: 1.05em;
@@ -208,6 +227,7 @@ export const SourceText = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.6em;
     }
+
     @media (max-width: 768px) {
         display: none;
     }

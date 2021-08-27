@@ -2,17 +2,15 @@ import styled, { keyframes } from 'styled-components';
 
 export const tickerAnimation = keyframes`
 	0% {
-			transform: translate3d(0, 0, 0);
-			-webkit-transform: translate3d(0, 0, 0);
-			visibility: visible;
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		visibility: visible;
 	}
 	100% {
-			transform: translate3d(-31%, 0, 0);
-			-webkit-transform: translate3d(-31%, 0, 0);
+		transform: translate3d(-31%, 0, 0);
+    -webkit-transform: translate3d(-31%, 0, 0);
 	}
 `;
-
-
 
 export const LineCases = styled.section`
   width: 100%;
@@ -63,6 +61,7 @@ export const BoxImage = styled.figure`
     min-width: 14%;
     margin-right: 2rem;
   }
+  
   @media (max-width: 480px) {
     min-width: 50%;
   }

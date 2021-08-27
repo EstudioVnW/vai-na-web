@@ -7,9 +7,11 @@ export const HeaderContainer = styled.header`
     @media (min-width: 2200px) {
         padding: 18rem 0 10rem 0;
     }
+
     @media (max-width: 1024px) {
         padding: 14rem 2rem 7rem;
     }
+
     @media (max-width: 480px) {
         padding: 8rem 0 3rem;
     }
@@ -43,9 +45,11 @@ export const HeaderTitle = styled.h1`
     @media (min-width: 2200px) {
         font-size: 4rem;
     }
+
     @media (max-width: 1024px) {
         margin-bottom: 2rem;
     }
+
     @media (max-width: 480px) {
         margin-bottom: 10px;
         font-size: 2.4em;
@@ -64,6 +68,7 @@ export const TitleBar = styled.span`
         left: -4%;
         font-size: 4rem;
     }
+
     @media (max-width: 480px) {
         top: -4%;
         left: -20%;
@@ -76,6 +81,7 @@ export const HeaderText = styled.p`
     @media (min-width: 2200px) {
         font-size: 2.2rem;
     }
+    
     @media (max-width: 480px) {
         font-size: 1.3em;
     }

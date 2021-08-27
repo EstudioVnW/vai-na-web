@@ -27,7 +27,7 @@ const Talents = () => (
               width="10rem"
               background="#FF611E"
               border="#FFAC2D"
-              backgroundHover='#0F2B92'
+              backgroundHover="#0F2B92"
               colorHover="#FDE7A9"
             >
               Saiba mais

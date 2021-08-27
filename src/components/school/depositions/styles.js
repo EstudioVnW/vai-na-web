@@ -16,6 +16,7 @@ export const BoxWrap = styled.div`
     @media (max-width: 1200px){
         width: 90%;
     }
+
     @media (max-width: 768px){
         width: 88%;
     }
@@ -62,6 +63,7 @@ export const LeftArrow = styled.img`
     @media (max-width: 1200px) {
         left: -4%;
     }
+
     @media (max-width: 768px){
         display:none;
     }
@@ -167,4 +169,4 @@ export const ImgPerson = styled.img`
         bottom: -10%;
         width: 10rem;
     }
- `;
+`;
