@@ -11,8 +11,10 @@ const Cards = () => (
   <S.Container>
     <S.CardsText>
       <S.CardTextTitle>Acelere suas entregas digitais</S.CardTextTitle>
-      <S.CardTextSubTitle>Através de entregas contínuas de design 
-        e desenvolvimento web e mobile</S.CardTextSubTitle>
+      <S.CardTextSubTitle>
+        Através de entregas contínuas de design
+        e desenvolvimento web e mobile
+      </S.CardTextSubTitle>
     </S.CardsText>
     <S.Cards>
       <S.Card>
@@ -22,7 +24,7 @@ const Cards = () => (
           <S.CardCircle />
         </S.CardDetail>
         <S.IconBg>
-          <S.CardIcon src={backlogIcon} alt='' />
+          <S.CardIcon src={backlogIcon} alt="" />
         </S.IconBg>
         <S.CardTitle>MVPs ágeis e escaláveis</S.CardTitle>
         <S.CardText>Descoberta, ideação e implementação de MVPs rapidamente e em escala. Agende, sem custo, uma sessão de descoberta de requisitos.</S.CardText>
@@ -35,7 +37,7 @@ const Cards = () => (
           <S.CardCircle />
         </S.CardDetail>
         <S.IconBg>
-          <S.CardIcon src={responsiveIcon} alt='' />
+          <S.CardIcon src={responsiveIcon} alt="" />
         </S.IconBg>
         <S.CardTitle>Canais digitais, responsivos e acessíveis</S.CardTitle>
         <S.CardText>
@@ -52,7 +54,7 @@ const Cards = () => (
           <S.CardCircle />
         </S.CardDetail>
         <S.IconBg>
-          <S.CardIcon src={mvpIcon} alt='' />
+          <S.CardIcon src={mvpIcon} alt="" />
         </S.IconBg>
         <S.CardTitle>E-commerce</S.CardTitle>
         <S.CardText>Implantação de lojas online utilizando a plataforma Vtex io. Desenvolvemos os layouts.</S.CardText>

@@ -36,7 +36,11 @@ const Depositions = () => {
     <S.Depositions>
       <S.DepositionsText>
         <S.DepositionsTitle>Depoimentos que nos impulsionam</S.DepositionsTitle>
-        <S.DepositionsSubTitle>Veja o que os líderes têm a dizer sobre a atuação dos nossos <S.Bold>squads</S.Bold>:</S.DepositionsSubTitle>
+        <S.DepositionsSubTitle>
+          Veja o que os líderes têm a dizer sobre a atuação dos nossos
+          <S.Bold>squads</S.Bold>
+          :
+        </S.DepositionsSubTitle>
       </S.DepositionsText>
 
       <S.DepositionsSlides>
@@ -45,7 +49,7 @@ const Depositions = () => {
         <S.BoxSlideDepositions>
 
           <S.DepositionsSlideCard order={slideIndex[0]} focus={slideIndex[0] === 2}>
-            <S.Image src={Patricia} focus={slideIndex[0] === 2}/>
+            <S.Image src={Patricia} focus={slideIndex[0] === 2} />
             <S.Description>
               “Even with a different language and time zone, the young people of Vai na Web
               <S.Bold> helped us to design and develop a brand new website to serve our customers.</S.Bold>
@@ -61,7 +65,7 @@ const Depositions = () => {
           </S.DepositionsSlideCard>
 
           <S.DepositionsSlideCard order={slideIndex[1]} focus={slideIndex[1] === 2}>
-            <S.Image src={Vania} focus={slideIndex[1] === 2}/>
+            <S.Image src={Vania} focus={slideIndex[1] === 2} />
             <S.Description>
               “Estes meninos e meninas são preparados para o mercado de trabalho e desenvolvem entregas brilhantes.
               <S.Bold> O Sírio-Libanês tem muito orgulho dessa parceria que mostrou que é possível investir em inovação e formação simultaneamente.”</S.Bold>
@@ -76,7 +80,7 @@ const Depositions = () => {
           </S.DepositionsSlideCard>
 
           <S.DepositionsSlideCard order={slideIndex[2]} focus={slideIndex[2] === 2}>
-            <S.Image src={Elson} focus={slideIndex[2] === 2}/>
+            <S.Image src={Elson} focus={slideIndex[2] === 2} />
             <S.Description>
               “
               <S.Bold>Criatividade e usabilidade em escala foi o que conseguimos acelerar com a experiência de ter dentro da empresa jovens profissionais do Vai na Web.</S.Bold>

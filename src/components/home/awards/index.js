@@ -19,7 +19,7 @@ const Awards = () => (
       <S.AwardsContent>
         <S.AwardsBox>
           <S.ImgBox>
-            <img src={WomenInTech} />
+            <img src={WomenInTech} alt="" />
           </S.ImgBox>
           <S.AwardsInfo>
             <S.ImgTitle>Prêmio Women in Tech</S.ImgTitle>
@@ -30,25 +30,25 @@ const Awards = () => (
         <S.AwardsRow>
           <S.RowBox>
             <S.RowImgBox>
-              <img src={Encontro} />
+              <img src={Encontro} alt="" />
             </S.RowImgBox>
             <S.RowInfo>Cris dos Prazeres aposta na educação para criar oportunidade para jovens de comunidades</S.RowInfo>
           </S.RowBox>
           <S.RowBox>
             <S.RowImgBox>
-              <img src={Universa} />
+              <img src={Universa} alt="" />
             </S.RowImgBox>
             <S.RowInfo>Carioca é finalista de prêmio global ao levar jovens de favela à tecnologia</S.RowInfo>
           </S.RowBox>
           <S.RowBox>
             <S.RowImgBox>
-              <img src={Tilt} />
+              <img src={Tilt} alt="" />
             </S.RowImgBox>
             <S.RowInfo>Coworking da favela prepara jovem preto e periférico para mercado tech</S.RowInfo>
           </S.RowBox>
           <S.RowBox>
             <S.RowImgBox>
-              <img src={BusinessLead} />
+              <img src={BusinessLead} alt="" />
             </S.RowImgBox>
             <S.RowInfo>Estudantes de Stanford em Ohio, EUA visitam o Vai na Web no Rio de Janeiro, Brasil.</S.RowInfo>
           </S.RowBox>

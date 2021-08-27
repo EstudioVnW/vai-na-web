@@ -1,4 +1,4 @@
-import styled, {css, keyframes} from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const LoadingAnimation = keyframes`
   0%   { background-position: 0 0; }
@@ -6,7 +6,6 @@ export const LoadingAnimation = keyframes`
 `;
 
 export const Contato = styled.main`
-
 `;
 
 export const ContatoContainer = styled.section`
@@ -14,7 +13,7 @@ export const ContatoContainer = styled.section`
     justify-content: space-between;
     padding: 2vw 9vw;
     width: 90%;
-
+    
     @media (max-width: 1024px) {
         padding: 2vw 4vw;
     }
@@ -62,7 +61,7 @@ export const FormText = styled.p`
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
-    width: 84%;    
+    width: 84%;
 
     @media (max-width: 1024px) {
         width: 90%;
@@ -71,7 +70,6 @@ export const Form = styled.form`
     @media (max-width: 768px) {
         width: auto;
     }
-    
 `;
 
 export const FormLabel = styled.label`
@@ -79,13 +77,13 @@ export const FormLabel = styled.label`
     padding: 7px 14px;
     font-size: 1.3rem;
     font-weight: 600;
-    color: ${props => props.isError ? '#FF611E' : '#00145d' };
+    color: ${(props) => (props.isError ? '#FF611E' : '#00145d')};
     border-radius: 10px;
-    background: ${props => props.isError ? '#FF611E26' : '#e7e9f4' };
+    background: ${(props) => (props.isError ? '#FF611E26' : '#e7e9f4')};
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: ${props => props.isError ? '1px solid #FF611E' : props.selected ? '1px solid #00145D' : 'none'};
+    border: ${(props) => (props.isError ? '1px solid #FF611E' : props.selected ? '1px solid #00145D' : 'none')};
 
     @media (max-width: 768px) {
         margin: 0 0 1rem;
@@ -108,6 +106,7 @@ export const BtnLimparMsg = styled.span`
     margin-left: 60%;
     margin-top: 2%;
 `;
+
 export const ErroInput = styled.span`
     font-weight: 400;
     font-size: 0.8rem;
@@ -127,7 +126,7 @@ export const FormInput = styled.input`
     color: #00145d;
     border: none;
     outline: none; 
-    background: ${props => props.isError ? '#e7e9f4' : '#ff611e00' };
+    background: ${(props) => (props.isError ? '#e7e9f4' : '#ff611e00')};
 
     ::-webkit-outer-spin-button,
     ::-webkit-inner-spin-button {
@@ -142,7 +141,7 @@ export const MsgInput = styled.textarea`
     height: 35vh;
     font: 300 1.3rem sans-serif;
     color: #00145d;
-    background: ${props => props.isError ? '#e7e9f4' : '#ff611e00' };
+    background: ${(props) => (props.isError ? '#e7e9f4' : '#ff611e00')};
     border: none;
     outline: none;
     resize: none;
@@ -160,49 +159,52 @@ export const MessageFalha = styled.span`
     background:  #FF611E;
     transition: border 0.15s ease-out, height 0.18s ease-in, color 0.15s ease;
     white-space: nowrap;
-
+    
     @media (min-width: 2560px) {
         font-size: 1.5rem;
         padding: 1.5rem 1.875rem;
     }
 `;
-// export const ButtonReload = styled.button`
-//     width: 3.5rem;
-//     height: 3.5rem;
-//     margin: 0 1.375rem 0 0.75rem;
-//     border: 2px solid #FFAC2D;
-//     border-radius: 50%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background: #FFAC2D;
 
-//     img{
-//         width: 70%;
-//     }
+export const ButtonReload = styled.button`
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 1.375rem 0 0.75rem;
+    border: 2px solid #FFAC2D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFAC2D;
 
-//     @media (min-width: 2560px) {
-//         width: 5rem;
-//         height: 5rem;
-//     }
-//     @media (min-width: 1024px) {
-//         margin: 0 1rem 0 0.75rem;
-//     }
-// `;
+    img{
+        width: 70%;
+    }
+
+    @media (min-width: 2560px) {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    @media (min-width: 1024px) {
+        margin: 0 1rem 0 0.75rem;
+    }
+`;
 
 export const TextError = styled.p`
     width: 50%;
     font-size: 0.8rem;
     color: #272727;
     font-weight: 600;
-
-    @media (min-width: 2200px) {
+    
+    @media (max-width: 2560px) {
         font-size: 0.9rem;
         width: 60%;
     }
 
-    @media (max-width: 768px) {
-        width: 65%;
+    @media (max-width: 1024px) {
+        width: 34%;
+        font-size: 0.6rem;
     }
 
     @media (max-width: 425px) {
@@ -220,14 +222,6 @@ export const FormBtn = styled.div`
     flex-wrap: wrap;
     margin-top: 2rem;
 
-    @media (min-width: 2200px) {
-        width: 65%;
-    }
-
-    @media (max-width: 768px) {
-        width: 80%;
-    }
-
     @media (max-width: 425px) {
         flex-wrap: wrap;
         width: 100%;
@@ -235,7 +229,6 @@ export const FormBtn = styled.div`
 `;
 
 export const BtnError = styled.button`
-    /* margin-top: 2.4rem; */
     padding: 1rem 1.5rem;
     font-weight: 300;
     font-size: 1.5rem;
@@ -258,14 +251,13 @@ export const Btn = styled.button`
     width: 8.8rem;
     font-weight: 300;
     font-size: 1.5rem;
-    color: ${props => props.isError ? '#FDE7A9' : '#FED5B2' };
+    color: ${(props) => (props.isError ? '#FDE7A9' : '#FED5B2')};
     border-radius: 30px;
     box-shadow: 0 0 10px #aaa;
     border: none;
     outline: none;
-    background: ${props => props.isError ? '#ff611e' : '#0F2B92' };
 
-     ${({ isLoading }) => isLoading && css`
+    ${({ isLoading }) => isLoading && css`
         border: 1px solid #00145D;
         background: repeating-linear-gradient(to right, #0F2B9277, #0F2B9277, #00145D);
         background-size: 200% auto;
@@ -278,7 +270,6 @@ export const Btn = styled.button`
         padding: 0.8rem 0 0.6rem;
         font-size: 1em;
     }
-    
 `;
 
 export const Sidebar = styled.aside`
@@ -302,7 +293,7 @@ export const SideBox = styled.div`
 
 export const SideIcon = styled.img`
     width: 3rem;
-
+    
     @media (max-width: 1024px) {
         width: 2rem;
     }
@@ -335,4 +326,4 @@ export const SideText = styled.p`
     @media (max-width: 768px) {
         font-size: 1.1em;
     }
-`; 
+`;

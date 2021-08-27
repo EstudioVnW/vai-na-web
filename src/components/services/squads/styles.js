@@ -7,17 +7,15 @@ export const SquadsContainer = styled.section`
   max-width: 100%;
   min-height: 65vh;
   
-  
   @media (max-width: 1024px) {
     min-height: 55vh;
   }
+
   @media (max-width: 425px) {
     justify-content: flex-end;
     margin-top: 3rem;
     min-height: 40vh;
   }
-
-
 `;
 
 export const SquadsBg = styled.div`
@@ -53,7 +51,7 @@ export const SquadsBg = styled.div`
   }
 `;
 
-export const SquadsWrap = styled.div `
+export const SquadsWrap = styled.div`
   width: 30%;
   margin: 0 auto;
   display: flex; 
@@ -63,7 +61,7 @@ export const SquadsWrap = styled.div `
   @media (max-width: 1024px) {
     width: 90%;
   }
-`
+`;
 
 export const SquadsText = styled.p`
   margin: 1rem 0;
@@ -83,7 +81,7 @@ export const SquadsText = styled.p`
   } 
 `;
 
-export const BoxButton = styled.div `
+export const BoxButton = styled.div`
   display: flex;
   align-items: center;
   height: 6rem;
@@ -107,7 +105,6 @@ export const BoxButton = styled.div `
       &:hover {
         height: 45%;
       }
-
     }
   }
 `;
@@ -206,5 +203,4 @@ export const IconText = styled.p`
       font-size: 1.3rem;
     }
   }
-
 `;

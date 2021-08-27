@@ -6,6 +6,7 @@ export const QuoteContainer = styled.section`
     @media (min-width: 2200px) {
         padding: 8rem 0 4rem;
     }
+
     @media (max-width: 768px) {
         padding-bottom: 0;
     }
@@ -21,6 +22,7 @@ export const Wrap = styled.div`
     @media (max-width: 1200px) {
         width: 90%;
     }
+
     @media (max-width: 768px) {
         flex-direction: column-reverse;
         align-items: center;
@@ -34,12 +36,15 @@ export const Profile = styled.img`
     @media (min-width: 2200px) {
         width: 26rem;
     }
+
     @media (max-width: 1440px) {
         width: 16rem;
     }
+
     @media (max-width: 768px) {
         width: 50%;
     }
+
     @media (max-width: 480px) {
         width: 80%;
     }
@@ -54,6 +59,7 @@ export const TextBox = styled.div`
     @media (max-width: 1440px) {
         width: 66%;
     }
+
     @media (max-width: 768px) {
         width: 100%;
     }
@@ -69,9 +75,11 @@ export const Text = styled.p`
         padding-left: 3rem;
         font-size: 2.3em;
     }
+
     @media (max-width: 1440px) {
         font-size: 1.2em;
     }
+
     @media (max-width: 768px) {
         margin-bottom: 1.5rem;
         padding-left: 0;
@@ -87,6 +95,7 @@ export const QuoteLine = styled.img`
     @media (max-width: 1024px) {
         width: 90%;
     }
+
     @media (max-width: 768px) {
         display: none;
     }
@@ -100,6 +109,7 @@ export const QuoteLineMobile = styled.img`
     @media (max-width: 768px) {
         display: block;
     }
+
     @media (max-width: 480px) {
         width: 100%;
     }
@@ -114,6 +124,7 @@ export const QuoteMark = styled.p`
         height: 2.2rem;
         font-size: 6em;
     }
+
     @media (max-width: 768px) {
         height: 2.5rem;
         font-size: 2.6em;
@@ -131,6 +142,7 @@ export const BottomQuoteMark = styled.p`
         height: 5rem;
         font-size: 6em;
     }
+
     @media (max-width: 768px) {
         height: 0;
         font-size: 2.6em;

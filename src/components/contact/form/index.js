@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import * as S from './styles';
 import {phoneMask} from '../../../utils/utils';
+
 //Icons
 import localIcon from '../../../images/icons/localIcon.svg';
 import mailIcon from '../../../images/icons/mailIcon.svg';
@@ -120,13 +121,8 @@ const Form = () => {
                 onFocus={handleFocus}
               />
               {selectedInput === 'name' && formContent?.name?.length
-                ?
-                  <S.BtnLimpar
-                    onClick={() => handleClear('inpName')}
-                  >
-                    Limpar
-                  </S.BtnLimpar>
-                : errors?.name && <S.ErroInput>{errors?.name}</S.ErroInput>
+                ? <S.BtnLimpar onClick={() => handleClear('inpName')}>Limpar</S.BtnLimpar>
+                : errors?.name && <S.ErroInput>Campo não preenchido</S.ErroInput>
               }
             </S.FormLabel>
 
@@ -144,13 +140,8 @@ const Form = () => {
                 onFocus={handleFocus}
               />
               {selectedInput === 'email' && formContent?.email?.length
-                ?
-                  <S.BtnLimpar
-                    onClick={() => handleClear('inpEmail')}
-                  >
-                    Limpar
-                  </S.BtnLimpar>
-                : errors?.email && <S.ErroInput>{errors?.email}</S.ErroInput>
+                ? <S.BtnLimpar onClick={() => handleClear('inpEmail')}>Limpar</S.BtnLimpar>
+                : errors?.email && <S.ErroInput>Campo não preenchido</S.ErroInput>
               }
             </S.FormLabel>
 
@@ -168,13 +159,8 @@ const Form = () => {
                 onFocus={handleFocus}
               />
               {selectedInput === 'tel' && formContent?.tel?.length
-                ?
-                  <S.BtnLimpar
-                    onClick={() => handleClear('inpTel')}
-                  >
-                    Limpar
-                  </S.BtnLimpar>
-                : errors?.tel && <S.ErroInput>{errors?.tel}</S.ErroInput>
+                ? <S.BtnLimpar onClick={() => handleClear('inpTel')}>Limpar</S.BtnLimpar>
+                : errors?.tel && <S.ErroInput>Campo não preenchido</S.ErroInput>
               }
             </S.FormLabel>
             <S.FormLabelMsg

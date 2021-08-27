@@ -17,9 +17,11 @@ export const Menu = styled.nav`
   @media (min-width: 2200px) {
     height: 8rem;
   }
+
   @media (max-width: 1200px) {
     padding: 0 5%;
   }
+
   @media (max-width: 1024px) {
     box-shadow: none;
   }
@@ -43,6 +45,7 @@ export const Wrap = styled.div`
   @media (max-width: 1220px) {
     padding-left: 0;
   }
+
   @media (max-width: 768px) {
     position: absolute;
     top: 0;
@@ -96,6 +99,7 @@ export const NavItem = styled.li`
     width: 9rem;
     font-size: 1.6rem;
   }
+  
   @media (max-width: 768px) {
     margin-right: 0;
     width: 5.45rem;

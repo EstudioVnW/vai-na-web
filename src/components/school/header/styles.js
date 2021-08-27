@@ -14,7 +14,7 @@ export const Wrap = styled.div`
 
     @media (min-width: 1900px) {
         margin-top: 8rem;
-		min-height: calc(100vh - 8rem);
+	    min-height: calc(100vh - 8rem);
 	}
 
     @media (max-width: 1024px) {
@@ -41,7 +41,7 @@ export const BoxHeader = styled.div`
     }
 
     @media (max-width: 500px){
-        margin-bottom: 230px;//200
+        margin-bottom: 230px;
     }
 `;
 
@@ -198,4 +198,3 @@ export const ImgEstudio = styled.img`
     transform: scale(1.2);
     transition: 0.25s ease-out;
 `;
-    

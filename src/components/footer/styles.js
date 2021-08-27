@@ -2,23 +2,21 @@ import styled, { keyframes } from 'styled-components';
 
 export const tickerAnimation = keyframes`
 	0% {
-			transform: translate3d(0, 0, 0);
-			-webkit-transform: translate3d(0, 0, 0);
-			visibility: visible;
+		transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		visibility: visible;
 	}
 	100% {
-			transform: translate3d(-100%, 0, 0);
-			-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		-webkit-transform: translate3d(-100%, 0, 0);
 	}
 `;
-
-
 
 export const FooterContainer = styled.div `
 	position: relative;
 	padding-top: 1.2rem;
 	width: 100%;
-    overflow: hidden;
+	overflow: hidden;
 
 	@media (min-width: 1600px) {
 		padding-top: 2.2rem;
@@ -54,7 +52,7 @@ export const DivisionBackground = styled.div`
 	@media (max-width: 980px) {
 		display: none;
 	}
-`
+`;
 
 export const Division = styled.div `
 	display: flex;
@@ -71,6 +69,7 @@ export const DivisionLine = styled.div `
 	@media (min-width: 2200px) {
 		height: 3px;
 	}
+
 	@media (max-width: 700px) {
 		height: 1px;
 	}
@@ -86,6 +85,7 @@ export const DivisionText = styled.p `
 	@media (min-width: 2200px) {
 		font-size: 7em;
 	}
+	
 	@media (max-width: 700px) {
 		font-size: 3em;
 		line-height: 1;
@@ -98,6 +98,7 @@ export const LogoVnW = styled.img `
 	@media (min-width: 2200px) {
 		width: 7rem;
 	}
+
 	@media (max-width: 700px) {
 		width: 3rem;
 	}
@@ -114,12 +115,15 @@ export const Container = styled.footer`
 	@media (min-width: 2200px) {
 		margin-top: 2rem;
 	}
+
 	@media (min-width: 1700px) {
 		margin-top: 1rem;
 	}
+
 	@media (max-width: 1440px) {
 		padding: 9rem 4.4rem 0;
 	}
+
 	@media (max-width: 980px) {
 		padding: 9rem 2.6rem 0;
 	}
@@ -132,7 +136,7 @@ export const Content = styled.section`
 
 	@media (max-width: 980px) {
 		flex-direction: column;
-    	align-items: center;
+    align-items: center;
 	}
 `;
 
@@ -149,6 +153,7 @@ export const ContentBox = styled.div`
 		@media (max-width: 1440px) {
 			margin-right: 10rem;
 		}
+
 		@media (max-width: 980px) {
 			margin: 2rem 0;
 		}
@@ -174,6 +179,7 @@ export const TextBox = styled.div`
 	@media (min-width: 2200px) {
 		margin-bottom: 6rem;
 	}
+
 	@media (max-width: 700px) {
 		margin-bottom: 2rem;
 	}
@@ -189,13 +195,16 @@ export const FooterText = styled.p`
 	@media (min-width: 2200px) {
 		font-size: 2em;
 	}
+
 	@media (max-width: 1440px) {
 		width: 26vw;
 	}
+
 	@media (max-width: 980px) {
 		width: 66%;
 		font-size: 1.5em;
 	}
+
 	@media (max-width: 700px) {
 		width: 95%;
 		font-size: 0.9em;
@@ -207,17 +216,19 @@ export const LinkBox = styled.ul`
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-content: space-between;
-    padding-right: 6rem;
-    width: 30vw;
+  padding-right: 6rem;
+  width: 30vw;
 	height: 12rem;
 	list-style: none;
 
 	@media (min-width: 2200px) {
 		height: 20rem;
 	}
+
 	@media (max-width: 1440px) {
 		width: 38vw;
 	}
+
 	@media (max-width: 980px) {
 		margin: 2rem 0 0;
 		width: 89vw;
@@ -234,9 +245,11 @@ export const LinkText = styled.p`
 	@media (min-width: 2200px) {
 		font-size: 2em;
 	}
+
 	@media (max-width: 980px) {
 		font-size: 1.5em;
 	}
+
 	@media (max-width: 700px) {
 		font-size: 1em;
 	}
@@ -257,9 +270,11 @@ export const FooterLink = styled.li`
 		margin-bottom: 1.5rem;
 		font-size: 1.8em;
 	}
+
 	@media (max-width: 980px) {
 		font-size: 1.5em;
 	}
+
 	@media (max-width: 700px) {
 		font-size: 1em;
 	}
@@ -274,11 +289,13 @@ export const Logo = styled.img `
 	@media (min-width: 2200px) {
 		width: 12vw;
 	}
+
 	@media (max-width: 980px) {
 		position: unset;
 		margin-top: 2.5rem;
 		width: 12rem;
 	}
+
 	@media (max-width: 700px) {
 		width: 7rem;
 	}
@@ -301,9 +318,11 @@ export const IconBox = styled.figure `
 	@media (min-width: 2200px) {
 		width: 90%;
 	}
+
 	@media (max-width: 1440px) {
 		width: 90%;
 	}
+
 	@media (max-width: 980px) {
 		width: 100%;
 	}
@@ -316,9 +335,11 @@ export const Icon = styled.img `
 	@media (min-width: 2200px) {
 		width: 4.4rem;
 	}
+
 	@media (max-width: 980px) {
 		width: 4rem;
 	}
+
 	@media (max-width: 700px) {
 		width: 2.8rem;
 	}
@@ -333,9 +354,11 @@ export const ImgBox = styled.figure `
 	@media (min-width: 2200px) {
 		width: 38rem;
 	}
+
 	@media (max-width: 1440px) {
 		width: 25vw;
 	}
+
 	@media (max-width: 980px) {
 		margin: 0 auto;
 		width: 89vw;
@@ -351,6 +374,7 @@ export const FooterImg = styled.img `
 	@media (max-width: 980px) {
 		max-width: 25rem;
 	}
+
 	@media (max-width: 700px) {
 	}
 `;
@@ -382,6 +406,7 @@ export const Text = styled.p `
 	@media (min-width: 2200px) {
 		font-size: 1.5em;
 	}
+
 	@media (max-width: 700px) {
 		font-size 0.8em
 	}

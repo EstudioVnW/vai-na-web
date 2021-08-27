@@ -10,14 +10,14 @@ export const SquadsContainer = styled.section`
   }
 `;
 
-export const SquadsWrap = styled.div `
+export const SquadsWrap = styled.div`
   width: 80%;
   margin: 0 auto;
 
   @media (max-width: 1024px) {
     width: 100%;
   }
-`
+`;
 
 export const SquadsContent = styled.figure`
   margin-top: 2rem;
@@ -41,6 +41,7 @@ export const SquadsTitle = styled.h2`
     width: 90%;
     margin: 0 auto;
   }
+
    @media(max-width: 425px) {
     font-size: 1.2rem;
   } 
@@ -103,8 +104,8 @@ export const SquadsBox = styled.div`
   @media (max-width: 425px) {
     justify-content: space-around;
   }
+`;
 
-`
 export const SquadsPerson = styled.p`
   position: relative;
   width: 50%;
@@ -135,7 +136,8 @@ export const SquadsPerson = styled.p`
     left: 0;
     width: 30%;
   }
-`
+`;
+
 export const Line = styled.img`
   position: absolute;
   bottom: 10%;
@@ -144,7 +146,7 @@ export const Line = styled.img`
   height: 15rem;
   width: 15rem;
   
-/*   @media(max-width: 1366px) {
+/*@media(max-width: 1366px) {
     width: 30px;
     height: 200px;
     bottom: -10%;
@@ -156,10 +158,11 @@ export const Line = styled.img`
     bottom: -10%;
   }
  */
+
   @media(max-width: 1024px) {
     display: none;
   }
-`
+`;
 
 export const MobLineH = styled.img`
   display: none;

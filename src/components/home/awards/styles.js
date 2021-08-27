@@ -8,9 +8,11 @@ export const Awards = styled.section`
     @media (min-width: 2200px) {
         padding: 8rem 0 20rem;
     }
+
     @media (max-width: 768px) {
         padding: 4rem 0;
     }
+
     @media (max-width: 480px) {
         padding: 2.5rem 0;
     }
@@ -26,6 +28,7 @@ export const AwardsWrap = styled.div`
     @media (max-width: 1200px) {
         width: 90%;
     }
+
     @media (max-width: 768px) {
         width: 100%;
     }
@@ -38,6 +41,7 @@ export const AwardsContent = styled.div`
         padding: 0 2rem;
         overflow: scroll hidden;
     }
+
     @media (max-width: 480px) {
         padding: 0 1.5rem;
     }
@@ -50,6 +54,7 @@ export const AwardsText = styled.div`
         margin: 0 auto;
         width: 88%;
     }
+
     @media (max-width: 480px) {
         line-height: 1.2;
     }
@@ -81,6 +86,7 @@ export const AwardsSubtitle = styled.h3`
         font-size: 2.2rem;
         font-weight: 500;
     }
+
     @media (max-width: 480px) {
         width: 66%;
         font-size: 1rem;
@@ -131,9 +137,11 @@ export const ImgBox = styled.div`
         width: 50%;
         height: auto;
     }
+
     @media (max-width: 768px) {
         margin-right: 0.8rem;
     }
+
     @media (max-width: 480px) {
         width: 18rem;
         height: 12.4rem;
@@ -148,6 +156,7 @@ export const AwardsInfo = styled.div`
         margin-top: 2rem;
         width: 100%;
     }
+
     @media (max-width: 480px) {
         margin-top: 1.3rem;
     }
@@ -172,10 +181,10 @@ export const ImgText = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.8rem;
     }
+
     @media (max-width: 1200px) {
         font-size: 1rem;
     }
-    
 `;
 
 export const AwardsRow = styled.div`
@@ -194,11 +203,13 @@ export const RowBox = styled.div`
     @media (max-width: 1200px) {
         height: 9rem;
     }
+
     @media (max-width: 768px) {
         margin: 0 1rem;
         width: 30rem;
         height: 20rem;
     }
+
     @media (max-width: 480px) {
         width: 18rem;
         height: 12.4rem;
@@ -233,6 +244,7 @@ export const RowImgBox = styled.div`
     @media (min-width: 2200px) {
         height: 20rem;
     }
+
     @media (max-width: 768px) {
         margin-bottom: 0;
         border-radius: 10px;
@@ -250,13 +262,16 @@ export const RowInfo = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.5rem;
     }
+
     @media (max-width: 1200px) {
         font-size: 0.9rem;
     }
+
     @media (max-width: 768px) {
         margin-top: 2rem;
         font-size: 1rem;
     }
+    
     @media (max-width: 480px) {
         margin-top: 1rem;
         font-size: 0.9rem;

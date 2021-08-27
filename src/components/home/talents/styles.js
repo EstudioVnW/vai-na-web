@@ -11,9 +11,11 @@ export const Talents = styled.section`
   @media (min-width: 2200px) {
     height: 60rem;
   }
+
   @media (max-width: 1440px) {
     padding: 5rem 0 0;
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
     margin-top: 0.8rem;
@@ -21,6 +23,7 @@ export const Talents = styled.section`
     width: 100%;
     border-radius: 0;
   }
+
   @media (max-width: 480px) {
     height: auto;
   }
@@ -29,7 +32,7 @@ export const Talents = styled.section`
 export const TalentsBackground = styled.div`
   position: absolute;
   width: 70%;
-    height: 85%;
+  height: 85%;
   border-radius: 0 20px 20px 0;
   background: #fed5b252;
   z-index: -1;
@@ -50,6 +53,7 @@ export const TalentsWrap = styled.div`
   @media (max-width: 1200px) {
     width: 90%;
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 2rem 0 0;
@@ -112,6 +116,7 @@ export const ButtonTalents = styled.div`
   @media (max-width: 1920px) {
     margin-top: 1.5rem;
   }
+
   @media (max-width: 1200px) {
     margin: 0;
     button {
@@ -120,6 +125,7 @@ export const ButtonTalents = styled.div`
       font-size: 1rem;
     }
   }
+
   @media (max-width: 768px) {
     margin-top: 1rem;
     width: 100%;
@@ -138,19 +144,22 @@ export const ImgBox = styled.figure`
     img {
        transform: scale(1.1);
     }
-   }
+  }
 
   @media (min-width: 2200px) {
     width: 50%;
   }
+
   @media (min-width: 1800px) {
     width: 45%;
     height: auto;
   }
+
   @media (max-width: 1440px) {
     width: 25rem;
     height: 20rem;
   }
+  
   @media (max-width: 768px) {
     margin: 1rem auto 0;
     width: 100%;

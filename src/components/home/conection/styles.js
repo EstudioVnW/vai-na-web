@@ -39,7 +39,7 @@ export const ConectionTitle = styled.h1`
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
-
+  
   @media (max-width: 1440px){
     font-size: 2.3rem;
   }
@@ -52,7 +52,6 @@ export const ConectionTitle = styled.h1`
   @media (max-width: 425px) {
     font-size: 1.25rem;
   }
-
 `;
 
 export const ConectionLineImage = styled.img`

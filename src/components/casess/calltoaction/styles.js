@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const CallContainer = styled.section`
-
     @media (max-width: 1024px) {
         padding: 5rem 0 0;
     }
+
     @media (max-width: 480px) {
         padding: 0;
     }
@@ -28,8 +28,8 @@ export const Content = styled.div`
     @media (max-width: 1200px) {
         padding: 3rem 0;
     }
-    
-     @media (max-width: 1024px) {
+
+    @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;
         padding: 1.5rem 0 0;
@@ -60,6 +60,7 @@ export const Title = styled.h2`
     @media (min-width: 2200px) {
         font-size: 3.7rem;
     }
+
     @media (max-width: 480px) {
         font-size: 1.2rem;
         color: #272727;
@@ -73,6 +74,7 @@ export const SubTitle = styled.h3`
     @media (min-width: 2200px) {
         font-size: 2.7rem;
     }
+
     @media (max-width: 480px) {
         font-size: 1rem;
     }
@@ -108,6 +110,7 @@ export const ButtonBox = styled.div`
             border-radius: 45px;
         }
     }
+
     @media (max-width: 680px) {
         margin-top: 0.5rem;
         width: 11.5rem;
@@ -131,6 +134,7 @@ export const TextBox = styled.div`
     @media (max-width: 1024px) {
         width: 65vw;
     }
+
     @media (max-width: 680px) {
         width: 100%;
     }
@@ -144,6 +148,7 @@ export const Text = styled.p`
         font-size: 2rem;
         line-height: 1.4;
     }
+
     @media (max-width: 480px) {
         font-size: .8rem;
     }
