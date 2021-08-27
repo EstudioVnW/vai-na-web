@@ -22,6 +22,11 @@ export const TitleCases = styled.h2`
   padding: 0 2rem;
   width: 50%;
 
+  @media (min-width: 2200px) {
+    font-size: 3.8rem;
+    width: 70%;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     font-size: 1.8rem;

@@ -27,6 +27,7 @@ const Squads = (props) => {
               background='#0F2B92'
               funcAction={redirectToConcact}
               width="16rem"
+              colorHover='#FFF'
             >
               Conheça nosso modelo!
             </Button>

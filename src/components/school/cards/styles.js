@@ -337,8 +337,12 @@ export const BoxInfo = styled.div`
 `;
 
 export const BoxButton = styled.div`
+    height: 4rem;
+    display: flex;
+    align-items: center;
 
     @media (min-width: 2200px) {
+        height: 7rem;
         Button{
             width: 19rem;
             height: 6rem;

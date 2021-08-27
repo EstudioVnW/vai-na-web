@@ -81,7 +81,7 @@ export const BoxButton = styled.div`
     button {
         width: 100%;
         height: 4rem;
-        font-weight: 400;
+        font-weight: 600;
         border-radius: 30px;
         transition: 0.2s;
     }

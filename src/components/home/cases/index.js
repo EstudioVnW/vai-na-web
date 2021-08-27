@@ -54,7 +54,8 @@ const Cases = () => (
       <ButtonHome
         width="18.5rem"
         height="3.1rem"
-        colorHover="#272727"
+        colorHover="#FDE7A9"
+        backgroundHover='#0F2B92'
         border="#FFAC2D"
         color="#FFFFFF"
         background="#FF611E"

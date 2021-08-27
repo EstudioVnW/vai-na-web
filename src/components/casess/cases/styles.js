@@ -309,6 +309,8 @@ export const ImgBox = styled.figure`
     }
 `;
 
+export const Link = styled.a``;
+
 export const CaseImg = styled.img`
     width: 100%;
 `;
