@@ -169,7 +169,10 @@ const CardsSchool = () => {
                 <S.BoxInfo>
                     <S.BoxButton>
                         <S.Link href="https://forms.gle/h5Q42dVyNbC9vZo28" target="_blank">
-                            <Button width='10.5rem'>
+                            <Button 
+                                width='10.5rem'
+                                colorHover='#FFF'
+                            >
                                 Inscreva-se!
                             </Button>
                         </S.Link>

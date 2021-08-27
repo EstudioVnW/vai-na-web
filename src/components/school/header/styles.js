@@ -97,14 +97,14 @@ export const TitleBar = styled.span`
 
 export const BoxText = styled.div`
     width: 100%;
-
-    @media (max-width: 768px){
+ 
+    @media (max-width:768){
         position: absolute;
         bottom: -155px;
-    
+    }
     @media (max-width: 500px){
         bottom: -95px;
-    }
+    } 
 `;
 
 export const Paragraph = styled.h3`

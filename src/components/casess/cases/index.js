@@ -117,8 +117,13 @@ const TesteCases = () => (
                 <S.ImgBox>
                     {/* <S.DesktopImg src={QuickcashDesktop} alt="" />
                     <S.MobileImg src={QuickcashMobile} alt="" /> */}
-                    <S.ImageSmartphone src={CelularQuickcash} />
-                    <S.CaseImg src={QuickcashGif} alt="" />
+                    <S.Link 
+                        href="https://quickcashci.com/" 
+                        target="_blank" 
+                    >
+                        <S.ImageSmartphone src={CelularQuickcash} />
+                        <S.CaseImg src={QuickcashGif} alt="" />
+                    </S.Link>
                 </S.ImgBox>
             </S.Case>
 
@@ -154,7 +159,12 @@ const TesteCases = () => (
                     </S.RightClient>
                 </S.InfoBox>
                 <S.ImgBox>
-                    <S.CaseImg src={Lai} alt="" />
+                    <S.Link 
+                        href="https://www.regulamentalai.org/" 
+                        target="_blank" 
+                    >
+                        <S.CaseImg src={Lai} alt="" />
+                    </S.Link>
                 </S.ImgBox>
             </S.Reverse>
 

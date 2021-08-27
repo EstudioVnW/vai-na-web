@@ -28,6 +28,7 @@ const SchoolHeader = () => (
                             >
                                 <Button
                                     width='10.5rem'
+                                    colorHover='#FFF'
                                 >
                                     Inscreva-se
                                 </Button>

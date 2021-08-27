@@ -45,7 +45,7 @@ export const DepositionsTitle = styled.h2`
         font-size: 3.8rem;
     }
     @media (max-width: 768px) {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         width: 80%;
         text-align: center;
     }

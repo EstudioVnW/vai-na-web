@@ -22,6 +22,7 @@ const Participate = () => (
                         border="#00145D"
                         color="#FED5B2"
                         background="#0F2B92"
+                        colorHover='#FFF'
                         funcAction={redirectToContact}
                     >
                         Reserve seu Squad!

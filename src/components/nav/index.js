@@ -81,6 +81,7 @@ const Menu = (props) => {
           border={home ? '#FFAC2D' : '#0e2762'}
           color={home ? '#FFAC2D' : '#fbd4b2'}
           background="#0F2B92"
+          colorHover='#FFF'
           funcAction={redirectToContact}
         >
           Reserve seu Squad!

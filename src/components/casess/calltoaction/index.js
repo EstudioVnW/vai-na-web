@@ -21,6 +21,7 @@ const CasesCalltoaction = () => (
                         <Button
                             border='#0e2762'
                             color='#fbd4b2'
+                            colorHover='#FFF'
                             background='#0F2B92'
                             funcAction={redirectToContact}
                         >

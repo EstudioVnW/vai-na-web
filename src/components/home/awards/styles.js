@@ -63,10 +63,14 @@ export const AwardsTitle = styled.h2`
     @media (min-width: 2200px) {
         font-size: 3.8rem;
     }
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+
     @media (max-width: 480px) {
         margin-bottom: 0.3rem;
         width: 60%;
-        font-size: 1.8rem;
     }
 `;
 
@@ -171,7 +175,7 @@ export const ImgText = styled.p`
     @media (max-width: 1200px) {
         font-size: 1rem;
     }
-    @media (max-w)
+    
 `;
 
 export const AwardsRow = styled.div`
