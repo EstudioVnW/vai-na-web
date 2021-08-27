@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    padding: 2rem 0 4rem;
+    padding: 4rem 0 8rem;
     width: 100%;
 
     @media (max-width: 480px) {
@@ -21,14 +21,13 @@ export const BoxWrap = styled.div`
     }
 `;
 
-export const BoxText = styled.div `
-
+export const BoxText = styled.div`
     @media (max-width: 768px) {
         margin: 0 auto;
     }
 `;
 
-export const Title = styled.h2 `
+export const Title = styled.h2`
     font: 800 2rem 'Usual', sans-serif;
     color: #FF611E;
     padding-bottom: 0.8rem;
@@ -38,7 +37,7 @@ export const Title = styled.h2 `
     }
 `;
 
-export const Subtitle = styled.p `
+export const Subtitle = styled.p`
     font: 400 1.3rem 'Usual', sans-serif;
     line-height: 1.6rem;
 
@@ -50,43 +49,13 @@ export const Subtitle = styled.p `
 
 export const Slide = styled.div`
     width: 100%;
-    position: relative;
+    height: 40rem;
 `;
 
-export const BoxCards = styled.div`
-    width: 100%;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding-top: 6rem;
-
-    &::-webkit-scrollbar {
-        width: 0;
-    }
-`;
-    
-export const Cards = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 220vw;
-    transition: 0.5s ease-in-out; 
-    
-    @media (max-width: 1200px) {
-        width: 280vw;
-    }
-    @media (max-width: 768px){
-        width: 450vw;
-    }
-    @media (max-width: 480px){
-        width: 690vw;
-    }
-`;
-    
 export const LeftArrow = styled.img`
     position: absolute;
     top: 50%;
     left: -6%;
-    /* -webkit-transform: translate(-50%,-50%); */
     transform: translate(-50%,-50%);
     cursor: pointer;
     
@@ -97,24 +66,25 @@ export const LeftArrow = styled.img`
         display:none;
     }
 `;
-    
+
 export const RightArrow = styled(LeftArrow)`
     left: auto;
     right: -6%;
-    /* -webkit-transform: translate(50%,-50%); */
     transform: translate(50%,-50%);
+
     @media (max-width: 1200px) {
         right: -4%;
     }
 `;
-    
+
 export const Card = styled.div`
-    padding: 5px 1.8rem;
-    width: 12.2%;
+    margin-top: 6rem;
+    padding: 10px 1.8rem;
+    width: 97% !important;
     height: auto;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: flex-end;
     border-radius: 15px;
     transition: 0.2s ease-in-out;
@@ -125,7 +95,7 @@ export const Card = styled.div`
         border-width: 1px;
     }
 `;
-    
+
 export const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -146,7 +116,7 @@ export const Description = styled.p`
     }
 `;
 
-export const Name = styled.p `
+export const Name = styled.p`
     font: 800 1.5rem 'Usual', sans-serif;
     line-height: 2.5rem;
     color: #FF611E;
@@ -158,7 +128,7 @@ export const Name = styled.p `
     }
 `;
 
-export const About = styled.p `
+export const About = styled.p`
     display: flex;
     flex-direction: column;
     font: 0.95rem 'Usual', sans-serif;
@@ -175,7 +145,7 @@ export const About = styled.p `
     }
 `;
 
-export const BoxImg = styled.figure `
+export const BoxImg = styled.figure`
     padding: 3rem 0;
     width: 100%;
     position: relative;
@@ -185,10 +155,9 @@ export const BoxImg = styled.figure `
     }
 `;
 
-export const ImgPerson = styled.img `
+export const ImgPerson = styled.img`
     width: 180px;
     position: absolute;
-    /* -webkit-transform: translate(-50%, 0); */
     transform: translate(-50%,0);
     top: -80%;
     left: 50%;

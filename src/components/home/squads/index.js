@@ -7,9 +7,8 @@ import PeoplesSquad from '../../../images/images/VaiNaWeb-196.png';
 import Back from '../../../images/images/Group11078.svg';
 import Canais from '../../../images/images/Group10971.svg';
 import MVPs from '../../../images/images/Group10972.svg';
-import Vtex from '../../../images/images/Logo-Powered-By-Vtex(home-serviços).png';
+import Vtex from '../../../images/images/Logo-Powered-By-Vtex-(home-serviços).png';
 import VtexMobile from '../../../images/images/Logo-Powered-By-Vtex-(home-mobile).png';
-
 
 const redirectToContact = () => {
   navigate('/reserve-seu-squad/');
@@ -27,7 +26,7 @@ const Squads = () => (
             backgroundHover="#FF611E"
             color="#FDE7A9"
             funcAction={redirectToContact}
-            colorHover='#FFF'
+            colorHover="#FFF"
           >
             Reserve seu Squad!
           </ButtonHome>
@@ -84,7 +83,7 @@ const Squads = () => (
                 <S.ImageVtexMobile src={VtexMobile} />
               </S.BoxImageVtex>
             </S.BoxTitleImage>
-            
+
             <S.BoxTextBackDescription>
               Implantação de lojas online, personalizadas, escaláveis
               utilizando a plataforma Vtex io.
@@ -105,6 +104,6 @@ const Squads = () => (
       </S.SquadsText>
     </S.Wrap>
   </S.Squads>
-
 );
+
 export default Squads;

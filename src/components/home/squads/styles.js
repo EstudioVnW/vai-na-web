@@ -4,10 +4,11 @@ import styled from 'styled-components';
 export const Squads = styled.section`
    width: 100%;
    padding: 4rem 0 4rem;
-
+   
    @media (min-width: 2200px) {
       padding: 12rem 0;
    }
+
    @media (max-width: 360px) {
       padding: 4rem 0;
    }
@@ -23,6 +24,7 @@ export const Wrap = styled.div`
    @media (max-width: 1200px) {
       width: 90%;
    }
+
    @media (max-width: 768px) {
       flex-direction: column-reverse;
       width: 88%;
@@ -30,7 +32,6 @@ export const Wrap = styled.div`
 `;
 
 export const SquadsImageButton = styled.div`
-   position: relative;
    width: 40%;
    display: flex;
    flex-direction: column;
@@ -44,18 +45,18 @@ export const SquadsImageButton = styled.div`
          font-weight: 500;
          border-radius: 3rem;
       }
+
       @media (max-width: 1440px) {
-         position: absolute;
          width: 14rem;
          height: 3rem;
          font-size: 1.1rem;
       }
    }
-
    
    @media (max-width: 1200px) {
       width: 45%;
    }
+
    @media (max-width: 768px) {
       position: relative;
       margin: 1rem auto 0;
@@ -67,6 +68,7 @@ export const SquadsImageButton = styled.div`
          font-size: 0.95rem;
       }
    }
+
    @media (max-width: 480px) {
       width: 100%;
       
@@ -122,10 +124,11 @@ export const ImageSquad = styled.img`
 
 export const SquadsText = styled.div`
    width: 54%;
-
+   
    @media (max-width: 1200px) {
       width: 50%;
    }
+
    @media (max-width: 768px) {
       width: 100%;
    }
@@ -154,7 +157,7 @@ export const SquadsTextSubTitle = styled.p`
       width: 90%;
       font: 400 1rem/1.6rem 'Usual', sans-serif;
    }
-
+   
    @media (min-width: 2200px) {
       font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
@@ -184,12 +187,15 @@ export const SquadsTextBack = styled.div`
    @media (min-width: 2200px) {
       margin: 3rem 0;
    }
+
    @media (max-width: 1440px) {
       margin: 1rem 0;
    }
+
    @media (max-width: 768px) {
       margin: 1.5rem 0;
    }
+
    @media (max-width: 480px) {
       align-items: start;
       justify-content: flex-start;
@@ -207,9 +213,11 @@ export const ImageBack = styled.img`
    @media (min-width: 2200px) {
       width: 13rem;
    }
+
    @media (max-width: 1440px){
       width: 5rem;
    }
+
    @media (max-width: 480px) {
       width: 4.7rem;
    }
@@ -222,12 +230,12 @@ export const BoxTextBack = styled.div`
       margin-left: 3rem;
       width: 100%;
    }
+
    @media (max-width: 480px) {
       margin-right: 0;
       width: 68%;
    }
 `;
-
 
 export const BoxTextBackTitle = styled.h4`
    color: #272727;
@@ -242,13 +250,11 @@ export const BoxTextBackTitle = styled.h4`
 export const BoxTextBackDescription = styled.p`
    color: #000;
    font-size: 1.1rem;
-	line-height: 1.6rem;
+   line-height: 1.6rem;
    margin-top: 0.5rem;
-
    span {
       display: block;
    }
-
    @media (min-width: 2200px) {
       width: 100%;
       font-size: 1.8rem;
@@ -290,9 +296,9 @@ export const ImageVtex = styled.img`
 export const ImageVtexMobile = styled.img`
    display: none;
 
-@media (max-width: 768px) {
-   display: flex;
-}
+   @media (max-width: 768px) {
+      display: flex;
+   }
 `;
 
 export const StyledLink = styled(Link)`
