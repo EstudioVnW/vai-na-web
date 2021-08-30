@@ -13,13 +13,8 @@ const SquadsInfo = () => (
         Configure seus squads
       </S.SquadsTitle>
       <S.SquadsText>
-        Cada desafio demanda uma composição única de time,
-        e para alcançar os
-        {' '}
-        <br />
-        {' '}
-        melhores resultados vamos te ajudar
-        a configurar o seu squad remoto.
+        Cada desafio demanda uma composição única de time, e para alcançar os 
+        melhores resultados vamos te ajudar a configurar o seu squad remoto.
       </S.SquadsText>
       <S.SquadsContent>
         <S.SquadsImg
