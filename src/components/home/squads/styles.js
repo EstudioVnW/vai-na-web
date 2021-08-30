@@ -9,7 +9,7 @@ export const Squads = styled.section`
       padding: 12rem 0;
    }
    @media (max-width: 360px) {
-      padding: 4rem 0;
+      padding: 1rem 0 4rem;
    }
 `;
 

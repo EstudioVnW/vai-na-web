@@ -60,11 +60,12 @@ export const BoxImage = styled.figure`
   justify-content: center;
 
   @media (max-width: 768px) {
-    min-width: 14%;
     margin-right: 2rem;
+    min-width: 14%;
   }
   @media (max-width: 480px) {
-    min-width: 50%;
+    margin-right: 1rem;
+    min-width: 24%;
   }
 `;
 
