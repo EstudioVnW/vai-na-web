@@ -12,7 +12,7 @@ export const Container = styled.div`
         min-height: 85rem;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
         margin: 0;
     }
 `;
