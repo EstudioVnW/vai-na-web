@@ -19,6 +19,10 @@ const SchoolHeader = () => (
             </S.Title>
           </S.BoxTitle>
 
+          <S.BoxEstudioMobile>
+            <S.ImgEstudio src={PhotoEstudio} alt="Foto Estudio" />
+          </S.BoxEstudioMobile>
+
           <S.BoxText>
             <S.Paragraph>Aulas dinâmicas, práticas e 100% ao vivo!</S.Paragraph>
             <S.BoxButton>

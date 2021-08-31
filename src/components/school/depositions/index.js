@@ -109,6 +109,7 @@ class DepositionsSchool extends Component {
 
     render() {
         const { list } = this.state
+        
         const settings = {
             dots: true,
             infinite: false,
@@ -117,6 +118,23 @@ class DepositionsSchool extends Component {
             autoplay: true,
             slidesToShow: 3,
             slidesToScroll: 1,
+
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        autoplay: false,
+                        arrows: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                    slidesToShow: 1
+                    }
+                }
+            ],
 
             prevArrow: (
                 <S.LeftArrow src={Left} alt="Seta para esquerda"/>

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Link = styled.a``;
+export const Link = styled.a`
+    text-decoration: none;
+`;
 
 export const Container = styled.div`
     width: 100%;
@@ -16,6 +18,11 @@ export const Title = styled.h2`
     font: 800 2rem 'Usual', sans-serif;
     color: #00145D;
     padding: 3rem 0;
+
+    @media (min-width: 2200px){
+        padding: 5rem 0;
+        font-size: 4rem;
+    }
 
     @media (max-width: 768px){
         text-align: center;
@@ -57,6 +64,7 @@ export const BoxDesc = styled.figcaption`
     justify-content: center;
     align-items: center;
     background: rgba(253, 231, 169, 0.8);
+    transition: .5s;
     opacity: 0;
 
     @media (max-width: 1024px){
@@ -75,9 +83,9 @@ export const Project = styled.figure`
     text-align: center;
 
     &:hover ${BoxDesc} {
-        transition: .5s;
         opacity: 1;
     }
+
     @media (max-width: 1024px){
         width: 15.5%;
         margin-bottom: 3rem;
@@ -87,11 +95,17 @@ export const Project = styled.figure`
 export const Name = styled.h3`
     font: 800 1.1rem 'Usual', sans-serif;
     color: #00145D;
+
+    @media (min-width: 2200px) {
+        margin-bottom: .5rem;
+        font-size: 2rem;
+    }
     
     @media (max-width: 1024px){
         padding-top: 1rem;
         font-size: 1.5rem;
     }
+
     @media (max-width: 500px){
         font-size: 1rem;
     }
@@ -101,9 +115,14 @@ export const Address = styled.p`
     font: 600 .9rem 'Usual', sans-serif;
     color: #00145D;
 
+    @media (min-width: 2200px) {
+        font-size: 1.7rem;
+    }
+
     @media (max-width: 1024px){
         font-size: 1.2rem;
     }
+
     @media (max-width: 500px){
         font-size: .8rem;
     }
