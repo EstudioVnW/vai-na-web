@@ -93,12 +93,12 @@ const Form = () => {
 
   return (
     <S.Contato>
-      <S.ContatoContainer>
+      <S.Wrapper>
         <S.FormContainer>
           <S.FormTitle>Contato</S.FormTitle>
           <S.FormText>
             Nos conte sobre o seu desafio de negócio.
-            <br/>Entraremos em contato em até 24h. Não enviamos spam.
+            <span> Entraremos em contato em até 24h. Não enviamos spam.</span>
           </S.FormText>
           <S.Form
             name="contact"
@@ -233,7 +233,7 @@ const Form = () => {
             </S.SideInfo>
           </S.SideBox>
         </S.Sidebar>
-      </S.ContatoContainer>
+      </S.Wrapper>
     </S.Contato>
   );
 }
