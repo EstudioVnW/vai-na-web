@@ -114,8 +114,14 @@ const TesteCases = () => (
         <S.ImgBox>
           {/* <S.DesktopImg src={QuickcashDesktop} alt="" />
                     <S.MobileImg src={QuickcashMobile} alt="" /> */}
-          <S.ImageSmartphone src={CelularQuickcash} />
-          <S.CaseImg src={QuickcashGif} alt="" />
+
+          <S.Link
+            href="https://quickcashci.com/"
+            target="_blank"
+          >
+            <S.ImageSmartphone src={CelularQuickcash} />
+            <S.CaseImg src={QuickcashGif} alt="" />
+          </S.Link>
         </S.ImgBox>
       </S.Case>
 
