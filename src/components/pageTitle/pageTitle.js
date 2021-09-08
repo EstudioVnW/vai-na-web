@@ -3,150 +3,141 @@ import styled from 'styled-components';
 
 // styles
 const Container = styled.section`
-  padding-left: ${props => props.isPage !== 'isHome' && '7.5rem'};
-  /* margin-left: 1rem; */
+	margin: 0 auto;
+	padding: 10rem 0 2rem;
+	width: 68%;
+
+	@media (min-width: 2200px) {
+    padding: 15rem 0 4rem;
+	}
+
+	@media (max-width: 1200px) {
+		width: 77%;
+	}
 
 	@media (max-width: 768px) {
-		padding: 0;
-		padding-top: 6rem;
-		margin: 0;
+		padding: 8rem 0 0;
+		width: 88%;
 	}
 `;
 
-const BoxTitle = styled.div`
-	/* margin-left: ${props => props.pageHome === 'isHome' ? '3rem' : '2rem'}; */
-
-	/* @media (min-width: 1920px) {
-		margin-left: 7rem;
-	}
-
-	@media (max-width: 768px) {
-		margin-left: 0px;
-	}
-
-	@media (max-width: 768px) {
-		margin-left: 0px;
-	} */
-`;
+const BoxTitle = styled.div``;
 
 const Date = styled.p`
 	color: #FFAC2D;
 	font-size: 14px;
-	padding-left: 3.3rem;
+	padding: 1rem 0 1rem 5%;
+
+	@media (min-width: 2200px) {
+		padding: 1.5rem 0 1.5rem 4%;
+		font-size: 1.4rem;
+	}
 `;
 
 const TypePage = styled.h1`
 	padding: 0.25rem 1.125rem;
-	/* margin-left: ${props => props.pageHome === 'isHome' ? '4.5rem' : ' 3.5rem'}; */
+	width: fit-content;
+	color: #FFAC2D;
 	font-size: 1rem;
 	font-weight: 200;
-	color: #FFAC2D;
-	
-	width: fit-content;
+	text-transform: uppercase;
 	border: 1px solid #FFAC2D;
 	border-radius: 19px;
-	text-transform: uppercase;
-
-	@media (min-width: 1920px) {
-		/* margin-left: 9rem; */
-	}
-
-	@media (max-width: 768px) {
-		/* margin-left: 11rem; */
-	}
-
-	@media (max-width: 425px) {
-		/* margin-left: 0rem; */
-	}
 `;
 
 const ContentTitle = styled.div`
 	display: flex;
-	padding-top: 1rem;
-	margin-left: -2.3rem;
 `;
 
 const LineOrange = styled.span`
-	padding-right: 0.5rem;
-	font-size: ${props => props.pageHome === 'isHome' ? '3rem' : ' 3.2rem'};
-	font-weight: 200;
+	padding-right: 0.8rem;
 	color: #FF611E;
+	font-size: ${props => props.pageHome === 'isHome' ? '3rem' : '2.7rem'};
+	font-weight: 200;
 
-	@media (min-width: 1920px) {
-		font-size: 3.2rem;
+	@media (min-width: 2200px) {
+    font-size: 4rem;
 	}
 
 	@media (max-width: 768px) {
-		padding-left: 3.3rem;
+		font-size: 1.8rem;
 	}
 
 	@media (max-width: 425px) {
 		margin-left: 0rem;
-	  }
+	}
 `;
 
-const Title = styled.h2`
+const Title = styled.h1`
 	padding-bottom: ${props => props.pageBlog === 'postBlog' ? '1.125rem' : '2rem'};
-	width: ${props => props.pageBlog === 'postBlog' ? '90%' : ''};
-	max-width: 1272px;
-	font-size: ${props => props.pageBlog === 'isHome' ? '2.8rem' : ' 3.2rem'};
-	color: ${props => props.pageBlog === 'isHome' ? '#272727' : '#FDE7A9'};
 	padding-bottom: ${props => props.pageBlog === 'padBott' && '5rem'};
+	width: ${props => props.pageBlog === 'postBlog' ? '90%' : 'auto'};
+	max-width: 1272px;
+	font-size: 2.7rem;
+	font-weight: 800;
+	color: ${props => props.pageBlog === 'postBlog' ? '#00145d' : '#272727'};
 
-	@media (min-width: 1920px) {
-		/* font-size: 3.2rem; */
-		width: 93%;
+	@media (min-width: 2200px) {
+    font-size: 4rem;
 	}
 
-	@media (max-width: 425px) {
-		font-size: 2rem;
+	@media (max-width: 768px) {
+		padding: 0;
+		font-size: 1.8rem;
 	}
 
-	@media (max-width: 375px) {
-		font-size: 1.938rem;
+	@media (max-width: 480px) {
+		width: 100%;
 	}
 `;
 
 const ContentSubTitle = styled.div`
-	width: 90%;
 	display: flex;
-	text-align: left;
 	justify-content: ${props => props.pageBlog === 'over' && 'flex-end'};
+	margin: 0 auto;
+	width: 89%;
 	margin-top: ${props => props.pageBlog === 'over' && '4rem'};
+	text-align: left;
+
+	@media (min-width: 2200px) {
+		width: 92%;
+	}
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const SubTitle = styled.p`
-	color: ${props => props.pageBlog === 'postBlog' ? '' : '#00145D'};
-	font-size: ${props => props.fontSize ? props.fontSize : '36px'};
-	font-weight: 100;
+	padding: ${props => props.pageBlog === 'postBlog' ? '1rem 0' : '0 0 5.148rem 4.5rem'};
 	width: ${props => props.pageBlog === 'postBlog' ? '90%' : '70%'};
-	max-width: 970px;
-	padding: ${props => props.pageBlog === 'postBlog' ? '0 0 3.148rem 4.5rem' : '0 0 5.148rem 4.5rem'};
+	max-width: 70%;
+	color: ${props => props.pageBlog === 'postBlog' ? '#272727' : '#00145D'};
+	font-size: ${props => props.fontSize ? props.fontSize : '36px'};
+	line-height: 1.4;
+	font-weight: 300;
 
-	@media (max-width: 1026px) {
-    width: 100%;
+	@media (min-width: 2200px) {
+		font-size: 2.8rem;
 	}
 
-	@media (max-width: 648px) {
-    font-size: 2.5rem;
-		padding: 0 0 4rem 3rem;
-	}
-
-	@media (max-width: 450px) {
-    font-size: 1.8rem;
+	@media (max-width: 768px) {
+		padding: 1rem 0 2rem;
+		max-width: 100%;
+    font-size: 1.3rem;
 	}
 `;
 
 const SubParagraph = styled.span`
+	padding-left: 20%;
 	color: #272727;
 	font-size: 1.25rem;
 	font-weight: 300;
-	padding-left: 20%;
 
 	@media (max-width: 768px) {
 		display: flex;
-		padding-left: 0;
 		margin-top: 1em;
+		padding-left: 0;
 	}
 `;
 
@@ -193,16 +184,23 @@ const formatDate = (date) => {
 const PageTitle = ({ isPage, data, fontSize, padBott }) => {
 	return (
 		<Container isPage={isPage}>
-			{data?.typePage && <TypePage pageHome={isPage}>{data.typePage}</TypePage>}
 			<BoxTitle pageHome={isPage}>
 				{data?.date && formatDate(data.date)}
 				<ContentTitle>
 					<LineOrange pageHome={isPage}>//</LineOrange>
-					<Title pageBlog={isPage} pageHome={isPage} padBott={padBott} dangerouslySetInnerHTML={{ __html: data?.title }} />
+					<Title 
+						pageBlog={isPage} 
+						pageHome={isPage} 
+						padBott={padBott} 
+						dangerouslySetInnerHTML={{ __html: data?.title }} 
+					/>
 				</ContentTitle>
 				{data?.excerpt &&
 					<ContentSubTitle pageBlog={isPage}>
-						<SubTitle pageBlog={isPage} fontSize={fontSize}>
+						<SubTitle 
+							pageBlog={isPage} 
+							fontSize={fontSize}
+						>
 							{data.excerpt}
 							{
 								isPage === 'over' && (

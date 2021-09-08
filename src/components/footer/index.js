@@ -51,7 +51,8 @@ const Footer = () => (
         <div>
           <S.TextBox>
             <S.FooterText>
-              Vai na Web tem por missão democratizar o acesso às tecnologias digitais avançadas, reduzir as desigualdades e promover um futuro mais próspero e sustentável.
+              Vai na Web tem por missão democratizar o acesso às tecnologias digitais avançadas, 
+              reduzir as desigualdades e promover um futuro mais próspero e sustentável.
             </S.FooterText>
           </S.TextBox>
           <S.ImgBox>
@@ -98,7 +99,10 @@ const Footer = () => (
             </div>
             <S.SocialBox>
               <S.FooterText>Fique conectado!</S.FooterText>
-              <S.FooterText>Siga nossas redes sociais e fique conectado com todas as novidades.</S.FooterText>
+              <S.FooterText>
+                Siga nossas redes sociais 
+                e fique conectado com todas as novidades.
+              </S.FooterText>
               <S.IconBox>
                 <a href="https://www.facebook.com/vainaweb" target="_blank" rel="noopener noreferrer">
                   <S.Icon src={logoFacebook} alt="Logo Facebook" />

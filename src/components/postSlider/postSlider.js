@@ -9,88 +9,101 @@ import iconArrow from '../../images/icons/arrow.svg';
 
 // styles
 const Container = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 `;
 
 const Content = styled.div`
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 `;
 
 const Figure = styled.figure`
-	display: ${(props) => (props.mob ? 'none' : 'flex')};
-	width: 2.5rem;
+  display: ${(props) => (props.mob ? 'none' : 'flex')};
+  margin: 0 -5rem;
+  width: 1.5rem;
 
-	@media (max-width: 768px) {
-		display: ${(props) => (props.mob ? 'flex' : 'none')};
-		width: 1rem;
-	}
+  @media (min-width: 2200px) {
+    margin: 0 -8rem;
+    width: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    display: ${(props) => (props.mob ? 'flex' : 'none')};
+    margin: 0;
+    width: 1rem;
+  }
 `;
 
 const Arrow = styled.img`
-	cursor: pointer;
-	transform: ${(props) => props.rotate && 'rotate(180deg)'};
+  cursor: pointer;
+  transform: ${(props) => props.rotate && 'rotate(180deg)'};
 
-	@media (max-width: 768px) {
-		width: 100%;
-	}
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const ContainerPagination = styled.div`
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 
-	@media (max-width: 768px) {
-		width: 100%;
-		justify-content: space-between;
-	}
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 const ContentPagination = styled.div`
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 `;
 
 const PaginationButton = styled.button`
-	padding: 1.3125rem;
-	width: 3.375rem;
-	height: 3.375rem;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.25rem;
-	color: #0F2B92;
-	background: ${(props) => props.isSelected && '#FDE7A9'};
-	border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  width: 3rem;
+  height: 3rem;
+  color: #0F2B92;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  border: none;
+  background: ${(props) => props.isSelected ? '#FDE7A9' : 'none'};
+  cursor: pointer;
 
-	@media (max-width: 425px) {
-		padding: 0;
+  @media (min-width: 2200px) {
+    width: 5rem;
+    height: 5rem;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0;
     width: 2.375rem;
     height: 2.375rem;
     font-size: .938rem;
-	}
+  }
 `;
 
-const Text = styled.button`
-	display: none;
+const TopBtn = styled.button`
+  display: none;
 
-	@media (max-width: 768px) {
-		padding-top: 4.737rem;
-		display: flex;
-		font-size: 1rem;
-		color: #0F2B92;
-		text-decoration: underline;
-	}
-
-	@media (max-width: 425px) {
-		font-size: .688rem;
-	}
+  @media (max-width: 768px) {
+    margin-top: 4.737rem;
+    display: flex;
+    font-size: .9rem;
+    color: #0F2B92;
+    text-decoration: underline;
+    background: none;
+    border: none;
+  }
 `;
 
 const Slider = ({ data, home }) => {
@@ -201,7 +214,7 @@ const Slider = ({ data, home }) => {
     <Container>
       {renderSlider(data)}
       {renderPagination(data)}
-      <Text onClick={handleScrollTo}>Voltar para o Topo</Text>
+      <TopBtn onClick={handleScrollTo}>Voltar para o Topo</TopBtn>
     </Container>
   );
 };
