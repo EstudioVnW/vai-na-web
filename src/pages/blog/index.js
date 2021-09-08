@@ -1,9 +1,8 @@
-
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
-//Components
+// Components
 import Layouts from '../../components/layout';
 import ArticleBlog from '../../components/blog/articleBlog';
 
@@ -21,16 +20,18 @@ const ContantCard = styled.div`
   width: 80%; /* tamanho do container do post */
 
   @media (max-width: 768px) {
-		width: 100%; 
-	}
+    width: 100%; 
+  }
 `;
 
 const Text = styled.h3`
   padding: 5rem 0;
-	font-size:  ${props => props.slider ? '1.875rem' : '2.75rem'};
-	font-weight: 700;
-	color: #FDE7A9;
-	font-family: "usual";
+  color: #FDE7A9;
+  font: 
+    700 
+    ${(props) => (props.slider ? '1.875rem' : '2.75rem')}
+    'Usual'
+  ;
 `;
 
 export const query = graphql`
@@ -67,14 +68,12 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-const Index = ({ data, home }) => {
-  return (
-    <Layouts>
-      <ArticleBlog data={data}/>
-    </Layouts>
-  )
-}
+const Index = ({ data, home }) => (
+  <Layouts>
+    <ArticleBlog data={data} />
+  </Layouts>
+);
 
 export default Index;

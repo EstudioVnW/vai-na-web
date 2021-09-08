@@ -3,97 +3,112 @@ import styled from 'styled-components';
 
 // styles
 const Container = styled.section`
-	background-color: #FDE7A9;
-	width: 40rem;
-	min-height: 11.688rem;
-	border-radius: 0px 0px 18px 18px;
-	margin-left: auto;
-	margin-right: auto;
-	border-top: 2px solid #0F2B92;
 	display: flex;
 	align-items: center;
-	margin-top: 5rem;
-	margin-bottom: 7rem;
-	padding: 1.5rem 0 1.5rem 2rem;
+	margin: 5rem auto;
+	padding: 2.5rem 0 2.5rem 2rem;
+	width: 36%;
+	min-height: 11rem;
+	border-radius: 0 0 18px 18px;
+	border-top: 2px solid #0F2B92;
+	background-color: #FDE7A9;
 
-	@media (max-width: 768px) {
-    margin-bottom: -5rem;
-    padding: 2.063rem 0 5.738rem;
-    width: 100%;
-		border-radius: 0;
-		flex-direction: column;
-		justify-content: center;
+	@media (min-width: 2200px) {
+    padding: 4rem 0 4rem 3rem;
+		width: 38%;
+		border-width: 3px;
 	}
 
+	@media (max-width: 1200px) {
+    width: 41%;
+	}
 
-	@media (max-width: 424px) {
+	@media (max-width: 768px) {
+		flex-direction: column;
+		justify-content: center;
+    margin-bottom: -7rem;
+    padding: 3rem 1.4rem 6rem;
+    width: 100%;
+		border-radius: 0;
+	}
+
+	@media (max-width: 480px) {
 		width: 100%;
 	}
 `;
 
 const Image = styled.img `
-	width: 8.313rem;
-	height: 8.313rem;
+	width: 8rem;
+	height: 8rem;
 	border-radius: 50%;
 
-	@media (max-width: 424px) {
-		width: 9.313rem;
-		height: 9.313rem;
+	@media (min-width: 2200px) {
+		width: 12rem;
+		height: 12rem;
+	}
+
+	@media (max-width: 480px) {
 		margin: 0px;
 		margin-top: -1rem;
+		width: 9.313rem;
+		height: 9.313rem;
 	}
 `;
 
 const Content = styled.div`
-	padding-left: 2rem;
-	width: 70%;
 	display: flex;
 	flex-direction: column;
+	padding-left: 1.5rem;
+	width: 70%;
+
+	@media (min-width: 2200px) {
+		padding-left: 3rem;
+	}
 
 	@media (max-width: 768px) {
-		padding-left: 0;
 		align-items: center;
+		padding-left: 0;
+		width: 100%;
 	}
 `;
 
 const BoxText = styled.div `
 	display: flex;
-	padding-bottom: 1.3rem;
+	padding-bottom: 1rem;
 
+	@media (min-width: 2200px) {
+		padding-bottom: 2rem;
+	}
 
 	@media (max-width: 768px) {
+    justify-content: center;
 		padding-top: 1rem;
 		padding-bottom: 1rem;
-
 		width: 100%;
-    justify-content: center;
 	}
 `;
 
 const TextName = styled.h3 `
-	font-size: 1.25rem;
 	display: flex;
+	font-size: 1.2rem;
+	font-weight: 800;
+
+	@media (min-width: 2200px) {
+		font-size: 2.2rem;
+	}
 
 	@media (max-width: 768px) {
-		font-size: 1.825rem;
 		display: block;
 		text-align: center;
-	}
-`;
-
-const Comma = styled.h3 `
-	padding-right: 0.3rem;
-	
-	@media (max-width: 768px) {
-		font-size: 1.825rem;
-		display: none;
+    font-size: 1.3rem;
 	}
 `;
 
 const TextProfession = styled.span`
-	font-size: 1.25rem;
-	font-weight: 200;
+	padding-top: 5px;
 	color: #FF611E;
+	font-weight: 300;
+	font-size: 1.25rem;
 
 	@media (max-width: 768px) {
 		display: block;
@@ -103,24 +118,33 @@ const TextProfession = styled.span`
 const TextDescription = styled.div`
 	width: 86%;
 	max-width: 364px;
-	font-size: .938rem;
 	color: #0F2B92;
-	line-height: 1.6rem;
+	font-size: .9rem;
+	line-height: 1.9;
+
+	@media (min-width: 2200px) {
+		max-width: 100%;
+		width: 100%;
+		font-size: 1.8rem;
+	}
 
 	@media (max-width: 768px) {
 		width: 100%;
-		font-size: 1rem;
+    line-height: 1.5;
 	}
 `;
 
 const CardAuthor = ({ author }) => {
 	return (
 		<Container>
-			<Image src={author?.photo?.url} alt='' />
+			<Image 
+				src={author?.photo?.url} 
+				alt='' 
+			/>
 			<Content>
 				<BoxText>
 					<TextName>
-						{author?.name}<Comma>, {` `}</Comma>
+						{author?.name},
 						<TextProfession>{author?.jobTitle}</TextProfession>
 					</TextName>
 				</BoxText>
