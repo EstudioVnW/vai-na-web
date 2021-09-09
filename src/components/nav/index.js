@@ -48,7 +48,7 @@ const Menu = (props) => {
   return (
     <S.Menu home={home} isScrolled={isScrolled}>
       <S.Figure>
-        <Link to="/#">
+        <Link to="/">
           <S.Logo src={logo} alt="Logotipo" />
         </Link>
       </S.Figure>
@@ -56,36 +56,82 @@ const Menu = (props) => {
         <span />
       </S.MenuOpen>
       <S.Wrap isShow={isShow}>
+
         <S.NavList>
-          <S.NavItem home={home} isScrolled={scrollPosition > 0}>
-            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/servicos">Serviços</Link>
+          <S.NavItem
+            home={home}
+            isScrolled={scrollPosition > 0}
+          >
+            <Link
+              activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }}
+              to="/servicos"
+            >
+              Serviços
+            </Link>
           </S.NavItem>
-          <S.NavItem home={home} isScrolled={scrollPosition > 0}>
-            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/cases">Cases</Link>
+          <S.NavItem
+            home={home}
+            isScrolled={scrollPosition > 0}
+          >
+            <Link
+              activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }}
+              to="/cases"
+            >
+              Cases
+            </Link>
           </S.NavItem>
-          <S.NavItem home={home} isScrolled={scrollPosition > 0}>
-            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/modelo">Modelo</Link>
+          <S.NavItem
+            home={home}
+            isScrolled={scrollPosition > 0}
+          >
+            <Link
+              activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }}
+              to="/modelo"
+            >
+              Modelo
+            </Link>
           </S.NavItem>
-          <S.NavItem home={home} isScrolled={scrollPosition > 0}>
-            <Link activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }} to="/carreiras">Carreiras</Link>
+          <S.NavItem
+            home={home}
+            isScrolled={scrollPosition > 0}
+          >
+            <Link
+              activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }}
+              to="/carreiras"
+            >
+              Carreiras
+            </Link>
+          </S.NavItem>
+          <S.NavItem
+            home={home}
+            isScrolled={scrollPosition > 0}
+          >
+            <Link
+              activeStyle={{ fontWeight: '700', borderBottom: '0.2rem solid currentColor' }}
+              to="/blog"
+            >
+              Blog
+            </Link>
           </S.NavItem>
         </S.NavList>
+
         <S.BottomList isShow={isShow}>
           {/* <S.BottomLink to={'/#'} >Media Kit</S.BottomLink>
           <S.BottomLink to={'/#'} >Perguntas Frequentes</S.BottomLink> */}
           <S.BottomLink to="/reserve-seu-squad">Contato</S.BottomLink>
         </S.BottomList>
+
         {isDesktop && (
-        <Button
-          width="14rem"
-          border={home ? '#FFAC2D' : '#0e2762'}
-          color={home ? '#FFAC2D' : '#fbd4b2'}
-          background="#0F2B92"
-          colorHover='#FFF'
-          funcAction={redirectToContact}
-        >
-          Reserve seu Squad!
-        </Button>
+          <Button
+            width="14rem"
+            border={home ? '#FFAC2D' : '#0e2762'}
+            color={home ? '#FFAC2D' : '#fbd4b2'}
+            background="#0F2B92"
+            colorHover="#FFF"
+            funcAction={redirectToContact}
+          >
+            Reserve seu Squad!
+          </Button>
         )}
       </S.Wrap>
     </S.Menu>

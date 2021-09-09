@@ -1,4 +1,5 @@
 const path = require('path');
+const slugify = require('slugify');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
@@ -21,21 +22,22 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `, { limit: 1000 }).then((result) => {
     if (result.errors) {
-      console.log('result', result.errors);
       throw result.errors;
     }
 
     // Create blog post pages.
     result.data.allGraphCmsPost.edges.forEach((edge) => {
-      const link = `blog/${edge.node.publishedAt.replace(/[^\w\s]/gi, '')}`;
-      console.log('edge', link);
+      const link = slugify(`${edge.node.title}`, {
+        replacement: '-',
+        remove: /[*+~.()'"!:@]/g,
+        lower: true,
+        trim: true,
+      });
       createPage({
-        // Path for this page — required
-        path: link,
+        path: `/blog/${link}`,
         component: blogPostTemplate,
         context: {
           id: `${edge.node.id}`,
-          slug: link,
         },
       });
     });

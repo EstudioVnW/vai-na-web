@@ -244,7 +244,12 @@ const formatDate = (date) => {
 }
 
 const Card = ({ data, slider }) => {
-	const slug = slugify(`${data.title.toLowerCase()} - ${data.id.split(":")[1]}`)
+	const slug = slugify(`${data.title}`, {
+		replacement: '-',
+		remove: /[*+~.()'"!:@]/g,
+		lower: true,
+		trim: true,
+	});
 
 	return (
 		<Container slider={slider}>

@@ -51,7 +51,7 @@ const Footer = () => (
         <div>
           <S.TextBox>
             <S.FooterText>
-              Vai na Web tem por missão democratizar o acesso às tecnologias digitais avançadas, 
+              Vai na Web tem por missão democratizar o acesso às tecnologias digitais avançadas,
               reduzir as desigualdades e promover um futuro mais próspero e sustentável.
             </S.FooterText>
           </S.TextBox>
@@ -83,6 +83,9 @@ const Footer = () => (
                 <S.FooterLink>
                   <Link to="/carreiras">Carreiras</Link>
                 </S.FooterLink>
+                <S.FooterLink>
+                  <Link to="/blog">Blog</Link>
+                </S.FooterLink>
                 {/* <S.FooterLink>
 										<Link>Links Úteis</Link>
 									</S.FooterLink> */}
@@ -100,23 +103,43 @@ const Footer = () => (
             <S.SocialBox>
               <S.FooterText>Fique conectado!</S.FooterText>
               <S.FooterText>
-                Siga nossas redes sociais 
+                Siga nossas redes sociais
                 e fique conectado com todas as novidades.
               </S.FooterText>
               <S.IconBox>
-                <a href="https://www.facebook.com/vainaweb" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.facebook.com/vainaweb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <S.Icon src={logoFacebook} alt="Logo Facebook" />
                 </a>
-                <a href="https://www.instagram.com/vainaweb/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.instagram.com/vainaweb/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <S.Icon iconInst src={logoInstagram} alt="Logo Instagram" />
                 </a>
-                <a href="https://medium.com/@olavainaweb" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://medium.com/@olavainaweb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <S.Icon src={logoMedium} alt="Logo Medium" />
                 </a>
-                <a href="https://br.linkedin.com/company/vainaweb" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://br.linkedin.com/company/vainaweb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <S.Icon src={logoLinkedin} alt="Logo Linkedin" />
                 </a>
-                <a href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.youtube.com/channel/UCzUldn76ZB0b-g6WOij9m3w"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <S.Icon src={logoYoutube} alt="Logo Youtube" />
                 </a>
               </S.IconBox>
