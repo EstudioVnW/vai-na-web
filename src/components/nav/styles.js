@@ -74,8 +74,8 @@ export const NavList = styled.ul`
 `;
 
 export const NavItem = styled.li`
-  width: 5.5rem;
-  margin-right: 0.85rem;
+  width: 5rem;
+  margin-right: 0.5rem;
   text-align: center;
   font-size: 1.04em;
   line-height: 1.813rem;
