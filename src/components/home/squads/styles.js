@@ -110,7 +110,7 @@ export const ButtonSquads = styled.div`
    justify-content: center;
    margin-top: -1.5rem;
    height: 3rem;
-   z-index: 111;
+   z-index: 9;
 `;
 
 export const ImageSquad = styled.img`
