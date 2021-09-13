@@ -36,6 +36,11 @@ export const TalentsBackground = styled.div`
   border-radius: 0 20px 20px 0;
   background: #fed5b252;
   z-index: -1;
+
+  @media (min-width: 2200px) {
+    height: 100%;
+    border-radius: 0 30px 30px 0;
+  }
   
   @media (max-width: 768px) {
     width: 100%;
@@ -75,7 +80,8 @@ export const TalentsText = styled.div`
 `;
 
 export const TalentsTextTitle = styled.h2`
-  width: 80%;
+  display: flex;
+  flex-direction: column;
   color: #FF611E;
   font-size: 1.8rem;
   font-weight: 800;
@@ -97,21 +103,35 @@ export const TalentsTextDescription = styled.p`
    font: 400 1rem/1.5rem 'Usual', sans-serif;
 
    @media (min-width: 1040px) {
-      font: 400 1rem/1.6rem 'Usual', sans-serif;
+    font: 400 1rem/1.6rem 'Usual', sans-serif;
    }
 
    @media (min-width: 2200px) {
-     font: 400 2rem/2.7rem 'Usual', sans-serif;
+    margin-top: 3rem;
+    font: 400 2rem/2.7rem 'Usual', sans-serif;
    }
 `;
 
 export const ButtonTalents = styled.div`
-  width: 100%;
-  height: 90px;
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
+  height: 90px;
+    
+  button {
+    font-size: 1.1rem;
+
+    @media (min-width: 2200px) {
+      margin-top: 3rem;
+      width: 17rem;
+      height: 6rem;
+      font-size: 2rem;
+      border-radius: 45px;
+    }
+  }
+
 
   @media (max-width: 1920px) {
     margin-top: 1.5rem;
@@ -119,10 +139,10 @@ export const ButtonTalents = styled.div`
 
   @media (max-width: 1200px) {
     margin: 0;
+    
     button {
       width: 9rem;
       height: 3.2rem;
-      font-size: 1rem;
     }
   }
 
@@ -135,7 +155,7 @@ export const ButtonTalents = styled.div`
 export const ImgBox = styled.figure`
   width: 30rem;
   height: 25rem;
-    border-radius: 15px;
+  border-radius: 15px;
   border: 2px solid #FF611E;
   box-shadow: rgb(232, 235, 245) 0px 0px 10px;
   overflow: hidden;

@@ -10,7 +10,10 @@ const Talents = () => (
     <S.TalentsBackground />
     <S.TalentsWrap>
       <S.TalentsText>
-        <S.TalentsTextTitle>Uma plataforma de formação de talentos digitais</S.TalentsTextTitle>
+        <S.TalentsTextTitle>
+          Uma plataforma de formação
+          <span>de talentos digitais</span>
+        </S.TalentsTextTitle>
         <S.TalentsTextDescription>
           Desde 2017, nossa Escola de Tecnologia forma
           talentos de todo Brasil, oriundos das classes C, D e E, em programação
