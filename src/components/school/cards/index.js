@@ -30,7 +30,10 @@ const CardsSchool = () => {
       <S.Wrap>
         <S.BoxText>
           <S.Title>Conheça nossas carreiras</S.Title>
-          <S.SubTitle>Ensino profissional, gratuito e alinhado às necessidades do mercado</S.SubTitle>
+          <S.SubTitle>
+            Ensino profissional, gratuito 
+            e alinhado às necessidades do mercado
+          </S.SubTitle>
         </S.BoxText>
 
         <S.Slide>
@@ -70,7 +73,8 @@ const CardsSchool = () => {
                   <S.HDesc>Desenvolve sites multi-tela e multidispositivo.</S.HDesc>
                   <S.PDesc>
                     É o profissional responsável por dar vida e movimento às interfaces digitais.
-                    Atua desenvolvendo os componentes de um site, portal ou e-commerce que vão interagir diretamente com os usuários.
+                    Atua desenvolvendo os componentes de um site, portal ou e-commerce 
+                    que vão interagir diretamente com os usuários.
                   </S.PDesc>
                 </S.CardContainer>
               </S.Card>
@@ -91,7 +95,8 @@ const CardsSchool = () => {
                   <S.DevTxt>Desenvolvedor Mobile</S.DevTxt>
                   <S.HDesc>Desenvolve aplicativos nativos para Android e iOS.</S.HDesc>
                   <S.PDesc>
-                    É o profissional responsável pelo planejamento, elaboração, testes e implementação de softwares para dispositivos
+                    É o profissional responsável pelo planejamento, 
+                    elaboração, testes e implementação de softwares para dispositivos
                     móveis (smartphones, smartwatches, tablets, câmeras digitais…).
                   </S.PDesc>
                 </S.CardContainer>
@@ -114,7 +119,8 @@ const CardsSchool = () => {
                   <S.HDesc>Desenvolve tudo aquilo que está por trás da interface.</S.HDesc>
                   <S.PDesc>
                     É o profissional responsável por construir e organizar
-                    as engrenagens, banco de dados e servidores que possibilitam os sites e sistemas funcionarem.
+                    as engrenagens, banco de dados e servidores 
+                    que possibilitam os sites e sistemas funcionarem.
                   </S.PDesc>
                 </S.CardContainer>
               </S.Card>
