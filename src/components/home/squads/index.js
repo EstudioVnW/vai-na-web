@@ -37,8 +37,7 @@ const Squads = () => (
         <S.SquadsTextTitle>Squads estendidos e configuráveis</S.SquadsTextTitle>
         <S.SquadsTextSubTitle>
           Entregas contínuas de design e desenvolvimento web e mobile.
-          <br />
-          A escolha ideal para destravar seu backlog de baixa e média complexidade.
+          <span>A escolha ideal para destravar seu backlog de baixa e média complexidade.</span>
         </S.SquadsTextSubTitle>
 
         <S.SquadsTextBack>
@@ -49,8 +48,8 @@ const Squads = () => (
           <S.BoxTextBack>
             <S.BoxTextBackTitle>MVPs ágeis e em escala</S.BoxTextBackTitle>
             <S.BoxTextBackDescription>
-              Descoberta, ideação e implementação de MVPs. Valide rapidamente a
-              viabilidade e melhorias do seu projeto.
+              Descoberta, ideação e implementação de MVPs.
+              <span>Valide rapidamente a viabilidade e melhorias do seu projeto.</span>
             </S.BoxTextBackDescription>
           </S.BoxTextBack>
         </S.SquadsTextBack>
@@ -85,8 +84,8 @@ const Squads = () => (
             </S.BoxTitleImage>
 
             <S.BoxTextBackDescription>
-              Implantação de lojas online, personalizadas, escaláveis
-              utilizando a plataforma Vtex io.
+              Implantação de lojas online, personalizadas,
+              <span>escaláveis utilizando a plataforma Vtex io.</span>
             </S.BoxTextBackDescription>
           </S.BoxTextBack>
         </S.SquadsTextBack>

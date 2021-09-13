@@ -108,12 +108,8 @@ export const ButtonSquads = styled.div`
    display: flex;
    align-items: center;
    justify-content: center;
-   margin-top: 1rem;
+   margin-top: -1.5rem;
    height: 3rem;
-
-   @media (min-width: 2200px) {
-      margin-top: 4rem;
-   }
 `;
 
 export const ImageSquad = styled.img`
@@ -149,13 +145,15 @@ export const SquadsTextTitle = styled.h2`
 `;
 
 export const SquadsTextSubTitle = styled.p`
-   padding: 0.25rem 0 1rem;
+   display: flex;
+   flex-direction: column;
+   padding: .3rem 0 .5rem;
    color: #272727;
    font: 400 1rem/1.5rem 'Usual', sans-serif;
 
    @media (min-width: 1040px) {
       width: 90%;
-      font: 400 1rem/1.6rem 'Usual', sans-serif;
+      font: 400 1rem/1.5rem 'Usual', sans-serif;
    }
    
    @media (min-width: 2200px) {
@@ -169,7 +167,7 @@ export const SquadsTextDescription = styled.p`
    font: 400 1rem/1.5rem 'Usual', sans-serif;
 
    @media (min-width: 1040px) {
-      font: 400 1rem/1.6rem 'Usual', sans-serif;
+      font: 400 1rem/1.5rem 'Usual', sans-serif;
       width: 90%;
    }
 
@@ -239,11 +237,11 @@ export const BoxTextBack = styled.div`
 
 export const BoxTextBackTitle = styled.h4`
    color: #272727;
-   font-size: 1.2rem;
-   font-weight: 700;
+   font-size: 1.4rem;
+   font-weight: 800;
    
    @media (min-width: 2200px){
-      font-size: 2rem;
+      font-size: 2.2rem;
    }
 `;
 
@@ -252,18 +250,22 @@ export const BoxTextBackDescription = styled.p`
    font-size: 1.1rem;
    line-height: 1.6rem;
    margin-top: 0.5rem;
+
    span {
       display: block;
    }
+
    @media (min-width: 2200px) {
       width: 100%;
       font-size: 1.8rem;
       line-height: 1.4;
    }
+
    @media (max-width: 1440px){
-      font-size: 1rem;
+      font-size: .9rem;
       line-height: 1.5;
    }
+
    @media (max-width: 480px) {
       font-size: 0.85rem;
       line-height: 1.4;
@@ -276,12 +278,12 @@ export const Bold = styled.span`
 
 export const BoxTitleImage = styled.div`
    display: flex;
-   align-items: baseline;
+   align-items: flex-end;
    gap: 1rem;
 `;
 
 export const BoxImageVtex = styled.div`
-   width: 35%;
+   width: 43%;
    height: 100%;
 `;
 
