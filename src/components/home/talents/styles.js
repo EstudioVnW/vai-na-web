@@ -98,18 +98,18 @@ export const TalentsTextTitle = styled.h2`
 `;
 
 export const TalentsTextDescription = styled.p`
-   margin-top: 1rem;
-   color: #272727;
-   font: 400 1rem/1.5rem 'Usual', sans-serif;
+  margin-top: 1rem;
+  color: #272727;
+  font: 400 1rem/1.5rem 'Usual', sans-serif;
 
-   @media (min-width: 1040px) {
-    font: 400 1rem/1.6rem 'Usual', sans-serif;
-   }
+  @media (min-width: 1040px) {
+  font: 400 1rem/1.6rem 'Usual', sans-serif;
+  }
 
-   @media (min-width: 2200px) {
-    margin-top: 3rem;
-    font: 400 2rem/2.7rem 'Usual', sans-serif;
-   }
+  @media (min-width: 2200px) {
+  margin-top: 3rem;
+  font: 400 2rem/2.7rem 'Usual', sans-serif;
+  }
 `;
 
 export const ButtonTalents = styled.div`

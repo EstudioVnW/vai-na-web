@@ -12,9 +12,15 @@ const ModelQuote = () => (
       <S.TextBox>
         <S.QuoteMark>“</S.QuoteMark>
         <S.Text>
-          <i>As pessoas que transformarão nossos negócios, nossas economias e nosso país não necessariamente virão dos grandes centros ou das mais prestigiadas faculdades.</i>
+          <i>
+            As pessoas que transformarão nossos negócios, nossas economias e nosso país 
+            não necessariamente virão dos grandes centros ou das mais prestigiadas faculdades.
+          </i>
           {' '}
-          <strong>São as pessoas que conhecem a realidade das ruas, empoderadas pela tecnologia, que darão luz a uma nova onda de crescimento, inovação e produtividade.</strong>
+          <strong>
+            São as pessoas que conhecem a realidade das ruas, empoderadas pela tecnologia, 
+            que darão luz a uma nova onda de crescimento, inovação e produtividade.
+          </strong>
           <i> - Igor Couto, CEO 1STi</i>
         </S.Text>
         <S.QuoteLineMobile src={LineMobile} />

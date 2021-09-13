@@ -44,6 +44,7 @@ export const TitleBox = styled.div`
 `;
 
 export const Title = styled.h3`
+    margin-right: 3rem;
     width: 50%;
     font: 800 2rem 'Usual', sans-serif;
     line-height: 1.3;
@@ -51,10 +52,6 @@ export const Title = styled.h3`
 
     @media (min-width: 2200px) {
         font-size: 3.8em;
-    }
-
-    @media (max-width: 1200px) {
-        margin-right: 2rem;
     }
 
     @media (max-width: 768px) {
