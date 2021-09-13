@@ -15,7 +15,8 @@ const SchoolHeader = () => (
           <S.BoxTitle>
             <S.TitleBar>//</S.TitleBar>
             <S.Title>
-              Construa uma carreira de sucesso na tecnologia
+              Construa uma carreira
+              <span> de sucesso na tecnologia</span>
             </S.Title>
           </S.BoxTitle>
 

@@ -56,8 +56,8 @@ export const SubTitle = styled.h3`
 `;
 
 export const Slide = styled.div`
-    width: 100%;
     position: relative;
+    width: 100%;
 `;
 
 export const BoxCards = styled.div`

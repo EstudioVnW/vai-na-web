@@ -191,9 +191,9 @@ export const About = styled.p`
 `;
 
 export const BoxImg = styled.figure`
+    position: relative;
     padding: 3rem 0;
     width: 100%;
-    position: relative;
 
     @media (min-width: 2200px) {
         padding: 2.7rem 0;

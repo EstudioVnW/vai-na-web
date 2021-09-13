@@ -14,18 +14,22 @@ export const Wrap = styled.div`
 
     @media (min-width: 1900px) {
         margin-top: 8rem;
-	    min-height: calc(100vh - 8rem);
-	}
+        min-height: calc(100vh - 8rem);
+    }
+
+    @media (max-width: 1200px) {
+        width: 90%;
+    }
 
     @media (max-width: 1024px) {
-        margin-top: 8rem;
+        margin-top: 10rem;
         padding-bottom: 6rem;
-		min-height: calc(50vh - 8rem);
-	}
+        min-height: calc(50vh - 8rem);
+    }
 
     @media (max-width: 768px){
         align-items: center;
-        margin-top: 3rem;
+        margin-top: 4rem;
         padding: 0;
         width: 90%;
         min-height: calc(100vh - 6rem);
@@ -58,16 +62,14 @@ export const BoxTitle = styled.div`
     display: flex;
     width: 100%;
 
-    @media (min-width: 1800px) {
-        width: 80%
-    }
-
     @media (max-width: 768px){
         margin-bottom: 2rem;
     }
 `;
 
 export const Title = styled.h1`
+    display: flex;
+    flex-direction: column;
     font: 800 2.7rem 'Usual', sans-serif;
     color: #FF611E;
 
@@ -76,12 +78,12 @@ export const Title = styled.h1`
         font-size: 4rem;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1440px) {
         font-size: 2rem;
     }
 
     @media (max-width: 500px) {
-        width: 260px;
+        width: 90%;
         font-size: 1.6rem;
     }
 `;
@@ -97,7 +99,8 @@ export const TitleBar = styled.span`
         font-size: 4rem;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1440px) {
+        left: -2rem;
         font-size: 2rem;
     }
 
@@ -134,8 +137,8 @@ export const Paragraph = styled.h3`
         font-size: 2.2rem;
     }
 
-    @media (max-width: 1024px){
-        font-size: 1.3rem;
+    @media (max-width: 1440px){
+        font-size: 1.2rem;
     }
 
     @media (max-width: 768px){
@@ -213,7 +216,7 @@ export const DownArrow = styled.img`
     }
 
     @media (max-width: 768px){
-        bottom: -4rem;
+        bottom: -3rem;
         left: 42vw;
         width: 1.2rem;
     }
