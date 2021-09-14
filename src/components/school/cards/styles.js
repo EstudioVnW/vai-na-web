@@ -145,7 +145,7 @@ export const Card = styled.div`
 `;
 
 export const CardContainer = styled.div`
-    padding: 2rem;
+    padding: 1.5rem;
     width: 100%;
     height: 100%;
     color: #272727;
@@ -167,12 +167,12 @@ export const CardDetail = styled.div`
     border-bottom: .2rem solid ${(props) => props.borderFill};
 
     @media (min-width: 2200px) {
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
         border-bottom-width: .3rem;
     }
 
     @media (max-width: 480px) {
-        padding-bottom: 1rem;
+        padding-bottom: .5rem;
     }
 `;
 
@@ -185,8 +185,8 @@ export const CardCircle = styled.div`
 
     @media (min-width: 2200px) {
         margin-right: 1rem;
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 1.4rem;
+        height: 1.4rem;
     }
 
     @media (max-width: 480px) {
@@ -199,7 +199,7 @@ export const CardCircle = styled.div`
 export const StickerBox = styled.figure`
     position: absolute;
     top: 0%;
-    right: -12%;
+    right: -16%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -226,9 +226,9 @@ export const StickerBox = styled.figure`
     }
 
     @media (max-width: 480px) {
-        top: 15%;
-        width: 23vw;
-        height: 23vw;
+        top: 0;
+        width: 22vw;
+        height: 22vw;
     }
 `;
 
@@ -321,13 +321,13 @@ export const PDesc = styled.p`
 `;
 
 export const PDescVtex = styled.p`
-    font: 400 1rem 'Usual', sans-serif;
+    font: 400 .95rem 'Usual', sans-serif;
     line-height: 1.3rem;
     color: #272727;
 
     @media (min-width: 2200px) {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
     }
 
     @media (max-width: 480px) {
@@ -335,7 +335,7 @@ export const PDescVtex = styled.p`
         line-height: 1rem;
     }
 
-    @media (max-width: 375px) {
+    @media (max-width: 320px) {
         font-size: 0.85rem;
         line-height: 0.85rem;
     }
@@ -431,12 +431,16 @@ export const LittleCardVtex = styled.div`
     justify-content: center;
     transition: 0.2s ease-in-out;
 
-    &:hover{
-        transform: scale(1.025);
+    ${CarreiraTxt} {
+        padding: 0.5rem 0 0;
     }
-
+    
     div {  
         color: #00145D;
+    }
+    
+    &:hover{
+        transform: scale(1.025);
     }
 
     @media (max-width: 480px) {
@@ -448,26 +452,21 @@ export const LittleCardVtex = styled.div`
 
 export const BoxTitleVtex = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    margin-bottom: .5rem;
     width: 100%;
 `;
 
 export const DevTxtLittleVtex = styled.h3`
     width: ${(props) => props.width || '60%'};
     font: 700 1.4rem 'Usual', sans-serif;
-    margin-bottom: 1rem;
 
     @media (min-width: 2200px) {
         font-size: 2.2rem;
         width: 15rem;
     }
 
-    @media (max-width: 768px) {
-        margin-bottom: 1.5rem;
-    }
-
     @media (max-width: 480px) {
-        margin-bottom: 0.8rem;
         font-size: 1.1rem;
         line-height: 1rem;
         max-width: 45%;
@@ -476,8 +475,4 @@ export const DevTxtLittleVtex = styled.h3`
 
 export const ImgVtex = styled.img`
     width: 25%;
-
-    @media (max-width: 480px) {
-        width: 15%;
-    }
 `;
