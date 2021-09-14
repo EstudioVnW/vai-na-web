@@ -17,7 +17,7 @@ const ModelIntro = () => (
           {' '}
           remanejar as pessoas que já estão empregadas ou investir naquelas 
           que independente de estímulos vão entrar no mercado de trabalho. 
-          Mas sim capacitar e requalificar aqueles que estão à margem e inseri-los.
+          Mas sim capacitar e requalificar aqueles que estão à margem e inseri&#8209;los.
         </S.Text>
       </S.TitleBox>
 
