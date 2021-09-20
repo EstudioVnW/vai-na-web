@@ -1,16 +1,14 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 import * as S from './styles';
 import Button from '../../button/Button';
 
-import { navigate } from 'gatsby';
-
 import squadsImg from '../../../images/images/squadsImg.png';
-
 
 const Squads = (props) => {
   const redirectToConcact = () => {
-    navigate('/reserve-seu-squad/');
-  }
+    navigate('/modelo/');
+  };
   return (
     <S.SquadsContainer>
       <S.SquadsBg>
@@ -22,18 +20,19 @@ const Squads = (props) => {
           </S.SquadsText>
           <S.BoxButton>
             <Button
-              border='#0e2762'
-              color='#fbd4b2'
-              background='#0F2B92'
+              border="#0e2762"
+              color="#fbd4b2"
+              background="#0F2B92"
               funcAction={redirectToConcact}
               width="16rem"
+              colorHover="#FFF"
             >
               Conheça nosso modelo!
             </Button>
           </S.BoxButton>
         </S.SquadsWrap>
         <S.SquadsBox>
-          <S.SquadsImg src={squadsImg} alt='Alunos do Vai na Web' />
+          <S.SquadsImg src={squadsImg} alt="Alunos do Vai na Web" />
           <S.SquadsIcon>
             <S.IconText>
               <span>100%</span>
@@ -43,7 +42,7 @@ const Squads = (props) => {
         </S.SquadsBox>
       </S.SquadsBg>
     </S.SquadsContainer>
-  )
+  );
 };
 
 export default Squads;

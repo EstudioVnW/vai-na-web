@@ -10,7 +10,7 @@ import PeoplesImageSecondResponsive from '../../../images/images/Fotos_bolinhas_
 import Line from '../../../images/images/Linha.svg';
 
 const redirectToContact = () => {
-  navigate('/reserve-seu-squad/');
+  navigate('/modelo/');
 };
 
 const Conection = () => (
@@ -29,6 +29,7 @@ const Conection = () => (
           background="#0F2B92"
           border="#0F2B92"
           funcAction={redirectToContact}
+          colorHover="#FFF"
         >
           Conheça nosso modelo!
         </ButtonHome>

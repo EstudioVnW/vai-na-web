@@ -15,6 +15,7 @@ export const Wrap = styled.div`
     @media (max-width: 1200px) {
         width: 95%;
     }
+    
     @media (max-width: 1024px) {
         width: 100%;
     }
@@ -70,10 +71,12 @@ export const InfoBox = styled.div`
         margin: 0 3%;
         width: 44%;
     }
+
     @media (max-width: 1024px) {
         width: 90%;
         margin: 0 auto;
     }
+
     @media (max-width: 480px) {
         width: 88%;
     }
@@ -89,9 +92,11 @@ export const CaseTitle = styled.h2`
     @media (min-width: 2200px) {
         font-size: 3.8rem;
     }
+
     @media (max-width: 1440px) {
         width: 100%;
     }
+
     @media (max-width: 480px) {
         font-size: 1.9rem;
     }
@@ -105,12 +110,15 @@ export const CaseText = styled.p`
     @media (min-width: 2200px) {
         font-size: 2rem;
     }
+
     @media (max-width: 1440px) {
         font-size: 1rem;
     }
+
     @media (max-width: 1024px) {
         font-size: 1.2em;
     }
+
     @media (max-width: 480px) {
         margin-top: 1.2rem;
         font-size: 0.9rem;
@@ -126,12 +134,15 @@ export const Hashtag = styled.p`
         margin: 2.5rem 0 3rem;
         font-size: 2rem;
     }
+
     @media (max-width: 1440px) {
         font-size: 1rem;
     }
+
     @media (max-width: 1024px) {
         font-size: 1.2em;
     }
+
     @media (max-width: 480px) {
         font-size: 1rem;
         line-height: 1.5;
@@ -146,12 +157,15 @@ export const TopClient = styled.div`
     @media (min-width: 2200px) {
         width: 95%;
     }
+
     @media (max-width: 1200px) {
         width: 95%;
     }
+
     @media (max-width: 1024px) {
         width: 100%;
     }
+
     @media (max-width: 480px) {
         width: 85%;
     }
@@ -159,6 +173,7 @@ export const TopClient = styled.div`
     div {
         margin-right: 1rem;
     }
+
     figure {
         margin-top: 0.6rem;
     }
@@ -187,9 +202,11 @@ export const RightClient = styled.div`
     @media (min-width: 2200px) {
         width: 60%;
     }
+
     @media (max-width: 1024px) {
         width: 60%;
     }
+
     @media (max-width: 480px) {  
         width: 80%;
     }
@@ -203,14 +220,17 @@ export const RightClientBox = styled.div`
     @media (min-width: 2200px) {
         width: 100%;
     }
+
     @media (max-width: 1024px) {
         flex-direction: column;
     }
+
     @media (max-width: 768px) {
         figure {
             margin-top: 1rem;
         }
     }
+
     img {
         width: 100%;
     }
@@ -236,15 +256,18 @@ export const ClientText = styled.p`
             font-size: 2rem;
         }
     }
+
     @media (max-width: 1440px) {
         font-size: 0.8rem;
         span {
             font-size: 1rem;
         }
     }
+
     @media (max-width: 1024px) {
         font-size: 1.2em;
     }
+
     @media (max-width: 480px) {
         font-size: 0.8rem;
     }
@@ -254,6 +277,7 @@ export const Date = styled.div`
     @media (max-width: 1024px) {
         width: 30%;
     }
+
     @media (max-width: 480px) { 
         font-size: 0.8em;
     }
@@ -267,6 +291,7 @@ export const LogoBox = styled.figure`
     @media (max-width: 1024px) {
         margin-top: 10px;
     }
+
     @media (max-width: 480px) {
         display: flex;
         flex-direction: column;
@@ -304,13 +329,27 @@ export const ImgBox = styled.figure`
         margin: 5rem 0 3rem;
         width: 100%;
     }
+
     @media (max-width: 480px) {
         margin: 2rem 0;
     }
 `;
 
+export const Link = styled.a``;
+
 export const CaseImg = styled.img`
     width: 100%;
+`;
+
+export const ImageSmartphone = styled.img`
+    width: 20%;
+    left: 80%;
+    top: 15%;
+    position: absolute;
+
+    @media (min-width: 2200px) {
+        top: 12%;
+    }
 `;
 
 export const MobileImg = styled.img`
@@ -322,7 +361,7 @@ export const MobileImg = styled.img`
     }
 `;
 
-export const DesktopImg =  styled.img`
+export const DesktopImg = styled.img`
     @media (max-width: 1024px) {
         display: none;
     }

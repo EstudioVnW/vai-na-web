@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import * as S from './styles';
+import React, { Component } from 'react';
+import Slider from "react-slick";
 
-//Components
+import * as S from './styles';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Cleidemara from '../../../images/images/peopleDepositions/Cleidemara.png'
 import AnnaLuiza from '../../../images/images/peopleDepositions/Anna.png'
@@ -15,221 +17,173 @@ import Luan from '../../../images/images/peopleDepositions/Luan.png'
 import Left from '../../../images/images/Path 7687.svg';
 import Right from '../../../images/images/Path 7686.svg';
 
-const DepositionsSchool = () => {
-
-    const [pos, setPos] = useState({ posX: 0 })
-
-    const _rightArrow = () => {
-        if (pos.posX >= -130)
-            setPos({ posX: pos.posX - 29 })
+class DepositionsSchool extends Component {
+    state = {
+        list: [
+            {
+                img: Cleidemara,
+                alt: 'Foto de Cleidemara, Product Owner',
+                description: 'Eu procurava uma requalificação no mercado de trabalho e o Vai na Web me abriu um mundo recheado de ciência, tecnologia e alma. Para mim, o Vai na Web representa  uma corrente do bem, que fica forte pela colaboração. Formamos times de pessoas que se importam umas com as outras.',
+                name: 'Cleidemara de Souza',
+                about: 'Product Owner na 1STi, 48 anos',
+                location: '(São Gonçalo, RJ)'
+            },
+            {
+                img: AnnaLuiza,
+                alt: 'Foto de Anna Luiza, Desenvolvedora Front-end Pleno',
+                description: 'O Vai na Web representa o recomeço para mim. Quando terminei a faculdade de administração, não encontrei oportunidade na minha área e acabei me tornando operadora de telemarketing. Durante esse processo, descobri a carreira de Front-end e a possibilidade de fazer algo que realmente amo. Aprendi uma profissão, construí condições de ajudar financeiramente a minha família e de apoiar outras pessoas que estavam começando a carreira também.',
+                name: 'Anna Luiza Araújo',
+                about: 'Dev. Front-end Pleno na Strytegy, 28 anos',
+                location: '(Inhaúma, RJ)'
+            },
+            {
+                img: Mateus,
+                alt: 'Foto de Mateus, Desenvolvedor Front-End',
+                description: 'Achei o meu espaço, meu mindset foi ‘upado’! Aprendi muito sobre meu espaço na sociedade, meus deveres e direitos. Passei a enxergar a força da favela e a entender que nós somos potência e só precisamos de mais oportunidade.',
+                name: 'Mateus Sarmento',
+                about: 'Dev. Front-end, Estúdio VnW, 21 anos',
+                location: '(Morro dos Prazeres, RJ)'
+            },
+            {
+                img: Camila,
+                alt: 'Foto de Camila, Dev Front-End e Líder Técnica',
+                description: 'O Vai na Web abriu um novo mundo e me trouxe muitas conquistas: colegas profissionais, e amigos que me dão suporte e impactam a minha vida diariamente. Agora, acredito que a tecnologia não é algo isolado e inanimado, mas uma construção coletiva com diversidade e oportunidade.',
+                name: 'Camila Soares',
+                about: 'Dev Front-End e Líder Técnica na 1STi, 20 anos',
+                location: '(Complexo do Alemão, RJ)'
+            },
+            {
+                img: Maria,
+                alt: 'Foto de Maria, Quality Assurance',
+                description: 'O Vai na Web mudou a minha vida! Fiz o curso de programação, me formei como Analista de teste e qualidade de software, entrei para a faculdade Processos Gerenciais, na Fundação Getulio Vargas (FVG) e consegui um trabalho estável. Hoje, tenho a consciência de estar construindo uma carreira promissora.',
+                name: 'Maria Luciano',
+                about: 'Quality Assurance na Strytegy, 34 anos',
+                location: '(Complexo do Alemão, RJ)'
+            },
+            {
+                img: Rhuan,
+                alt: 'Foto de Rhuan, Dev. Front-End',
+                description: 'O Vai na Web é uma lugar de responsabilidade, desafios e conhecimento que me ajudam a encarar o mercado de trabalho. Mez fez entender que eu posso ser alguém importante.',
+                name: 'Rhuan de Aquino',
+                about: 'Dev. Front-End, Estúdio VnW, 21 anos',
+                location: '(Santa Teresa, RJ)'
+            },
+            {
+                img: Jeziel,
+                alt: 'Foto de Jeziel, Dev. Front-End',
+                description: 'O Vai na Web é mais que uma escola que você aprende a programar. É o lugar que me ensinou a acreditar que posso construir uma história de vida melhor.',
+                name: 'Jeziel Firmino',
+                about: 'Dev. Front-End, Estúdio VnW, 34 anos',
+                location: '(Morro dos Prazes, RJ)'
+            },
+            {
+                img: Luan,
+                alt: 'Foto de Luan, Dev. Front-End e Instrutor',
+                description: 'Obtive muito aprendizado na área de desenvolvimento graças ao acolhimento e à disposição de todos, que me ajudaram na minha evolução. Agora tenho a certeza de qual profissão seguir.',
+                name: 'Luan Pires',
+                about: 'Dev. Front-End e Instrutor do Vnw, 26',
+                location: '(Inhaúma, RJ)'
+            },
+        ]
     }
-    const _leftArrow = () => {
-        if (pos.posX < 0)
-            setPos({ posX: pos.posX + 29 })
+
+    shuffle = (array) => {
+      var currentIndex = array.length,  randomIndex;
+    
+      while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+    
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex], array[currentIndex]];
+      }
+      return array;
     }
 
-    return (
+    componentDidMount() {
+      const newList = this.shuffle(this.state.list);
+      this.setState({
+        list: newList
+      })
+    }
 
-        <S.Container>
-            <S.BoxWrap>
+    render() {
+        const { list } = this.state
+        
+        const settings = {
+            dots: true,
+            infinite: false,
+            speed: 500,
+            draggable: true,
+            autoplay: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
 
-                <S.BoxText>
-                    <S.Title>
-                        Uma Nova Geração de Talentos
-                    </S.Title>
-                    <S.Subtitle>
-                        O que nossos jovens têm a dizer sobre sua jornada no Vai na Web
-                    </S.Subtitle>
-                </S.BoxText>
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        autoplay: false,
+                        arrows: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                    slidesToShow: 1
+                    }
+                }
+            ],
 
-                <S.Slide>
-                    <S.LeftArrow
-                        src={Left}
-                        alt="seta para esquerda"
-                        onClick={_leftArrow}
-                    />
+            prevArrow: (
+                <S.LeftArrow src={Left} alt="Seta para esquerda"/>
+            ),
+            nextArrow: (
+                <S.RightArrow src={Right} alt="Seta para direita"/>
+            ),
+        };
 
-                    <S.RightArrow
-                        src={Right}
-                        alt="seta para direita"
-                        onClick={_rightArrow}
-                    />
+        return (
+            <S.Container>
+                <S.BoxWrap>
+    
+                    <S.BoxText>
+                        <S.Title>
+                            Uma Nova Geração de Talentos
+                        </S.Title>
+                        <S.Subtitle>
+                            O que nossos jovens têm a dizer sobre sua jornada no Vai na Web
+                        </S.Subtitle>
+                    </S.BoxText>
 
-                    <S.BoxCards>
-                        <S.Cards
-                            style={{
-                                transform: `translate(${pos.posX}vw, 0)`
-                            }}>
+                    <S.Slide>
+                        <Slider {...settings}>
+                            {list.map((person, index) => (
+                                <S.Card key={index}>
+                                    <S.CardContainer>
+                                        <S.BoxImg>
+                                            <S.ImgPerson src={person.img} alt={person.alt} />
+                                        </S.BoxImg>
+                                        <S.Description>
+                                            “{person.description}“
+                                        </S.Description>
+                                        <S.Name>
+                                            {person.name}
+                                        </S.Name>
+                                        <S.About>
+                                            {person.about} <span>{person.location}</span>
+                                        </S.About>
+                                    </S.CardContainer>
+                                </S.Card>
+                            ))}
+                        </Slider>
+                    </S.Slide>
 
-                            {/*Cleidemara*/}
-                            <S.Card>
-                                <S.CardContainer>
-                                    <S.BoxImg>
-                                        <S.ImgPerson src={Cleidemara} alt="Foto de Cleidemara, Product Owner" />
-                                    </S.BoxImg>
-                                    <S.Description>
-                                        “Eu procurava uma requalificação no mercado de trabalho e o Vai na Web me
-                                        abriu um mundo recheado de ciência, tecnologia e alma. Para mim, o Vai na Web
-                                        representa uma corrente do bem, que fica forte pela colaboração. Formamos times
-                                        de pessoas que se importam umas com as outras.“
-                                    </S.Description>
-                                    <S.Name>
-                                        Cleidemara de Souza
-                                    </S.Name>
-                                    <S.About>
-                                        Product Owner na 1STi, 48 anos <span>(São Gonçalo, RJ)</span>
-                                    </S.About>
-                                </S.CardContainer>
-                            </S.Card>
+                </S.BoxWrap>
+            </S.Container>
+        )
+    }
+}
 
-                            {/*Anna Luiza*/}
-                            <S.Card>
-                                <S.CardContainer>
-                                    <S.BoxImg>
-                                        <S.ImgPerson src={AnnaLuiza} alt="Foto de Anna Luiza, Desenvolvedora Front-end Pleno" />
-                                    </S.BoxImg>
-                                    <S.Description>
-                                        “O Vai na Web representa o recomeço para mim. Quando terminei a faculdade de administração,
-                                        não encontrei oportunidade na minha área e acabei me tornando operadora de telemarketing.
-                                        Durante esse processo, descobri a carreira de Front-end e a possibilidade de fazer algo que realmente amo.
-                                        Aprendi uma profissão, construí condições de ajudar financeiramente a minha família e de apoiar outras pessoas
-                                        que estavam começando a carreira também.”
-                                    </S.Description>
-                                    <S.Name>
-                                        Anna Luiza Araújo
-                                    </S.Name>
-                                    <S.About>
-                                        Dev. Front-end Pleno na Strytegy, 28 anos <span>(Inhaúma, RJ)</span>
-                                    </S.About>
-                                </S.CardContainer>
-                            </S.Card>
-
-                            {/*Mateus*/}
-                            <S.Card>
-                                <S.CardContainer>
-                                    <S.BoxImg>
-                                        <S.ImgPerson src={Mateus} alt="Foto de Mateus, Desenvolvedor Front-End" />
-                                    </S.BoxImg>
-                                    <S.Description>
-                                        “Achei o meu espaço, meu mindset foi ‘upado’! Aprendi muito sobre meu espaço na sociedade, meus deveres e direitos.
-                                        Passei a enxergar a força da favela e a entender que nós somos potência e só precisamos de mais oportunidade.”
-                                    </S.Description>
-                                    <S.Name>
-                                        Mateus Sarmento
-                                    </S.Name>
-                                    <S.About>
-                                        Dev. Front-end, Estúdio VnW, 21 anos <span>(Morro dos Prazeres, RJ)</span>
-                                    </S.About>
-                                </S.CardContainer>
-                            </S.Card>
-
-                            {/*Camila*/}
-                            <S.Card>
-                                <S.CardContainer>
-                                    <S.BoxImg>
-                                        <S.ImgPerson src={Camila} alt="Foto de Cleidemara, Product Owner" />
-                                    </S.BoxImg>
-                                    <S.Description>
-                                        "O Vai na Web abriu um novo mundo e me trouxe muitas conquistas: colegas profissionais,
-                                        e amigos que me dão suporte e impactam a minha vida diariamente. Agora,
-                                        acredito que a tecnologia não é algo isolado e inanimado, mas uma construção coletiva
-                                        com diversidade e oportunidade."
-                                    </S.Description>
-                                    <S.Name>
-                                        Camila Soares
-                                    </S.Name>
-                                    <S.About>
-                                        Dev Front-End e Líder Técnica na 1STi, 20 anos <span>(Complexo do Alemão, RJ)</span>
-                                    </S.About>
-                                </S.CardContainer>
-                            </S.Card>
-
-                            {/*Maria*/}
-                            <S.Card>
-                                <S.CardContainer>
-                                    <S.BoxImg>
-                                        <S.ImgPerson src={Maria} alt="Foto de Cleidemara, Product Owner" />
-                                    </S.BoxImg>
-                                    <S.Description>
-                                        "O Vai na Web mudou a minha vida! Fiz o curso de programação, me formei
-                                        como Analista de teste e qualidade de software, entrei para a faculdade
-                                        Processos Gerenciais, na Fundação Getulio Vargas (FVG) e consegui
-                                        um trabalho estável. Hoje, tenho a consciência de estar
-                                        construindo uma carreira promissora."
-                                    </S.Description>
-                                    <S.Name>
-                                        Maria Luciano
-                                    </S.Name>
-                                    <S.About>
-                                        Quality Assurance na Strytegy, 34 anos <span>(Complexo do Alemão, RJ)</span>
-                                    </S.About>
-                                </S.CardContainer>
-                            </S.Card>
-
-                            {/*Rhuan*/}
-                            <S.Card>
-                                <S.CardContainer>
-                                    <S.BoxImg>
-                                        <S.ImgPerson src={Rhuan} alt="Foto de Cleidemara, Product Owner" />
-                                    </S.BoxImg>
-                                    <S.Description>
-                                        “O Vai na Web é uma lugar de responsabilidade, desafios e conhecimento que me
-                                        ajudam a encarar o mercado de trabalho. Mez fez entender que eu posso ser
-                                        alguém importante.“
-                                    </S.Description>
-                                    <S.Name>
-                                        Rhuan de Aquino
-                                    </S.Name>
-                                    <S.About>
-                                        Dev. Front-End, Estúdio VnW, 21 anos <span>(Santa Teresa, RJ)</span>
-                                    </S.About>
-                                </S.CardContainer>
-                            </S.Card>
-
-                            {/*Jeziel*/}
-                            <S.Card>
-                                <S.CardContainer>
-                                    <S.BoxImg>
-                                        <S.ImgPerson src={Jeziel} alt="Foto de Cleidemara, Product Owner" />
-                                    </S.BoxImg>
-                                    <S.Description>
-                                        “O Vai na Web é mais que uma escola que você aprende a programar.
-                                        É o lugar que me ensinou a acreditar que posso construir uma história de vida melhor.“
-                                    </S.Description>
-                                    <S.Name>
-                                        Jeziel Firmino
-                                    </S.Name>
-                                    <S.About>
-                                        Dev. Front-End, Estúdio VnW, 34 anos <span>(Morro dos Prazes, RJ)</span>
-                                    </S.About>
-                                </S.CardContainer>
-                            </S.Card>
-
-                            {/*Luan*/}
-                            <S.Card>
-                                <S.CardContainer>
-                                    <S.BoxImg>
-                                        <S.ImgPerson src={Luan} alt="Foto de Cleidemara, Product Owner" />
-                                    </S.BoxImg>
-                                    <S.Description>
-                                        “Obtive muito aprendizado na área de desenvolvimento
-                                        graças ao acolhimento e à disposição de todos, que me ajudaram na
-                                        minha evolução. Agora tenho a certeza de qual profissão seguir.“
-                                    </S.Description>
-                                    <S.Name>
-                                        Luan Pires
-                                    </S.Name>
-                                    <S.About>
-                                        Dev. Front-End e Instrutor do Vnw, 26 <span>(Inhaúma, RJ)</span>
-                                    </S.About>
-                                </S.CardContainer>
-                            </S.Card>
-                        </S.Cards>
-                    </S.BoxCards>
-                </S.Slide>
-
-            </S.BoxWrap>
-        </S.Container>
-    )
-};
 export default DepositionsSchool;

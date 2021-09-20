@@ -6,7 +6,7 @@ export const Link = styled.a``;
 export const Container = styled.div`
     padding: 5rem 0;
     width: 100%;
-
+    
     @media (min-width: 2200px) {
         padding: 8rem 0;
     }
@@ -19,6 +19,7 @@ export const Wrap = styled.div`
     @media (max-width: 1200px){
         width: 88%;
     }
+    
     @media (max-width: 768px){
         width: 90%;
     }
@@ -34,6 +35,7 @@ export const Title = styled.h2`
         margin-bottom: 1.4rem;
         font-size: 3.8rem;
     }
+
     @media (max-width: 480px) {
         font-size: 1.8rem;
     }
@@ -45,6 +47,7 @@ export const SubTitle = styled.h3`
     @media (min-width: 2200px) {
         font-size: 2.4rem;
     }
+
     @media (max-width: 480px) {
         width: 90%;
         font-size: 1rem;
@@ -53,8 +56,8 @@ export const SubTitle = styled.h3`
 `;
 
 export const Slide = styled.div`
-    width: 100%;
     position: relative;
+    width: 100%;
 `;
 
 export const BoxCards = styled.div`
@@ -72,17 +75,20 @@ export const Cards = styled.div`
     justify-content: space-between;
     margin: 2rem 0;
     width: 110vw;
-    transition: 1s ease-in-out; 
+    transition: 1s ease-in-out;
 
     @media (min-width: 2200px) {
         margin: 4rem 0 2rem;
     }
+
     @media (max-width: 1200px){
         width: 170vw;    
     }
+
     @media (max-width: 768px){
         width: 250vw;
     }
+
     @media (max-width: 480px){
         margin: 1rem 0 0.5rem;
         width: 355vw;    
@@ -93,7 +99,6 @@ export const LeftArrow = styled.img`
     position: absolute;
     top: 50%;
     left: -6%;
-    /* -webkit-transform: translate(-50%,-50%); */
     transform:translate(-50%,-50%);
     cursor: pointer;
 
@@ -105,33 +110,34 @@ export const LeftArrow = styled.img`
 export const RightArrow = styled(LeftArrow)`
     left: auto;
     right: -6%;
-    /* -webkit-transform: translate(50%,-50%); */
     transform:translate(-50%,-50%);
 `;
 
 export const Card = styled.div`
-    background: ${props => props.background};
+    background: ${(props) => props.background};
     width: 24.4%;
     height: 28rem;
     display:flex;
     flex-direction: column;
     align-items:center;
-    justify-content: ${props => props.justifyContent || "center"};
+    justify-content: ${(props) => props.justifyContent || 'center'};
     border-radius: 15px;
     transition: 0.2s ease-in-out;
     cursor: pointer;
 
     &:hover{
-        transform: ${props => props.isHover ? 'scale(1)' : 'scale(1.025)'};
+        transform: ${(props) => (props.isHover ? 'scale(1)' : 'scale(1.025)')};
     }
 
     @media (min-width: 2200px) {
         height: 44rem;
         border-radius: 30px;
     }
+
     @media (max-width: 768px) {
         height: 30rem;
     }
+
     @media (max-width: 480px) {
         height: 21rem;
         border-radius: 20px;
@@ -139,7 +145,7 @@ export const Card = styled.div`
 `;
 
 export const CardContainer = styled.div`
-    padding: 2rem;
+    padding: 1.5rem;
     width: 100%;
     height: 100%;
     color: #272727;
@@ -147,6 +153,7 @@ export const CardContainer = styled.div`
     @media (min-width: 2200px) {
         padding: 2.5rem 3.3rem;
     }
+
     @media (max-width: 480px) {
         padding: 1.3rem 1.5rem;
     }
@@ -157,14 +164,15 @@ export const CardDetail = styled.div`
     display: flex;
     padding-bottom: 1.2rem;
     width: 90%;
-    border-bottom: .2rem solid ${props => props.borderFill};
+    border-bottom: .2rem solid ${(props) => props.borderFill};
 
     @media (min-width: 2200px) {
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
         border-bottom-width: .3rem;
     }
+
     @media (max-width: 480px) {
-        padding-bottom: 1rem;
+        padding-bottom: .5rem;
     }
 `;
 
@@ -173,13 +181,14 @@ export const CardCircle = styled.div`
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: ${props => props.background};
+    background: ${(props) => props.background};
 
     @media (min-width: 2200px) {
         margin-right: 1rem;
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 1.4rem;
+        height: 1.4rem;
     }
+
     @media (max-width: 480px) {
         margin-right: 0.4rem;
         width: 13px;
@@ -190,7 +199,7 @@ export const CardCircle = styled.div`
 export const StickerBox = styled.figure`
     position: absolute;
     top: 0%;
-    right: -12%;
+    right: -16%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,20 +212,23 @@ export const StickerBox = styled.figure`
     @media (min-width: 2200px) {
         top: -15%;
     }
+
     @media (max-width: 1200px) {
         top: 20%;
         right: -15%;
         width: 10vw;
         height: 10vw;
     }
+
     @media (max-width: 768px) {
         width: 15vw;
         height: 15vw;
     }
+
     @media (max-width: 480px) {
-        top: 15%;
-        width: 23vw;
-        height: 23vw;
+        top: 0;
+        width: 22vw;
+        height: 22vw;
     }
 `;
 
@@ -232,6 +244,7 @@ export const CarreiraTxt = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.6rem;
     }
+
     @media (max-width: 480px) {
         font-size: .6rem;
         font-weight: 600;
@@ -240,13 +253,14 @@ export const CarreiraTxt = styled.p`
 `;
 
 export const DevTxt = styled.h3`
-    width: ${props => props.width || '60%'};
+    width: ${(props) => props.width || '60%'};
     font: 700 1.7rem 'Usual', sans-serif;
     margin-bottom: 1rem;
 
     @media (min-width: 2200px) {
         font-size: 2.8rem;
     }
+
     @media (max-width: 480px) {
         margin-bottom: 1.1rem;
         font-size: 1.1rem;
@@ -255,7 +269,7 @@ export const DevTxt = styled.h3`
 `;
 
 export const DevTxtLittle = styled.h3`
-    width: ${props => props.width || '60%'};
+    width: ${(props) => props.width || '60%'};
     font: 700 1.4rem 'Usual', sans-serif;
     margin-bottom: 1rem;
 
@@ -263,9 +277,11 @@ export const DevTxtLittle = styled.h3`
         font-size: 2.2rem;
         width: 23rem;
     }
+    
     @media (max-width: 768px) {
         margin-bottom: 1.5rem;
     }
+
     @media (max-width: 480px) {
         margin-bottom: 0.8rem;
         font-size: 1.1rem;
@@ -281,6 +297,7 @@ export const HDesc = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.8rem;
     }
+
     @media (max-width: 480px) {
         margin: 0;
         width: 70%;
@@ -288,6 +305,7 @@ export const HDesc = styled.p`
         line-height: 1.6;
     }
 `;
+
 export const PDesc = styled.p`
     font: 400 1rem 'Usual', sans-serif;
     line-height: 1.6;
@@ -295,25 +313,29 @@ export const PDesc = styled.p`
     @media (min-width: 2200px) {
         font-size: 1.8rem;
     }
+
     @media (max-width: 480px) {
         font-size: .85rem;
         line-height: 1.6;
     }
 `;
+
 export const PDescVtex = styled.p`
-    font: 400 1rem 'Usual', sans-serif;
+    font: 400 .95rem 'Usual', sans-serif;
     line-height: 1.3rem;
     color: #272727;
 
     @media (min-width: 2200px) {
-        font-size: 1.8rem;
-        line-height: 1.8rem;
+        font-size: 1.5rem;
+        line-height: 1.4;
     }
+
     @media (max-width: 480px) {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         line-height: 1rem;
     }
-    @media (max-width: 375px) {
+
+    @media (max-width: 320px) {
         font-size: 0.85rem;
         line-height: 0.85rem;
     }
@@ -322,7 +344,6 @@ export const PDescVtex = styled.p`
 export const Bold = styled.span`
     font-weight: 700;
 `;
-
 
 export const BoxInfo = styled.div`
     width: 100%;
@@ -337,8 +358,12 @@ export const BoxInfo = styled.div`
 `;
 
 export const BoxButton = styled.div`
-
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    
     @media (min-width: 2200px) {
+        height: 7rem;
         Button{
             width: 19rem;
             height: 6rem;
@@ -347,6 +372,7 @@ export const BoxButton = styled.div`
             border-radius: 3rem;
         }  
     }
+
     @media (max-width: 768px) {
         display: flex;
         justify-content: center;
@@ -359,6 +385,7 @@ export const BoxButton = styled.div`
             font-weight: 500;
         }
     }
+
     @media (max-width: 480px) {
         margin-top: 1rem;
         Button{
@@ -383,8 +410,7 @@ export const LittleCardCientist = styled.div`
         transform: scale(1.025);
     }
 
-    ${CardContainer} {
-        padding: 1rem 1.5rem;
+    div {  
         color: #00145D;
     }
 
@@ -394,6 +420,7 @@ export const LittleCardCientist = styled.div`
         }
     }
 `;
+
 export const LittleCardVtex = styled.div`
     width: 100%;
     height: 59%;
@@ -404,13 +431,16 @@ export const LittleCardVtex = styled.div`
     justify-content: center;
     transition: 0.2s ease-in-out;
 
+    ${CarreiraTxt} {
+        padding: 0.5rem 0 0;
+    }
+    
+    div {  
+        color: #00145D;
+    }
+    
     &:hover{
         transform: scale(1.025);
-    }
-
-    ${CardContainer} {
-        padding: 1rem 1.5rem;
-        color: #00145D;
     }
 
     @media (max-width: 480px) {
@@ -418,4 +448,31 @@ export const LittleCardVtex = styled.div`
             width: 65%;
         }
     }
+`;
+
+export const BoxTitleVtex = styled.div`
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: .5rem;
+    width: 100%;
+`;
+
+export const DevTxtLittleVtex = styled.h3`
+    width: ${(props) => props.width || '60%'};
+    font: 700 1.4rem 'Usual', sans-serif;
+
+    @media (min-width: 2200px) {
+        font-size: 2.2rem;
+        width: 15rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 1.1rem;
+        line-height: 1rem;
+        max-width: 45%;
+    }
+`;
+
+export const ImgVtex = styled.img`
+    width: 25%;
 `;

@@ -39,7 +39,6 @@ export const CardHome = styled.div`
   box-shadow: 0 0 30px #09255d80;
   background: #FED5B2;
   z-index: 1;
-
   position: absolute;
   left: 5%;
   width: 50%;
@@ -53,7 +52,7 @@ export const CardHome = styled.div`
     width: 75%;
     top: 70%;
   }
- `;
+`;
 
 export const BoxCircle = styled.div`
   display: flex;
@@ -68,6 +67,7 @@ export const Circles = styled.div`
   @media (min-width: 2200px) {
     width: 6rem;
   }
+
   @media (max-width: 1200px) {
     width: 2.7rem;
   }
@@ -86,6 +86,7 @@ export const Circle = styled.div`
     width: 25px;
     height: 25px;
   }
+
   @media (max-width: 1200px) {
     width: 10px;
     height: 10px;
@@ -129,16 +130,20 @@ export const Title = styled.h1`
   @media (min-width: 2200px) {
     font-size: 4rem;
   }
+
   @media (max-width: 1440px){
     font-size: 2rem;
   }
+
   @media (max-width: 1200px){
      font-size: 1.4rem;
   }
+
   @media (max-width: 768px) {
     margin-top: 4px;
     font-size: 1.7rem;
   }
+
   @media (max-width: 480px) {
      font-size: 1.5rem;
   }
@@ -193,5 +198,4 @@ export const ImageEstudio = styled.img`
   }
 `;
 
-export const StyledLink = styled(Link)`
-`;
+export const StyledLink = styled(Link)``;

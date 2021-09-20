@@ -3,25 +3,34 @@ import styled from 'styled-components';
 export const SquadsContainer = styled.section`
   max-width: 100%;
   min-height: 50vh;
-  padding: 0 0 5rem;
+  padding-bottom: 5rem;
 
   @media (max-width: 1024px) {
     margin-bottom: 3rem;
   }
+
+  @media (max-width: 425px) {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 `;
 
-export const SquadsWrap = styled.div `
+export const SquadsWrap = styled.div`
   width: 80%;
   margin: 0 auto;
 
   @media (max-width: 1024px) {
     width: 100%;
   }
-`
+`;
 
 export const SquadsContent = styled.figure`
   margin-top: 2rem;
   position: relative;
+
+  @media (min-width: 2200px) {
+    margin-top: 4rem;
+  }
 
   @media (max-width: 1024px){
     display: flex;
@@ -37,19 +46,9 @@ export const SquadsTitle = styled.h2`
   color: #ff611e;
   margin: 10px 0;
 
-  @media (max-width: 1024px) {
-    width: 90%;
-    margin: 0 auto;
+  @media (min-width: 2200px) {
+    font-size: 4rem;
   }
-   @media(max-width: 425px) {
-    font-size: 1.2rem;
-  } 
-`;
-
-export const SquadsText = styled.p`
-  font: 300 1.3rem 'Usual', sans-serif;
-  line-height: 1.5;
-  margin: 0;
 
   @media (max-width: 1024px) {
     width: 90%;
@@ -57,7 +56,27 @@ export const SquadsText = styled.p`
   }
 
   @media(max-width: 425px) {
-    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.7rem;
+  } 
+`;
+
+export const SquadsText = styled.p`
+  font: 300 1.3rem 'Usual', sans-serif;
+  line-height: 1.4;
+
+  @media (min-width: 2200px) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  @media(max-width: 425px) {
+    padding-right: 1rem;
+    font-size: .9rem;
     line-height: 1.3rem;
   } 
 `;
@@ -103,8 +122,8 @@ export const SquadsBox = styled.div`
   @media (max-width: 425px) {
     justify-content: space-around;
   }
+`;
 
-`
 export const SquadsPerson = styled.p`
   position: relative;
   width: 50%;
@@ -119,6 +138,10 @@ export const SquadsPerson = styled.p`
     bottom: -25%;
   }
 
+  @media (min-width: 2200px) {
+    font-size: 2.2rem;
+  }
+
   @media(max-width: 1024px) {
     font-size: 1.2rem;
     margin-top: 1.5rem;
@@ -131,11 +154,13 @@ export const SquadsPerson = styled.p`
   }
 
   @media(max-width: 425px) {
-    font-size: 0.8rem;
+    margin-top: 0;
+    font-size: 0.9rem;
     left: 0;
     width: 30%;
   }
-`
+`;
+
 export const Line = styled.img`
   position: absolute;
   bottom: 10%;
@@ -143,28 +168,16 @@ export const Line = styled.img`
   transform: translate(-50% , -50%);
   height: 15rem;
   width: 15rem;
-  
-/*   @media(max-width: 1366px) {
-    width: 30px;
-    height: 200px;
-    bottom: -10%;
-  }
 
-  @media(max-width: 1120px) {
-    width: 30px;
-    height: 150px;
-    bottom: -10%;
-  }
- */
   @media(max-width: 1024px) {
     display: none;
   }
-`
+`;
 
 export const MobLineH = styled.img`
   display: none;
 
-  @media(max-width: 1024px) {
+  @media (max-width: 1024px) {
     position: absolute;
     top: 0.1%;
     left: 15%;
@@ -177,7 +190,7 @@ export const MobLineV = styled.img`
 
   @media(max-width: 1024px) {
     display: block;
-    top: 10%;
+    top: 9%;
     left: 50%;
     transform: translate(-50% , -50%);
     position: absolute;

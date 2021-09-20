@@ -1,29 +1,28 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
 
 // styles
 const Container = styled.div`
 	display: flex;
-	flex-direction:  ${props => props.slider && 'column'};
-	padding-bottom: ${props => props.slider && '56.2px'};
-	width: ${props => props.slider && '30%'};
+	flex-direction: ${(props) => props.slider && 'column'};
+	padding-bottom: ${(props) => props.slider && '56.2px'};
+	width: ${(props) => props.slider && '30%'};
 `;
 
 const Image = styled.img`
-	width: ${props => props.slider ? '100%' : '693px'};
-
+	width: ${(props) => (props.slider ? '100%' : '693px')};
 `;
 
 const Content = styled.div`
-	padding-left: ${props => !props.slider && '2.813rem'};
-	width: ${props => !props.slider && '473px'};
+	padding-left: ${(props) => !props.slider && '2.813rem'};
+	width: ${(props) => !props.slider && '473px'};
 `;
 
 const ContentDate = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-top: ${props => props.slider && '24.64px'};
+	padding-top: ${(props) => props.slider && '24.64px'};
 `;
 
 const Date = styled.p`
@@ -41,8 +40,8 @@ const Status = styled.p`
 `;
 
 const Title = styled.h1`
-	padding: ${props => props.slider ? '8px 0 11px 0' : '1.25rem 0'};
-	font-size:  ${props => props.slider ? '30px' : '2.75rem'};
+	padding: ${(props) => (props.slider ? '8px 0 11px 0' : '1.25rem 0')};
+	font-size:  ${(props) => (props.slider ? '30px' : '2.75rem')};
 	font-weight: 700;
 	color: #272727;
 	font-family:"usual";
@@ -54,19 +53,17 @@ const Description = styled.p`
 	line-height: 1.75rem;
 `;
 
-const CardList = ({ data, slider }) => {
-	return (
-		<Container slider={slider}>
-			<Content slider={slider}>
-				<ContentDate slider={slider}>
-					<Date>{data.date}</Date> 
-					<Status>{data.status}</Status>
-				</ContentDate>
-				<Title slider={slider}>{data.title}</Title>
-				<Description>{data.description}</Description>
-			</Content>
-		</Container>
-	)
-}
+const CardList = ({ data, slider }) => (
+  <Container slider={slider}>
+    <Content slider={slider}>
+      <ContentDate slider={slider}>
+        <Date>{data.date}</Date>
+        <Status>{data.status}</Status>
+      </ContentDate>
+      <Title slider={slider}>{data.title}</Title>
+      <Description>{data.description}</Description>
+    </Content>
+  </Container>
+);
 
 export default CardList;

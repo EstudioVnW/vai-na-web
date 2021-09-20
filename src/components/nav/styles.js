@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const Menu = styled.nav`
+  transform: ${(props) => ((props.hiddenMenu) ? 'translateY(-100%)' : 'translateY(0)')};
+  opacity: ${(props) => ((props.hiddenMenu) ? '0' : '1')};
   position: fixed;
   top: 0;
   display: flex;
@@ -10,16 +12,19 @@ export const Menu = styled.nav`
   padding: 0 10%;
   width: 100%;
   height: 6rem;
-  box-shadow: ${(props) => ((props.isScrolled || !props.home) ? '0px 8px 40px #00000019' : 'none')};
-  background: ${(props) => ((props.isScrolled || !props.home) ? '#fff' : 'transparent')};
+  box-shadow: ${(props) => ((props.isScrolled === 'up' || !props.home) ? '0px 8px 40px #00000019' : 'none')};
+  background: ${(props) => ((props.isScrolled === 'up' || !props.home) ? '#fff' : 'transparent')};
   z-index: 10;
+  transition: all .5s;
 
   @media (min-width: 2200px) {
     height: 8rem;
   }
+
   @media (max-width: 1200px) {
     padding: 0 5%;
   }
+
   @media (max-width: 1024px) {
     box-shadow: none;
   }
@@ -43,6 +48,7 @@ export const Wrap = styled.div`
   @media (max-width: 1220px) {
     padding-left: 0;
   }
+
   @media (max-width: 768px) {
     position: absolute;
     top: 0;
@@ -71,8 +77,8 @@ export const NavList = styled.ul`
 `;
 
 export const NavItem = styled.li`
-  width: 5.5rem;
-  margin-right: 0.85rem;
+  width: 5rem;
+  margin-right: 0.5rem;
   text-align: center;
   font-size: 1.04em;
   line-height: 1.813rem;
@@ -96,6 +102,7 @@ export const NavItem = styled.li`
     width: 9rem;
     font-size: 1.6rem;
   }
+  
   @media (max-width: 768px) {
     margin-right: 0;
     width: 5.45rem;

@@ -7,6 +7,8 @@ import PeoplesSquad from '../../../images/images/VaiNaWeb-196.png';
 import Back from '../../../images/images/Group11078.svg';
 import Canais from '../../../images/images/Group10971.svg';
 import MVPs from '../../../images/images/Group10972.svg';
+import Vtex from '../../../images/images/Logo-Powered-By-Vtex-(home-serviços).png';
+import VtexMobile from '../../../images/images/Logo-Powered-By-Vtex-(home-mobile).png';
 
 const redirectToContact = () => {
   navigate('/reserve-seu-squad/');
@@ -22,8 +24,9 @@ const Squads = () => (
         <S.ButtonSquads>
           <ButtonHome
             backgroundHover="#FF611E"
-            color="#FED5B2"
+            color="#FDE7A9"
             funcAction={redirectToContact}
+            colorHover="#FFF"
           >
             Reserve seu Squad!
           </ButtonHome>
@@ -34,8 +37,7 @@ const Squads = () => (
         <S.SquadsTextTitle>Squads estendidos e configuráveis</S.SquadsTextTitle>
         <S.SquadsTextSubTitle>
           Entregas contínuas de design e desenvolvimento web e mobile.
-          <br />
-          A escolha ideal para destravar seu backlog de baixa e média complexidade.
+          <span>A escolha ideal para destravar seu backlog de baixa e média complexidade.</span>
         </S.SquadsTextSubTitle>
 
         <S.SquadsTextBack>
@@ -46,8 +48,8 @@ const Squads = () => (
           <S.BoxTextBack>
             <S.BoxTextBackTitle>MVPs ágeis e em escala</S.BoxTextBackTitle>
             <S.BoxTextBackDescription>
-              Descoberta, ideação e implementação de MVPs. Valide rapidamente a
-              viabilidade e melhorias do seu projeto.
+              Descoberta, ideação e implementação de MVPs.
+              <span>Valide rapidamente a viabilidade e melhorias do seu projeto.</span>
             </S.BoxTextBackDescription>
           </S.BoxTextBack>
         </S.SquadsTextBack>
@@ -73,10 +75,17 @@ const Squads = () => (
           </S.ImageSquadBack>
 
           <S.BoxTextBack>
-            <S.BoxTextBackTitle>Ecommerce PWR Vtex i/o</S.BoxTextBackTitle>
+            <S.BoxTitleImage>
+              <S.BoxTextBackTitle>E-commerce</S.BoxTextBackTitle>
+              <S.BoxImageVtex>
+                <S.ImageVtex src={Vtex} />
+                <S.ImageVtexMobile src={VtexMobile} />
+              </S.BoxImageVtex>
+            </S.BoxTitleImage>
+
             <S.BoxTextBackDescription>
-              Implantação de lojas online, personalizadas, escaláveis
-              utilizando a plataforma Vtex io.
+              Implantação de lojas online, personalizadas,
+              <span>escaláveis utilizando a plataforma Vtex io.</span>
             </S.BoxTextBackDescription>
           </S.BoxTextBack>
         </S.SquadsTextBack>
@@ -94,6 +103,6 @@ const Squads = () => (
       </S.SquadsText>
     </S.Wrap>
   </S.Squads>
-
 );
+
 export default Squads;

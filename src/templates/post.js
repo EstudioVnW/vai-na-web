@@ -9,13 +9,20 @@ import Layout from '../components/layout';
 import PageTitle from '../components/pageTitle/pageTitle';
 
 // styles
-const Container = styled.section`	
-  margin-top: -6rem;
-  width: 80vw;
+const Container = styled.section`
   margin: auto;
+  width: 60%;
+
+	@media (min-width: 2200px) {
+		width: 63%;
+	}
+
+  @media (max-width: 1200px) {
+    width: 68%;
+  }
 
   @media (max-width: 768px) {
-    width: 90vw;
+    width: 88%;
   }
 `;
 
@@ -31,13 +38,12 @@ const ContainerMain = styled.div`
     line-height: 2rem;
     margin-top: 1.8rem;
     color: #2F2F2F;
-  };
+  }
 `;
 
 const Image = styled.img`
   margin-bottom: 1rem;
-  width: 60%;
-  height: 30rem;
+  width: 100%;
   border-radius: 20px;
   border: 2px solid #00145D;
   object-fit: fill;
@@ -53,89 +59,87 @@ const TextDescription = styled.article`
   align-items: center;
 
   img {
-    width: 100%;
-    max-width: 60.75rem;
-    height: 36.875rem;
+    width: 60%;
     border: 2px solid #00145D;
     border-radius: 20px;
     object-fit: fill;
 
     :nth-child(2n + 1) {
       border: 2px solid #00145D;
-      width: 100%;
-      max-width: 36rem;
-      height: 17.688rem;
       object-fit: fill;
     }
 
     :nth-child(4n) {
       border: 2px solid pink;
-      width: 100%;
-      max-width: 36rem;
-      height: 17.688rem;
       object-fit: fill;
     }
 
     :nth-child(3n + 1) {
-      width: 100%;
-      max-width: 42.438rem;
-      height: 36.063rem;
       border: none;
       border-radius: 0;
       object-fit: fill;
     }
   }
 
-  p {
-    width: 39.563rem;
-    font-size: 1.2rem;
+  p, 
+  ul {
+    width: 60%;
     font-weight: 400;
-    line-height: 2rem;
-    margin-top: 1.8rem;
+    line-height: 1.8;
     color: #2F2F2F;
+  }
 
-    @media (max-width: 768px) {
-      width: 100%;
-    }
-  };
+  p {
+    margin-top: 1.8rem;
+    font-size: 1.1rem;
+  }
 
   ul {
-    font-weight: 400;
-    width: 39.563rem;
-    font-size: 17px;
-    line-height: 2.2rem;
     margin-top: 1rem;
-    color: #2F2F2F;
+    font-size: 1rem;
 
-    @media (max-width: 768px) {
+    li {
+      padding-bottom: 1rem;
+    }
+  }
+
+  blockquote {
+    margin-top: 2rem;
+    width: 80%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #141414;
+  }
+
+	@media (min-width: 2200px) {
+    blockquote {
+      margin-top: 4rem;
+      font-size: 2.6rem;
+    }
+
+    p {
+      margin-top: 5rem;
+      font-size: 2rem;
+    }
+
+    ul {
+      font-size: 1.8rem;
+    }
+	}
+
+  @media (max-width: 768px) {
+    blockquote, 
+    img, 
+    ul, 
+    p {
       width: 100%;
     }
-  };
-
-    blockquote {
-      width: 60%;
-      font-size: 22px;
-      font-weight: 600;
-      line-height: 2.3rem;
-      margin-top: 2rem;
-      color: #141414;
-
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-    };
-
-    blockquote strong {
-      width: 60%;
-      font-size: 22px;
-      line-height: 2.3rem;
-      font-weight: 600;
-      color: #141414;
-
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-    };
+    
+    p {
+      font-size: .95rem;
+    }
+  }
 `;
 
 export const query = graphql`
@@ -188,7 +192,7 @@ export default function PostBlog({ data }) {
           <TextDescription dangerouslySetInnerHTML={{ __html: data.item.content.html }}></TextDescription>
         </ContainerMain>
       </Container>
-        <CardAuthor author={data.item.authors[0]} />
+      <CardAuthor author={data.item.authors[0]} />
     </Layout>
   )
 }

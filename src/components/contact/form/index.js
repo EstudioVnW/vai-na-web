@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 
 import * as S from './styles';
 import {phoneMask} from '../../../utils/utils';
+
 //Icons
 import localIcon from '../../../images/icons/localIcon.svg';
 import mailIcon from '../../../images/icons/mailIcon.svg';
 import phoneIcon from '../../../images/icons/phoneIcon.svg';
-
-import reload from '../../../images/images/noun_reload_992754.svg';
-
 
 function encode(data) {
   return Object.keys(data)
@@ -40,11 +38,16 @@ const Form = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     setSelectedInput(undefined)
-    const errorName = !formContent?.name?.length;
-    const errorEmail = !formContent?.email?.length;
-    const errorTel = !formContent?.tel?.length;
-    const errorMessage = !formContent?.message?.length;
-    console.log(!errorName && !errorEmail && !errorTel && !errorMessage);
+
+    const pattern = new RegExp(
+      /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+    )
+
+    const errorName = !formContent?.name?.length && 'Campo não preenchido';
+    const errorEmail = !formContent?.email?.length ? 'Campo não preenchido' : !pattern.test(formContent.email) && 'Email inválido';
+    const errorTel = !formContent?.tel?.length ? 'Campo não preenchido' : formContent?.tel?.replace(/\D+/g, '').length < 11 && 'Telefone inválido';
+    const errorMessage = !formContent?.message?.length && 'Campo não preenchido';
+
     if (!errorName && !errorEmail && !errorTel && !errorMessage) {
       postForm();
     } else {
@@ -54,7 +57,6 @@ const Form = () => {
         tel: errorTel,
         message: errorMessage
       };
-
       setErrors(isErrors);
       setStatus('');
     }
@@ -77,9 +79,7 @@ const Form = () => {
         setStatus('Algo deu errado, tente novamente mais tarde');
         setTimeout(() => {setSendingForm(false)}, 500);
         console.log('falha');
-
       })
-      
   }
 
   const handleFocus = (ev) => {
@@ -90,13 +90,16 @@ const Form = () => {
   const handleClear = (id) => {
     document.getElementById(id).value = ''
   }
+
   return (
     <S.Contato>
-      <S.ContatoContainer>
+      <S.Wrapper>
         <S.FormContainer>
           <S.FormTitle>Contato</S.FormTitle>
-          <S.FormText>Nos conte sobre o seu desafio de negócio.
-          <br/>Entraremos em contato em até 24h. Não enviamos spam.</S.FormText>
+          <S.FormText>
+            Nos conte sobre o seu desafio de negócio.
+            <span> Entraremos em contato em até 24h. Não enviamos spam.</span>
+          </S.FormText>
           <S.Form
             name="contact"
             method="POST"
@@ -104,57 +107,104 @@ const Form = () => {
             netlify
             onSubmit={handleSubmit}
           >
-            {console.log('formContent', formContent)}
-            <S.FormLabel selected={selectedInput === 'name'} isError={errors.name}>
+            <S.FormLabel
+              selected={selectedInput === 'name'}
+              isError={errors.name}
+            >
               Nome
-              <S.FormInput id='inpName' name="name" value={formContent?.name || ''} type="text" onChange={handleChange} onFocus={handleFocus} />
+              <S.FormInput
+                id='inpName'
+                name="name"
+                value={formContent?.name || ''}
+                type="text"
+                onChange={handleChange}
+                onFocus={handleFocus}
+              />
               {selectedInput === 'name' && formContent?.name?.length
                 ? <S.BtnLimpar onClick={() => handleClear('inpName')}>Limpar</S.BtnLimpar>
-                : errors?.name && <S.ErroInput>Nome Inválido</S.ErroInput>
+                : errors?.name && <S.ErroInput>Campo não preenchido</S.ErroInput>
               }
             </S.FormLabel>
 
-            <S.FormLabel selected={selectedInput === 'email'} isError={errors.email}>
+            <S.FormLabel
+              selected={selectedInput === 'email'}
+              isError={errors.email}
+            >
               Email
-              <S.FormInput id='inpEmail' name="email" value={formContent?.email || ''} type="email" onChange={handleChange} onFocus={handleFocus} />
+              <S.FormInput
+                id='inpEmail'
+                name="email"
+                value={formContent?.email || ''}
+                type="email"
+                onChange={handleChange}
+                onFocus={handleFocus}
+              />
               {selectedInput === 'email' && formContent?.email?.length
                 ? <S.BtnLimpar onClick={() => handleClear('inpEmail')}>Limpar</S.BtnLimpar>
-                : errors?.email && <S.ErroInput>Email Inválido</S.ErroInput>
+                : errors?.email && <S.ErroInput>Campo não preenchido</S.ErroInput>
               }
             </S.FormLabel>
 
-            <S.FormLabel selected={selectedInput === 'tel'} isError={errors.tel}>
+            <S.FormLabel
+              selected={selectedInput === 'tel'}
+              isError={errors.tel}
+            >
               Telefone
-              <S.FormInput id='inpTel' name="tel" value={formContent?.tel ? phoneMask(formContent?.tel) : ''} type="tel" onChange={handleChange} onFocus={handleFocus} />
+              <S.FormInput
+                id='inpTel'
+                name="tel"
+                value={formContent?.tel ? phoneMask(formContent?.tel) : ''}
+                type="tel"
+                onChange={handleChange}
+                onFocus={handleFocus}
+              />
               {selectedInput === 'tel' && formContent?.tel?.length
                 ? <S.BtnLimpar onClick={() => handleClear('inpTel')}>Limpar</S.BtnLimpar>
-                : errors?.tel && <S.ErroInput>Telefone Inválido</S.ErroInput>
+                : errors?.tel && <S.ErroInput>Campo não preenchido</S.ErroInput>
               }
             </S.FormLabel>
-            <S.FormLabelMsg selected={selectedInput === 'message'} isError={errors.message}>
+            <S.FormLabelMsg
+              selected={selectedInput === 'message'} 
+              isError={errors.message}
+            >
               Mensagem
               {selectedInput === 'message' && formContent?.message?.length
-              ? <S.BtnLimparMsg onClick={() => handleClear('inpMessage')}>Limpar</S.BtnLimparMsg>
-              : errors?.message && <S.ErroInput>Campo não preenchido</S.ErroInput>
+                ? <S.BtnLimparMsg
+                    onClick={() => handleClear('inpMessage')}
+                  >
+                    Limpar
+                  </S.BtnLimparMsg>
+                : errors?.message && <S.ErroInput>{errors?.message}</S.ErroInput>
               }
-              <S.MsgInput id='inpMessage' name="message" value={formContent?.message || ''} type="text" onChange={handleChange} onFocus={handleFocus} />
+              <S.MsgInput
+                id='inpMessage'
+                name="message"
+                value={formContent?.message || ''}
+                type="text" 
+                onChange={handleChange}
+                onFocus={handleFocus}
+              />
             </S.FormLabelMsg>
             {status}
             <S.FormBtn>
               { sendingForm === false || errors.name || errors.email || errors.tell || errors.message
-              ? <>
-              <S.MessageFalha>Falha no envio!</S.MessageFalha>
-              <S.ButtonReload>
-                <img src={reload} alt="" />
-              </S.ButtonReload>
-              <S.TextError>Não foi possível completar seu envio, clique no ícone para reenviar.</S.TextError>
-              </> 
-              : <S.Btn isLoading={sendingForm}>{sendingForm ? 'Enviando' : 'Enviar!'}</S.Btn>
+                ?
+                  <>
+                    <S.BtnError>
+                      Falha no envio
+                    </S.BtnError>
+                    <S.TextError>
+                      Alguns campos estão vazios. Por favor, preencher todos 
+                      os campos para enviar.
+                    </S.TextError>
+                  </>
+                :
+                  <S.Btn isLoading={sendingForm}>
+                    {sendingForm ? 'Enviando' : 'Enviar!'}
+                  </S.Btn>
               }
-              
             </S.FormBtn>
           </S.Form>
-          {console.log('sendingForm', sendingForm )}
         </S.FormContainer>
 
         <S.Sidebar>
@@ -183,7 +233,7 @@ const Form = () => {
             </S.SideInfo>
           </S.SideBox>
         </S.Sidebar>
-      </S.ContatoContainer>
+      </S.Wrapper>
     </S.Contato>
   );
 }

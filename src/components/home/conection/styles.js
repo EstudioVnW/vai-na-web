@@ -39,7 +39,7 @@ export const ConectionTitle = styled.h1`
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
-
+  
   @media (max-width: 1440px){
     font-size: 2.3rem;
   }
@@ -52,27 +52,13 @@ export const ConectionTitle = styled.h1`
   @media (max-width: 425px) {
     font-size: 1.25rem;
   }
-
 `;
 
 export const ConectionLineImage = styled.img`
-  // width: 100%;
-
-  // @media (max-width: 768px) {
-  //   width: 90%;
-  // }
 `;
 
 export const ConectionButton = styled.div`
   display: flex;
   align-items: center;
   height: 5rem;
-
-  // @media (max-width: 480px) {
-  //   button {
-  //     width: 14rem;
-  //     height: 2.7rem;
-  //     font-size: 0.9rem;
-  //   }
-  // }
 `;

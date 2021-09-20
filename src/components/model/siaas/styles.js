@@ -1,3 +1,4 @@
+/* eslint-disable no-tabs */
 import styled from 'styled-components';
 import { Link } from "gatsby";
 
@@ -13,6 +14,7 @@ export const SocialImpact = styled.div`
 	@media (min-width: 2200px) {
 		padding: 6rem 0;
 	}
+
 	@media (max-width: 480px) {
 		min-height: 100vh;
 	}
@@ -52,9 +54,11 @@ export const SocialImpactTextSubTitle = styled.p`
 	@media (min-width: 2200px) {
 		font-size: 1.8rem;
 	}
+
 	@media (max-width: 1200px) {
 		font-size: .8em;
 	}
+
 	@media (max-width: 480px) {
 		width: 50%;
 	}
@@ -68,16 +72,19 @@ export const SocialImpactTextTitle = styled.h2`
 	text-align: center;
 
 	@media (min-width: 2200px) {
-		margin: 3rem 0 1rem;	
+		margin: 3rem 0 1rem;
 		font-size: 3.8rem;
 	}
+
 	@media (max-width: 1200px) {
 		font-size: 1.8em;
 		letter-spacing: -1px;
 	}
+
 	@media (max-width: 768px) {
 		margin: 1rem 0;
 	}
+
 	@media (max-width: 480px) {
 		font-size: 2rem;
 		line-height: 1.1;
@@ -96,16 +103,19 @@ export const SocialImpactTextDescription = styled.p`
 		width: 80%;
 		font-size: 2.2rem;
 	}
+
 	@media (max-width: 1440px){
 		width: 70%;
 		font-size: 1rem;
 	}
+
 	@media (max-width: 768px) {
 		width: 100%;
 		font-size: 1.3rem;
 		line-height: 1.58;
 		text-align: left;
 	}
+
 	@media (max-width: 480px) {
 		width: 100%;
 		font-size: 1rem;
@@ -124,9 +134,11 @@ export const SocialImpactImage = styled.div`
 		margin-top: 4rem;
 		width: 87%;
 	}
+
 	@media (max-width: 1200px) {
 		width: 100%;
 	}
+
 	@media (max-width: 768px) {
 		display: none;
 	}
@@ -148,6 +160,7 @@ export const SocialImpactImageResponsive = styled.div`
 		justify-content: center;
 		margin-top: 5rem;
 	}
+
 	@media (max-width: 480px) {
 		margin-top: 2rem;
 	}

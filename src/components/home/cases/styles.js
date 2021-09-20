@@ -22,6 +22,11 @@ export const TitleCases = styled.h2`
   padding: 0 2rem;
   width: 50%;
 
+  @media (min-width: 2200px) {
+    font-size: 3.8rem;
+    width: 70%;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     font-size: 1.8rem;
@@ -35,6 +40,7 @@ export const BoxCasesImages = styled.div`
   @media (max-width: 1200px) {
     width: 100%;
   }
+
   @media (max-width: 768px) {
     width: 100%;
     overflow: hidden;
@@ -87,9 +93,11 @@ export const BoxImage = styled.figure`
       height: 10rem;
     border-radius: 2rem;
   }
+
   @media (max-width: 1200px){
     width: 20%;
   }
+
   @media (max-width: 768px) {
     filter: none;
     width: 11%;
@@ -111,6 +119,7 @@ export const ImageCases = styled.img`
     width: 80%;
     max-height: 20rem;
   }
+
   @media (max-width: 768px) {
     width: 20rem;
   }
@@ -145,6 +154,7 @@ export const ButtonCases = styled.div`
       font-weight: 500;
     }
   }
+
   @media (max-width: 768px) {
     margin-top: 0;
 
@@ -154,6 +164,7 @@ export const ButtonCases = styled.div`
       font-size: 1.2rem;
     }
   }
+
   @media (max-width: 480px) {
 
     button {

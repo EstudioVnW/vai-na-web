@@ -1,3 +1,4 @@
+/* eslint-disable no-tabs */
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.section`
@@ -10,15 +11,18 @@ export const HeaderContainer = styled.section`
 	@media (max-width: 1366px) {
 		align-items: flex-end;
 	}
+
 	@media (max-width: 1024px) {
 		align-items: center;
 		margin-top: 1rem;
 		height: 70vh;
 	}
+
 	@media (max-width: 768px) {
 		margin-top: 8rem;
 		height: 100vh;			
 	}
+	
 	@media (max-width: 425px) {
 		height: 75vh;
 	}
@@ -36,9 +40,11 @@ export const HeaderWrap = styled.div`
 		height: 60%;
 		width: 90%;
 	}
+
 	@media (max-width: 768px) {
 		height: 70%;
 	}
+
 	@media (max-width: 425px) {
 		height: 90%;
 	}
@@ -52,12 +58,13 @@ export const HImgBox = styled.figure`
 	box-shadow: 0 0 10px 10px rgb(232, 235, 245);
 
 	@media (max-width: 790px) {
-	display: block;
-	width: 95%;
-}
+		display: block;
+		margin-bottom: 0.5rem;
+		width: 95%;
+	}
 `;
 
-export const HImg = styled.img `
+export const HImg = styled.img`
 	width: 100%;
 	transform: scale(1.040);
 	transition: transform 0.2s;
@@ -73,12 +80,17 @@ export const HImg = styled.img `
 			transform: scale(1.25)
 		}
 	}
-`
+`;
 
 export const HDescription = styled.p`
-	font: 300 1.3rem sans-serif;
-	line-height: 1.8rem;
-	margin-top: 0.25rem;
+	padding-left: 1rem;
+	font: 300 1.1rem sans-serif;
+	line-height: 1.4;
+	color: #333;
+
+	@media (min-width: 2200px) {
+		font-size: 2rem;
+	}
 
 	@media (max-width: 425px) {
 		font-size: 0.8rem;
@@ -96,19 +108,30 @@ export const HTextBox = styled.div`
 
 export const HDownArrow = styled.figure`
 	position: absolute;
-	bottom: 2%;
+	bottom: 4%;
 	left: 0;
+	width: 1.4rem;
+
+	img {
+		width: 100%
+	}
+
+	@media (min-width: 2200px) {
+		width: 2rem;
+	}
 
 	@media (max-width: 790px) {
-		display: none;
+		left: 42vw;
 	}
 `;
 
 export const HContentBox = styled.div`
-	width: 65%;
+	width: 66%;
+	height: 74%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+	justify-content: space-between;
 	position: relative;
 	
 	@media (max-width: 790px) {
@@ -120,23 +143,30 @@ export const HContentBox = styled.div`
 
 export const HCard = styled.div`
 	background: #fed5b2;
-	width: 50%;
-	padding: 1.35rem;
+	width: 53%;
+	padding: 1.4rem 1.7rem;
 	position: absolute;
 	left: 0;
 	bottom: 20%;
-	border-radius: 10px;
+	border-radius: 15px;
+
+	@media (min-width: 2200px) {
+    padding: 3rem 4rem;
+	}
 
 	@media (max-width: 1366px) {
-		bottom: 20%;
+		bottom: 17%;
 	}
+
 	@media (max-width: 790px) {
 		bottom: 73%;
-		padding: 0.4rem;
+		padding: 0.5rem 1rem;
 	}
+
 	@media (max-width: 425px) {
 		bottom: 70%;
 		width: 70%;
+		border-radius: 10px;
 	}
 `;
 
@@ -146,6 +176,10 @@ export const HCardDetail = styled.div`
 	padding-bottom: 0.45rem;
 	border-bottom: 2px solid #ffac2d;
 
+	@media (min-width: 2200px) {
+		border-bottom-width: 4px;
+	}
+
 	@media (max-width: 790px) {
 		padding: 0;
 		padding-bottom: 0.55rem;
@@ -153,16 +187,20 @@ export const HCardDetail = styled.div`
 `;
 
 export const HCardCircle = styled.div`
-	margin-right: 0.5rem;
-	margin-bottom: 0.75rem;
-	width: 1.25rem;
-	height: 1.25rem;
+	margin: 0 0.5rem 0.75rem 0;
+	width: .85rem;
+	height: .85rem;
 	border-radius: 50%;
 	background: #ffac2d;
 
+	@media (min-width: 2200px) {
+		margin: 0 1rem 1.6rem 0;
+    width: 1.8rem;
+    height: 1.8rem;
+	}
+
 	@media (max-width: 790px) {
-		margin-bottom: 0;
-		margin-top: 0.5rem;
+		margin: 0.5rem 0.3rem 0 0;
 		width: 0.65rem;
 		height: 0.65rem;
 	}
@@ -173,14 +211,19 @@ export const HCardText = styled.h1`
 	width: 98%;
 	font: 800 2.6rem 'Usual', sans-serif;
 	color: #00145d;
-	
+
+	@media (min-width: 2200px) {
+		padding-top: 2rem;
+		font-size: 4rem;
+	}
 
 	@media (max-width: 1024px) {
 		font-size: 2rem;
 	}
+
 	@media (max-width: 425px) {
 		font-size: 1.2rem;
-		padding: 0.5rem 0.5rem;
+		padding: 0.6rem 0 0.2rem;
 		width: 100%;
 	}  
 `;
