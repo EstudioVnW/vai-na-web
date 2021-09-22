@@ -175,6 +175,10 @@ export const CardText = styled.p`
     font-size: 2rem;
   }
 
+  @media (max-width: 768px) {
+    padding: 1rem 30% 0 0;
+  }
+
   @media (max-width: 425px) {
     font-size: 0.8rem;
     line-height: 1.3rem;
@@ -189,6 +193,10 @@ export const CardTitle = styled.h3`
 
   @media (min-width: 2200px) {
     font-size: 2.8rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 75%;
   }
 
   @media (max-width: 425px) {
@@ -245,5 +253,5 @@ export const CardVtexImage = styled.div`
 `;
 
 export const ImageVtex = styled.img`
-  max-width: 75%;
+  max-width: 60%;
 `;

@@ -16,7 +16,7 @@ const Squads = (props) => {
           <S.SquadsText>
             Toda vez que sua empresa contrata os squads do Vai na Web ela contribui diretamente para
             <strong> inspirar, equipar e educar mais pessoas </strong>
-            gratuitamente para atender aos desafios da economia digital.
+            para atender aos desafios da economia digital.
           </S.SquadsText>
           <S.BoxButton>
             <Button

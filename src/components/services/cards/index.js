@@ -57,7 +57,7 @@ const Cards = () => (
           <S.CardIcon src={mvpIcon} alt="" />
         </S.IconBg>
         <S.CardTitle>E-commerce</S.CardTitle>
-        <S.CardText>Implantação de lojas online utilizando a plataforma Vtex io. Desenvolvemos os layouts.</S.CardText>
+        <S.CardText>Implantação e migração de lojas online utilizando a plataforma Vtex IO. Maior autonomia e agilidade para a  gestão e melhor experiência de compra para os clientes.</S.CardText>
         <S.CardVtexImage>
           <S.ImageVtex src={ImageVtex} />
         </S.CardVtexImage>

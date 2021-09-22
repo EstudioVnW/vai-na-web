@@ -127,7 +127,7 @@ export const SquadsBox = styled.div`
 export const SquadsPerson = styled.p`
   position: relative;
   width: 50%;
-  font: 300 1.5em 'Usual', sans-serif;
+  font: 300 1.3rem 'Usual', sans-serif;
   bottom: 0;
   display: flex;
   align-items: center;
