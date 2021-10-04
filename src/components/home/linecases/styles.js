@@ -1,18 +1,19 @@
 import styled, { keyframes } from 'styled-components';
 
 export const tickerAnimation = keyframes`
-	0% {
-		transform: translate3d(0, 0, 0);
-		-webkit-transform: translate3d(0, 0, 0);
-		visibility: visible;
-	}
-	100% {
-		transform: translate3d(-31%, 0, 0);
-    -webkit-transform: translate3d(-31%, 0, 0);
-	}
+  0% {
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-40%, 0, 0);
+  }
 `;
 
 export const LineCases = styled.section`
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -56,8 +57,9 @@ export const TextCases = styled.p`
 export const BoxImagesCases = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 200vw;
-	animation: ${tickerAnimation} 80s linear infinite;
+  margin-left: 50rem;
+  width: 130vw;
+  animation: ${tickerAnimation} 20s linear infinite;
 
   @media (max-width: 768px) {
     padding: 0 1.45rem;
@@ -67,8 +69,8 @@ export const BoxImagesCases = styled.div`
 `;
 
 export const BoxImage = styled.figure`
-  margin: 0 10px;
-  width: 11%;
+  margin: 0 1rem;
+  width: 12%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,4 +93,18 @@ export const BoxImage = styled.figure`
 export const ImagesCases = styled.img`
   width: 100%;
   filter: grayscale(100%);
+`;
+
+export const Gradient = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 80%, 
+    rgba(255, 255, 255, 0.85) 100%);
+  transition: .4s;
+  z-index: 1;
 `;
