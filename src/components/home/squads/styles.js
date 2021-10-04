@@ -284,7 +284,7 @@ export const BoxTitleImage = styled.div`
 `;
 
 export const BoxImageVtex = styled.div`
-   width: 43%;
+   width: 35%;
    height: 100%;
 `;
 
