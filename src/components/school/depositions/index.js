@@ -4,15 +4,14 @@ import Slider from "react-slick";
 import * as S from './styles';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import Cleidemara from '../../../images/images/peopleDepositions/Cleidemara.png'
-import AnnaLuiza from '../../../images/images/peopleDepositions/Anna.png'
-import Mateus from '../../../images/images/peopleDepositions/Mateus.png'
-import Camila from '../../../images/images/peopleDepositions/Camila.png'
-import Maria from '../../../images/images/peopleDepositions/Maria.png'
-import Rhuan from '../../../images/images/peopleDepositions/Rhuan.png'
-import Jeziel from '../../../images/images/peopleDepositions/Jeziel.png'
-import Luan from '../../../images/images/peopleDepositions/Luan.png'
+import Cleidemara from '../../../images/images/peopleDepositions/Cleidemara.png';
+import AnnaLuiza from '../../../images/images/peopleDepositions/Anna.png';
+import Mateus from '../../../images/images/peopleDepositions/Mateus.png';
+import Camila from '../../../images/images/peopleDepositions/Camila.png';
+import Maria from '../../../images/images/peopleDepositions/Maria.png';
+import Rhuan from '../../../images/images/peopleDepositions/Rhuan.png';
+import Jeziel from '../../../images/images/peopleDepositions/Jeziel.png';
+import Luan from '../../../images/images/peopleDepositions/Luan.png';
 
 import Left from '../../../images/images/Path 7687.svg';
 import Right from '../../../images/images/Path 7686.svg';

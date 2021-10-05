@@ -164,7 +164,7 @@ const CardsSchool = () => {
                     <S.PDescVtex>
                       <S.Bold>Desenvolve lojas virtuais robustas e escaláveis. </S.Bold>
                       É o profissional responsável por criar e implementar lojas virtuais
-                      de alto desempenho, escaláveis e sob medida usando framework Vtex io.
+                      de alto desempenho, escaláveis e sob medida usando framework Vtex IO.
                     </S.PDescVtex>
                   </S.CardContainer>
                 </S.LittleCardVtex>
