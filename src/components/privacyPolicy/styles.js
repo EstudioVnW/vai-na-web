@@ -32,13 +32,20 @@ export const Wrapper = styled.div`
  
  background: #fff;
  box-shadow: 0px 8px 40px #00000019;
- 
- //border: 1px solid red;
+
+
+ @media(max-width: 980px) {
+   width: 95%;
+ }
 `;
 
 export const InfoBox = styled.div`
   width: 70%;
   margin: 1rem 0;
+
+  @media(max-width: 980px) {
+   width: 100%;
+ }
 `;
 
 export const Title = styled.p`
