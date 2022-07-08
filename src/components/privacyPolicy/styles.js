@@ -12,7 +12,6 @@ export const Container = styled.div`
      color: #00145D;
      font-size: 1.5rem;
      font-weight: 700;
-     line-height: 2;
    }
  
    h3 {
@@ -28,13 +27,18 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
  width: 80%;
- padding: 30px;
+ padding: 3rem;
  border-radius: 8px;
  
  background: #fff;
  box-shadow: 0px 8px 40px #00000019;
  
  //border: 1px solid red;
+`;
+
+export const InfoBox = styled.div`
+  width: 70%;
+  margin: 1rem 0;
 `;
 
 export const Title = styled.p`
