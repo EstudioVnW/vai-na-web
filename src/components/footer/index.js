@@ -69,39 +69,49 @@ const Footer = () => (
             <div>
               <S.LinkBox>
                 <S.LinkText>Acesso rápido</S.LinkText>
-                <S.FooterLink>
-                  <Link to="/">Sobre</Link>
-                </S.FooterLink>
-                <S.FooterLink>
-                  <Link to="/servicos">Serviços</Link>
-                </S.FooterLink>
-                <S.FooterLink>
-                  <Link to="/cases">Cases</Link>
-                </S.FooterLink>
-                <S.FooterLink>
-                  <Link to="/modelo">Modelo</Link>
-                </S.FooterLink>
-                <S.FooterLink>
-                  <Link to="/carreiras">Carreiras</Link>
-                </S.FooterLink>
-                <S.FooterLink>
-                  <Link to="/blog">Blog</Link>
-                </S.FooterLink>
-                {/* <S.FooterLink>
+
+                <S.FooterLinkBox>
+                  <div>
+                    <S.FooterLink>
+                      <Link to="/">Sobre</Link>
+                    </S.FooterLink>
+                    <S.FooterLink>
+                      <Link to="/servicos">Serviços</Link>
+                    </S.FooterLink>
+                    <S.FooterLink>
+                      <Link to="/cases">Cases</Link>
+                    </S.FooterLink>
+                    <S.FooterLink>
+                      <Link to="/modelo">Modelo</Link>
+                    </S.FooterLink>
+                  </div>
+
+                  <div>
+                    <S.FooterLink>
+                      <Link to="/carreiras">Carreiras</Link>
+                    </S.FooterLink>
+                    <S.FooterLink>
+                      <Link to="/blog">Blog</Link>
+                    </S.FooterLink>
+                    {/* <S.FooterLink>
 										<Link>Links Úteis</Link>
 									</S.FooterLink> */}
-                {/* <S.FooterLink>
+                    {/* <S.FooterLink>
 										<Link>Perguntas Frequentes</Link>
 									</S.FooterLink> */}
-                {/* <S.FooterLink>
+                    {/* <S.FooterLink>
 										<Link>Media Kit</Link>
 									</S.FooterLink> */}
-                <S.FooterLink>
-                  <Link to="/reserve-seu-squad">Contato</Link>
-                </S.FooterLink>
-                <S.FooterLink>
-                  <Link to="/politica-de-privacidade">Política de Privacidade</Link>
-                </S.FooterLink>
+                    <S.FooterLink>
+                      <Link to="/reserve-seu-squad">Contato</Link>
+                    </S.FooterLink>
+                    <S.FooterLink>
+                      <Link to="/politica-de-privacidade">Política de Privacidade</Link>
+                    </S.FooterLink>
+
+                  </div>
+                </S.FooterLinkBox>
+
               </S.LinkBox>
             </div>
             <S.SocialBox>

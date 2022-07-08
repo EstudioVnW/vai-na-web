@@ -1,3 +1,4 @@
+/* eslint-disable no-tabs */
 import styled, { keyframes } from 'styled-components';
 
 export const tickerAnimation = keyframes`
@@ -12,7 +13,7 @@ export const tickerAnimation = keyframes`
 	}
 `;
 
-export const FooterContainer = styled.div `
+export const FooterContainer = styled.div`
 	position: relative;
 	padding-top: 1.2rem;
 	width: 100%;
@@ -23,7 +24,7 @@ export const FooterContainer = styled.div `
 	}
 `;
 
-export const DivisionContainer = styled.div `
+export const DivisionContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -54,7 +55,7 @@ export const DivisionBackground = styled.div`
 	}
 `;
 
-export const Division = styled.div `
+export const Division = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -62,7 +63,7 @@ export const Division = styled.div `
 	animation: ${tickerAnimation} 50s linear infinite;
 `;
 
-export const DivisionLine = styled.div `
+export const DivisionLine = styled.div`
 	height: 1.2px;
 	background: #FF611E;
 
@@ -75,7 +76,7 @@ export const DivisionLine = styled.div `
 	}
 `;
 
-export const DivisionText = styled.p `
+export const DivisionText = styled.p`
 	margin: 0 1.5rem;
 	font-size: 4em;
 	font-weight: 100;
@@ -92,7 +93,7 @@ export const DivisionText = styled.p `
 	}
 `;
 
-export const LogoVnW = styled.img `
+export const LogoVnW = styled.img`
 	width: 4rem;
 
 	@media (min-width: 2200px) {
@@ -103,8 +104,6 @@ export const LogoVnW = styled.img `
 		width: 3rem;
 	}
 `;
-
-
 
 export const Container = styled.footer`
 	padding: 10rem 15rem 0;
@@ -212,12 +211,8 @@ export const FooterText = styled.p`
 `;
 
 export const LinkBox = styled.ul`
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-content: space-between;
-  padding-right: 6rem;
-  width: 30vw;
+	padding-right: 6rem;
+	width: 30vw;
 	height: 12rem;
 	list-style: none;
 
@@ -232,7 +227,13 @@ export const LinkBox = styled.ul`
 	@media (max-width: 980px) {
 		margin: 2rem 0 0;
 		width: 89vw;
+		padding-right: 0;
 	}
+`;
+
+export const FooterLinkBox = styled.div`
+	display: flex;
+	justify-content: space-between;
 `;
 
 export const LinkText = styled.p`
@@ -280,7 +281,7 @@ export const FooterLink = styled.li`
 	}
 `;
 
-export const Logo = styled.img `
+export const Logo = styled.img`
 	position: absolute;
 	top: -1rem;
 	right: 0;
@@ -301,7 +302,7 @@ export const Logo = styled.img `
 	}
 `;
 
-export const SocialBox = styled.div `
+export const SocialBox = styled.div`
 	font-weight: 600;
 
 	@media (max-width: 980px) {
@@ -309,7 +310,7 @@ export const SocialBox = styled.div `
 	}
 `;
 
-export const IconBox = styled.figure `
+export const IconBox = styled.figure`
 	display: flex;
 	justify-content: space-between;
 	margin-top: 1.8rem;
@@ -328,7 +329,7 @@ export const IconBox = styled.figure `
 	}
 `;
 
-export const Icon = styled.img `
+export const Icon = styled.img`
 	width: 2.3rem;
 	cursor: pointer;
 
@@ -345,7 +346,7 @@ export const Icon = styled.img `
 	}
 `;
 
-export const ImgBox = styled.figure `
+export const ImgBox = styled.figure`
 	display: flex;
 	justify-content: space-around;
 	width: 22rem;
@@ -365,7 +366,7 @@ export const ImgBox = styled.figure `
 	}
 `;
 
-export const FooterImg = styled.img `
+export const FooterImg = styled.img`
 	width: 48%;
 	height: 100%;
 	border-radius: 10px;
@@ -379,7 +380,7 @@ export const FooterImg = styled.img `
 	}
 `;
 
-export const ImgRow = styled.img `
+export const ImgRow = styled.img`
 	margin-top: 1.4rem;
 
 	@media (max-width: 980px) {
@@ -387,7 +388,7 @@ export const ImgRow = styled.img `
 	}
 `;
 
-export const Baseboard = styled.div `
+export const Baseboard = styled.div`
 	margin-top: 2.5rem;
 	padding: 1.5rem 0;
 	width: 100%;
@@ -399,7 +400,7 @@ export const Baseboard = styled.div `
 	}
 `;
 
-export const Text = styled.p `
+export const Text = styled.p`
 	color: #FFAC2D;
 	font-size: 1em;
 
