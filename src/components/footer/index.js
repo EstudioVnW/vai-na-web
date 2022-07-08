@@ -1,6 +1,7 @@
+/* eslint-disable no-tabs */
 import React from 'react';
 import { Link } from 'gatsby';
-import * as S from './styles.js';
+import * as S from './styles';
 
 import logoFacebook from '../../images/icons/icon-facebook.svg';
 import logoInstagram from '../../images/icons/icon-instagram.svg';
@@ -97,6 +98,9 @@ const Footer = () => (
 									</S.FooterLink> */}
                 <S.FooterLink>
                   <Link to="/reserve-seu-squad">Contato</Link>
+                </S.FooterLink>
+                <S.FooterLink>
+                  <Link to="/politica-de-privacidade">Política de Privacidade</Link>
                 </S.FooterLink>
               </S.LinkBox>
             </div>
