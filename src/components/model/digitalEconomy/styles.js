@@ -103,7 +103,7 @@ export const BoxImageDigitalEconomy = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 50%;
     z-index: 2;
 
     @media (min-width: 2200px) {
