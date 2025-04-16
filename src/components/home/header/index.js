@@ -14,7 +14,7 @@ const Header = () => (
             <S.Circle />
             <S.Circle />
           </S.Circles>
-          <S.TextCircle>#deeptalent</S.TextCircle>
+          <S.TextCircle>##deeptalent</S.TextCircle>
         </S.BoxCircle>
         <S.Line />
         <S.Title>Acelere suas entregas digitais</S.Title>
